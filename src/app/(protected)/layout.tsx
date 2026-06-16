@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import Navbar from '@/components/Navbar';
+import PageTransition from '@/components/PageTransition';
 
 export default function ProtectedLayout({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -29,7 +30,9 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <main className="max-w-4xl mx-auto px-4 py-8">{children}</main>
+      <main className="max-w-4xl mx-auto px-4 py-8">
+        <PageTransition>{children}</PageTransition>
+      </main>
     </div>
   );
 }
