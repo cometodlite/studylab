@@ -1,0 +1,68 @@
+{
+  "id": "rw-rational-1",
+  "title": "유한소수 기초",
+  "chapter": "유리수와 순환소수",
+  "grade": 2,
+  "unit": "유리수와 순환소수",
+  "stageOrder": 1,
+  "chapterOrder": 1,
+  "points": 20,
+  "icon": "🔢",
+  "boss": false,
+  "puzzles": [
+    {
+      "id": 1,
+      "type": "fill_blank",
+      "question": "$\\frac{9}{25}$를 소수로 나타내면 $0.$__이다.",
+      "answer": "36",
+      "hint": "$25 = 5^2$이므로 분자·분모에 $4$를 곱해보세요.",
+      "explanation": "$\\frac{9}{25} = \\frac{9 \\times 4}{25 \\times 4} = \\frac{36}{100} = 0.36$"
+    },
+    {
+      "id": 2,
+      "type": "fill_blank",
+      "question": "$\\frac{3}{8}$을 소수로 나타내면 $0.$__이다.",
+      "answer": "375",
+      "hint": "$8 = 2^3$이므로 분자·분모에 $125$를 곱해보세요.",
+      "explanation": "$\\frac{3}{8} = \\frac{375}{1000} = 0.375$"
+    },
+    {
+      "id": 3,
+      "type": "error_find",
+      "question": "$\\frac{7}{12}$이 유한소수인지 판별하시오.",
+      "steps": [
+        {"id": 1, "content": "$12 = 2^2 \\times 3$", "correct": true},
+        {"id": 2, "content": "분모의 소인수: $2$와 $3$", "correct": true},
+        {"id": 3, "content": "소인수에 $3$이 있으므로 유한소수이다.", "correct": false}
+      ],
+      "explanation": "3단계가 틀렸습니다. 소인수에 $2$와 $5$ 이외의 수($3$)가 포함되면 무한소수입니다."
+    },
+    {
+      "id": 4,
+      "type": "fill_blank",
+      "question": "$\\frac{7}{20}$을 소수로 나타내면 $0.$__이다.",
+      "answer": "35",
+      "hint": "$20 = 2^2 \\times 5$이므로 분모가 $100$이 되도록 만들어보세요.",
+      "explanation": "$\\frac{7}{20} = \\frac{35}{100} = 0.35$"
+    },
+    {
+      "id": 5,
+      "type": "fill_blank",
+      "question": "$\\frac{7}{125}$를 소수로 나타내면 $0.0$__이다.",
+      "answer": "56",
+      "hint": "$125 = 5^3$이므로 분자·분모에 $8$을 곱해보세요.",
+      "explanation": "$\\frac{7}{125} = \\frac{56}{1000} = 0.056$"
+    },
+    {
+      "id": 6,
+      "type": "error_find",
+      "question": "$\\frac{14}{21}$을 기약분수로 나타낸 후 유한소수인지 판별하시오.",
+      "steps": [
+        {"id": 1, "content": "$\\frac{14}{21} = \\frac{2}{3}$", "correct": true},
+        {"id": 2, "content": "분모 $3$의 소인수: $3$", "correct": true},
+        {"id": 3, "content": "소인수가 $3$이므로 유한소수이다.", "correct": false}
+      ],
+      "explanation": "3단계가 틀렸습니다. 소인수에 $3$이 포함되므로 무한소수입니다."
+    }
+  ]
+}

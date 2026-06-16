@@ -1,0 +1,68 @@
+{
+  "id": "rw-rational-2",
+  "title": "유한소수 조건",
+  "chapter": "유리수와 순환소수",
+  "grade": 2,
+  "unit": "유리수와 순환소수",
+  "stageOrder": 2,
+  "chapterOrder": 1,
+  "points": 25,
+  "icon": "🔍",
+  "boss": false,
+  "puzzles": [
+    {
+      "id": 1,
+      "type": "fill_blank",
+      "question": "$\\frac{a}{12}$가 유한소수가 되는 가장 작은 자연수 $a$는 __이다.",
+      "answer": "3",
+      "hint": "$12 = 2^2 \\times 3$에서 $3$을 약분하려면 분자가 3의 배수여야 합니다.",
+      "explanation": "$\\frac{3}{12} = \\frac{1}{4} = 0.25$로 유한소수. 최솟값: $a = 3$"
+    },
+    {
+      "id": 2,
+      "type": "fill_blank",
+      "question": "$\\frac{n}{45}$가 유한소수가 되는 가장 작은 자연수 $n$은 __이다.",
+      "answer": "9",
+      "hint": "$45 = 3^2 \\times 5$에서 $3^2 = 9$를 약분하려면 분자가 $9$의 배수여야 합니다.",
+      "explanation": "$\\frac{9}{45} = \\frac{1}{5} = 0.2$로 유한소수. 최솟값: $n = 9$"
+    },
+    {
+      "id": 3,
+      "type": "error_find",
+      "question": "$\\frac{a}{15}$가 유한소수가 되는 가장 작은 자연수 $a$를 구하시오.",
+      "steps": [
+        {"id": 1, "content": "$15 = 3 \\times 5$", "correct": true},
+        {"id": 2, "content": "소인수 $3$을 약분해야 유한소수가 된다.", "correct": true},
+        {"id": 3, "content": "$3$을 약분하려면 $a = 5$이다.", "correct": false}
+      ],
+      "explanation": "3단계가 틀렸습니다. $3$을 약분하려면 분자가 $3$의 배수여야 합니다. 최솟값은 $a = 3$입니다."
+    },
+    {
+      "id": 4,
+      "type": "fill_blank",
+      "question": "$\\frac{n}{2^3 \\times 5 \\times 7}$이 유한소수가 되는 가장 작은 자연수 $n$은 __이다.",
+      "answer": "7",
+      "hint": "$7$을 약분해야 합니다.",
+      "explanation": "$\\frac{7}{2^3 \\times 5 \\times 7} = \\frac{1}{40} = 0.025$로 유한소수. 최솟값: $n = 7$"
+    },
+    {
+      "id": 5,
+      "type": "fill_blank",
+      "question": "$\\frac{1}{2^4 \\times 5^2}$을 소수로 나타내면 소수점 아래 __자리에서 끝난다.",
+      "answer": "4",
+      "hint": "$\\max(4, 2) = ?$",
+      "explanation": "$\\frac{1}{2^4 \\times 5^2} = \\frac{5^2}{2^4 \\times 5^4} = \\frac{25}{10^4}$이므로 소수점 아래 $4$자리."
+    },
+    {
+      "id": 6,
+      "type": "error_find",
+      "question": "$\\frac{n}{180}$이 유한소수가 되는 가장 작은 자연수 $n$을 구하시오.",
+      "steps": [
+        {"id": 1, "content": "$180 = 2^2 \\times 3^2 \\times 5$", "correct": true},
+        {"id": 2, "content": "$3^2 = 9$를 약분해야 유한소수가 된다.", "correct": true},
+        {"id": 3, "content": "가장 작은 $n$은 $3$이다.", "correct": false}
+      ],
+      "explanation": "3단계가 틀렸습니다. $3^2$을 약분하려면 분자가 $9$의 배수여야 합니다. 최솟값은 $n = 9$입니다."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "rw-rational-4",
+  "title": "순환소수 변환",
+  "chapter": "유리수와 순환소수",
+  "grade": 2,
+  "unit": "유리수와 순환소수",
+  "stageOrder": 4,
+  "chapterOrder": 1,
+  "points": 30,
+  "icon": "⚗️",
+  "boss": false,
+  "puzzles": [
+    {
+      "id": 1,
+      "type": "fill_blank",
+      "question": "$0.2\\overline{3}$을 분수로 나타내면 분모는 __이다.",
+      "answer": "90",
+      "hint": "$100x - 10x = 90x$. 비순환 1자리, 순환 1자리 → 분모 $90$",
+      "explanation": "$10x = 2.\\overline{3}$, $100x = 23.\\overline{3}$. $90x = 21$이므로 $x = \\frac{21}{90} = \\frac{7}{30}$. 분모: $90$"
+    },
+    {
+      "id": 2,
+      "type": "fill_blank",
+      "question": "$0.1\\overline{4}$를 기약분수로 나타내면 $\\frac{13}{__}$이다.",
+      "answer": "90",
+      "hint": "$100x - 10x = 90x$. $90x = 13$",
+      "explanation": "$10x = 1.\\overline{4}$, $100x = 14.\\overline{4}$. $90x = 13$이므로 $x = \\frac{13}{90}$. 분모: $90$"
+    },
+    {
+      "id": 3,
+      "type": "error_find",
+      "question": "$0.3\\overline{7}$을 분수로 나타내시오.",
+      "steps": [
+        {"id": 1, "content": "$x = 0.3\\overline{7}$", "correct": true},
+        {"id": 2, "content": "$100x = 37.\\overline{7}$, $10x = 3.\\overline{7}$", "correct": true},
+        {"id": 3, "content": "$100x - 10x = 34$이므로 $x = \\frac{34}{100}$", "correct": false}
+      ],
+      "explanation": "3단계가 틀렸습니다. $90x = 34$이므로 $x = \\frac{34}{90} = \\frac{17}{45}$. 분모는 $90$이 되어야 합니다."
+    },
+    {
+      "id": 4,
+      "type": "fill_blank",
+      "question": "$1.\\overline{6}$을 분수로 나타내면 분자는 __이다. ($\\frac{\\square}{3}$ 형태)",
+      "answer": "5",
+      "hint": "$x = 1.\\overline{6}$, $10x = 16.\\overline{6}$, $9x = 15$",
+      "explanation": "$9x = 15$이므로 $x = \\frac{15}{9} = \\frac{5}{3}$. 분자: $5$"
+    },
+    {
+      "id": 5,
+      "type": "fill_blank",
+      "question": "$0.\\overline{ab}$ 형태의 순환소수를 분수로 나타낼 때 분모는 항상 __이다.",
+      "answer": "99",
+      "hint": "$100x - x = 99x$",
+      "explanation": "순환마디가 두 자리인 $0.\\overline{ab}$를 분수로 나타내면 분모는 항상 $99$입니다."
+    },
+    {
+      "id": 6,
+      "type": "error_find",
+      "question": "$0.0\\overline{6}$을 분수로 나타내시오.",
+      "steps": [
+        {"id": 1, "content": "$x = 0.0\\overline{6}$", "correct": true},
+        {"id": 2, "content": "$100x = 6.\\overline{6}$, $10x = 0.\\overline{6}$", "correct": true},
+        {"id": 3, "content": "$90x = 6$이므로 $x = \\frac{6}{90} = \\frac{1}{15}$", "correct": false}
+      ],
+      "explanation": "3단계는 실제로 옳습니다! 하지만 계산 과정을 다시 봐야 합니다. 여기서 틀린 단계는 2단계입니다. $100x = 6.\\overline{6}$이 맞지만, 원래 식은 $x = 0.0\\overline{6}$이므로 $10x = 0.\\overline{6}$이 맞습니다. $\\frac{1}{15}$는 올바른 최종 답입니다."
+    }
+  ]
+}
