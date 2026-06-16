@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  outputFileTracingIncludes: {
-    '/api/exams': ['./src/data/**/*.json'],
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'storage.googleapis.com' },
