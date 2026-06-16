@@ -8,6 +8,7 @@ function scanJsonFiles(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
   const result: string[] = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name === 'archive') continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) result.push(...scanJsonFiles(full));
     else if (entry.name.endsWith('.json')) result.push(full);

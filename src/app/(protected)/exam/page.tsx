@@ -32,8 +32,9 @@ export default function ExamListPage() {
 
   useEffect(() => {
     fetch('/api/exams')
-      .then(r => r.json())
-      .then(data => { setExams(data); setLoading(false); });
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => { setExams(data); setLoading(false); })
+      .catch(() => setLoading(false));
   }, []);
 
   const grades = [...new Set(exams.map(e => e.grade).filter(Boolean))].sort() as number[];

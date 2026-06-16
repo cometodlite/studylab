@@ -37,20 +37,25 @@ export default function PointsPage() {
   async function loadLogs(reset = false) {
     if (!user) return;
     setLoading(true);
-    const constraints: Parameters<typeof query>[1][] = [
-      where('userId', '==', user.uid),
-      orderBy('createdAt', 'desc'),
-      limit(PAGE_SIZE),
-    ];
-    if (!reset && lastDoc) constraints.push(startAfter(lastDoc));
+    try {
+      const constraints: Parameters<typeof query>[1][] = [
+        where('userId', '==', user.uid),
+        orderBy('createdAt', 'desc'),
+        limit(PAGE_SIZE),
+      ];
+      if (!reset && lastDoc) constraints.push(startAfter(lastDoc));
 
-    const q = query(collection(db, 'point_logs'), ...constraints);
-    const snap = await getDocs(q);
-    const newLogs = snap.docs.map(d => ({ id: d.id, ...d.data() } as PointLog));
-    setLogs(reset ? newLogs : prev => [...prev, ...newLogs]);
-    setLastDoc(snap.docs[snap.docs.length - 1] ?? null);
-    setHasMore(snap.docs.length === PAGE_SIZE);
-    setLoading(false);
+      const q = query(collection(db, 'point_logs'), ...constraints);
+      const snap = await getDocs(q);
+      const newLogs = snap.docs.map(d => ({ id: d.id, ...d.data() } as PointLog));
+      setLogs(reset ? newLogs : prev => [...prev, ...newLogs]);
+      setLastDoc(snap.docs[snap.docs.length - 1] ?? null);
+      setHasMore(snap.docs.length === PAGE_SIZE);
+    } catch (e) {
+      console.error('포인트 내역 로딩 실패:', e);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

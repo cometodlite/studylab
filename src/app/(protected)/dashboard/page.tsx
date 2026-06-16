@@ -63,28 +63,36 @@ export default function DashboardPage() {
 
   async function fetchTodayPoints() {
     if (!user) return;
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const q = query(
-      collection(db, 'point_logs'),
-      where('userId', '==', user.uid),
-      where('createdAt', '>=', Timestamp.fromDate(today))
-    );
-    const snap = await getDocs(q);
-    const sum = snap.docs.reduce((acc, d) => acc + (d.data().amount as number), 0);
-    setTodayPoints(sum);
+    try {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const q = query(
+        collection(db, 'point_logs'),
+        where('userId', '==', user.uid),
+        where('createdAt', '>=', Timestamp.fromDate(today))
+      );
+      const snap = await getDocs(q);
+      const sum = snap.docs.reduce((acc, d) => acc + (d.data().amount as number), 0);
+      setTodayPoints(sum);
+    } catch (e) {
+      console.error('오늘 포인트 로딩 실패:', e);
+    }
   }
 
   async function fetchRecentLogs() {
     if (!user) return;
-    const q = query(
-      collection(db, 'point_logs'),
-      where('userId', '==', user.uid),
-      orderBy('createdAt', 'desc'),
-      limit(5)
-    );
-    const snap = await getDocs(q);
-    setRecentLogs(snap.docs.map(d => ({ id: d.id, ...d.data() } as { id: string; reason: string; amount: number })));
+    try {
+      const q = query(
+        collection(db, 'point_logs'),
+        where('userId', '==', user.uid),
+        orderBy('createdAt', 'desc'),
+        limit(5)
+      );
+      const snap = await getDocs(q);
+      setRecentLogs(snap.docs.map(d => ({ id: d.id, ...d.data() } as { id: string; reason: string; amount: number })));
+    } catch (e) {
+      console.error('최근 내역 로딩 실패:', e);
+    }
   }
 
   return (
@@ -166,25 +174,6 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* 포인트 획득 안내 */}
-        <div className="bg-indigo-50 rounded-xl p-5 border border-indigo-100">
-          <h2 className="font-semibold text-indigo-800 mb-3">포인트 획득 방법</h2>
-          <div className="grid grid-cols-2 gap-2 text-sm">
-            {[
-              ['📝 문제 1개 정답', '+10p'],
-              ['✅ 시험 완료', '+30p'],
-              ['🎯 80% 이상 달성', '+50p 보너스'],
-              ['🏆 만점', '+100p 보너스'],
-              ['📅 일일 출석', '+20p'],
-              ['🔥 7일 연속 출석', '+200p 보너스'],
-            ].map(([label, pts]) => (
-              <div key={label} className="flex items-center justify-between bg-white rounded-lg px-3 py-2">
-                <span className="text-gray-600">{label}</span>
-                <span className="font-bold text-indigo-600">{pts}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </>
   );
