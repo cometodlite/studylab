@@ -2,15 +2,25 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
-import { fsBatch, WriteOp } from '@/lib/firestore-rest';
-import { calcExamPoints } from '@/lib/points';
+import { fsGet, fsSet, fsBatch, WriteOp } from '@/lib/firestore-rest';
+import { calcExamPoints, Difficulty } from '@/lib/points';
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
 
+function scanJsonFiles(dir: string): string[] {
+  if (!fs.existsSync(dir)) return [];
+  const result: string[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) result.push(...scanJsonFiles(full));
+    else if (entry.name.endsWith('.json')) result.push(full);
+  }
+  return result;
+}
+
 function findExam(id: string) {
-  const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json'));
-  for (const f of files) {
-    const exam = JSON.parse(fs.readFileSync(path.join(DATA_DIR, f), 'utf8'));
+  for (const f of scanJsonFiles(DATA_DIR)) {
+    const exam = JSON.parse(fs.readFileSync(f, 'utf8'));
     if (exam.id === id) return exam;
   }
   return null;
@@ -18,6 +28,10 @@ function findExam(id: string) {
 
 function genId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
+
+function todayKST(): string {
+  return new Date().toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' }).replace(/\. /g, '-').replace('.', '');
 }
 
 export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/grade'>) {
@@ -40,9 +54,10 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
   const answers: Record<string, number> = body.answers ?? {};
   const submittedIds = Object.keys(answers);
 
-  const results = exam.questions
-    .filter((q: { id: number }) => submittedIds.includes(String(q.id)))
-    .map((q: { id: number; question: string; choices: string[]; answer: number; explanation?: string }) => ({
+  type RawQ = { id: number; question: string; choices: string[]; answer: number; explanation?: string };
+  const results = (exam.questions as RawQ[])
+    .filter(q => submittedIds.includes(String(q.id)))
+    .map(q => ({
       id: q.id,
       question: q.question,
       choices: q.choices,
@@ -52,36 +67,61 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
       explanation: q.explanation ?? '',
     }));
 
-  const correct = results.filter((r: { correct: boolean }) => r.correct).length;
+  const correct = results.filter(r => r.correct).length;
   const total = results.length;
-  const pts = calcExamPoints(correct, total);
+  const difficulty = (exam.difficulty ?? '기본') as Difficulty;
+  const pts = calcExamPoints(correct, total, difficulty);
+
+  // 하루 1회 포인트 제한 체크
+  const today = todayKST();
+  const attemptKey = `exam_attempts/${uid}_${id}_${today}`;
+  const existing = await fsGet(attemptKey, token);
+  const alreadyRewarded = !!existing;
+
   const now = new Date();
   const sessionId = genId();
-  const logId = genId();
 
   const writes: WriteOp[] = [
-    { type: 'increment', path: `users/${uid}`, field: 'points', delta: pts.total },
     {
       type: 'add',
       collection: 'exam_sessions',
       id: sessionId,
-      data: { userId: uid, examId: id, examTitle: exam.title, score: correct, total, pointsEarned: pts.total, completedAt: now },
-    },
-    {
-      type: 'add',
-      collection: 'point_logs',
-      id: logId,
       data: {
-        userId: uid,
-        amount: pts.total,
-        reason: `[${exam.title}] ${correct}/${total}점 — ${pts.reasons.join(', ')}`,
-        examSessionId: sessionId,
-        createdAt: now,
+        userId: uid, examId: id, examTitle: exam.title,
+        score: correct, total, difficulty,
+        pointsEarned: alreadyRewarded ? 0 : pts.total,
+        completedAt: now,
       },
     },
   ];
 
+  if (!alreadyRewarded) {
+    writes.push(
+      { type: 'increment', path: `users/${uid}`, field: 'points', delta: pts.total },
+      {
+        type: 'add',
+        collection: 'point_logs',
+        id: genId(),
+        data: {
+          userId: uid, amount: pts.total,
+          reason: `[${exam.title}] ${correct}/${total}점 — ${pts.reasons.join(', ')}`,
+          examSessionId: sessionId, createdAt: now,
+        },
+      }
+    );
+    // 오늘 응시 기록 저장
+    await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+  }
+
   await fsBatch(writes, token);
 
-  return NextResponse.json({ score: correct, total, pointsEarned: pts.total, reasons: pts.reasons, results });
+  return NextResponse.json({
+    score: correct,
+    total,
+    difficulty,
+    pointsEarned: alreadyRewarded ? 0 : pts.total,
+    alreadyRewarded,
+    reasons: alreadyRewarded ? ['오늘 이미 포인트를 받은 시험입니다. (내일 다시 도전하세요)'] : pts.reasons,
+    results,
+  });
 }
