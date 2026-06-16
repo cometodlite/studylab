@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { adminAuth, adminDb } from '@/lib/firebase-admin';
-import { FieldValue } from 'firebase-admin/firestore';
+import { verifyFirebaseToken } from '@/lib/firebase-jwt';
+import { fsBeginTransaction, fsGetInTx, fsQueryInTx, fsCommit, WriteOp } from '@/lib/firestore-rest';
+
+function genId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
 
 export async function POST(req: NextRequest, ctx: RouteContext<'/api/coupons/[id]/redeem'>) {
   const { id: couponId } = await ctx.params;
@@ -10,68 +14,60 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/coupons/[id
 
   let uid: string;
   try {
-    const decoded = await adminAuth().verifyIdToken(token);
-    uid = decoded.uid;
+    uid = await verifyFirebaseToken(token);
   } catch {
     return NextResponse.json({ error: '유효하지 않은 토큰입니다.' }, { status: 401 });
   }
 
-  const firestoreDb = adminDb();
+  // Firestore 트랜잭션 시작
+  const txId = await fsBeginTransaction(token);
 
-  // Firestore Transaction으로 동시 교환 방지
-  const result = await firestoreDb.runTransaction(async tx => {
-    const couponRef = firestoreDb.doc(`coupons/${couponId}`);
-    const couponSnap = await tx.get(couponRef);
-    if (!couponSnap.exists) throw new Error('쿠폰을 찾을 수 없습니다.');
+  try {
+    const [coupon, user] = await Promise.all([
+      fsGetInTx(`coupons/${couponId}`, txId, token),
+      fsGetInTx(`users/${uid}`, txId, token),
+    ]);
 
-    const coupon = couponSnap.data()!;
-    const userRef = firestoreDb.doc(`users/${uid}`);
-    const userSnap = await tx.get(userRef);
-    if (!userSnap.exists) throw new Error('사용자를 찾을 수 없습니다.');
+    if (!coupon) throw new Error('쿠폰을 찾을 수 없습니다.');
+    if (!user) throw new Error('사용자를 찾을 수 없습니다.');
+    if ((user.points as number) < (coupon.pointsCost as number)) throw new Error('포인트가 부족합니다.');
 
-    const user = userSnap.data()!;
-    if (user.points < coupon.pointsCost) throw new Error('포인트가 부족합니다.');
+    const items = await fsQueryInTx(
+      'coupon_items',
+      [
+        { field: 'couponId', op: 'EQUAL', value: couponId },
+        { field: 'isUsed', op: 'EQUAL', value: false },
+      ],
+      txId,
+      token,
+      1
+    );
 
-    // 미사용 기프티콘 1개 가져오기
-    const itemsSnap = await firestoreDb
-      .collection('coupon_items')
-      .where('couponId', '==', couponId)
-      .where('isUsed', '==', false)
-      .limit(1)
-      .get();
-    if (itemsSnap.empty) throw new Error('재고가 없습니다.');
+    if (items.length === 0) throw new Error('재고가 없습니다.');
+    const item = items[0];
+    const now = new Date();
 
-    const itemRef = itemsSnap.docs[0].ref;
-    const itemData = itemsSnap.docs[0].data();
+    const writes: WriteOp[] = [
+      { type: 'update', path: `coupon_items/${item._id}`, data: { isUsed: true, usedBy: uid, usedAt: now } },
+      { type: 'increment', path: `users/${uid}`, field: 'points', delta: -(coupon.pointsCost as number) },
+      {
+        type: 'add',
+        collection: 'purchases',
+        id: genId(),
+        data: { userId: uid, couponId, couponName: coupon.name, couponItemId: item._id, pointsSpent: coupon.pointsCost, createdAt: now },
+      },
+      {
+        type: 'add',
+        collection: 'point_logs',
+        id: genId(),
+        data: { userId: uid, amount: -(coupon.pointsCost as number), reason: `[상점] ${coupon.name} 교환`, createdAt: now },
+      },
+    ];
 
-    // 기프티콘 사용 처리
-    tx.update(itemRef, { isUsed: true, usedBy: uid, usedAt: FieldValue.serverTimestamp() });
+    await fsCommit(writes, txId, token);
 
-    // 포인트 차감
-    tx.update(userRef, { points: FieldValue.increment(-coupon.pointsCost) });
-
-    // 구매 기록
-    const purchaseRef = firestoreDb.collection('purchases').doc();
-    tx.set(purchaseRef, {
-      userId: uid,
-      couponId,
-      couponName: coupon.name,
-      couponItemId: itemsSnap.docs[0].id,
-      pointsSpent: coupon.pointsCost,
-      createdAt: FieldValue.serverTimestamp(),
-    });
-
-    // 포인트 로그
-    const logRef = firestoreDb.collection('point_logs').doc();
-    tx.set(logRef, {
-      userId: uid,
-      amount: -coupon.pointsCost,
-      reason: `[상점] ${coupon.name} 교환`,
-      createdAt: FieldValue.serverTimestamp(),
-    });
-
-    return { imageUrl: itemData.imageUrl, couponName: coupon.name, pointsSpent: coupon.pointsCost };
-  });
-
-  return NextResponse.json(result);
+    return NextResponse.json({ imageUrl: item.imageUrl, couponName: coupon.name, pointsSpent: coupon.pointsCost });
+  } catch (error) {
+    return NextResponse.json({ error: (error as Error).message }, { status: 400 });
+  }
 }

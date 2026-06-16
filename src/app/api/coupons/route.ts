@@ -1,27 +1,29 @@
 import { NextResponse } from 'next/server';
-import { adminDb } from '@/lib/firebase-admin';
+import { fsQuery } from '@/lib/firestore-rest';
 
 export async function GET() {
-  const snap = await adminDb().collection('coupons').orderBy('pointsCost', 'asc').get();
-  const coupons = await Promise.all(
-    snap.docs.map(async d => {
-      const data = d.data();
-      // 재고 개수 계산
-      const itemsSnap = await adminDb()
-        .collection('coupon_items')
-        .where('couponId', '==', d.id)
-        .where('isUsed', '==', false)
-        .count()
-        .get();
+  const coupons = await fsQuery('coupons', [], null, undefined, { field: 'pointsCost', dir: 'ASCENDING' });
+
+  const result = await Promise.all(
+    coupons.map(async coupon => {
+      const availableItems = await fsQuery(
+        'coupon_items',
+        [
+          { field: 'couponId', op: 'EQUAL', value: coupon._id },
+          { field: 'isUsed', op: 'EQUAL', value: false },
+        ],
+        null
+      );
       return {
-        id: d.id,
-        name: data.name,
-        description: data.description,
-        pointsCost: data.pointsCost,
-        thumbnailUrl: data.thumbnailUrl ?? null,
-        stock: itemsSnap.data().count,
+        id: coupon._id,
+        name: coupon.name,
+        description: coupon.description,
+        pointsCost: coupon.pointsCost,
+        thumbnailUrl: coupon.thumbnailUrl ?? null,
+        stock: availableItems.length,
       };
     })
   );
-  return NextResponse.json(coupons);
+
+  return NextResponse.json(result);
 }
