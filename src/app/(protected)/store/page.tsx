@@ -5,6 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { getIdToken } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import Image from 'next/image';
+import MagicRuneGame from '@/components/MagicRuneGame';
 
 interface Coupon {
   id: string;
@@ -28,6 +29,7 @@ export default function StorePage() {
   const [redeeming, setRedeeming] = useState<string | null>(null);
   const [result, setResult] = useState<RedeemResult | null>(null);
   const [error, setError] = useState('');
+  const [showMiniGame, setShowMiniGame] = useState(false);
 
   useEffect(() => {
     fetch('/api/coupons')
@@ -62,6 +64,9 @@ export default function StorePage() {
       setRedeeming(null);
     }
   }
+
+  const allOutOfStock = coupons.length > 0 && coupons.every(c => c.stock === 0);
+  const isEmpty = coupons.length === 0;
 
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
 
@@ -104,10 +109,35 @@ export default function StorePage() {
         </div>
       )}
 
-      {coupons.length === 0 ? (
-        <div className="text-center py-16 text-gray-400">
-          <div className="text-4xl mb-3">🏪</div>
-          <p>현재 등록된 상품이 없습니다.</p>
+      {showMiniGame && <MagicRuneGame onClose={() => setShowMiniGame(false)} />}
+
+      {isEmpty ? (
+        <div className="flex flex-col items-center py-16 px-4 text-center space-y-5">
+          <div className="text-6xl">📖</div>
+          <p className="text-gray-700 font-semibold text-lg leading-snug">
+            아직 마법의 책이 당신의 뇌를<br />정화시켜줄 간식을 찾지 못한 것 같네요!
+          </p>
+          <p className="text-gray-400 text-sm">상점 준비 중입니다. 그 동안 잠깐 쉬어가세요.</p>
+          <button
+            onClick={() => setShowMiniGame(true)}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3 rounded-2xl transition shadow-md"
+          >
+            🔮 미니게임으로 잠시 정화하기
+          </button>
+        </div>
+      ) : allOutOfStock ? (
+        <div className="flex flex-col items-center py-16 px-4 text-center space-y-4">
+          <div className="text-6xl">🏃</div>
+          <p className="text-gray-700 font-semibold text-lg leading-snug">
+            이런, 다른 사람들이 상점에 있는 것들을<br />모조리 가지고 달아나버렸어요!
+          </p>
+          <p className="text-gray-400 text-sm">재고가 곧 채워질 거예요. 조금만 기다려 주세요.</p>
+          <button
+            onClick={() => setShowMiniGame(true)}
+            className="mt-2 border border-indigo-300 text-indigo-600 hover:bg-indigo-50 font-semibold px-5 py-2.5 rounded-2xl transition text-sm"
+          >
+            🔮 그 동안 미니게임이나 할까요?
+          </button>
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-4">
@@ -152,3 +182,4 @@ export default function StorePage() {
     </div>
   );
 }
+
