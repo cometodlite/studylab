@@ -1,0 +1,87 @@
+{
+  "id": "webdev",
+  "title": "웹 개발 기초",
+  "description": "HTML, CSS, JavaScript, Node.js 기초 지식을 점검하는 문제입니다.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "HTML에서 하이퍼링크를 만들 때 사용하는 태그는?",
+      "choices": ["<link>", "<a>", "<href>", "<url>"],
+      "answer": 1,
+      "explanation": "<a> 태그의 href 속성에 이동할 주소를 지정합니다. <link>는 외부 리소스(CSS 등)를 연결할 때 사용합니다."
+    },
+    {
+      "id": 2,
+      "question": "CSS에서 글자 색을 지정하는 속성은?",
+      "choices": ["font-color", "text-color", "color", "foreground"],
+      "answer": 2,
+      "explanation": "글자 색은 color 속성으로 지정합니다. font-color나 text-color라는 속성은 존재하지 않습니다."
+    },
+    {
+      "id": 3,
+      "question": "JavaScript에서 상수를 선언하는 키워드는?",
+      "choices": ["var", "let", "const", "static"],
+      "answer": 2,
+      "explanation": "const는 재할당이 불가능한 상수를 선언합니다. let은 재할당 가능한 변수, var는 함수 스코프 변수입니다."
+    },
+    {
+      "id": 4,
+      "question": "Node.js에서 다른 파일의 모듈을 불러오는 CommonJS 문법은?",
+      "choices": ["import()", "require()", "include()", "load()"],
+      "answer": 1,
+      "explanation": "CommonJS에서는 require()를 사용합니다. import/export는 ES Modules 문법입니다."
+    },
+    {
+      "id": 5,
+      "question": "HTTP 상태 코드 404의 의미는?",
+      "choices": ["서버 내부 오류", "권한 없음", "요청한 리소스를 찾을 수 없음", "정상 응답"],
+      "answer": 2,
+      "explanation": "404 Not Found는 요청한 리소스가 서버에 없다는 뜻입니다. 500은 서버 내부 오류, 403은 권한 없음, 200은 정상 응답입니다."
+    },
+    {
+      "id": 6,
+      "question": "npm에서 package.json에 의존성을 추가하며 패키지를 설치하는 명령은?",
+      "choices": ["npm get express", "npm install express", "npm add-package express", "npm fetch express"],
+      "answer": 1,
+      "explanation": "npm install <패키지명> (축약형 npm i)이 패키지를 설치하고 dependencies에 기록합니다."
+    },
+    {
+      "id": 7,
+      "question": "JavaScript에서 '==' 와 '===' 의 차이로 옳은 것은?",
+      "choices": [
+        "차이가 없다",
+        "=== 는 타입까지 비교한다",
+        "== 는 타입까지 비교한다",
+        "=== 는 객체 내용을 비교한다"
+      ],
+      "answer": 1,
+      "explanation": "=== (일치 연산자)는 타입 변환 없이 값과 타입을 모두 비교합니다. == 는 타입을 변환한 뒤 비교하므로 '1' == 1 이 true가 됩니다."
+    },
+    {
+      "id": 8,
+      "question": "Express에서 GET 요청을 처리하는 라우트를 등록하는 메서드는?",
+      "choices": ["app.fetch()", "app.route()", "app.get()", "app.listen()"],
+      "answer": 2,
+      "explanation": "app.get(경로, 핸들러)로 GET 라우트를 등록합니다. app.listen()은 서버를 시작하는 메서드입니다."
+    },
+    {
+      "id": 9,
+      "question": "브라우저에서 서버로 비동기 요청을 보내는 최신 표준 API는?",
+      "choices": ["XMLHttpRequest", "fetch", "ajax", "axios"],
+      "answer": 1,
+      "explanation": "fetch는 브라우저 내장 표준 API입니다. XMLHttpRequest는 구식 API이고, axios는 외부 라이브러리입니다."
+    },
+    {
+      "id": 10,
+      "question": "JSON에 대한 설명으로 틀린 것은?",
+      "choices": [
+        "키는 큰따옴표로 감싼다",
+        "주석을 쓸 수 있다",
+        "데이터 교환 형식이다",
+        "JavaScript 객체 표기법에서 유래했다"
+      ],
+      "answer": 1,
+      "explanation": "표준 JSON은 주석을 지원하지 않습니다. 주석을 넣으면 파싱 에러가 발생합니다."
+    }
+  ]
+}
