@@ -7,14 +7,7 @@ import Link from 'next/link';
 import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc, increment, Timestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { POINT_RULES } from '@/lib/points';
-
-const UPDATES: { date: string; text: string; link?: { href: string; label: string } }[] = [
-  {
-    date: '2026-06-18',
-    text: '중3 수학 전범위 (2022개정 교육과정)와 중2 수학 일차부등식 (2022개정 교육과정)을 추가했습니다.',
-    link: { href: '/practice', label: '바로가기' },
-  },
-];
+import { UPDATES } from '@/lib/updates';
 
 export default function DashboardPage() {
   const { user, profile, refreshProfile } = useAuth();
@@ -33,7 +26,6 @@ export default function DashboardPage() {
     if (!user || !profile) return;
     const today = new Date().toDateString();
     if (profile.lastLogin === today) {
-      setShowMotivation(true);
       return;
     }
     // 일일 출석 포인트 지급
@@ -139,24 +131,21 @@ export default function DashboardPage() {
         </div>
 
         {/* 업데이트 내역 */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
-          <h2 className="font-semibold text-gray-700 mb-3">업데이트 내역</h2>
+        <Link href="/updates" className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 hover:shadow-md hover:border-indigo-200 transition block">
+          <div className="flex items-start justify-between">
+            <h2 className="font-semibold text-gray-700 mb-3">업데이트 내역</h2>
+            <span className="text-indigo-600 text-sm font-medium">전체 보기 →</span>
+          </div>
           <div className="space-y-2">
-            {UPDATES.map((u, i) => (
-              <div key={i} className="flex items-start gap-3 text-sm">
-                <span className="text-gray-400 shrink-0 mt-0.5">{u.date}</span>
-                <span className="text-gray-600">
-                  {u.text}
-                  {u.link && (
-                    <Link href={u.link.href} className="ml-1.5 text-indigo-600 font-medium hover:underline">
-                      {u.link.label} →
-                    </Link>
-                  )}
-                </span>
+            {UPDATES.slice(0, 2).map((u, i) => (
+              <div key={i} className="text-sm">
+                <p className="text-gray-400 text-xs mb-0.5">{u.date}</p>
+                <p className="font-medium text-gray-700">{u.title}</p>
+                <p className="text-gray-500 text-xs mt-0.5">{u.description}</p>
               </div>
             ))}
           </div>
-        </div>
+        </Link>
 
         {/* 빠른 메뉴 */}
         <div className="grid grid-cols-2 gap-4">
