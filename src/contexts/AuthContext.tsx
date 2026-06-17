@@ -21,6 +21,8 @@ interface UserProfile {
   streakDays: number;
   lastLogin: string | null;
   role: 'user' | 'admin';
+  school?: string | null;
+  gradeLevel?: number | null;
 }
 
 interface AuthContextType {

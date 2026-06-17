@@ -175,60 +175,60 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   const pts = calcPoints(totalScore, exam.totalScore);
   const sessionId = genId();
 
-  const writes: WriteOp[] = [
-    {
-      type: 'add',
-      collection: 'school_exam_sessions',
-      id: sessionId,
-      data: {
-        userId: uid,
-        examId: id,
-        examTitle: exam.title,
-        sheet: exam.sheet,
-        mcScore,
-        essayScore,
-        totalScore,
-        maxScore: exam.totalScore,
-        pointsEarned: alreadyRewarded ? 0 : pts,
-        completedAt: now,
-      },
-    },
-    ...wrongNoteWrites,
-  ];
-
-  if (!alreadyRewarded) {
-    writes.push(
-      { type: 'increment', path: `users/${uid}`, field: 'points', delta: pts },
+  // Batch 1: session + wrong notes
+  try {
+    await fsBatch([
       {
         type: 'add',
-        collection: 'point_logs',
-        id: genId(),
+        collection: 'school_exam_sessions',
+        id: sessionId,
         data: {
           userId: uid,
-          amount: pts,
-          reason: `[${exam.title}] ${totalScore}/${exam.totalScore}점`,
-          sessionId,
-          createdAt: now,
+          examId: id,
+          examTitle: exam.title,
+          sheet: exam.sheet,
+          mcScore,
+          essayScore,
+          totalScore,
+          maxScore: exam.totalScore,
+          pointsEarned: alreadyRewarded ? 0 : pts,
+          completedAt: now,
         },
-      }
-    );
-    try {
-      await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
-    } catch (e) {
-      console.error('[school-exams/grade] fsSet attempt failed:', e);
-    }
-  }
-
-  try {
-    await fsBatch(writes, token);
+      },
+      ...wrongNoteWrites,
+    ], token);
   } catch (e) {
-    console.error('[school-exams/grade] fsBatch failed:', e);
+    console.error('[school-exams/grade] fsBatch (core) failed:', e);
     return NextResponse.json({
       mcScore, essayScore, totalScore,
       maxScore: exam.totalScore,
       pointsEarned: 0, alreadyRewarded,
       results,
     });
+  }
+
+  // Batch 2: points (best-effort)
+  if (!alreadyRewarded) {
+    try {
+      await fsBatch([
+        { type: 'increment', path: `users/${uid}`, field: 'points', delta: pts },
+        {
+          type: 'add',
+          collection: 'point_logs',
+          id: genId(),
+          data: {
+            userId: uid,
+            amount: pts,
+            reason: `[${exam.title}] ${totalScore}/${exam.totalScore}점`,
+            sessionId,
+            createdAt: now,
+          },
+        },
+      ], token);
+      await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+    } catch (e) {
+      console.error('[school-exams/grade] fsBatch (points) failed:', e);
+    }
   }
 
   return NextResponse.json({

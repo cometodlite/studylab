@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { DIFFICULTY_RULES, Difficulty } from '@/lib/points';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface ExamMeta {
   id: string;
@@ -24,6 +25,7 @@ const DIFFICULTY_COLOR: Record<Difficulty, string> = {
 const GRADE_LABEL: Record<number, string> = { 1: '중1', 2: '중2', 3: '중3' };
 
 export default function PracticeListPage() {
+  const { profile } = useAuth();
   const [tab, setTab] = useState<'practice' | 'school'>('practice');
   const [exams, setExams] = useState<ExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
@@ -31,6 +33,13 @@ export default function PracticeListPage() {
   const [gradeFilter, setGradeFilter] = useState<string>('');
   const [unitFilter, setUnitFilter] = useState<string>('');
   const [diffFilter, setDiffFilter] = useState<string>('');
+
+  // Pre-fill grade filter from profile
+  useEffect(() => {
+    if (profile?.gradeLevel) {
+      setGradeFilter(String(profile.gradeLevel));
+    }
+  }, [profile?.gradeLevel]);
 
   useEffect(() => {
     fetch('/api/exams')

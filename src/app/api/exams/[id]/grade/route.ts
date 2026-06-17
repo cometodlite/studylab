@@ -106,52 +106,52 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
 
   const sessionId = genId();
 
-  const writes: WriteOp[] = [
-    {
-      type: 'add',
-      collection: 'exam_sessions',
-      id: sessionId,
-      data: {
-        userId: uid, examId: id, examTitle: exam.title,
-        score: correct, total, difficulty,
-        pointsEarned: alreadyRewarded ? 0 : pts.total,
-        completedAt: now,
-      },
-    },
-    ...wrongNoteWrites,
-  ];
-
-  if (!alreadyRewarded) {
-    writes.push(
-      { type: 'increment', path: `users/${uid}`, field: 'points', delta: pts.total },
+  // Batch 1: session + wrong notes (isolated from points so a rule failure on users/{uid} can't block notes)
+  try {
+    await fsBatch([
       {
         type: 'add',
-        collection: 'point_logs',
-        id: genId(),
+        collection: 'exam_sessions',
+        id: sessionId,
         data: {
-          userId: uid, amount: pts.total,
-          reason: `[${exam.title}] ${correct}/${total}점 — ${pts.reasons.join(', ')}`,
-          examSessionId: sessionId, createdAt: now,
+          userId: uid, examId: id, examTitle: exam.title,
+          score: correct, total, difficulty,
+          pointsEarned: alreadyRewarded ? 0 : pts.total,
+          completedAt: now,
         },
-      }
-    );
-    try {
-      await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
-    } catch (e) {
-      console.error('[exams/grade] fsSet attempt failed:', e);
-    }
-  }
-
-  try {
-    await fsBatch(writes, token);
+      },
+      ...wrongNoteWrites,
+    ], token);
   } catch (e) {
-    console.error('[exams/grade] fsBatch failed:', e);
+    console.error('[exams/grade] fsBatch (core) failed:', e);
     return NextResponse.json({
       score: correct, total, difficulty,
       pointsEarned: 0, alreadyRewarded,
       reasons: ['채점은 완료됐지만 결과 저장에 실패했습니다.'],
       results,
     });
+  }
+
+  // Batch 2: points (best-effort — failure doesn't block the response)
+  if (!alreadyRewarded) {
+    try {
+      await fsBatch([
+        { type: 'increment', path: `users/${uid}`, field: 'points', delta: pts.total },
+        {
+          type: 'add',
+          collection: 'point_logs',
+          id: genId(),
+          data: {
+            userId: uid, amount: pts.total,
+            reason: `[${exam.title}] ${correct}/${total}점 — ${pts.reasons.join(', ')}`,
+            examSessionId: sessionId, createdAt: now,
+          },
+        },
+      ], token);
+      await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+    } catch (e) {
+      console.error('[exams/grade] fsBatch (points) failed:', e);
+    }
   }
 
   return NextResponse.json({

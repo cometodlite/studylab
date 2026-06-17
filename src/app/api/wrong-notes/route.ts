@@ -13,15 +13,16 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: '유효하지 않은 토큰입니다.' }, { status: 401 });
   }
 
-  const notes = await fsQuery('wrong_notes', [
-    { field: 'uid', op: 'EQUAL', value: uid },
-    { field: 'archived', op: 'EQUAL', value: false },
-  ], token);
+  try {
+    const all = await fsQuery('wrong_notes', [
+      { field: 'uid', op: 'EQUAL', value: uid },
+    ], token);
 
-  const archived = await fsQuery('wrong_notes', [
-    { field: 'uid', op: 'EQUAL', value: uid },
-    { field: 'archived', op: 'EQUAL', value: true },
-  ], token);
+    const notes = all.filter(n => !(n as { archived?: boolean }).archived);
+    const archived = all.filter(n => (n as { archived?: boolean }).archived === true);
 
-  return NextResponse.json({ notes, archived });
+    return NextResponse.json({ notes, archived });
+  } catch {
+    return NextResponse.json({ notes: [], archived: [] });
+  }
 }

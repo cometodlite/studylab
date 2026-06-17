@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface SchoolExamMeta {
   id: string;
@@ -40,6 +41,7 @@ const SCHOOL_KEY = 'studylab_selected_school';
 const CATEGORY_KEY = 'studylab_selected_category';
 
 export default function ExamListPage() {
+  const { profile } = useAuth();
   const [exams, setExams] = useState<SchoolExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState<string>('학교');
@@ -56,8 +58,11 @@ export default function ExamListPage() {
         setActiveCategory(savedCategory);
 
         const schoolsInCategory = [...new Set(data.filter(e => e.category === savedCategory).map(e => e.school))];
+        // Prefer profile school > localStorage > first available
+        const profileSchool = profile?.school ?? '';
         const savedSchool = localStorage.getItem(SCHOOL_KEY) ?? '';
-        const school = schoolsInCategory.includes(savedSchool) ? savedSchool : (schoolsInCategory[0] ?? '');
+        const preferred = (profileSchool && schoolsInCategory.includes(profileSchool)) ? profileSchool : savedSchool;
+        const school = schoolsInCategory.includes(preferred) ? preferred : (schoolsInCategory[0] ?? '');
         setActiveSchool(school);
 
         const subjects = [...new Set(data.filter(e => e.category === savedCategory && e.school === school).map(e => e.subject))];

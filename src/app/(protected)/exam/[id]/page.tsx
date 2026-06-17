@@ -309,6 +309,23 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
             />
           </div>
         )}
+
+        {q.type === 'short' && (
+          <div>
+            {(q as EssayQuestion).rubric && (
+              <div className="text-xs text-blue-600 bg-blue-50 rounded-lg px-3 py-2 mb-3">
+                📌 <MathText text={(q as EssayQuestion).rubric!} />
+              </div>
+            )}
+            <input
+              type="text"
+              value={essayAnswers[q.id] ?? ''}
+              onChange={e => setEssayAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
+              placeholder="답을 입력하세요..."
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+            />
+          </div>
+        )}
       </div>
 
       {/* 문항 네비게이션 */}

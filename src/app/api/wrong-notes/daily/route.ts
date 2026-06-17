@@ -13,17 +13,23 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: '유효하지 않은 토큰입니다.' }, { status: 401 });
   }
 
-  const notes = await fsQuery('wrong_notes', [
-    { field: 'uid', op: 'EQUAL', value: uid },
-    { field: 'archived', op: 'EQUAL', value: false },
-  ], token);
+  try {
+    const all = await fsQuery('wrong_notes', [
+      { field: 'uid', op: 'EQUAL', value: uid },
+    ], token);
 
-  // MC 타입만 일일 풀기 가능 (essay는 자동 채점 어려움)
-  const mcNotes = notes.filter(n => (n as { questionType?: string }).questionType === 'mc');
+    // MC 타입만 일일 풀기 가능 (essay는 자동 채점 어려움)
+    const mcNotes = all.filter(n =>
+      !(n as { archived?: boolean }).archived &&
+      (n as { questionType?: string }).questionType === 'mc'
+    );
 
-  // 최대 20개 랜덤 선택
-  const shuffled = [...mcNotes].sort(() => Math.random() - 0.5);
-  const daily = shuffled.slice(0, 20);
+    // 최대 20개 랜덤 선택
+    const shuffled = [...mcNotes].sort(() => Math.random() - 0.5);
+    const daily = shuffled.slice(0, 20);
 
-  return NextResponse.json({ daily, total: mcNotes.length });
+    return NextResponse.json({ daily, total: mcNotes.length });
+  } catch {
+    return NextResponse.json({ daily: [], total: 0 });
+  }
 }
