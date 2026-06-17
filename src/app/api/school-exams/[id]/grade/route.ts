@@ -212,10 +212,24 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         },
       }
     );
-    await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+    try {
+      await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+    } catch (e) {
+      console.error('[school-exams/grade] fsSet attempt failed:', e);
+    }
   }
 
-  await fsBatch(writes, token);
+  try {
+    await fsBatch(writes, token);
+  } catch (e) {
+    console.error('[school-exams/grade] fsBatch failed:', e);
+    return NextResponse.json({
+      mcScore, essayScore, totalScore,
+      maxScore: exam.totalScore,
+      pointsEarned: 0, alreadyRewarded,
+      results,
+    });
+  }
 
   return NextResponse.json({
     mcScore,

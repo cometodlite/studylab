@@ -135,11 +135,24 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
         },
       }
     );
-    // 오늘 응시 기록 저장
-    await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+    try {
+      await fsSet(attemptKey, { userId: uid, examId: id, date: today, createdAt: now }, token);
+    } catch (e) {
+      console.error('[exams/grade] fsSet attempt failed:', e);
+    }
   }
 
-  await fsBatch(writes, token);
+  try {
+    await fsBatch(writes, token);
+  } catch (e) {
+    console.error('[exams/grade] fsBatch failed:', e);
+    return NextResponse.json({
+      score: correct, total, difficulty,
+      pointsEarned: 0, alreadyRewarded,
+      reasons: ['채점은 완료됐지만 결과 저장에 실패했습니다.'],
+      results,
+    });
+  }
 
   return NextResponse.json({
     score: correct,

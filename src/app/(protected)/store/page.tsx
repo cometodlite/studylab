@@ -34,7 +34,8 @@ export default function StorePage() {
   useEffect(() => {
     fetch('/api/coupons')
       .then(r => r.json())
-      .then(data => { setCoupons(data); setLoading(false); });
+      .then(data => { setCoupons(Array.isArray(data) ? data : []); setLoading(false); })
+      .catch(() => { setCoupons([]); setLoading(false); });
   }, []);
 
   async function handleRedeem(coupon: Coupon) {

@@ -33,15 +33,20 @@ export default function MyCouponsPage() {
 
   async function loadPurchases() {
     if (!user) return;
-    const q = query(
-      collection(db, 'purchases'),
-      where('userId', '==', user.uid),
-      orderBy('createdAt', 'desc')
-    );
-    const snap = await getDocs(q);
-    const items = snap.docs.map(d => ({ id: d.id, ...d.data() } as Purchase));
-    setPurchases(items);
-    setLoading(false);
+    try {
+      const q = query(
+        collection(db, 'purchases'),
+        where('userId', '==', user.uid),
+        orderBy('createdAt', 'desc')
+      );
+      const snap = await getDocs(q);
+      const items = snap.docs.map(d => ({ id: d.id, ...d.data() } as Purchase));
+      setPurchases(items);
+    } catch (e) {
+      console.error('[my-coupons] loadPurchases failed:', e);
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function loadItem(purchase: Purchase) {
