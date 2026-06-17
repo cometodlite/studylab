@@ -72,13 +72,38 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
   const difficulty = (exam.difficulty ?? '기본') as Difficulty;
   const pts = calcExamPoints(correct, total, difficulty);
 
+  const now = new Date();
+
+  // 오답 노트 저장
+  const wrongNoteWrites: WriteOp[] = results
+    .filter(r => !r.correct)
+    .map(r => ({
+      type: 'add' as const,
+      collection: 'wrong_notes',
+      id: `${uid}__${id}__${r.id}`,
+      data: {
+        uid,
+        source: 'practice',
+        examId: id,
+        examTitle: exam.title,
+        questionId: r.id,
+        questionType: 'mc',
+        question: r.question,
+        choices: r.choices ?? [],
+        correctAnswer: r.correctAnswer,
+        yourAnswer: r.yourAnswer,
+        explanation: r.explanation,
+        addedAt: now,
+        archived: false,
+      },
+    }));
+
   // 하루 1회 포인트 제한 체크
   const today = todayKST();
   const attemptKey = `exam_attempts/${uid}_${id}_${today}`;
   const existing = await fsGet(attemptKey, token);
   const alreadyRewarded = !!existing;
 
-  const now = new Date();
   const sessionId = genId();
 
   const writes: WriteOp[] = [
@@ -93,6 +118,7 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
         completedAt: now,
       },
     },
+    ...wrongNoteWrites,
   ];
 
   if (!alreadyRewarded) {

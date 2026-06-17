@@ -1,96 +1,115 @@
 'use client';
 
-import { useEffect, useState, use } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState, use, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { getIdToken } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import MathText from '@/components/MathText';
-import { Difficulty } from '@/lib/points';
 
-interface Question {
-  id: number;
-  question: string;
-  choices: string[];
+type MCQuestion = { id: number; type: 'mc'; score: number; question: string; choices: string[] };
+type EssayQuestion = { id: number; type: 'essay'; score: number; question: string; rubric?: string };
+type Question = MCQuestion | EssayQuestion;
+
+interface ExamData {
+  id: string;
+  title: string;
+  sheet: number;
+  timeLimit: number;
+  totalScore: number;
+  scorePerMC: number;
+  scorePerEssay: number;
+  questions: Question[];
 }
 
 interface GradeResult {
   id: number;
+  type: string;
   question: string;
-  choices: string[];
-  yourAnswer: number;
-  correctAnswer: number;
+  choices?: string[];
+  yourAnswer?: number | string;
+  correctAnswer?: number | string;
   correct: boolean;
-  explanation: string;
+  score: number;
+  earnedScore: number;
+  explanation?: string;
+  modelAnswer?: string;
+  rubric?: string;
 }
 
 interface GradeResponse {
-  score: number;
-  total: number;
-  difficulty: Difficulty;
+  mcScore: number;
+  essayScore: number;
+  totalScore: number;
+  maxScore: number;
   pointsEarned: number;
   alreadyRewarded: boolean;
-  reasons: string[];
   results: GradeResult[];
 }
 
-const DIFFICULTY_COLOR: Record<Difficulty, string> = {
-  '기본':   'bg-green-100 text-green-700',
-  '유형별': 'bg-blue-100 text-blue-700',
-  '심화':   'bg-orange-100 text-orange-700',
-  '킬러':   'bg-red-100 text-red-700',
-};
-
-export default function ExamPage({ params }: { params: Promise<{ id: string }> }) {
+export default function SchoolExamPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
-  const searchParams = useSearchParams();
   const router = useRouter();
   const { user, refreshProfile } = useAuth();
 
-  const [exam, setExam] = useState<{ title: string; difficulty: Difficulty | null; questions: Question[] } | null>(null);
+  const [exam, setExam] = useState<ExamData | null>(null);
   const [current, setCurrent] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [mcAnswers, setMcAnswers] = useState<Record<number, number>>({});
+  const [essayAnswers, setEssayAnswers] = useState<Record<number, string>>({});
   const [gradeResult, setGradeResult] = useState<GradeResponse | null>(null);
-  const [elapsed, setElapsed] = useState(0);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0);
+  const [timesUp, setTimesUp] = useState(false);
+  const autoSubmitRef = useRef(false);
 
   useEffect(() => {
-    const qs = new URLSearchParams();
-    const shuffle = searchParams.get('shuffle');
-    if (shuffle) qs.set('shuffle', shuffle);
-
-    fetch(`/api/exams/${id}?${qs}`)
+    fetch(`/api/school-exams/${id}`)
       .then(r => r.json())
-      .then(data => { setExam(data); setLoading(false); });
-  }, [id, searchParams]);
+      .then(data => {
+        setExam(data);
+        setTimeLeft(data.timeLimit * 60);
+        setLoading(false);
+      });
+  }, [id]);
 
   useEffect(() => {
     if (!exam || gradeResult) return;
-    const t = setInterval(() => setElapsed(s => s + 1), 1000);
+    const t = setInterval(() => {
+      setTimeLeft(s => {
+        if (s <= 1) {
+          clearInterval(t);
+          if (!autoSubmitRef.current) {
+            autoSubmitRef.current = true;
+            setTimesUp(true);
+          }
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
     return () => clearInterval(t);
   }, [exam, gradeResult]);
 
-  function formatTime(s: number) {
-    return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
-  }
+  useEffect(() => {
+    if (timesUp && !gradeResult) handleSubmit();
+  }, [timesUp]);
 
-  function selectAnswer(qId: number, idx: number) {
-    setAnswers(prev => ({ ...prev, [qId]: idx }));
-    if (current < (exam?.questions.length ?? 0) - 1) {
-      setTimeout(() => setCurrent(c => c + 1), 300);
-    }
+  function formatTime(s: number) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
   }
 
   async function handleSubmit() {
-    if (!user || !exam) return;
+    if (!user || !exam || submitting) return;
     setSubmitting(true);
     try {
       const token = await getIdToken(auth.currentUser!);
-      const res = await fetch(`/api/exams/${id}/grade`, {
+      const res = await fetch(`/api/school-exams/${id}/grade`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-        body: JSON.stringify({ answers }),
+        body: JSON.stringify({ mcAnswers, essayAnswers }),
       });
       const data = await res.json();
       setGradeResult(data);
@@ -105,29 +124,30 @@ export default function ExamPage({ params }: { params: Promise<{ id: string }> }
 
   // 결과 화면
   if (gradeResult) {
-    const pct = Math.round((gradeResult.score / gradeResult.total) * 100);
+    const pct = Math.round((gradeResult.totalScore / gradeResult.maxScore) * 100);
+    const emoji = pct >= 90 ? '🏆' : pct >= 80 ? '🎉' : pct >= 70 ? '👍' : pct >= 60 ? '🙂' : '💪';
     return (
       <div className="space-y-6">
         <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
-          <div className="text-5xl mb-3">{pct === 100 ? '🏆' : pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪'}</div>
-          <h1 className="text-2xl font-bold text-gray-800">{exam.title} 결과</h1>
-          {exam.difficulty && (
-            <span className={`inline-block text-xs rounded-full px-2.5 py-0.5 font-semibold mt-2 ${DIFFICULTY_COLOR[exam.difficulty]}`}>
-              {exam.difficulty}
-            </span>
-          )}
-          <div className="text-5xl font-bold text-indigo-600 mt-4">{gradeResult.score}/{gradeResult.total}</div>
-          <div className="text-gray-500 mt-1">{pct}% 정답</div>
+          <div className="text-5xl mb-3">{emoji}</div>
+          <h1 className="text-2xl font-bold text-gray-800">{exam.title}</h1>
+          <div className="text-5xl font-bold text-indigo-600 mt-4">
+            {gradeResult.totalScore}<span className="text-2xl text-gray-400">/{gradeResult.maxScore}</span>
+          </div>
+          <div className="flex justify-center gap-6 mt-3 text-sm text-gray-600">
+            <span>객관식 {gradeResult.mcScore}점</span>
+            <span>서술형 {gradeResult.essayScore}점</span>
+          </div>
+          <div className="text-gray-500 mt-1">{pct}%</div>
 
           {gradeResult.alreadyRewarded ? (
             <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mt-6 inline-block">
               <div className="text-sm font-semibold text-yellow-700">⚠️ 오늘 이미 포인트를 받은 시험입니다.</div>
-              <div className="text-sm text-yellow-600 mt-0.5">내일 다시 도전하면 포인트를 받을 수 있어요!</div>
+              <div className="text-sm text-yellow-600 mt-0.5">내일 다시 응시하면 포인트를 받을 수 있어요!</div>
             </div>
           ) : (
             <div className="bg-green-50 border border-green-200 rounded-xl p-4 mt-6 inline-block">
               <div className="text-2xl font-bold text-green-600">+{gradeResult.pointsEarned.toLocaleString()}p 획득!</div>
-              <div className="text-sm text-green-700 mt-1">{gradeResult.reasons.join(' · ')}</div>
             </div>
           )}
         </div>
@@ -136,26 +156,56 @@ export default function ExamPage({ params }: { params: Promise<{ id: string }> }
           {gradeResult.results.map((r, i) => (
             <div key={r.id} className={`bg-white rounded-xl p-5 border shadow-sm ${r.correct ? 'border-green-200' : 'border-red-200'}`}>
               <div className="flex items-start gap-2 mb-3">
-                <span className="text-lg">{r.correct ? '✅' : '❌'}</span>
-                <span className="font-medium text-gray-800">
-                  {i + 1}. <MathText text={r.question} />
-                </span>
+                <span className="text-lg shrink-0">{r.correct ? '✅' : '❌'}</span>
+                <div className="flex-1">
+                  <span className="text-xs text-gray-400 font-medium uppercase">{r.type === 'mc' ? '객관식' : '서술형'} {i + 1}번 · {r.earnedScore}/{r.score}점</span>
+                  <p className="font-medium text-gray-800 mt-0.5">
+                    <MathText text={r.question} />
+                  </p>
+                </div>
               </div>
-              <div className="space-y-1 ml-7">
-                {r.choices.map((c, ci) => (
-                  <div
-                    key={ci}
-                    className={`text-sm px-3 py-1.5 rounded-lg ${
-                      ci === r.correctAnswer ? 'bg-green-100 text-green-800 font-semibold'
-                        : ci === r.yourAnswer && !r.correct ? 'bg-red-100 text-red-700 line-through'
-                        : 'text-gray-600'
-                    }`}
-                  >
-                    {ci + 1}. <MathText text={c} />
-                  </div>
-                ))}
-              </div>
-              {r.explanation && (
+
+              {r.type === 'mc' && r.choices && (
+                <div className="space-y-1 ml-7">
+                  {r.choices.map((c, ci) => (
+                    <div
+                      key={ci}
+                      className={`text-sm px-3 py-1.5 rounded-lg ${
+                        ci === r.correctAnswer ? 'bg-green-100 text-green-800 font-semibold'
+                          : ci === r.yourAnswer && !r.correct ? 'bg-red-100 text-red-700 line-through'
+                          : 'text-gray-600'
+                      }`}
+                    >
+                      {ci + 1}. <MathText text={c} />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {r.type === 'essay' && (
+                <div className="ml-7 space-y-2">
+                  {r.yourAnswer && (
+                    <div className="text-sm bg-gray-50 rounded-lg px-3 py-2">
+                      <span className="font-medium text-gray-600">내 답안: </span>
+                      <span className={r.correct ? 'text-green-700' : 'text-red-600'}>{String(r.yourAnswer)}</span>
+                    </div>
+                  )}
+                  {r.modelAnswer && (
+                    <div className="text-sm bg-green-50 rounded-lg px-3 py-2">
+                      <span className="font-medium text-green-700">모범 답안: </span>
+                      <MathText text={r.modelAnswer} />
+                    </div>
+                  )}
+                  {r.rubric && (
+                    <div className="text-sm bg-blue-50 rounded-lg px-3 py-2 text-blue-700">
+                      <span className="font-medium">채점 기준: </span>
+                      <MathText text={r.rubric} />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {r.explanation && r.type === 'mc' && (
                 <div className="mt-3 ml-7 text-sm text-gray-500 bg-gray-50 rounded-lg px-3 py-2">
                   💡 <MathText text={r.explanation} />
                 </div>
@@ -166,83 +216,129 @@ export default function ExamPage({ params }: { params: Promise<{ id: string }> }
 
         <div className="flex gap-3">
           <button onClick={() => router.push('/exam')} className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl transition">
-            다른 시험 풀기
+            다른 회차 보기
           </button>
-          <button onClick={() => router.push('/store')} className="flex-1 border border-gray-200 hover:bg-gray-50 text-gray-700 font-semibold py-3 rounded-xl transition">
-            상점 가기 🎁
+          <button onClick={() => router.push('/wrong-notes')} className="flex-1 border border-gray-200 hover:bg-gray-50 text-gray-700 font-semibold py-3 rounded-xl transition">
+            오답노트 📝
           </button>
         </div>
       </div>
     );
   }
 
-  const q = exam.questions[current];
-  const answered = Object.keys(answers).length;
-  const allAnswered = answered === exam.questions.length;
+  const mcQuestions = exam.questions.filter(q => q.type === 'mc') as MCQuestion[];
+  const essayQuestions = exam.questions.filter(q => q.type === 'essay') as EssayQuestion[];
+  const allQuestions = exam.questions;
+  const q = allQuestions[current];
+  const mcAnswered = Object.keys(mcAnswers).length;
+  const essayAnswered = Object.keys(essayAnswers).filter(k => essayAnswers[Number(k)]?.trim()).length;
+  const totalAnswered = mcAnswered + essayAnswered;
+  const isUrgent = timeLeft <= 300; // 5분 이하
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-4">
       {/* 헤더 */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm sticky top-16 z-30">
         <div>
-          <div className="flex items-center gap-2">
-            <h1 className="font-bold text-gray-800">{exam.title}</h1>
-            {exam.difficulty && (
-              <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFFICULTY_COLOR[exam.difficulty]}`}>
-                {exam.difficulty}
-              </span>
-            )}
-          </div>
-          <p className="text-sm text-gray-500">{current + 1} / {exam.questions.length}문제</p>
+          <h1 className="font-bold text-gray-800 text-sm">{exam.title}</h1>
+          <p className="text-xs text-gray-500">{current + 1}/{allQuestions.length} · {q.type === 'mc' ? '객관식' : '서술형'}</p>
         </div>
-        <div className="text-sm text-gray-400 font-mono">{formatTime(elapsed)}</div>
+        <div className={`text-lg font-mono font-bold tabular-nums ${isUrgent ? 'text-red-600 animate-pulse' : 'text-gray-700'}`}>
+          ⏱ {formatTime(timeLeft)}
+        </div>
       </div>
 
       {/* 진행바 */}
-      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+      <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
         <div
           className="h-full bg-indigo-500 rounded-full transition-all"
-          style={{ width: `${((current + 1) / exam.questions.length) * 100}%` }}
+          style={{ width: `${((current + 1) / allQuestions.length) * 100}%` }}
         />
       </div>
 
       {/* 문제 */}
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        <div className="flex items-center gap-2 mb-4">
+          <span className={`text-xs font-semibold rounded-full px-2.5 py-0.5 ${q.type === 'mc' ? 'bg-indigo-100 text-indigo-700' : 'bg-purple-100 text-purple-700'}`}>
+            {q.type === 'mc' ? `객관식 ${mcQuestions.findIndex(m => m.id === q.id) + 1}` : `서술형 ${essayQuestions.findIndex(e => e.id === q.id) + 1}`}
+          </span>
+          <span className="text-xs text-gray-400">{q.score}점</span>
+        </div>
+
         <p className="font-semibold text-gray-800 text-base mb-5">
           {current + 1}. <MathText text={q.question} />
         </p>
-        <div className="space-y-2">
-          {q.choices.map((c, ci) => (
-            <button
-              key={ci}
-              onClick={() => selectAnswer(q.id, ci)}
-              className={`w-full text-left px-4 py-3 rounded-xl text-sm transition border ${
-                answers[q.id] === ci
-                  ? 'border-indigo-500 bg-indigo-50 text-indigo-700 font-semibold'
-                  : 'border-gray-200 hover:border-indigo-300 hover:bg-indigo-50 text-gray-700'
-              }`}
-            >
-              {ci + 1}. <MathText text={c} />
-            </button>
-          ))}
-        </div>
+
+        {q.type === 'mc' && (
+          <div className="space-y-2">
+            {(q as MCQuestion).choices.map((c, ci) => (
+              <button
+                key={ci}
+                onClick={() => setMcAnswers(prev => ({ ...prev, [q.id]: ci }))}
+                className={`w-full text-left px-4 py-3 rounded-xl text-sm transition border ${
+                  mcAnswers[q.id] === ci
+                    ? 'border-indigo-500 bg-indigo-50 text-indigo-700 font-semibold'
+                    : 'border-gray-200 hover:border-indigo-300 hover:bg-indigo-50 text-gray-700'
+                }`}
+              >
+                {ci + 1}. <MathText text={c} />
+              </button>
+            ))}
+          </div>
+        )}
+
+        {q.type === 'essay' && (
+          <div>
+            {(q as EssayQuestion).rubric && (
+              <div className="text-xs text-blue-600 bg-blue-50 rounded-lg px-3 py-2 mb-3">
+                📌 <MathText text={(q as EssayQuestion).rubric!} />
+              </div>
+            )}
+            <textarea
+              value={essayAnswers[q.id] ?? ''}
+              onChange={e => setEssayAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
+              placeholder="풀이 과정과 답을 서술하세요..."
+              rows={5}
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300 resize-none"
+            />
+          </div>
+        )}
       </div>
 
       {/* 문항 네비게이션 */}
-      <div className="flex flex-wrap gap-1.5">
-        {exam.questions.map((qq, i) => (
-          <button
-            key={qq.id}
-            onClick={() => setCurrent(i)}
-            className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
-              i === current ? 'bg-indigo-600 text-white'
-                : answers[qq.id] !== undefined ? 'bg-indigo-100 text-indigo-700'
-                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-            }`}
-          >
-            {i + 1}
-          </button>
-        ))}
+      <div className="bg-white rounded-xl p-3 border border-gray-100 shadow-sm">
+        <p className="text-xs text-gray-400 mb-2">객관식</p>
+        <div className="flex flex-wrap gap-1.5 mb-3">
+          {mcQuestions.map((qq, i) => (
+            <button
+              key={qq.id}
+              onClick={() => setCurrent(allQuestions.indexOf(qq))}
+              className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
+                allQuestions.indexOf(qq) === current ? 'bg-indigo-600 text-white'
+                  : mcAnswers[qq.id] !== undefined ? 'bg-indigo-100 text-indigo-700'
+                  : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+              }`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+        <p className="text-xs text-gray-400 mb-2">서술형</p>
+        <div className="flex flex-wrap gap-1.5">
+          {essayQuestions.map((qq, i) => (
+            <button
+              key={qq.id}
+              onClick={() => setCurrent(allQuestions.indexOf(qq))}
+              className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
+                allQuestions.indexOf(qq) === current ? 'bg-purple-600 text-white'
+                  : essayAnswers[qq.id]?.trim() ? 'bg-purple-100 text-purple-700'
+                  : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+              }`}
+            >
+              서{i + 1}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* 이전/다음 + 제출 */}
@@ -255,22 +351,20 @@ export default function ExamPage({ params }: { params: Promise<{ id: string }> }
           이전
         </button>
         <button
-          onClick={() => setCurrent(c => Math.min(exam.questions.length - 1, c + 1))}
-          disabled={current === exam.questions.length - 1}
+          onClick={() => setCurrent(c => Math.min(allQuestions.length - 1, c + 1))}
+          disabled={current === allQuestions.length - 1}
           className="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-40 transition"
         >
           다음
         </button>
         <button
-          onClick={handleSubmit}
-          disabled={submitting || answered === 0}
-          className={`ml-auto text-sm font-semibold px-5 py-2.5 rounded-xl transition disabled:opacity-50 ${
-            allAnswered
-              ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
-              : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
-          }`}
+          onClick={() => {
+            if (confirm(`${totalAnswered}/${allQuestions.length}문항 답안으로 제출하시겠습니까?`)) handleSubmit();
+          }}
+          disabled={submitting || totalAnswered === 0}
+          className="ml-auto text-sm font-semibold px-5 py-2.5 rounded-xl transition disabled:opacity-50 bg-indigo-600 hover:bg-indigo-700 text-white"
         >
-          {submitting ? '채점 중...' : allAnswered ? `제출 (${answered}/${exam.questions.length}) ✓` : `제출 (${answered}/${exam.questions.length})`}
+          {submitting ? '채점 중...' : `제출 (${totalAnswered}/${allQuestions.length})`}
         </button>
       </div>
     </div>

@@ -2,149 +2,93 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { DIFFICULTY_RULES, Difficulty } from '@/lib/points';
 
-interface ExamMeta {
+interface SchoolExamMeta {
   id: string;
   title: string;
-  description: string;
-  grade: number | null;
-  unit: string | null;
-  difficulty: Difficulty | null;
-  questionCount: number;
+  school: string;
+  grade: number;
+  sheet: number;
+  difficulty: string;
+  timeLimit: number;
+  totalScore: number;
+  mcCount: number;
+  essayCount: number;
 }
 
-const DIFFICULTY_COLOR: Record<Difficulty, string> = {
-  '기본':   'bg-green-100 text-green-700',
-  '유형별': 'bg-blue-100 text-blue-700',
-  '심화':   'bg-orange-100 text-orange-700',
-  '킬러':   'bg-red-100 text-red-700',
+const DIFF_COLOR: Record<string, string> = {
+  '보통': 'bg-blue-100 text-blue-700',
+  '어려움': 'bg-orange-100 text-orange-700',
 };
 
-const GRADE_LABEL: Record<number, string> = { 1: '중1', 2: '중2', 3: '중3' };
+const SHEET_ICON = ['🌱', '📗', '📘', '📙', '🔥'];
 
 export default function ExamListPage() {
-  const [exams, setExams] = useState<ExamMeta[]>([]);
+  const [exams, setExams] = useState<SchoolExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
-  const [gradeFilter, setGradeFilter] = useState<string>('');
-  const [unitFilter, setUnitFilter] = useState<string>('');
-  const [diffFilter, setDiffFilter] = useState<string>('');
 
   useEffect(() => {
-    fetch('/api/exams')
-      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    fetch('/api/school-exams')
+      .then(r => r.json())
       .then(data => { setExams(data); setLoading(false); })
       .catch(() => setLoading(false));
   }, []);
-
-  const grades = [...new Set(exams.map(e => e.grade).filter(Boolean))].sort() as number[];
-  const units = [...new Set(
-    exams.filter(e => !gradeFilter || String(e.grade) === gradeFilter).map(e => e.unit).filter(Boolean)
-  )] as string[];
-
-  const filtered = exams.filter(e => {
-    if (gradeFilter && String(e.grade) !== gradeFilter) return false;
-    if (unitFilter && e.unit !== unitFilter) return false;
-    if (diffFilter && e.difficulty !== diffFilter) return false;
-    return true;
-  });
-
-  function maxPoints(d: Difficulty | null, count: number) {
-    if (!d) return null;
-    const r = DIFFICULTY_RULES[d];
-    return r.perQuestion * count + r.complete + r.bonusPerfect;
-  }
 
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-800">📝 시험 선택</h1>
-        <p className="text-gray-500 text-sm mt-1">문제를 풀고 포인트를 획득하세요. (하루 1회 포인트 지급)</p>
+        <h1 className="text-2xl font-bold text-gray-800">📋 수학 시험</h1>
+        <p className="text-gray-500 text-sm mt-1">
+          부천일신중 2학년 수학 1학기 2차 정기시험 · 40분 · 25문항
+        </p>
       </div>
 
-      {/* 필터 */}
-      <div className="flex flex-wrap gap-2">
-        <select
-          value={gradeFilter}
-          onChange={e => { setGradeFilter(e.target.value); setUnitFilter(''); }}
-          className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-        >
-          <option value="">전체 학년</option>
-          {grades.map(g => <option key={g} value={String(g)}>{GRADE_LABEL[g] ?? `${g}학년`}</option>)}
-        </select>
-
-        <select
-          value={unitFilter}
-          onChange={e => setUnitFilter(e.target.value)}
-          className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-        >
-          <option value="">전체 단원</option>
-          {units.map(u => <option key={u} value={u}>{u}</option>)}
-        </select>
-
-        <select
-          value={diffFilter}
-          onChange={e => setDiffFilter(e.target.value)}
-          className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-        >
-          <option value="">전체 난이도</option>
-          {(['기본', '유형별', '심화', '킬러'] as Difficulty[]).map(d => (
-            <option key={d} value={d}>{d}</option>
-          ))}
-        </select>
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
+        <p className="font-semibold mb-1">⚠️ 시험 안내</p>
+        <ul className="space-y-0.5 text-amber-700">
+          <li>· 시험 시간 <strong>40분</strong> — 시간 조정 불가</li>
+          <li>· 5지선다 <strong>20문항</strong> (각 4점) + 서술형 <strong>5문항</strong> (각 4점) = 100점</li>
+          <li>· 범위: 일차부등식의 활용 ~ 함수 (p60–p131)</li>
+          <li>· 점수에 따라 포인트 지급 (90점↑ 500p · 80점↑ 350p · 70점↑ 250p · 60점↑ 150p · 50점↑ 100p · 50점 미만 50p)</li>
+          <li>· 하루 1회 포인트 지급</li>
+        </ul>
       </div>
 
-      {/* 목록 */}
       <div className="grid gap-4">
-        {filtered.map(exam => {
-          const mp = maxPoints(exam.difficulty, exam.questionCount);
-          return (
-            <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 flex-wrap mb-1">
-                  {exam.grade && (
-                    <span className="text-xs bg-gray-100 text-gray-600 rounded-full px-2 py-0.5 font-medium">
-                      {GRADE_LABEL[exam.grade] ?? `${exam.grade}학년`}
-                    </span>
-                  )}
-                  {exam.unit && (
-                    <span className="text-xs bg-indigo-50 text-indigo-600 rounded-full px-2 py-0.5 font-medium">
-                      {exam.unit}
-                    </span>
-                  )}
-                  {exam.difficulty && (
-                    <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFFICULTY_COLOR[exam.difficulty]}`}>
-                      {exam.difficulty}
-                    </span>
-                  )}
+        {exams.map((exam, idx) => (
+          <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-sm font-bold text-gray-700">{exam.sheet}회</span>
+                  <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFF_COLOR[exam.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
+                    {exam.difficulty}
+                  </span>
                 </div>
                 <h2 className="font-bold text-gray-800">{exam.title}</h2>
-                {exam.description && <p className="text-gray-500 text-sm mt-0.5 truncate">{exam.description}</p>}
-                <div className="flex items-center gap-3 mt-1.5">
-                  <span className="text-indigo-500 text-sm font-medium">{exam.questionCount}문제</span>
-                  {mp !== null && (
-                    <span className="text-green-600 text-sm font-medium">만점 최대 {mp.toLocaleString()}p</span>
-                  )}
+                <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
+                  <span>⏱ {exam.timeLimit}분</span>
+                  <span>📝 객관식 {exam.mcCount}문항 + 서술형 {exam.essayCount}문항</span>
+                  <span>🏆 {exam.totalScore}점 만점</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 ml-4 shrink-0">
-                <Link
-                  href={`/exam/${exam.id}?shuffle=1`}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition text-center"
-                >
-                  시작
-                </Link>
-              </div>
             </div>
-          );
-        })}
+            <Link
+              href={`/exam/${exam.id}`}
+              className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
+            >
+              응시하기
+            </Link>
+          </div>
+        ))}
 
-        {filtered.length === 0 && (
+        {exams.length === 0 && (
           <div className="text-center py-16 text-gray-400">
             <div className="text-4xl mb-3">📭</div>
-            <p>해당 조건의 시험이 없습니다.</p>
+            <p>시험 문항을 불러올 수 없습니다.</p>
           </div>
         )}
       </div>

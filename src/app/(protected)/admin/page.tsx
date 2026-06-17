@@ -20,8 +20,9 @@ export default function AdminPage() {
   const { profile } = useAuth();
   const router = useRouter();
   const [coupons, setCoupons] = useState<AdminCoupon[]>([]);
+  const [debugHistory, setDebugHistory] = useState<{id:string;date:string;category:string;description:string;files:string[]}[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<'coupons' | 'upload'>('coupons');
+  const [tab, setTab] = useState<'coupons' | 'upload' | 'debug'>('coupons');
 
   // 새 쿠폰 폼
   const [newName, setNewName] = useState('');
@@ -38,7 +39,13 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (profile && profile.role !== 'admin') router.replace('/dashboard');
-    if (profile?.role === 'admin') loadCoupons();
+    if (profile?.role === 'admin') {
+      loadCoupons();
+      getIdToken(auth.currentUser!).then(token =>
+        fetch('/api/admin/debug-history', { headers: { Authorization: `Bearer ${token}` } })
+          .then(r => r.json()).then(data => setDebugHistory(data)).catch(() => {})
+      );
+    }
   }, [profile]);
 
   async function getToken() {
@@ -92,14 +99,14 @@ export default function AdminPage() {
         <h1 className="text-2xl font-bold text-gray-800">🛠️ 관리자 패널</h1>
       </div>
 
-      <div className="flex gap-2">
-        {(['coupons', 'upload'] as const).map(t => (
+      <div className="flex gap-2 flex-wrap">
+        {([['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역']] as const).map(([t, label]) => (
           <button
             key={t}
-            onClick={() => setTab(t)}
+            onClick={() => setTab(t as typeof tab)}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition ${tab === t ? 'bg-indigo-600 text-white' : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'}`}
           >
-            {t === 'coupons' ? '🎁 쿠폰 관리' : '⬆️ 기프티콘 업로드'}
+            {label}
           </button>
         ))}
       </div>
@@ -214,6 +221,39 @@ export default function AdminPage() {
               {uploading ? '업로드 중...' : '업로드'}
             </button>
           </form>
+        </div>
+      )}
+
+      {tab === 'debug' && (
+        <div className="space-y-3">
+          <p className="text-sm text-gray-500">총 {debugHistory.length}건의 수정 내역</p>
+          {debugHistory.length === 0 ? (
+            <div className="text-center py-10 text-gray-400">수정 내역이 없습니다.</div>
+          ) : (
+            [...debugHistory].reverse().map(entry => (
+              <div key={entry.id} className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className={`text-xs font-semibold rounded-full px-2 py-0.5 ${
+                    entry.category === 'answer_fix' ? 'bg-red-100 text-red-600' :
+                    entry.category === 'question_fix' ? 'bg-orange-100 text-orange-600' :
+                    entry.category === 'json_fix' ? 'bg-yellow-100 text-yellow-600' :
+                    'bg-blue-100 text-blue-600'
+                  }`}>
+                    {entry.category === 'answer_fix' ? '정답 수정' :
+                     entry.category === 'question_fix' ? '문제 수정' :
+                     entry.category === 'json_fix' ? 'JSON 수정' : '기능 추가'}
+                  </span>
+                  <span className="text-xs text-gray-400">{entry.date}</span>
+                </div>
+                <p className="text-sm text-gray-700 mb-2">{entry.description}</p>
+                <div className="flex flex-wrap gap-1">
+                  {entry.files.map(f => (
+                    <span key={f} className="text-xs font-mono bg-gray-50 text-gray-500 rounded px-2 py-0.5">{f.split('/').pop()}</span>
+                  ))}
+                </div>
+              </div>
+            ))
+          )}
         </div>
       )}
     </div>

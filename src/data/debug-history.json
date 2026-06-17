@@ -1,0 +1,58 @@
+[
+  {
+    "id": "dbg-001",
+    "date": "2026-06-17",
+    "category": "answer_fix",
+    "description": "m2-linear-graph-pattern: Q16 answer:0→1 (정답 $y=\\frac{1}{2}x+1$이 index 1), Q22 answer:0→2 (정답 $-1$이 index 2), Q26 answer:0→1 (정답 $-2$가 index 1)",
+    "files": ["src/data/math/m2-linear-graph-pattern.json"],
+    "author": "claude"
+  },
+  {
+    "id": "dbg-002",
+    "date": "2026-06-17",
+    "category": "answer_fix",
+    "description": "m2-linear-graph-killer: Q7 answer:0→2 (정답 $(−2,-1)$이 index 2, en-dash 이슈로 Python json.load 사용), Q18 answer:0→3 (정답 $x=1$이 index 3)",
+    "files": ["src/data/math/m2-linear-graph-killer.json"],
+    "author": "claude"
+  },
+  {
+    "id": "dbg-003",
+    "date": "2026-06-17",
+    "category": "question_fix",
+    "description": "m2-linear-eq-pattern: Q10 answer:0→2, Q16 정답이 선지에 없어 문제·정답 교체, Q19 정답이 선지에 없어 조건값 변경 answer→4",
+    "files": ["src/data/math/m2-linear-eq-pattern.json"],
+    "author": "claude"
+  },
+  {
+    "id": "dbg-004",
+    "date": "2026-06-17",
+    "category": "json_fix",
+    "description": "m2-linear-eq-advanced: Q2 choices 배열 5번째 항목에 JSON 구문 오류('}]'가 문자열에 삽입됨) → '$a+b+5$'로 교체",
+    "files": ["src/data/math/m2-linear-eq-advanced.json"],
+    "author": "claude"
+  },
+  {
+    "id": "dbg-005",
+    "date": "2026-06-17",
+    "category": "feature_add",
+    "description": "문제풀이 탭 신설(/practice), 기존 /exam을 문제풀이로 이동. /exam을 부천일신중 정기시험 전용으로 교체",
+    "files": ["src/app/(protected)/practice/page.tsx", "src/app/(protected)/practice/[id]/page.tsx", "src/app/(protected)/exam/page.tsx", "src/app/(protected)/exam/[id]/page.tsx"],
+    "author": "claude"
+  },
+  {
+    "id": "dbg-006",
+    "date": "2026-06-17",
+    "category": "feature_add",
+    "description": "오답노트 탭 신설(/wrong-notes): 매일 20문항, 아카이브 기능. 문제풀이·시험 채점 시 오답 자동 저장",
+    "files": ["src/app/(protected)/wrong-notes/page.tsx", "src/app/api/wrong-notes/route.ts", "src/app/api/wrong-notes/daily/route.ts", "src/app/api/wrong-notes/[noteId]/solve/route.ts"],
+    "author": "claude"
+  },
+  {
+    "id": "dbg-007",
+    "date": "2026-06-17",
+    "category": "feature_add",
+    "description": "부천일신중 2학년 수학 2차 모의고사 5회분 추가 (각 20 MC + 5 서술형, 40분 타이머 고정, 점수 기반 포인트)",
+    "files": ["src/data/school-exams/bicheon-m2-2026-1-2-sheet1.json", "src/data/school-exams/bicheon-m2-2026-1-2-sheet2.json", "src/data/school-exams/bicheon-m2-2026-1-2-sheet3.json", "src/data/school-exams/bicheon-m2-2026-1-2-sheet4.json", "src/data/school-exams/bicheon-m2-2026-1-2-sheet5.json"],
+    "author": "claude"
+  }
+]
