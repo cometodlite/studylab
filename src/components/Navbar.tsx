@@ -6,7 +6,6 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 
 const LIBRARY_LINKS = [
-  { href: '/practice', label: '📝 문제풀이' },
   { href: '/concepts', label: '📚 개념' },
   { href: '/wrong-notes', label: '❌ 오답노트' },
   { href: '/flashcards', label: '🃏 플랫카드', badge: 'NEW' },
