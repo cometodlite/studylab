@@ -11,30 +11,350 @@
   "scorePerMC": 4,
   "scorePerEssay": 4,
   "questions": [
-    {"id":1,"type":"mc","score":4,"question":"$a < b$이고 $c > 0$일 때 다음 중 항상 옳은 것은?","choices":["$ac < bc$","$-a < -b$","$\\frac{a}{c} > \\frac{b}{c}$","$a + c < b - c$","$ac > bc$"],"answer":0,"explanation":"$c > 0$이면 부등호 방향 유지: $ac < bc$"},
-    {"id":2,"type":"mc","score":4,"question":"$\\frac{2x + 1}{3} \\geq 3$의 해는?","choices":["$x \\geq 4$","$x \\leq 4$","$x \\geq -4$","$x \\leq -4$","$x > 4$"],"answer":0,"explanation":"$2x + 1 \\geq 9 \\Rightarrow 2x \\geq 8 \\Rightarrow x \\geq 4$"},
-    {"id":3,"type":"mc","score":4,"question":"$-\\frac{x}{3} < 2$의 해는?","choices":["$x > -6$","$x < -6$","$x > 6$","$x < 6$","$x \\geq -6$"],"answer":0,"explanation":"$-x < 6 \\Rightarrow x > -6$ (나누기 음수 → 방향 바뀜)"},
-    {"id":4,"type":"mc","score":4,"question":"$7x - 4 \\geq 3x + 12$의 해는?","choices":["$x \\geq 4$","$x \\leq 4$","$x \\geq -4$","$x \\leq -4$","$x > 4$"],"answer":0,"explanation":"$4x \\geq 16 \\Rightarrow x \\geq 4$"},
-    {"id":5,"type":"mc","score":4,"question":"$-2 < x + 3 \\leq 5$를 풀면?","choices":["$-5 < x \\leq 2$","$-5 \\leq x < 2$","$1 < x \\leq 8$","$-2 < x \\leq 5$","$-5 < x < 2$"],"answer":0,"explanation":"$-2 - 3 < x \\leq 5 - 3 \\Rightarrow -5 < x \\leq 2$"},
-    {"id":6,"type":"mc","score":4,"question":"다음 대응 관계 중 $y$가 $x$의 함수인 것은?","choices":["$\\{(-1,0),(0,1),(1,2),(2,2)\\}$","$\\{(-1,0),(0,1),(-1,2),(2,3)\\}$","$\\{(-1,1),(0,0),(1,1),(1,2)\\}$","$\\{(-1,-1),(2,2)\\}$ (정의역 누락)","$\\{(-1,2),(0,1),(2,0),(2,-1)\\}$"],"answer":0,"explanation":"①: 하나의 $x$에 하나의 $y$ 대응 → 함수. ②: $x=-1$에 두 값, ③: $x=1$에 두 값, ⑤: $x=2$에 두 값."},
-    {"id":7,"type":"mc","score":4,"question":"$f(x) = \\frac{x}{2} - 3$일 때 $f(8)$의 값은?","choices":["$1$","$-1$","$4$","$-4$","$7$"],"answer":0,"explanation":"$f(8) = 4 - 3 = 1$"},
-    {"id":8,"type":"mc","score":4,"question":"집에서 학교까지 $x\\text{km}$이다. 시속 $4\\text{km}$로 걸어 $1$시간 $30$분 이내에 도착하려면?","choices":["$x \\leq 6$","$x \\leq 8$","$x \\leq 4$","$x \\leq 3$","$x \\leq 10$"],"answer":0,"explanation":"$x/4 \\leq 1.5 \\Rightarrow x \\leq 6$"},
-    {"id":9,"type":"mc","score":4,"question":"$f(x) = ax + 3$이고 $f(2) = -1$일 때 $a$의 값은?","choices":["$-2$","$2$","$-1$","$1$","$-3$"],"answer":0,"explanation":"$2a + 3 = -1 \\Rightarrow 2a = -4 \\Rightarrow a = -2$"},
-    {"id":10,"type":"mc","score":4,"question":"$0.3x - 0.9 \\geq 0.6$의 해는?","choices":["$x \\geq 5$","$x \\leq 5$","$x \\geq 2$","$x \\leq 2$","$x > 5$"],"answer":0,"explanation":"$0.3x \\geq 1.5 \\Rightarrow x \\geq 5$"},
-    {"id":11,"type":"mc","score":4,"question":"$f(x) = 3x - 2$에서 $f(2) - f(-1)$의 값은?","choices":["$9$","$-9$","$3$","$-3$","$4$"],"answer":0,"explanation":"$f(2) = 4$, $f(-1) = -5$. $4 - (-5) = 9$"},
-    {"id":12,"type":"mc","score":4,"question":"$3(x - 2) + 5 \\geq 2(x + 1)$의 해는?","choices":["$x \\geq 3$","$x \\leq 3$","$x \\geq -3$","$x \\leq -3$","$x > 3$"],"answer":0,"explanation":"$3x - 1 \\geq 2x + 2 \\Rightarrow x \\geq 3$"},
-    {"id":13,"type":"mc","score":4,"question":"$\\frac{x}{2} - \\frac{x}{3} > 1$의 해는?","choices":["$x > 6$","$x < 6$","$x > 3$","$x < 3$","$x > 2$"],"answer":0,"explanation":"$\\frac{3x - 2x}{6} > 1 \\Rightarrow \\frac{x}{6} > 1 \\Rightarrow x > 6$"},
-    {"id":14,"type":"mc","score":4,"question":"$f(x) = 2x + 4$에서 $f(a) = 2f(0)$일 때 $a$의 값은?","choices":["$2$","$-2$","$4$","$-4$","$1$"],"answer":0,"explanation":"$f(0) = 4$. $f(a) = 8$. $2a + 4 = 8 \\Rightarrow a = 2$"},
-    {"id":15,"type":"mc","score":4,"question":"$ax > 6$의 해가 $x < -2$일 때 $a$의 값은?","choices":["$-3$","$3$","$-6$","$6$","$-2$"],"answer":0,"explanation":"$a < 0$ (방향 반전). $6/a = -2 \\Rightarrow a = -3$"},
-    {"id":16,"type":"mc","score":4,"question":"$2x - 7 < x + k$의 해가 $x < 5$일 때 $k$는?","choices":["$-2$","$2$","$-7$","$7$","$-5$"],"answer":0,"explanation":"$x < k + 7$. 해가 $x < 5$ → $k + 7 = 5 \\Rightarrow k = -2$"},
-    {"id":17,"type":"mc","score":4,"question":"$f(x) = ax + b$에서 $f(0) = -3$, $f(3) = 9$일 때 $f(1)$의 값은?","choices":["$1$","$-1$","$4$","$-4$","$5$"],"answer":0,"explanation":"$b = -3$. $3a - 3 = 9 \\Rightarrow a = 4$. $f(1) = 4 - 3 = 1$"},
-    {"id":18,"type":"mc","score":4,"question":"$5$문제 시험에서 맞히면 $10$점, 틀리면 $-2$점이다. $3$문제 맞고 $2$문제 틀리면?","choices":["$26$점","$24$점","$28$점","$30$점","$22$점"],"answer":0,"explanation":"$3 \\times 10 + 2 \\times (-2) = 30 - 4 = 26$점"},
-    {"id":19,"type":"mc","score":4,"question":"$f(x) = -x + 4$에서 $1 \\leq x \\leq 3$일 때 $f(x)$의 최솟값은?","choices":["$1$","$3$","$2$","$-1$","$4$"],"answer":0,"explanation":"$f(x)$는 감소함수. $f(3) = 1$이 최솟값."},
-    {"id":20,"type":"mc","score":4,"question":"$\\frac{x}{3} > 5$를 만족하는 $x$의 범위는?","choices":["$x > 15$","$x < 15$","$x > 10$","$x < 10$","$x \\geq 15$"],"answer":0,"explanation":"$x > 15$"},
-    {"id":21,"type":"essay","score":4,"question":"$\\frac{3x - 1}{2} - x > \\frac{1}{2}$을 풀어라.","answer":"$x > 2$","expectedAnswer":"x>2","rubric":"[2점] 통분: $\\frac{x-1}{2} > \\frac{1}{2}$ [2점] $x - 1 > 1 \\Rightarrow x > 2$"},
-    {"id":22,"type":"essay","score":4,"question":"어떤 상품의 가격은 개당 $1500$원이다. 예산이 $20000$원일 때 최대 몇 개 살 수 있는가?","answer":"최대 $13$개","expectedAnswer":"13","rubric":"[2점] $1500x \\leq 20000$ [2점] $x \\leq 13.33...$ → 자연수이므로 최대 $13$개"},
-    {"id":23,"type":"essay","score":4,"question":"$f(x) = ax + b$에서 $f(1) = 3$이고 $f(3) = 7$일 때 $a + b$의 값을 구하여라.","answer":"$3$","expectedAnswer":"3","rubric":"[1점] $a+b=3$, $3a+b=7$ [2점] 연립: $a=2, b=1$ [1점] $a+b=3$"},
-    {"id":24,"type":"essay","score":4,"question":"$f(x) = -2x + 5$에서 $f(-2) + f(0) + f(2) + f(4)$를 구하여라.","answer":"$12$","expectedAnswer":"12","rubric":"[2점] 각 함수값: $9, 5, 1, -3$ [2점] 합 $= 9+5+1+(-3) = 12$"},
-    {"id":25,"type":"essay","score":4,"question":"$f(x) = 2x + 1$에서 $f(x) \\leq 7$을 만족하는 자연수 $x$의 개수를 구하여라.","answer":"$3$개","expectedAnswer":"3","rubric":"[2점] $2x + 1 \\leq 7 \\Rightarrow x \\leq 3$ [2점] 자연수: $1, 2, 3 \\Rightarrow 3$개"}
+    {
+      "id": 1,
+      "type": "mc",
+      "score": 4,
+      "question": "$a < b$이고 $c > 0$일 때 다음 중 항상 옳은 것은?",
+      "choices": [
+        "$\\frac{a}{c} > \\frac{b}{c}$",
+        "$-a < -b$",
+        "$a + c < b - c$",
+        "$ac < bc$",
+        "$ac > bc$"
+      ],
+      "answer": 3,
+      "explanation": "$c > 0$이면 부등호 방향 유지: $ac < bc$"
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "score": 4,
+      "question": "$\\frac{2x + 1}{3} \\geq 3$의 해는?",
+      "choices": [
+        "$x \\geq -4$",
+        "$x \\leq -4$",
+        "$x > 4$",
+        "$x \\leq 4$",
+        "$x \\geq 4$"
+      ],
+      "answer": 4,
+      "explanation": "$2x + 1 \\geq 9 \\Rightarrow 2x \\geq 8 \\Rightarrow x \\geq 4$"
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "score": 4,
+      "question": "$-\\frac{x}{3} < 2$의 해는?",
+      "choices": [
+        "$x > -6$",
+        "$x > 6$",
+        "$x < 6$",
+        "$x < -6$",
+        "$x \\geq -6$"
+      ],
+      "answer": 0,
+      "explanation": "$-x < 6 \\Rightarrow x > -6$ (나누기 음수 → 방향 바뀜)"
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "score": 4,
+      "question": "$7x - 4 \\geq 3x + 12$의 해는?",
+      "choices": [
+        "$x \\geq 4$",
+        "$x \\leq -4$",
+        "$x \\geq -4$",
+        "$x > 4$",
+        "$x \\leq 4$"
+      ],
+      "answer": 0,
+      "explanation": "$4x \\geq 16 \\Rightarrow x \\geq 4$"
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "score": 4,
+      "question": "$-2 < x + 3 \\leq 5$를 풀면?",
+      "choices": [
+        "$-5 < x \\leq 2$",
+        "$-5 < x < 2$",
+        "$-5 \\leq x < 2$",
+        "$1 < x \\leq 8$",
+        "$-2 < x \\leq 5$"
+      ],
+      "answer": 0,
+      "explanation": "$-2 - 3 < x \\leq 5 - 3 \\Rightarrow -5 < x \\leq 2$"
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 대응 관계 중 $y$가 $x$의 함수인 것은?",
+      "choices": [
+        "$\\{(-1,-1),(2,2)\\}$ (정의역 누락)",
+        "$\\{(-1,1),(0,0),(1,1),(1,2)\\}$",
+        "$\\{(-1,2),(0,1),(2,0),(2,-1)\\}$",
+        "$\\{(-1,0),(0,1),(-1,2),(2,3)\\}$",
+        "$\\{(-1,0),(0,1),(1,2),(2,2)\\}$"
+      ],
+      "answer": 4,
+      "explanation": "①: 하나의 $x$에 하나의 $y$ 대응 → 함수. ②: $x=-1$에 두 값, ③: $x=1$에 두 값, ⑤: $x=2$에 두 값."
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "score": 4,
+      "question": "$f(x) = \\frac{x}{2} - 3$일 때 $f(8)$의 값은?",
+      "choices": [
+        "$-1$",
+        "$-4$",
+        "$7$",
+        "$1$",
+        "$4$"
+      ],
+      "answer": 3,
+      "explanation": "$f(8) = 4 - 3 = 1$"
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "score": 4,
+      "question": "집에서 학교까지 $x\\text{km}$이다. 시속 $4\\text{km}$로 걸어 $1$시간 $30$분 이내에 도착하려면?",
+      "choices": [
+        "$x \\leq 3$",
+        "$x \\leq 4$",
+        "$x \\leq 6$",
+        "$x \\leq 8$",
+        "$x \\leq 10$"
+      ],
+      "answer": 2,
+      "explanation": "$x/4 \\leq 1.5 \\Rightarrow x \\leq 6$"
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "score": 4,
+      "question": "$f(x) = ax + 3$이고 $f(2) = -1$일 때 $a$의 값은?",
+      "choices": [
+        "$1$",
+        "$-1$",
+        "$-3$",
+        "$2$",
+        "$-2$"
+      ],
+      "answer": 4,
+      "explanation": "$2a + 3 = -1 \\Rightarrow 2a = -4 \\Rightarrow a = -2$"
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "score": 4,
+      "question": "$0.3x - 0.9 \\geq 0.6$의 해는?",
+      "choices": [
+        "$x \\leq 5$",
+        "$x \\leq 2$",
+        "$x > 5$",
+        "$x \\geq 5$",
+        "$x \\geq 2$"
+      ],
+      "answer": 3,
+      "explanation": "$0.3x \\geq 1.5 \\Rightarrow x \\geq 5$"
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "score": 4,
+      "question": "$f(x) = 3x - 2$에서 $f(2) - f(-1)$의 값은?",
+      "choices": [
+        "$-9$",
+        "$4$",
+        "$9$",
+        "$-3$",
+        "$3$"
+      ],
+      "answer": 2,
+      "explanation": "$f(2) = 4$, $f(-1) = -5$. $4 - (-5) = 9$"
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "score": 4,
+      "question": "$3(x - 2) + 5 \\geq 2(x + 1)$의 해는?",
+      "choices": [
+        "$x \\geq -3$",
+        "$x \\leq 3$",
+        "$x \\geq 3$",
+        "$x \\leq -3$",
+        "$x > 3$"
+      ],
+      "answer": 2,
+      "explanation": "$3x - 1 \\geq 2x + 2 \\Rightarrow x \\geq 3$"
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "score": 4,
+      "question": "$\\frac{x}{2} - \\frac{x}{3} > 1$의 해는?",
+      "choices": [
+        "$x > 2$",
+        "$x > 3$",
+        "$x > 6$",
+        "$x < 6$",
+        "$x < 3$"
+      ],
+      "answer": 2,
+      "explanation": "$\\frac{3x - 2x}{6} > 1 \\Rightarrow \\frac{x}{6} > 1 \\Rightarrow x > 6$"
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "score": 4,
+      "question": "$f(x) = 2x + 4$에서 $f(a) = 2f(0)$일 때 $a$의 값은?",
+      "choices": [
+        "$2$",
+        "$1$",
+        "$-2$",
+        "$4$",
+        "$-4$"
+      ],
+      "answer": 0,
+      "explanation": "$f(0) = 4$. $f(a) = 8$. $2a + 4 = 8 \\Rightarrow a = 2$"
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "score": 4,
+      "question": "$ax > 6$의 해가 $x < -2$일 때 $a$의 값은?",
+      "choices": [
+        "$3$",
+        "$-2$",
+        "$-6$",
+        "$-3$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$a < 0$ (방향 반전). $6/a = -2 \\Rightarrow a = -3$"
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "score": 4,
+      "question": "$2x - 7 < x + k$의 해가 $x < 5$일 때 $k$는?",
+      "choices": [
+        "$-5$",
+        "$2$",
+        "$-7$",
+        "$7$",
+        "$-2$"
+      ],
+      "answer": 4,
+      "explanation": "$x < k + 7$. 해가 $x < 5$ → $k + 7 = 5 \\Rightarrow k = -2$"
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "score": 4,
+      "question": "$f(x) = ax + b$에서 $f(0) = -3$, $f(3) = 9$일 때 $f(1)$의 값은?",
+      "choices": [
+        "$-4$",
+        "$4$",
+        "$5$",
+        "$-1$",
+        "$1$"
+      ],
+      "answer": 4,
+      "explanation": "$b = -3$. $3a - 3 = 9 \\Rightarrow a = 4$. $f(1) = 4 - 3 = 1$"
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "score": 4,
+      "question": "$5$문제 시험에서 맞히면 $10$점, 틀리면 $-2$점이다. $3$문제 맞고 $2$문제 틀리면?",
+      "choices": [
+        "$28$점",
+        "$24$점",
+        "$26$점",
+        "$30$점",
+        "$22$점"
+      ],
+      "answer": 2,
+      "explanation": "$3 \\times 10 + 2 \\times (-2) = 30 - 4 = 26$점"
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "score": 4,
+      "question": "$f(x) = -x + 4$에서 $1 \\leq x \\leq 3$일 때 $f(x)$의 최솟값은?",
+      "choices": [
+        "$-1$",
+        "$1$",
+        "$4$",
+        "$2$",
+        "$3$"
+      ],
+      "answer": 1,
+      "explanation": "$f(x)$는 감소함수. $f(3) = 1$이 최솟값."
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "score": 4,
+      "question": "$\\frac{x}{3} > 5$를 만족하는 $x$의 범위는?",
+      "choices": [
+        "$x < 15$",
+        "$x \\geq 15$",
+        "$x > 10$",
+        "$x < 10$",
+        "$x > 15$"
+      ],
+      "answer": 4,
+      "explanation": "$x > 15$"
+    },
+    {
+      "id": 21,
+      "type": "short",
+      "score": 4,
+      "question": "$\\frac{3x - 1}{2} - x > \\frac{1}{2}$을 풀어라.",
+      "answer": "$x > 2$",
+      "expectedAnswer": "x>2",
+      "rubric": "[2점] 통분: $\\frac{x-1}{2} > \\frac{1}{2}$ [2점] $x - 1 > 1 \\Rightarrow x > 2$"
+    },
+    {
+      "id": 22,
+      "type": "short",
+      "score": 4,
+      "question": "어떤 상품의 가격은 개당 $1500$원이다. 예산이 $20000$원일 때 최대 몇 개 살 수 있는가?",
+      "answer": "최대 $13$개",
+      "expectedAnswer": "13",
+      "rubric": "[2점] $1500x \\leq 20000$ [2점] $x \\leq 13.33...$ → 자연수이므로 최대 $13$개"
+    },
+    {
+      "id": 23,
+      "type": "short",
+      "score": 4,
+      "question": "$f(x) = ax + b$에서 $f(1) = 3$이고 $f(3) = 7$일 때 $a + b$의 값을 구하여라.",
+      "answer": "$3$",
+      "expectedAnswer": "3",
+      "rubric": "[1점] $a+b=3$, $3a+b=7$ [2점] 연립: $a=2, b=1$ [1점] $a+b=3$"
+    },
+    {
+      "id": 24,
+      "type": "short",
+      "score": 4,
+      "question": "$f(x) = -2x + 5$에서 $f(-2) + f(0) + f(2) + f(4)$를 구하여라.",
+      "answer": "$12$",
+      "expectedAnswer": "12",
+      "rubric": "[2점] 각 함수값: $9, 5, 1, -3$ [2점] 합 $= 9+5+1+(-3) = 12$"
+    },
+    {
+      "id": 25,
+      "type": "short",
+      "score": 4,
+      "question": "$f(x) = 2x + 1$에서 $f(x) \\leq 7$을 만족하는 자연수 $x$의 개수를 구하여라.",
+      "answer": "$3$개",
+      "expectedAnswer": "3",
+      "rubric": "[2점] $2x + 1 \\leq 7 \\Rightarrow x \\leq 3$ [2점] 자연수: $1, 2, 3 \\Rightarrow 3$개"
+    }
   ]
 }

@@ -26,7 +26,7 @@ function calcPoints(score: number, totalScore: number): number {
 
 type RawQuestion = {
   id: number;
-  type: 'mc' | 'essay';
+  type: 'mc' | 'essay' | 'short';
   score: number;
   question: string;
   choices?: string[];
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       if (correct) essayScore += q.score;
       results.push({
         id: q.id,
-        type: 'essay',
+        type: q.type,
         question: q.question,
         yourAnswer: userAns,
         correctAnswer: q.expectedAnswer,

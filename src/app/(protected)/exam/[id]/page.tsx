@@ -8,8 +8,14 @@ import { auth } from '@/lib/firebase';
 import MathText from '@/components/MathText';
 
 type MCQuestion = { id: number; type: 'mc'; score: number; question: string; choices: string[] };
-type EssayQuestion = { id: number; type: 'essay'; score: number; question: string; rubric?: string };
+type EssayQuestion = { id: number; type: 'essay' | 'short'; score: number; question: string; rubric?: string };
 type Question = MCQuestion | EssayQuestion;
+
+function qLabel(type: string) {
+  if (type === 'mc') return '객관식';
+  if (type === 'short') return '주관식';
+  return '서술형';
+}
 
 interface ExamData {
   id: string;
@@ -136,7 +142,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
           </div>
           <div className="flex justify-center gap-6 mt-3 text-sm text-gray-600">
             <span>객관식 {gradeResult.mcScore}점</span>
-            <span>서술형 {gradeResult.essayScore}점</span>
+            <span>{exam.questions.some(q => q.type === 'short') ? '주관식' : '서술형'} {gradeResult.essayScore}점</span>
           </div>
           <div className="text-gray-500 mt-1">{pct}%</div>
 
@@ -158,7 +164,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
               <div className="flex items-start gap-2 mb-3">
                 <span className="text-lg shrink-0">{r.correct ? '✅' : '❌'}</span>
                 <div className="flex-1">
-                  <span className="text-xs text-gray-400 font-medium uppercase">{r.type === 'mc' ? '객관식' : '서술형'} {i + 1}번 · {r.earnedScore}/{r.score}점</span>
+                  <span className="text-xs text-gray-400 font-medium uppercase">{qLabel(r.type)} {i + 1}번 · {r.earnedScore}/{r.score}점</span>
                   <p className="font-medium text-gray-800 mt-0.5">
                     <MathText text={r.question} />
                   </p>
@@ -182,7 +188,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                 </div>
               )}
 
-              {r.type === 'essay' && (
+              {(r.type === 'essay' || r.type === 'short') && (
                 <div className="ml-7 space-y-2">
                   {r.yourAnswer && (
                     <div className="text-sm bg-gray-50 rounded-lg px-3 py-2">
@@ -227,7 +233,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
   }
 
   const mcQuestions = exam.questions.filter(q => q.type === 'mc') as MCQuestion[];
-  const essayQuestions = exam.questions.filter(q => q.type === 'essay') as EssayQuestion[];
+  const essayQuestions = exam.questions.filter(q => q.type === 'essay' || q.type === 'short') as EssayQuestion[];
   const allQuestions = exam.questions;
   const q = allQuestions[current];
   const mcAnswered = Object.keys(mcAnswers).length;
@@ -241,7 +247,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
       <div className="flex items-center justify-between bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm sticky top-16 z-30">
         <div>
           <h1 className="font-bold text-gray-800 text-sm">{exam.title}</h1>
-          <p className="text-xs text-gray-500">{current + 1}/{allQuestions.length} · {q.type === 'mc' ? '객관식' : '서술형'}</p>
+          <p className="text-xs text-gray-500">{current + 1}/{allQuestions.length} · {qLabel(q.type)}</p>
         </div>
         <div className={`text-lg font-mono font-bold tabular-nums ${isUrgent ? 'text-red-600 animate-pulse' : 'text-gray-700'}`}>
           ⏱ {formatTime(timeLeft)}
@@ -260,7 +266,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
         <div className="flex items-center gap-2 mb-4">
           <span className={`text-xs font-semibold rounded-full px-2.5 py-0.5 ${q.type === 'mc' ? 'bg-indigo-100 text-indigo-700' : 'bg-purple-100 text-purple-700'}`}>
-            {q.type === 'mc' ? `객관식 ${mcQuestions.findIndex(m => m.id === q.id) + 1}` : `서술형 ${essayQuestions.findIndex(e => e.id === q.id) + 1}`}
+            {q.type === 'mc' ? `객관식 ${mcQuestions.findIndex(m => m.id === q.id) + 1}` : `${qLabel(q.type)} ${essayQuestions.findIndex(e => e.id === q.id) + 1}`}
           </span>
           <span className="text-xs text-gray-400">{q.score}점</span>
         </div>
@@ -323,7 +329,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
             </button>
           ))}
         </div>
-        <p className="text-xs text-gray-400 mb-2">서술형</p>
+        <p className="text-xs text-gray-400 mb-2">{exam.questions.some(q => q.type === 'short') ? '주관식' : '서술형'}</p>
         <div className="flex flex-wrap gap-1.5">
           {essayQuestions.map((qq, i) => (
             <button
