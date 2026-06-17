@@ -95,6 +95,8 @@ export default function ExamListPage() {
 
   const categories = [...new Set(exams.map(e => e.category))];
   const schoolsInCategory = [...new Set(exams.filter(e => e.category === activeCategory).map(e => e.school))];
+  // 사용자 설정 학교가 실제로 DB에 있는지 확인
+  const isSchoolValid = activeCategory === '학교' && profile?.school && schoolsInCategory.includes(profile.school);
   const subjectsForSchool = [...new Set(exams.filter(e => e.category === activeCategory && e.school === activeSchool).map(e => e.subject))];
   const filtered = exams.filter(e => e.category === activeCategory && e.school === activeSchool && e.subject === activeSubject);
   const meta = SUBJECT_META[activeSubject];
@@ -108,12 +110,14 @@ export default function ExamListPage() {
         <p className="text-gray-500 text-sm mt-1">카테고리를 선택하고 모의고사를 응시하세요</p>
       </div>
 
-      {/* 학교 카테고리 선택 시 학교 미설정 경고 */}
-      {activeCategory === '학교' && !profile?.school && (
+      {/* 학교 카테고리 선택 시 학교 미설정 또는 미등록 경고 */}
+      {activeCategory === '학교' && !isSchoolValid && (
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 text-center space-y-3">
           <div className="text-5xl">🏫</div>
           <div>
-            <p className="font-semibold text-amber-900 mb-1">학교를 설정해주세요</p>
+            <p className="font-semibold text-amber-900 mb-1">
+              {profile?.school ? `"${profile.school}"은(는) 등록되지 않은 학교입니다` : '학교를 설정해주세요'}
+            </p>
             <p className="text-sm text-amber-700 mb-3">설정에서 학교를 입력하면 해당 학교의 시험을 볼 수 있습니다.</p>
             <Link href="/settings" className="inline-block bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition">
               ⚙️ 설정 페이지로 이동
@@ -123,7 +127,7 @@ export default function ExamListPage() {
       )}
 
       {/* Category tabs & content (학교는 설정 필수) */}
-      {activeCategory === '학교' && !profile?.school ? null : (
+      {activeCategory === '학교' && !isSchoolValid ? null : (
       <>
       <div className="flex gap-2">
         {['학교', '자격증', ...categories.filter(c => c !== '학교' && c !== '자격증')].map(cat => (
