@@ -16,13 +16,29 @@ interface AdminCoupon {
   availableStock: number;
 }
 
+interface AdminInquiry {
+  _id: string;
+  uid: string;
+  nickname: string;
+  email: string;
+  category: string;
+  subject: string;
+  message: string;
+  status: 'new' | 'read' | 'resolved';
+  createdAt: { seconds: number };
+}
+
 export default function AdminPage() {
   const { profile } = useAuth();
   const router = useRouter();
   const [coupons, setCoupons] = useState<AdminCoupon[]>([]);
   const [debugHistory, setDebugHistory] = useState<{id:string;date:string;category:string;description:string;files:string[]}[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<'coupons' | 'upload' | 'debug'>('coupons');
+  const [tab, setTab] = useState<'coupons' | 'upload' | 'debug' | 'inquiries'>('coupons');
+
+  const [inquiries, setInquiries] = useState<AdminInquiry[]>([]);
+  const [inquiriesLoading, setInquiriesLoading] = useState(false);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   // 새 쿠폰 폼
   const [newName, setNewName] = useState('');
@@ -74,6 +90,25 @@ export default function AdminPage() {
     await loadCoupons();
   }
 
+  async function loadInquiries() {
+    setInquiriesLoading(true);
+    const token = await getToken();
+    const res = await fetch('/api/admin/inquiries', { headers: { Authorization: `Bearer ${token}` } });
+    const data = await res.json();
+    setInquiries(Array.isArray(data) ? data : []);
+    setInquiriesLoading(false);
+  }
+
+  async function updateInquiryStatus(id: string, status: string) {
+    const token = await getToken();
+    await fetch(`/api/admin/inquiries/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+      body: JSON.stringify({ status }),
+    });
+    setInquiries(prev => prev.map(i => i._id === id ? { ...i, status: status as AdminInquiry['status'] } : i));
+  }
+
   async function handleUpload(e: React.FormEvent) {
     e.preventDefault();
     if (!uploadFiles || !uploadCouponId) return;
@@ -90,6 +125,10 @@ export default function AdminPage() {
     await loadCoupons();
   }
 
+  useEffect(() => {
+    if (tab === 'inquiries' && inquiries.length === 0) loadInquiries();
+  }, [tab]);
+
   if (!profile || profile.role !== 'admin') return null;
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
 
@@ -100,7 +139,7 @@ export default function AdminPage() {
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {([['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역']] as const).map(([t, label]) => (
+        {([['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`]] as const).map(([t, label]) => (
           <button
             key={t}
             onClick={() => setTab(t as typeof tab)}
@@ -221,6 +260,95 @@ export default function AdminPage() {
               {uploading ? '업로드 중...' : '업로드'}
             </button>
           </form>
+        </div>
+      )}
+
+      {tab === 'inquiries' && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-gray-500">총 {inquiries.length}건 · 신규 {inquiries.filter(i => i.status === 'new').length}건</p>
+            <button onClick={loadInquiries} className="text-xs text-indigo-600 hover:underline">새로고침</button>
+          </div>
+
+          {inquiriesLoading ? (
+            <div className="text-center py-10 text-gray-400">불러오는 중...</div>
+          ) : inquiries.length === 0 ? (
+            <div className="text-center py-10 text-gray-400">문의 내역이 없습니다.</div>
+          ) : (
+            inquiries.map(inq => {
+              const isExpanded = expandedId === inq._id;
+              const date = inq.createdAt?.seconds
+                ? new Date(inq.createdAt.seconds * 1000).toLocaleString('ko-KR', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+                : '';
+              const statusMeta = {
+                new: { label: '신규', cls: 'bg-red-100 text-red-600' },
+                read: { label: '읽음', cls: 'bg-gray-100 text-gray-500' },
+                resolved: { label: '해결됨', cls: 'bg-green-100 text-green-600' },
+              }[inq.status] ?? { label: inq.status, cls: 'bg-gray-100 text-gray-500' };
+
+              return (
+                <div key={inq._id} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                  <button
+                    className="w-full text-left px-5 py-4 hover:bg-gray-50 transition"
+                    onClick={() => {
+                      setExpandedId(isExpanded ? null : inq._id);
+                      if (inq.status === 'new') updateInquiryStatus(inq._id, 'read');
+                    }}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
+                          <span className={`text-xs font-semibold rounded-full px-2 py-0.5 ${statusMeta.cls}`}>
+                            {statusMeta.label}
+                          </span>
+                          <span className="text-xs bg-indigo-50 text-indigo-600 rounded-full px-2 py-0.5">{inq.category}</span>
+                          <span className="text-xs text-gray-400">{date}</span>
+                        </div>
+                        <p className="font-semibold text-gray-800 text-sm truncate">{inq.subject}</p>
+                        <p className="text-xs text-gray-500 mt-0.5">{inq.nickname} {inq.email && `· ${inq.email}`}</p>
+                      </div>
+                      <svg className={`w-4 h-4 text-gray-400 shrink-0 mt-1 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </button>
+
+                  {isExpanded && (
+                    <div className="border-t border-gray-100 px-5 py-4 space-y-3">
+                      <p className="text-sm text-gray-700 whitespace-pre-wrap">{inq.message}</p>
+                      <div className="flex gap-2">
+                        {inq.status !== 'read' && (
+                          <button
+                            onClick={() => updateInquiryStatus(inq._id, 'read')}
+                            className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"
+                          >
+                            읽음 처리
+                          </button>
+                        )}
+                        {inq.status !== 'resolved' && (
+                          <button
+                            onClick={() => updateInquiryStatus(inq._id, 'resolved')}
+                            className="text-xs px-3 py-1.5 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
+                          >
+                            해결됨
+                          </button>
+                        )}
+                        {inq.status === 'resolved' && (
+                          <button
+                            onClick={() => updateInquiryStatus(inq._id, 'new')}
+                            className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"
+                          >
+                            다시 열기
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })
+          )}
         </div>
       )}
 

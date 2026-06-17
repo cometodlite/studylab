@@ -63,6 +63,7 @@ export default function Navbar() {
           <Link href="/store" className="text-gray-600 hover:text-indigo-600 transition">상점</Link>
           <Link href="/my-coupons" className="text-gray-600 hover:text-indigo-600 transition">내 쿠폰</Link>
           <Link href="/points" className="text-gray-600 hover:text-indigo-600 transition">포인트</Link>
+          <Link href="/inquiry" className="text-gray-600 hover:text-indigo-600 transition">💬 문의</Link>
           <Link href="/settings" className="text-gray-600 hover:text-indigo-600 transition">⚙️ 설정</Link>
           {profile?.role === 'admin' && (
             <Link href="/admin" className="text-orange-600 hover:text-orange-700 font-semibold transition">관리자</Link>
@@ -184,6 +185,10 @@ export default function Navbar() {
             <Link href="/points" onClick={() => setOpen(false)}
               className="flex items-center px-3 py-2.5 rounded-xl text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
               💰 포인트
+            </Link>
+            <Link href="/inquiry" onClick={() => setOpen(false)}
+              className="flex items-center px-3 py-2.5 rounded-xl text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+              💬 문의하기
             </Link>
             <Link href="/settings" onClick={() => setOpen(false)}
               className="flex items-center px-3 py-2.5 rounded-xl text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
