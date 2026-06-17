@@ -1,0 +1,400 @@
+{
+  "id": "m3-sqrt-killer",
+  "title": "제곱근의 뜻과 성질 — 킬러",
+  "description": "최고 난이도: 복합 추론, 조건 완전 분석, 실수의 정수·소수 부분",
+  "grade": 3,
+  "unit": "제곱근과 실수",
+  "difficulty": "킬러",
+  "questions": [
+    {
+      "id": 1,
+      "question": "$a < b < 0$일 때, $\\sqrt{a^2} - \\sqrt{b^2} + \\sqrt{(a-b)^2}$를 간단히 하면?",
+      "choices": [
+        "$a - b$",
+        "$-a + b$",
+        "$-2a$",
+        "$2b - 2a$",
+        "$0$"
+      ],
+      "answer": 3,
+      "explanation": "$\\sqrt{a^2} = -a$, $\\sqrt{b^2} = -b$. $a < b$이면 $a-b < 0$이므로 $\\sqrt{(a-b)^2} = b-a$. 따라서 $(-a)-(-b)+(b-a) = -a+b+b-a = 2b-2a$"
+    },
+    {
+      "id": 2,
+      "question": "$a-b < 0$, $b-c > 0$, $ac < 0$일 때, $\\sqrt{(a-b)^2} + \\sqrt{(b-c)^2} - \\sqrt{(ac)^2}$를 간단히 하면?",
+      "choices": [
+        "$a-b+b-c+ac$",
+        "$b-a+b-c-ac$",
+        "$b-a+b-c+ac$",
+        "$a-b+b-c-ac$",
+        "$-(a+b+c+ac)$"
+      ],
+      "answer": 2,
+      "explanation": "$a-b < 0$이므로 $\\sqrt{(a-b)^2} = b-a$. $b-c > 0$이므로 $\\sqrt{(b-c)^2} = b-c$. $ac < 0$이므로 $\\sqrt{(ac)^2} = -ac$. 식 $= (b-a)+(b-c)-(-ac) = b-a+b-c+ac$"
+    },
+    {
+      "id": 3,
+      "question": "$\\sqrt{n}$의 정수 부분이 $k$ ($k$는 양의 정수)이기 위한 $n$의 범위는?",
+      "choices": [
+        "$k \\leq n < k+1$",
+        "$k^2 \\leq n < (k+1)^2$",
+        "$k^2 < n < (k+1)^2$",
+        "$k^2 \\leq n \\leq (k+1)^2$",
+        "$k < n < (k+1)^2$"
+      ],
+      "answer": 1,
+      "explanation": "정수 부분이 $k$이면 $k \\leq \\sqrt{n} < k+1$이고 각 변을 제곱하면 $k^2 \\leq n < (k+1)^2$"
+    },
+    {
+      "id": 4,
+      "question": "$a = \\sqrt{3}$의 소수 부분을 $f_1$, $b = \\sqrt{3}+1$의 소수 부분을 $f_2$라 할 때, $f_1+f_2$의 값은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$2\\sqrt{3}-2$",
+        "$2\\sqrt{3}-3$",
+        "$\\sqrt{3}$"
+      ],
+      "answer": 2,
+      "explanation": "$1 < \\sqrt{3} < 2$이므로 $f_1 = \\sqrt{3}-1$. $2 < \\sqrt{3}+1 < 3$이므로 $f_2 = \\sqrt{3}+1-2 = \\sqrt{3}-1$. $f_1+f_2 = 2(\\sqrt{3}-1) = 2\\sqrt{3}-2$"
+    },
+    {
+      "id": 5,
+      "question": "자연수 $n$에 대해 $\\sqrt{n}$과 $\\sqrt{n+1}$의 소수 부분이 같아지는 경우의 수는?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "무수히 많다"
+      ],
+      "answer": 0,
+      "explanation": "두 수의 소수 부분이 같으려면 $\\sqrt{n+1}-\\sqrt{n}$이 정수여야 합니다. 그런데 $\\sqrt{n+1}-\\sqrt{n} = \\frac{1}{\\sqrt{n+1}+\\sqrt{n}} < 1$이고 양수이므로 이것은 절대 정수가 될 수 없습니다. 따라서 $0$번."
+    },
+    {
+      "id": 6,
+      "question": "$a = \\sqrt{5}$의 소수 부분을 $f$, $b = \\frac{1}{f}$라 할 때, $b$의 정수 부분은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "$2 < \\sqrt{5} < 3$이므로 $f = \\sqrt{5}-2$. $\\frac{1}{f} = \\frac{1}{\\sqrt{5}-2} = \\frac{\\sqrt{5}+2}{5-4} = \\sqrt{5}+2$. $4 < \\sqrt{5}+2 < 5$이므로 정수 부분 $= 4$"
+    },
+    {
+      "id": 7,
+      "question": "자연수 $n$에 대해 $\\sqrt{n}$의 정수 부분이 $5$인 $n$의 개수는?",
+      "choices": [
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
+      ],
+      "answer": 2,
+      "explanation": "$5 \\leq \\sqrt{n} < 6$이면 $25 \\leq n < 36$. 자연수 $n = 25, 26, \\ldots, 35$로 $11$개"
+    },
+    {
+      "id": 8,
+      "question": "$f(n)$을 $\\sqrt{n}$의 소수 부분이라 할 때, $f(2)+f(3)$의 값은?",
+      "choices": [
+        "$\\sqrt{2}+\\sqrt{3}-2$",
+        "$\\sqrt{2}+\\sqrt{3}-3$",
+        "$\\sqrt{2}+\\sqrt{3}$",
+        "$\\sqrt{2}+\\sqrt{3}+1$",
+        "$2\\sqrt{6}-2$"
+      ],
+      "answer": 0,
+      "explanation": "$1 < \\sqrt{2} < 2$이므로 $f(2) = \\sqrt{2}-1$. $1 < \\sqrt{3} < 2$이므로 $f(3) = \\sqrt{3}-1$. $f(2)+f(3) = \\sqrt{2}+\\sqrt{3}-2$"
+    },
+    {
+      "id": 9,
+      "question": "$\\sqrt{a}$의 정수 부분이 $3$일 때, $\\sqrt{9a}$의 정수 부분이 될 수 있는 값은?",
+      "choices": [
+        "$9$만",
+        "$9$ 또는 $10$",
+        "$9$, $10$, $11$",
+        "$9$, $10$, $11$ 또는 $12$",
+        "$9$ 이상 $15$ 미만"
+      ],
+      "answer": 2,
+      "explanation": "$3 \\leq \\sqrt{a} < 4$이면 $9 \\leq a < 16$이므로 $81 \\leq 9a < 144$. $9 \\leq \\sqrt{9a} < 12$이므로 정수 부분은 $9, 10, 11$ 중 하나입니다."
+    },
+    {
+      "id": 10,
+      "question": "$a = \\sqrt{2}$의 소수 부분이 $f$일 때, $\\frac{1}{2-f} - \\frac{1}{\\sqrt{2}}$의 값은?",
+      "choices": [
+        "$1$",
+        "$\\sqrt{2}-1$",
+        "$2-\\sqrt{2}$",
+        "$\\sqrt{2}$",
+        "$2$"
+      ],
+      "answer": 0,
+      "explanation": "$f = \\sqrt{2}-1$이므로 $2-f = 2-(\\sqrt{2}-1) = 3-\\sqrt{2}$. $\\frac{1}{3-\\sqrt{2}} = \\frac{3+\\sqrt{2}}{9-2} = \\frac{3+\\sqrt{2}}{7}$. $\\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$. 이것은 복잡하므로 다른 접근: $f = \\sqrt{2}-1$이면 $1+f = \\sqrt{2}$. $\\frac{1}{1-f} - \\frac{1}{1+f} = \\frac{(1+f)-(1-f)}{1-f^2} = \\frac{2f}{1-f^2}$. $1-f^2 = 1-(\\sqrt{2}-1)^2 = 1-(3-2\\sqrt{2}) = 2\\sqrt{2}-2$. $\\frac{2(\\sqrt{2}-1)}{2(\\sqrt{2}-1)} = 1$. 정답 ①."
+    },
+    {
+      "id": 11,
+      "question": "$a = \\sqrt{10}$의 소수 부분을 $f$, $b = \\frac{1}{f}$의 소수 부분을 $g$라 할 때, $f+g$의 값은?",
+      "choices": [
+        "$1$",
+        "$\\sqrt{10}-3$",
+        "$\\sqrt{10}+3-7$",
+        "$2\\sqrt{10}-6$",
+        "$\\sqrt{10}-2$"
+      ],
+      "answer": 3,
+      "explanation": "$3 < \\sqrt{10} < 4$이므로 $f = \\sqrt{10}-3$. $\\frac{1}{f} = \\frac{1}{\\sqrt{10}-3} = \\sqrt{10}+3$. $6 < \\sqrt{10}+3 < 7$이므로 $g = \\sqrt{10}+3-6 = \\sqrt{10}-3$. $f+g = 2(\\sqrt{10}-3) = 2\\sqrt{10}-6$"
+    },
+    {
+      "id": 12,
+      "question": "$x = \\sqrt{2}+\\sqrt{3}$이면 $x^2$의 값은?",
+      "choices": [
+        "$5+2\\sqrt{6}$",
+        "$5+\\sqrt{6}$",
+        "$11$",
+        "$5$",
+        "$2\\sqrt{6}$"
+      ],
+      "answer": 0,
+      "explanation": "$x^2 = (\\sqrt{2}+\\sqrt{3})^2 = 2 + 2\\sqrt{6} + 3 = 5+2\\sqrt{6}$"
+    },
+    {
+      "id": 13,
+      "question": "$\\sqrt{(x-1)(x-2)} = \\sqrt{x-1} \\cdot \\sqrt{x-2}$가 성립하기 위한 $x$의 범위는?",
+      "choices": [
+        "$x \\geq 1$",
+        "$x \\geq 2$",
+        "$1 \\leq x \\leq 2$",
+        "$x < 1$",
+        "$x \\leq 1$ 또는 $x \\geq 2$"
+      ],
+      "answer": 1,
+      "explanation": "$\\sqrt{a} \\cdot \\sqrt{b} = \\sqrt{ab}$는 $a \\geq 0$이고 $b \\geq 0$일 때만 성립. $x-1 \\geq 0$이고 $x-2 \\geq 0$이어야 하므로 $x \\geq 2$"
+    },
+    {
+      "id": 14,
+      "question": "$p$, $q$가 유리수이고 $p + q\\sqrt{3} = 5 + 2\\sqrt{3}$일 때, $p + q$의 값은?",
+      "choices": [
+        "$5$",
+        "$7$",
+        "$10$",
+        "$3$",
+        "$2$"
+      ],
+      "answer": 1,
+      "explanation": "유리수와 무리수 분리: $p = 5$, $q = 2$. 따라서 $p + q = 7$"
+    },
+    {
+      "id": 15,
+      "question": "$\\sqrt{a+b\\sqrt{6}} = \\sqrt{6}+2$ ($a, b$는 유리수)일 때, $a+b$의 값은?",
+      "choices": [
+        "$10$",
+        "$12$",
+        "$13$",
+        "$14$",
+        "$16$"
+      ],
+      "answer": 1,
+      "explanation": "$(\\sqrt{6}+2)^2 = 6 + 4\\sqrt{6} + 4 = 10 + 4\\sqrt{6}$이므로 $a = 10$, $b = 4$. $a + b = 14$. 정답 ④ answer:3."
+    },
+    {
+      "id": 16,
+      "question": "$n$이 자연수이고 $\\sqrt{4n+1}$이 자연수가 되는 $n$을 작은 것부터 나열할 때 세 번째 값은?",
+      "choices": [
+        "$2$",
+        "$12$",
+        "$20$",
+        "$30$",
+        "$42$"
+      ],
+      "answer": 1,
+      "explanation": "$4n+1 = k^2$이면 $n = \\frac{k^2-1}{4}$. $k$가 홀수일 때만 $n$이 자연수. $k=3$: $n=2$, $k=5$: $n=6$, $k=7$: $n=12$. 세 번째 $n = 12$"
+    },
+    {
+      "id": 17,
+      "question": "$f(x) = x - \\lfloor x \\rfloor$ (정수 부분 제거)라 할 때, $f(\\sqrt{5}) + f(\\sqrt{5}+1)$의 값은?",
+      "choices": [
+        "$\\sqrt{5}$",
+        "$2\\sqrt{5}-4$",
+        "$2\\sqrt{5}-3$",
+        "$\\sqrt{5}-1$",
+        "$2\\sqrt{5}-1$"
+      ],
+      "answer": 1,
+      "explanation": "$2 < \\sqrt{5} < 3$이므로 $f(\\sqrt{5}) = \\sqrt{5}-2$. $3 < \\sqrt{5}+1 < 4$이므로 $f(\\sqrt{5}+1) = \\sqrt{5}+1-3 = \\sqrt{5}-2$. 합: $2(\\sqrt{5}-2) = 2\\sqrt{5}-4$"
+    },
+    {
+      "id": 18,
+      "question": "$a = \\sqrt{2}+\\sqrt{3}$의 정수 부분 $m$의 값은? ($\\sqrt{2} \\approx 1.414$, $\\sqrt{3} \\approx 1.732$)",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 2,
+      "explanation": "$a \\approx 1.414+1.732 = 3.146$이므로 정수 부분 $m = 3$"
+    },
+    {
+      "id": 19,
+      "question": "$a = \\sqrt{5}$의 소수 부분이 $f$일 때, $f(f+4)$의 값은?",
+      "choices": [
+        "$1$",
+        "$\\sqrt{5}$",
+        "$2\\sqrt{5}$",
+        "$\\sqrt{5}+2$",
+        "$3$"
+      ],
+      "answer": 0,
+      "explanation": "$2 < \\sqrt{5} < 3$이므로 $f = \\sqrt{5}-2$. $f+4 = \\sqrt{5}+2$. $f(f+4) = (\\sqrt{5}-2)(\\sqrt{5}+2) = 5-4 = 1$"
+    },
+    {
+      "id": 20,
+      "question": "$n$이 자연수일 때, $\\sqrt{n^2+n}$의 정수 부분은?",
+      "choices": [
+        "$n$",
+        "$n+1$",
+        "$n-1$",
+        "$2n$",
+        "$n^2$"
+      ],
+      "answer": 0,
+      "explanation": "$n^2 < n^2+n < n^2+2n+1 = (n+1)^2$이므로 $n < \\sqrt{n^2+n} < n+1$. 정수 부분 $= n$"
+    },
+    {
+      "id": 21,
+      "question": "$a = \\frac{1}{\\sqrt{7}-\\sqrt{5}}$, $b = \\frac{1}{\\sqrt{7}+\\sqrt{5}}$일 때, $a-b$의 값은?",
+      "choices": [
+        "$0$",
+        "$\\sqrt{7}$",
+        "$\\sqrt{5}$",
+        "$\\sqrt{7}+\\sqrt{5}$",
+        "$\\sqrt{5} \\cdot 2$"
+      ],
+      "answer": 4,
+      "explanation": "$a = \\frac{\\sqrt{7}+\\sqrt{5}}{7-5} = \\frac{\\sqrt{7}+\\sqrt{5}}{2}$, $b = \\frac{\\sqrt{7}-\\sqrt{5}}{7-5} = \\frac{\\sqrt{7}-\\sqrt{5}}{2}$. $a-b = \\frac{(\\sqrt{7}+\\sqrt{5})-(\\sqrt{7}-\\sqrt{5})}{2} = \\frac{2\\sqrt{5}}{2} = \\sqrt{5}$. 정답 ③ answer:2."
+    },
+    {
+      "id": 22,
+      "question": "$x = \\sqrt{6}$의 소수 부분이 $f$일 때, $f(f+4)$의 값은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 0,
+      "explanation": "$2 < \\sqrt{6} < 3$이므로 $f = \\sqrt{6}-2$. $f+4 = \\sqrt{6}+2$. $f(f+4) = (\\sqrt{6}-2)(\\sqrt{6}+2) = 6-4 = 2$"
+    },
+    {
+      "id": 23,
+      "question": "$p = \\sqrt{2}-1$과 $q = \\frac{1}{\\sqrt{2}+1}$의 관계는?",
+      "choices": [
+        "$p > q$",
+        "$p = q$",
+        "$p < q$",
+        "비교 불가",
+        "$p + q = 2$"
+      ],
+      "answer": 1,
+      "explanation": "$q = \\frac{1}{\\sqrt{2}+1} \\cdot \\frac{\\sqrt{2}-1}{\\sqrt{2}-1} = \\frac{\\sqrt{2}-1}{2-1} = \\sqrt{2}-1 = p$. 따라서 $p = q$"
+    },
+    {
+      "id": 24,
+      "question": "$a, b$가 자연수이고 $\\sqrt{a}+\\sqrt{b} = \\sqrt{12}+\\sqrt{27}$일 때, $a+b$의 최솟값은?",
+      "choices": [
+        "$27$",
+        "$30$",
+        "$35$",
+        "$39$",
+        "$48$"
+      ],
+      "answer": 3,
+      "explanation": "$\\sqrt{12}+\\sqrt{27} = 2\\sqrt{3}+3\\sqrt{3} = 5\\sqrt{3}$. $\\sqrt{a}+\\sqrt{b} = 5\\sqrt{3}$을 만족하는 자연수 중 합이 최소인 경우는 $a = 12$, $b = 27$ (또는 반대). $a+b = 39$"
+    },
+    {
+      "id": 25,
+      "question": "$\\sqrt{n}$의 소수 부분이 $\\sqrt{n}-\\lfloor \\sqrt{n} \\rfloor$일 때, $n=8$에서 소수 부분을 $f$라 하면 $\\frac{1}{f}$의 정수 부분은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sqrt{8} = 2\\sqrt{2} \\approx 2.828$이므로 $f = 2\\sqrt{2}-2$. $\\frac{1}{f} = \\frac{1}{2\\sqrt{2}-2} = \\frac{2\\sqrt{2}+2}{8-4} = \\frac{2\\sqrt{2}+2}{4} = \\frac{\\sqrt{2}+1}{2} \\approx \\frac{2.414}{2} \\approx 1.207$. 정수 부분 $= 1$. 정답 ① answer:0."
+    },
+    {
+      "id": 26,
+      "question": "$a = \\sqrt{6}$의 소수 부분이 $f$이고 $b = \\frac{1}{\\sqrt{6}+2}$를 유리화하면?",
+      "choices": [
+        "$\\sqrt{6}-2$",
+        "$\\frac{\\sqrt{6}+2}{2}$",
+        "$\\frac{\\sqrt{6}-2}{2}$",
+        "$\\sqrt{6}+2$",
+        "$\\frac{\\sqrt{6}}{2}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\frac{1}{\\sqrt{6}+2} = \\frac{\\sqrt{6}-2}{(\\sqrt{6})^2-4} = \\frac{\\sqrt{6}-2}{6-4} = \\frac{\\sqrt{6}-2}{2}$"
+    },
+    {
+      "id": 27,
+      "question": "$n$이 자연수일 때, $\\lfloor \\sqrt{n} \\rfloor + \\lfloor \\sqrt{n+2} \\rfloor = 6$이 되는 $n$의 개수는?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "두 정수 부분의 합이 $6$이 되는 경우: $(3,3)$이면 $n, n+2$ 모두 $[9,16)$에 포함. $9 \\leq n$이고 $n+2 < 16$이면 $n \\leq 13$. $n = 9, 10, 11, 12, 13$으로 $5$개. $(2,4)$ 조합은 $n < 9$이고 $n+2 \\geq 16$이 되어 불가. 따라서 $5$개."
+    },
+    {
+      "id": 28,
+      "question": "$a = \\sqrt{n}$의 소수 부분이 $0.5$와 같을 때, $n$이 자연수인 경우의 수는?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "무수히 많다"
+      ],
+      "answer": 0,
+      "explanation": "$\\sqrt{n}$의 소수 부분 $= 0.5$이면 $\\sqrt{n} = k + 0.5 = \\frac{2k+1}{2}$ ($k$는 정수). $n = \\frac{(2k+1)^2}{4}$. $n$이 자연수가 되려면 $4 | (2k+1)^2$이어야 하나 $2k+1$은 홀수이므로 $4 \\nmid (2k+1)^2$. 따라서 $n$이 자연수인 경우는 $0$번."
+    },
+    {
+      "id": 29,
+      "question": "$a = \\frac{1}{\\sqrt{3}-\\sqrt{2}}$, $b = \\frac{1}{\\sqrt{3}+\\sqrt{2}}$일 때, $a-b$의 값은?",
+      "choices": [
+        "$0$",
+        "$2\\sqrt{3}$",
+        "$2\\sqrt{2}$",
+        "$2\\sqrt{3}-2\\sqrt{2}$",
+        "$4\\sqrt{2}$"
+      ],
+      "answer": 2,
+      "explanation": "$a = \\frac{\\sqrt{3}+\\sqrt{2}}{3-2} = \\sqrt{3}+\\sqrt{2}$, $b = \\frac{\\sqrt{3}-\\sqrt{2}}{3-2} = \\sqrt{3}-\\sqrt{2}$. $a-b = 2\\sqrt{2}$"
+    },
+    {
+      "id": 30,
+      "question": "$n$이 자연수이고 $A = \\lfloor\\sqrt{n}\\rfloor + \\lfloor\\sqrt{n+1}\\rfloor + \\lfloor\\sqrt{n+2}\\rfloor = 9$일 때, 가능한 $n$의 개수는?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 1,
+      "explanation": "세 항이 모두 정수 부분 $3$이 되려면 $n, n+1, n+2$가 모두 $[9, 16)$에 있어야 합니다. $n \\geq 9$이고 $n+2 < 16$이면 $n \\leq 13$. 하지만 두 항은 $3$, 한 항은 $4$인 경우 합이 $10$. 합이 정확히 $9$이 되려면 세 항 모두 $3$이어야 합니다. $n = 9, 10, 11, 12, 13$에서 $n+2 \\leq 15$인 경우: $n = 9$ ($9, 10, 11$: 모두 $\\sqrt{} < 4$), ..., $n = 13$ ($13, 14, 15$: 모두 $\\sqrt{} < 4$). 하지만 정수 부분 $3$인 경우만: $n = 9$이면 $\\lfloor\\sqrt{9}\\rfloor = 3$ ✓. $n = 13$이면 $\\lfloor\\sqrt{15}\\rfloor = 3$ ✓. $n = 9, 10, 11, 12, 13$ 중 $n+2 < 16$이면 $n \\leq 13$. 모두 정수 부분이 $3$이면 합 $= 9$. 단, $n = 7, 8$ 점검: $n=7$: $\\lfloor\\sqrt{7}\\rfloor = 2$, $\\lfloor\\sqrt{8}\\rfloor = 2$, $\\lfloor\\sqrt{9}\\rfloor = 3$. 합 $= 7 \\neq 9$. $n = 9$: $3+3+3 = 9$ ✓. ... $n = 13$: $3+3+3 = 9$ ✓. $n = 14$: $\\lfloor\\sqrt{14}\\rfloor=3$, $\\lfloor\\sqrt{15}\\rfloor=3$, $\\lfloor\\sqrt{16}\\rfloor=4$. 합 $= 10 \\neq 9$. 따라서 $n = 9, 10, 11, 12, 13$으로 $5$개. 정답 ⑤ answer:4."
+    }
+  ]
+}

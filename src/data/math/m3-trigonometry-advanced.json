@@ -1,0 +1,220 @@
+{
+  "id": "m3-trigonometry-advanced",
+  "title": "삼각비 — 심화",
+  "description": "삼각형 넓이, 높이·거리 계산, 방위각",
+  "grade": 3,
+  "unit": "삼각비",
+  "difficulty": "심화",
+  "questions": [
+    {
+      "id": 1,
+      "question": "삼각형 ABC에서 $AB = 6$, $AC = 8$, $\\angle A = 30°$일 때, 삼각형의 넓이는?",
+      "choices": ["$12$", "$24$", "$12\\sqrt{3}$", "$6\\sqrt{3}$", "$48$"],
+      "answer": 0,
+      "explanation": "넓이 $= \\frac{1}{2} \\times AB \\times AC \\times \\sin A = \\frac{1}{2} \\times 6 \\times 8 \\times \\sin 30° = 24 \\times \\frac{1}{2} = 12$입니다."
+    },
+    {
+      "id": 2,
+      "question": "삼각형 ABC에서 $BC = 10$, $CA = 6$, $\\angle C = 60°$일 때, 삼각형의 넓이는?",
+      "choices": ["$15$", "$15\\sqrt{3}$", "$30\\sqrt{3}$", "$30$", "$60$"],
+      "answer": 1,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 10 \\times 6 \\times \\sin 60° = 30 \\times \\frac{\\sqrt{3}}{2} = 15\\sqrt{3}$입니다."
+    },
+    {
+      "id": 3,
+      "question": "지면에서 30m 떨어진 곳에서 건물 꼭대기를 올려다 본 각도가 60°일 때, 건물의 높이는?",
+      "choices": ["$30\\sqrt{3}$ m", "$10\\sqrt{3}$ m", "$30$ m", "$15\\sqrt{3}$ m", "$60$ m"],
+      "answer": 0,
+      "explanation": "$\\tan 60° = \\frac{h}{30}$이므로 $h = 30\\tan 60° = 30\\sqrt{3}$ m입니다."
+    },
+    {
+      "id": 4,
+      "question": "높이 $20$ m인 탑 꼭대기에서 지면의 한 점을 내려다 보는 내각이 45°일 때, 그 점까지의 수평 거리는?",
+      "choices": ["$10\\sqrt{2}$ m", "$20\\sqrt{2}$ m", "$20$ m", "$10$ m", "$40$ m"],
+      "answer": 2,
+      "explanation": "$\\tan 45° = \\frac{20}{d} = 1$이므로 $d = 20$ m입니다."
+    },
+    {
+      "id": 5,
+      "question": "삼각형 ABC에서 $AB = 5$, $BC = 6$, $\\angle B = 60°$일 때, 삼각형의 넓이는?",
+      "choices": ["$\\frac{15\\sqrt{3}}{2}$", "$15\\sqrt{3}$", "$\\frac{15}{2}$", "$15$", "$\\frac{15\\sqrt{3}}{4}$"],
+      "answer": 0,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 5 \\times 6 \\times \\sin 60° = 15 \\times \\frac{\\sqrt{3}}{2} = \\frac{15\\sqrt{3}}{2}$입니다."
+    },
+    {
+      "id": 6,
+      "question": "지면 위의 두 지점 A, B에서 탑의 꼭대기 P를 올려다 본 앙각이 각각 60°, 30°이고, A, B 사이의 거리가 40 m일 때, 탑의 높이는? (A가 탑에 더 가깝고, A, B, 탑의 밑이 일직선)",
+      "choices": ["$10\\sqrt{3}$ m", "$20\\sqrt{3}$ m", "$30\\sqrt{3}$ m", "$40\\sqrt{3}$ m", "$5\\sqrt{3}$ m"],
+      "answer": 1,
+      "explanation": "탑 높이 $h$, 탑 밑~A 거리 $x$로 놓으면: $\\tan 60° = \\frac{h}{x}$에서 $h = \\sqrt{3}x$, $\\tan 30° = \\frac{h}{x+40}$에서 $h = \\frac{x+40}{\\sqrt{3}}$. $\\sqrt{3}x = \\frac{x+40}{\\sqrt{3}}$이므로 $3x = x+40$, $x = 20$. 따라서 $h = 20\\sqrt{3}$ m입니다."
+    },
+    {
+      "id": 7,
+      "question": "평행사변형 ABCD에서 $AB = 5$, $BC = 8$, $\\angle B = 30°$일 때, 넓이는?",
+      "choices": ["$40$", "$10$", "$20$", "$10\\sqrt{3}$", "$20\\sqrt{3}$"],
+      "answer": 2,
+      "explanation": "평행사변형 넓이 $= AB \\times BC \\times \\sin B = 5 \\times 8 \\times \\sin 30° = 40 \\times \\frac{1}{2} = 20$입니다."
+    },
+    {
+      "id": 8,
+      "question": "삼각형 ABC의 넓이가 $6\\sqrt{3}$이고, $AB = 6$, $AC = 4$일 때, $\\sin A$의 값은?",
+      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{4}$", "$\\frac{\\sqrt{3}}{2}$", "$1$"],
+      "answer": 3,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 6 \\times 4 \\times \\sin A = 12\\sin A = 6\\sqrt{3}$이므로 $\\sin A = \\frac{\\sqrt{3}}{2}$입니다."
+    },
+    {
+      "id": 9,
+      "question": "정삼각형의 한 변의 길이가 $4$일 때, 넓이는?",
+      "choices": ["$2\\sqrt{3}$", "$4\\sqrt{3}$", "$6\\sqrt{3}$", "$8\\sqrt{3}$", "$16$"],
+      "answer": 1,
+      "explanation": "정삼각형 넓이 $= \\frac{1}{2} \\times 4 \\times 4 \\times \\sin 60° = 8 \\times \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$입니다."
+    },
+    {
+      "id": 10,
+      "question": "지면에서 $60°$의 앙각으로 보이는 연의 줄 길이가 $100$ m일 때, 연의 높이는?",
+      "choices": ["$50$ m", "$50\\sqrt{3}$ m", "$100\\sqrt{3}$ m", "$\\frac{100\\sqrt{3}}{3}$ m", "$100$ m"],
+      "answer": 1,
+      "explanation": "높이 $h = 100 \\times \\sin 60° = 100 \\times \\frac{\\sqrt{3}}{2} = 50\\sqrt{3}$ m입니다."
+    },
+    {
+      "id": 11,
+      "question": "방위각 N30°E 방향으로 배가 $40$ km 항해했을 때, 동쪽으로 이동한 거리는?",
+      "choices": ["$20\\sqrt{3}$ km", "$20$ km", "$40\\sqrt{3}$ km", "$10\\sqrt{3}$ km", "$40$ km"],
+      "answer": 1,
+      "explanation": "N30°E는 북쪽에서 동쪽으로 30° 방향. 동쪽 성분 $= 40\\sin 30° = 40 \\times \\frac{1}{2} = 20$ km입니다."
+    },
+    {
+      "id": 12,
+      "question": "방위각 S45°W 방향으로 $20\\sqrt{2}$ km 이동할 때, 서쪽으로 이동한 거리는?",
+      "choices": ["$20\\sqrt{2}$ km", "$10\\sqrt{2}$ km", "$10$ km", "$20$ km", "$40$ km"],
+      "answer": 3,
+      "explanation": "S45°W는 남쪽에서 서쪽으로 45° 방향. 서쪽 성분 $= 20\\sqrt{2} \\times \\sin 45° = 20\\sqrt{2} \\times \\frac{\\sqrt{2}}{2} = 20$ km입니다."
+    },
+    {
+      "id": 13,
+      "question": "평행사변형 ABCD에서 $AB = 6$, $BC = 4$, $\\angle B = 60°$일 때, 넓이는?",
+      "choices": ["$24$", "$12$", "$12\\sqrt{3}$", "$6\\sqrt{3}$", "$24\\sqrt{3}$"],
+      "answer": 2,
+      "explanation": "평행사변형 넓이 $= 6 \\times 4 \\times \\sin 60° = 24 \\times \\frac{\\sqrt{3}}{2} = 12\\sqrt{3}$입니다."
+    },
+    {
+      "id": 14,
+      "question": "이등변삼각형에서 꼭지각이 $120°$이고 등변의 길이가 $4$일 때, 넓이는?",
+      "choices": ["$4\\sqrt{3}$", "$8$", "$2\\sqrt{3}$", "$8\\sqrt{3}$", "$12$"],
+      "answer": 0,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 4 \\times 4 \\times \\sin 120° = 8 \\times \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$입니다. ($\\sin 120° = \\sin 60° = \\frac{\\sqrt{3}}{2}$)"
+    },
+    {
+      "id": 15,
+      "question": "정육각형의 한 변의 길이가 $a$일 때, 넓이는?",
+      "choices": ["$3a^2$", "$\\frac{3\\sqrt{3}}{2}a^2$", "$2\\sqrt{3}a^2$", "$3\\sqrt{3}a^2$", "$6a^2$"],
+      "answer": 1,
+      "explanation": "정육각형은 정삼각형 6개로 이루어집니다. 정삼각형 하나의 넓이 $= \\frac{\\sqrt{3}}{4}a^2$이므로 정육각형 넓이 $= 6 \\times \\frac{\\sqrt{3}}{4}a^2 = \\frac{3\\sqrt{3}}{2}a^2$입니다."
+    },
+    {
+      "id": 16,
+      "question": "지면에서 $100$ m 떨어진 곳에서 30°의 앙각으로 산 꼭대기를 바라볼 때, 산의 높이는?",
+      "choices": ["$50$ m", "$\\frac{100\\sqrt{3}}{3}$ m", "$100\\sqrt{3}$ m", "$50\\sqrt{3}$ m", "$200$ m"],
+      "answer": 1,
+      "explanation": "$\\tan 30° = \\frac{h}{100}$이므로 $h = 100 \\times \\frac{\\sqrt{3}}{3} = \\frac{100\\sqrt{3}}{3}$ m입니다."
+    },
+    {
+      "id": 17,
+      "question": "직사각형에서 대각선과 긴 변이 이루는 각도가 30°이고, 긴 변의 길이가 $4\\sqrt{3}$일 때, 대각선의 길이는?",
+      "choices": ["$4$", "$8$", "$4\\sqrt{3}$", "$6$", "$12$"],
+      "answer": 1,
+      "explanation": "$\\cos 30° = \\frac{\\text{긴 변}}{\\text{대각선}}$이므로 대각선 $= \\frac{4\\sqrt{3}}{\\frac{\\sqrt{3}}{2}} = 8$입니다."
+    },
+    {
+      "id": 18,
+      "question": "삼각형 ABC에서 $\\angle A = 120°$, $AB = 3$, $AC = 4$일 때, 넓이는?",
+      "choices": ["$3\\sqrt{3}$", "$6$", "$3$", "$\\frac{3\\sqrt{3}}{2}$", "$12$"],
+      "answer": 0,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 3 \\times 4 \\times \\sin 120° = 6 \\times \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$입니다. ($\\sin 120° = \\sin 60° = \\frac{\\sqrt{3}}{2}$)"
+    },
+    {
+      "id": 19,
+      "question": "삼각형 ABC에서 $\\angle A = 150°$, $AB = 8$, $AC = 6$일 때, 넓이는?",
+      "choices": ["$48$", "$12$", "$12\\sqrt{3}$", "$6\\sqrt{3}$", "$24$"],
+      "answer": 1,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 8 \\times 6 \\times \\sin 150° = 24 \\times \\frac{1}{2} = 12$입니다. ($\\sin 150° = \\sin 30° = \\frac{1}{2}$)"
+    },
+    {
+      "id": 20,
+      "question": "A지점에서 N45°E 방향으로 $10\\sqrt{2}$ km 이동했을 때, 동쪽으로 이동한 거리는?",
+      "choices": ["$5\\sqrt{2}$ km", "$5$ km", "$10$ km", "$10\\sqrt{2}$ km", "$20$ km"],
+      "answer": 2,
+      "explanation": "동쪽 성분 $= 10\\sqrt{2} \\times \\sin 45° = 10\\sqrt{2} \\times \\frac{\\sqrt{2}}{2} = 10$ km입니다."
+    },
+    {
+      "id": 21,
+      "question": "삼각형 ABC에서 꼭짓점 A에서 BC에 내린 수선의 길이가 $AH$이고, $AB = 10$, $\\angle B = 30°$일 때, $AH$는?",
+      "choices": ["$5\\sqrt{3}$", "$5$", "$10\\sqrt{3}$", "$10$", "$\\frac{10\\sqrt{3}}{3}$"],
+      "answer": 1,
+      "explanation": "$AH = AB \\times \\sin B = 10 \\times \\sin 30° = 10 \\times \\frac{1}{2} = 5$입니다."
+    },
+    {
+      "id": 22,
+      "question": "지상 $40$ m 높이에서 내려다 보는 내각이 30°인 지점까지의 수평 거리는?",
+      "choices": ["$20$ m", "$40\\sqrt{3}$ m", "$\\frac{40\\sqrt{3}}{3}$ m", "$40$ m", "$20\\sqrt{3}$ m"],
+      "answer": 1,
+      "explanation": "$\\tan 30° = \\frac{40}{d}$이므로 $d = \\frac{40}{\\tan 30°} = 40 \\times \\sqrt{3} \\times \\frac{3}{3}$... $d = \\frac{40}{\\frac{\\sqrt{3}}{3}} = \\frac{40 \\times 3}{\\sqrt{3}} = \\frac{120}{\\sqrt{3}} = 40\\sqrt{3}$ m입니다."
+    },
+    {
+      "id": 23,
+      "question": "두 배가 항구 A에서 출발하여, 한 배는 N30°W 방향, 다른 배는 N30°E 방향으로 각각 20 km 이동했다. 두 배 사이의 거리는?",
+      "choices": ["$10\\sqrt{3}$ km", "$20$ km", "$20\\sqrt{3}$ km", "$10\\sqrt{2}$ km", "$40$ km"],
+      "answer": 1,
+      "explanation": "두 배 모두 북쪽으로 $20\\cos 30° = 10\\sqrt{3}$ km, 동서로 각각 $20\\sin 30° = 10$ km씩 반대 방향으로 이동. 동서 거리 차 = 20 km, 남북 거리 차 = 0이므로 두 배 사이 거리 = 20 km입니다."
+    },
+    {
+      "id": 24,
+      "question": "정삼각형의 한 변의 길이가 $a$일 때, 높이는?",
+      "choices": ["$\\frac{a}{2}$", "$a$", "$\\frac{\\sqrt{3}}{2}a$", "$\\sqrt{3}a$", "$\\frac{a}{\\sqrt{3}}$"],
+      "answer": 2,
+      "explanation": "정삼각형 높이 $h = a\\sin 60° = a \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{2}a$입니다."
+    },
+    {
+      "id": 25,
+      "question": "사다리꼴 ABCD에서 $AD \\parallel BC$, $AB = 6$, $\\angle B = 45°$, $BC = 10$, $AD = 4$일 때, 사다리꼴의 높이는?",
+      "choices": ["$3\\sqrt{2}$", "$6$", "$3$", "$6\\sqrt{2}$", "$\\sqrt{2}$"],
+      "answer": 0,
+      "explanation": "A에서 BC에 수선을 내리면 높이 $h = AB \\times \\sin B = 6 \\times \\sin 45° = 6 \\times \\frac{\\sqrt{2}}{2} = 3\\sqrt{2}$입니다."
+    },
+    {
+      "id": 26,
+      "question": "삼각형 ABC에서 $AB = 4$, $AC = 4$, $\\angle A = 45°$일 때, 넓이는?",
+      "choices": ["$4$", "$4\\sqrt{2}$", "$8$", "$2\\sqrt{2}$", "$8\\sqrt{2}$"],
+      "answer": 1,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 4 \\times 4 \\times \\sin 45° = 8 \\times \\frac{\\sqrt{2}}{2} = 4\\sqrt{2}$입니다."
+    },
+    {
+      "id": 27,
+      "question": "마름모 ABCD에서 $\\angle A = 60°$, 한 변의 길이가 $6$일 때, 넓이는?",
+      "choices": ["$18$", "$18\\sqrt{3}$", "$9\\sqrt{3}$", "$36$", "$9$"],
+      "answer": 1,
+      "explanation": "마름모 넓이 $= (\\text{변})^2 \\times \\sin A = 6^2 \\times \\sin 60° = 36 \\times \\frac{\\sqrt{3}}{2} = 18\\sqrt{3}$입니다."
+    },
+    {
+      "id": 28,
+      "question": "방위각 N60°E 방향으로 $10$ km 이동했을 때, 북쪽으로 이동한 거리는?",
+      "choices": ["$5\\sqrt{3}$ km", "$5$ km", "$10\\sqrt{3}$ km", "$10$ km", "$5\\sqrt{2}$ km"],
+      "answer": 1,
+      "explanation": "북쪽 성분 $= 10 \\times \\cos 60° = 10 \\times \\frac{1}{2} = 5$ km입니다."
+    },
+    {
+      "id": 29,
+      "question": "삼각형 ABC에서 $a = 8$ (BC), $b = 6$ (CA), $\\angle C = 30°$일 때, 삼각형의 넓이는?",
+      "choices": ["$24$", "$12$", "$6\\sqrt{3}$", "$12\\sqrt{3}$", "$48$"],
+      "answer": 1,
+      "explanation": "넓이 $= \\frac{1}{2} \\times a \\times b \\times \\sin C = \\frac{1}{2} \\times 8 \\times 6 \\times \\sin 30° = 24 \\times \\frac{1}{2} = 12$입니다."
+    },
+    {
+      "id": 30,
+      "question": "사다리꼴에서 윗변 $=4$, 아랫변 $=10$, 높이 $=6$일 때, 사다리꼴의 넓이는?",
+      "choices": ["$24$", "$36$", "$42$", "$48$", "$60$"],
+      "answer": 2,
+      "explanation": "사다리꼴 넓이 $= \\frac{1}{2} \\times (\\text{윗변}+\\text{아랫변}) \\times \\text{높이} = \\frac{1}{2} \\times (4+10) \\times 6 = \\frac{1}{2} \\times 14 \\times 6 = 42$입니다."
+    }
+  ]
+}

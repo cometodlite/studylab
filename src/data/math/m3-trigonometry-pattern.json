@@ -1,0 +1,220 @@
+{
+  "id": "m3-trigonometry-pattern",
+  "title": "삼각비 — 유형별",
+  "description": "삼각비로 변의 길이 구하기, 삼각비 관계 활용",
+  "grade": 3,
+  "unit": "삼각비",
+  "difficulty": "유형별",
+  "questions": [
+    {
+      "id": 1,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle A = 30°$, $BC = 4$일 때, 빗변 $AB$의 길이는?",
+      "choices": ["$4\\sqrt{3}$", "$8$", "$6$", "$4\\sqrt{2}$", "$2\\sqrt{3}$"],
+      "answer": 1,
+      "explanation": "$\\sin A = \\frac{BC}{AB}$이므로 $AB = \\frac{BC}{\\sin 30°} = \\frac{4}{\\frac{1}{2}} = 8$입니다."
+    },
+    {
+      "id": 2,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle A = 45°$, $CA = 6$일 때, 빗변 $AB$의 길이는?",
+      "choices": ["$6\\sqrt{2}$", "$6\\sqrt{3}$", "$3\\sqrt{2}$", "$12$", "$6$"],
+      "answer": 0,
+      "explanation": "$\\cos A = \\frac{CA}{AB}$이므로 $AB = \\frac{CA}{\\cos 45°} = \\frac{6}{\\frac{\\sqrt{2}}{2}} = \\frac{12}{\\sqrt{2}} = 6\\sqrt{2}$입니다."
+    },
+    {
+      "id": 3,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle B = 60°$, $AB = 10$일 때, $BC$의 길이는?",
+      "choices": ["$5\\sqrt{3}$", "$5$", "$5\\sqrt{2}$", "$10\\sqrt{3}$", "$\\frac{10\\sqrt{3}}{3}$"],
+      "answer": 1,
+      "explanation": "$\\cos B = \\frac{BC}{AB}$이므로 $BC = AB \\times \\cos 60° = 10 \\times \\frac{1}{2} = 5$입니다."
+    },
+    {
+      "id": 4,
+      "question": "$\\sin A = \\frac{1}{3}$일 때, $\\cos A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{2\\sqrt{2}}{3}$", "$\\frac{\\sqrt{2}}{3}$", "$\\frac{2}{3}$", "$\\frac{\\sqrt{8}}{9}$", "$\\frac{1}{3}$"],
+      "answer": 0,
+      "explanation": "$\\cos^2 A = 1 - \\sin^2 A = 1 - \\frac{1}{9} = \\frac{8}{9}$이므로 $\\cos A = \\frac{2\\sqrt{2}}{3}$ ($0° < A < 90°$이므로 양수)입니다."
+    },
+    {
+      "id": 5,
+      "question": "$\\tan A = 2$일 때, $\\sin A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{\\sqrt{5}}{5}$", "$\\frac{2}{5}$", "$\\frac{\\sqrt{5}}{2}$", "$\\frac{2\\sqrt{5}}{5}$", "$\\frac{1}{2}$"],
+      "answer": 3,
+      "explanation": "$\\tan A = 2$이면 대변:이웃변 = 2:1. 빗변 $= \\sqrt{4+1} = \\sqrt{5}$. $\\sin A = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$입니다."
+    },
+    {
+      "id": 6,
+      "question": "$\\tan A = \\frac{3}{4}$일 때, $\\cos A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{3}{5}$", "$\\frac{4}{5}$", "$\\frac{3}{4}$", "$\\frac{4}{3}$", "$\\frac{5}{4}$"],
+      "answer": 1,
+      "explanation": "$\\tan A = \\frac{3}{4}$이면 대변:이웃변 = 3:4. 피타고라스 정리로 빗변 $= \\sqrt{9+16} = 5$. $\\cos A = \\frac{\\text{이웃변}}{\\text{빗변}} = \\frac{4}{5}$입니다."
+    },
+    {
+      "id": 7,
+      "question": "$\\cos A = \\frac{\\sqrt{3}}{3}$일 때, $\\tan A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{\\sqrt{3}}{3}$", "$\\frac{\\sqrt{2}}{2}$", "$\\sqrt{2}$", "$\\sqrt{3}$", "$2$"],
+      "answer": 2,
+      "explanation": "$\\cos A = \\frac{\\sqrt{3}}{3}$이므로 $\\sin^2 A = 1 - \\frac{1}{3} = \\frac{2}{3}$, $\\sin A = \\frac{\\sqrt{2}}{\\sqrt{3}}$. $\\tan A = \\frac{\\sin A}{\\cos A} = \\frac{\\frac{\\sqrt{2}}{\\sqrt{3}}}{\\frac{\\sqrt{3}}{3}} = \\frac{\\sqrt{2}}{\\sqrt{3}} \\times \\frac{3}{\\sqrt{3}} = \\sqrt{2}$입니다."
+    },
+    {
+      "id": 8,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle A = 30°$, $CA = 3\\sqrt{3}$일 때, $BC$의 길이는?",
+      "choices": ["$3$", "$6$", "$3\\sqrt{3}$", "$9$", "$6\\sqrt{3}$"],
+      "answer": 0,
+      "explanation": "$\\tan A = \\frac{BC}{CA}$이므로 $BC = CA \\times \\tan 30° = 3\\sqrt{3} \\times \\frac{\\sqrt{3}}{3} = \\frac{3 \\times 3}{3} = 3$입니다."
+    },
+    {
+      "id": 9,
+      "question": "직각삼각형 ABC에서 $\\angle C = 90°$, $\\angle A = 60°$, $AB = 4$일 때, 삼각형의 넓이는?",
+      "choices": ["$4\\sqrt{3}$", "$2\\sqrt{3}$", "$3\\sqrt{3}$", "$\\sqrt{3}$", "$8\\sqrt{3}$"],
+      "answer": 1,
+      "explanation": "$BC = AB \\times \\sin 60° = 4 \\times \\frac{\\sqrt{3}}{2} = 2\\sqrt{3}$, $CA = AB \\times \\cos 60° = 4 \\times \\frac{1}{2} = 2$. 넓이 $= \\frac{1}{2} \\times 2 \\times 2\\sqrt{3} = 2\\sqrt{3}$입니다."
+    },
+    {
+      "id": 10,
+      "question": "$\\sin A = \\frac{\\sqrt{5}}{5}$일 때, $\\cos A \\times \\tan A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{\\sqrt{5}}{5}$", "$\\frac{2\\sqrt{5}}{5}$", "$\\frac{1}{5}$", "$\\frac{2}{5}$", "$1$"],
+      "answer": 0,
+      "explanation": "$\\cos A \\times \\tan A = \\cos A \\times \\frac{\\sin A}{\\cos A} = \\sin A = \\frac{\\sqrt{5}}{5}$입니다. 이처럼 $\\cos A \\times \\tan A = \\sin A$는 항상 성립합니다."
+    },
+    {
+      "id": 11,
+      "question": "다음 중 $\\frac{\\sin 30°}{\\cos 30°}$와 같은 것은?",
+      "choices": ["$\\sin 30°$", "$\\cos 30°$", "$\\tan 30°$", "$\\sin 60°$", "$\\cos 60°$"],
+      "answer": 2,
+      "explanation": "$\\frac{\\sin A}{\\cos A} = \\tan A$이므로 $\\frac{\\sin 30°}{\\cos 30°} = \\tan 30°$입니다."
+    },
+    {
+      "id": 12,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle A = 45°$, $BC = 5$일 때, $AB$의 길이는?",
+      "choices": ["$5$", "$5\\sqrt{3}$", "$5\\sqrt{2}$", "$10$", "$\\frac{5\\sqrt{2}}{2}$"],
+      "answer": 2,
+      "explanation": "$\\sin A = \\frac{BC}{AB}$이므로 $AB = \\frac{BC}{\\sin 45°} = \\frac{5}{\\frac{\\sqrt{2}}{2}} = \\frac{10}{\\sqrt{2}} = 5\\sqrt{2}$입니다."
+    },
+    {
+      "id": 13,
+      "question": "$\\sin A = \\frac{2}{3}$일 때, $\\tan A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{2\\sqrt{5}}{5}$", "$\\frac{\\sqrt{5}}{3}$", "$\\frac{2}{\\sqrt{5}}$", "$\\frac{2\\sqrt{5}}{3}$", "$\\frac{3}{2}$"],
+      "answer": 2,
+      "explanation": "$\\cos^2 A = 1 - \\frac{4}{9} = \\frac{5}{9}$이므로 $\\cos A = \\frac{\\sqrt{5}}{3}$. $\\tan A = \\frac{\\sin A}{\\cos A} = \\frac{\\frac{2}{3}}{\\frac{\\sqrt{5}}{3}} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$이므로 $\\frac{2}{\\sqrt{5}}$입니다."
+    },
+    {
+      "id": 14,
+      "question": "다음 중 옳은 것은?",
+      "choices": ["$\\sin^2 A - \\cos^2 A = 1$", "$\\sin A = \\tan A \\times \\cos A$", "$\\cos A = \\frac{\\sin A}{\\tan A}$", "$\\tan A = \\sin A + \\cos A$", "$\\sin A \\times \\cos A = 1$"],
+      "answer": 1,
+      "explanation": "$\\tan A = \\frac{\\sin A}{\\cos A}$에서 양변에 $\\cos A$를 곱하면 $\\sin A = \\tan A \\times \\cos A$입니다. 이 관계는 항상 성립합니다."
+    },
+    {
+      "id": 15,
+      "question": "$2\\sin 30° + 3\\cos 60° - \\tan 45°$의 값은?",
+      "choices": ["$2$", "$1$", "$3$", "$0$", "$\\frac{3}{2}$"],
+      "answer": 4,
+      "explanation": "$2\\sin 30° = 2 \\times \\frac{1}{2} = 1$, $3\\cos 60° = 3 \\times \\frac{1}{2} = \\frac{3}{2}$, $\\tan 45° = 1$. 따라서 $1 + \\frac{3}{2} - 1 = \\frac{3}{2}$입니다."
+    },
+    {
+      "id": 16,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle B = 30°$, $BC = 4\\sqrt{3}$일 때, $CA$의 길이는?",
+      "choices": ["$4$", "$4\\sqrt{3}$", "$8$", "$4\\sqrt{2}$", "$12$"],
+      "answer": 0,
+      "explanation": "$\\tan B = \\frac{CA}{BC}$이므로 $CA = BC \\times \\tan 30° = 4\\sqrt{3} \\times \\frac{\\sqrt{3}}{3} = \\frac{4 \\times 3}{3} = 4$입니다."
+    },
+    {
+      "id": 17,
+      "question": "$\\cos A = \\frac{12}{13}$일 때, $\\sin A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{5}{12}$", "$\\frac{5}{13}$", "$\\frac{12}{13}$", "$\\frac{13}{12}$", "$\\frac{13}{5}$"],
+      "answer": 1,
+      "explanation": "$\\sin^2 A = 1 - \\cos^2 A = 1 - \\frac{144}{169} = \\frac{25}{169}$이므로 $\\sin A = \\frac{5}{13}$ (양수)입니다."
+    },
+    {
+      "id": 18,
+      "question": "$\\sin A = \\frac{5}{13}$, $\\cos A = \\frac{12}{13}$일 때, $\\tan A$의 값은?",
+      "choices": ["$\\frac{12}{13}$", "$\\frac{5}{12}$", "$\\frac{12}{5}$", "$\\frac{13}{12}$", "$\\frac{5}{13}$"],
+      "answer": 1,
+      "explanation": "$\\tan A = \\frac{\\sin A}{\\cos A} = \\frac{\\frac{5}{13}}{\\frac{12}{13}} = \\frac{5}{12}$입니다."
+    },
+    {
+      "id": 19,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $BC = 1$, $CA = \\sqrt{3}$일 때, $\\angle A$의 크기는?",
+      "choices": ["$60°$", "$45°$", "$30°$", "$15°$", "$75°$"],
+      "answer": 2,
+      "explanation": "$\\tan A = \\frac{BC}{CA} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3} = \\tan 30°$이므로 $\\angle A = 30°$입니다."
+    },
+    {
+      "id": 20,
+      "question": "$(1 - \\sin A)(1 + \\sin A)$를 간단히 하면?",
+      "choices": ["$\\sin^2 A$", "$1 - \\sin A$", "$\\cos^2 A$", "$1 + \\cos A$", "$\\tan^2 A$"],
+      "answer": 2,
+      "explanation": "$(1 - \\sin A)(1 + \\sin A) = 1 - \\sin^2 A = \\cos^2 A$입니다. (합차공식과 $\\sin^2 A + \\cos^2 A = 1$ 이용)"
+    },
+    {
+      "id": 21,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\angle A = 30°$, $AB = 2$일 때, 삼각형 ABC의 넓이는?",
+      "choices": ["$\\frac{\\sqrt{3}}{4}$", "$\\frac{\\sqrt{3}}{2}$", "$\\sqrt{3}$", "$2\\sqrt{3}$", "$\\frac{1}{4}$"],
+      "answer": 1,
+      "explanation": "$BC = AB\\sin 30° = 2 \\times \\frac{1}{2} = 1$, $CA = AB\\cos 30° = 2 \\times \\frac{\\sqrt{3}}{2} = \\sqrt{3}$. 넓이 $= \\frac{1}{2} \\times \\sqrt{3} \\times 1 = \\frac{\\sqrt{3}}{2}$입니다."
+    },
+    {
+      "id": 22,
+      "question": "$\\sin A \\cdot \\cos A = \\frac{1}{4}$일 때, $(\\sin A + \\cos A)^2$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{3}{2}$", "$\\frac{\\sqrt{6}}{2}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$1$"],
+      "answer": 0,
+      "explanation": "$(\\sin A + \\cos A)^2 = \\sin^2 A + 2\\sin A\\cos A + \\cos^2 A = 1 + 2 \\times \\frac{1}{4} = 1 + \\frac{1}{2} = \\frac{3}{2}$입니다."
+    },
+    {
+      "id": 23,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $AB = 10$, $\\cos A = 0.8$일 때, $CA$의 길이는?",
+      "choices": ["$4$", "$6$", "$8$", "$10$", "$12$"],
+      "answer": 2,
+      "explanation": "$\\cos A = \\frac{CA}{AB}$이므로 $CA = AB \\times \\cos A = 10 \\times 0.8 = 8$입니다."
+    },
+    {
+      "id": 24,
+      "question": "다음 중 $0° < A < 90°$에서 $A$가 증가할 때 값이 감소하는 삼각비는?",
+      "choices": ["$\\sin A$", "$\\cos A$", "$\\tan A$", "$\\sin A$와 $\\tan A$", "$\\tan A$와 $\\cos A$"],
+      "answer": 1,
+      "explanation": "$0° < A < 90°$에서 $A$가 증가하면 $\\sin A$와 $\\tan A$는 증가하고, $\\cos A$는 감소합니다. 예: $\\cos 30° = \\frac{\\sqrt{3}}{2} > \\cos 60° = \\frac{1}{2}$."
+    },
+    {
+      "id": 25,
+      "question": "$\\frac{\\tan 60°}{\\sin 60°}$의 값은?",
+      "choices": ["$1$", "$\\sqrt{3}$", "$\\frac{2\\sqrt{3}}{3}$", "$2$", "$\\frac{\\sqrt{3}}{2}$"],
+      "answer": 3,
+      "explanation": "$\\frac{\\tan 60°}{\\sin 60°} = \\frac{\\sqrt{3}}{\\frac{\\sqrt{3}}{2}} = \\sqrt{3} \\times \\frac{2}{\\sqrt{3}} = 2$입니다."
+    },
+    {
+      "id": 26,
+      "question": "직각삼각형에서 $\\angle B = 90°$, $AB = 3$, $\\angle A = 30°$일 때, $AC$의 길이는?",
+      "choices": ["$2\\sqrt{3}$", "$3\\sqrt{3}$", "$6$", "$\\frac{3\\sqrt{3}}{2}$", "$\\frac{6\\sqrt{3}}{3}$"],
+      "answer": 0,
+      "explanation": "$\\angle B = 90°$이므로 빗변은 $AC$. $\\cos A = \\frac{AB}{AC}$이므로 $AC = \\frac{AB}{\\cos 30°} = \\frac{3}{\\frac{\\sqrt{3}}{2}} = \\frac{6}{\\sqrt{3}} = 2\\sqrt{3}$입니다."
+    },
+    {
+      "id": 27,
+      "question": "$\\sin A = \\cos A$를 만족하는 예각 $A$의 값은?",
+      "choices": ["$30°$", "$45°$", "$60°$", "$90°$", "$15°$"],
+      "answer": 1,
+      "explanation": "$\\sin A = \\cos A$이면 $\\tan A = 1$. $0° < A < 90°$에서 $\\tan A = 1$이 되는 각도는 $A = 45°$입니다."
+    },
+    {
+      "id": 28,
+      "question": "$\\sin 30° \\cdot \\cos 60° + \\cos 30° \\cdot \\sin 60°$의 값은?",
+      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$1$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{3}{4}$"],
+      "answer": 2,
+      "explanation": "$\\sin 30°\\cos 60° + \\cos 30°\\sin 60° = \\frac{1}{2} \\cdot \\frac{1}{2} + \\frac{\\sqrt{3}}{2} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{1}{4} + \\frac{3}{4} = 1$입니다. (이는 $\\sin(30°+60°) = \\sin 90° = 1$과 같습니다.)"
+    },
+    {
+      "id": 29,
+      "question": "직각삼각형에서 $\\angle C = 90°$, $\\sin A = \\frac{\\sqrt{2}}{2}$일 때, $\\angle A$의 크기는?",
+      "choices": ["$30°$", "$60°$", "$45°$", "$90°$", "$15°$"],
+      "answer": 2,
+      "explanation": "$\\sin 45° = \\frac{\\sqrt{2}}{2}$이므로 $\\angle A = 45°$입니다."
+    },
+    {
+      "id": 30,
+      "question": "$\\cos^2 A - \\sin^2 A = \\frac{1}{2}$일 때, $\\cos A$의 값은? (단, $0° < A < 90°$)",
+      "choices": ["$\\frac{\\sqrt{6}}{4}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{3}{4}$", "$\\frac{\\sqrt{6}}{2}$"],
+      "answer": 1,
+      "explanation": "$\\cos^2 A - (1 - \\cos^2 A) = \\frac{1}{2}$이므로 $2\\cos^2 A - 1 = \\frac{1}{2}$, $2\\cos^2 A = \\frac{3}{2}$, $\\cos^2 A = \\frac{3}{4}$, $\\cos A = \\frac{\\sqrt{3}}{2}$ (양수)입니다."
+    }
+  ]
+}

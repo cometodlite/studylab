@@ -4,7 +4,7 @@ import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
 
-const SKIP_DIRS = new Set(['archive', 'school-exams', 'roadway']);
+const SKIP_DIRS = new Set(['archive', 'school-exams', 'roadway', 'workbooks']);
 
 function scanJsonFiles(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];

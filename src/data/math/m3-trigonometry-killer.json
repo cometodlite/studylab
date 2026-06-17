@@ -1,0 +1,220 @@
+{
+  "id": "m3-trigonometry-killer",
+  "title": "삼각비 — 킬러",
+  "description": "복합 삼각비 활용, 입체도형, 방위각 복합 문제",
+  "grade": 3,
+  "unit": "삼각비",
+  "difficulty": "킬러",
+  "questions": [
+    {
+      "id": 1,
+      "question": "직각삼각형 ABC에서 $\\angle C=90°$, $AB=10$, $\\angle A=30°$이다. C를 원점, B=(5,0), A=(0,$5\\sqrt{3}$)으로 놓을 때, AB의 중점 M에서 BC에 내린 수선의 발 H까지의 거리 MH는?",
+      "choices": ["$\\frac{5\\sqrt{3}}{4}$", "$\\frac{5}{2}$", "$\\frac{5\\sqrt{3}}{2}$", "$\\frac{5}{4}$", "$\\frac{5\\sqrt{2}}{4}$"],
+      "answer": 2,
+      "explanation": "$\\angle A=30°$이면 $BC=5$, $CA=5\\sqrt{3}$. M은 AB 중점 $= (\\frac{5}{2}, \\frac{5\\sqrt{3}}{2})$. BC는 x축이므로 M에서 BC에 내린 수선의 발 H $= (\\frac{5}{2}, 0)$. $MH = \\frac{5\\sqrt{3}}{2}$입니다."
+    },
+    {
+      "id": 2,
+      "question": "삼각형 ABC에서 $\\angle B = 45°$, $\\angle C = 60°$이고, $BC = 6$이다. 꼭짓점 A에서 BC에 내린 수선의 발을 H라 할 때, $AH$의 길이는?",
+      "choices": ["$9-3\\sqrt{3}$", "$3\\sqrt{3}$", "$3\\sqrt{6}$", "$9+3\\sqrt{3}$", "$6\\sqrt{2}$"],
+      "answer": 0,
+      "explanation": "$AH = h$로 놓으면: $BH = h/\\tan 45° = h$, $CH = h/\\tan 60° = h/\\sqrt{3}$. $h + h/\\sqrt{3} = 6$이므로 $h(1+1/\\sqrt{3}) = 6$, $h = \\frac{6\\sqrt{3}}{\\sqrt{3}+1} = \\frac{6\\sqrt{3}(\\sqrt{3}-1)}{2} = 3\\sqrt{3}(\\sqrt{3}-1) = 9-3\\sqrt{3}$입니다."
+    },
+    {
+      "id": 3,
+      "question": "정사각형 ABCD의 한 변의 길이가 $4$이다. 꼭짓점 A에서 대각선 BD에 내린 수선의 발을 H라 할 때, $AH$의 길이는?",
+      "choices": ["$2\\sqrt{2}$", "$2$", "$\\sqrt{2}$", "$4$", "$2\\sqrt{3}$"],
+      "answer": 0,
+      "explanation": "삼각형 ABD에서 $AB = AD = 4$이고 $BD = 4\\sqrt{2}$. 삼각형 ABD는 $\\angle A = 90°$인 직각이등변삼각형. $AH = AB\\sin 45° = 4 \\times \\frac{\\sqrt{2}}{2} = 2\\sqrt{2}$. 또는 $AH = \\frac{AB \\cdot AD}{BD} = \\frac{16}{4\\sqrt{2}} = 2\\sqrt{2}$입니다."
+    },
+    {
+      "id": 4,
+      "question": "직육면체에서 밑면은 $3\\times 4$ 직사각형이고, 높이가 $12$일 때, 공간 대각선 AG와 밑면이 이루는 각의 $\\sin$ 값은?",
+      "choices": ["$\\frac{12}{13}$", "$\\frac{5}{13}$", "$\\frac{12}{5}$", "$\\frac{5}{12}$", "$\\frac{4}{5}$"],
+      "answer": 0,
+      "explanation": "밑면 대각선 $= \\sqrt{3^2+4^2} = 5$. 공간 대각선 $AG = \\sqrt{5^2+12^2} = 13$. 대각선과 밑면이 이루는 각 $\\theta$에서 $\\sin\\theta = \\frac{12}{13}$입니다."
+    },
+    {
+      "id": 5,
+      "question": "삼각형 ABC에서 $AB = 4\\sqrt{2}$, $BC = 4$, $\\angle B = 45°$일 때, $CA$의 길이는?",
+      "choices": ["$4$", "$4\\sqrt{2}$", "$8$", "$2\\sqrt{2}$", "$4\\sqrt{3}$"],
+      "answer": 0,
+      "explanation": "코사인 법칙: $CA^2 = AB^2 + BC^2 - 2 \\cdot AB \\cdot BC \\cdot \\cos B = 32 + 16 - 2(4\\sqrt{2})(4) \\cdot \\frac{\\sqrt{2}}{2} = 48 - 32 = 16$. $CA = 4$입니다."
+    },
+    {
+      "id": 6,
+      "question": "두 지점 A, B에서 탑의 꼭대기 P를 올려다 본 앙각이 각각 30°, 45°이다. B가 탑에 더 가깝고, AB = $30(\\sqrt{3}-1)$ m, A·B·탑 밑이 일직선일 때, 탑의 높이는?",
+      "choices": ["$15$ m", "$30$ m", "$15\\sqrt{3}$ m", "$30\\sqrt{3}$ m", "$15(\\sqrt{3}+1)$ m"],
+      "answer": 1,
+      "explanation": "탑 높이 $h$, 탑~B 거리 $d$: $\\tan 45°=h/d$에서 $d=h$. $\\tan 30°=h/(h+30(\\sqrt{3}-1))$이므로 $\\sqrt{3}h = h+30(\\sqrt{3}-1)$, $(\\sqrt{3}-1)h = 30(\\sqrt{3}-1)$, $h = 30$ m입니다."
+    },
+    {
+      "id": 7,
+      "question": "정삼각뿔에서 밑면 정삼각형 한 변의 길이와 옆 모서리의 길이가 모두 $6$일 때, 꼭짓점에서 밑면까지의 높이는?",
+      "choices": ["$\\sqrt{6}$", "$2\\sqrt{3}$", "$\\sqrt{3}$", "$3\\sqrt{2}$", "$2\\sqrt{6}$"],
+      "answer": 4,
+      "explanation": "정삼각형 무게중심에서 꼭짓점까지의 거리 $r = \\frac{6}{\\sqrt{3}} = 2\\sqrt{3}$. 높이 $h = \\sqrt{6^2-(2\\sqrt{3})^2} = \\sqrt{36-12} = \\sqrt{24} = 2\\sqrt{6}$입니다."
+    },
+    {
+      "id": 8,
+      "question": "삼각형 ABC에서 $\\sin A - \\cos A = \\frac{1}{5}$이고 $\\angle C = 90°$일 때, $\\sin A \\cdot \\cos A$의 값은?",
+      "choices": ["$\\frac{12}{25}$", "$\\frac{7}{25}$", "$\\frac{24}{25}$", "$\\frac{1}{5}$", "$\\frac{1}{25}$"],
+      "answer": 0,
+      "explanation": "$(\\sin A - \\cos A)^2 = 1 - 2\\sin A\\cos A = \\frac{1}{25}$이므로 $2\\sin A\\cos A = \\frac{24}{25}$, $\\sin A\\cos A = \\frac{12}{25}$입니다."
+    },
+    {
+      "id": 9,
+      "question": "한 변의 길이가 $2$인 정육각형에서 마주보는 두 꼭짓점 사이의 거리(장대각선)는?",
+      "choices": ["$2\\sqrt{3}$", "$4$", "$2\\sqrt{2}$", "$3$", "$3\\sqrt{2}$"],
+      "answer": 1,
+      "explanation": "정육각형의 외접원 반지름 = 한 변의 길이 = 2. 장대각선 = 지름 $= 2 \\times 2 = 4$입니다."
+    },
+    {
+      "id": 10,
+      "question": "배가 A에서 N30°E 방향으로 20km, 이어서 S60°E 방향으로 20km 항해했다. A에서 도착점 B까지의 거리는?",
+      "choices": ["$20$ km", "$20\\sqrt{2}$ km", "$20\\sqrt{3}$ km", "$40$ km", "$10\\sqrt{2}$ km"],
+      "answer": 1,
+      "explanation": "N30°E로 20km: 북 $10\\sqrt{3}$, 동 $10$. S60°E로 20km: 남 $10$, 동 $10\\sqrt{3}$. 총 북이동 $10\\sqrt{3}-10$, 동이동 $10+10\\sqrt{3}$. $AB = 10\\sqrt{(\\sqrt{3}-1)^2+(1+\\sqrt{3})^2} = 10\\sqrt{(4-2\\sqrt{3})+(4+2\\sqrt{3})} = 10\\sqrt{8} = 20\\sqrt{2}$입니다."
+    },
+    {
+      "id": 11,
+      "question": "삼각형 ABC에서 $\\angle C = 90°$, $\\tan A = 2$일 때, $\\sin A + \\cos A$의 값은?",
+      "choices": ["$\\frac{2+\\sqrt{5}}{5}$", "$\\frac{\\sqrt{5}+2}{\\sqrt{5}}$", "$\\frac{3\\sqrt{5}}{5}$", "$\\frac{\\sqrt{5}}{2}$", "$\\frac{2+\\sqrt{5}}{\\sqrt{5}}$"],
+      "answer": 2,
+      "explanation": "$\\tan A = 2$이면 대변:이웃변 = 2:1, 빗변 $= \\sqrt{5}$. $\\sin A = \\frac{2}{\\sqrt{5}}$, $\\cos A = \\frac{1}{\\sqrt{5}}$. $\\sin A + \\cos A = \\frac{3}{\\sqrt{5}} = \\frac{3\\sqrt{5}}{5}$입니다."
+    },
+    {
+      "id": 12,
+      "question": "직육면체에서 밑면이 $4 \\times 4$ 정사각형이고, 높이가 $4$이다. 공간 대각선 AG와 밑면 대각선 AC가 이루는 각의 $\\tan$ 값은?",
+      "choices": ["$\\frac{1}{\\sqrt{2}}$", "$\\frac{\\sqrt{2}}{2}$", "$1$", "$\\sqrt{2}$", "$\\frac{\\sqrt{2}}{4}$"],
+      "answer": 0,
+      "explanation": "밑면 대각선 $AC = 4\\sqrt{2}$. 공간 대각선 AG = $\\sqrt{(4\\sqrt{2})^2+4^2} = \\sqrt{48} = 4\\sqrt{3}$. $\\tan\\theta = \\frac{4}{4\\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$. 선택지 0번 $\\frac{1}{\\sqrt{2}}$과 선택지 1번 $\\frac{\\sqrt{2}}{2}$는 같은 값이므로 answer=0입니다."
+    },
+    {
+      "id": 13,
+      "question": "삼각형 ABC에서 $\\angle A : \\angle B : \\angle C = 1:2:3$이고, $BC = a$일 때, $CA$의 길이는?",
+      "choices": ["$a$", "$a\\sqrt{3}$", "$2a$", "$\\frac{a\\sqrt{3}}{2}$", "$\\frac{a}{2}$"],
+      "answer": 1,
+      "explanation": "$\\angle A=30°$, $\\angle B=60°$, $\\angle C=90°$. 사인 법칙: $\\frac{CA}{\\sin B} = \\frac{BC}{\\sin A}$. $CA = \\frac{a \\sin 60°}{\\sin 30°} = \\frac{a \\cdot \\frac{\\sqrt{3}}{2}}{\\frac{1}{2}} = a\\sqrt{3}$입니다."
+    },
+    {
+      "id": 14,
+      "question": "직육면체에서 밑면이 $6 \\times 8$ 직사각형이고, 높이가 $10$일 때, 공간 대각선의 길이는?",
+      "choices": ["$10\\sqrt{2}$", "$12$", "$14$", "$\\sqrt{200}$", "$10\\sqrt{3}$"],
+      "answer": 0,
+      "explanation": "공간 대각선 $= \\sqrt{6^2+8^2+10^2} = \\sqrt{36+64+100} = \\sqrt{200} = 10\\sqrt{2}$입니다."
+    },
+    {
+      "id": 15,
+      "question": "삼각형 ABC에서 $\\angle A = 45°$, $\\angle B = 60°$, $BC = 2\\sqrt{6}$일 때, $CA$의 길이는?",
+      "choices": ["$4$", "$2\\sqrt{3}$", "$2\\sqrt{6}$", "$4\\sqrt{3}$", "$6$"],
+      "answer": 4,
+      "explanation": "$\\angle C = 75°$. 사인 법칙: $CA = \\frac{BC \\cdot \\sin B}{\\sin A} = \\frac{2\\sqrt{6} \\cdot \\frac{\\sqrt{3}}{2}}{\\frac{\\sqrt{2}}{2}} = \\frac{\\sqrt{18}}{\\frac{\\sqrt{2}}{2}} = \\frac{\\sqrt{18} \\cdot 2}{\\sqrt{2}} = 2\\sqrt{9} = 6$입니다."
+    },
+    {
+      "id": 16,
+      "question": "좌표평면에서 원점 O에서 $x$축과 30°를 이루는 방향으로 $OP = 6$인 점 P의 좌표는?",
+      "choices": ["$(3, 3)$", "$(3\\sqrt{3}, 3)$", "$(3, 3\\sqrt{3})$", "$(6, 0)$", "$(0, 6)$"],
+      "answer": 1,
+      "explanation": "$P = (6\\cos 30°, 6\\sin 30°) = (6 \\cdot \\frac{\\sqrt{3}}{2}, 6 \\cdot \\frac{1}{2}) = (3\\sqrt{3}, 3)$입니다."
+    },
+    {
+      "id": 17,
+      "question": "삼각형 ABC에서 $\\angle B = 60°$, $\\angle C = 75°$, $BC = a$일 때, $AB$의 길이는? ($\\sin 75° = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$)",
+      "choices": ["$\\frac{a(\\sqrt{3}+1)}{2}$", "$\\frac{a(\\sqrt{6}+\\sqrt{2})}{4}$", "$\\frac{a\\sqrt{3}}{2}$", "$a(\\sqrt{6}-\\sqrt{2})$", "$a$"],
+      "answer": 0,
+      "explanation": "$\\angle A = 45°$. 사인 법칙: $AB = \\frac{a\\sin C}{\\sin A} = \\frac{a \\cdot \\frac{\\sqrt{6}+\\sqrt{2}}{4}}{\\frac{\\sqrt{2}}{2}} = \\frac{a(\\sqrt{6}+\\sqrt{2})}{4} \\times \\frac{2}{\\sqrt{2}} = \\frac{a(\\sqrt{6}+\\sqrt{2})}{2\\sqrt{2}} = \\frac{a(\\sqrt{3}+1)}{2}$입니다."
+    },
+    {
+      "id": 18,
+      "question": "삼각형 ABC에서 $a = 6$, $\\angle A = 30°$, $\\angle B = 60°$일 때, $b$의 값은? (사인 법칙 이용)",
+      "choices": ["$3$", "$6\\sqrt{3}$", "$6$", "$3\\sqrt{3}$", "$6\\sqrt{2}$"],
+      "answer": 1,
+      "explanation": "$\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$이므로 $b = \\frac{a\\sin B}{\\sin A} = \\frac{6 \\times \\frac{\\sqrt{3}}{2}}{\\frac{1}{2}} = 6\\sqrt{3}$입니다."
+    },
+    {
+      "id": 19,
+      "question": "좌표평면에서 A(0,0), B(4,0), $\\angle BAP = 30°$, $\\angle ABP = 45°$일 때, 점 P에서 AB에 내린 수선의 발을 H라 하면 $PH$는?",
+      "choices": ["$4(\\sqrt{3}-1)$", "$2(\\sqrt{3}-1)$", "$4(\\sqrt{3}+1)$", "$\\sqrt{3}-1$", "$2\\sqrt{3}-2$"],
+      "answer": 1,
+      "explanation": "$PH = h$로 놓으면: $AH = h/\\tan 30° = h\\sqrt{3}$, $BH = h/\\tan 45° = h$. $AH+BH = 4$이므로 $h(\\sqrt{3}+1) = 4$, $h = \\frac{4}{\\sqrt{3}+1} = \\frac{4(\\sqrt{3}-1)}{2} = 2(\\sqrt{3}-1)$입니다."
+    },
+    {
+      "id": 20,
+      "question": "삼각형 ABC에서 $\\angle B = 90°$, $\\tan A = \\sqrt{2}$일 때, $\\frac{AB}{BC}$의 값은?",
+      "choices": ["$\\sqrt{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{1}{2}$", "$2$", "$\\frac{1}{\\sqrt{3}}$"],
+      "answer": 1,
+      "explanation": "$\\tan A = \\frac{BC}{AB} = \\sqrt{2}$이므로 $\\frac{AB}{BC} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$입니다."
+    },
+    {
+      "id": 21,
+      "question": "반지름이 $r$인 원에 내접하는 정삼각형의 넓이는?",
+      "choices": ["$\\frac{3\\sqrt{3}}{4}r^2$", "$\\frac{3\\sqrt{3}}{2}r^2$", "$3r^2$", "$\\sqrt{3}r^2$", "$2\\sqrt{3}r^2$"],
+      "answer": 0,
+      "explanation": "정삼각형의 외접원 반지름 $R = r$일 때, 한 변 $a = r\\sqrt{3}$. 넓이 $= \\frac{\\sqrt{3}}{4}a^2 = \\frac{\\sqrt{3}}{4} \\cdot 3r^2 = \\frac{3\\sqrt{3}}{4}r^2$입니다."
+    },
+    {
+      "id": 22,
+      "question": "두 변의 길이가 $5$, $7$이고 끼인각이 $120°$인 삼각형의 나머지 변의 길이는?",
+      "choices": ["$\\sqrt{109}$", "$\\sqrt{99}$", "$\\sqrt{74}$", "$\\sqrt{84}$", "$\\sqrt{64}$"],
+      "answer": 0,
+      "explanation": "코사인 법칙: $c^2 = 25+49-2(5)(7)\\cos 120° = 74-70(-\\frac{1}{2}) = 74+35 = 109$. $c = \\sqrt{109}$입니다."
+    },
+    {
+      "id": 23,
+      "question": "삼각형 ABC에서 $a=7$, $b=8$, $c=9$일 때, $\\cos A$의 값은? (코사인 법칙 이용, $a=BC$, $b=CA$, $c=AB$)",
+      "choices": ["$\\frac{2}{3}$", "$\\frac{11}{16}$", "$\\frac{11}{14}$", "$\\frac{1}{3}$", "$\\frac{7}{9}$"],
+      "answer": 0,
+      "explanation": "코사인 법칙: $a^2 = b^2+c^2-2bc\\cos A$. $49 = 64+81-144\\cos A$. $144\\cos A = 96$, $\\cos A = \\frac{2}{3}$입니다."
+    },
+    {
+      "id": 24,
+      "question": "원에 내접하는 삼각형 ABC에서 $BC = 4$, $\\angle A = 30°$일 때, 외접원의 반지름은?",
+      "choices": ["$2$", "$4$", "$4\\sqrt{3}$", "$\\frac{4\\sqrt{3}}{3}$", "$8$"],
+      "answer": 1,
+      "explanation": "사인 법칙: $2R = \\frac{BC}{\\sin A} = \\frac{4}{\\sin 30°} = \\frac{4}{\\frac{1}{2}} = 8$. $R = 4$입니다."
+    },
+    {
+      "id": 25,
+      "question": "삼각형 ABC에서 $\\sin A : \\sin B = 2:3$이고 $a = 4$일 때, $b$의 값은?",
+      "choices": ["$2$", "$3$", "$6$", "$4\\sqrt{3}$", "$8$"],
+      "answer": 2,
+      "explanation": "사인 법칙에 의해 $a:b = \\sin A:\\sin B = 2:3$이므로 $b = \\frac{3a}{2} = \\frac{3 \\times 4}{2} = 6$입니다."
+    },
+    {
+      "id": 26,
+      "question": "외접원 반지름 $R = 5$, $\\angle A = 30°$인 삼각형에서 $BC$의 길이는?",
+      "choices": ["$5$", "$\\frac{5}{2}$", "$10$", "$5\\sqrt{3}$", "$\\frac{5\\sqrt{3}}{2}$"],
+      "answer": 0,
+      "explanation": "사인 법칙: $BC = 2R\\sin A = 2 \\times 5 \\times \\sin 30° = 10 \\times \\frac{1}{2} = 5$입니다."
+    },
+    {
+      "id": 27,
+      "question": "삼각형 ABC에서 넓이가 $12\\sqrt{3}$이고, 두 변의 길이 $AB = 8$, $AC = 6$일 때, $\\angle A$는?",
+      "choices": ["$30°$", "$45°$", "$60°$", "$90°$", "$120°$"],
+      "answer": 2,
+      "explanation": "넓이 $= \\frac{1}{2} \\times 8 \\times 6 \\times \\sin A = 24\\sin A = 12\\sqrt{3}$. $\\sin A = \\frac{\\sqrt{3}}{2}$이므로 $\\angle A = 60°$ (예각 삼각형으로 가정)입니다."
+    },
+    {
+      "id": 28,
+      "question": "정팔각형의 한 변의 길이가 $2$일 때, 한 변 건너 꼭짓점까지의 대각선 길이는?",
+      "choices": ["$2+\\sqrt{2}$", "$2\\sqrt{2+\\sqrt{2}}$", "$2+2\\sqrt{2}$", "$2\\sqrt{2}$", "$4$"],
+      "answer": 1,
+      "explanation": "정팔각형 내각 $= 135°$. 한 변 건너 꼭짓점까지 두 변의 길이 2, 끼인각 $135°$. 코사인 법칙: $d^2 = 4+4-2(4)\\cos 135° = 8+4\\sqrt{2}$. $d = 2\\sqrt{2+\\sqrt{2}}$입니다."
+    },
+    {
+      "id": 29,
+      "question": "삼각형 ABC에서 $\\tan A = \\frac{4}{3}$이고 $\\angle C = 90°$일 때, $\\sin B$의 값은?",
+      "choices": ["$\\frac{4}{5}$", "$\\frac{3}{5}$", "$\\frac{4}{3}$", "$\\frac{3}{4}$", "$\\frac{5}{4}$"],
+      "answer": 1,
+      "explanation": "$\\angle C = 90°$이면 $\\angle A + \\angle B = 90°$. $\\tan A = \\frac{4}{3}$이면 $\\sin A = \\frac{4}{5}$, $\\cos A = \\frac{3}{5}$. $\\sin B = \\sin(90°-A) = \\cos A = \\frac{3}{5}$입니다."
+    },
+    {
+      "id": 30,
+      "question": "삼각형 ABC에서 $\\angle A = 30°$, $AB = 8$, 넓이 $= 12$일 때, $AC$의 길이는?",
+      "choices": ["$3$", "$6$", "$4$", "$12$", "$8$"],
+      "answer": 1,
+      "explanation": "넓이 $= \\frac{1}{2} \\times AB \\times AC \\times \\sin A = \\frac{1}{2} \\times 8 \\times AC \\times \\frac{1}{2} = 2 \\cdot AC = 12$이므로 $AC = 6$입니다."
+    }
+  ]
+}
