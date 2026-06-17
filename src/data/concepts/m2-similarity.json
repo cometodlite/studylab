@@ -1,0 +1,59 @@
+{
+  "id": "m2-similarity",
+  "subject": "수학",
+  "grade": 2,
+  "unit": "도형의 닮음",
+  "order": 14,
+  "title": "도형의 닮음과 닮음비",
+  "sections": [
+    {
+      "heading": "닮음이란?",
+      "content": "한 도형을 **일정한 비율**로 확대·축소하면 다른 도형과 완전히 겹칠 때 두 도형은 **닮은 도형**이다.",
+      "keyPoints": [
+        "닮은 도형: 대응하는 변의 길이의 비 일정 (닮음비), 대응하는 각의 크기 같음",
+        "닮음비 $m : n$ → 넓이비 $m^2 : n^2$ → 부피비 $m^3 : n^3$",
+        "닮음 기호: $\\triangle ABC \\sim \\triangle DEF$"
+      ],
+      "examples": [
+        { "q": "닮음비가 2:3인 두 삼각형의 넓이비는?", "a": "$2^2 : 3^2 = 4 : 9$" }
+      ]
+    },
+    {
+      "heading": "삼각형의 닮음 조건",
+      "content": "",
+      "keyPoints": [
+        "**SSS 닮음**: 세 쌍의 대응변의 비가 같다",
+        "**SAS 닮음**: 두 쌍의 대응변의 비가 같고 그 끼인각이 같다",
+        "**AA 닮음**: 두 쌍의 대응각의 크기가 같다",
+        "삼각형의 내각의 합은 180°이므로 AA만으로 닮음 결정"
+      ],
+      "examples": [
+        { "q": "$\\triangle ABC$에서 $\\angle A = 50°$, $\\angle B = 70°$이고, $\\triangle DEF$에서 $\\angle D = 50°$, $\\angle E = 70°$이면?", "a": "AA 닮음 ($\\angle A = \\angle D$, $\\angle B = \\angle E$)" }
+      ]
+    },
+    {
+      "heading": "삼각형과 평행선",
+      "content": "",
+      "keyPoints": [
+        "$\\triangle ABC$에서 $DE \\parallel BC$이면 $\\triangle ADE \\sim \\triangle ABC$",
+        "$AD : DB = AE : EC = DE : BC$",
+        "역: 위 비 관계가 성립하면 $DE \\parallel BC$"
+      ],
+      "examples": [
+        { "q": "$\\triangle ABC$에서 $DE \\parallel BC$이고 $AD=3$, $DB=2$, $BC=10$이면 $DE$는?", "a": "$\\frac{DE}{BC} = \\frac{AD}{AB} = \\frac{3}{5}$ → $DE = 6$" }
+      ]
+    },
+    {
+      "heading": "닮음의 활용",
+      "content": "실생활에서 직접 잴 수 없는 높이·거리를 닮음비로 구할 수 있다.",
+      "keyPoints": [
+        "그림자를 이용한 높이 계산 (AA 닮음)",
+        "지도의 축척: 닮음비 이용",
+        "두 삼각형이 AA 닮음이면 대응변의 비가 일정"
+      ],
+      "examples": [
+        { "q": "키 1.6 m인 사람의 그림자가 2 m이고 나무의 그림자가 10 m이면 나무의 높이는?", "a": "$\\frac{\\text{나무}}{10} = \\frac{1.6}{2}$ → 나무 = 8 m" }
+      ]
+    }
+  ]
+}
