@@ -14,19 +14,6 @@ interface ExamMeta {
   questionCount: number;
 }
 
-interface SchoolExamMeta {
-  id: string;
-  title: string;
-  school: string;
-  grade: number;
-  subject: string;
-  sheet: number;
-  difficulty: string;
-  totalScore: number;
-  mcCount: number;
-  essayCount: number;
-}
-
 const DIFFICULTY_COLOR: Record<Difficulty, string> = {
   '기본':   'bg-green-100 text-green-700',
   '유형별': 'bg-blue-100 text-blue-700',
@@ -34,38 +21,22 @@ const DIFFICULTY_COLOR: Record<Difficulty, string> = {
   '킬러':   'bg-red-100 text-red-700',
 };
 
-const SUBJECT_COLORS: Record<string, { bg: string; text: string; border: string; icon: string }> = {
-  역사: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200', icon: '📜' },
-  수학: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200', icon: '📐' },
-  과학: { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200', icon: '🔬' },
-};
-
-const SHEET_ICON = ['🌱', '📗', '📘', '📙', '🔥'];
 const GRADE_LABEL: Record<number, string> = { 1: '중1', 2: '중2', 3: '중3' };
 
 export default function PracticeListPage() {
   const [tab, setTab] = useState<'practice' | 'school'>('practice');
   const [exams, setExams] = useState<ExamMeta[]>([]);
-  const [schoolExams, setSchoolExams] = useState<SchoolExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // 연습문제 필터
   const [gradeFilter, setGradeFilter] = useState<string>('');
   const [unitFilter, setUnitFilter] = useState<string>('');
   const [diffFilter, setDiffFilter] = useState<string>('');
 
-  // 내신기출 필터
-  const [subjectFilter, setSubjectFilter] = useState<string>('');
-
   useEffect(() => {
-    Promise.all([
-      fetch('/api/exams').then(r => r.json()).catch(() => []),
-      fetch('/api/school-exams').then(r => r.json()).catch(() => []),
-    ]).then(([e, s]) => {
-      setExams(Array.isArray(e) ? e : []);
-      setSchoolExams(Array.isArray(s) ? s : []);
-      setLoading(false);
-    });
+    fetch('/api/exams')
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then(data => { setExams(data); setLoading(false); })
+      .catch(() => setLoading(false));
   }, []);
 
   const grades = [...new Set(exams.map(e => e.grade).filter(Boolean))].sort() as number[];
@@ -86,14 +57,6 @@ export default function PracticeListPage() {
     return r.perQuestion * count + r.complete + r.bonusPerfect;
   }
 
-  const schoolSubjects = [...new Set(schoolExams.map(s => s.subject))];
-  const filteredSchool = subjectFilter ? schoolExams.filter(s => s.subject === subjectFilter) : schoolExams;
-  const schoolBySubject: Record<string, SchoolExamMeta[]> = {};
-  for (const s of filteredSchool) {
-    if (!schoolBySubject[s.subject]) schoolBySubject[s.subject] = [];
-    schoolBySubject[s.subject].push(s);
-  }
-
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
 
   return (
@@ -107,7 +70,7 @@ export default function PracticeListPage() {
       <div className="flex border-b border-gray-200 gap-1">
         {[
           { key: 'practice', label: '단원별 연습문제' },
-          { key: 'school', label: '단원별 내신기출' },
+          { key: 'school', label: '내신 대비 문제' },
         ].map(t => (
           <button
             key={t.key}
@@ -210,61 +173,10 @@ export default function PracticeListPage() {
           </div>
         </div>
       ) : (
-        <div className="space-y-5">
-          {/* 과목 필터 */}
-          <div className="flex gap-2 flex-wrap">
-            <button onClick={() => setSubjectFilter('')}
-              className={`px-3 py-1.5 text-sm font-medium rounded-full border transition ${!subjectFilter ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-gray-600 border-gray-200 hover:border-indigo-300'}`}>
-              전체
-            </button>
-            {schoolSubjects.map(s => {
-              const col = SUBJECT_COLORS[s];
-              return (
-                <button key={s} onClick={() => setSubjectFilter(s)}
-                  className={`px-3 py-1.5 text-sm font-medium rounded-full border transition ${
-                    subjectFilter === s
-                      ? 'bg-indigo-600 text-white border-indigo-600'
-                      : 'bg-white text-gray-600 border-gray-200 hover:border-indigo-300'
-                  }`}>
-                  {col?.icon ?? ''} {s}
-                </button>
-              );
-            })}
-          </div>
-
-          {Object.keys(schoolBySubject).length === 0 ? (
-            <p className="text-center text-gray-400 py-12">내신기출 문제가 없습니다.</p>
-          ) : (
-            Object.entries(schoolBySubject).map(([subject, list]) => {
-              const col = SUBJECT_COLORS[subject] ?? { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200', icon: '📄' };
-              return (
-                <div key={subject} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                  <div className={`px-5 py-3 ${col.bg} border-b ${col.border}`}>
-                    <h3 className={`font-bold ${col.text}`}>{col.icon} {subject}</h3>
-                  </div>
-                  <div className="divide-y divide-gray-50">
-                    {list.map((exam, i) => (
-                      <Link key={exam.id} href={`/exam/${exam.id}`}
-                        className="flex items-center justify-between px-5 py-3.5 hover:bg-indigo-50 transition group">
-                        <div className="flex items-center gap-2.5">
-                          <span className="text-xl">{SHEET_ICON[i % SHEET_ICON.length]}</span>
-                          <div>
-                            <p className="text-gray-800 text-sm font-semibold group-hover:text-indigo-700 transition leading-snug">
-                              {exam.title}
-                            </p>
-                            <p className="text-xs text-gray-400 mt-0.5">
-                              {GRADE_LABEL[exam.grade] ?? `${exam.grade}학년`} · {exam.mcCount}객관식 + {exam.essayCount}주관식 · {exam.totalScore}점
-                            </p>
-                          </div>
-                        </div>
-                        <span className="text-xs text-gray-400 shrink-0 ml-3">풀기 →</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              );
-            })
-          )}
+        <div className="text-center py-24 text-gray-400">
+          <div className="text-5xl mb-4">📝</div>
+          <p className="font-semibold text-gray-500">곧 출시됩니다</p>
+          <p className="text-sm mt-1">내신 대비 문제를 준비 중입니다.</p>
         </div>
       )}
     </div>
