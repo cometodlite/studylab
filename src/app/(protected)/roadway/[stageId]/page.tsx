@@ -218,8 +218,13 @@ export default function StagePage({ params }: { params: Promise<{ stageId: strin
       if (res.ok) {
         const data = await res.json();
         setPointsEarned(data.pointsEarned);
+      } else {
+        const err = await res.json().catch(() => ({}));
+        console.error('[roadway/complete] save failed:', res.status, err);
       }
-    } catch { /* ignore */ } finally {
+    } catch (e) {
+      console.error('[roadway/complete] network error:', e);
+    } finally {
       setSaving(false);
     }
   }
@@ -228,10 +233,16 @@ export default function StagePage({ params }: { params: Promise<{ stageId: strin
     setIsCorrect(correct);
     setPhase('feedback');
 
+    // 로컬 변수로 최신 값 유지 — setTimeout 클로저는 렌더 시점의 state를 캡처하므로
+    // setWrongPerPuzzle/setTotalWrong 결과는 클로저 안에서 stale하다.
+    let newWrongPerPuzzle = wrongPerPuzzle;
+    let newTotalWrong = totalWrong;
+
     if (!correct) {
-      const newWrong = wrongPerPuzzle + 1;
-      setWrongPerPuzzle(newWrong);
-      setTotalWrong(prev => prev + 1);
+      newWrongPerPuzzle = wrongPerPuzzle + 1;
+      newTotalWrong = totalWrong + 1;
+      setWrongPerPuzzle(newWrongPerPuzzle);
+      setTotalWrong(newTotalWrong);
       const newHearts = hearts - 1;
       setHearts(newHearts);
       if (newHearts <= 0) {
@@ -241,10 +252,10 @@ export default function StagePage({ params }: { params: Promise<{ stageId: strin
     }
 
     setTimeout(() => {
-      if (correct || wrongPerPuzzle >= 2) {
+      if (correct || newWrongPerPuzzle >= 2) {
         const nextIndex = currentIndex + 1;
         if (nextIndex >= totalPuzzles) {
-          const finalStars = Math.max(0, 3 - Math.floor(totalWrong / 2));
+          const finalStars = Math.max(0, 3 - Math.floor(newTotalWrong / 2));
           setPhase('complete');
           saveCompletion(finalStars);
         } else {

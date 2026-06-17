@@ -56,8 +56,22 @@ export async function POST(req: NextRequest, ctx: RouteContext) {
     );
   }
 
-  await fsSet(progressKey, { userId: uid, stageId, stars: bestStars, completedAt: now }, token);
-  if (writes.length > 0) await fsBatch(writes, token);
+  try {
+    await fsSet(progressKey, { userId: uid, stageId, stars: bestStars, completedAt: now }, token);
+  } catch (e) {
+    console.error('[roadway/complete] fsSet roadway_progress failed:', e);
+    return NextResponse.json({ error: 'progress_save_failed', detail: String(e) }, { status: 500 });
+  }
+
+  if (writes.length > 0) {
+    try {
+      await fsBatch(writes, token);
+    } catch (e) {
+      console.error('[roadway/complete] fsBatch points failed:', e);
+      // 진행 저장은 성공했으므로 포인트 0으로 응답
+      return NextResponse.json({ pointsEarned: 0, stars: bestStars, isFirstClear, error: 'points_save_failed' });
+    }
+  }
 
   return NextResponse.json({ pointsEarned: earnedPoints, stars: bestStars, isFirstClear });
 }
