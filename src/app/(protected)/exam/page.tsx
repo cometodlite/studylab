@@ -6,6 +6,7 @@ import Link from 'next/link';
 interface SchoolExamMeta {
   id: string;
   title: string;
+  category: string;
   school: string;
   grade: number;
   subject: string;
@@ -30,11 +31,18 @@ const SUBJECT_META: Record<string, { icon: string; range: string }> = {
   '역사': { icon: '📜', range: 'p8–15, p22–71, p75–76, p78–81, p86–92, p102–113' },
 };
 
-const SCHOOL_STORAGE_KEY = 'studylab_selected_school';
+const CATEGORY_ICONS: Record<string, string> = {
+  '학교': '🏫',
+  '자격증': '📜',
+};
+
+const SCHOOL_KEY = 'studylab_selected_school';
+const CATEGORY_KEY = 'studylab_selected_category';
 
 export default function ExamListPage() {
   const [exams, setExams] = useState<SchoolExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState<string>('학교');
   const [activeSchool, setActiveSchool] = useState<string>('');
   const [activeSubject, setActiveSubject] = useState<string>('');
 
@@ -44,12 +52,15 @@ export default function ExamListPage() {
       .then((data: SchoolExamMeta[]) => {
         setExams(data);
 
-        const schools = [...new Set(data.map(e => e.school))];
-        const saved = localStorage.getItem(SCHOOL_STORAGE_KEY);
-        const initialSchool = saved && schools.includes(saved) ? saved : (schools[0] ?? '');
-        setActiveSchool(initialSchool);
+        const savedCategory = localStorage.getItem(CATEGORY_KEY) ?? '학교';
+        setActiveCategory(savedCategory);
 
-        const subjects = [...new Set(data.filter(e => e.school === initialSchool).map(e => e.subject))];
+        const schoolsInCategory = [...new Set(data.filter(e => e.category === savedCategory).map(e => e.school))];
+        const savedSchool = localStorage.getItem(SCHOOL_KEY) ?? '';
+        const school = schoolsInCategory.includes(savedSchool) ? savedSchool : (schoolsInCategory[0] ?? '');
+        setActiveSchool(school);
+
+        const subjects = [...new Set(data.filter(e => e.category === savedCategory && e.school === school).map(e => e.subject))];
         setActiveSubject(subjects[0] ?? '');
 
         setLoading(false);
@@ -57,16 +68,30 @@ export default function ExamListPage() {
       .catch(() => setLoading(false));
   }, []);
 
-  function selectSchool(school: string) {
+  function selectCategory(cat: string) {
+    setActiveCategory(cat);
+    localStorage.setItem(CATEGORY_KEY, cat);
+
+    const schoolsInCat = [...new Set(exams.filter(e => e.category === cat).map(e => e.school))];
+    const school = schoolsInCat[0] ?? '';
     setActiveSchool(school);
-    localStorage.setItem(SCHOOL_STORAGE_KEY, school);
-    const subjects = [...new Set(exams.filter(e => e.school === school).map(e => e.subject))];
+    localStorage.setItem(SCHOOL_KEY, school);
+
+    const subjects = [...new Set(exams.filter(e => e.category === cat && e.school === school).map(e => e.subject))];
     setActiveSubject(subjects[0] ?? '');
   }
 
-  const schools = [...new Set(exams.map(e => e.school))];
-  const subjectsForSchool = [...new Set(exams.filter(e => e.school === activeSchool).map(e => e.subject))];
-  const filtered = exams.filter(e => e.school === activeSchool && e.subject === activeSubject);
+  function selectSchool(school: string) {
+    setActiveSchool(school);
+    localStorage.setItem(SCHOOL_KEY, school);
+    const subjects = [...new Set(exams.filter(e => e.category === activeCategory && e.school === school).map(e => e.subject))];
+    setActiveSubject(subjects[0] ?? '');
+  }
+
+  const categories = [...new Set(exams.map(e => e.category))];
+  const schoolsInCategory = [...new Set(exams.filter(e => e.category === activeCategory).map(e => e.school))];
+  const subjectsForSchool = [...new Set(exams.filter(e => e.category === activeCategory && e.school === activeSchool).map(e => e.subject))];
+  const filtered = exams.filter(e => e.category === activeCategory && e.school === activeSchool && e.subject === activeSubject);
   const meta = SUBJECT_META[activeSubject];
 
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
@@ -74,106 +99,172 @@ export default function ExamListPage() {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-2xl font-bold text-gray-800">📋 학교 시험</h1>
-        <p className="text-gray-500 text-sm mt-1">학교·과목을 선택하고 모의고사를 응시하세요</p>
+        <h1 className="text-2xl font-bold text-gray-800">📋 시험</h1>
+        <p className="text-gray-500 text-sm mt-1">카테고리를 선택하고 모의고사를 응시하세요</p>
       </div>
 
-      {/* School selector */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">학교 선택</p>
-        <div className="flex flex-wrap gap-2">
-          {schools.map(school => (
-            <button
-              key={school}
-              onClick={() => selectSchool(school)}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold transition border ${
-                activeSchool === school
-                  ? 'bg-indigo-600 text-white border-indigo-600'
-                  : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
-              }`}
-            >
-              🏫 {school}
-            </button>
-          ))}
-          {schools.length === 0 && (
-            <span className="text-sm text-gray-400">등록된 학교가 없습니다.</span>
-          )}
-        </div>
+      {/* Category tabs */}
+      <div className="flex gap-2">
+        {['학교', '자격증', ...categories.filter(c => c !== '학교' && c !== '자격증')].map(cat => (
+          <button
+            key={cat}
+            onClick={() => selectCategory(cat)}
+            className={`px-5 py-2.5 rounded-xl text-sm font-bold transition border ${
+              activeCategory === cat
+                ? 'bg-indigo-600 text-white border-indigo-600'
+                : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
+            }`}
+          >
+            {CATEGORY_ICONS[cat] ?? '📄'} {cat}
+          </button>
+        ))}
       </div>
 
-      {activeSchool && (
+      {/* 학교 카테고리 */}
+      {activeCategory === '학교' && (
         <>
-          {/* Subject tabs */}
-          <div className="flex gap-2 flex-wrap">
-            {subjectsForSchool.map(sub => {
-              const sm = SUBJECT_META[sub];
-              return (
-                <button
-                  key={sub}
-                  onClick={() => setActiveSubject(sub)}
-                  className={`px-4 py-2 rounded-xl text-sm font-semibold transition ${
-                    activeSubject === sub
-                      ? 'bg-indigo-600 text-white'
-                      : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
-                  }`}
-                >
-                  {sm?.icon ?? '📄'} {sub}
-                </button>
-              );
-            })}
-          </div>
+          {schoolsInCategory.length > 0 ? (
+            <>
+              {/* School selector */}
+              <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">학교 선택</p>
+                <div className="flex flex-wrap gap-2">
+                  {schoolsInCategory.map(school => (
+                    <button
+                      key={school}
+                      onClick={() => selectSchool(school)}
+                      className={`px-4 py-2 rounded-xl text-sm font-semibold transition border ${
+                        activeSchool === school
+                          ? 'bg-indigo-600 text-white border-indigo-600'
+                          : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
+                      }`}
+                    >
+                      🏫 {school}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-          {/* Info banner */}
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
-            <p className="font-semibold mb-1">
-              ⚠️ 시험 안내 — 🏫 {activeSchool} {meta ? `· ${meta.icon} ${activeSubject}` : ''}
-            </p>
-            <ul className="space-y-0.5 text-amber-700">
-              <li>· 시험 시간 <strong>40분</strong> — 시간 조정 불가</li>
-              <li>· 5지선다 <strong>20문항</strong> (각 4점) + 서술형 <strong>5문항</strong> (각 4점) = 100점</li>
-              {meta && <li>· 범위: {meta.range}</li>}
-              <li>· 점수에 따라 포인트 지급 (90점↑ 500p · 80점↑ 350p · 70점↑ 250p · 60점↑ 150p · 50점↑ 100p · 50점 미만 50p)</li>
-              <li>· 하루 1회 포인트 지급</li>
-            </ul>
-          </div>
+              {/* Subject tabs */}
+              <div className="flex gap-2 flex-wrap">
+                {subjectsForSchool.map(sub => {
+                  const sm = SUBJECT_META[sub];
+                  return (
+                    <button
+                      key={sub}
+                      onClick={() => setActiveSubject(sub)}
+                      className={`px-4 py-2 rounded-xl text-sm font-semibold transition ${
+                        activeSubject === sub
+                          ? 'bg-indigo-600 text-white'
+                          : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
+                      }`}
+                    >
+                      {sm?.icon ?? '📄'} {sub}
+                    </button>
+                  );
+                })}
+              </div>
 
-          {/* Exam cards */}
-          <div className="grid gap-4">
-            {filtered.map((exam, idx) => (
-              <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-bold text-gray-700">{exam.sheet}회</span>
-                      <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFF_COLOR[exam.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
-                        {exam.difficulty}
-                      </span>
+              {/* Info banner */}
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
+                <p className="font-semibold mb-1">
+                  ⚠️ 시험 안내 — 🏫 {activeSchool}{meta ? ` · ${meta.icon} ${activeSubject}` : ''}
+                </p>
+                <ul className="space-y-0.5 text-amber-700">
+                  <li>· 시험 시간 <strong>40분</strong> — 시간 조정 불가</li>
+                  <li>· 5지선다 <strong>20문항</strong> (각 4점) + 서술형 <strong>5문항</strong> (각 4점) = 100점</li>
+                  {meta && <li>· 범위: {meta.range}</li>}
+                  <li>· 점수에 따라 포인트 지급 (90점↑ 500p · 80점↑ 350p · 70점↑ 250p · 60점↑ 150p · 50점↑ 100p · 50점 미만 50p)</li>
+                  <li>· 하루 1회 포인트 지급</li>
+                </ul>
+              </div>
+
+              {/* Exam cards */}
+              <div className="grid gap-4">
+                {filtered.map((exam, idx) => (
+                  <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
+                    <div className="flex items-start gap-4">
+                      <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-sm font-bold text-gray-700">{exam.sheet}회</span>
+                          <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFF_COLOR[exam.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
+                            {exam.difficulty}
+                          </span>
+                        </div>
+                        <h2 className="font-bold text-gray-800">{exam.title}</h2>
+                        <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
+                          <span>⏱ {exam.timeLimit}분</span>
+                          <span>📝 객관식 {exam.mcCount}문항 + 서술형 {exam.essayCount}문항</span>
+                          <span>🏆 {exam.totalScore}점 만점</span>
+                        </div>
+                      </div>
                     </div>
-                    <h2 className="font-bold text-gray-800">{exam.title}</h2>
-                    <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
-                      <span>⏱ {exam.timeLimit}분</span>
-                      <span>📝 객관식 {exam.mcCount}문항 + 서술형 {exam.essayCount}문항</span>
-                      <span>🏆 {exam.totalScore}점 만점</span>
+                    <Link
+                      href={`/exam/${exam.id}`}
+                      className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
+                    >
+                      응시하기
+                    </Link>
+                  </div>
+                ))}
+                {filtered.length === 0 && (
+                  <div className="text-center py-16 text-gray-400">
+                    <div className="text-4xl mb-3">📭</div>
+                    <p>해당 과목의 시험이 없습니다.</p>
+                  </div>
+                )}
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-20 text-gray-400">
+              <div className="text-4xl mb-3">🏫</div>
+              <p>등록된 학교 시험이 없습니다.</p>
+            </div>
+          )}
+        </>
+      )}
+
+      {/* 자격증 카테고리 */}
+      {activeCategory === '자격증' && (
+        <>
+          {exams.filter(e => e.category === '자격증').length > 0 ? (
+            <div className="grid gap-4">
+              {exams.filter(e => e.category === '자격증').map((exam, idx) => (
+                <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-sm font-bold text-gray-700">{exam.subject}</span>
+                        <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFF_COLOR[exam.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
+                          {exam.difficulty}
+                        </span>
+                      </div>
+                      <h2 className="font-bold text-gray-800">{exam.title}</h2>
+                      <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
+                        <span>⏱ {exam.timeLimit}분</span>
+                        <span>📝 {exam.mcCount + exam.essayCount}문항</span>
+                        <span>🏆 {exam.totalScore}점 만점</span>
+                      </div>
                     </div>
                   </div>
+                  <Link
+                    href={`/exam/${exam.id}`}
+                    className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
+                  >
+                    응시하기
+                  </Link>
                 </div>
-                <Link
-                  href={`/exam/${exam.id}`}
-                  className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
-                >
-                  응시하기
-                </Link>
-              </div>
-            ))}
-
-            {filtered.length === 0 && (
-              <div className="text-center py-16 text-gray-400">
-                <div className="text-4xl mb-3">📭</div>
-                <p>해당 과목의 시험이 없습니다.</p>
-              </div>
-            )}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20 text-gray-400">
+              <div className="text-5xl mb-4">📜</div>
+              <p className="font-semibold text-gray-500 mb-1">준비 중입니다</p>
+              <p className="text-sm">자격증 모의고사가 곧 추가될 예정입니다.</p>
+            </div>
+          )}
         </>
       )}
     </div>

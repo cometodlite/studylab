@@ -16,6 +16,7 @@ export async function GET() {
       return {
         id: data.id,
         title: data.title,
+        category: data.category ?? '학교',
         school: data.school,
         grade: data.grade,
         subject: data.subject ?? '기타',
