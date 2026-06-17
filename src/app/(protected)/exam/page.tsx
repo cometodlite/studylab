@@ -40,6 +40,37 @@ const CATEGORY_ICONS: Record<string, string> = {
 const SCHOOL_KEY = 'studylab_selected_school';
 const CATEGORY_KEY = 'studylab_selected_category';
 
+function normalizeSchoolName(name: string): string {
+  if (!name) return '';
+  // "부천일신중" → "부천일신중학교", "서울고" → "서울고등학교" 등으로 매칭
+  const normalized = name.trim();
+  return normalized;
+}
+
+function findMatchingSchool(userInput: string, availableSchools: string[]): string | null {
+  const input = normalizeSchoolName(userInput);
+  if (!input) return null;
+
+  // 정확한 일치
+  if (availableSchools.includes(input)) return input;
+
+  // 접미사 무시 검색 (예: "부천일신중" → "부천일신중학교")
+  const suffixes = ['학교', '고등학교', '중학교', '초등학교'];
+  for (const suffix of suffixes) {
+    if (availableSchools.includes(input + suffix)) return input + suffix;
+  }
+
+  // 역방향: "부천일신중학교" 입력 시 "부천일신중"으로 제거된 버전 찾기
+  for (const suffix of suffixes) {
+    if (input.endsWith(suffix)) {
+      const base = input.slice(0, -suffix.length);
+      if (availableSchools.includes(base)) return base;
+    }
+  }
+
+  return null;
+}
+
 export default function ExamListPage() {
   const { profile } = useAuth();
   const [exams, setExams] = useState<SchoolExamMeta[]>([]);
@@ -58,10 +89,11 @@ export default function ExamListPage() {
         setActiveCategory(savedCategory);
 
         const schoolsInCategory = [...new Set(data.filter(e => e.category === savedCategory).map(e => e.school))];
-        // Prefer profile school > localStorage > first available
+        // Prefer profile school (정규화) > localStorage > first available
         const profileSchool = profile?.school ?? '';
+        const matchedProfileSchool = profileSchool ? findMatchingSchool(profileSchool, schoolsInCategory) : null;
         const savedSchool = localStorage.getItem(SCHOOL_KEY) ?? '';
-        const preferred = (profileSchool && schoolsInCategory.includes(profileSchool)) ? profileSchool : savedSchool;
+        const preferred = matchedProfileSchool ?? savedSchool;
         const school = schoolsInCategory.includes(preferred) ? preferred : (schoolsInCategory[0] ?? '');
         setActiveSchool(school);
 
@@ -95,8 +127,9 @@ export default function ExamListPage() {
 
   const categories = [...new Set(exams.map(e => e.category))];
   const schoolsInCategory = [...new Set(exams.filter(e => e.category === activeCategory).map(e => e.school))];
-  // 사용자 설정 학교가 실제로 DB에 있는지 확인
-  const isSchoolValid = activeCategory === '학교' && profile?.school && schoolsInCategory.includes(profile.school);
+  // 사용자 설정 학교가 실제로 DB에 있는지 확인 (정규화된 이름으로 매칭)
+  const matchedSchool = profile?.school ? findMatchingSchool(profile.school, schoolsInCategory) : null;
+  const isSchoolValid = activeCategory === '학교' && !!matchedSchool;
   const subjectsForSchool = [...new Set(exams.filter(e => e.category === activeCategory && e.school === activeSchool).map(e => e.subject))];
   const filtered = exams.filter(e => e.category === activeCategory && e.school === activeSchool && e.subject === activeSubject);
   const meta = SUBJECT_META[activeSubject];
