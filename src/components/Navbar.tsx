@@ -23,6 +23,7 @@ export default function Navbar() {
         <Link href="/roadway" className="text-gray-600 hover:text-emerald-600 transition font-medium">🛣️ 로드웨이</Link>
         <Link href="/practice" className="text-gray-600 hover:text-indigo-600 transition">문제풀이</Link>
         <Link href="/exam" className="text-gray-600 hover:text-indigo-600 transition">시험</Link>
+        <Link href="/concepts" className="text-gray-600 hover:text-indigo-600 transition">개념</Link>
         <Link href="/wrong-notes" className="text-gray-600 hover:text-indigo-600 transition">오답노트</Link>
         <Link href="/store" className="text-gray-600 hover:text-indigo-600 transition">상점</Link>
         <Link href="/my-coupons" className="text-gray-600 hover:text-indigo-600 transition">내 쿠폰</Link>
