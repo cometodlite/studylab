@@ -8,6 +8,7 @@ interface SchoolExamMeta {
   title: string;
   school: string;
   grade: number;
+  subject: string;
   sheet: number;
   difficulty: string;
   timeLimit: number;
@@ -23,9 +24,16 @@ const DIFF_COLOR: Record<string, string> = {
 
 const SHEET_ICON = ['🌱', '📗', '📘', '📙', '🔥'];
 
+const SUBJECT_META: Record<string, { icon: string; label: string; range: string }> = {
+  '수학': { icon: '📐', label: '수학', range: '일차부등식의 활용 ~ 함수 (p60–p131)' },
+  '과학': { icon: '🔬', label: '과학', range: 'Ⅲ. 빛과 파동 (p94–p133) · Ⅳ. 물질의 구성 (p134–p165)' },
+  '역사': { icon: '📜', label: '역사', range: 'p8–15, p22–71, p75–76, p78–81, p86–92, p102–113' },
+};
+
 export default function ExamListPage() {
   const [exams, setExams] = useState<SchoolExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeSubject, setActiveSubject] = useState<string>('수학');
 
   useEffect(() => {
     fetch('/api/school-exams')
@@ -34,30 +42,54 @@ export default function ExamListPage() {
       .catch(() => setLoading(false));
   }, []);
 
+  const subjects = [...new Set(exams.map(e => e.subject))];
+  const filtered = exams.filter(e => e.subject === activeSubject);
+  const meta = SUBJECT_META[activeSubject];
+
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-800">📋 수학 시험</h1>
+        <h1 className="text-2xl font-bold text-gray-800">📋 학교 시험</h1>
         <p className="text-gray-500 text-sm mt-1">
-          부천일신중 2학년 수학 1학기 2차 정기시험 · 40분 · 25문항
+          부천일신중 2학년 1학기 2차 정기시험 모의고사
         </p>
       </div>
 
+      {/* Subject tabs */}
+      <div className="flex gap-2 flex-wrap">
+        {subjects.map(sub => {
+          const sm = SUBJECT_META[sub];
+          return (
+            <button
+              key={sub}
+              onClick={() => setActiveSubject(sub)}
+              className={`px-4 py-2 rounded-xl text-sm font-semibold transition ${
+                activeSubject === sub
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              {sm?.icon ?? '📄'} {sub}
+            </button>
+          );
+        })}
+      </div>
+
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
-        <p className="font-semibold mb-1">⚠️ 시험 안내</p>
+        <p className="font-semibold mb-1">⚠️ 시험 안내 — {meta?.icon} {meta?.label}</p>
         <ul className="space-y-0.5 text-amber-700">
           <li>· 시험 시간 <strong>40분</strong> — 시간 조정 불가</li>
           <li>· 5지선다 <strong>20문항</strong> (각 4점) + 서술형 <strong>5문항</strong> (각 4점) = 100점</li>
-          <li>· 범위: 일차부등식의 활용 ~ 함수 (p60–p131)</li>
+          {meta && <li>· 범위: {meta.range}</li>}
           <li>· 점수에 따라 포인트 지급 (90점↑ 500p · 80점↑ 350p · 70점↑ 250p · 60점↑ 150p · 50점↑ 100p · 50점 미만 50p)</li>
           <li>· 하루 1회 포인트 지급</li>
         </ul>
       </div>
 
       <div className="grid gap-4">
-        {exams.map((exam, idx) => (
+        {filtered.map((exam, idx) => (
           <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
             <div className="flex items-start gap-4">
               <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
@@ -85,7 +117,7 @@ export default function ExamListPage() {
           </div>
         ))}
 
-        {exams.length === 0 && (
+        {filtered.length === 0 && (
           <div className="text-center py-16 text-gray-400">
             <div className="text-4xl mb-3">📭</div>
             <p>시험 문항을 불러올 수 없습니다.</p>

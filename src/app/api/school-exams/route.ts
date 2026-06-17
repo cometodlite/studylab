@@ -18,6 +18,7 @@ export async function GET() {
         title: data.title,
         school: data.school,
         grade: data.grade,
+        subject: data.subject ?? '기타',
         sheet: data.sheet,
         difficulty: data.difficulty,
         timeLimit: data.timeLimit,
@@ -26,7 +27,13 @@ export async function GET() {
         essayCount: data.questions?.filter((q: { type: string }) => q.type === 'essay').length ?? 0,
       };
     })
-    .sort((a, b) => a.sheet - b.sheet);
+    .sort((a, b) => {
+      const subjectOrder: Record<string, number> = { '수학': 0, '과학': 1, '역사': 2 };
+      const sa = subjectOrder[a.subject] ?? 99;
+      const sb = subjectOrder[b.subject] ?? 99;
+      if (sa !== sb) return sa - sb;
+      return a.sheet - b.sheet;
+    });
 
   return NextResponse.json(exams);
 }
