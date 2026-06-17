@@ -17,12 +17,14 @@ const SUBJECT_COLORS: Record<string, { bg: string; text: string; border: string 
   수학: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
   과학: { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200' },
   역사: { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200' },
+  한문: { bg: 'bg-rose-50', text: 'text-rose-700', border: 'border-rose-200' },
 };
 
 const SUBJECT_ICONS: Record<string, string> = {
   수학: '📐',
   과학: '🔬',
   역사: '📜',
+  한문: '🖋️',
 };
 
 export default function ConceptsPage() {

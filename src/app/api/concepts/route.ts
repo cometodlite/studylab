@@ -7,7 +7,7 @@ const CONCEPT_DIR = path.join(process.cwd(), 'src', 'data', 'concepts');
 export async function GET() {
   if (!fs.existsSync(CONCEPT_DIR)) return NextResponse.json([]);
 
-  const subjectOrder: Record<string, number> = { '수학': 0, '과학': 1, '역사': 2 };
+  const subjectOrder: Record<string, number> = { '수학': 0, '과학': 1, '역사': 2, '한문': 3 };
 
   const concepts = fs
     .readdirSync(CONCEPT_DIR)
