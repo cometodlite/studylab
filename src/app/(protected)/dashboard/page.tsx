@@ -8,6 +8,14 @@ import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc, incr
 import { db } from '@/lib/firebase';
 import { POINT_RULES } from '@/lib/points';
 
+const UPDATES: { date: string; text: string; link?: { href: string; label: string } }[] = [
+  {
+    date: '2026-06-18',
+    text: '중3 수학 전범위 (2022개정 교육과정)와 중2 수학 일차부등식 (2022개정 교육과정)을 추가했습니다.',
+    link: { href: '/practice', label: '바로가기' },
+  },
+];
+
 export default function DashboardPage() {
   const { user, profile, refreshProfile } = useAuth();
   const [showMotivation, setShowMotivation] = useState(false);
@@ -127,6 +135,26 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
             <div className="text-3xl font-bold text-orange-500">{profile?.streakDays}일</div>
             <div className="text-sm text-gray-500 mt-1">연속 출석</div>
+          </div>
+        </div>
+
+        {/* 업데이트 내역 */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+          <h2 className="font-semibold text-gray-700 mb-3">업데이트 내역</h2>
+          <div className="space-y-2">
+            {UPDATES.map((u, i) => (
+              <div key={i} className="flex items-start gap-3 text-sm">
+                <span className="text-gray-400 shrink-0 mt-0.5">{u.date}</span>
+                <span className="text-gray-600">
+                  {u.text}
+                  {u.link && (
+                    <Link href={u.link.href} className="ml-1.5 text-indigo-600 font-medium hover:underline">
+                      {u.link.label} →
+                    </Link>
+                  )}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
