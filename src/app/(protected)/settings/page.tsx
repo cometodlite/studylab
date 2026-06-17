@@ -13,7 +13,7 @@ const GRADE_OPTIONS = [
   { value: 3, label: '중3' },
 ];
 
-const INQUIRY_CATEGORIES = ['일반 문의', '오류/버그', '콘텐츠 요청', '포인트/상점 관련', '기타'];
+const INQUIRY_CATEGORIES = ['일반 문의', '오류/버그', '정답 정정', '콘텐츠 요청', '포인트/상점 관련', '기타'];
 
 export default function SettingsPage() {
   const { user, profile, refreshProfile } = useAuth();
