@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import MathText from '@/components/MathText';
 
 interface ConceptMeta {
   id: string;
@@ -153,14 +154,14 @@ export default function FlashcardsPage() {
             <div style={{ position: 'absolute', inset: 0, backfaceVisibility: 'hidden' }}
               className="bg-white rounded-3xl shadow-lg border border-gray-200 flex flex-col items-center justify-center px-8 py-6 text-center">
               <p className="text-[11px] font-bold text-indigo-400 uppercase tracking-widest mb-4">질문</p>
-              <p className="text-gray-800 text-lg font-semibold leading-relaxed">{card.front}</p>
+              <div className="text-gray-800 text-lg font-semibold leading-relaxed"><MathText text={card.front} /></div>
               <p className="text-xs text-gray-400 mt-6">탭하여 정답 확인</p>
             </div>
             {/* 뒷면 */}
             <div style={{ position: 'absolute', inset: 0, backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
               className="bg-indigo-600 rounded-3xl shadow-lg flex flex-col items-center justify-center px-8 py-6 text-center">
               <p className="text-[11px] font-bold text-indigo-200 uppercase tracking-widest mb-4">정답</p>
-              <p className="text-white text-lg font-semibold leading-relaxed">{card.back}</p>
+              <div className="text-white text-lg font-semibold leading-relaxed"><MathText text={card.back} /></div>
             </div>
           </div>
         </div>
