@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface WorkbookMeta {
   id: string;
@@ -25,17 +26,50 @@ const SECTION_COLOR: Record<string, string> = {
 };
 
 const GRADE_LABEL: Record<number, string> = { 1: '중1', 2: '중2', 3: '중3' };
+const DEVELOPER_CODE = '1846264284!?!whdyddhks';
+const DEVELOPER_KEY = 'studylab_developer_mode';
 
 export default function WorkbooksPage() {
+  const { profile } = useAuth();
   const [books, setBooks] = useState<WorkbookMeta[]>([]);
   const [loading, setLoading] = useState(true);
+  const [developerCode, setDeveloperCode] = useState('');
+  const [codeError, setCodeError] = useState('');
+  const [isDeveloper, setIsDeveloper] = useState(false);
+
+  const isAdmin = profile?.role === 'admin';
 
   useEffect(() => {
-    fetch('/api/workbooks')
-      .then(r => r.json())
-      .then(data => { setBooks(data); setLoading(false); })
-      .catch(() => setLoading(false));
+    // 개발자 모드 확인
+    const savedCode = localStorage.getItem(DEVELOPER_KEY);
+    if (savedCode === DEVELOPER_CODE) {
+      setIsDeveloper(true);
+    }
   }, []);
+
+  useEffect(() => {
+    if (isAdmin || isDeveloper) {
+      fetch('/api/workbooks')
+        .then(r => r.json())
+        .then(data => { setBooks(data); setLoading(false); })
+        .catch(() => setLoading(false));
+    } else {
+      setLoading(false);
+    }
+  }, [isAdmin, isDeveloper]);
+
+  function handleDeveloperCodeSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setCodeError('');
+    if (developerCode === DEVELOPER_CODE) {
+      localStorage.setItem(DEVELOPER_KEY, DEVELOPER_CODE);
+      setIsDeveloper(true);
+      setDeveloperCode('');
+    } else {
+      setCodeError('잘못된 코드입니다.');
+      setDeveloperCode('');
+    }
+  }
 
   // Group by book → chapter
   const grouped = books.reduce<Record<string, Record<string, WorkbookMeta[]>>>((acc, wb) => {
@@ -46,6 +80,44 @@ export default function WorkbooksPage() {
   }, {});
 
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
+
+  // 권한 없으면 개발자 코드 입력 폼 표시
+  if (!isAdmin && !isDeveloper) {
+    return (
+      <div className="space-y-6 max-w-lg mx-auto">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-800">📒 문제집</h1>
+          <p className="text-gray-500 text-sm mt-1">스터디랩스 n제 문제집</p>
+        </div>
+
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center space-y-4">
+          <div className="text-5xl">🔒</div>
+          <div>
+            <p className="font-semibold text-amber-900 mb-1">개발 중인 기능입니다</p>
+            <p className="text-sm text-amber-700 mb-4">현재 관리자만 접근할 수 있습니다.</p>
+            <p className="text-xs text-amber-600 mb-3">개발자라면 코드를 입력하세요.</p>
+          </div>
+
+          <form onSubmit={handleDeveloperCodeSubmit} className="space-y-2">
+            <input
+              type="password"
+              value={developerCode}
+              onChange={e => setDeveloperCode(e.target.value)}
+              placeholder="개발자 코드 입력"
+              className="w-full border border-amber-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+            />
+            {codeError && <p className="text-xs text-red-600">{codeError}</p>}
+            <button
+              type="submit"
+              className="w-full bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold py-2 rounded-lg transition"
+            >
+              접근 권한 요청
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8">
