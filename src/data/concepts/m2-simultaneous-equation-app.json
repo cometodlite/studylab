@@ -2,7 +2,7 @@
   "id": "m2-simultaneous-equation-app",
   "subject": "수학",
   "grade": 2,
-  "unit": "연립방정식",
+  "unit": "연립일차방정식",
   "order": 5,
   "title": "연립방정식의 활용",
   "sections": [
@@ -34,7 +34,9 @@
     {
       "heading": "가격·개수에 관한 활용",
       "content": "",
-      "keyPoints": ["(개수 방정식) + (금액 방정식) = 연립방정식"],
+      "keyPoints": [
+        "(개수 방정식) + (금액 방정식) = 연립방정식"
+      ],
       "examples": [
         {
           "q": "사과와 배를 합해 10개 사고 5000원을 냈다. 사과 한 개 300원, 배 한 개 700원이면 각각 몇 개?",

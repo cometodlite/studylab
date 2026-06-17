@@ -28,6 +28,7 @@ export async function GET() {
       const sa = subjectOrder[a.subject] ?? 99;
       const sb = subjectOrder[b.subject] ?? 99;
       if (sa !== sb) return sa - sb;
+      if (a.grade !== b.grade) return a.grade - b.grade;
       return a.order - b.order;
     });
 

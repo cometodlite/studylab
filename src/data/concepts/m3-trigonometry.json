@@ -1,0 +1,60 @@
+{
+  "id": "m3-trigonometry",
+  "subject": "수학",
+  "grade": 3,
+  "unit": "삼각비",
+  "order": 7,
+  "title": "삼각비",
+  "sections": [
+    {
+      "heading": "삼각비의 뜻",
+      "content": "직각삼각형에서 두 변의 길이의 비.",
+      "keyPoints": [
+        "$\\sin A = \\frac{\\text{대변}}{\\text{빗변}} = \\frac{a}{c}$",
+        "$\\cos A = \\frac{\\text{밑변}}{\\text{빗변}} = \\frac{b}{c}$",
+        "$\\tan A = \\frac{\\text{대변}}{\\text{밑변}} = \\frac{a}{b}$",
+        "외우는 법: **사인 = 대/빗, 코사인 = 밑/빗, 탄젠트 = 대/밑**"
+      ],
+      "examples": [
+        { "q": "직각삼각형에서 빗변 5, 대변 3, 밑변 4일 때 $\\sin A$, $\\cos A$, $\\tan A$는?", "a": "$\\sin A = \\frac{3}{5}$, $\\cos A = \\frac{4}{5}$, $\\tan A = \\frac{3}{4}$" }
+      ]
+    },
+    {
+      "heading": "특수 각의 삼각비",
+      "content": "",
+      "keyPoints": [
+        "$\\sin 30° = \\frac{1}{2}$, $\\cos 30° = \\frac{\\sqrt{3}}{2}$, $\\tan 30° = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$",
+        "$\\sin 45° = \\frac{\\sqrt{2}}{2}$, $\\cos 45° = \\frac{\\sqrt{2}}{2}$, $\\tan 45° = 1$",
+        "$\\sin 60° = \\frac{\\sqrt{3}}{2}$, $\\cos 60° = \\frac{1}{2}$, $\\tan 60° = \\sqrt{3}$"
+      ],
+      "examples": [
+        { "q": "$\\sin 60° \\times \\cos 30°$의 값은?", "a": "$\\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{3}{4}$" }
+      ],
+      "notes": ["30°-60°-90° 삼각형: 변의 비 = 1 : $\\sqrt{3}$ : 2", "45°-45°-90° 삼각형: 변의 비 = 1 : 1 : $\\sqrt{2}$"]
+    },
+    {
+      "heading": "삼각비 사이의 관계",
+      "content": "",
+      "keyPoints": [
+        "$\\sin^2 A + \\cos^2 A = 1$",
+        "$\\tan A = \\frac{\\sin A}{\\cos A}$",
+        "$0° < A < 90°$ 이면 $\\sin A$, $\\cos A$, $\\tan A$ 모두 양수"
+      ],
+      "examples": [
+        { "q": "$\\sin A = \\frac{3}{5}$일 때 $\\cos A$와 $\\tan A$를 구하시오.", "a": "$\\cos A = \\frac{4}{5}$, $\\tan A = \\frac{3}{4}$" }
+      ]
+    },
+    {
+      "heading": "삼각비의 활용",
+      "content": "직접 측정이 어려운 높이·거리를 삼각비로 구한다.",
+      "keyPoints": [
+        "앙각(올려봄): 수평면에서 위쪽으로 잰 각도",
+        "부각(내려봄): 수평면에서 아래쪽으로 잰 각도",
+        "$h = d \\tan\\theta$ (거리 $d$, 앙각 $\\theta$, 높이 $h$)"
+      ],
+      "examples": [
+        { "q": "건물에서 30m 떨어진 곳에서 꼭대기의 앙각이 45°일 때 건물 높이는?", "a": "$h = 30 \\times \\tan 45° = 30 \\times 1 = 30$ m" }
+      ]
+    }
+  ]
+}

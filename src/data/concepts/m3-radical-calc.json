@@ -1,0 +1,50 @@
+{
+  "id": "m3-radical-calc",
+  "subject": "수학",
+  "grade": 3,
+  "unit": "제곱근과 실수",
+  "order": 2,
+  "title": "근호를 포함한 식의 계산",
+  "sections": [
+    {
+      "heading": "제곱근의 곱셈·나눗셈",
+      "content": "",
+      "keyPoints": [
+        "$\\sqrt{a} \\times \\sqrt{b} = \\sqrt{ab}$",
+        "$\\sqrt{a} \\div \\sqrt{b} = \\sqrt{\\frac{a}{b}}$",
+        "$k\\sqrt{a} \\times m\\sqrt{b} = km\\sqrt{ab}$",
+        "근호 안을 간단히: $\\sqrt{12} = \\sqrt{4 \\times 3} = 2\\sqrt{3}$"
+      ],
+      "examples": [
+        { "q": "$\\sqrt{6} \\times \\sqrt{15}$", "a": "$\\sqrt{90} = \\sqrt{9 \\times 10} = 3\\sqrt{10}$" },
+        { "q": "$\\frac{\\sqrt{18}}{\\sqrt{2}}$", "a": "$\\sqrt{9} = 3$" }
+      ]
+    },
+    {
+      "heading": "분모의 유리화",
+      "content": "분모에 근호가 있으면 분자·분모에 같은 수를 곱하여 분모를 유리수로 만든다.",
+      "keyPoints": [
+        "$\\frac{1}{\\sqrt{a}} = \\frac{\\sqrt{a}}{a}$ (분자·분모에 $\\sqrt{a}$ 곱함)",
+        "$\\frac{b}{\\sqrt{a}} = \\frac{b\\sqrt{a}}{a}$",
+        "$\\frac{1}{\\sqrt{a} + \\sqrt{b}} = \\frac{\\sqrt{a} - \\sqrt{b}}{a - b}$ (켤레 무리수 이용)"
+      ],
+      "examples": [
+        { "q": "$\\frac{3}{\\sqrt{5}}$를 유리화하시오.", "a": "$\\frac{3\\sqrt{5}}{5}$" },
+        { "q": "$\\frac{2}{\\sqrt{3}-1}$", "a": "$\\frac{2(\\sqrt{3}+1)}{(\\sqrt{3})^2-1^2} = \\frac{2(\\sqrt{3}+1)}{2} = \\sqrt{3}+1$" }
+      ]
+    },
+    {
+      "heading": "제곱근의 덧셈·뺄셈",
+      "content": "근호 안의 수가 같은 것끼리(동류항) 계수를 더하거나 뺀다.",
+      "keyPoints": [
+        "$a\\sqrt{m} + b\\sqrt{m} = (a+b)\\sqrt{m}$",
+        "근호 안을 먼저 간단히 한 뒤 동류항 정리",
+        "$\\sqrt{12} + \\sqrt{27} = 2\\sqrt{3} + 3\\sqrt{3} = 5\\sqrt{3}$"
+      ],
+      "examples": [
+        { "q": "$3\\sqrt{2} - \\sqrt{8} + \\sqrt{18}$", "a": "$3\\sqrt{2} - 2\\sqrt{2} + 3\\sqrt{2} = 4\\sqrt{2}$" },
+        { "q": "$\\sqrt{5}(\\sqrt{5} - \\sqrt{20})$", "a": "$5 - \\sqrt{100} = 5 - 10 = -5$" }
+      ]
+    }
+  ]
+}

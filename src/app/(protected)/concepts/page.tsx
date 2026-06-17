@@ -43,12 +43,13 @@ export default function ConceptsPage() {
     ? concepts
     : concepts.filter(c => c.subject === selectedSubject);
 
-  // Group by subject → unit
-  const grouped: Record<string, Record<string, ConceptMeta[]>> = {};
+  // Group by subject → grade → unit
+  const grouped: Record<string, Record<number, Record<string, ConceptMeta[]>>> = {};
   for (const c of filtered) {
     if (!grouped[c.subject]) grouped[c.subject] = {};
-    if (!grouped[c.subject][c.unit]) grouped[c.subject][c.unit] = [];
-    grouped[c.subject][c.unit].push(c);
+    if (!grouped[c.subject][c.grade]) grouped[c.subject][c.grade] = {};
+    if (!grouped[c.subject][c.grade][c.unit]) grouped[c.subject][c.grade][c.unit] = [];
+    grouped[c.subject][c.grade][c.unit].push(c);
   }
 
   if (loading) {
@@ -83,34 +84,48 @@ export default function ConceptsPage() {
 
       {/* Grouped cards */}
       <div className="space-y-10">
-        {Object.entries(grouped).map(([subject, units]) => {
+        {Object.entries(grouped).map(([subject, grades]) => {
           const color = SUBJECT_COLORS[subject] ?? { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200' };
+          const gradeEntries = Object.entries(grades).sort(([a], [b]) => Number(a) - Number(b));
+          const multiGrade = gradeEntries.length > 1;
           return (
             <section key={subject}>
               <h2 className="text-lg font-bold text-gray-700 mb-4">
                 {SUBJECT_ICONS[subject]} {subject}
               </h2>
-              <div className="space-y-6">
-                {Object.entries(units).map(([unit, items]) => (
-                  <div key={unit}>
-                    <h3 className={`text-sm font-semibold px-3 py-1 rounded-md inline-block mb-3 ${color.bg} ${color.text}`}>
-                      {unit}
-                    </h3>
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      {items.map(c => (
-                        <Link
-                          key={c.id}
-                          href={`/concepts/${c.id}`}
-                          className={`block border rounded-xl p-4 bg-white hover:shadow-md transition hover:border-indigo-300 ${color.border}`}
-                        >
-                          <div className="flex items-start justify-between gap-2">
-                            <p className="font-medium text-gray-800 text-sm leading-snug">{c.title}</p>
-                            <span className={`text-xs px-2 py-0.5 rounded-full shrink-0 ${color.bg} ${color.text}`}>
-                              {c.sectionCount}섹션
-                            </span>
+              <div className="space-y-8">
+                {gradeEntries.map(([grade, units]) => (
+                  <div key={grade}>
+                    {multiGrade && (
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="text-sm font-semibold text-gray-500">{grade}학년</span>
+                        <div className="flex-1 border-t border-gray-100" />
+                      </div>
+                    )}
+                    <div className="space-y-6">
+                      {Object.entries(units).map(([unit, items]) => (
+                        <div key={unit}>
+                          <h3 className={`text-sm font-semibold px-3 py-1 rounded-md inline-block mb-3 ${color.bg} ${color.text}`}>
+                            {unit}
+                          </h3>
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            {items.map(c => (
+                              <Link
+                                key={c.id}
+                                href={`/concepts/${c.id}`}
+                                className={`block border rounded-xl p-4 bg-white hover:shadow-md transition hover:border-indigo-300 ${color.border}`}
+                              >
+                                <div className="flex items-start justify-between gap-2">
+                                  <p className="font-medium text-gray-800 text-sm leading-snug">{c.title}</p>
+                                  <span className={`text-xs px-2 py-0.5 rounded-full shrink-0 ${color.bg} ${color.text}`}>
+                                    {c.sectionCount}섹션
+                                  </span>
+                                </div>
+                                <p className="text-xs text-gray-400 mt-1">{c.subject} · {c.unit}</p>
+                              </Link>
+                            ))}
                           </div>
-                          <p className="text-xs text-gray-400 mt-1">{c.subject} · {c.unit}</p>
-                        </Link>
+                        </div>
                       ))}
                     </div>
                   </div>
