@@ -34,11 +34,16 @@ export default function AdminPage() {
   const [coupons, setCoupons] = useState<AdminCoupon[]>([]);
   const [debugHistory, setDebugHistory] = useState<{id:string;date:string;category:string;description:string;files:string[]}[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<'coupons' | 'upload' | 'debug' | 'inquiries'>('coupons');
+  const [tab, setTab] = useState<'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev'>('coupons');
 
   const [inquiries, setInquiries] = useState<AdminInquiry[]>([]);
   const [inquiriesLoading, setInquiriesLoading] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  // 문제 개발 탭 상태
+  const [examFiles, setExamFiles] = useState<any[]>([]);
+  const [selectedExam, setSelectedExam] = useState<any>(null);
+  const [examLoading, setExamLoading] = useState(false);
 
   // 새 쿠폰 폼
   const [newName, setNewName] = useState('');
@@ -125,8 +130,29 @@ export default function AdminPage() {
     await loadCoupons();
   }
 
+  async function loadExamFiles() {
+    setExamLoading(true);
+    const token = await getToken();
+    const res = await fetch('/api/admin/exam-files', { headers: { Authorization: `Bearer ${token}` } });
+    const data = await res.json();
+    setExamFiles(Array.isArray(data) ? data : []);
+    setExamLoading(false);
+  }
+
+  async function loadExamContent(filename: string) {
+    const token = await getToken();
+    const res = await fetch('/api/admin/exam-files', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+      body: JSON.stringify({ filename }),
+    });
+    const data = await res.json();
+    setSelectedExam(data);
+  }
+
   useEffect(() => {
     if (tab === 'inquiries' && inquiries.length === 0) loadInquiries();
+    if (tab === 'exam-dev' && examFiles.length === 0) loadExamFiles();
   }, [tab]);
 
   if (!profile || profile.role !== 'admin') return null;
@@ -139,7 +165,7 @@ export default function AdminPage() {
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {([['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`]] as const).map(([t, label]) => (
+        {([['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['exam-dev', '📝 문제 개발']] as const).map(([t, label]) => (
           <button
             key={t}
             onClick={() => setTab(t as typeof tab)}
@@ -382,6 +408,94 @@ export default function AdminPage() {
               </div>
             ))
           )}
+        </div>
+      )}
+
+      {tab === 'exam-dev' && (
+        <div className="grid grid-cols-3 gap-6">
+          {/* 파일 목록 */}
+          <div className="col-span-1">
+            <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
+              <h2 className="font-semibold text-gray-700 mb-3">문제 파일</h2>
+              {examLoading ? (
+                <p className="text-gray-400 text-sm">불러오는 중...</p>
+              ) : examFiles.length === 0 ? (
+                <p className="text-gray-400 text-sm">파일이 없습니다.</p>
+              ) : (
+                <div className="space-y-2 max-h-96 overflow-y-auto">
+                  {examFiles.map((file, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => loadExamContent(file.filename)}
+                      className={`w-full text-left px-3 py-2 rounded-lg text-sm transition ${
+                        selectedExam?.id === file.id
+                          ? 'bg-indigo-100 text-indigo-700 font-medium'
+                          : 'hover:bg-gray-50 text-gray-700'
+                      }`}
+                    >
+                      <p className="font-medium">{file.title}</p>
+                      <p className="text-xs text-gray-500">{file.questionCount}문제</p>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* 문제 미리보기 */}
+          <div className="col-span-2">
+            {selectedExam ? (
+              <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm space-y-4">
+                <div>
+                  <h2 className="font-bold text-gray-800 text-lg">{selectedExam.title}</h2>
+                  <p className="text-sm text-gray-500 mt-1">
+                    {selectedExam.school} · {selectedExam.totalScore}점 · {selectedExam.timeLimit}분
+                  </p>
+                </div>
+
+                <div className="border-t pt-4 max-h-96 overflow-y-auto space-y-4">
+                  {selectedExam.questions && selectedExam.questions.map((q: any, idx: number) => (
+                    <div key={idx} className="pb-4 border-b last:border-b-0">
+                      <div className="flex items-start gap-3">
+                        <span className="font-bold text-indigo-600 shrink-0">{q.id}.</span>
+                        <div className="flex-1 min-w-0">
+                          <div dangerouslySetInnerHTML={{ __html: q.question.replace(/\$([^$]+)\$/g, '<code>$$$1$$</code>') }} className="text-sm text-gray-800 mb-2" />
+                          <div className="space-y-1">
+                            {q.choices && q.choices.map((choice: string, ci: number) => (
+                              <div
+                                key={ci}
+                                className={`text-sm px-2 py-1 rounded ${
+                                  ci === q.answer
+                                    ? 'bg-green-100 text-green-700 font-semibold'
+                                    : 'bg-gray-50 text-gray-600'
+                                }`}
+                              >
+                                {ci + 1}. {choice}
+                              </div>
+                            ))}
+                          </div>
+                          {q.explanation && (
+                            <div className="text-xs text-gray-500 mt-2 bg-gray-50 p-2 rounded">
+                              <strong>풀이:</strong> {q.explanation.substring(0, 100)}...
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-4 border-t text-xs text-gray-500">
+                  <p>총 {selectedExam.questions?.length ?? 0}문제</p>
+                </div>
+              </div>
+            ) : (
+              <div className="text-center py-20 text-gray-400">
+                <div className="text-4xl mb-2">📝</div>
+                <p>파일을 선택하면 문제를 볼 수 있습니다.</p>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>
