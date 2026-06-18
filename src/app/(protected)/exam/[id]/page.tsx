@@ -42,6 +42,7 @@ interface GradeResult {
   explanation?: string;
   modelAnswer?: string;
   rubric?: string;
+  timeSpent?: number;
 }
 
 interface GradeResponse {
@@ -83,6 +84,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
         startTimeRef.current = Date.now();
         questionStartTimeRef.current = Date.now();
         questionTimingsRef.current = {};
+        autoSubmitRef.current = false;
         setLoading(false);
       });
   }, [id]);
@@ -109,36 +111,34 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     if (timesUp && !gradeResult) handleSubmit();
   }, [timesUp]);
 
-  useEffect(() => {
-    if (!exam || gradeResult) return;
-    return () => {
-      // 페이지 이동 시 현재 문제의 시간 기록
-      const currentQuestion = exam.questions[current];
-      if (currentQuestion) {
-        const elapsed = Math.round((Date.now() - questionStartTimeRef.current) / 1000);
-        questionTimingsRef.current[currentQuestion.id] =
-          (questionTimingsRef.current[currentQuestion.id] || 0) + elapsed;
-      }
-    };
-  }, [current, exam, gradeResult]);
-
   function formatTime(s: number) {
     const m = Math.floor(s / 60);
     const sec = s % 60;
     return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
   }
 
+  function recordCurrentQuestionTime() {
+    if (!exam || gradeResult) return;
+    const currentQuestion = exam.questions[current];
+    if (!currentQuestion) return;
+
+    const elapsed = Math.max(0, Math.round((Date.now() - questionStartTimeRef.current) / 1000));
+    questionTimingsRef.current[currentQuestion.id] =
+      (questionTimingsRef.current[currentQuestion.id] || 0) + elapsed;
+    questionStartTimeRef.current = Date.now();
+  }
+
+  function goToQuestion(nextIndex: number) {
+    if (nextIndex === current) return;
+    recordCurrentQuestionTime();
+    setCurrent(nextIndex);
+  }
+
   async function handleSubmit() {
     if (!user || !exam || submitting) return;
     setSubmitting(true);
     try {
-      // 마지막 문제의 시간도 기록
-      const currentQuestion = exam.questions[current];
-      if (currentQuestion) {
-        const elapsed = Math.round((Date.now() - questionStartTimeRef.current) / 1000);
-        questionTimingsRef.current[currentQuestion.id] =
-          (questionTimingsRef.current[currentQuestion.id] || 0) + elapsed;
-      }
+      recordCurrentQuestionTime();
 
       const totalTime = Math.round((Date.now() - startTimeRef.current) / 1000);
 
@@ -381,7 +381,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
           {mcQuestions.map((qq, i) => (
             <button
               key={qq.id}
-              onClick={() => setCurrent(allQuestions.indexOf(qq))}
+              onClick={() => goToQuestion(allQuestions.indexOf(qq))}
               className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
                 allQuestions.indexOf(qq) === current ? 'bg-indigo-600 text-white'
                   : mcAnswers[qq.id] !== undefined ? 'bg-indigo-100 text-indigo-700'
@@ -397,7 +397,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
           {essayQuestions.map((qq, i) => (
             <button
               key={qq.id}
-              onClick={() => setCurrent(allQuestions.indexOf(qq))}
+              onClick={() => goToQuestion(allQuestions.indexOf(qq))}
               className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
                 allQuestions.indexOf(qq) === current ? 'bg-purple-600 text-white'
                   : essayAnswers[qq.id]?.trim() ? 'bg-purple-100 text-purple-700'
@@ -413,14 +413,14 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
       {/* 이전/다음 + 제출 */}
       <div className="flex gap-3">
         <button
-          onClick={() => setCurrent(c => Math.max(0, c - 1))}
+          onClick={() => goToQuestion(Math.max(0, current - 1))}
           disabled={current === 0}
           className="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-40 transition"
         >
           이전
         </button>
         <button
-          onClick={() => setCurrent(c => Math.min(allQuestions.length - 1, c + 1))}
+          onClick={() => goToQuestion(Math.min(allQuestions.length - 1, current + 1))}
           disabled={current === allQuestions.length - 1}
           className="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 disabled:opacity-40 transition"
         >

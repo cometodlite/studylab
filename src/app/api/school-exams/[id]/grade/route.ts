@@ -59,8 +59,8 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   const body = await req.json();
   const mcAnswers: Record<string, number> = body.mcAnswers ?? {};
   const essayAnswers: Record<string, string> = body.essayAnswers ?? {};
-  const timings: Record<number, number> = body.timings ?? {};
-  const totalTime: number = body.totalTime ?? 0;
+  const timings: Record<string, number> = body.timings ?? {};
+  const totalTime: number = typeof body.totalTime === 'number' ? body.totalTime : 0;
 
   const now = new Date();
   const today = todayKST();
@@ -83,6 +83,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     explanation?: string;
     modelAnswer?: string;
     rubric?: string;
+    timeSpent?: number;
   }> = [];
 
   const wrongNoteWrites: WriteOp[] = [];
@@ -103,7 +104,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         score: q.score,
         earnedScore: correct ? q.score : 0,
         explanation: q.explanation,
-        timeSpent: timings[q.id] ?? 0,
+        timeSpent: timings[String(q.id)] ?? 0,
       });
 
       if (!correct && userAns !== undefined) {
@@ -146,7 +147,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         earnedScore: correct ? q.score : 0,
         modelAnswer: q.answer_text ?? q.answer as unknown as string,
         rubric: q.rubric,
-        timeSpent: timings[q.id] ?? 0,
+        timeSpent: timings[String(q.id)] ?? 0,
       });
 
       if (!correct && userAns) {

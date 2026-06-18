@@ -20,8 +20,8 @@ export default function SettingsPage() {
   const [tab, setTab] = useState<'profile' | 'inquiry'>('profile');
 
   // 프로필 설정 상태
-  const [selectedSchool, setSelectedSchool] = useState<string>('');
-  const [selectedGrade, setSelectedGrade] = useState<number | ''>('');
+  const [selectedSchool, setSelectedSchool] = useState<string>(profile?.school ?? '');
+  const [selectedGrade, setSelectedGrade] = useState<number | ''>(profile?.gradeLevel ?? '');
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState('');

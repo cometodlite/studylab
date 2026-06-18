@@ -2,8 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
 import { fsGet, fsQuery } from '@/lib/firestore-rest';
 
-function todayKST(): string {
-  return new Date().toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' }).replace(/\. /g, '-').replace('.', '');
+function startOfTodayKST(): Date {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const getPart = (type: string) => parts.find(part => part.type === type)?.value ?? '01';
+
+  return new Date(`${getPart('year')}-${getPart('month')}-${getPart('day')}T00:00:00+09:00`);
 }
 
 function get24HoursAgoKST(): Date {
@@ -33,7 +41,7 @@ export async function GET(req: NextRequest) {
     }
 
     // 통계 계산
-    const today = todayKST();
+    const todayStart = startOfTodayKST();
     const yesterday = get24HoursAgoKST();
 
     // 1. 총 가입자 수
@@ -63,7 +71,7 @@ export async function GET(req: NextRequest) {
         {
           field: 'completedAt',
           op: 'GREATER_THAN_OR_EQUAL',
-          value: new Date(today.replace(/-/g, '/') + ' 00:00:00'),
+          value: todayStart,
         },
       ],
       token,
@@ -82,12 +90,15 @@ export async function GET(req: NextRequest) {
     const examStats: Record<string, { attempts: number; totalScore: number }> = {};
 
     allExamSessions.forEach(session => {
-      const examTitle = session.examTitle || '알 수 없음';
+      const examTitle = typeof session.examTitle === 'string' && session.examTitle.trim()
+        ? session.examTitle
+        : '알 수 없음';
+      const totalScore = typeof session.totalScore === 'number' ? session.totalScore : 0;
       if (!examStats[examTitle]) {
         examStats[examTitle] = { attempts: 0, totalScore: 0 };
       }
       examStats[examTitle].attempts += 1;
-      examStats[examTitle].totalScore += (session.totalScore || 0);
+      examStats[examTitle].totalScore += totalScore;
     });
 
     const statsTopExams = Object.entries(examStats)

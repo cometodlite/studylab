@@ -40,13 +40,39 @@ interface AdminStats {
   }>;
 }
 
+interface ExamFile {
+  filename: string;
+  id: string;
+  title: string;
+  questionCount: number;
+}
+
+interface ExamPreviewQuestion {
+  id: number;
+  question: string;
+  choices?: string[];
+  answer?: number;
+  explanation?: string;
+}
+
+interface ExamPreview {
+  id: string;
+  title: string;
+  school?: string;
+  totalScore?: number;
+  timeLimit?: number;
+  questions?: ExamPreviewQuestion[];
+}
+
+type AdminTab = 'stats' | 'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev';
+
 export default function AdminPage() {
   const { profile } = useAuth();
   const router = useRouter();
   const [coupons, setCoupons] = useState<AdminCoupon[]>([]);
   const [debugHistory, setDebugHistory] = useState<{id:string;date:string;category:string;description:string;files:string[]}[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<'stats' | 'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev'>('stats');
+  const [tab, setTab] = useState<AdminTab>('stats');
 
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [statsLoading, setStatsLoading] = useState(false);
@@ -56,8 +82,8 @@ export default function AdminPage() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   // 문제 개발 탭 상태
-  const [examFiles, setExamFiles] = useState<any[]>([]);
-  const [selectedExam, setSelectedExam] = useState<any>(null);
+  const [examFiles, setExamFiles] = useState<ExamFile[]>([]);
+  const [selectedExam, setSelectedExam] = useState<ExamPreview | null>(null);
   const [examLoading, setExamLoading] = useState(false);
 
   // 새 쿠폰 폼
@@ -77,6 +103,7 @@ export default function AdminPage() {
     if (profile && profile.role !== 'admin') router.replace('/dashboard');
     if (profile?.role === 'admin') {
       loadCoupons();
+      loadStats();
       getIdToken(auth.currentUser!).then(token =>
         fetch('/api/admin/debug-history', { headers: { Authorization: `Bearer ${token}` } })
           .then(r => r.json()).then(data => setDebugHistory(data)).catch(() => {})
@@ -111,9 +138,9 @@ export default function AdminPage() {
   }
 
   async function loadStats() {
-    setStatsLoading(true);
     try {
       const token = await getToken();
+      setStatsLoading(true);
       const res = await fetch('/api/admin/stats', { headers: { Authorization: `Bearer ${token}` } });
       const data = await res.json();
       setStats(data);
@@ -125,8 +152,8 @@ export default function AdminPage() {
   }
 
   async function loadInquiries() {
-    setInquiriesLoading(true);
     const token = await getToken();
+    setInquiriesLoading(true);
     const res = await fetch('/api/admin/inquiries', { headers: { Authorization: `Bearer ${token}` } });
     const data = await res.json();
     setInquiries(Array.isArray(data) ? data : []);
@@ -160,14 +187,13 @@ export default function AdminPage() {
   }
 
   async function loadExamFiles() {
-    setExamLoading(true);
     try {
       const token = await getToken();
+      setExamLoading(true);
       const res = await fetch('/api/admin/exam-files', { headers: { Authorization: `Bearer ${token}` } });
       if (!res.ok) {
         console.error('[exam-dev] API error:', res.status, res.statusText);
         setExamFiles([]);
-        setExamLoading(false);
         return;
       }
       const data = await res.json();
@@ -188,14 +214,15 @@ export default function AdminPage() {
       body: JSON.stringify({ filename }),
     });
     const data = await res.json();
-    setSelectedExam(data);
+    setSelectedExam(data as ExamPreview);
   }
 
-  useEffect(() => {
-    if (tab === 'stats' && !stats) loadStats();
-    if (tab === 'inquiries' && inquiries.length === 0) loadInquiries();
-    if (tab === 'exam-dev' && examFiles.length === 0) loadExamFiles();
-  }, [tab]);
+  function selectTab(nextTab: AdminTab) {
+    setTab(nextTab);
+    if (nextTab === 'stats' && !stats) loadStats();
+    if (nextTab === 'inquiries' && inquiries.length === 0) loadInquiries();
+    if (nextTab === 'exam-dev' && examFiles.length === 0) loadExamFiles();
+  }
 
   if (!profile || profile.role !== 'admin') return null;
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
@@ -207,10 +234,10 @@ export default function AdminPage() {
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {([['stats', '📊 통계'], ['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['exam-dev', '📝 문제 개발']] as const).map(([t, label]) => (
+        {([['stats', '📊 통계'], ['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['exam-dev', '📝 문제 개발']] as Array<[AdminTab, string]>).map(([t, label]) => (
           <button
             key={t}
-            onClick={() => setTab(t as typeof tab)}
+            onClick={() => selectTab(t)}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition ${tab === t ? 'bg-indigo-600 text-white' : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'}`}
           >
             {label}
@@ -563,7 +590,7 @@ export default function AdminPage() {
                 </div>
 
                 <div className="border-t pt-4 max-h-96 overflow-y-auto space-y-4">
-                  {selectedExam.questions && selectedExam.questions.map((q: any, idx: number) => (
+                  {selectedExam.questions && selectedExam.questions.map((q, idx) => (
                     <div key={idx} className="pb-4 border-b last:border-b-0">
                       <div className="flex items-start gap-3">
                         <span className="font-bold text-indigo-600 shrink-0">{q.id}.</span>
