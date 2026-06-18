@@ -59,6 +59,8 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   const body = await req.json();
   const mcAnswers: Record<string, number> = body.mcAnswers ?? {};
   const essayAnswers: Record<string, string> = body.essayAnswers ?? {};
+  const timings: Record<number, number> = body.timings ?? {};
+  const totalTime: number = body.totalTime ?? 0;
 
   const now = new Date();
   const today = todayKST();
@@ -101,6 +103,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         score: q.score,
         earnedScore: correct ? q.score : 0,
         explanation: q.explanation,
+        timeSpent: timings[q.id] ?? 0,
       });
 
       if (!correct && userAns !== undefined) {
@@ -143,6 +146,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         earnedScore: correct ? q.score : 0,
         modelAnswer: q.answer_text ?? q.answer as unknown as string,
         rubric: q.rubric,
+        timeSpent: timings[q.id] ?? 0,
       });
 
       if (!correct && userAns) {
@@ -231,6 +235,13 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     }
   }
 
+  // 분석 데이터 계산
+  const mcCount = exam.questions.filter((q: RawQuestion) => q.type === 'mc').length;
+  const essayCount = exam.questions.length - mcCount;
+  const mcCorrect = results.filter(r => r.type === 'mc' && r.correct).length;
+  const essayCorrect = results.filter(r => r.type !== 'mc' && r.correct).length;
+  const avgTime = exam.questions.length > 0 ? Math.round(totalTime / exam.questions.length) : 0;
+
   return NextResponse.json({
     mcScore,
     essayScore,
@@ -239,5 +250,13 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     pointsEarned: alreadyRewarded ? 0 : pts,
     alreadyRewarded,
     results,
+    analysis: {
+      mcCorrectCount: mcCorrect,
+      mcTotalCount: mcCount,
+      essayCorrectCount: essayCorrect,
+      essayTotalCount: essayCount,
+      avgTimePerQuestion: avgTime,
+      totalTimeSpent: totalTime,
+    },
   });
 }

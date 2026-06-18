@@ -70,12 +70,19 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
   const [timesUp, setTimesUp] = useState(false);
   const autoSubmitRef = useRef(false);
 
+  const startTimeRef = useRef<number>(0);
+  const questionStartTimeRef = useRef<number>(0);
+  const questionTimingsRef = useRef<Record<number, number>>({});
+
   useEffect(() => {
     fetch(`/api/school-exams/${id}`)
       .then(r => r.json())
       .then(data => {
         setExam(data);
         setTimeLeft(data.timeLimit * 60);
+        startTimeRef.current = Date.now();
+        questionStartTimeRef.current = Date.now();
+        questionTimingsRef.current = {};
         setLoading(false);
       });
   }, [id]);
@@ -102,6 +109,19 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     if (timesUp && !gradeResult) handleSubmit();
   }, [timesUp]);
 
+  useEffect(() => {
+    if (!exam || gradeResult) return;
+    return () => {
+      // 페이지 이동 시 현재 문제의 시간 기록
+      const currentQuestion = exam.questions[current];
+      if (currentQuestion) {
+        const elapsed = Math.round((Date.now() - questionStartTimeRef.current) / 1000);
+        questionTimingsRef.current[currentQuestion.id] =
+          (questionTimingsRef.current[currentQuestion.id] || 0) + elapsed;
+      }
+    };
+  }, [current, exam, gradeResult]);
+
   function formatTime(s: number) {
     const m = Math.floor(s / 60);
     const sec = s % 60;
@@ -112,11 +132,26 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     if (!user || !exam || submitting) return;
     setSubmitting(true);
     try {
+      // 마지막 문제의 시간도 기록
+      const currentQuestion = exam.questions[current];
+      if (currentQuestion) {
+        const elapsed = Math.round((Date.now() - questionStartTimeRef.current) / 1000);
+        questionTimingsRef.current[currentQuestion.id] =
+          (questionTimingsRef.current[currentQuestion.id] || 0) + elapsed;
+      }
+
+      const totalTime = Math.round((Date.now() - startTimeRef.current) / 1000);
+
       const token = await getIdToken(auth.currentUser!);
       const res = await fetch(`/api/school-exams/${id}/grade`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-        body: JSON.stringify({ mcAnswers, essayAnswers }),
+        body: JSON.stringify({
+          mcAnswers,
+          essayAnswers,
+          timings: questionTimingsRef.current,
+          totalTime,
+        }),
       });
       const data = await res.json();
       setGradeResult(data);
