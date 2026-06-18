@@ -1,0 +1,354 @@
+{
+  "id": "bicheon-english-1-2-sheet5",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 5회",
+  "category": "학교",
+  "school": "부천일신중학교",
+  "grade": 2,
+  "subject": "영어",
+  "sheet": 5,
+  "difficulty": "보통",
+  "timeLimit": 40,
+  "totalScore": 100,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "score": 4,
+      "question": "'You can see them in the air, on land, and in the sea'에서 'them'의 선행사는?",
+      "choices": [
+        "위장 능력",
+        "포식자",
+        "동물",
+        "색깔",
+        "환경"
+      ],
+      "answer": 2,
+      "explanation": "문맥상 'them'은 위장 능력이 있는 동물들을 가리킵니다."
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 현재 완료와 과거 단순형의 차이를 올바르게 표현한 것은?",
+      "choices": [
+        "의미가 같다",
+        "현재 완료는 계속된 경험, 과거 단순형은 끝난 행동",
+        "둘 다 미래를 나타낸다",
+        "문법적으로 같다",
+        "상황에 관계없이 같다"
+      ],
+      "answer": 1,
+      "explanation": "'I have lived here for 5 years' (지금도 산다) vs 'I lived there for 5 years' (더 이상 안 산다)"
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "score": 4,
+      "question": "'Mountain hares can hop in deep snow'에서 'can'을 대체할 수 있는 단어는?",
+      "choices": [
+        "must",
+        "should",
+        "might",
+        "are able to",
+        "will"
+      ],
+      "answer": 3,
+      "explanation": "'can' = 'be able to'는 같은 의미입니다."
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "score": 4,
+      "question": "'Amelia told me to try the fish and chips'에서 'tell'과 유사한 의미의 동사는?",
+      "choices": [
+        "ask",
+        "want",
+        "instruct",
+        "suggest",
+        "all of the above"
+      ],
+      "answer": 4,
+      "explanation": "'tell to', 'ask to', 'want to', 'instruct to' 모두 유사한 의미입니다."
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 문장에서 관계대명사가 올바르게 사용된 것은?",
+      "choices": [
+        "The book which I read it is interesting",
+        "The girl whose lives here is my friend",
+        "The animal that protect itself is safe",
+        "The trip which I took was amazing",
+        "Students which study hard are successful"
+      ],
+      "answer": 3,
+      "explanation": "'The trip which I took'가 올바른 구조입니다."
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "score": 4,
+      "question": "'Their special looks keep them safe from predators'를 수동태로 변환하면?",
+      "choices": [
+        "Them are kept safe from predators by their special looks",
+        "They are kept safe from predators by their special looks",
+        "Predators are kept from them by their special looks",
+        "Safety is kept by their special looks",
+        "Their special looks are kept them safe"
+      ],
+      "answer": 1,
+      "explanation": "'keep safe'의 수동태는 'be kept safe'입니다."
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "score": 4,
+      "question": "'I can't wait to'의 의미로 가장 가까운 표현은?",
+      "choices": [
+        "기다리고 싶다",
+        "할 수 없다",
+        "~하기를 갈망하다",
+        "할 시간이 없다",
+        "할 수 없다"
+      ],
+      "answer": 2,
+      "explanation": "'can't wait to'는 '~하기를 간절히 원하다'는 의미입니다."
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "score": 4,
+      "question": "'Which one is faster?'의 의문사 'which'는 무엇을 의미하는가?",
+      "choices": [
+        "어느 것",
+        "어디",
+        "누구",
+        "무엇",
+        "어떤"
+      ],
+      "answer": 0,
+      "explanation": "'which'는 선택의 의미로 '어느 것'을 나타냅니다."
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "score": 4,
+      "question": "'Thanks to them, mountain hares can hop'에서 'thanks to'의 의미는?",
+      "choices": [
+        "~에게 감사한다",
+        "~때문에",
+        "~에도 불구하고",
+        "~에 따라",
+        "~에 의해"
+      ],
+      "answer": 1,
+      "explanation": "'thanks to' = 'because of' = '~때문에, ~덕분에'입니다."
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "score": 4,
+      "question": "'Changing colors makes them nearly invisible'에서 'nearly'의 의미는?",
+      "choices": [
+        "완전히",
+        "거의",
+        "일부",
+        "아주",
+        "정말"
+      ],
+      "answer": 1,
+      "explanation": "'Nearly' = 'almost' = '거의'입니다."
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "score": 4,
+      "question": "'The King's Guard were wearing red jackets'의 주어는?",
+      "choices": [
+        "The King",
+        "Guard",
+        "The King's Guard",
+        "red jackets",
+        "wearing"
+      ],
+      "answer": 2,
+      "explanation": "'The King's Guard'가 주어입니다."
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "score": 4,
+      "question": "'I thought, \"How strange!\"'에서 직접 인용과 간접 인용의 차이는?",
+      "choices": [
+        "의미가 같다",
+        "직접 인용은 원문, 간접 인용은 해석",
+        "직접 인용은 더 정확하다",
+        "간접 인용이 더 자연스럽다",
+        "변화가 없다"
+      ],
+      "answer": 1,
+      "explanation": "직접 인용: 'I thought, \"How strange!\"' / 간접 인용: 'I thought it was strange'"
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 'camouflage'의 반대 개념은?",
+      "choices": [
+        "protection",
+        "invisible",
+        "visible",
+        "danger",
+        "color"
+      ],
+      "answer": 2,
+      "explanation": "위장(숨김)의 반대는 노출(보임)입니다."
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "score": 4,
+      "question": "'Camden Market is known for its food from around the world'에서 'known for'는?",
+      "choices": [
+        "알려져 있다",
+        "인식한다",
+        "알려줄 수 있다",
+        "위치를 알고 있다",
+        "친숙하다"
+      ],
+      "answer": 0,
+      "explanation": "'be known for'는 '~으로 알려져 있다'는 수동 표현입니다."
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "score": 4,
+      "question": "런던 여행 이야기에서 '새로운 경험'의 예는?",
+      "choices": [
+        "비행기 타기",
+        "Amelia 만나기",
+        "버킹엄 궁전 보기",
+        "Camden Market 방문",
+        "모두 해당"
+      ],
+      "answer": 4,
+      "explanation": "모든 항목이 Subin의 새로운 경험입니다."
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "score": 4,
+      "question": "'I have known her since I was 10 years old'에서 시간 표현 'since'의 역할은?",
+      "choices": [
+        "기간의 시작점",
+        "기간의 끝점",
+        "현재 시점",
+        "과거 시점",
+        "미래 시점"
+      ],
+      "answer": 0,
+      "explanation": "'since'는 현재 완료와 함께 '~부터'의 시작점을 나타냅니다."
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 형용사로 올바르게 사용된 것은?",
+      "choices": [
+        "very big feet",
+        "very fastly run",
+        "very happily smile",
+        "very carefully work",
+        "very slowly"
+      ],
+      "answer": 0,
+      "explanation": "형용사는 명사를 수식하므로 'big feet'가 올바릅니다. 나머지는 부사 형태여야 합니다."
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "score": 4,
+      "question": "'which'의 선행사로 올 수 있는 것은?",
+      "choices": [
+        "사람만",
+        "동물만",
+        "물건만",
+        "사람과 동물",
+        "사람을 제외한 모든 것"
+      ],
+      "answer": 4,
+      "explanation": "'which'는 사람을 제외한 모든 것을 선행사로 가질 수 있습니다."
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "score": 4,
+      "question": "본문에서 사용된 시제로 가장 많은 것은?",
+      "choices": [
+        "과거",
+        "현재",
+        "현재 완료",
+        "과거 진행",
+        "미래"
+      ],
+      "answer": 2,
+      "explanation": "'I have known', 'I have eaten' 등 현재 완료가 주요 시제입니다."
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "score": 4,
+      "question": "두 Lesson의 학습 내용을 종합할 때 가장 중요한 문법은?",
+      "choices": [
+        "관계대명사",
+        "현재 완료",
+        "to부정사",
+        "의문사",
+        "모두 중요"
+      ],
+      "answer": 4,
+      "explanation": "세 가지 모두 중요한 문법 포인트입니다."
+    },
+    {
+      "id": 21,
+      "type": "short",
+      "score": 4,
+      "question": "'Some animals which live in the wild are very good at camouflage'에서 'which'를 'that'으로 바꿀 수 있는가? 이유를 설명하세요.",
+      "answer": "네, 제한적 관계절이므로 'which'를 'that'으로 바꿀 수 있습니다. 하지만 'which'가 더 격식적입니다.",
+      "explanation": "영국 영어에서는 비제한적 관계절에 'which'를 사용합니다."
+    },
+    {
+      "id": 22,
+      "type": "short",
+      "score": 4,
+      "question": "'I can't wait to tell you'와 'I want to tell you'를 비교하여 'can't wait to'의 강도를 설명하세요.",
+      "answer": "'can't wait to'가 더 강한 열망과 긴급성을 표현합니다.",
+      "explanation": "감정의 강도 표현이 다릅니다."
+    },
+    {
+      "id": 23,
+      "type": "short",
+      "score": 4,
+      "question": "'Amelia told me to try the fish and chips'를 'ask'를 사용하여 다시 쓰세요.",
+      "answer": "Amelia asked me to try the fish and chips.",
+      "explanation": "'tell to'와 'ask to'는 유사한 구조입니다."
+    },
+    {
+      "id": 24,
+      "type": "short",
+      "score": 4,
+      "question": "현재 완료 'have + 과거분사'를 사용한 본문의 문장을 찾아 적고, 그 의미를 한국어로 설명하세요.",
+      "answer": "'I have known her since I was 10 years old' - 10살부터 지금까지 계속 그녀를 알고 지내고 있다.",
+      "explanation": "현재 완료의 지속의 의미입니다."
+    },
+    {
+      "id": 25,
+      "type": "short",
+      "score": 4,
+      "question": "두 Lesson을 통해 배운 영어 학습 목표 3가지를 영어로 나열하세요.",
+      "answer": "1. Learn about animal camouflage and survival strategies 2. Understand present perfect tense and relative pronouns 3. Practice reading comprehension about travel experiences",
+      "explanation": "핵심 학습 목표들입니다."
+    }
+  ]
+}

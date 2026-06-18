@@ -1,0 +1,354 @@
+{
+  "id": "bicheon-english-1-2-sheet3",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 3회",
+  "category": "학교",
+  "school": "부천일신중학교",
+  "grade": 2,
+  "subject": "영어",
+  "sheet": 3,
+  "difficulty": "보통",
+  "timeLimit": 40,
+  "totalScore": 100,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "score": 4,
+      "question": "'Mountain hares change colors'에서 'change'의 역할은?",
+      "choices": [
+        "명사",
+        "형용사",
+        "동사",
+        "부사",
+        "전치사"
+      ],
+      "answer": 2,
+      "explanation": "'change'는 주동사로서 동사의 역할을 합니다."
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 정현재 완료 형태가 올바르게 사용된 문장은?",
+      "choices": [
+        "I have go to London",
+        "She has knew her since childhood",
+        "We have been friends for years",
+        "They has lived there",
+        "He have finished the work"
+      ],
+      "answer": 2,
+      "explanation": "'have/has + 과거분사' 형태가 올바릅니다. 'We have been friends for years'가 정확합니다."
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "score": 4,
+      "question": "'which'를 사용한 관계대명사 문장으로 올바른 것은?",
+      "choices": [
+        "Animals which are big eat more",
+        "The book which I read is interesting",
+        "The girl which live here is my friend",
+        "Dogs which color is black",
+        "Students which study hard are smart"
+      ],
+      "answer": 1,
+      "explanation": "'which'는 명사나 전체 절을 선행사로 가질 수 있으며, 타동사 다음에 올 수 있습니다. 'which I read'는 정확합니다."
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "score": 4,
+      "question": "'Amelia told me to try the fish and chips'를 다시 쓰면?",
+      "choices": [
+        "Amelia told me that I try the fish and chips",
+        "Amelia said me to try the fish and chips",
+        "Amelia asked me trying the fish and chips",
+        "Amelia wanted me to try the fish and chips",
+        "Amelia instructed me try the fish and chips"
+      ],
+      "answer": 3,
+      "explanation": "'tell + 목적어 + to부정사' = 'want + 목적어 + to부정사'로 같은 의미입니다."
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "score": 4,
+      "question": "'in summer' vs 'in winter'의 표현 중 틀린 것은?",
+      "choices": [
+        "In summer, it is hot",
+        "In winter, it is cold",
+        "In spring, flowers bloom",
+        "In fall, leaves change",
+        "In year, animals sleep"
+      ],
+      "answer": 4,
+      "explanation": "'In year'는 틀렸습니다. 'During the year' 또는 'In a year' 또는 'Each year'를 사용해야 합니다."
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "score": 4,
+      "question": "'They are very stylish animals'에서 'stylish'를 대체할 수 있는 단어는?",
+      "choices": [
+        "ugly",
+        "fashionable",
+        "weak",
+        "slow",
+        "small"
+      ],
+      "answer": 1,
+      "explanation": "'Stylish'는 '멋진, 우아한'을 의미하므로 'fashionable'로 대체 가능합니다."
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "score": 4,
+      "question": "'keep them safe from predators'를 다시 쓰면?",
+      "choices": [
+        "keep them safe against predators",
+        "protect them from predators",
+        "save them from predators",
+        "all of the above",
+        "none of the above"
+      ],
+      "answer": 3,
+      "explanation": "모두 같은 의미를 나타냅니다."
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 'make + 목적어 + 형용사' 구조가 올바르게 사용된 것은?",
+      "choices": [
+        "The color makes them invisible",
+        "His words made her happy",
+        "The weather makes the day cold",
+        "This book makes me interested",
+        "All of the above"
+      ],
+      "answer": 4,
+      "explanation": "모든 문장이 'make + 목적어 + 형용사' 구조를 올바르게 사용합니다."
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "score": 4,
+      "question": "'I can't wait to tell'에서 'wait to'의 의미는?",
+      "choices": [
+        "기다리다",
+        "~하고 싶어 하다",
+        "~할 때까지 기다리다",
+        "멈추다",
+        "준비하다"
+      ],
+      "answer": 1,
+      "explanation": "'can't wait to'는 '~하고 싶어 하다'는 의미입니다."
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "score": 4,
+      "question": "'The flight took 15 hours'에서 'took'가 의미하는 것은?",
+      "choices": [
+        "가져갔다",
+        "소요되다",
+        "가져갔다",
+        "선택했다",
+        "웃겼다"
+      ],
+      "answer": 1,
+      "explanation": "시간 표현과 함께 'take'는 '소요되다'의 의미입니다."
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "score": 4,
+      "question": "관계대명사 'which'와 'that'의 차이점으로 올바른 것은?",
+      "choices": [
+        "동일하다",
+        "which는 동물에만, that은 사람에만 사용된다",
+        "전치사 뒤에는 which를 사용한다",
+        "that은 항상 필수이고 which는 생략 가능하다",
+        "차이가 없다"
+      ],
+      "answer": 2,
+      "explanation": "전치사 뒤에는 which를 사용합니다. 예: 'the book for which'"
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "score": 4,
+      "question": "'I have known her since I was 10'에서 'since'의 역할은?",
+      "choices": [
+        "~부터, ~이후로",
+        "~동안",
+        "~까지",
+        "~앞에",
+        "~뒤에"
+      ],
+      "answer": 0,
+      "explanation": "'since'는 현재 완료와 함께 사용되어 '~부터, ~이후로'의 의미입니다."
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 현재 완료의 정의로 가장 올바른 것은?",
+      "choices": [
+        "과거에 끝난 일",
+        "현재까지 계속되는 경험",
+        "미래에 일어날 일",
+        "지금 일어나고 있는 일",
+        "~할 때마다 일어나는 일"
+      ],
+      "answer": 1,
+      "explanation": "현재 완료는 '과거에 시작해서 현재까지 계속되는 경험이나 상태'를 나타냅니다."
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "score": 4,
+      "question": "'Mountain hares can hop in deep snow'에서 'can'의 의미는?",
+      "choices": [
+        "~할 수 있다(능력)",
+        "~할 수 있다(허가)",
+        "~할 수도 있다(가능성)",
+        "~해야 한다",
+        "~할 것이다"
+      ],
+      "answer": 0,
+      "explanation": "'can'은 '~할 수 있다(능력)'를 의미합니다."
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "score": 4,
+      "question": "'They were like statues'에서 'like'의 의미는?",
+      "choices": [
+        "~처럼, ~같이",
+        "좋아하다",
+        "~에 가깝다",
+        "선호하다",
+        "~의 뒤에"
+      ],
+      "answer": 0,
+      "explanation": "'like'는 전치사로 '~처럼, ~같이'의 의미입니다."
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "score": 4,
+      "question": "'Amelia took me to many places'의 수동태는?",
+      "choices": [
+        "I was taken to many places by Amelia",
+        "I was took to many places by Amelia",
+        "Many places were taken by Amelia to me",
+        "Amelia was taken by me to many places",
+        "Many places took me by Amelia"
+      ],
+      "answer": 0,
+      "explanation": "'take to'의 수동태는 'be taken to'입니다."
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "score": 4,
+      "question": "'escape from predators'의 의미는?",
+      "choices": [
+        "포식자를 공격한다",
+        "포식자와 친구가 된다",
+        "포식자로부터 도망친다",
+        "포식자를 찾는다",
+        "포식자와 싸운다"
+      ],
+      "answer": 2,
+      "explanation": "'escape from'은 '~로부터 도망치다'의 의미입니다."
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "score": 4,
+      "question": "'This market is known for its food'에서 'be known for'의 의미는?",
+      "choices": [
+        "알려지다",
+        "유명하다",
+        "~으로 알려져 있다",
+        "가려지다",
+        "잘못 알려지다"
+      ],
+      "answer": 2,
+      "explanation": "'be known for'은 '~으로 알려져 있다'의 의미입니다."
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 's'나 'es'를 붙이지 않는 3인칭 단수 동사는?",
+      "choices": [
+        "has",
+        "takes",
+        "goes",
+        "said",
+        "makes"
+      ],
+      "answer": 3,
+      "explanation": "'said'는 이미 과거 형태이므로 's'를 붙이지 않습니다."
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "score": 4,
+      "question": "'Tell me about your trip'을 현재 완료로 쓰면?",
+      "choices": [
+        "Tell me about your traveled trip",
+        "Tell me about your trip which you have taken",
+        "Tell me about your trip that you have been",
+        "Tell me what you have seen on your trip",
+        "Tell me how you have went on your trip"
+      ],
+      "answer": 3,
+      "explanation": "현재 완료 'have seen'으로 경험을 표현합니다."
+    },
+    {
+      "id": 21,
+      "type": "short",
+      "score": 4,
+      "question": "'I have known her since I was 10'에서 현재 완료가 사용된 이유를 설명하세요.",
+      "answer": "과거 10살부터 지금까지 계속 Amelia를 알고 있기 때문에",
+      "explanation": "현재 완료는 과거부터 현재까지의 지속된 경험을 나타냅니다."
+    },
+    {
+      "id": 22,
+      "type": "short",
+      "score": 4,
+      "question": "'which'를 사용하여 다음 문장을 관계대명사로 변환하세요: Some animals are very good at camouflage. These animals live in the wild.",
+      "answer": "Some animals which live in the wild are very good at camouflage.",
+      "explanation": "'which'는 주격 관계대명사로 선행사를 수식합니다."
+    },
+    {
+      "id": 23,
+      "type": "short",
+      "score": 4,
+      "question": "'Amelia told me to try the fish and chips'를 'want'를 사용한 문장으로 변환하세요.",
+      "answer": "Amelia wanted me to try the fish and chips.",
+      "explanation": "'tell + 목적어 + to부정사' = 'want + 목적어 + to부정사'"
+    },
+    {
+      "id": 24,
+      "type": "short",
+      "score": 4,
+      "question": "'make them nearly invisible'에서 'make'의 역할을 설명하고, 같은 의미의 문장을 만드세요.",
+      "answer": "'make'는 목적어를 형용사 상태로 만드는 역할을 합니다. 예: The color keeps them invisible. / The color protects them by making them invisible.",
+      "explanation": "'make + 목적어 + 형용사' 구조입니다."
+    },
+    {
+      "id": 25,
+      "type": "short",
+      "score": 4,
+      "question": "'I can't wait to tell you'와 'I want to tell you'의 의미 차이를 설명하세요.",
+      "answer": "'can't wait to tell'은 더 강한 열망과 즉시성을 나타내며, 'want to tell'은 단순한 의도를 나타냅니다.",
+      "explanation": "'can't wait to'는 더 강조되고 긍정적인 감정을 표현합니다."
+    }
+  ]
+}

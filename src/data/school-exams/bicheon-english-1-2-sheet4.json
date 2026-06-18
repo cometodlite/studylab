@@ -1,0 +1,354 @@
+{
+  "id": "bicheon-english-1-2-sheet4",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 4회",
+  "category": "학교",
+  "school": "부천일신중학교",
+  "grade": 2,
+  "subject": "영어",
+  "sheet": 4,
+  "difficulty": "보통",
+  "timeLimit": 40,
+  "totalScore": 100,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "score": 4,
+      "question": "본문 'Can You Spot Them?'의 'Them'이 지칭하는 것은?",
+      "choices": [
+        "포식자",
+        "색깔",
+        "동물",
+        "사람",
+        "바위"
+      ],
+      "answer": 2,
+      "explanation": "제목의 'Them'은 위장 능력이 있는 동물들을 의미합니다."
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "score": 4,
+      "question": "Lesson 3과 Lesson 4에 공통으로 나타나는 주제는?",
+      "choices": [
+        "색깔 변화",
+        "새로운 경험이나 만남",
+        "음식",
+        "운동",
+        "건강"
+      ],
+      "answer": 1,
+      "explanation": "Lesson 3은 새로운 세계 (위장), Lesson 4는 새로운 장소와 친구 (여행)입니다."
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "score": 4,
+      "question": "'camouflage'의 목적은 무엇인가?",
+      "choices": [
+        "먹이를 찾는 것",
+        "포식자로부터 보호 받는 것",
+        "다른 동물과 친구가 되는 것",
+        "빠르게 달리는 것",
+        "날씨를 견디는 것"
+      ],
+      "answer": 1,
+      "explanation": "본문: 'Their special looks or abilities keep them safe from predators'"
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "score": 4,
+      "question": "런던 여행에서 Subin이 가장 흥분했던 순간은?",
+      "choices": [
+        "비행기 탈 때",
+        "버스를 탈 때",
+        "공항에서 Amelia를 만날 때",
+        "음식을 먹을 때",
+        "사진을 찍을 때"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'When I met my friend Amelia at the airport, I was so excited'"
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 문장에서 주어는 무엇인가? 'The flight took 15 hours from Incheon.'",
+      "choices": [
+        "15 hours",
+        "Incheon",
+        "The flight",
+        "took",
+        "from"
+      ],
+      "answer": 2,
+      "explanation": "'The flight'가 주어입니다."
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "score": 4,
+      "question": "Mountain hare의 색깔 변화를 이용한 가장 좋은 표현은?",
+      "choices": [
+        "자동으로 일어난다",
+        "계획적으로 일어난다",
+        "위장 능력이다",
+        "포식자가 만든다",
+        "환경 오염이다"
+      ],
+      "answer": 2,
+      "explanation": "색깔 변화는 survival 위한 자연적 능력입니다."
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "score": 4,
+      "question": "'They were like statues'가 의미하는 바는?",
+      "choices": [
+        "그들은 동상이었다",
+        "그들은 움직이지 않았다",
+        "그들은 아름다웠다",
+        "그들은 큰 크기였다",
+        "그들은 차가웠다"
+      ],
+      "answer": 1,
+      "explanation": "'like'는 비유로, '동상처럼 움직이지 않는다'는 의미입니다."
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "score": 4,
+      "question": "'I have eaten fish many times'와 비슷한 시제로 본문에서 찾은 것은?",
+      "choices": [
+        "The flight took 15 hours",
+        "I was so excited",
+        "She took me to many places",
+        "I have known her since",
+        "They didn't smile"
+      ],
+      "answer": 3,
+      "explanation": "'I have known'은 현재 완료로, 과거부터의 경험을 나타냅니다."
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "score": 4,
+      "question": "두 Lesson의 공통점으로 가장 적절한 것은?",
+      "choices": [
+        "모두 과거 이야기",
+        "모두 미래 계획",
+        "모두 새로운 것 발견 또는 만남",
+        "모두 음식에 관한 이야기",
+        "모두 운동 활동"
+      ],
+      "answer": 2,
+      "explanation": "Lesson 3은 새로운 동물 위장 세계, Lesson 4는 새로운 장소와 친구 만남을 다룹니다."
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "score": 4,
+      "question": "'can hop in deep snow'에서 'hop'의 의미는?",
+      "choices": [
+        "점프하다",
+        "뛰다",
+        "피하다",
+        "도움이 되다",
+        "보호하다"
+      ],
+      "answer": 1,
+      "explanation": "'Hop'은 '(깡충깡충) 뛰다'의 의미로, 토끼의 행동을 설명합니다."
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "score": 4,
+      "question": "본문들을 읽었을 때 배운 새로운 정보는?",
+      "choices": [
+        "동물의 색",
+        "비행기 시간",
+        "런던의 위치",
+        "모두 새로운 정보이다",
+        "정보를 배우지 못했다"
+      ],
+      "answer": 3,
+      "explanation": "동물 위장, 비행 시간, 런던 관광지 등 모두 새로운 정보입니다."
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "score": 4,
+      "question": "Lesson 3의 주요 학습 목표는?",
+      "choices": [
+        "색깔 이름 배우기",
+        "동물 이름 배우기",
+        "동물의 생존 전략 이해하기",
+        "영어 발음 배우기",
+        "과학 실험하기"
+      ],
+      "answer": 2,
+      "explanation": "본문은 동물의 위장이 생존 전략임을 설명합니다."
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "score": 4,
+      "question": "Lesson 4의 주요 학습 목표는?",
+      "choices": [
+        "런던 지도 그리기",
+        "Amelia의 가족 알기",
+        "여행 경험과 길 묻기 배우기",
+        "영국 역사 공부",
+        "기차 운전하기"
+      ],
+      "answer": 2,
+      "explanation": "여행 중 길 묻기와 다양한 경험을 다룹니다."
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "score": 4,
+      "question": "'Changing colors makes them nearly invisible'의 인과관계는?",
+      "choices": [
+        "색 변화 → 보이지 않음 → 안전",
+        "포식자 보임 → 색 변화 → 도망",
+        "눈 변함 → 색 변화 → 안전",
+        "위장 → 색 변화 → 포식자 발견 안 함",
+        "색 변화 → 빠르게 뜀 → 도망"
+      ],
+      "answer": 0,
+      "explanation": "색이 변하면 → (거의) 보이지 않음 → 포식자로부터 안전한 인과관계입니다."
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "score": 4,
+      "question": "'Buckingham Palace'를 설명하는 가장 정확한 문장은?",
+      "choices": [
+        "관광지이다",
+        "박물관이다",
+        "King과 가족이 사는 궁전이다",
+        "역사 유적지이다",
+        "공원이다"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'The King and his family live there'"
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "score": 4,
+      "question": "'come with me'의 의미는?",
+      "choices": [
+        "함께 가다",
+        "따라오다",
+        "함께 경험하다",
+        "동의하다",
+        "도움을 주다"
+      ],
+      "answer": 2,
+      "explanation": "문맥상 '여행 이야기 속으로 함께 경험해보라'는 의미입니다."
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "score": 4,
+      "question": "두 Lesson의 차이점으로 가장 적절한 것은?",
+      "choices": [
+        "Lesson 3은 사실, Lesson 4는 허구",
+        "Lesson 3은 동물, Lesson 4는 여행",
+        "모두 똑같다",
+        "Lesson 3은 과거, Lesson 4는 미래",
+        "차이가 없다"
+      ],
+      "answer": 1,
+      "explanation": "Lesson 3은 동물의 위장, Lesson 4는 개인의 여행 경험입니다."
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "score": 4,
+      "question": "'have/has + 과거분사'의 의미로 가장 올바른 것은?",
+      "choices": [
+        "지금 일어나고 있다",
+        "과거에 끝났다",
+        "과거부터 현재까지 계속된다",
+        "미래에 일어날 것이다",
+        "가정의 상황이다"
+      ],
+      "answer": 2,
+      "explanation": "현재 완료는 과거부터 현재까지의 경험이나 상태를 나타냅니다."
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "score": 4,
+      "question": "'Amelia told me to + 동사'에서 'to 동사'는 무엇인가?",
+      "choices": [
+        "부정사",
+        "동명사",
+        "과거분사",
+        "현재분사",
+        "동사"
+      ],
+      "answer": 0,
+      "explanation": "'to + 동사원형'은 부정사입니다."
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "score": 4,
+      "question": "두 Lesson을 정리했을 때 배운 표현 중 가장 중요한 것은?",
+      "choices": [
+        "관계대명사 which",
+        "현재 완료",
+        "to 부정사",
+        "위장의 개념",
+        "모두 중요하다"
+      ],
+      "answer": 4,
+      "explanation": "모두 중요한 문법과 내용입니다."
+    },
+    {
+      "id": 21,
+      "type": "short",
+      "score": 4,
+      "question": "Mountain hare가 겨울에 하얀색으로 변하는 것의 장점을 2가지 이상 설명하세요.",
+      "answer": "눈과 같은 색이므로 눈 속에서 포식자에게 보이지 않고, 큰 발로 깊은 눈에서 뛸 수 있다.",
+      "explanation": "위장 + 신체 적응이 함께 작동합니다."
+    },
+    {
+      "id": 22,
+      "type": "short",
+      "score": 4,
+      "question": "Subin의 런던 여행에서 가장 기억에 남을 만한 것 2가지를 본문에서 찾아 설명하세요.",
+      "answer": "Amelia와의 재회와 버킹엄 궁전의 위병들을 본 것 (또는 Camden Market의 특별한 음식)",
+      "explanation": "본문에서 강조된 부분들입니다."
+    },
+    {
+      "id": 23,
+      "type": "short",
+      "score": 4,
+      "question": "'which'를 사용하여 Lesson 3의 주요 아이디어를 한 문장으로 설명하세요.",
+      "answer": "Some animals which live in the wild have camouflage that keeps them safe from predators.",
+      "explanation": "관계대명사를 사용하여 동물의 위장 능력을 설명합니다."
+    },
+    {
+      "id": 24,
+      "type": "short",
+      "score": 4,
+      "question": "'I have known her since I was 10'이 'I knew her when I was 10'과 다른 이유를 설명하세요.",
+      "answer": "현재 완료는 10살부터 지금까지 계속 알고 있다는 의미이지만, 과거 단순형은 10살 때만 알았다는 의미이기 때문이다.",
+      "explanation": "현재 완료의 중요한 특징입니다."
+    },
+    {
+      "id": 25,
+      "type": "short",
+      "score": 4,
+      "question": "본문을 읽은 후 'camouflage'와 '여행'이 우리 생활에서 어떻게 응용될 수 있는지 영어로 간단히 쓰세요.",
+      "answer": "Camouflage is used in military uniforms, and travel helps us understand different cultures and make new friends like Subin did.",
+      "explanation": "학습 내용의 실생활 응용입니다."
+    }
+  ]
+}

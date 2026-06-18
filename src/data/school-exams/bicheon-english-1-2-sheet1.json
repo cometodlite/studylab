@@ -1,0 +1,354 @@
+{
+  "id": "bicheon-english-1-2-sheet1",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 1회",
+  "category": "학교",
+  "school": "부천일신중학교",
+  "grade": 2,
+  "subject": "영어",
+  "sheet": 1,
+  "difficulty": "보통",
+  "timeLimit": 40,
+  "totalScore": 100,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 'camouflage'의 가장 가까운 의미는?",
+      "choices": [
+        "색깔 변화",
+        "위장, 은폐",
+        "포식자",
+        "포유동물",
+        "능력"
+      ],
+      "answer": 1,
+      "explanation": "Camouflage는 '위장'을 의미합니다. 본문에서 'Some animals which live in the wild are very good at camouflage'에서 사용됩니다."
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "score": 4,
+      "question": "'Mountain hares change colors according to season' 문장에서 underline된 부분의 의미는?",
+      "choices": [
+        "계절에 따라",
+        "시간에 따라",
+        "환경에 따라",
+        "포식자에 따라",
+        "날씨에 따라"
+      ],
+      "answer": 0,
+      "explanation": "'according to season'은 '계절에 따라'를 의미합니다."
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "score": 4,
+      "question": "본문에서 Mountain hare가 겨울에 색깔을 흰색으로 바꾸는 이유는?",
+      "choices": [
+        "포식자를 공격하기 위해",
+        "풀과 바위에 위장하기 위해",
+        "눈에 위장하기 위해",
+        "다른 동물들과 구분하기 위해",
+        "체온을 유지하기 위해"
+      ],
+      "answer": 2,
+      "explanation": "본문에서 'In winter, they turn white to camouflage themselves in the snow'라고 명시되어 있습니다."
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "score": 4,
+      "question": "'Their special looks or abilities keep them safe from predators'에서 'predators'는 무엇을 의미하는가?",
+      "choices": [
+        "사냥감",
+        "먹이",
+        "포식자",
+        "동물",
+        "새"
+      ],
+      "answer": 2,
+      "explanation": "Predator는 '포식자'를 의미합니다. 본문에서 'wild dogs and eagles'가 predators의 예로 제시됩니다."
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "score": 4,
+      "question": "Mountain hare의 특징으로 맞지 않는 것은?",
+      "choices": [
+        "토끼보다 크다",
+        "긴 다리가 있다",
+        "계절에 따라 색이 변한다",
+        "깊은 눈에서 잘 뛸 수 있다",
+        "포식자를 공격할 수 있다"
+      ],
+      "answer": 4,
+      "explanation": "본문에는 Mountain hare가 포식자를 공격한다는 내용이 없습니다. 본문은 '위장해서 안전을 유지한다'고 설명합니다."
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "score": 4,
+      "question": "'They have really big feet' 문장의 'They'는 무엇을 가리키는가?",
+      "choices": [
+        "다른 동물들",
+        "포식자들",
+        "Mountain hares",
+        "eagles",
+        "wild dogs"
+      ],
+      "answer": 2,
+      "explanation": "본문의 문맥상 'They'는 Mountain hares를 가리킵니다."
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "score": 4,
+      "question": "본문의 주제로 가장 적절한 것은?",
+      "choices": [
+        "산토끼의 먹이",
+        "동물의 색깔 변화",
+        "포식자와 피식자의 관계",
+        "숨바꼭질 게임하는 방법",
+        "런던의 동물원"
+      ],
+      "answer": 1,
+      "explanation": "본문 제목 'Can You Spot Them?'과 내용상 동물의 위장 능력이 주제입니다."
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "score": 4,
+      "question": "'make them nearly invisible to predators'에서 'invisible'의 의미는?",
+      "choices": [
+        "약한",
+        "보이지 않는",
+        "무서운",
+        "빠른",
+        "똑똑한"
+      ],
+      "answer": 1,
+      "explanation": "Invisible은 '보이지 않는'을 의미합니다."
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "score": 4,
+      "question": "본문에 따르면 여름에 Mountain hare의 색깔은 어떤 색으로 변하는가?",
+      "choices": [
+        "흰색",
+        "검은색",
+        "갈색",
+        "회색-갈색",
+        "주황색"
+      ],
+      "answer": 3,
+      "explanation": "본문에서 'In summer, they turn gray-brown to match the rocks and grass'라고 명시됩니다."
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "score": 4,
+      "question": "다음 중 본문에서 제시된 Mountain hare의 포식자가 아닌 것은?",
+      "choices": [
+        "wild dogs",
+        "eagles",
+        "foxes",
+        "사나운 개",
+        "독수리"
+      ],
+      "answer": 2,
+      "explanation": "본문에서 'wild dogs and eagles'만 언급되며, foxes는 언급되지 않습니다."
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "score": 4,
+      "question": "'You can see them in the air, on land, and in the sea'에서 'them'이 가리키는 것은?",
+      "choices": [
+        "포식자",
+        "colors",
+        "animals",
+        "humans",
+        "rocks"
+      ],
+      "answer": 2,
+      "explanation": "본문의 문맥상 'them'은 'animals which live in the wild'를 가리킵니다."
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "score": 4,
+      "question": "본문의 문장 'Some animals which live in the wild are very good at camouflage'에서 'which'의 역할은?",
+      "choices": [
+        "의문사",
+        "주격 관계대명사",
+        "목적격 관계대명사",
+        "소유격 관계대명사",
+        "부사"
+      ],
+      "answer": 1,
+      "explanation": "'which'는 선행사 'animals'를 수식하는 주격 관계대명사입니다."
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "score": 4,
+      "question": "Mountain hare가 깊은 눈에서 도망칠 수 있는 이유는?",
+      "choices": [
+        "색깔이 흰색이어서",
+        "다리가 길어서",
+        "발이 크기 때문에",
+        "포식자가 무서워해서",
+        "다른 토끼보다 빠르기 때문에"
+      ],
+      "answer": 2,
+      "explanation": "본문에서 'Thanks to them, mountain hares can hop in deep snow'라고 큰 발 때문에 가능하다고 설명합니다."
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "score": 4,
+      "question": "'Let me guide you through the world of animal camouflage'에서 저자의 목적은?",
+      "choices": [
+        "산토끼를 사냥하는 방법 설명",
+        "동물 위장의 세계로 독자를 안내",
+        "포식자로부터 도망치는 방법 설명",
+        "산토끼의 크기에 대해 설명",
+        "색깔 변화가 왜 일어나는지 설명"
+      ],
+      "answer": 1,
+      "explanation": "저자가 독자를 '동물 위장의 세계'로 안내하겠다고 명시하고 있습니다."
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "score": 4,
+      "question": "본문의 쓰기 목적으로 가장 적절한 것은?",
+      "choices": [
+        "설명하기",
+        "주장하기",
+        "설득하기",
+        "반박하기",
+        "지시하기"
+      ],
+      "answer": 0,
+      "explanation": "본문은 동물의 위장 능력에 대해 정보를 제공하고 설명하는 글입니다."
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "score": 4,
+      "question": "'nearly invisible'이 의미하는 바는?",
+      "choices": [
+        "완전히 보인다",
+        "거의 안 보인다",
+        "부분적으로 보인다",
+        "매우 크다",
+        "아주 작다"
+      ],
+      "answer": 1,
+      "explanation": "Nearly는 '거의'를 의미하므로 'nearly invisible'은 '거의 보이지 않는다'는 뜻입니다."
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "score": 4,
+      "question": "본문에서 Mountain hare의 외형적 특징은?",
+      "choices": [
+        "검은 색",
+        "단기간",
+        "긴 다리와 큰 발",
+        "포식자를 쫓는다",
+        "빠른 속도"
+      ],
+      "answer": 2,
+      "explanation": "본문에서 '긴 다리가 있고 발이 크다'고 명시됩니다."
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "score": 4,
+      "question": "'They are very stylish animals'에서 'stylish'가 의미하는 것은?",
+      "choices": [
+        "공격적인",
+        "우아한, 멋진",
+        "위험한",
+        "신비로운",
+        "빠른"
+      ],
+      "answer": 1,
+      "explanation": "Stylish는 '우아한, 멋진'을 의미합니다. 문맥상 Mountain hare를 긍정적으로 표현합니다."
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "score": 4,
+      "question": "'Changing colors makes them nearly invisible to predators'에서 'makes'의 의미는?",
+      "choices": [
+        "제작하다",
+        "만들다",
+        "~하게 하다",
+        "선택하다",
+        "변경하다"
+      ],
+      "answer": 2,
+      "explanation": "'make + 목적어 + 형용사'의 구조로 '~하게 하다'라는 의미입니다."
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "score": 4,
+      "question": "본문 제목 'Can You Spot Them?'에서 'spot'의 의미는?",
+      "choices": [
+        "얼룩",
+        "지점",
+        "발견하다",
+        "반점",
+        "위치"
+      ],
+      "answer": 2,
+      "explanation": "문맥상 'spot'은 '발견하다'는 의미로, 위장된 동물을 찾을 수 있는가를 묻고 있습니다."
+    },
+    {
+      "id": 21,
+      "type": "short",
+      "score": 4,
+      "question": "Mountain hare가 계절에 따라 색깔을 바꾸는 이유를 본문 내용으로 설명하세요.",
+      "answer": "포식자(wild dogs, eagles)로부터 자신을 보호하기 위해 (위장하기 위해)",
+      "explanation": "본문: 'Their special looks or abilities keep them safe from predators'"
+    },
+    {
+      "id": 22,
+      "type": "short",
+      "score": 4,
+      "question": "Mountain hare의 큰 발이 중요한 이유는 무엇인가요?",
+      "answer": "깊은 눈에서 뛸 수 있게 해주기 때문에 (포식자로부터 도망칠 수 있게 해주기 때문에)",
+      "explanation": "본문: 'Thanks to them, mountain hares can hop in deep snow and escape'"
+    },
+    {
+      "id": 23,
+      "type": "short",
+      "score": 4,
+      "question": "본문에서 'camouflage'의 정의를 한국어로 쓰세요.",
+      "answer": "포식자로부터 동물을 안전하게 지키는 특별한 외모나 능력",
+      "explanation": "본문: 'Their special looks or abilities keep them safe from predators'"
+    },
+    {
+      "id": 24,
+      "type": "short",
+      "score": 4,
+      "question": "Mountain hare의 여름 색깔은 무엇이고 어떤 환경에 위장되나요?",
+      "answer": "회색-갈색(gray-brown)이고 바위와 풀에 위장된다",
+      "explanation": "본문: 'In summer, they turn gray-brown to match the rocks and grass'"
+    },
+    {
+      "id": 25,
+      "type": "short",
+      "score": 4,
+      "question": "이 글의 저자가 하려고 하는 것을 영어로 한 문장으로 쓰세요.",
+      "answer": "Let me guide you through the world of animal camouflage. (또는 동물의 위장의 세계를 소개하려고 한다)",
+      "explanation": "본문: 'Let me guide you through the world of animal camouflage'"
+    }
+  ]
+}

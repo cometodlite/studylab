@@ -1,0 +1,354 @@
+{
+  "id": "bicheon-english-1-2-sheet2",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 2회",
+  "category": "학교",
+  "school": "부천일신중학교",
+  "grade": 2,
+  "subject": "영어",
+  "sheet": 2,
+  "difficulty": "보통",
+  "timeLimit": 40,
+  "totalScore": 100,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mc",
+      "score": 4,
+      "question": "본문의 제목 'See You in London!'에서 Subin이 누구를 만나기를 기대하고 있는가?",
+      "choices": [
+        "부모님",
+        "학교 친구들",
+        "Amelia",
+        "King's Guard",
+        "Camden Market의 상인들"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'I can't wait to tell you about my trip to London... When I met my friend Amelia at the airport'"
+    },
+    {
+      "id": 2,
+      "type": "mc",
+      "score": 4,
+      "question": "'I have known her since I was 10 years old'에서 'known'의 의미는?",
+      "choices": [
+        "알려지다",
+        "친하게 지내다",
+        "만나다",
+        "알고 지내다",
+        "말하다"
+      ],
+      "answer": 3,
+      "explanation": "현재 완료 형태로 '(지금까지) 알고 지내다'를 의미합니다."
+    },
+    {
+      "id": 3,
+      "type": "mc",
+      "score": 4,
+      "question": "런던에서 Subin이 먼저 간 장소는?",
+      "choices": [
+        "Camden Market",
+        "인천공항",
+        "버킹엄 궁전",
+        "역",
+        "식당"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'We got on the famous red bus and the first stop was Buckingham Palace'"
+    },
+    {
+      "id": 4,
+      "type": "mc",
+      "score": 4,
+      "question": "버킹엄 궁전의 위병(King's Guard)의 특징으로 맞지 않는 것은?",
+      "choices": [
+        "빨간 자켓을 입었다",
+        "검은 모자를 썼다",
+        "웃고 움직였다",
+        "동상같이 보였다",
+        "사진에 함께했다"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'We took pictures near them, but they didn't smile or move. They were like statues!'"
+    },
+    {
+      "id": 5,
+      "type": "mc",
+      "score": 4,
+      "question": "'Amelia told me to try the fish and chips'에서 'told me to'의 의미는?",
+      "choices": [
+        "말했다",
+        "말해주었다",
+        "~하도록 말했다",
+        "~에 대해 말했다",
+        "~하지 말라고 말했다"
+      ],
+      "answer": 2,
+      "explanation": "'tell + 목적어 + to부정사'는 '~하도록 말하다'의 의미입니다."
+    },
+    {
+      "id": 6,
+      "type": "mc",
+      "score": 4,
+      "question": "Subin이 생각한 fish and chips는 어떤 음식인가?",
+      "choices": [
+        "생선 요리",
+        "감자튀김",
+        "이상한 음식",
+        "흔한 음식",
+        "맛없는 음식"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'I thought, \"How strange!\"'로 처음엔 이상하다고 생각했습니다."
+    },
+    {
+      "id": 7,
+      "type": "mc",
+      "score": 4,
+      "question": "런던 공항에서 Subin의 감정은?",
+      "choices": [
+        "슬펐다",
+        "화났다",
+        "흥분했다",
+        "두려웠다",
+        "지루했다"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'When I met my friend Amelia at the airport, I was so excited'"
+    },
+    {
+      "id": 8,
+      "type": "mc",
+      "score": 4,
+      "question": "'The flight took 15 hours from Incheon'에서 'took'의 의미는?",
+      "choices": [
+        "잡다",
+        "가져가다",
+        "필요로 하다",
+        "혼내다",
+        "소요되다"
+      ],
+      "answer": 4,
+      "explanation": "문맥상 비행이 얼마나 걸렸는지를 나타내므로 '소요되다'의 의미입니다."
+    },
+    {
+      "id": 9,
+      "type": "mc",
+      "score": 4,
+      "question": "캠던 마켓(Camden Market)의 특징은?",
+      "choices": [
+        "King이 사는 곳",
+        "세계 여러 나라의 음식을 제공한다",
+        "버킹엄 궁전이 있다",
+        "공항 근처에 있다",
+        "기차역 옆에 있다"
+      ],
+      "answer": 1,
+      "explanation": "본문: 'This market is known for its food from around the world'"
+    },
+    {
+      "id": 10,
+      "type": "mc",
+      "score": 4,
+      "question": "Subin의 여행이 몇 시간이 걸렸는가?",
+      "choices": [
+        "5시간",
+        "10시간",
+        "15시간",
+        "20시간",
+        "30시간"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'The flight took 15 hours from Incheon'"
+    },
+    {
+      "id": 11,
+      "type": "mc",
+      "score": 4,
+      "question": "Buckingham Palace에 대한 설명으로 틀린 것은?",
+      "choices": [
+        "King과 가족이 산다",
+        "King's Guard가 있다",
+        "빨간 버스로 간다",
+        "공원이다",
+        "관광지이다"
+      ],
+      "answer": 3,
+      "explanation": "본문에서 Buckingham Palace가 공원이라는 설명은 없습니다. 왕과 가족이 사는 궁전입니다."
+    },
+    {
+      "id": 12,
+      "type": "mc",
+      "score": 4,
+      "question": "'I can't wait to tell you about my trip'에서 Subin의 심정은?",
+      "choices": [
+        "여행을 하고 싶지 않다",
+        "여행에 대해 말하고 싶지 않다",
+        "여행에 대해 얘기하고 싶어 한다",
+        "여행을 좋아하지 않는다",
+        "기억하고 싶지 않다"
+      ],
+      "answer": 2,
+      "explanation": "'can't wait to'는 '~하고 싶어 한다'의 의미입니다."
+    },
+    {
+      "id": 13,
+      "type": "mc",
+      "score": 4,
+      "question": "'Come with me on my amazing trip!'에서 저자의 의도는?",
+      "choices": [
+        "비판하기",
+        "명령하기",
+        "독자를 여행에 초대하기",
+        "여행을 막기",
+        "정보 제공하기"
+      ],
+      "answer": 2,
+      "explanation": "독자들을 자신의 여행 이야기 속으로 초대하고 있습니다."
+    },
+    {
+      "id": 14,
+      "type": "mc",
+      "score": 4,
+      "question": "본문에서 King's Guard의 태도는?",
+      "choices": [
+        "친절하다",
+        "위험하다",
+        "움직임이 없다",
+        "화났다",
+        "도움이 된다"
+      ],
+      "answer": 2,
+      "explanation": "본문: 'they didn't smile or move. They were like statues!'"
+    },
+    {
+      "id": 15,
+      "type": "mc",
+      "score": 4,
+      "question": "'The King and his family live there'에서 'there'는 무엇을 가리키는가?",
+      "choices": [
+        "London",
+        "Airport",
+        "Red Bus",
+        "Buckingham Palace",
+        "Camden Market"
+      ],
+      "answer": 3,
+      "explanation": "직전 문장에서 언급한 Buckingham Palace를 가리킵니다."
+    },
+    {
+      "id": 16,
+      "type": "mc",
+      "score": 4,
+      "question": "본문에서 'yummy'는 어떤 의미인가?",
+      "choices": [
+        "맛없는",
+        "맛있는",
+        "비싼",
+        "싸다",
+        "부드러운"
+      ],
+      "answer": 1,
+      "explanation": "'Yummy'는 '맛있는'의 의미입니다. 본문의 'Yummy Meal' 제목에서 사용됩니다."
+    },
+    {
+      "id": 17,
+      "type": "mc",
+      "score": 4,
+      "question": "Amelia가 Subin에게 한 역할은?",
+      "choices": [
+        "가이드",
+        "통역가",
+        "상점 점원",
+        "기자",
+        "선생님"
+      ],
+      "answer": 0,
+      "explanation": "본문: 'She took me to many places in London'로 가이드 역할을 했습니다."
+    },
+    {
+      "id": 18,
+      "type": "mc",
+      "score": 4,
+      "question": "본문의 주제로 가장 적절한 것은?",
+      "choices": [
+        "런던의 역사",
+        "Amelia의 가족",
+        "Subin의 런던 여행 경험",
+        "비행기 여행의 즐거움",
+        "영국 음식"
+      ],
+      "answer": 2,
+      "explanation": "본문 전체가 Subin의 런던 여행과 경험에 대해 다루고 있습니다."
+    },
+    {
+      "id": 19,
+      "type": "mc",
+      "score": 4,
+      "question": "'I have eaten fish many times before'와 비교할 때 본문에서 Subin이 말한 것은?",
+      "choices": [
+        "I have never seen her before",
+        "I have known Amelia since",
+        "I haven't seen fish before",
+        "I have eaten fish and chips",
+        "I have lived in London"
+      ],
+      "answer": 1,
+      "explanation": "본문: 'I have known her since I was 10 years old'로 오래 알고 지낸 친구를 만났습니다."
+    },
+    {
+      "id": 20,
+      "type": "mc",
+      "score": 4,
+      "question": "본문의 목적은?",
+      "choices": [
+        "런던의 관광지 정보 제공",
+        "Amelia 소개하기",
+        "자신의 여행 경험 공유",
+        "영어 공부하기",
+        "버스 타는 방법 설명"
+      ],
+      "answer": 2,
+      "explanation": "저자(Subin)가 자신의 런던 여행 경험과 느낌을 공유하는 글입니다."
+    },
+    {
+      "id": 21,
+      "type": "short",
+      "score": 4,
+      "question": "Subin이 런던에서 Amelia를 어디서 만났나요?",
+      "answer": "공항(airport)에서",
+      "explanation": "본문: 'When I met my friend Amelia at the airport'"
+    },
+    {
+      "id": 22,
+      "type": "short",
+      "score": 4,
+      "question": "버킹엄 궁전의 위병들이 동상 같은 이유는?",
+      "answer": "웃지도 움직이지도 않기 때문에 (또는 표정과 움직임이 없기 때문에)",
+      "explanation": "본문: 'they didn't smile or move. They were like statues!'"
+    },
+    {
+      "id": 23,
+      "type": "short",
+      "score": 4,
+      "question": "Subin이 Amelia를 언제부터 알고 있었나요?",
+      "answer": "10살부터 (또는 10살 때부터)",
+      "explanation": "본문: 'I have known her since I was 10 years old'"
+    },
+    {
+      "id": 24,
+      "type": "short",
+      "score": 4,
+      "question": "캠던 마켓(Camden Market)은 무엇으로 유명한가요?",
+      "answer": "세계 여러 나라의 음식",
+      "explanation": "본문: 'This market is known for its food from around the world'"
+    },
+    {
+      "id": 25,
+      "type": "short",
+      "score": 4,
+      "question": "Subin의 비행시간은 얼마였으며 어디에서 출발했나요?",
+      "answer": "15시간, 인천(공항)에서 출발",
+      "explanation": "본문: 'The flight took 15 hours from Incheon'"
+    }
+  ]
+}
