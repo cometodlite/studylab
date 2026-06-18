@@ -7,17 +7,32 @@ function genId() {
 }
 
 export async function POST(req: NextRequest) {
+  console.log('[inquiries] POST request received');
   const token = req.headers.get('Authorization')?.split('Bearer ')[1];
-  if (!token) return NextResponse.json({ error: '인증이 필요합니다.' }, { status: 401 });
+  if (!token) {
+    console.log('[inquiries] No token provided');
+    return NextResponse.json({ error: '인증이 필요합니다.' }, { status: 401 });
+  }
 
   let uid: string;
   try {
+    console.log('[inquiries] Verifying Firebase token...');
     uid = await verifyFirebaseToken(token);
-  } catch {
-    return NextResponse.json({ error: '유효하지 않은 토큰입니다.' }, { status: 401 });
+    console.log('[inquiries] Token verified for uid:', uid);
+  } catch (e) {
+    const err = e instanceof Error ? e.message : String(e);
+    console.log('[inquiries] Token verification failed:', err);
+    return NextResponse.json({ error: '유효하지 않은 토큰입니다.', details: err }, { status: 401 });
   }
 
-  const body = await req.json();
+  let body: any;
+  try {
+    body = await req.json();
+  } catch (e) {
+    const err = e instanceof Error ? e.message : String(e);
+    console.log('[inquiries] Failed to parse JSON body:', err);
+    return NextResponse.json({ error: 'Invalid JSON', details: err }, { status: 400 });
+  }
   const { category, subject, message, nickname, email } = body;
 
   if (!category || !subject?.trim() || !message?.trim()) {
