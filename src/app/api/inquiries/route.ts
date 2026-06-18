@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
-import { fsBatch } from '@/lib/firestore-rest';
+import { fsBatch, WriteOp } from '@/lib/firestore-rest';
 
 function genId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2);
@@ -20,33 +20,37 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { category, subject, message, nickname, email } = body;
 
-  if (!subject?.trim() || !message?.trim()) {
-    return NextResponse.json({ error: '제목과 내용을 입력해주세요.' }, { status: 400 });
+  if (!category || !subject?.trim() || !message?.trim()) {
+    return NextResponse.json({ error: '필수 정보가 부족합니다.' }, { status: 400 });
   }
 
-  const id = genId();
   const now = new Date();
+  const inquiryId = genId();
 
-  try {
-    await fsBatch([{
+  const writeOps: WriteOp[] = [
+    {
       type: 'add',
       collection: 'inquiries',
-      id,
+      id: inquiryId,
       data: {
-        uid,
-        nickname: nickname ?? '알 수 없음',
-        email: email ?? '',
-        category: category ?? '일반 문의',
+        userId: uid,
+        category,
         subject: subject.trim(),
         message: message.trim(),
-        status: 'new',
+        nickname: nickname || '',
+        email: email || '',
+        status: 'pending',
         createdAt: now,
+        updatedAt: now,
       },
-    }], token);
+    },
+  ];
+
+  try {
+    await fsBatch(writeOps, token);
+    return NextResponse.json({ success: true, inquiryId });
   } catch (e) {
     console.error('[inquiries] fsBatch failed:', e);
-    return NextResponse.json({ error: '저장에 실패했습니다.' }, { status: 500 });
+    return NextResponse.json({ error: '문의 전송에 실패했습니다.' }, { status: 500 });
   }
-
-  return NextResponse.json({ success: true, id });
 }
