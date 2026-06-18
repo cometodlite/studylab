@@ -6,6 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { getIdToken } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import MathText from '@/components/MathText';
+import type { UserAchievement } from '@/lib/achievements';
 
 type MCQuestion = { id: number; type: 'mc'; score: number; question: string; choices: string[] };
 type EssayQuestion = { id: number; type: 'essay' | 'short'; score: number; question: string; rubric?: string };
@@ -75,6 +76,8 @@ interface GradeResponse {
   totalScore: number;
   maxScore: number;
   pointsEarned: number;
+  achievementPointsEarned?: number;
+  achievementsUnlocked?: UserAchievement[];
   alreadyRewarded: boolean;
   results: GradeResult[];
   analysis?: {
@@ -239,6 +242,30 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
             </div>
           )}
         </div>
+
+        {gradeResult.achievementsUnlocked && gradeResult.achievementsUnlocked.length > 0 && (
+          <div className="bg-gradient-to-r from-yellow-50 via-white to-indigo-50 rounded-2xl p-6 border border-yellow-200 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+              <div>
+                <p className="text-xs font-bold text-yellow-600 uppercase">Achievement Unlocked</p>
+                <h2 className="text-xl font-bold text-gray-800 mt-1">새 업적을 달성했습니다!</h2>
+              </div>
+              <div className="text-sm font-semibold text-green-600">
+                +{(gradeResult.achievementPointsEarned ?? 0).toLocaleString()}p 보너스
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {gradeResult.achievementsUnlocked.map(achievement => (
+                <div key={achievement.id} className="bg-white rounded-xl border border-yellow-100 px-4 py-4">
+                  <div className="text-4xl mb-2">{achievement.emoji}</div>
+                  <p className="font-bold text-gray-800">{achievement.title}</p>
+                  <p className="text-xs text-gray-500 mt-1">{achievement.detail ?? achievement.description}</p>
+                  <p className="text-xs font-semibold text-green-600 mt-3">+{achievement.points.toLocaleString()}p</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {gradeResult.analysis && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

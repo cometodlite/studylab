@@ -12,6 +12,7 @@ import {
 } from 'firebase/auth';
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { auth, db, googleProvider } from '@/lib/firebase';
+import type { UserAchievement } from '@/lib/achievements';
 
 interface UserProfile {
   uid: string;
@@ -23,6 +24,7 @@ interface UserProfile {
   role: 'user' | 'admin';
   school?: string | null;
   gradeLevel?: number | null;
+  achievements?: UserAchievement[];
 }
 
 interface AuthContextType {

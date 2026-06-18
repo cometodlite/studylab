@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
 import { fsGet, fsSet, fsBatch, fsQuery, WriteOp } from '@/lib/firestore-rest';
+import { AchievementId, UserAchievement, createAchievement } from '@/lib/achievements';
 
 const SCHOOL_EXAM_DIR = path.join(process.cwd(), 'src', 'data', 'school-exams');
 
@@ -49,6 +50,19 @@ type SessionDoc = {
   completedAt?: unknown;
 };
 
+type SchoolExamFileMeta = {
+  id?: string;
+  title?: string;
+  school?: string;
+  grade?: number;
+  subject?: string;
+  sheet?: number;
+};
+
+type UserDoc = {
+  achievements?: unknown;
+};
+
 function qLabel(type: RawQuestion['type']) {
   if (type === 'mc') return '객관식';
   if (type === 'short') return '주관식';
@@ -64,6 +78,92 @@ function timestampSeconds(value: unknown): number {
     return (value as { seconds: number }).seconds;
   }
   return 0;
+}
+
+function examSeriesKey(examId: string) {
+  return examId.replace(/-sheet\d+$/, '');
+}
+
+function scoreRate(totalScore: number, maxScore: number) {
+  return maxScore > 0 ? Math.round((totalScore / maxScore) * 1000) / 10 : 0;
+}
+
+function normalizeAchievements(value: unknown): UserAchievement[] {
+  return Array.isArray(value)
+    ? value.filter((item): item is UserAchievement => (
+      typeof item === 'object' &&
+      item !== null &&
+      typeof (item as { id?: unknown }).id === 'string'
+    ))
+    : [];
+}
+
+function getAvailableSeriesSheets(seriesKey: string) {
+  const sheets = new Set<number>();
+  if (!fs.existsSync(SCHOOL_EXAM_DIR)) return [];
+
+  for (const entry of fs.readdirSync(SCHOOL_EXAM_DIR)) {
+    if (!entry.endsWith('.json')) continue;
+    try {
+      const fileExam = JSON.parse(fs.readFileSync(path.join(SCHOOL_EXAM_DIR, entry), 'utf8')) as SchoolExamFileMeta;
+      if (fileExam.id && examSeriesKey(fileExam.id) === seriesKey && typeof fileExam.sheet === 'number') {
+        sheets.add(fileExam.sheet);
+      }
+    } catch {
+      // Ignore malformed files here; normal exam loading handles the selected file.
+    }
+  }
+
+  return [...sheets].sort((a, b) => a - b);
+}
+
+function seriesLabel(exam: SchoolExamFileMeta) {
+  const grade = typeof exam.grade === 'number' ? `${exam.grade}학년 ` : '';
+  return [exam.school, `${grade}${exam.subject ?? ''}`.trim()].filter(Boolean).join(' ');
+}
+
+function evaluateNewAchievements(params: {
+  existingAchievements: UserAchievement[];
+  sessions: Array<{ examId: string; totalScore: number; maxScore: number; sheet: number | null; completedAtSeconds: number }>;
+  currentSeriesKey: string;
+  currentExam: SchoolExamFileMeta;
+  now: Date;
+}) {
+  const existingIds = new Set(params.existingAchievements.map(achievement => achievement.id));
+  const unlocked: UserAchievement[] = [];
+  const unlock = (id: AchievementId, detail?: string) => {
+    if (existingIds.has(id)) return;
+    existingIds.add(id);
+    unlocked.push(createAchievement(id, params.now, detail));
+  };
+
+  const orderedSessions = [...params.sessions].sort((a, b) => a.completedAtSeconds - b.completedAtSeconds);
+  const recentThree = orderedSessions.slice(-3);
+  if (recentThree.length === 3 && recentThree.every(session => scoreRate(session.totalScore, session.maxScore) >= 90)) {
+    unlock('honor-student', '최근 3회 연속 90점 이상');
+  }
+
+  const seriesSessions = orderedSessions.filter(session => examSeriesKey(session.examId) === params.currentSeriesKey);
+  const completedSheets = new Set(seriesSessions.map(session => session.sheet).filter((sheet): sheet is number => typeof sheet === 'number'));
+  const label = seriesLabel(params.currentExam) || '시험 시리즈';
+  if ([1, 2, 3, 4, 5].every(sheet => completedSheets.has(sheet))) {
+    unlock('perfectionist', `${label} 1~5회차 완주`);
+  }
+
+  const availableSheets = getAvailableSeriesSheets(params.currentSeriesKey);
+  const bestRateBySheet = new Map<number, number>();
+  for (const session of seriesSessions) {
+    if (typeof session.sheet !== 'number') continue;
+    bestRateBySheet.set(session.sheet, Math.max(bestRateBySheet.get(session.sheet) ?? 0, scoreRate(session.totalScore, session.maxScore)));
+  }
+  if (
+    availableSheets.length >= 5 &&
+    availableSheets.every(sheet => (bestRateBySheet.get(sheet) ?? 0) >= 90)
+  ) {
+    unlock('master', `${label} 전 회차 90점 이상`);
+  }
+
+  return unlocked;
 }
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
@@ -268,6 +368,82 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     }
   }
 
+  let userSessions: SessionDoc[] = [];
+  try {
+    userSessions = await fsQuery(
+      'school_exam_sessions',
+      [{ field: 'userId', op: 'EQUAL', value: uid }],
+      token,
+      10000
+    ) as SessionDoc[];
+  } catch (e) {
+    console.error('[school-exams/grade] sessions query failed:', e);
+  }
+
+  let achievementsUnlocked: UserAchievement[] = [];
+  let achievementPointsEarned = 0;
+  const currentSession = {
+    examId: id,
+    totalScore,
+    maxScore: exam.totalScore,
+    sheet: typeof exam.sheet === 'number' ? exam.sheet : null,
+    completedAtSeconds: Math.floor(now.getTime() / 1000),
+  };
+  const sessionsForAchievements = [
+    ...userSessions
+      .filter(session => session._id !== sessionId)
+      .map(session => ({
+        examId: typeof session.examId === 'string' ? session.examId : '',
+        totalScore: typeof session.totalScore === 'number' ? session.totalScore : 0,
+        maxScore: typeof session.maxScore === 'number' ? session.maxScore : 0,
+        sheet: typeof session.sheet === 'number' ? session.sheet : null,
+        completedAtSeconds: timestampSeconds(session.completedAt),
+      }))
+      .filter(session => session.examId),
+    currentSession,
+  ];
+
+  try {
+    const userDoc = await fsGet(`users/${uid}`, token) as UserDoc | null;
+    const existingAchievements = normalizeAchievements(userDoc?.achievements);
+    achievementsUnlocked = evaluateNewAchievements({
+      existingAchievements,
+      sessions: sessionsForAchievements,
+      currentSeriesKey: examSeriesKey(id),
+      currentExam: exam,
+      now,
+    });
+    achievementPointsEarned = achievementsUnlocked.reduce((sum, achievement) => sum + achievement.points, 0);
+
+    if (achievementsUnlocked.length > 0) {
+      await fsBatch([
+        {
+          type: 'update',
+          path: `users/${uid}`,
+          data: { achievements: [...existingAchievements, ...achievementsUnlocked] },
+        },
+        { type: 'increment', path: `users/${uid}`, field: 'points', delta: achievementPointsEarned },
+        ...achievementsUnlocked.map(achievement => ({
+          type: 'add' as const,
+          collection: 'point_logs',
+          id: genId(),
+          data: {
+            userId: uid,
+            amount: achievement.points,
+            reason: `${achievement.emoji} 업적 달성: ${achievement.title}`,
+            achievementId: achievement.id,
+            sessionId,
+            createdAt: now,
+          },
+        })),
+      ], token);
+    }
+  } catch (e) {
+    console.error('[school-exams/grade] achievement update failed:', e);
+    achievementsUnlocked = [];
+    achievementPointsEarned = 0;
+  }
+
   // 분석 데이터 계산
   const mcCount = exam.questions.filter((q: RawQuestion) => q.type === 'mc').length;
   const essayCount = exam.questions.length - mcCount;
@@ -328,12 +504,6 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
   let trend: Array<{ sessionId: string; examId: string; examTitle: string; sheet: number | null; totalScore: number; maxScore: number; scoreRate: number; completedAt: { seconds: number } | null }> = [];
   try {
-    const userSessions = await fsQuery(
-      'school_exam_sessions',
-      [{ field: 'userId', op: 'EQUAL', value: uid }],
-      token,
-      10000
-    ) as SessionDoc[];
     trend = [
       ...userSessions
         .filter(session => session._id !== sessionId)
@@ -375,6 +545,8 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     totalScore,
     maxScore: exam.totalScore,
     pointsEarned: alreadyRewarded ? 0 : pts,
+    achievementPointsEarned,
+    achievementsUnlocked,
     alreadyRewarded,
     results,
     analysis: {

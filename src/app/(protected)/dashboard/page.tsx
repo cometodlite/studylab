@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import MotivationModal from '@/components/MotivationModal';
 import Link from 'next/link';
@@ -8,21 +8,17 @@ import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc, incr
 import { db } from '@/lib/firebase';
 import { POINT_RULES } from '@/lib/points';
 import { UPDATES } from '@/lib/updates';
+import { ACHIEVEMENT_ORDER, ACHIEVEMENTS } from '@/lib/achievements';
 
 export default function DashboardPage() {
   const { user, profile, refreshProfile } = useAuth();
   const [showMotivation, setShowMotivation] = useState(false);
   const [todayPoints, setTodayPoints] = useState(0);
   const [recentLogs, setRecentLogs] = useState<{ reason: string; amount: number; id: string }[]>([]);
+  const achievements = profile?.achievements ?? [];
+  const achievementIds = new Set(achievements.map(achievement => achievement.id));
 
-  useEffect(() => {
-    if (!user || !profile) return;
-    checkDailyLogin();
-    fetchTodayPoints();
-    fetchRecentLogs();
-  }, [user, profile?.uid]);
-
-  async function checkDailyLogin() {
+  const checkDailyLogin = useCallback(async () => {
     if (!user || !profile) return;
     const today = new Date().toDateString();
     if (profile.lastLogin === today) {
@@ -59,9 +55,9 @@ export default function DashboardPage() {
 
     await refreshProfile();
     setShowMotivation(true);
-  }
+  }, [profile, refreshProfile, user]);
 
-  async function fetchTodayPoints() {
+  const fetchTodayPoints = useCallback(async () => {
     if (!user) return;
     try {
       const today = new Date();
@@ -77,9 +73,9 @@ export default function DashboardPage() {
     } catch (e) {
       console.error('오늘 포인트 로딩 실패:', e);
     }
-  }
+  }, [user]);
 
-  async function fetchRecentLogs() {
+  const fetchRecentLogs = useCallback(async () => {
     if (!user) return;
     try {
       const q = query(
@@ -93,7 +89,21 @@ export default function DashboardPage() {
     } catch (e) {
       console.error('최근 내역 로딩 실패:', e);
     }
-  }
+  }, [user]);
+
+  useEffect(() => {
+    if (!user || !profile) return;
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      checkDailyLogin();
+      fetchTodayPoints();
+      fetchRecentLogs();
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [checkDailyLogin, fetchRecentLogs, fetchTodayPoints, profile, user]);
 
   return (
     <>
@@ -127,6 +137,41 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
             <div className="text-3xl font-bold text-orange-500">{profile?.streakDays}일</div>
             <div className="text-sm text-gray-500 mt-1">연속 출석</div>
+          </div>
+        </div>
+
+        {/* 배지/업적 */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+          <div className="flex items-center justify-between gap-3 mb-4">
+            <div>
+              <h2 className="font-semibold text-gray-700">내 배지</h2>
+              <p className="text-xs text-gray-400 mt-0.5">{achievements.length}/{ACHIEVEMENT_ORDER.length}개 달성</p>
+            </div>
+            <Link href="/exam" className="text-indigo-600 text-sm font-medium hover:underline">도전하기 →</Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {ACHIEVEMENT_ORDER.map(id => {
+              const meta = ACHIEVEMENTS[id];
+              const unlocked = achievements.find(achievement => achievement.id === id);
+              const isUnlocked = achievementIds.has(id);
+              return (
+                <div
+                  key={id}
+                  className={`rounded-xl border px-4 py-4 ${
+                    isUnlocked
+                      ? 'border-yellow-200 bg-yellow-50'
+                      : 'border-gray-100 bg-gray-50 opacity-70'
+                  }`}
+                >
+                  <div className={`text-3xl mb-2 ${isUnlocked ? '' : 'grayscale'}`}>{meta.emoji}</div>
+                  <p className={`font-bold ${isUnlocked ? 'text-gray-800' : 'text-gray-500'}`}>{meta.title}</p>
+                  <p className="text-xs text-gray-500 mt-1">{unlocked?.detail ?? meta.description}</p>
+                  <p className={`text-xs font-semibold mt-3 ${isUnlocked ? 'text-green-600' : 'text-gray-400'}`}>
+                    {isUnlocked ? `획득 완료 · +${meta.points.toLocaleString()}p` : `달성 시 +${meta.points.toLocaleString()}p`}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
 
