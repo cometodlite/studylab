@@ -28,13 +28,28 @@ interface AdminInquiry {
   createdAt: { seconds: number };
 }
 
+interface AdminStats {
+  totalUsers: number;
+  activeUsers24h: number;
+  todayExamAttempts: number;
+  pendingInquiries: number;
+  statsTopExams: Array<{
+    examTitle: string;
+    attempts: number;
+    avgScore: number;
+  }>;
+}
+
 export default function AdminPage() {
   const { profile } = useAuth();
   const router = useRouter();
   const [coupons, setCoupons] = useState<AdminCoupon[]>([]);
   const [debugHistory, setDebugHistory] = useState<{id:string;date:string;category:string;description:string;files:string[]}[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev'>('coupons');
+  const [tab, setTab] = useState<'stats' | 'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev'>('stats');
+
+  const [stats, setStats] = useState<AdminStats | null>(null);
+  const [statsLoading, setStatsLoading] = useState(false);
 
   const [inquiries, setInquiries] = useState<AdminInquiry[]>([]);
   const [inquiriesLoading, setInquiriesLoading] = useState(false);
@@ -93,6 +108,20 @@ export default function AdminPage() {
     setNewName(''); setNewDesc(''); setNewPoints(''); setNewThumb('');
     setCreating(false);
     await loadCoupons();
+  }
+
+  async function loadStats() {
+    setStatsLoading(true);
+    try {
+      const token = await getToken();
+      const res = await fetch('/api/admin/stats', { headers: { Authorization: `Bearer ${token}` } });
+      const data = await res.json();
+      setStats(data);
+    } catch (e) {
+      console.error('[stats] load error:', e);
+    } finally {
+      setStatsLoading(false);
+    }
   }
 
   async function loadInquiries() {
@@ -163,6 +192,7 @@ export default function AdminPage() {
   }
 
   useEffect(() => {
+    if (tab === 'stats' && !stats) loadStats();
     if (tab === 'inquiries' && inquiries.length === 0) loadInquiries();
     if (tab === 'exam-dev' && examFiles.length === 0) loadExamFiles();
   }, [tab]);
@@ -177,7 +207,7 @@ export default function AdminPage() {
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {([['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['exam-dev', '📝 문제 개발']] as const).map(([t, label]) => (
+        {([['stats', '📊 통계'], ['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['exam-dev', '📝 문제 개발']] as const).map(([t, label]) => (
           <button
             key={t}
             onClick={() => setTab(t as typeof tab)}
@@ -187,6 +217,73 @@ export default function AdminPage() {
           </button>
         ))}
       </div>
+
+      {tab === 'stats' && (
+        <div className="space-y-6">
+          {statsLoading ? (
+            <div className="text-center py-20 text-gray-400">불러오는 중...</div>
+          ) : stats ? (
+            <>
+              {/* 통계 카드 */}
+              <div className="grid grid-cols-4 gap-4">
+                <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                  <p className="text-xs text-gray-500 font-semibold mb-2">📊 총 가입자</p>
+                  <p className="text-3xl font-bold text-indigo-600">{stats.totalUsers.toLocaleString()}</p>
+                  <p className="text-xs text-gray-400 mt-2">명</p>
+                </div>
+                <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                  <p className="text-xs text-gray-500 font-semibold mb-2">👥 활성 사용자</p>
+                  <p className="text-3xl font-bold text-indigo-600">{stats.activeUsers24h.toLocaleString()}</p>
+                  <p className="text-xs text-gray-400 mt-2">24시간</p>
+                </div>
+                <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                  <p className="text-xs text-gray-500 font-semibold mb-2">📝 오늘 응시</p>
+                  <p className="text-3xl font-bold text-indigo-600">{stats.todayExamAttempts.toLocaleString()}</p>
+                  <p className="text-xs text-gray-400 mt-2">건</p>
+                </div>
+                <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+                  <p className="text-xs text-gray-500 font-semibold mb-2">💬 미해결 문의</p>
+                  <p className="text-3xl font-bold text-red-600">{stats.pendingInquiries.toLocaleString()}</p>
+                  <p className="text-xs text-gray-400 mt-2">건</p>
+                </div>
+              </div>
+
+              {/* 시험별 통계 테이블 */}
+              <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                <div className="px-5 py-4 border-b border-gray-200 bg-gray-50">
+                  <h2 className="font-semibold text-gray-800">시험별 통계</h2>
+                </div>
+                {stats.statsTopExams.length === 0 ? (
+                  <div className="text-center py-10 text-gray-400">
+                    <p>시험 응시 데이터가 없습니다.</p>
+                  </div>
+                ) : (
+                  <table className="w-full text-sm">
+                    <thead className="bg-gray-50 border-b border-gray-200">
+                      <tr>
+                        <th className="text-left px-5 py-3 text-gray-600 font-semibold">시험명</th>
+                        <th className="text-right px-5 py-3 text-gray-600 font-semibold">응시자</th>
+                        <th className="text-right px-5 py-3 text-gray-600 font-semibold">평균 점수</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {stats.statsTopExams.map((exam, idx) => (
+                        <tr key={idx} className="hover:bg-gray-50">
+                          <td className="px-5 py-3 font-medium text-gray-800 truncate">{exam.examTitle}</td>
+                          <td className="px-5 py-3 text-right text-gray-600">{exam.attempts.toLocaleString()}명</td>
+                          <td className="px-5 py-3 text-right font-semibold text-indigo-600">{exam.avgScore.toFixed(1)}점</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-20 text-gray-400">통계를 불러올 수 없습니다.</div>
+          )}
+        </div>
+      )}
 
       {tab === 'coupons' && (
         <div className="space-y-5">
