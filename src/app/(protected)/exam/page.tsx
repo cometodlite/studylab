@@ -149,12 +149,23 @@ export default function ExamListPage() {
           <div className="text-5xl">🏫</div>
           <div>
             <p className="font-semibold text-amber-900 mb-1">
-              {profile?.school ? `"${profile.school}"은(는) 등록되지 않은 학교입니다` : '학교를 설정해주세요'}
+              {profile?.school ? '등록된 학교가 아니에요.' : '학교를 설정해주세요'}
             </p>
-            <p className="text-sm text-amber-700 mb-3">설정에서 학교를 입력하면 해당 학교의 시험을 볼 수 있습니다.</p>
-            <Link href="/settings" className="inline-block bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition">
-              ⚙️ 설정 페이지로 이동
-            </Link>
+            <p className="text-sm text-amber-700 mb-3">
+              {profile?.school
+                ? '사용 가능한 학교가 아닌 경우 문의해주세요.'
+                : '설정에서 학교를 입력하면 해당 학교의 시험을 볼 수 있습니다.'}
+            </p>
+            <div className="flex gap-3 justify-center">
+              <Link href="/settings" className="inline-block bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition">
+                ⚙️ 설정 페이지로 이동
+              </Link>
+              {profile?.school && (
+                <Link href="/settings?tab=inquiry&type=학교 추가" className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition">
+                  💬 문의하기
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       )}
