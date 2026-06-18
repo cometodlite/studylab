@@ -47,10 +47,16 @@ export async function POST(req: NextRequest) {
   ];
 
   try {
+    console.log('[inquiries] Sending inquiry:', { inquiryId, category, subject, uid });
     await fsBatch(writeOps, token);
+    console.log('[inquiries] Inquiry saved successfully:', inquiryId);
     return NextResponse.json({ success: true, inquiryId });
   } catch (e) {
-    console.error('[inquiries] fsBatch failed:', e);
-    return NextResponse.json({ error: '문의 전송에 실패했습니다.' }, { status: 500 });
+    const errorMsg = e instanceof Error ? e.message : String(e);
+    console.error('[inquiries] fsBatch failed:', errorMsg, { writeOps, error: e });
+    return NextResponse.json({
+      error: '문의 전송에 실패했습니다.',
+      details: errorMsg
+    }, { status: 500 });
   }
 }
