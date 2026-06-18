@@ -1,6 +1,6 @@
 {
   "id": "bicheon-english-1-2-sheet4",
-  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 4회",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 4회 (중급~상급)",
   "category": "학교",
   "school": "부천일신중학교",
   "grade": 2,
@@ -9,347 +9,347 @@
   "difficulty": "보통",
   "timeLimit": 45,
   "totalScore": 100,
-  "passage": "의사소통기능\n⦁ 외모 묘사하기\nA: What does your best friend look like?\nB: She is tall and has big eyes.\n\n⦁ 성격 묘사하기\nA: What is she like?\nB: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사\nSome animals which live in the wild are good at camouflage.\n\n⦁ 5형식 동사\nTheir special looks keep them safe from predators.\n\n---\n\nTopic 1 A, B: 친구와 할머니, 애완견 묘사하기\nMinjin, what does your best friend look like?\nMy best friend Somi is tall with long curly hair.\nWhat is she like?\nShe is very active and nice. She helps everyone in our class.\n\n---\n\n본문: Can You Spot Them?\n\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. You can see them in the air, on land, and in the sea. Their special looks or abilities keep them safe from predators. Let me guide you through the world of animal camouflage.\n\nMountain Hare\n\nMountain hares are like rabbits, but they are bigger and have longer legs. They are very stylish animals. Mountain hares change colors according to season. In summer, they turn gray-brown to match the rocks and grass. In winter, they turn white to camouflage themselves in the snow. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\nDid you know?\nMountain hares have really big feet. Thanks to them, mountain hares can hop in deep snow and escape from predators.\n\n---\n\n의사소통기능\n⦁ 길 묻고 답하기\nA: How can I get to the museum?\nB: Go straight two blocks and make a left.\n\n⦁ 소요시간 말하기\nA: How long will it take to get there?\nB: It will take about 15 minutes.\n\n언어 형식\n⦁ 현재 완료\nI have known her since I was 10 years old.\n\n⦁ ask/tell/want + 목적어 + to부정사\nAmelia told me to try the fish and chips.\n\n---\n\nTopic 1 A, B: 길 묻기와 소요시간\nB: Excuse me. How can I get to the post office?\nG: Go straight one block. Then make a right. It will be on your left.\nB: How long will it take to get there?\nG: It will take only 5 minutes.\n\n---\n\n본문: See You in London!\n\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Come with me on my amazing trip!\n\nBeautiful Palace\n\nWe got on the famous red bus and the first stop was Buckingham Palace. The King and his family live there. We saw the King's Guard. The guards were wearing red jackets and tall black hats. We took pictures near them, but they didn't smile or move. They were like statues!\n\nYummy Meal\n\nNext, we went to Camden Market. This market is known for its food from around the world. Amelia told me to try the fish and chips. I thought, \"How strange! I have eaten fish many times before...",
+  "passage": "의사소통기능\n⦁ 외모 묘사하기: A: What does your best friend look like? B: She is tall and has big eyes.\n⦁ 성격 묘사하기: A: What is she like? B: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사: Some animals which live in the wild are good at camouflage.\n⦁ 5형식 동사: Their special looks keep them safe from predators.\n\n본문: Can You Spot Them?\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. Their special looks or abilities keep them safe from predators. Mountain hares are like rabbits, but bigger and have longer legs. Mountain hares change colors according to season. In summer, they turn gray-brown to match rocks and grass. In winter, they turn white. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\n---\n\n의사소통기능\n⦁ 길 묻고 답하기\nA: Excuse me. How can I get to the post office?\nB: Go straight one block. Then make a right. It will be on your left.\n\n⦁ 소요시간 말하기\nA: How long will it take to get there?\nB: It will take only 5 minutes.\n\n언어 형식\n⦁ 현재 완료: I have known her since I was 10 years old.\n⦁ ask/tell/want + 목적어 + to부정사: Amelia told me to try the fish and chips.\n\n본문: See You in London!\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Buckingham Palace - The King and his family live there. The guards were wearing red jackets and tall black hats. We took pictures, but they didn't smile or move. They were like statues! Camden Market - This market is known for its food from around the world. Amelia told me to try the fish and chips.",
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "사람의 외모를 묘사할 때 사용하는 표현은?",
+      "question": "'They were like statues'가 의미하는 바는?",
       "choices": [
-        "What is he like?",
-        "How is he?",
-        "What does he look like?",
-        "Where is he?",
-        "Who is he?"
+        "그들은 진짜 동상이었다",
+        "그들은 움직이지 않고 표정이 없었다",
+        "그들은 아름다웠다",
+        "그들은 크기가 크다",
+        "그들은 노래했다"
       ],
-      "answer": 2,
-      "explanation": "'What does ... look like?'는 외모를 묘사하는 표현입니다."
+      "answer": 1,
+      "explanation": "비유로 표현한 것: 동상처럼 움직이지 않음"
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "성격을 묘사할 때 사용하는 표현은?",
+      "question": "'nearly invisible'에 내포된 의미는?",
       "choices": [
-        "What does she look like?",
-        "What is she like?",
-        "How does she look?",
-        "Where is she from?",
-        "What color is she?"
+        "완전히 보이지 않는다",
+        "약간 보인다",
+        "거의 보이지 않지만 완전히 안 보이는 것은 아니다",
+        "아주 크다",
+        "아주 작다"
       ],
-      "answer": 1,
-      "explanation": "'What is ... like?'는 성격을 묘사하는 표현입니다."
+      "answer": 2,
+      "explanation": "'nearly' = 거의, 하지만 'invisible'의 완전함은 약간 약화됨"
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "길을 물을 때 사용하는 기본 표현은?",
+      "question": "'Changing colors makes them nearly invisible'의 'makes'가 나타내는 인과관계는?",
       "choices": [
-        "How far is it?",
-        "How long will it take?",
-        "How can I get to ...?",
-        "Where is the exit?",
-        "What time is it?"
+        "시간의 순서",
+        "원인과 결과",
+        "비교",
+        "대조",
+        "가정"
       ],
-      "answer": 2,
-      "explanation": "'How can I get to ...?'는 길을 묻는 표현입니다."
+      "answer": 1,
+      "explanation": "색 변화가 원인, 보이지 않음이 결과"
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "소요시간을 묻는 표현은?",
+      "question": "Mountain hares의 위장이 효과적인 이유를 가장 잘 설명하는 것은?",
       "choices": [
-        "How far is it?",
-        "How can I get there?",
-        "How long will it take?",
-        "How many people?",
-        "How much does it cost?"
+        "색이 예쁘다",
+        "크기가 크다",
+        "환경과 일치한다",
+        "빠르게 움직인다",
+        "많은 수가 있다"
       ],
       "answer": 2,
-      "explanation": "'How long will it take?'는 소요시간을 묻습니다."
+      "explanation": "'to match the rocks and grass' - 환경과의 일치가 핵심"
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "길을 설명할 때 사용하는 표현이 아닌 것은?",
+      "question": "'I can't wait to tell you'가 암시하는 Subin의 심정은?",
       "choices": [
-        "Go straight",
-        "Turn right",
-        "Make a left",
-        "Go ahead",
-        "Speak slowly"
+        "두렵다",
+        "슬프다",
+        "흥분하고 싶어한다",
+        "화났다",
+        "무관심하다"
       ],
-      "answer": 4,
-      "explanation": "'Speak slowly'는 길 안내와 무관합니다."
+      "answer": 2,
+      "explanation": "'can't wait to' = 간절한 기대감을 나타냄"
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "'make a left'와 같은 의미의 표현은?",
+      "question": "'They took pictures near them, but they didn't smile'에서 'but'이 나타내는 의미는?",
       "choices": [
-        "turn to the left",
-        "go to the left",
-        "stop on the left",
-        "look left",
-        "sit left"
+        "이유",
+        "시간",
+        "대조",
+        "결과",
+        "가능성"
       ],
-      "answer": 0,
-      "explanation": "'make a left' = 'turn to the left'입니다."
+      "answer": 2,
+      "explanation": "'but'은 기대(웃을 것)와 실제(웃지 않음)의 대조"
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "'Go straight two blocks'는 무엇을 의미하는가?",
+      "question": "본문에서 Mountain hares의 색깔 변화가 어느 계절부터 시작되는지 추론할 수 있는가?",
       "choices": [
-        "왼쪽으로 2칸",
-        "오른쪽으로 2칸",
-        "똑바로 2블록",
-        "뒤로 2칸",
-        "옆으로 2칸"
+        "봄",
+        "여름",
+        "가을",
+        "겨울",
+        "명시되지 않음"
       ],
-      "answer": 2,
-      "explanation": "'Go straight'는 '똑바로 가다', 'block'은 도시의 건물 구획입니다."
+      "answer": 4,
+      "explanation": "본문은 여름과 겨울만 언급하여 시작 시점은 명확하지 않음"
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "'It will take about 15 minutes'에서 시간을 표현하는 방식은?",
+      "question": "'The King and his family live there'에서 'there'가 가리키는 것은?",
       "choices": [
-        "정확한 시간",
-        "대략적인 시간",
-        "최소 시간",
-        "최대 시간",
-        "예상 불가능한 시간"
+        "런던",
+        "인천",
+        "영국",
+        "Buckingham Palace",
+        "영국 어딘가"
       ],
-      "answer": 1,
-      "explanation": "'about'은 '약', '대략'의 의미입니다."
+      "answer": 3,
+      "explanation": "'there' = 직전에 언급한 Buckingham Palace"
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 외모 묘사로 적절한 표현은?",
+      "question": "Subin이 본 세 가지 주요 경험을 순서대로 나열할 수 있는가?",
       "choices": [
-        "active and funny",
-        "tall and thin",
-        "kind and friendly",
-        "smart and clever",
-        "funny and polite"
+        "공항, 궁전, 시장",
+        "시장, 공항, 궁전",
+        "궁전, 공항, 시장",
+        "공항, 시장, 궁전",
+        "명시 순서와 다르다"
       ],
-      "answer": 1,
-      "explanation": "'tall and thin'은 외모 묘사입니다. 나머지는 성격입니다."
+      "answer": 0,
+      "explanation": "본문의 순서: 공항(Amelia 만남) → Buckingham Palace → Camden Market"
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "'She has big eyes and long hair'는 무엇을 설명하는가?",
+      "question": "'This market is known for its food'의 'known for'가 의미하는 바는?",
       "choices": [
-        "성격",
-        "능력",
-        "외모",
-        "직업",
-        "습관"
+        "위치로 알려짐",
+        "가격으로 알려짐",
+        "음식으로 유명함",
+        "과거로 알려짐",
+        "미래로 알려짐"
       ],
       "answer": 2,
-      "explanation": "신체 특징은 외모 묘사입니다."
+      "explanation": "'be known for' = '~으로 유명하다'"
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "'He is active and nice'는 무엇을 설명하는가?",
+      "question": "Subin과 Amelia의 관계가 '단순한 친구'가 아닌 이유는?",
       "choices": [
-        "외모",
-        "성격",
-        "나이",
-        "직업",
-        "능력"
+        "최근에 만났다",
+        "10살부터 알고 있다",
+        "런던에서 만났다",
+        "사진을 함께 찍었다",
+        "같은 학교에 다닌다"
       ],
       "answer": 1,
-      "explanation": "'active'와 'nice'는 성격을 나타내는 형용사입니다."
+      "explanation": "'I have known her since I was 10 years old' - 오랜 친분 암시"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "길 안내에서 'on your left'의 의미는?",
-      "choice s": [
-        "왼쪽으로 가서",
-        "당신의 왼쪽에",
-        "왼쪽에 있는",
-        "왼쪽으로",
-        "왼쪽 앞에"
+      "question": "'How can I get to the post office?'와 'How long will it take?'의 관계는?",
+      "choices": [
+        "같은 질문",
+        "연속된 대화",
+        "반대 의미",
+        "독립적인 질문",
+        "비교 질문"
       ],
       "answer": 1,
-      "explanation": "'on your left'는 '당신의 왼쪽에'를 의미합니다."
+      "explanation": "첫 번째 질문으로 길을 물은 후 두 번째 질문으로 시간을 물음"
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "길 안내에서 'It will be on your right'는?",
+      "question": "'Go straight one block. Then make a right. It will be on your left.'의 구조적 특징은?",
       "choices": [
-        "오른쪽으로 가라",
-        "오른쪽에 도착할 것이다",
-        "오른쪽에 있을 것이다",
-        "오른쪽을 보라",
-        "오른쪽으로 돌아라"
+        "모두 명령문",
+        "모두 질문",
+        "명령문과 진술문의 혼합",
+        "모두 과거형",
+        "모두 진행형"
       ],
       "answer": 2,
-      "explanation": "미래형으로 '오른쪽에 있을 것이다'를 의미합니다."
+      "explanation": "처음 두 문장은 명령문, 마지막은 미래 진술문"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "'Then make a right'에서 'then'의 역할은?",
+      "question": "왜 'Changing colors makes them nearly invisible'에서 'nearly'가 중요한가?",
       "choices": [
-        "그 때",
-        "그러면",
-        "그 다음",
-        "그러나",
-        "따라서"
+        "완전 불가능을 나타내기 위해",
+        "부분적 효과를 나타내기 위해",
+        "시간을 나타내기 위해",
+        "장소를 나타내기 위해",
+        "강조를 위해"
       ],
-      "answer": 2,
-      "explanation": "'then'은 시간 순서를 나타내는 부사로 '그 다음'을 의미합니다."
+      "answer": 1,
+      "explanation": "완전히 보이지 않는 것이 아니라 거의 보이지 않음을 표현"
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "'How long will it take to get to the museum?'에 대한 답변으로 적절한 것은?",
+      "question": "'tell + 목적어 + to부정사'의 톤이나 의도는?",
       "choices": [
-        "It's very far",
-        "You can go straight",
-        "It will take about 20 minutes",
-        "It's on the right",
-        "The bus is coming"
+        "제안",
+        "권고",
+        "지시/명령",
+        "부탁",
+        "제한"
       ],
       "answer": 2,
-      "explanation": "소요시간을 묻는 질문에 '약 20분 걸릴 것이다'가 적절한 답변입니다."
+      "explanation": "이 구조는 상대방에게 '~하라'는 지시나 명령을 함축"
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "호칭이나 존댓글 없이 길을 묻는 것이 적절한 상황은?",
-      "choice s": [
-        "친한 친구에게",
-        "낯선 사람에게",
-        "부모님에게",
-        "선생님에게",
-        "목사님에게"
+      "question": "본문의 구성 순서가 이 순서인 이유는?",
+      "choices": [
+        "시간순",
+        "중요도순",
+        "공간순",
+        "감정 순서",
+        "무작위"
       ],
       "answer": 0,
-      "explanation": "친한 친구에게는 존댓글을 쓰지 않아도 됩니다."
+      "explanation": "공항 도착 → 궁전 방문 → 시장 방문 순서로 시간 순서"
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "'Excuse me'를 사용하는 이유는?",
+      "question": "'I have eaten fish many times before'의 함축된 의미는?",
       "choices": [
-        "미안하다는 뜻",
-        "부르려고",
-        "주의를 끌려고",
-        "도움을 청하려고",
-        "양보하려고"
+        "처음 먹었다",
+        "많이 먹었다",
+        "다시 먹고 싶다",
+        "놀라움을 표현",
+        "거부감을 나타냄"
       ],
-      "answer": 2,
-      "explanation": "'Excuse me'는 상대방의 주의를 끌기 위한 표현입니다."
+      "answer": 1,
+      "explanation": "'many times'는 빈번함을 나타냄"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "길을 물을 때 예의 바른 순서는?",
+      "question": "Mountain hares와 일반 토끼의 관계를 설명하는 표현은?",
       "choices": [
-        "How can I get to...?",
-        "Excuse me. How can I get to...?",
-        "How can I get to...? Excuse me.",
-        "Can you help me?",
-        "Do you know...?"
+        "완전히 다르다",
+        "같다",
+        "유사하지만 더 크다",
+        "작다",
+        "상관없다"
       ],
-      "answer": 1,
-      "explanation": "먼저 주의를 끈 후 질문하는 것이 예의입니다."
+      "answer": 2,
+      "explanation": "'like rabbits, but bigger' - 유사성과 차이점을 동시에 표현"
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "'Thank you for your help'는?",
+      "question": "'since I was 10 years old'가 현재완료와 함께 사용되는 이유는?",
       "choices": [
-        "도움 청하기",
-        "도움 수락하기",
-        "도움 거절하기",
-        "감사 표현",
-        "사과하기"
+        "과거만 나타내기",
+        "미래만 나타내기",
+        "과거부터 현재까지의 지속",
+        "현재만 나타내기",
+        "가능성을 나타내기"
       ],
       "answer": 2,
-      "explanation": "감사를 표현하는 문장입니다."
+      "explanation": "'since + 과거시점'과 현재완료는 지속을 함께 표현"
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "길 안내를 받은 후 감사할 때의 표현은?",
+      "question": "본문의 전체 톤과 목적은?",
       "choices": [
-        "I don't understand",
-        "Can you repeat?",
-        "Thank you",
-        "I'm lost",
-        "I'm tired"
+        "교육적",
+        "여행 경험 공유",
+        "정보 제공",
+        "뉴스 보도",
+        "비판"
       ],
-      "answer": 2,
-      "explanation": "'Thank you'는 감사 표현입니다."
+      "answer": 1,
+      "explanation": "Subin이 자신의 런던 여행 경험을 흥분하여 공유"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "'What does your friend look like?'라는 질문에 외모를 2가지 이상 포함한 답변을 만드세요.",
-      "answer": "She is tall and has long black hair. / He is short and has blue eyes. (또는 유사한 외모 묘사 2가지 이상)",
-      "explanation": "외모 묘사는 최소 2가지 특징을 포함해야 합니다."
+      "question": "'They were like statues'는 왜 'They didn't move or smile'보다 더 효과적인 표현일까요?",
+      "answer": "비유를 통해 더 생생하고 시각적으로 그려지며, 동상의 특징을 모두 포함하여 위병의 움직임 없는 모습을 더 잘 나타낸다.",
+      "explanation": "문학적 표현의 효과"
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "'What is he like?'라는 질문에 성격을 2가지 이상 포함한 답변을 만드세요.",
-      "answer": "He is friendly and kind. / She is smart and funny. (또는 유사한 성격 묘사 2가지 이상)",
-      "explanation": "성격 묘사는 최소 2가지 특징을 포함해야 합니다."
+      "question": "'I have known her since I was 10 years old'의 현재완료가 정보적으로 전달하는 의미는?",
+      "answer": "단순히 만난 사실이 아니라 10살부터 현재까지 계속 친구로 지내온 깊은 관계임을 나타낸다.",
+      "explanation": "현재완료의 함축 의미"
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "'How can I get to the bank?'라는 길을 묻는 질문에 영어로 길을 안내하세요.",
-      "answer": "Go straight three blocks and turn left. It will be on your right. / Excuse me. Go straight two blocks. Then make a right. (또는 유사한 길 안내)",
-      "explanation": "명확한 방향 표현을 포함해야 합니다."
+      "question": "길 안내의 순서 표현('Go straight', 'Then make a right', 'It will be on your left')이 명확한 이유를 설명하세요.",
+      "answer": "명령문으로 행동을 지시하고, 'Then'으로 순서를 명확히 하며, 미래 진술문으로 최종 목표를 제시하여 단계적이고 명확하다.",
+      "explanation": "구조와 표현의 효과성"
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "'How long will it take?'라는 소요시간을 묻는 질문에 3가지 다른 방식으로 답변하세요.",
-      "answer": "1. It will take about 10 minutes. 2. It takes 15 minutes to walk. 3. You can get there in 5 minutes by bus.",
-      "explanation": "다양한 시간 표현 방식이 가능합니다."
+      "question": "'Amelia told me to try the fish and chips'가 Subin의 개인적 선호를 나타내지 않는 이유는 무엇인가?",
+      "answer": "'told me to'는 Subin 자신의 선택이 아니라 Amelia의 지시/제안을 따른 것이므로 처음에는 낯선 음식에 대해 '어색하다'고 생각했음을 암시한다.",
+      "explanation": "tell + 목적어 + to부정사의 함축 의미"
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "의사소통 기능과 언어 형식의 관계를 설명하고 예를 드세요.",
-      "answer": "의사소통 기능은 실제 대화에서 하는 행동(길 묻기, 외모 묘사 등)이고, 언어 형식은 그것을 표현하기 위한 문법(현재완료, 관계대명사 등)입니다. 예: 성격 묘사(기능) - 'is + 형용사' (형식)",
-      "explanation": "기능과 형식의 관계를 이해하는 것이 중요합니다."
+      "question": "본문이 '외모 묘사'와 '길 찾기' 두 가지 의사소통기능을 포함하는 이유는?",
+      "answer": "일상에서 자주 사용하는 기본 의사소통기능을 다루어 학생들이 실제 상황에서 활용할 수 있도록 하기 위함이다.",
+      "explanation": "교육적 목적 이해"
     }
   ]
 }

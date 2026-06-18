@@ -1,355 +1,355 @@
 {
   "id": "bicheon-english-1-2-sheet1",
-  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 1회",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 1회 (기초)",
   "category": "학교",
   "school": "부천일신중학교",
   "grade": 2,
   "subject": "영어",
   "sheet": 1,
-  "difficulty": "보통",
+  "difficulty": "기초",
   "timeLimit": 45,
   "totalScore": 100,
-  "passage": "의사소통기능\n⦁ 외모 묘사하기\nA: What does your best friend look like?\nB: She is tall and has big eyes.\n\n⦁ 성격 묘사하기\nA: What is she like?\nB: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사\nSome animals which live in the wild are good at camouflage.\n\n⦁ 5형식 동사\nTheir special looks keep them safe from predators.\n\n---\n\nTopic 1 A, B: 친구와 할머니, 애완견 묘사하기\nMinjin, what does your best friend look like?\nMy best friend Somi is tall with long curly hair.\nWhat is she like?\nShe is very active and nice. She helps everyone in our class.\n\n---\n\n본문: Can You Spot Them?\n\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. You can see them in the air, on land, and in the sea. Their special looks or abilities keep them safe from predators. Let me guide you through the world of animal camouflage.\n\nMountain Hare\n\nMountain hares are like rabbits, but they are bigger and have longer legs. They are very stylish animals. Mountain hares change colors according to season. In summer, they turn gray-brown to match the rocks and grass. In winter, they turn white to camouflage themselves in the snow. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\nDid you know?\nMountain hares have really big feet. Thanks to them, mountain hares can hop in deep snow and escape from predators.",
+  "passage": "의사소통기능\n⦁ 외모 묘사하기: A: What does your best friend look like? B: She is tall and has big eyes.\n⦁ 성격 묘사하기: A: What is she like? B: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사: Some animals which live in the wild are good at camouflage.\n⦁ 5형식 동사: Their special looks keep them safe from predators.\n\n본문: Can You Spot Them?\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. Their special looks or abilities keep them safe from predators. Mountain hares are like rabbits, but bigger and have longer legs. Mountain hares change colors according to season. In summer, they turn gray-brown to match rocks and grass. In winter, they turn white. Changing colors makes them nearly invisible to predators like wild dogs and eagles.",
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "'What does your best friend look like?'는 어떤 의사소통 기능을 나타내는가?",
+      "question": "'What does your best friend look like?'는 무엇을 묻는 표현인가?",
       "choices": [
-        "물건 설명하기",
-        "외모 묘사하기",
-        "성격 묘사하기",
-        "길 묻기",
-        "음식 주문하기"
+        "이름",
+        "외모",
+        "성격",
+        "나이",
+        "학교"
       ],
       "answer": 1,
-      "explanation": "'look like'는 외모를 묘사할 때 사용합니다."
+      "explanation": "본문 첫 번째 의사소통기능: 외모 묘사하기"
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "'What is she like?'와 'What does she look like?'의 차이는?",
+      "question": "'She is tall and has big eyes'에서 나타내는 것은?",
       "choices": [
-        "차이가 없다",
-        "둘 다 외모를 묘사한다",
-        "전자는 성격, 후자는 외모를 묘사한다",
-        "전자는 외모, 후자는 성격을 묘사한다",
-        "둘 다 성격을 묘사한다"
+        "성격",
+        "외모",
+        "능력",
+        "취미",
+        "직업"
       ],
-      "answer": 2,
-      "explanation": "'What is she like?'는 성격, 'What does she look like?'는 외모를 묘사합니다."
+      "answer": 1,
+      "explanation": "신체 특징은 외모를 나타냅니다."
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "'Some animals which live in the wild are good at camouflage'에서 'which'의 역할은?",
+      "question": "본문에서 Mountain hares의 크기는?",
       "choices": [
-        "의문사",
-        "접속사",
-        "주격 관계대명사",
-        "목적격 관계대명사",
-        "소유격 관계대명사"
+        "토끼보다 작다",
+        "토끼와 같다",
+        "토끼보다 크다",
+        "얼마나 큰지 모른다",
+        "설명이 없다"
       ],
       "answer": 2,
-      "explanation": "'which'는 'animals'를 수식하는 주격 관계대명사입니다."
+      "explanation": "본문: 'Mountain hares are like rabbits, but bigger'"
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "'Their special looks keep them safe from predators'는 어떤 문형인가?",
+      "question": "Mountain hares가 계절에 따라 하는 일은?",
       "choices": [
-        "1형식",
-        "2형식",
-        "3형식",
-        "4형식",
-        "5형식"
+        "이동한다",
+        "먹이를 찾는다",
+        "색깔을 변한다",
+        "집을 짓는다",
+        "노래한다"
       ],
-      "answer": 4,
-      "explanation": "'keep + 목적어 + 형용사(safe)'로 5형식입니다."
+      "answer": 2,
+      "explanation": "본문: 'Mountain hares change colors according to season'"
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 5형식 동사로 올바르게 사용된 것은?",
+      "question": "여름에 Mountain hares의 색은?",
       "choices": [
-        "I make a cake",
-        "She keeps busy",
-        "He found the book",
-        "They went home",
-        "We saw him"
+        "흰색",
+        "검정색",
+        "회색-갈색",
+        "노란색",
+        "초록색"
       ],
-      "answer": 1,
-      "explanation": "'keep + 목적어 + 형용사(busy)'는 5형식입니다."
+      "answer": 2,
+      "explanation": "본문: 'In summer, they turn gray-brown'"
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "'camouflage'의 가장 가까운 의미는?",
+      "question": "겨울에 Mountain hares의 색은?",
       "choices": [
-        "색깔 변화",
-        "위장, 은폐",
-        "포식자",
-        "동물",
-        "행동"
+        "회색-갈색",
+        "흰색",
+        "검정색",
+        "노란색",
+        "초록색"
       ],
       "answer": 1,
-      "explanation": "Camouflage는 '위장'을 의미합니다."
+      "explanation": "본문: 'In winter, they turn white'"
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "Mountain hares가 여름에 회색-갈색으로 변하는 이유는?",
+      "question": "'camouflage'는 무엇인가?",
       "choices": [
-        "포식자를 공격하기 위해",
-        "바위와 풀에 위장하기 위해",
-        "다른 토끼들과 구분하기 위해",
-        "체온을 유지하기 위해",
-        "빠르게 달리기 위해"
+        "음식",
+        "장소",
+        "위장",
+        "동물",
+        "색깔"
       ],
-      "answer": 1,
-      "explanation": "본문: 'In summer, they turn gray-brown to match the rocks and grass'"
+      "answer": 2,
+      "explanation": "본문의 핵심 개념: 위장 능력"
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "'nearly invisible'이 의미하는 바는?",
+      "question": "Mountain hares가 회색-갈색으로 변하는 이유는?",
       "choices": [
-        "완전히 보인다",
-        "거의 보이지 않는다",
-        "부분적으로 보인다",
-        "아주 크다",
-        "매우 느리다"
+        "예쁘기 위해",
+        "포식자를 공격하기 위해",
+        "바위와 풀에 위장하기 위해",
+        "추워서",
+        "더워서"
       ],
-      "answer": 1,
-      "explanation": "'Nearly'는 '거의'를 의미합니다."
+      "answer": 2,
+      "explanation": "본문: 'to match rocks and grass'"
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 관계대명사 'which'를 올바르게 사용한 것은?",
+      "question": "Mountain hares가 흰색으로 변하는 이유는?",
       "choices": [
-        "The book which I read it",
-        "The girl which lives here",
-        "The animal which protect itself",
-        "The trip which I took",
-        "Students which study hard"
+        "예쁘기 위해",
+        "눈에 위장하기 위해",
+        "따뜻해지기 위해",
+        "다른 동물과 친구가 되기 위해",
+        "겨울에 밥을 찾기 위해"
       ],
-      "answer": 3,
-      "explanation": "'The trip which I took'가 문법적으로 올바릅니다."
+      "answer": 1,
+      "explanation": "본문 문맥상 눈(snow)에 위장하기 위함"
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "'According to season'의 의미는?",
+      "question": "Mountain hares를 공격하는 포식자는?",
       "choices": [
-        "시간에 따라",
-        "날씨에 따라",
-        "계절에 따라",
-        "환경에 따라",
-        "포식자에 따라"
+        "사람",
+        "다른 토끼",
+        "사자",
+        "야생견과 독수리",
+        "고양이"
       ],
-      "answer": 2,
-      "explanation": "'According to'는 '~에 따라'를 의미하며, season은 계절입니다."
+      "answer": 3,
+      "explanation": "본문: 'wild dogs and eagles'"
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "'Thanks to them, mountain hares can hop'에서 'thanks to'의 의미는?",
+      "question": "'nearly invisible'이 무엇인가?",
       "choices": [
-        "감사한다",
-        "~때문에",
-        "~에도 불구하고",
-        "~을 통해",
-        "~없이"
+        "완전히 보인다",
+        "거의 안 보인다",
+        "아주 크다",
+        "매우 느리다",
+        "아주 빠르다"
       ],
       "answer": 1,
-      "explanation": "'thanks to' = 'because of' = '~때문에'입니다."
+      "explanation": "'nearly' = '거의', 'invisible' = '보이지 않는'"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "Mountain hare의 특징으로 틀린 것은?",
+      "question": "본문의 주제는?",
       "choices": [
-        "토끼보다 크다",
-        "긴 다리가 있다",
-        "계절에 따라 색이 변한다",
-        "깊은 눈에서 잘 뛸 수 있다",
-        "포식자를 공격할 수 있다"
+        "Mountain hares 먹이",
+        "색깔 이름들",
+        "위장 능력",
+        "포식자 종류",
+        "계절 변화"
       ],
-      "answer": 4,
-      "explanation": "본문에 포식자를 공격한다는 내용은 없습니다."
+      "answer": 2,
+      "explanation": "본문 전체가 위장 능력(camouflage)을 설명합니다."
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "본문에서 'camouflage'는 동물에게 어떤 역할을 하는가?",
+      "question": "'What is she like?'는 무엇을 묻는가?",
       "choices": [
-        "먹이를 찾도록",
-        "포식자로부터 보호",
-        "빠르게 달리도록",
-        "다른 동물과 친구가 되도록",
-        "새끼를 키우도록"
+        "외모",
+        "성격",
+        "이름",
+        "나이",
+        "직업"
       ],
       "answer": 1,
-      "explanation": "본문: 'Their special looks or abilities keep them safe from predators'"
+      "explanation": "본문 두 번째 의사소통기능: 성격 묘사하기"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "'You can see them in the air, on land, and in the sea'의 'them'이 지칭하는 것은?",
+      "question": "'She is active and funny'는 무엇을 설명하는가?",
       "choices": [
-        "포식자",
-        "색깔",
-        "동물",
-        "사람",
-        "환경"
+        "외모",
+        "성격",
+        "능력",
+        "나이",
+        "학교"
       ],
-      "answer": 2,
-      "explanation": "'them'은 위장 능력이 있는 동물들을 가리킵니다."
+      "answer": 1,
+      "explanation": "'active'와 'funny'는 성격을 나타냅니다."
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "'Somi is tall with long curly hair'는 무엇을 묘사하는가?",
+      "question": "Mountain hares의 다리는?",
       "choices": [
-        "성격",
-        "나이",
-        "외모",
-        "키만",
-        "머리색만"
+        "짧다",
+        "길다",
+        "없다",
+        "굵다",
+        "가늘다"
       ],
-      "answer": 2,
-      "explanation": "키와 머리 모양은 외모 묘사입니다."
+      "answer": 1,
+      "explanation": "본문: 'have longer legs'"
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 성격 묘사로 가장 적절한 것은?",
+      "question": "'Some animals which live in the wild'에서 'which'의 역할은?",
       "choices": [
-        "tall and thin",
-        "short hair",
-        "active and funny",
-        "blue eyes",
-        "long legs"
+        "의문사",
+        "명사를 수식",
+        "동사",
+        "부사",
+        "전치사"
       ],
-      "answer": 2,
-      "explanation": "'active and funny'는 성격을 나타냅니다."
+      "answer": 1,
+      "explanation": "관계대명사 'which'는 'animals'를 수식합니다."
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "'keep + 목적어 + 형용사' 구조의 의미는?",
+      "question": "'Their special looks keep them safe'의 'keep'은?",
       "choices": [
-        "~을 보유한다",
-        "~하게 유지한다",
-        "~을 얻다",
-        "~을 생각한다",
-        "~을 보인다"
+        "잡다",
+        "유지하다",
+        "가져가다",
+        "찾다",
+        "잃다"
       ],
       "answer": 1,
-      "explanation": "'keep them safe'는 '그들을 안전하게 유지한다'는 의미입니다."
+      "explanation": "'keep + 목적어 + 형용사(safe)' = 5형식: '~하게 유지하다'"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "'Mountain hares have really big feet'의 목적은?",
+      "question": "본문에서 Mountain hares의 특징 중 가장 중요한 것은?",
       "choices": [
-        "토끼를 비판하기",
-        "큰 발의 이점 설명",
-        "포식자 설명",
-        "색깔 변화 설명",
-        "흥미로운 정보 제시"
+        "크기",
+        "다리 길이",
+        "먹이",
+        "위장 능력",
+        "속도"
       ],
-      "answer": 4,
-      "explanation": "'Did you know?'로 시작하여 흥미로운 추가 정보를 제시합니다."
+      "answer": 3,
+      "explanation": "본문 제목 'Can You Spot Them?'과 camouflage가 핵심입니다."
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "본문의 주제로 가장 적절한 것은?",
+      "question": "'Changing colors makes them nearly invisible'에서 주어는?",
       "choices": [
-        "동물 먹이",
-        "색깔 이름",
-        "위장 능력",
-        "포식자 종류",
-        "한겨울 생존"
+        "colors",
+        "them",
+        "predators",
+        "changes",
+        "invisible"
       ],
-      "answer": 2,
-      "explanation": "본문 전체가 동물의 위장 능력을 설명합니다."
+      "answer": 0,
+      "explanation": "'Changing colors'가 주어, 'makes'가 동사입니다."
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "'stylish'의 의미는?",
+      "question": "색깔 변화가 Mountain hares에게 하는 역할은?",
       "choices": [
-        "약한",
-        "우아한, 멋진",
-        "빠른",
-        "신비로운",
-        "강한"
+        "더 아름답게",
+        "포식자로부터 보호",
+        "빠르게 달리게",
+        "높이 뛰게",
+        "밥을 찾게"
       ],
       "answer": 1,
-      "explanation": "Stylish는 '우아한, 멋진'을 의미합니다."
+      "explanation": "본문: '포식자로부터 안전하게 유지'"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "'What does he look like?'라는 질문에 대해 외모를 묘사하는 답변을 만드세요.",
-      "answer": "He is tall and has short black hair. / He is slim with brown eyes. (또는 유사한 외모 묘사)",
-      "explanation": "외모 묘사는 신체 특징을 포함해야 합니다."
+      "question": "본문에 따르면 Mountain hares가 계절마다 색을 바꾸는 두 가지 색을 쓰세요.",
+      "answer": "회색-갈색(gray-brown)과 흰색(white)",
+      "explanation": "본문 직접 인용"
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "'What is he like?'라는 질문에 대해 성격을 묘사하는 답변을 만드세요.",
-      "answer": "He is friendly and kind. / He is funny and smart. (또는 유사한 성격 묘사)",
-      "explanation": "성격 묘사는 성격 특징을 포함해야 합니다."
+      "question": "'What does your best friend look like?'라고 누군가 물었을 때 외모를 2가지 포함해서 답하세요.",
+      "answer": "She/He is tall and has big/small eyes. (또는 유사한 외모 묘사)",
+      "explanation": "의사소통기능 직접 응용"
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "'Some animals which live in the forest are endangered'를 한국어로 해석하세요.",
-      "answer": "숲에서 사는 일부 동물들은 멸종 위기에 처해 있다.",
-      "explanation": "'which'는 관계대명사로 선행사 'animals'를 수식합니다."
+      "question": "Mountain hares와 일반 토끼의 차이점을 본문에서 찾아 한국어로 쓰세요.",
+      "answer": "Mountain hares가 더 크고 다리가 더 길다",
+      "explanation": "본문: 'bigger and have longer legs'"
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "Mountain hare의 위장 방법 두 가지를 본문에서 찾아 설명하세요.",
-      "answer": "1. 계절에 따라 색깔을 변화시킴 (여름: 회색-갈색, 겨울: 흰색) 2. 큰 발로 깊은 눈에서 도망칠 수 있음",
-      "explanation": "본문에 명시된 위장 방법입니다."
+      "question": "본문에서 'camouflage'(위장)가 Mountain hares에게 중요한 이유를 한 문장으로 쓰세요.",
+      "answer": "포식자로부터 자신을 보호하기 위해 (또는 안전하게 지내기 위해)",
+      "explanation": "본문의 핵심 내용"
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "'Their special looks keep them safe from predators'의 'keep'을 '보유하다'는 의미로 바꿀 수 있는가? 이유를 설명하세요.",
-      "answer": "아니오, 'keep'은 여기서 '~하게 유지하다'는 의미이므로 바꿀 수 없습니다. '보유하다'는 의미로 사용하면 문장이 어색해집니다.",
-      "explanation": "문맥에 따라 같은 단어도 다른 의미로 사용됩니다."
+      "question": "'She is active and funny'를 한국어로 번역하고, 이것이 무엇을 설명하는지 쓰세요.",
+      "answer": "번역: 그녀는 활발하고 재미있다. 설명: 성격을 나타낸다 (또는 성격 묘사)",
+      "explanation": "의사소통기능 이해"
     }
   ]
 }

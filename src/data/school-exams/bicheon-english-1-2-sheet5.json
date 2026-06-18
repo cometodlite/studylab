@@ -1,355 +1,355 @@
 {
   "id": "bicheon-english-1-2-sheet5",
-  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 5회",
+  "title": "부천일신중 2학년 영어 1학기 기말 모의고사 5회 (상급)",
   "category": "학교",
   "school": "부천일신중학교",
   "grade": 2,
   "subject": "영어",
   "sheet": 5,
-  "difficulty": "보통",
-  "timeLimit": 45,
+  "difficulty": "높음",
+  "timeLimit": 50,
   "totalScore": 100,
-  "passage": "의사소통기능\n⦁ 외모 묘사하기\nA: What does your best friend look like?\nB: She is tall and has big eyes.\n\n⦁ 성격 묘사하기\nA: What is she like?\nB: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사\nSome animals which live in the wild are good at camouflage.\n\n⦁ 5형식 동사\nTheir special looks keep them safe from predators.\n\n---\n\nTopic 1 A, B: 친구와 할머니, 애완견 묘사하기\nMinjin, what does your best friend look like?\nMy best friend Somi is tall with long curly hair.\nWhat is she like?\nShe is very active and nice. She helps everyone in our class.\n\n---\n\n본문: Can You Spot Them?\n\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. You can see them in the air, on land, and in the sea. Their special looks or abilities keep them safe from predators. Let me guide you through the world of animal camouflage.\n\nMountain Hare\n\nMountain hares are like rabbits, but they are bigger and have longer legs. They are very stylish animals. Mountain hares change colors according to season. In summer, they turn gray-brown to match the rocks and grass. In winter, they turn white to camouflage themselves in the snow. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\nDid you know?\nMountain hares have really big feet. Thanks to them, mountain hares can hop in deep snow and escape from predators.\n\n---\n\n의사소통기능\n⦁ 길 묻고 답하기\nA: How can I get to the museum?\nB: Go straight two blocks and make a left.\n\n⦁ 소요시간 말하기\nA: How long will it take to get there?\nB: It will take about 15 minutes.\n\n언어 형식\n⦁ 현재 완료\nI have known her since I was 10 years old.\n\n⦁ ask/tell/want + 목적어 + to부정사\nAmelia told me to try the fish and chips.\n\n---\n\nTopic 1 A, B: 길 묻기와 소요시간\nB: Excuse me. How can I get to the post office?\nG: Go straight one block. Then make a right. It will be on your left.\nB: How long will it take to get there?\nG: It will take only 5 minutes.\n\n---\n\n본문: See You in London!\n\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Come with me on my amazing trip!\n\nBeautiful Palace\n\nWe got on the famous red bus and the first stop was Buckingham Palace. The King and his family live there. We saw the King's Guard. The guards were wearing red jackets and tall black hats. We took pictures near them, but they didn't smile or move. They were like statues!\n\nYummy Meal\n\nNext, we went to Camden Market. This market is known for its food from around the world. Amelia told me to try the fish and chips. I thought, \"How strange! I have eaten fish many times before...",
+  "passage": "의사소통기능\n⦁ 외모 묘사하기: A: What does your best friend look like? B: She is tall and has big eyes.\n⦁ 성격 묘사하기: A: What is she like? B: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사: Some animals which live in the wild are good at camouflage.\n⦁ 5형식 동사: Their special looks keep them safe from predators.\n\n본문: Can You Spot Them?\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. Their special looks or abilities keep them safe from predators. Mountain hares are like rabbits, but bigger and have longer legs. Mountain hares change colors according to season. In summer, they turn gray-brown to match rocks and grass. In winter, they turn white. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\n---\n\n의사소통기능\n⦁ 길 묻고 답하기\nA: Excuse me. How can I get to the post office?\nB: Go straight one block. Then make a right. It will be on your left.\n\n⦁ 소요시간 말하기\nA: How long will it take to get there?\nB: It will take only 5 minutes.\n\n언어 형식\n⦁ 현재 완료: I have known her since I was 10 years old.\n⦁ ask/tell/want + 목적어 + to부정사: Amelia told me to try the fish and chips.\n\n본문: See You in London!\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Buckingham Palace - The King and his family live there. The guards were wearing red jackets and tall black hats. We took pictures, but they didn't smile or move. They were like statues! Camden Market - This market is known for its food from around the world. Amelia told me to try the fish and chips.",
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 'What does ... look like?'로 물어볼 수 있는 것은?",
+      "question": "'Some animals which live in the wild are very good at camouflage'에서 관계절이 생략되면 의미가 달라지는 이유는?",
       "choices": [
-        "성격",
-        "성격 + 외모",
-        "외모만",
-        "성격만",
-        "습관"
+        "문법적으로 틀리기 때문",
+        "선행사의 범위가 달라지기 때문",
+        "동사의 형태가 변하기 때문",
+        "시제가 변하기 때문",
+        "발음이 달라지기 때문"
       ],
-      "answer": 2,
-      "explanation": "'look like'는 외모를 묻는 표현입니다."
+      "answer": 1,
+      "explanation": "관계절이 'which live in the wild'이 없으면 모든 동물이 위장을 잘한다는 뜻이 됨"
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "'Somi is tall with long curly hair'는 무엇을 설명하는가?",
+      "question": "'Changing colors makes them nearly invisible to predators like wild dogs and eagles'의 문장 구조에서 'like'의 역할은?",
       "choices": [
-        "성격",
-        "외모",
-        "직업",
-        "나이",
-        "출신지"
+        "동사",
+        "접속사",
+        "전치사로 예시 제시",
+        "부사",
+        "형용사"
       ],
-      "answer": 1,
-      "explanation": "신체 특징이므로 외모입니다."
+      "answer": 2,
+      "explanation": "'like' = '~와 같은, ~와 같이' - 포식자의 예를 제시"
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "관계대명사 'which'가 올바르게 사용된 문장은?",
+      "question": "만약 산토끼가 겨울에도 회색-갈색으로 유지된다면 어떤 결과가 초래될 것인가?",
       "choices": [
-        "The animal which I like",
-        "The book which is interesting",
-        "The person which lives here",
-        "The place which is far",
-        "All of the above"
+        "포식자들이 더 잘 볼 수 있다",
+        "색깔 변화 에너지를 절약할 수 있다",
+        "더 예쁠 것이다",
+        "음식을 찾기 쉬워질 것이다",
+        "이동이 더 빨라질 것이다"
       ],
-      "answer": 4,
-      "explanation": "'which'는 물건에 사용되는데, 모두 물건입니다."
+      "answer": 0,
+      "explanation": "겨울 눈 배경에서 회색-갈색은 눈에 띄므로 포식자에게 더 노출됨"
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "'I have known her since I was 10'은 현재완료가 맞는가?",
+      "question": "'She is active and funny'라는 성격 묘사가 'She is tall and has big eyes'라는 외모 묘사보다 더 자주 기억되는 이유는?",
       "choices": [
-        "아니오, 과거형이어야 한다",
-        "네, 맞습니다",
-        "아니오, 미래형이어야 한다",
-        "아니오, 진행형이어야 한다",
-        "아니오, 완료형이어야 한다"
+        "더 자주 변한다",
+        "더 중요하다",
+        "더 개인적이다",
+        "더 자세하다",
+        "더 객관적이다"
       ],
-      "answer": 1,
-      "explanation": "10살부터 지금까지의 지속된 경험이므로 현재완료가 맞습니다."
+      "answer": 2,
+      "explanation": "성격은 개인의 본질을 나타내므로 더 개인적이고 기억에 잘 남음"
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "'tell + 목적어 + to부정사' 구조의 의미는?",
+      "question": "'I have known her since I was 10 years old'와 '10년 전에 만났다'의 정보적 차이는?",
       "choices": [
-        "말하다",
-        "~이라고 말하다",
-        "~하도록 말하다",
-        "말해주다",
-        "말씀해주다"
+        "의미가 같다",
+        "전자는 관계의 지속, 후자는 만난 시점만 강조",
+        "둘 다 관계의 시작만 나타낸다",
+        "전자가 더 오래된 관계",
+        "둘 다 미래를 나타낸다"
       ],
-      "answer": 2,
-      "explanation": "이 구조는 '~하도록 말하다'를 의미합니다."
+      "answer": 1,
+      "explanation": "현재완료는 관계의 연속성, 과거형은 사건의 시점을 강조"
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "'Go straight two blocks and make a left'에서 진행 순서는?",
+      "question": "'Amelia told me to try the fish and chips'의 다음 줄 'I thought, \"How strange!\"'가 나타내는 것은?",
       "choices": [
-        "왼쪽으로 → 2블록",
-        "2블록 → 왼쪽으로",
-        "왼쪽을 본다 → 2블록",
-        "2블록을 본다 → 왼쪽",
-        "블록을 센다 → 왼쪽"
+        "Subin이 기대했던 것",
+        "Amelia가 느낀 것",
+        "Subin의 거부감",
+        "공통의 경험",
+        "배운 교훈"
       ],
-      "answer": 1,
-      "explanation": "먼저 2블록을 똑바로 간 후 왼쪽으로 돕니다."
+      "answer": 2,
+      "explanation": "'strange'라는 감정은 Subin이 처음에 음식에 대해 거부감을 느꼈음을 나타냄"
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "'How long will it take?'의 예상 답변은?",
+      "question": "본문에서 '길 찾기' 의사소통이 '외모 묘사'보다 더 실용적인 이유는?",
       "choices": [
-        "It's very far",
-        "You can turn right",
-        "It will take about 20 minutes",
-        "Go straight ahead",
-        "Thank you"
+        "더 자주 사용한다",
+        "더 쉽다",
+        "직접 행동으로 연결된다",
+        "더 짧다",
+        "더 많은 단어를 사용한다"
       ],
       "answer": 2,
-      "explanation": "소요시간 질문에 시간으로 답변합니다."
+      "explanation": "길 찾기는 답변 후 실제 이동이 따르므로 직접적 실용성이 있음"
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "'She is active and nice'는 무엇을 설명하는가?",
+      "question": "'Go straight one block. Then make a right. It will be on your left.'의 문법 형태의 변화가 의도적인 이유는?",
       "choices": [
-        "외모",
-        "성격",
-        "능력",
-        "일",
-        "교육"
+        "저자의 실수",
+        "문체의 다양성을 위해",
+        "각 단계의 성격 표현 (행동 → 결과)",
+        "무작위로 선택됨",
+        "규칙이 없다"
       ],
-      "answer": 1,
-      "explanation": "'active'와 'nice'는 성격 형용사입니다."
+      "answer": 2,
+      "explanation": "명령문은 행동, 미래형은 결과를 나타내어 단계적 지시를 표현"
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "관계절 'which live in the wild'를 제거하면?",
+      "question": "만약 Mountain hares의 큰 발이 없었다면 위장만으로 충분했을까?",
       "choices": [
-        "Some animals",
-        "live in the wild",
-        "Some animals live",
-        "which live",
-        "wild animals"
+        "충분했을 것이다",
+        "불충분했을 것이다 (도망칠 수 없으므로)",
+        "상관없었을 것이다",
+        "더 효과적이었을 것이다",
+        "알 수 없다"
       ],
-      "answer": 0,
-      "explanation": "관계절을 제거하면 'Some animals'만 남습니다."
+      "answer": 1,
+      "explanation": "위장과 신체 특성(도망 능력)은 함께 작동하여 완벽한 생존 전략을 이룸"
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "'Mountain hares'의 가장 큰 특징은?",
+      "question": "'When I met my friend Amelia at the airport, I was so excited'에서 'so'의 역할은?",
       "choices": [
-        "먹이 습관",
-        "위장 능력",
-        "달리기 속도",
-        "서식지",
-        "번식 능력"
+        "이유를 나타낸다",
+        "강도를 강조한다",
+        "시간을 나타낸다",
+        "결과를 보인다",
+        "선택을 나타낸다"
       ],
       "answer": 1,
-      "explanation": "본문의 주제가 위장 능력입니다."
+      "explanation": "'so excited' = '매우 흥분했다' - 정도의 강조"
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "Subin의 런던 여행에서 가장 인상적인 장면은?",
+      "question": "'They were like statues'가 '모두 회색이었다'보다 더 문학적인 이유는?",
       "choices": [
-        "비행기 탑승",
-        "Amelia와의 재회",
-        "King's Guard",
-        "음식 먹기",
-        "사진 촬영"
+        "더 쉽다",
+        "비유를 통해 여러 특징을 동시에 전달",
+        "더 정확하다",
+        "더 길다",
+        "더 짧다"
       ],
-      "answer": 2,
-      "explanation": "본문에서 'like statues'로 강조된 King's Guard입니다."
+      "answer": 1,
+      "explanation": "동상 = 움직임 없음 + 표정 없음 + 무표정 등 여러 특징을 동시에 함축"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "'I can't wait to'의 의미로 가장 가까운 표현은?",
+      "question": "본문 전체를 통해 '외모/성격 묘사'와 '길 찾기'가 같은 교과 단원에 포함된 심화 이유는?",
       "choices": [
-        "조금만 기다려",
-        "빨리 가자",
-        "~하고 싶어 열심히 기다린다",
-        "~을 할 때까지 기다려",
-        "~할 수 없다"
+        "난이도가 비슷하기 때문",
+        "둘 다 의사소통기능이기 때문",
+        "둘 다 정보 전달 기능이기 때문",
+        "우연이다",
+        "그 외"
       ],
       "answer": 2,
-      "explanation": "'can't wait to'는 '~하고 싶어 열심히 기다린다'는 의미입니다."
+      "explanation": "둘 다 상대를 이해하고 정보를 전달하는 의사소통 기능"
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "현재완료의 핵심 특징은?",
+      "question": "'This market is known for its food from around the world'의 구조에서 'from around the world'의 역할은?",
       "choices": [
-        "과거만을 나타낸다",
-        "현재만을 나타낸다",
-        "과거부터 현재까지의 지속",
-        "미래를 나타낸다",
-        "완료된 행동만"
+        "이유를 나타낸다",
+        "범위를 한정한다",
+        "음식의 출처를 구체화",
+        "시간을 나타낸다",
+        "장소를 제한한다"
       ],
       "answer": 2,
-      "explanation": "현재완료의 핵심은 지속성입니다."
+      "explanation": "'from around the world' = '세계 여러 곳에서 온' - 음식의 범위를 구체화"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "'I have visited Paris three times'에서 'three times'는?",
+      "question": "'I can't wait to tell you about my trip'에서 'about'이 없었다면 의미가 어떻게 될 것인가?",
       "choices": [
-        "지정된 시간",
-        "지속 기간",
-        "횟수",
-        "장소",
-        "인물"
+        "같은 의미",
+        "구체성이 있다",
+        "구체성이 없어진다",
+        "더 정확해진다",
+        "더 일반적이다"
       ],
       "answer": 2,
-      "explanation": "'three times'는 횟수를 나타냅니다."
+      "explanation": "'about'이 없으면 '무엇을' 말할지 불명확해짐"
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "길 안내에서 'block'은 무엇을 의미하는가?",
+      "question": "Lesson 3와 Lesson 4의 의사소통기능의 공통점은?",
       "choices": [
-        "막다",
-        "일시 정지",
-        "도시의 건물 구획",
-        "길을 막다",
-        "방해하다"
+        "같은 문법을 사용한다",
+        "모두 묘사이다",
+        "상대를 알아가는 것",
+        "모두 행동을 지시한다",
+        "모두 과거를 말한다"
       ],
       "answer": 2,
-      "explanation": "'block'은 도시에서 건물들로 둘러싸인 구획입니다."
+      "explanation": "외모/성격 묘사 = 사람을 알기, 길 찾기 = 정보를 얻어 행동하기 (모두 상대와 상황을 이해)"
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "'They were like statues'는 무엇을 의미하는가?",
+      "question": "Mountain hares의 위장이 '거의(nearly) 보이지 않는' 수준으로만 묘사된 이유는?",
       "choices": [
-        "그들은 동상이었다",
-        "그들은 움직이지 않았다",
-        "그들은 크기가 크다",
-        "그들은 아름다웠다",
-        "그들은 노래했다"
+        "완전한 위장이 불가능하기 때문",
+        "그렇게 더 효과적이기 때문",
+        "문학적 효과를 위해",
+        "저자의 선택",
+        "과학적 정확성을 위해"
       ],
-      "answer": 1,
-      "explanation": "비유로 '움직이지 않는 모습'을 나타냅니다."
+      "answer": 0,
+      "explanation": "실제로 위장이 100%이면 생존할 수 없으므로 'nearly'가 현실적"
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "'Amelia told me to try the fish and chips'의 'Amelia'는 누구인가?",
+      "question": "'I thought, \"How strange!\"'가 괄호 안의 직접 인용이 아니라 'I thought that...'였다면 효과가 달라질까?",
       "choices": [
-        "낯선 사람",
-        "가족",
-        "오랜 친구",
-        "현지인 가이드",
-        "호텔 직원"
+        "같은 효과",
+        "독자가 생각 속으로 더 들어감 (직접 인용)",
+        "더 거리감이 생김 (간접 인용)",
+        "효과가 없어진다",
+        "강도가 약해진다"
       ],
       "answer": 2,
-      "explanation": "본문: 'my friend Amelia' 그리고 '10살부터 알고 있던 친구'"
+      "explanation": "직접 인용은 생생함, 간접 인용은 거리감을 만들어 독자의 즉각성이 다름"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "의사소통 기능의 예로 올바른 것은?",
+      "question": "'for 기간'과 'since 시점'을 현재완료와 함께 사용하는 문법적 차이 외 의미적 차이는?",
       "choices": [
-        "관계대명사 사용",
-        "현재완료 이해",
-        "외모 묘사하기",
-        "문법 규칙",
-        "단어 외우기"
+        "의미가 같다",
+        "'for'는 구체적, 'since'는 모호하다",
+        "'for'는 시간의 길이, 'since'는 시간의 시작을 강조",
+        "둘 다 길이를 나타낸다",
+        "둘 다 시작점을 나타낸다"
       ],
       "answer": 2,
-      "explanation": "의사소통 기능은 '외모 묘사하기', '길 묻기' 등 실제 사용입니다."
+      "explanation": "'for' = 기간의 길이 강조 / 'since' = 시작점부터의 연속성 강조"
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "언어 형식의 예로 올바른 것은?",
+      "question": "'ask', 'tell', 'want' 중에서 가장 강압적인 의미를 가진 것은?",
       "choices": [
-        "길 안내",
-        "인사하기",
-        "주격 관계대명사",
-        "자기소개",
-        "감정 표현"
+        "ask (요청)",
+        "tell (지시/명령)",
+        "want (희망/바람)",
+        "모두 같다",
+        "상황에 따라 다르다"
       ],
-      "answer": 2,
-      "explanation": "언어 형식은 '주격 관계대명사', '현재완료' 등 문법입니다."
+      "answer": 1,
+      "explanation": "'tell'은 권위 관계를 암시하며 가장 강압적인 어감을 가짐"
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 5형식 문장은?",
+      "question": "본문이 두 개의 다른 'Lesson'을 다루는 이유는?",
       "choices": [
-        "I am tall",
-        "She runs fast",
-        "He keeps me safe",
-        "They like books",
-        "We went home"
+        "공간을 절약하기 위해",
+        "학습자의 흥미 유지",
+        "광범위한 의사소통기능 습득",
+        "저자의 선택",
+        "둘은 관련이 없다"
       ],
       "answer": 2,
-      "explanation": "'keep + 목적어 + 형용사(safe)'는 5형식입니다."
+      "explanation": "다양한 상황(사람 묘사 vs 위치 찾기)에서 의사소통하는 능력 습득"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "외모 묘사와 성격 묘사의 차이를 설명하고 각각 예를 드세요.",
-      "answer": "외모 묘사: 신체 특징 (예: tall, thin, big eyes) / 성격 묘사: 성격 특성 (예: kind, funny, active)",
-      "explanation": "두 개념을 구분하는 것이 중요합니다."
+      "question": "'nearly invisible'이라는 표현이 '완전히 invisible'보다 나은 이유를 과학적·문학적 관점에서 설명하세요.",
+      "answer": "과학적: 100% 위장은 진화적으로 불가능하고 비효율적 / 문학적: 'nearly'가 긴장감과 현실성을 더하며 독자의 상상력을 자극한다",
+      "explanation": "다각적 분석 능력"
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "관계대명사 'which'와 선행사의 관계를 설명하고 예를 드세요.",
-      "answer": "'which'는 직전의 물건 명사(선행사)를 수식합니다. 예: 'The book which I read is interesting' - 'which'가 'book'을 수식",
-      "explanation": "선행사-관계대명사 관계를 이해해야 합니다."
+      "question": "'I have known her since I was 10 years old'와 '10년 동안 그녀를 알아왔다'의 정보적 가치 차이는?",
+      "answer": "전자는 관계의 역사적 깊이를 강조하며 신뢰 관계를 암시 / 후자는 기간만 객관적으로 제시",
+      "explanation": "정보의 함축 의미 분석"
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "현재완료 'I have lived here for 5 years'를 과거형 문장으로 바꾸고, 의미 변화를 설명하세요.",
-      "answer": "'I lived here for 5 years' - 현재완료는 현재도 살고 있음, 과거형은 더 이상 살지 않음을 의미",
-      "explanation": "시제 변화가 의미 변화를 야기합니다."
+      "question": "본문의 '외모/성격 묘사' 기능이 '길 찾기' 기능과 달리 인물에 대한 가치 판단을 포함할 수 있는 이유를 설명하세요.",
+      "answer": "외모/성격은 개인의 특성을 나타내며 개인차가 크므로 '좋다/나쁘다'의 판단이 자연스러움 / 반면 길 찾기는 객관적 정보 전달이므로 판단이 개입되지 않음",
+      "explanation": "커뮤니케이션 기능의 본질적 차이"
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "'tell + 목적어 + to부정사'를 사용하여 문장을 만들고, 의미를 설명하세요.",
-      "answer": "'She told him to study hard' - 그녀가 그에게 열심히 공부하도록 말했다는 뜻",
-      "explanation": "이 구조는 지시나 명령을 나타냅니다."
+      "question": "'Amelia told me to try the fish and chips' 다음의 'I thought, \"How strange!\"'가 중요한 이유를 서술하세요.",
+      "answer": "Subin의 개인적 성장 과정을 보여줌 / 처음에는 거부감(strange)을 느꼈지만 결국 시도하게 된 경험이 여행의 의미를 담음 / 타문화 체험의 자연스러운 진행 과정을 나타냄",
+      "explanation": "내러티브 발전의 의미"
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "Lesson 3과 Lesson 4의 의사소통 기능과 언어 형식을 각각 정리하세요.",
-      "answer": "Lesson 3: 기능(외모/성격 묘사), 형식(관계대명사, 5형식) / Lesson 4: 기능(길 묻기, 소요시간 말하기), 형식(현재완료, ask/tell/want + to부정사)",
-      "explanation": "단원 전체의 핵심 내용 정리입니다."
+      "question": "Lesson 3 (위장)과 Lesson 4 (런던 여행)의 주제는 전혀 다르지만 같은 단원에 포함된 이유를 의사소통학 관점에서 분석하세요.",
+      "answer": "주제는 다르지만 둘 다 '관찰과 표현의 의사소통'이라는 공통점 공유 / L3는 동물의 특징을 관찰하여 표현, L4는 경험을 관찰하여 공유 / 다양한 상황에서 정보 전달 능력 배양이 교육 목표",
+      "explanation": "고급 통합 분석"
     }
   ]
 }
