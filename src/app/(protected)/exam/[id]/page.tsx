@@ -32,6 +32,7 @@ interface ExamData {
 interface GradeResult {
   id: number;
   type: string;
+  category: string;
   question: string;
   choices?: string[];
   yourAnswer?: number | string;
@@ -45,6 +46,29 @@ interface GradeResult {
   timeSpent?: number;
 }
 
+interface CategoryStat {
+  category: string;
+  correct: number;
+  total: number;
+  earnedScore: number;
+  totalScore: number;
+  totalTime: number;
+  accuracy: number;
+  scoreRate: number;
+  avgTime: number;
+}
+
+interface TrendPoint {
+  sessionId: string;
+  examId: string;
+  examTitle: string;
+  sheet: number | null;
+  totalScore: number;
+  maxScore: number;
+  scoreRate: number;
+  completedAt: { seconds: number } | null;
+}
+
 interface GradeResponse {
   mcScore: number;
   essayScore: number;
@@ -53,6 +77,28 @@ interface GradeResponse {
   pointsEarned: number;
   alreadyRewarded: boolean;
   results: GradeResult[];
+  analysis?: {
+    mcCorrectCount: number;
+    mcTotalCount: number;
+    essayCorrectCount: number;
+    essayTotalCount: number;
+    avgTimePerQuestion: number;
+    totalTimeSpent: number;
+    totalAccuracy: number;
+    categoryStats: CategoryStat[];
+    questionBreakdown: Array<{
+      id: number;
+      type: string;
+      category: string;
+      correct: boolean;
+      earnedScore: number;
+      score: number;
+      timeSpent: number;
+    }>;
+    weakestCategories: CategoryStat[];
+    feedback: string[];
+    trend: TrendPoint[];
+  };
 }
 
 export default function SchoolExamPage({ params }: { params: Promise<{ id: string }> }) {
@@ -193,6 +239,103 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
             </div>
           )}
         </div>
+
+        {gradeResult.analysis && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm space-y-4">
+              <div className="flex items-center justify-between">
+                <h2 className="font-bold text-gray-800">취약점 분석</h2>
+                <span className="text-xs text-gray-400">정답률 {gradeResult.analysis.totalAccuracy.toFixed(1)}%</span>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-xl bg-indigo-50 px-4 py-3">
+                  <p className="text-xs text-indigo-500 font-semibold">객관식 정답률</p>
+                  <p className="text-xl font-bold text-indigo-700 mt-1">
+                    {gradeResult.analysis.mcCorrectCount}/{gradeResult.analysis.mcTotalCount}
+                  </p>
+                </div>
+                <div className="rounded-xl bg-purple-50 px-4 py-3">
+                  <p className="text-xs text-purple-500 font-semibold">{exam.questions.some(q => q.type === 'short') ? '주관식' : '서술형'} 정답률</p>
+                  <p className="text-xl font-bold text-purple-700 mt-1">
+                    {gradeResult.analysis.essayCorrectCount}/{gradeResult.analysis.essayTotalCount}
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                {gradeResult.analysis.categoryStats.map(category => (
+                  <div key={category.category}>
+                    <div className="flex items-center justify-between text-xs mb-1">
+                      <span className="font-semibold text-gray-700">{category.category}</span>
+                      <span className="text-gray-400">{category.correct}/{category.total} · {category.scoreRate.toFixed(1)}%</span>
+                    </div>
+                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full ${category.scoreRate >= 80 ? 'bg-green-500' : category.scoreRate >= 60 ? 'bg-yellow-500' : 'bg-red-500'}`}
+                        style={{ width: `${Math.max(4, category.scoreRate)}%` }}
+                      />
+                    </div>
+                    <p className="text-xs text-gray-400 mt-1">평균 풀이 시간 {formatTime(category.avgTime)}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm space-y-4">
+              <h2 className="font-bold text-gray-800">맞춤 피드백</h2>
+              <div className="space-y-2">
+                {gradeResult.analysis.feedback.map(item => (
+                  <div key={item} className="rounded-xl bg-gray-50 px-4 py-3 text-sm text-gray-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <div className="border-t border-gray-100 pt-4">
+                <p className="text-sm font-semibold text-gray-700 mb-3">문제별 정답률</p>
+                <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
+                  {gradeResult.analysis.questionBreakdown.map(question => (
+                    <div
+                      key={question.id}
+                      className={`h-9 rounded-lg flex items-center justify-center text-xs font-bold ${
+                        question.correct ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'
+                      }`}
+                      title={`${question.id}번 ${question.earnedScore}/${question.score}점`}
+                    >
+                      {question.id}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {gradeResult.analysis.trend.length > 0 && (
+              <div className="lg:col-span-2 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <h2 className="font-bold text-gray-800">회차별 성적 추이</h2>
+                  <span className="text-xs text-gray-400">최근 {gradeResult.analysis.trend.length}회</span>
+                </div>
+                <div className="flex items-end gap-2 h-40 border-b border-gray-100 pb-2">
+                  {gradeResult.analysis.trend.map(point => (
+                    <div key={point.sessionId} className="flex-1 min-w-0 flex flex-col items-center justify-end gap-2 h-full">
+                      <div className="text-xs font-semibold text-indigo-600">{point.scoreRate.toFixed(0)}%</div>
+                      <div
+                        className="w-full max-w-12 rounded-t-lg bg-indigo-500"
+                        style={{ height: `${Math.max(8, point.scoreRate)}%` }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="grid gap-2 mt-3" style={{ gridTemplateColumns: `repeat(${gradeResult.analysis.trend.length}, minmax(0, 1fr))` }}>
+                  {gradeResult.analysis.trend.map(point => (
+                    <div key={point.sessionId} className="text-center min-w-0">
+                      <p className="text-xs text-gray-500 truncate">{point.sheet ? `${point.sheet}회` : '시험'}</p>
+                      <p className="text-[10px] text-gray-400 truncate">{point.totalScore}/{point.maxScore}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="space-y-4">
           {gradeResult.results.map((r, i) => (
