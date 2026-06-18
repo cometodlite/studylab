@@ -7,349 +7,349 @@
   "subject": "영어",
   "sheet": 5,
   "difficulty": "보통",
-  "timeLimit": 40,
+  "timeLimit": 45,
   "totalScore": 100,
+  "passage": "의사소통기능\n⦁ 외모 묘사하기\nA: What does your best friend look like?\nB: She is tall and has big eyes.\n\n⦁ 성격 묘사하기\nA: What is she like?\nB: She is active and funny.\n\n언어 형식\n⦁ 주격 관계대명사\nSome animals which live in the wild are good at camouflage.\n\n⦁ 5형식 동사\nTheir special looks keep them safe from predators.\n\n---\n\nTopic 1 A, B: 친구와 할머니, 애완견 묘사하기\nMinjin, what does your best friend look like?\nMy best friend Somi is tall with long curly hair.\nWhat is she like?\nShe is very active and nice. She helps everyone in our class.\n\n---\n\n본문: Can You Spot Them?\n\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. You can see them in the air, on land, and in the sea. Their special looks or abilities keep them safe from predators. Let me guide you through the world of animal camouflage.\n\nMountain Hare\n\nMountain hares are like rabbits, but they are bigger and have longer legs. They are very stylish animals. Mountain hares change colors according to season. In summer, they turn gray-brown to match the rocks and grass. In winter, they turn white to camouflage themselves in the snow. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\nDid you know?\nMountain hares have really big feet. Thanks to them, mountain hares can hop in deep snow and escape from predators.\n\n---\n\n의사소통기능\n⦁ 길 묻고 답하기\nA: How can I get to the museum?\nB: Go straight two blocks and make a left.\n\n⦁ 소요시간 말하기\nA: How long will it take to get there?\nB: It will take about 15 minutes.\n\n언어 형식\n⦁ 현재 완료\nI have known her since I was 10 years old.\n\n⦁ ask/tell/want + 목적어 + to부정사\nAmelia told me to try the fish and chips.\n\n---\n\nTopic 1 A, B: 길 묻기와 소요시간\nB: Excuse me. How can I get to the post office?\nG: Go straight one block. Then make a right. It will be on your left.\nB: How long will it take to get there?\nG: It will take only 5 minutes.\n\n---\n\n본문: See You in London!\n\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Come with me on my amazing trip!\n\nBeautiful Palace\n\nWe got on the famous red bus and the first stop was Buckingham Palace. The King and his family live there. We saw the King's Guard. The guards were wearing red jackets and tall black hats. We took pictures near them, but they didn't smile or move. They were like statues!\n\nYummy Meal\n\nNext, we went to Camden Market. This market is known for its food from around the world. Amelia told me to try the fish and chips. I thought, \"How strange! I have eaten fish many times before...",
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "'You can see them in the air, on land, and in the sea'에서 'them'의 선행사는?",
+      "question": "다음 중 'What does ... look like?'로 물어볼 수 있는 것은?",
       "choices": [
-        "위장 능력",
-        "포식자",
-        "동물",
-        "색깔",
-        "환경"
+        "성격",
+        "성격 + 외모",
+        "외모만",
+        "성격만",
+        "습관"
       ],
       "answer": 2,
-      "explanation": "문맥상 'them'은 위장 능력이 있는 동물들을 가리킵니다."
+      "explanation": "'look like'는 외모를 묻는 표현입니다."
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 현재 완료와 과거 단순형의 차이를 올바르게 표현한 것은?",
+      "question": "'Somi is tall with long curly hair'는 무엇을 설명하는가?",
       "choices": [
-        "의미가 같다",
-        "현재 완료는 계속된 경험, 과거 단순형은 끝난 행동",
-        "둘 다 미래를 나타낸다",
-        "문법적으로 같다",
-        "상황에 관계없이 같다"
+        "성격",
+        "외모",
+        "직업",
+        "나이",
+        "출신지"
       ],
       "answer": 1,
-      "explanation": "'I have lived here for 5 years' (지금도 산다) vs 'I lived there for 5 years' (더 이상 안 산다)"
+      "explanation": "신체 특징이므로 외모입니다."
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "'Mountain hares can hop in deep snow'에서 'can'을 대체할 수 있는 단어는?",
+      "question": "관계대명사 'which'가 올바르게 사용된 문장은?",
       "choices": [
-        "must",
-        "should",
-        "might",
-        "are able to",
-        "will"
+        "The animal which I like",
+        "The book which is interesting",
+        "The person which lives here",
+        "The place which is far",
+        "All of the above"
       ],
-      "answer": 3,
-      "explanation": "'can' = 'be able to'는 같은 의미입니다."
+      "answer": 4,
+      "explanation": "'which'는 물건에 사용되는데, 모두 물건입니다."
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "'Amelia told me to try the fish and chips'에서 'tell'과 유사한 의미의 동사는?",
+      "question": "'I have known her since I was 10'은 현재완료가 맞는가?",
       "choices": [
-        "ask",
-        "want",
-        "instruct",
-        "suggest",
-        "all of the above"
+        "아니오, 과거형이어야 한다",
+        "네, 맞습니다",
+        "아니오, 미래형이어야 한다",
+        "아니오, 진행형이어야 한다",
+        "아니오, 완료형이어야 한다"
       ],
-      "answer": 4,
-      "explanation": "'tell to', 'ask to', 'want to', 'instruct to' 모두 유사한 의미입니다."
+      "answer": 1,
+      "explanation": "10살부터 지금까지의 지속된 경험이므로 현재완료가 맞습니다."
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "다음 문장에서 관계대명사가 올바르게 사용된 것은?",
+      "question": "'tell + 목적어 + to부정사' 구조의 의미는?",
       "choices": [
-        "The book which I read it is interesting",
-        "The girl whose lives here is my friend",
-        "The animal that protect itself is safe",
-        "The trip which I took was amazing",
-        "Students which study hard are successful"
+        "말하다",
+        "~이라고 말하다",
+        "~하도록 말하다",
+        "말해주다",
+        "말씀해주다"
       ],
-      "answer": 3,
-      "explanation": "'The trip which I took'가 올바른 구조입니다."
+      "answer": 2,
+      "explanation": "이 구조는 '~하도록 말하다'를 의미합니다."
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "'Their special looks keep them safe from predators'를 수동태로 변환하면?",
+      "question": "'Go straight two blocks and make a left'에서 진행 순서는?",
       "choices": [
-        "Them are kept safe from predators by their special looks",
-        "They are kept safe from predators by their special looks",
-        "Predators are kept from them by their special looks",
-        "Safety is kept by their special looks",
-        "Their special looks are kept them safe"
+        "왼쪽으로 → 2블록",
+        "2블록 → 왼쪽으로",
+        "왼쪽을 본다 → 2블록",
+        "2블록을 본다 → 왼쪽",
+        "블록을 센다 → 왼쪽"
       ],
       "answer": 1,
-      "explanation": "'keep safe'의 수동태는 'be kept safe'입니다."
+      "explanation": "먼저 2블록을 똑바로 간 후 왼쪽으로 돕니다."
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "'I can't wait to'의 의미로 가장 가까운 표현은?",
+      "question": "'How long will it take?'의 예상 답변은?",
       "choices": [
-        "기다리고 싶다",
-        "할 수 없다",
-        "~하기를 갈망하다",
-        "할 시간이 없다",
-        "할 수 없다"
+        "It's very far",
+        "You can turn right",
+        "It will take about 20 minutes",
+        "Go straight ahead",
+        "Thank you"
       ],
       "answer": 2,
-      "explanation": "'can't wait to'는 '~하기를 간절히 원하다'는 의미입니다."
+      "explanation": "소요시간 질문에 시간으로 답변합니다."
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "'Which one is faster?'의 의문사 'which'는 무엇을 의미하는가?",
+      "question": "'She is active and nice'는 무엇을 설명하는가?",
       "choices": [
-        "어느 것",
-        "어디",
-        "누구",
-        "무엇",
-        "어떤"
+        "외모",
+        "성격",
+        "능력",
+        "일",
+        "교육"
       ],
-      "answer": 0,
-      "explanation": "'which'는 선택의 의미로 '어느 것'을 나타냅니다."
+      "answer": 1,
+      "explanation": "'active'와 'nice'는 성격 형용사입니다."
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "'Thanks to them, mountain hares can hop'에서 'thanks to'의 의미는?",
+      "question": "관계절 'which live in the wild'를 제거하면?",
       "choices": [
-        "~에게 감사한다",
-        "~때문에",
-        "~에도 불구하고",
-        "~에 따라",
-        "~에 의해"
+        "Some animals",
+        "live in the wild",
+        "Some animals live",
+        "which live",
+        "wild animals"
       ],
-      "answer": 1,
-      "explanation": "'thanks to' = 'because of' = '~때문에, ~덕분에'입니다."
+      "answer": 0,
+      "explanation": "관계절을 제거하면 'Some animals'만 남습니다."
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "'Changing colors makes them nearly invisible'에서 'nearly'의 의미는?",
+      "question": "'Mountain hares'의 가장 큰 특징은?",
       "choices": [
-        "완전히",
-        "거의",
-        "일부",
-        "아주",
-        "정말"
+        "먹이 습관",
+        "위장 능력",
+        "달리기 속도",
+        "서식지",
+        "번식 능력"
       ],
       "answer": 1,
-      "explanation": "'Nearly' = 'almost' = '거의'입니다."
+      "explanation": "본문의 주제가 위장 능력입니다."
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "'The King's Guard were wearing red jackets'의 주어는?",
+      "question": "Subin의 런던 여행에서 가장 인상적인 장면은?",
       "choices": [
-        "The King",
-        "Guard",
-        "The King's Guard",
-        "red jackets",
-        "wearing"
+        "비행기 탑승",
+        "Amelia와의 재회",
+        "King's Guard",
+        "음식 먹기",
+        "사진 촬영"
       ],
       "answer": 2,
-      "explanation": "'The King's Guard'가 주어입니다."
+      "explanation": "본문에서 'like statues'로 강조된 King's Guard입니다."
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "'I thought, \"How strange!\"'에서 직접 인용과 간접 인용의 차이는?",
+      "question": "'I can't wait to'의 의미로 가장 가까운 표현은?",
       "choices": [
-        "의미가 같다",
-        "직접 인용은 원문, 간접 인용은 해석",
-        "직접 인용은 더 정확하다",
-        "간접 인용이 더 자연스럽다",
-        "변화가 없다"
+        "조금만 기다려",
+        "빨리 가자",
+        "~하고 싶어 열심히 기다린다",
+        "~을 할 때까지 기다려",
+        "~할 수 없다"
       ],
-      "answer": 1,
-      "explanation": "직접 인용: 'I thought, \"How strange!\"' / 간접 인용: 'I thought it was strange'"
+      "answer": 2,
+      "explanation": "'can't wait to'는 '~하고 싶어 열심히 기다린다'는 의미입니다."
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 'camouflage'의 반대 개념은?",
+      "question": "현재완료의 핵심 특징은?",
       "choices": [
-        "protection",
-        "invisible",
-        "visible",
-        "danger",
-        "color"
+        "과거만을 나타낸다",
+        "현재만을 나타낸다",
+        "과거부터 현재까지의 지속",
+        "미래를 나타낸다",
+        "완료된 행동만"
       ],
       "answer": 2,
-      "explanation": "위장(숨김)의 반대는 노출(보임)입니다."
+      "explanation": "현재완료의 핵심은 지속성입니다."
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "'Camden Market is known for its food from around the world'에서 'known for'는?",
+      "question": "'I have visited Paris three times'에서 'three times'는?",
       "choices": [
-        "알려져 있다",
-        "인식한다",
-        "알려줄 수 있다",
-        "위치를 알고 있다",
-        "친숙하다"
+        "지정된 시간",
+        "지속 기간",
+        "횟수",
+        "장소",
+        "인물"
       ],
-      "answer": 0,
-      "explanation": "'be known for'는 '~으로 알려져 있다'는 수동 표현입니다."
+      "answer": 2,
+      "explanation": "'three times'는 횟수를 나타냅니다."
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "런던 여행 이야기에서 '새로운 경험'의 예는?",
+      "question": "길 안내에서 'block'은 무엇을 의미하는가?",
       "choices": [
-        "비행기 타기",
-        "Amelia 만나기",
-        "버킹엄 궁전 보기",
-        "Camden Market 방문",
-        "모두 해당"
+        "막다",
+        "일시 정지",
+        "도시의 건물 구획",
+        "길을 막다",
+        "방해하다"
       ],
-      "answer": 4,
-      "explanation": "모든 항목이 Subin의 새로운 경험입니다."
+      "answer": 2,
+      "explanation": "'block'은 도시에서 건물들로 둘러싸인 구획입니다."
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "'I have known her since I was 10 years old'에서 시간 표현 'since'의 역할은?",
+      "question": "'They were like statues'는 무엇을 의미하는가?",
       "choices": [
-        "기간의 시작점",
-        "기간의 끝점",
-        "현재 시점",
-        "과거 시점",
-        "미래 시점"
+        "그들은 동상이었다",
+        "그들은 움직이지 않았다",
+        "그들은 크기가 크다",
+        "그들은 아름다웠다",
+        "그들은 노래했다"
       ],
-      "answer": 0,
-      "explanation": "'since'는 현재 완료와 함께 '~부터'의 시작점을 나타냅니다."
+      "answer": 1,
+      "explanation": "비유로 '움직이지 않는 모습'을 나타냅니다."
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 형용사로 올바르게 사용된 것은?",
+      "question": "'Amelia told me to try the fish and chips'의 'Amelia'는 누구인가?",
       "choices": [
-        "very big feet",
-        "very fastly run",
-        "very happily smile",
-        "very carefully work",
-        "very slowly"
+        "낯선 사람",
+        "가족",
+        "오랜 친구",
+        "현지인 가이드",
+        "호텔 직원"
       ],
-      "answer": 0,
-      "explanation": "형용사는 명사를 수식하므로 'big feet'가 올바릅니다. 나머지는 부사 형태여야 합니다."
+      "answer": 2,
+      "explanation": "본문: 'my friend Amelia' 그리고 '10살부터 알고 있던 친구'"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "'which'의 선행사로 올 수 있는 것은?",
+      "question": "의사소통 기능의 예로 올바른 것은?",
       "choices": [
-        "사람만",
-        "동물만",
-        "물건만",
-        "사람과 동물",
-        "사람을 제외한 모든 것"
+        "관계대명사 사용",
+        "현재완료 이해",
+        "외모 묘사하기",
+        "문법 규칙",
+        "단어 외우기"
       ],
-      "answer": 4,
-      "explanation": "'which'는 사람을 제외한 모든 것을 선행사로 가질 수 있습니다."
+      "answer": 2,
+      "explanation": "의사소통 기능은 '외모 묘사하기', '길 묻기' 등 실제 사용입니다."
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "본문에서 사용된 시제로 가장 많은 것은?",
+      "question": "언어 형식의 예로 올바른 것은?",
       "choices": [
-        "과거",
-        "현재",
-        "현재 완료",
-        "과거 진행",
-        "미래"
+        "길 안내",
+        "인사하기",
+        "주격 관계대명사",
+        "자기소개",
+        "감정 표현"
       ],
       "answer": 2,
-      "explanation": "'I have known', 'I have eaten' 등 현재 완료가 주요 시제입니다."
+      "explanation": "언어 형식은 '주격 관계대명사', '현재완료' 등 문법입니다."
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "두 Lesson의 학습 내용을 종합할 때 가장 중요한 문법은?",
+      "question": "다음 중 5형식 문장은?",
       "choices": [
-        "관계대명사",
-        "현재 완료",
-        "to부정사",
-        "의문사",
-        "모두 중요"
+        "I am tall",
+        "She runs fast",
+        "He keeps me safe",
+        "They like books",
+        "We went home"
       ],
-      "answer": 4,
-      "explanation": "세 가지 모두 중요한 문법 포인트입니다."
+      "answer": 2,
+      "explanation": "'keep + 목적어 + 형용사(safe)'는 5형식입니다."
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "'Some animals which live in the wild are very good at camouflage'에서 'which'를 'that'으로 바꿀 수 있는가? 이유를 설명하세요.",
-      "answer": "네, 제한적 관계절이므로 'which'를 'that'으로 바꿀 수 있습니다. 하지만 'which'가 더 격식적입니다.",
-      "explanation": "영국 영어에서는 비제한적 관계절에 'which'를 사용합니다."
+      "question": "외모 묘사와 성격 묘사의 차이를 설명하고 각각 예를 드세요.",
+      "answer": "외모 묘사: 신체 특징 (예: tall, thin, big eyes) / 성격 묘사: 성격 특성 (예: kind, funny, active)",
+      "explanation": "두 개념을 구분하는 것이 중요합니다."
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "'I can't wait to tell you'와 'I want to tell you'를 비교하여 'can't wait to'의 강도를 설명하세요.",
-      "answer": "'can't wait to'가 더 강한 열망과 긴급성을 표현합니다.",
-      "explanation": "감정의 강도 표현이 다릅니다."
+      "question": "관계대명사 'which'와 선행사의 관계를 설명하고 예를 드세요.",
+      "answer": "'which'는 직전의 물건 명사(선행사)를 수식합니다. 예: 'The book which I read is interesting' - 'which'가 'book'을 수식",
+      "explanation": "선행사-관계대명사 관계를 이해해야 합니다."
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "'Amelia told me to try the fish and chips'를 'ask'를 사용하여 다시 쓰세요.",
-      "answer": "Amelia asked me to try the fish and chips.",
-      "explanation": "'tell to'와 'ask to'는 유사한 구조입니다."
+      "question": "현재완료 'I have lived here for 5 years'를 과거형 문장으로 바꾸고, 의미 변화를 설명하세요.",
+      "answer": "'I lived here for 5 years' - 현재완료는 현재도 살고 있음, 과거형은 더 이상 살지 않음을 의미",
+      "explanation": "시제 변화가 의미 변화를 야기합니다."
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "현재 완료 'have + 과거분사'를 사용한 본문의 문장을 찾아 적고, 그 의미를 한국어로 설명하세요.",
-      "answer": "'I have known her since I was 10 years old' - 10살부터 지금까지 계속 그녀를 알고 지내고 있다.",
-      "explanation": "현재 완료의 지속의 의미입니다."
+      "question": "'tell + 목적어 + to부정사'를 사용하여 문장을 만들고, 의미를 설명하세요.",
+      "answer": "'She told him to study hard' - 그녀가 그에게 열심히 공부하도록 말했다는 뜻",
+      "explanation": "이 구조는 지시나 명령을 나타냅니다."
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "두 Lesson을 통해 배운 영어 학습 목표 3가지를 영어로 나열하세요.",
-      "answer": "1. Learn about animal camouflage and survival strategies 2. Understand present perfect tense and relative pronouns 3. Practice reading comprehension about travel experiences",
-      "explanation": "핵심 학습 목표들입니다."
+      "question": "Lesson 3과 Lesson 4의 의사소통 기능과 언어 형식을 각각 정리하세요.",
+      "answer": "Lesson 3: 기능(외모/성격 묘사), 형식(관계대명사, 5형식) / Lesson 4: 기능(길 묻기, 소요시간 말하기), 형식(현재완료, ask/tell/want + to부정사)",
+      "explanation": "단원 전체의 핵심 내용 정리입니다."
     }
-  ],
-  "passage": "[Lesson 3] Can You Spot Them?\n\nCan You Spot Them?\n\nAre you good at hide and seek? Some animals which live in the wild are very good at camouflage. You can see them in the air, on land, and in the sea. Their special looks or abilities keep them safe from predators. Let me guide you through the world of animal camouflage.\n\nMountain Hare\n\nMountain hares are like rabbits, but they are bigger and have longer legs. They are very stylish animals. Mountain hares change colors according to season. In summer, they turn gray-brown to match the rocks and grass. In winter, they turn white to camouflage themselves in the snow. Changing colors makes them nearly invisible to predators like wild dogs and eagles.\n\nDid you know?\nMountain hares have really big feet. Thanks to them, mountain hares can hop in deep snow and escape from predators.\n\n---\n\n[Lesson 4] See You in London!\n\nSee You in London!\n\nSubin's Travel Story\n\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Come with me on my amazing trip!\n\nBeautiful Palace\n\nWe got on the famous red bus and the first stop was Buckingham Palace. The King and his family live there. We saw the King's Guard. The guards were wearing red jackets and tall black hats. We took pictures near them, but they didn't smile or move. They were like statues!\n\nYummy Meal\n\nNext, we went to Camden Market. This market is known for its food from around the world. Amelia told me to try the fish and chips. I thought, \"How strange! I have eaten fish many times before..."
+  ]
 }

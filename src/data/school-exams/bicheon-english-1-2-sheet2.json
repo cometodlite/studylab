@@ -7,349 +7,349 @@
   "subject": "영어",
   "sheet": 2,
   "difficulty": "보통",
-  "timeLimit": 40,
+  "timeLimit": 45,
   "totalScore": 100,
+  "passage": "의사소통기능\n⦁ 길 묻고 답하기\nA: How can I get to the museum?\nB: Go straight two blocks and make a left.\n\n⦁ 소요시간 말하기\nA: How long will it take to get there?\nB: It will take about 15 minutes.\n\n언어 형식\n⦁ 현재 완료\nI have known her since I was 10 years old.\n\n⦁ ask/tell/want + 목적어 + to부정사\nAmelia told me to try the fish and chips.\n\n---\n\nTopic 1 A, B: 길 묻기와 소요시간\nB: Excuse me. How can I get to the post office?\nG: Go straight one block. Then make a right. It will be on your left.\nB: How long will it take to get there?\nG: It will take only 5 minutes.\n\n---\n\n본문: See You in London!\n\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Come with me on my amazing trip!\n\nBeautiful Palace\n\nWe got on the famous red bus and the first stop was Buckingham Palace. The King and his family live there. We saw the King's Guard. The guards were wearing red jackets and tall black hats. We took pictures near them, but they didn't smile or move. They were like statues!\n\nYummy Meal\n\nNext, we went to Camden Market. This market is known for its food from around the world. Amelia told me to try the fish and chips. I thought, \"How strange! I have eaten fish many times before...",
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "본문의 제목 'See You in London!'에서 Subin이 누구를 만나기를 기대하고 있는가?",
+      "question": "'How can I get to the museum?'는 어떤 의사소통 기능을 나타내는가?",
       "choices": [
-        "부모님",
-        "학교 친구들",
-        "Amelia",
-        "King's Guard",
-        "Camden Market의 상인들"
+        "소요시간 묻기",
+        "길 묻기",
+        "가격 묻기",
+        "시간 묻기",
+        "이름 묻기"
       ],
-      "answer": 2,
-      "explanation": "본문: 'I can't wait to tell you about my trip to London... When I met my friend Amelia at the airport'"
+      "answer": 1,
+      "explanation": "'How can I get to'는 길을 묻는 표현입니다."
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "'I have known her since I was 10 years old'에서 'known'의 의미는?",
+      "question": "'How long will it take to get there?'의 의사소통 기능은?",
       "choices": [
-        "알려지다",
-        "친하게 지내다",
-        "만나다",
-        "알고 지내다",
-        "말하다"
+        "거리 묻기",
+        "길 묻기",
+        "소요시간 묻기",
+        "방향 묻기",
+        "도움 청하기"
       ],
-      "answer": 3,
-      "explanation": "현재 완료 형태로 '(지금까지) 알고 지내다'를 의미합니다."
+      "answer": 2,
+      "explanation": "'How long will it take'는 소요시간을 묻습니다."
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "런던에서 Subin이 먼저 간 장소는?",
+      "question": "'I have known her since I was 10 years old'는 어떤 시제인가?",
       "choices": [
-        "Camden Market",
-        "인천공항",
-        "버킹엄 궁전",
-        "역",
-        "식당"
+        "과거형",
+        "현재형",
+        "과거완료",
+        "현재완료",
+        "미래형"
       ],
-      "answer": 2,
-      "explanation": "본문: 'We got on the famous red bus and the first stop was Buckingham Palace'"
+      "answer": 3,
+      "explanation": "'have + 과거분사'는 현재완료 시제입니다."
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "버킹엄 궁전의 위병(King's Guard)의 특징으로 맞지 않는 것은?",
+      "question": "현재완료의 의미로 가장 올바른 것은?",
       "choices": [
-        "빨간 자켓을 입었다",
-        "검은 모자를 썼다",
-        "웃고 움직였다",
-        "동상같이 보였다",
-        "사진에 함께했다"
+        "과거에만 일어난 행동",
+        "현재만 일어나는 행동",
+        "과거부터 현재까지의 지속된 경험",
+        "미래에 일어날 행동",
+        "조건부 상황"
       ],
       "answer": 2,
-      "explanation": "본문: 'We took pictures near them, but they didn't smile or move. They were like statues!'"
+      "explanation": "현재완료는 과거부터 현재까지의 지속된 경험을 나타냅니다."
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "'Amelia told me to try the fish and chips'에서 'told me to'의 의미는?",
+      "question": "'Amelia told me to try the fish and chips'의 구조는?",
       "choices": [
-        "말했다",
-        "말해주었다",
-        "~하도록 말했다",
-        "~에 대해 말했다",
-        "~하지 말라고 말했다"
+        "tell + 목적어",
+        "tell + 목적어 + to부정사",
+        "tell + to부정사",
+        "tell + 명사절",
+        "tell + 동명사"
       ],
-      "answer": 2,
-      "explanation": "'tell + 목적어 + to부정사'는 '~하도록 말하다'의 의미입니다."
+      "answer": 1,
+      "explanation": "'tell + 목적어 + to부정사' 구조입니다."
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "Subin이 생각한 fish and chips는 어떤 음식인가?",
+      "question": "다음 중 'ask/tell/want + 목적어 + to부정사'로 올바르게 사용된 것은?",
       "choices": [
-        "생선 요리",
-        "감자튀김",
-        "이상한 음식",
-        "흔한 음식",
-        "맛없는 음식"
+        "He asked to go home",
+        "She told him going out",
+        "I want you to help me",
+        "They asked staying here",
+        "We wanted them come"
       ],
       "answer": 2,
-      "explanation": "본문: 'I thought, \"How strange!\"'로 처음엔 이상하다고 생각했습니다."
+      "explanation": "'want + you + to help'는 올바른 구조입니다."
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "런던 공항에서 Subin의 감정은?",
+      "question": "'Go straight two blocks and make a left'의 'make a left'는 무엇을 의미하는가?",
       "choices": [
-        "슬펐다",
-        "화났다",
-        "흥분했다",
-        "두려웠다",
-        "지루했다"
+        "왼쪽을 만들다",
+        "왼쪽으로 돌다",
+        "왼쪽으로 간다",
+        "왼쪽에서 기다린다",
+        "왼쪽으로 옮긴다"
       ],
-      "answer": 2,
-      "explanation": "본문: 'When I met my friend Amelia at the airport, I was so excited'"
+      "answer": 1,
+      "explanation": "'make a left/right'는 '왼쪽/오른쪽으로 돌다'의 의미입니다."
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "'The flight took 15 hours from Incheon'에서 'took'의 의미는?",
+      "question": "'The flight took 15 hours'에서 'took'의 의미는?",
       "choices": [
-        "잡다",
-        "가져가다",
+        "가져갔다",
         "필요로 하다",
-        "혼내다",
-        "소요되다"
+        "소요되다",
+        "선택했다",
+        "이해했다"
       ],
-      "answer": 4,
-      "explanation": "문맥상 비행이 얼마나 걸렸는지를 나타내므로 '소요되다'의 의미입니다."
+      "answer": 2,
+      "explanation": "시간 표현과 함께 'take'는 '소요되다'의 의미입니다."
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "캠던 마켓(Camden Market)의 특징은?",
+      "question": "'I have known her'와 'I knew her'의 차이는?",
       "choices": [
-        "King이 사는 곳",
-        "세계 여러 나라의 음식을 제공한다",
-        "버킹엄 궁전이 있다",
-        "공항 근처에 있다",
-        "기차역 옆에 있다"
+        "의미가 같다",
+        "전자는 과거, 후자는 현재",
+        "전자는 현재까지 알고 있음, 후자는 과거에만 알았음",
+        "둘 다 미래를 나타낸다",
+        "전자는 진행형, 후자는 단순형"
       ],
-      "answer": 1,
-      "explanation": "본문: 'This market is known for its food from around the world'"
+      "answer": 2,
+      "explanation": "현재완료는 지속, 과거형은 끝남을 나타냅니다."
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "Subin의 여행이 몇 시간이 걸렸는가?",
+      "question": "'The guards were wearing red jackets and tall black hats'는 어떤 시제인가?",
       "choices": [
-        "5시간",
-        "10시간",
-        "15시간",
-        "20시간",
-        "30시간"
+        "단순 과거",
+        "과거 진행",
+        "현재 진행",
+        "현재 완료",
+        "미래"
       ],
-      "answer": 2,
-      "explanation": "본문: 'The flight took 15 hours from Incheon'"
+      "answer": 1,
+      "explanation": "'were + -ing'는 과거 진행형이 아니라 '~하고 있었다'라는 상태를 나타냅니다."
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "Buckingham Palace에 대한 설명으로 틀린 것은?",
+      "question": "'Buckingham Palace'는 어디에 있는가?",
       "choices": [
-        "King과 가족이 산다",
-        "King's Guard가 있다",
-        "빨간 버스로 간다",
-        "공원이다",
-        "관광지이다"
+        "런던",
+        "인천",
+        "서울",
+        "파리",
+        "뉴욕"
       ],
-      "answer": 3,
-      "explanation": "본문에서 Buckingham Palace가 공원이라는 설명은 없습니다. 왕과 가족이 사는 궁전입니다."
+      "answer": 0,
+      "explanation": "본문: 'We got on the famous red bus and the first stop was Buckingham Palace'"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "'I can't wait to tell you about my trip'에서 Subin의 심정은?",
+      "question": "'The King's Guard'의 특징으로 옳은 것은?",
       "choices": [
-        "여행을 하고 싶지 않다",
-        "여행에 대해 말하고 싶지 않다",
-        "여행에 대해 얘기하고 싶어 한다",
-        "여행을 좋아하지 않는다",
-        "기억하고 싶지 않다"
+        "웃고 움직인다",
+        "옷을 자주 바꾼다",
+        "관광객에게 친절하다",
+        "움직이지 않는다",
+        "자유롭게 행동한다"
       ],
-      "answer": 2,
-      "explanation": "'can't wait to'는 '~하고 싶어 한다'의 의미입니다."
+      "answer": 3,
+      "explanation": "본문: 'they didn't smile or move. They were like statues!'"
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "'Come with me on my amazing trip!'에서 저자의 의도는?",
+      "question": "'Camden Market'으로 유명한 것은?",
       "choices": [
-        "비판하기",
-        "명령하기",
-        "독자를 여행에 초대하기",
-        "여행을 막기",
-        "정보 제공하기"
+        "옷 판매",
+        "세계 여러 나라의 음식",
+        "책 판매",
+        "장난감 판매",
+        "예술 작품"
       ],
-      "answer": 2,
-      "explanation": "독자들을 자신의 여행 이야기 속으로 초대하고 있습니다."
+      "answer": 1,
+      "explanation": "본문: 'This market is known for its food from around the world'"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "본문에서 King's Guard의 태도는?",
+      "question": "Subin이 런던에서 가장 흥분했던 순간은?",
       "choices": [
-        "친절하다",
-        "위험하다",
-        "움직임이 없다",
-        "화났다",
-        "도움이 된다"
+        "비행기 탈 때",
+        "버스를 탈 때",
+        "공항에서 Amelia를 만날 때",
+        "음식을 먹을 때",
+        "사진을 찍을 때"
       ],
       "answer": 2,
-      "explanation": "본문: 'they didn't smile or move. They were like statues!'"
+      "explanation": "본문: 'When I met my friend Amelia at the airport, I was so excited'"
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "'The King and his family live there'에서 'there'는 무엇을 가리키는가?",
+      "question": "'I can't wait to'의 의미는?",
       "choices": [
-        "London",
-        "Airport",
-        "Red Bus",
-        "Buckingham Palace",
-        "Camden Market"
+        "기다리고 싶다",
+        "할 수 없다",
+        "~하기를 간절히 원하다",
+        "기다릴 필요가 없다",
+        "할 시간이 없다"
       ],
-      "answer": 3,
-      "explanation": "직전 문장에서 언급한 Buckingham Palace를 가리킵니다."
+      "answer": 2,
+      "explanation": "'can't wait to'는 '~하기를 간절히 원하다'는 의미입니다."
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "본문에서 'yummy'는 어떤 의미인가?",
+      "question": "'They were like statues'가 의미하는 바는?",
       "choices": [
-        "맛없는",
-        "맛있는",
-        "비싼",
-        "싸다",
-        "부드러운"
+        "그들은 동상이었다",
+        "그들은 움직이지 않았다",
+        "그들은 아름다웠다",
+        "그들은 크기가 크다",
+        "그들은 노래했다"
       ],
       "answer": 1,
-      "explanation": "'Yummy'는 '맛있는'의 의미입니다. 본문의 'Yummy Meal' 제목에서 사용됩니다."
+      "explanation": "'like'는 비유로, '동상처럼 움직이지 않는다'는 의미입니다."
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "Amelia가 Subin에게 한 역할은?",
+      "question": "Subin의 비행 시간은 얼마였는가?",
       "choices": [
-        "가이드",
-        "통역가",
-        "상점 점원",
-        "기자",
-        "선생님"
+        "5시간",
+        "10시간",
+        "15시간",
+        "20시간",
+        "25시간"
       ],
-      "answer": 0,
-      "explanation": "본문: 'She took me to many places in London'로 가이드 역할을 했습니다."
+      "answer": 2,
+      "explanation": "본문: 'The flight took 15 hours from Incheon'"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "본문의 주제로 가장 적절한 것은?",
+      "question": "현재완료 'have/has + 과거분사'를 사용할 수 없는 경우는?",
       "choices": [
-        "런던의 역사",
-        "Amelia의 가족",
-        "Subin의 런던 여행 경험",
-        "비행기 여행의 즐거움",
-        "영국 음식"
+        "과거부터 현재까지의 경험",
+        "최근에 일어난 행동",
+        "지정된 과거 시간에 일어난 행동",
+        "최근 완료된 행동",
+        "인생 경험"
       ],
       "answer": 2,
-      "explanation": "본문 전체가 Subin의 런던 여행과 경험에 대해 다루고 있습니다."
+      "explanation": "지정된 과거 시간('yesterday', 'last week' 등)에는 단순과거를 사용합니다."
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "'I have eaten fish many times before'와 비교할 때 본문에서 Subin이 말한 것은?",
+      "question": "'She took me to many places in London'에서 'took'가 의미하는 것은?",
       "choices": [
-        "I have never seen her before",
-        "I have known Amelia since",
-        "I haven't seen fish before",
-        "I have eaten fish and chips",
-        "I have lived in London"
+        "데려갔다",
+        "잡았다",
+        "받았다",
+        "가져갔다",
+        "이해했다"
       ],
-      "answer": 1,
-      "explanation": "본문: 'I have known her since I was 10 years old'로 오래 알고 지낸 친구를 만났습니다."
+      "answer": 0,
+      "explanation": "'take to'는 '데려가다'의 의미입니다."
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "본문의 목적은?",
+      "question": "Subin과 Amelia의 관계는?",
       "choices": [
-        "런던의 관광지 정보 제공",
-        "Amelia 소개하기",
-        "자신의 여행 경험 공유",
-        "영어 공부하기",
-        "버스 타는 방법 설명"
+        "형제",
+        "학생과 선생님",
+        "친구",
+        "낯선 사람",
+        "가족"
       ],
       "answer": 2,
-      "explanation": "저자(Subin)가 자신의 런던 여행 경험과 느낌을 공유하는 글입니다."
+      "explanation": "본문: 'my friend Amelia' 그리고 'I have known her since I was 10 years old'"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "Subin이 런던에서 Amelia를 어디서 만났나요?",
-      "answer": "공항(airport)에서",
-      "explanation": "본문: 'When I met my friend Amelia at the airport'"
+      "question": "'How can I get to the library?'라는 길 묻는 질문에 영어로 길 찾기 답변을 만드세요.",
+      "answer": "Go straight three blocks and make a right. / Turn left on Main Street. (또는 유사한 길 찾기 표현)",
+      "explanation": "길 찾기는 방향 표현을 포함해야 합니다."
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "버킹엄 궁전의 위병들이 동상 같은 이유는?",
-      "answer": "웃지도 움직이지도 않기 때문에 (또는 표정과 움직임이 없기 때문에)",
-      "explanation": "본문: 'they didn't smile or move. They were like statues!'"
+      "question": "'I have eaten pizza five times'가 의미하는 바를 한국어로 설명하세요.",
+      "answer": "지금까지 피자를 5번 먹었다 (또는 현재까지의 경험)",
+      "explanation": "현재완료는 과거부터 현재까지의 경험을 나타냅니다."
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "Subin이 Amelia를 언제부터 알고 있었나요?",
-      "answer": "10살부터 (또는 10살 때부터)",
-      "explanation": "본문: 'I have known her since I was 10 years old'"
+      "question": "'She told him to go home'을 '그녀는 그에게 집에 가도록 말했다'는 의미로 바꾸세요.",
+      "answer": "이미 올바르게 번역되었습니다. (또는 'She said to him to go home'은 틀렸고 원문이 맞습니다)",
+      "explanation": "'tell + 목적어 + to부정사' 구조입니다."
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "캠던 마켓(Camden Market)은 무엇으로 유명한가요?",
-      "answer": "세계 여러 나라의 음식",
-      "explanation": "본문: 'This market is known for its food from around the world'"
+      "question": "런던 여행에서 Subin이 경험한 두 가지 주요 장소와 각각의 특징을 본문에서 찾아 쓰세요.",
+      "answer": "1. Buckingham Palace - King이 사는 곳, King's Guard가 있음 2. Camden Market - 세계 음식이 있는 시장",
+      "explanation": "본문에 명시된 두 장소입니다."
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "Subin의 비행시간은 얼마였으며 어디에서 출발했나요?",
-      "answer": "15시간, 인천(공항)에서 출발",
-      "explanation": "본문: 'The flight took 15 hours from Incheon'"
+      "question": "'I have known her since I was 10 years old'에서 현재완료를 사용한 이유를 설명하세요.",
+      "answer": "10살부터 현재까지 계속 Amelia를 알고 있기 때문에 (지속된 상태를 표현)",
+      "explanation": "현재완료의 지속 의미를 이해하는 문제입니다."
     }
-  ],
-  "passage": "See You in London!\n\nSubin's Travel Story\n\nI can't wait to tell you about my trip to London. The flight took 15 hours from Incheon. When I met my friend Amelia at the airport, I was so excited. I have known her since I was 10 years old. She took me to many places in London. Come with me on my amazing trip!\n\nBeautiful Palace\n\nWe got on the famous red bus and the first stop was Buckingham Palace. The King and his family live there. We saw the King's Guard. The guards were wearing red jackets and tall black hats. We took pictures near them, but they didn't smile or move. They were like statues!\n\nYummy Meal\n\nNext, we went to Camden Market. This market is known for its food from around the world. Amelia told me to try the fish and chips. I thought, \"How strange! I have eaten fish many times before..."
+  ]
 }
