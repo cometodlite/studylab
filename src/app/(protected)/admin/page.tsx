@@ -28,6 +28,15 @@ interface AdminInquiry {
   createdAt: { seconds: number };
 }
 
+type InquiryStatus = AdminInquiry['status'];
+type InquiryFilter = InquiryStatus | 'all';
+
+const inquiryStatusOptions: Array<{ value: InquiryStatus; label: string }> = [
+  { value: 'new', label: '신규' },
+  { value: 'read', label: '읽음' },
+  { value: 'resolved', label: '해결됨' },
+];
+
 interface AdminStats {
   totalUsers: number;
   activeUsers24h: number;
@@ -80,6 +89,8 @@ export default function AdminPage() {
   const [inquiries, setInquiries] = useState<AdminInquiry[]>([]);
   const [inquiriesLoading, setInquiriesLoading] = useState(false);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [inquiryFilter, setInquiryFilter] = useState<InquiryFilter>('all');
+  const [statusDrafts, setStatusDrafts] = useState<Record<string, InquiryStatus>>({});
 
   // 문제 개발 탭 상태
   const [examFiles, setExamFiles] = useState<ExamFile[]>([]);
@@ -160,14 +171,15 @@ export default function AdminPage() {
     setInquiriesLoading(false);
   }
 
-  async function updateInquiryStatus(id: string, status: string) {
+  async function updateInquiryStatus(id: string, status: InquiryStatus) {
     const token = await getToken();
     await fetch(`/api/admin/inquiries/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
       body: JSON.stringify({ status }),
     });
-    setInquiries(prev => prev.map(i => i._id === id ? { ...i, status: status as AdminInquiry['status'] } : i));
+    setInquiries(prev => prev.map(i => i._id === id ? { ...i, status } : i));
+    setStatusDrafts(prev => ({ ...prev, [id]: status }));
   }
 
   async function handleUpload(e: React.FormEvent) {
@@ -223,6 +235,22 @@ export default function AdminPage() {
     if (nextTab === 'inquiries' && inquiries.length === 0) loadInquiries();
     if (nextTab === 'exam-dev' && examFiles.length === 0) loadExamFiles();
   }
+
+  const inquiryCounts = {
+    all: inquiries.length,
+    new: inquiries.filter(i => i.status === 'new').length,
+    read: inquiries.filter(i => i.status === 'read').length,
+    resolved: inquiries.filter(i => i.status === 'resolved').length,
+  };
+  const filteredInquiries = inquiryFilter === 'all'
+    ? inquiries
+    : inquiries.filter(i => i.status === inquiryFilter);
+  const inquiryFilterOptions: Array<{ value: InquiryFilter; label: string }> = [
+    { value: 'all', label: `All (${inquiryCounts.all})` },
+    { value: 'new', label: `New (${inquiryCounts.new})` },
+    { value: 'read', label: `Read (${inquiryCounts.read})` },
+    { value: 'resolved', label: `Resolved (${inquiryCounts.resolved})` },
+  ];
 
   if (!profile || profile.role !== 'admin') return null;
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
@@ -427,18 +455,37 @@ export default function AdminPage() {
 
       {tab === 'inquiries' && (
         <div className="space-y-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3 flex-wrap">
             <p className="text-sm text-gray-500">총 {inquiries.length}건 · 신규 {inquiries.filter(i => i.status === 'new').length}건</p>
             <button onClick={loadInquiries} className="text-xs text-indigo-600 hover:underline">새로고침</button>
+          </div>
+
+          <div className="flex gap-2 flex-wrap">
+            {inquiryFilterOptions.map(option => (
+              <button
+                key={option.value}
+                onClick={() => setInquiryFilter(option.value)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
+                  inquiryFilter === option.value
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
+                }`}
+              >
+                {option.label}
+              </button>
+            ))}
           </div>
 
           {inquiriesLoading ? (
             <div className="text-center py-10 text-gray-400">불러오는 중...</div>
           ) : inquiries.length === 0 ? (
             <div className="text-center py-10 text-gray-400">문의 내역이 없습니다.</div>
+          ) : filteredInquiries.length === 0 ? (
+            <div className="text-center py-10 text-gray-400">선택한 상태의 문의가 없습니다.</div>
           ) : (
-            inquiries.map(inq => {
+            filteredInquiries.map(inq => {
               const isExpanded = expandedId === inq._id;
+              const selectedStatus = statusDrafts[inq._id] ?? inq.status;
               const date = inq.createdAt?.seconds
                 ? new Date(inq.createdAt.seconds * 1000).toLocaleString('ko-KR', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
                 : '';
@@ -479,30 +526,28 @@ export default function AdminPage() {
                   {isExpanded && (
                     <div className="border-t border-gray-100 px-5 py-4 space-y-3">
                       <p className="text-sm text-gray-700 whitespace-pre-wrap">{inq.message}</p>
-                      <div className="flex gap-2">
-                        {inq.status !== 'read' && (
-                          <button
-                            onClick={() => updateInquiryStatus(inq._id, 'read')}
-                            className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"
-                          >
-                            읽음 처리
-                          </button>
-                        )}
-                        {inq.status !== 'resolved' && (
-                          <button
-                            onClick={() => updateInquiryStatus(inq._id, 'resolved')}
-                            className="text-xs px-3 py-1.5 rounded-lg bg-green-600 text-white hover:bg-green-700 transition"
-                          >
-                            해결됨
-                          </button>
-                        )}
-                        {inq.status === 'resolved' && (
-                          <button
-                            onClick={() => updateInquiryStatus(inq._id, 'new')}
-                            className="text-xs px-3 py-1.5 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition"
-                          >
-                            다시 열기
-                          </button>
+                      <div className="text-xs text-gray-500">
+                        이메일: {inq.email || '없음'}
+                      </div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <select
+                          value={selectedStatus}
+                          onChange={e => setStatusDrafts(prev => ({ ...prev, [inq._id]: e.target.value as InquiryStatus }))}
+                          className="border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                        >
+                          {inquiryStatusOptions.map(option => (
+                            <option key={option.value} value={option.value}>{option.label}</option>
+                          ))}
+                        </select>
+                        <button
+                          onClick={() => updateInquiryStatus(inq._id, selectedStatus)}
+                          disabled={selectedStatus === inq.status}
+                          className="text-xs px-3 py-1.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition disabled:opacity-40 disabled:cursor-not-allowed"
+                        >
+                          상태 변경
+                        </button>
+                        {inq.status === 'new' && (
+                          <span className="text-xs text-gray-400">펼치면 자동으로 읽음 처리됩니다.</span>
                         )}
                       </div>
                     </div>
