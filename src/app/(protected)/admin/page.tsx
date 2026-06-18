@@ -132,11 +132,23 @@ export default function AdminPage() {
 
   async function loadExamFiles() {
     setExamLoading(true);
-    const token = await getToken();
-    const res = await fetch('/api/admin/exam-files', { headers: { Authorization: `Bearer ${token}` } });
-    const data = await res.json();
-    setExamFiles(Array.isArray(data) ? data : []);
-    setExamLoading(false);
+    try {
+      const token = await getToken();
+      const res = await fetch('/api/admin/exam-files', { headers: { Authorization: `Bearer ${token}` } });
+      if (!res.ok) {
+        console.error('[exam-dev] API error:', res.status, res.statusText);
+        setExamFiles([]);
+        setExamLoading(false);
+        return;
+      }
+      const data = await res.json();
+      setExamFiles(Array.isArray(data) ? data : []);
+    } catch (err) {
+      console.error('[exam-dev] fetch error:', err);
+      setExamFiles([]);
+    } finally {
+      setExamLoading(false);
+    }
   }
 
   async function loadExamContent(filename: string) {
