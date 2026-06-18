@@ -49,6 +49,25 @@ interface AdminStats {
   }>;
 }
 
+interface UserReport {
+  id: string;
+  userId: string;
+  nickname: string;
+  email: string;
+  school: string;
+  gradeLevel: number | null;
+  examId: string;
+  examTitle: string;
+  sheet: number;
+  mcScore: number;
+  essayScore: number;
+  totalScore: number;
+  maxScore: number;
+  scoreRate: number;
+  pointsEarned: number;
+  completedAt: { seconds: number } | null;
+}
+
 interface ExamFile {
   filename: string;
   id: string;
@@ -91,7 +110,7 @@ interface ExamPrResult {
   pullRequestUrl: string;
 }
 
-type AdminTab = 'stats' | 'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev';
+type AdminTab = 'stats' | 'coupons' | 'upload' | 'debug' | 'inquiries' | 'reports' | 'exam-dev';
 
 export default function AdminPage() {
   const { profile } = useAuth();
@@ -103,6 +122,10 @@ export default function AdminPage() {
 
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [statsLoading, setStatsLoading] = useState(false);
+
+  const [reports, setReports] = useState<UserReport[]>([]);
+  const [reportsLoading, setReportsLoading] = useState(false);
+  const [reportSearch, setReportSearch] = useState('');
 
   const [inquiries, setInquiries] = useState<AdminInquiry[]>([]);
   const [inquiriesLoading, setInquiriesLoading] = useState(false);
@@ -183,6 +206,21 @@ export default function AdminPage() {
       console.error('[stats] load error:', e);
     } finally {
       setStatsLoading(false);
+    }
+  }
+
+  async function loadReports() {
+    try {
+      const token = await getToken();
+      setReportsLoading(true);
+      const res = await fetch('/api/admin/user-reports', { headers: { Authorization: `Bearer ${token}` } });
+      const data = await res.json();
+      setReports(Array.isArray(data.reports) ? data.reports : []);
+    } catch (e) {
+      console.error('[reports] load error:', e);
+      setReports([]);
+    } finally {
+      setReportsLoading(false);
     }
   }
 
@@ -363,6 +401,7 @@ export default function AdminPage() {
     setTab(nextTab);
     if (nextTab === 'stats' && !stats) loadStats();
     if (nextTab === 'inquiries' && inquiries.length === 0) loadInquiries();
+    if (nextTab === 'reports' && reports.length === 0) loadReports();
     if (nextTab === 'exam-dev' && examFiles.length === 0) loadExamFiles();
   }
 
@@ -381,6 +420,30 @@ export default function AdminPage() {
     { value: 'read', label: `Read (${inquiryCounts.read})` },
     { value: 'resolved', label: `Resolved (${inquiryCounts.resolved})` },
   ];
+  const normalizedReportSearch = reportSearch.trim().toLowerCase();
+  const filteredReports = normalizedReportSearch
+    ? reports.filter(report =>
+        [
+          report.nickname,
+          report.email,
+          report.school,
+          report.examTitle,
+          report.examId,
+          report.userId,
+        ].some(value => value.toLowerCase().includes(normalizedReportSearch))
+      )
+    : reports;
+
+  function formatReportDate(completedAt: UserReport['completedAt']) {
+    if (!completedAt?.seconds) return '-';
+    return new Date(completedAt.seconds * 1000).toLocaleString('ko-KR', {
+      timeZone: 'Asia/Seoul',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  }
 
   function renderExamEditor() {
     if (!selectedExam) return null;
@@ -502,7 +565,7 @@ export default function AdminPage() {
       </div>
 
       <div className="flex gap-2 flex-wrap">
-        {([['stats', '📊 통계'], ['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['exam-dev', '📝 문제 개발']] as Array<[AdminTab, string]>).map(([t, label]) => (
+        {([['stats', '📊 통계'], ['coupons', '🎁 쿠폰 관리'], ['upload', '⬆️ 기프티콘 업로드'], ['debug', '🐛 디버그 수정 내역'], ['inquiries', `💬 문의 내역${inquiries.filter(i => i.status === 'new').length > 0 ? ` (${inquiries.filter(i => i.status === 'new').length})` : ''}`], ['reports', '📋 사용자 리포트'], ['exam-dev', '📝 문제 개발']] as Array<[AdminTab, string]>).map(([t, label]) => (
           <button
             key={t}
             onClick={() => selectTab(t)}
@@ -795,6 +858,80 @@ export default function AdminPage() {
                 </div>
               );
             })
+          )}
+        </div>
+      )}
+
+      {tab === 'reports' && (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div>
+              <p className="text-sm text-gray-500">최근 응시 기록 {reports.length.toLocaleString()}건</p>
+              <p className="text-xs text-gray-400 mt-0.5">학생별 시험 응시 시간, 점수, 획득 포인트를 확인합니다.</p>
+            </div>
+            <button onClick={loadReports} className="text-xs text-indigo-600 hover:underline">새로고침</button>
+          </div>
+
+          <input
+            value={reportSearch}
+            onChange={e => setReportSearch(e.target.value)}
+            placeholder="학생, 이메일, 학교, 시험명 검색"
+            className="w-full border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          />
+
+          {reportsLoading ? (
+            <div className="text-center py-10 text-gray-400">불러오는 중...</div>
+          ) : reports.length === 0 ? (
+            <div className="text-center py-10 text-gray-400">응시 기록이 없습니다.</div>
+          ) : filteredReports.length === 0 ? (
+            <div className="text-center py-10 text-gray-400">검색 결과가 없습니다.</div>
+          ) : (
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-x-auto">
+              <table className="w-full min-w-[960px] text-sm">
+                <thead className="bg-gray-50 border-b border-gray-200">
+                  <tr>
+                    <th className="text-left px-4 py-3 text-gray-600 font-semibold">응시자</th>
+                    <th className="text-left px-4 py-3 text-gray-600 font-semibold">학교/학년</th>
+                    <th className="text-left px-4 py-3 text-gray-600 font-semibold">시험</th>
+                    <th className="text-right px-4 py-3 text-gray-600 font-semibold">점수</th>
+                    <th className="text-right px-4 py-3 text-gray-600 font-semibold">객관/서술</th>
+                    <th className="text-right px-4 py-3 text-gray-600 font-semibold">포인트</th>
+                    <th className="text-right px-4 py-3 text-gray-600 font-semibold">응시일</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {filteredReports.map(report => (
+                    <tr key={report.id} className="hover:bg-gray-50">
+                      <td className="px-4 py-3">
+                        <p className="font-semibold text-gray-800">{report.nickname}</p>
+                        <p className="text-xs text-gray-400">{report.email || report.userId}</p>
+                      </td>
+                      <td className="px-4 py-3 text-gray-600">
+                        <p>{report.school || '-'}</p>
+                        <p className="text-xs text-gray-400">{report.gradeLevel ? `중${report.gradeLevel}` : '-'}</p>
+                      </td>
+                      <td className="px-4 py-3">
+                        <p className="font-medium text-gray-800 truncate max-w-xs">{report.examTitle}</p>
+                        <p className="text-xs text-gray-400 font-mono">{report.examId}</p>
+                      </td>
+                      <td className="px-4 py-3 text-right">
+                        <p className="font-semibold text-indigo-600">{report.totalScore}/{report.maxScore}</p>
+                        <p className="text-xs text-gray-400">{report.scoreRate.toFixed(1)}%</p>
+                      </td>
+                      <td className="px-4 py-3 text-right text-gray-600">
+                        {report.mcScore}/{report.essayScore}
+                      </td>
+                      <td className="px-4 py-3 text-right font-semibold text-green-600">
+                        +{report.pointsEarned.toLocaleString()}p
+                      </td>
+                      <td className="px-4 py-3 text-right text-gray-500">
+                        {formatReportDate(report.completedAt)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </div>
       )}
