@@ -1,360 +1,354 @@
 {
   "id": "bicheon-m2-2026-1-2-sheet3",
-  "title": "부천일신중 2학년 수학 2차 모의고사 3회",
-  "school": "부천일신중",
+  "title": "부천일신중 2학년 수학 1학기 기말 모의고사 3회",
+  "category": "학교",
+  "school": "부천일신중학교",
   "grade": 2,
   "subject": "수학",
   "sheet": 3,
   "difficulty": "보통",
   "timeLimit": 40,
   "totalScore": 100,
-  "scorePerMC": 4,
-  "scorePerEssay": 4,
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "$a < b$이고 $c > 0$일 때 다음 중 항상 옳은 것은?",
+      "question": "일차함수 $y = 4x - 3$의 기울기는?",
       "choices": [
-        "$\\frac{a}{c} > \\frac{b}{c}$",
-        "$-a < -b$",
-        "$a + c < b - c$",
-        "$ac < bc$",
-        "$ac > bc$"
+        "-3",
+        "-4",
+        "3",
+        "4",
+        "5"
       ],
       "answer": 3,
-      "explanation": "$c > 0$이면 부등호 방향 유지: $ac < bc$"
+      "explanation": "$y = ax + b$에서 기울기는 $a$이므로 $4$"
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "$\\frac{2x + 1}{3} \\geq 3$의 해는?",
+      "question": "일차함수 $y = -2x + 7$의 $y$절편은?",
       "choices": [
-        "$x \\geq -4$",
-        "$x \\leq -4$",
-        "$x > 4$",
-        "$x \\leq 4$",
-        "$x \\geq 4$"
+        "-7",
+        "-2",
+        "2",
+        "5",
+        "7"
       ],
       "answer": 4,
-      "explanation": "$2x + 1 \\geq 9 \\Rightarrow 2x \\geq 8 \\Rightarrow x \\geq 4$"
+      "explanation": "$y = ax + b$에서 $y$절편은 $b$이므로 $7$"
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "$-\\frac{x}{3} < 2$의 해는?",
+      "question": "일차함수 $y = 3x - 6$의 $x$절편은?",
       "choices": [
-        "$x > -6$",
-        "$x > 6$",
-        "$x < 6$",
-        "$x < -6$",
-        "$x \\geq -6$"
+        "-6",
+        "-2",
+        "2",
+        "3",
+        "6"
       ],
-      "answer": 0,
-      "explanation": "$-x < 6 \\Rightarrow x > -6$ (나누기 음수 → 방향 바뀜)"
+      "answer": 2,
+      "explanation": "$y = 0$으로 놓으면 $0 = 3x - 6$, $x = 2$"
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "$7x - 4 \\geq 3x + 12$의 해는?",
+      "question": "기울기가 $3$이고 $y$절편이 $-2$인 일차함수의 식은?",
       "choices": [
-        "$x \\geq 4$",
-        "$x \\leq -4$",
-        "$x \\geq -4$",
-        "$x > 4$",
-        "$x \\leq 4$"
+        "$y = 3x + 2$",
+        "$y = -3x + 2$",
+        "$y = 3x - 2$",
+        "$y = -3x - 2$",
+        "$y = 2x - 3$"
       ],
-      "answer": 0,
-      "explanation": "$4x \\geq 16 \\Rightarrow x \\geq 4$"
+      "answer": 2,
+      "explanation": "기울기 $3$, $y$절편 $-2$이므로 $y = 3x - 2$"
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "$-2 < x + 3 \\leq 5$를 풀면?",
+      "question": "$y = 2x + 3$에서 $x = 3$일 때 $y$의 값은?",
       "choices": [
-        "$-5 < x \\leq 2$",
-        "$-5 < x < 2$",
-        "$-5 \\leq x < 2$",
-        "$1 < x \\leq 8$",
-        "$-2 < x \\leq 5$"
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
       ],
-      "answer": 0,
-      "explanation": "$-2 - 3 < x \\leq 5 - 3 \\Rightarrow -5 < x \\leq 2$"
+      "answer": 2,
+      "explanation": "$y = 2 \\times 3 + 3 = 9$"
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "다음 대응 관계 중 $y$가 $x$의 함수인 것은?",
+      "question": "일차함수 $y = -x + 5$에서 $x$절편과 $y$절편의 값이 같은가?",
       "choices": [
-        "$\\{(-1,-1),(2,2)\\}$ (정의역 누락)",
-        "$\\{(-1,1),(0,0),(1,1),(1,2)\\}$",
-        "$\\{(-1,2),(0,1),(2,0),(2,-1)\\}$",
-        "$\\{(-1,0),(0,1),(-1,2),(2,3)\\}$",
-        "$\\{(-1,0),(0,1),(1,2),(2,2)\\}$"
+        "$x$절편: 5, $y$절편: 5로 같다",
+        "$x$절편: 5, $y$절편: $-5$로 다르다",
+        "$x$절편: $-5$, $y$절편: 5로 다르다",
+        "$x$절편: 3, $y$절편: 5로 다르다",
+        "$x$절편: $-5$, $y$절편: $-5$로 같다"
       ],
-      "answer": 4,
-      "explanation": "①: 하나의 $x$에 하나의 $y$ 대응 → 함수. ②: $x=-1$에 두 값, ③: $x=1$에 두 값, ⑤: $x=2$에 두 값."
+      "answer": 0,
+      "explanation": "$y = 0$이면 $x = 5$, $x = 0$이면 $y = 5$. 둘 다 5"
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = \\frac{x}{2} - 3$일 때 $f(8)$의 값은?",
+      "question": "$y = ax - 4$가 점 $(2, 6)$을 지날 때 $a$의 값은?",
       "choices": [
-        "$-1$",
-        "$-4$",
-        "$7$",
-        "$1$",
-        "$4$"
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
       ],
-      "answer": 3,
-      "explanation": "$f(8) = 4 - 3 = 1$"
+      "answer": 2,
+      "explanation": "$6 = 2a - 4$, $2a = 10$이므로 $a = 5$"
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "집에서 학교까지 $x\\text{km}$이다. 시속 $4\\text{km}$로 걸어 $1$시간 $30$분 이내에 도착하려면?",
+      "question": "$y = -3x + b$가 점 $(1, 4)$를 지날 때 $b$의 값은?",
       "choices": [
-        "$x \\leq 3$",
-        "$x \\leq 4$",
-        "$x \\leq 6$",
-        "$x \\leq 8$",
-        "$x \\leq 10$"
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
       ],
       "answer": 2,
-      "explanation": "$x/4 \\leq 1.5 \\Rightarrow x \\leq 6$"
+      "explanation": "$4 = -3 + b$이므로 $b = 7$"
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = ax + 3$이고 $f(2) = -1$일 때 $a$의 값은?",
+      "question": "두 점 $(0, 3)$과 $(2, 7)$을 지나는 일차함수의 기울기는?",
       "choices": [
-        "$1$",
-        "$-1$",
-        "$-3$",
-        "$2$",
-        "$-2$"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
-      "answer": 4,
-      "explanation": "$2a + 3 = -1 \\Rightarrow 2a = -4 \\Rightarrow a = -2$"
+      "answer": 1,
+      "explanation": "기울기 $= \\frac{7-3}{2-0} = \\frac{4}{2} = 2$"
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "$0.3x - 0.9 \\geq 0.6$의 해는?",
+      "question": "$y = 3x + 2$와 $y = x + 4$의 교점의 좌표는?",
       "choices": [
-        "$x \\leq 5$",
-        "$x \\leq 2$",
-        "$x > 5$",
-        "$x \\geq 5$",
-        "$x \\geq 2$"
+        "$(1, 5)$",
+        "$(2, 5)$",
+        "$(1, 4)$",
+        "$(2, 6)$",
+        "$(1, 6)$"
       ],
-      "answer": 3,
-      "explanation": "$0.3x \\geq 1.5 \\Rightarrow x \\geq 5$"
+      "answer": 0,
+      "explanation": "$3x + 2 = x + 4$, $2x = 2$, $x = 1$, $y = 5$. 교점 $(1, 5)$"
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = 3x - 2$에서 $f(2) - f(-1)$의 값은?",
+      "question": "$y = 4x - 1$에서 $x$의 값이 $1$ 증가할 때 $y$의 변화량은?",
       "choices": [
-        "$-9$",
-        "$4$",
-        "$9$",
-        "$-3$",
-        "$3$"
+        "-1",
+        "1",
+        "2",
+        "3",
+        "4"
       ],
-      "answer": 2,
-      "explanation": "$f(2) = 4$, $f(-1) = -5$. $4 - (-5) = 9$"
+      "answer": 4,
+      "explanation": "기울기가 $4$이므로 $x$가 $1$ 증가할 때 $y$는 $4$ 증가"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "$3(x - 2) + 5 \\geq 2(x + 1)$의 해는?",
+      "question": "일차함수 $y = -3x + 6$의 그래프가 지나지 않는 사분면은?",
       "choices": [
-        "$x \\geq -3$",
-        "$x \\leq 3$",
-        "$x \\geq 3$",
-        "$x \\leq -3$",
-        "$x > 3$"
+        "제1사분면",
+        "제2사분면",
+        "제3사분면",
+        "제4사분면",
+        "제1, 3사분면"
       ],
       "answer": 2,
-      "explanation": "$3x - 1 \\geq 2x + 2 \\Rightarrow x \\geq 3$"
+      "explanation": "기울기 음수, $y$절편 양수이므로 1, 2, 4사분면을 지나고 제3사분면을 지나지 않음"
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "$\\frac{x}{2} - \\frac{x}{3} > 1$의 해는?",
+      "question": "일차함수 $y = ax + b$에서 기울기가 음수이고 $y$절편이 양수일 때, 그래프의 모양은?",
       "choices": [
-        "$x > 2$",
-        "$x > 3$",
-        "$x > 6$",
-        "$x < 6$",
-        "$x < 3$"
+        "우상향, $y$절편 양수",
+        "우하향, $y$절편 양수",
+        "우상향, $y$절편 음수",
+        "우하향, $y$절편 음수",
+        "수평"
       ],
-      "answer": 2,
-      "explanation": "$\\frac{3x - 2x}{6} > 1 \\Rightarrow \\frac{x}{6} > 1 \\Rightarrow x > 6$"
+      "answer": 1,
+      "explanation": "기울기 음수이면 오른쪽으로 내려가는 그래프(우하향), $y$절편 양수"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = 2x + 4$에서 $f(a) = 2f(0)$일 때 $a$의 값은?",
+      "question": "$y = 2x + 3$과 $y = 5x - 3$의 교점의 $x$좌표는?",
       "choices": [
-        "$2$",
-        "$1$",
-        "$-2$",
-        "$4$",
-        "$-4$"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
-      "answer": 0,
-      "explanation": "$f(0) = 4$. $f(a) = 8$. $2a + 4 = 8 \\Rightarrow a = 2$"
+      "answer": 1,
+      "explanation": "$2x + 3 = 5x - 3$, $6 = 3x$, $x = 2$"
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "$ax > 6$의 해가 $x < -2$일 때 $a$의 값은?",
+      "question": "$y = f(x) = 5x - 7$의 $y$절편은?",
       "choices": [
-        "$3$",
-        "$-2$",
-        "$-6$",
-        "$-3$",
-        "$6$"
+        "-8",
+        "-7",
+        "-5",
+        "5",
+        "7"
       ],
-      "answer": 3,
-      "explanation": "$a < 0$ (방향 반전). $6/a = -2 \\Rightarrow a = -3$"
+      "answer": 1,
+      "explanation": "$y = 5x - 7$에서 $y$절편은 $-7$"
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "$2x - 7 < x + k$의 해가 $x < 5$일 때 $k$는?",
+      "question": "두 점 $(2, 1)$과 $(4, 7)$을 지나는 일차함수 $f(x)$에서 $f(6)$의 값은?",
       "choices": [
-        "$-5$",
-        "$2$",
-        "$-7$",
-        "$7$",
-        "$-2$"
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
       ],
-      "answer": 4,
-      "explanation": "$x < k + 7$. 해가 $x < 5$ → $k + 7 = 5 \\Rightarrow k = -2$"
+      "answer": 3,
+      "explanation": "기울기 $= \\frac{7-1}{4-2} = 3$. $(2, 1)$: $1 = 6 + b$, $b = -5$. $f(x) = 3x - 5$. $f(6) = 18 - 5 = 13$"
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = ax + b$에서 $f(0) = -3$, $f(3) = 9$일 때 $f(1)$의 값은?",
+      "question": "$y = ax + b$가 $y = 3x + 1$과 평행하고 점 $(2, 1)$을 지날 때 $b$의 값은?",
       "choices": [
-        "$-4$",
-        "$4$",
-        "$5$",
-        "$-1$",
-        "$1$"
+        "-7",
+        "-5",
+        "-3",
+        "-1",
+        "1"
       ],
-      "answer": 4,
-      "explanation": "$b = -3$. $3a - 3 = 9 \\Rightarrow a = 4$. $f(1) = 4 - 3 = 1$"
+      "answer": 1,
+      "explanation": "평행하면 기울기가 같으므로 $a = 3$. $1 = 6 + b$, $b = -5$"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "$5$문제 시험에서 맞히면 $10$점, 틀리면 $-2$점이다. $3$문제 맞고 $2$문제 틀리면?",
+      "question": "일차함수 $y = -2x + 8$이 $x$축과 만나는 점의 좌표는?",
       "choices": [
-        "$28$점",
-        "$24$점",
-        "$26$점",
-        "$30$점",
-        "$22$점"
+        "$(2, 0)$",
+        "$(3, 0)$",
+        "$(4, 0)$",
+        "$(8, 0)$",
+        "$(-4, 0)$"
       ],
       "answer": 2,
-      "explanation": "$3 \\times 10 + 2 \\times (-2) = 30 - 4 = 26$점"
+      "explanation": "$y = 0$이면 $0 = -2x + 8$, $x = 4$. 점 $(4, 0)$"
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = -x + 4$에서 $1 \\leq x \\leq 3$일 때 $f(x)$의 최솟값은?",
+      "question": "$y = x + a$와 $y = -2x + b$가 점 $(3, 5)$에서 만날 때, $a + b$의 값은?",
       "choices": [
-        "$-1$",
-        "$1$",
-        "$4$",
-        "$2$",
-        "$3$"
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
       ],
-      "answer": 1,
-      "explanation": "$f(x)$는 감소함수. $f(3) = 1$이 최솟값."
+      "answer": 3,
+      "explanation": "$5 = 3 + a$이면 $a = 2$. $5 = -6 + b$이면 $b = 11$. $a + b = 13$"
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "$\\frac{x}{3} > 5$를 만족하는 $x$의 범위는?",
+      "question": "$y = 3x - 1$과 $y = 2x + 3$의 교점 $(p, q)$에서 $p - q$의 값은?",
       "choices": [
-        "$x < 15$",
-        "$x \\geq 15$",
-        "$x > 10$",
-        "$x < 10$",
-        "$x > 15$"
+        "-8",
+        "-7",
+        "-6",
+        "-5",
+        "-4"
       ],
-      "answer": 4,
-      "explanation": "$x > 15$"
+      "answer": 1,
+      "explanation": "$3x - 1 = 2x + 3$, $x = 4$, $y = 11$. $p - q = 4 - 11 = -7$"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "$\\frac{3x - 1}{2} - x > \\frac{1}{2}$을 풀어라.",
-      "answer": "$x > 2$",
-      "expectedAnswer": "x>2",
-      "rubric": "[2점] 통분: $\\frac{x-1}{2} > \\frac{1}{2}$ [2점] $x - 1 > 1 \\Rightarrow x > 2$"
+      "question": "$y = ax + b$의 그래프가 두 점 $(1, 2)$와 $(3, 8)$을 지날 때, $a + b$의 값을 구하여라.",
+      "answer": "2",
+      "explanation": "기울기 $a = \\frac{8-2}{3-1} = 3$. $(1, 2)$: $2 = 3 + b$, $b = -1$. $a + b = 2$"
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "어떤 상품의 가격은 개당 $1500$원이다. 예산이 $20000$원일 때 최대 몇 개 살 수 있는가?",
-      "answer": "최대 $13$개",
-      "expectedAnswer": "13",
-      "rubric": "[2점] $1500x \\leq 20000$ [2점] $x \\leq 13.33...$ → 자연수이므로 최대 $13$개"
+      "question": "$y = 4x - 8$의 $x$절편과 $y$절편의 합을 구하여라.",
+      "answer": "-6",
+      "explanation": "$x$절편: $y = 0$이면 $x = 2$. $y$절편: $-8$. 합 $= 2 + (-8) = -6$"
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "$f(x) = ax + b$에서 $f(1) = 3$이고 $f(3) = 7$일 때 $a + b$의 값을 구하여라.",
-      "answer": "$3$",
-      "expectedAnswer": "3",
-      "rubric": "[1점] $a+b=3$, $3a+b=7$ [2점] 연립: $a=2, b=1$ [1점] $a+b=3$"
+      "question": "$y = f(x)$의 기울기가 $-3$이고, $y = -3x + 1$과 $y$축에서 만날 때, $f(4)$의 값을 구하여라.",
+      "answer": "-11",
+      "explanation": "$y$절편이 같으므로 $f(x) = -3x + 1$. $f(4) = -12 + 1 = -11$"
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "$f(x) = -2x + 5$에서 $f(-2) + f(0) + f(2) + f(4)$를 구하여라.",
-      "answer": "$12$",
-      "expectedAnswer": "12",
-      "rubric": "[2점] 각 함수값: $9, 5, 1, -3$ [2점] 합 $= 9+5+1+(-3) = 12$"
+      "question": "$y = 2x - 6$에서 $0 \\leq x \\leq 4$일 때 $y$의 최솟값을 구하여라.",
+      "answer": "-6",
+      "explanation": "$x = 0$일 때 $y = -6$. $x = 4$일 때 $y = 2$. 최솟값은 $-6$"
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "$f(x) = 2x + 1$에서 $f(x) \\leq 7$을 만족하는 자연수 $x$의 개수를 구하여라.",
-      "answer": "$3$개",
-      "expectedAnswer": "3",
-      "rubric": "[2점] $2x + 1 \\leq 7 \\Rightarrow x \\leq 3$ [2점] 자연수: $1, 2, 3 \\Rightarrow 3$개"
+      "question": "$y = f(x) = -x + 6$에서 $f(x) = 0$이 되는 $x$의 값을 구하여라.",
+      "answer": "6",
+      "explanation": "$-x + 6 = 0$이므로 $x = 6$"
     }
   ]
 }

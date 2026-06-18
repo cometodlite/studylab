@@ -1,360 +1,354 @@
 {
   "id": "bicheon-m2-2026-1-2-sheet4",
-  "title": "부천일신중 2학년 수학 2차 모의고사 4회",
-  "school": "부천일신중",
+  "title": "부천일신중 2학년 수학 1학기 기말 모의고사 4회",
+  "category": "학교",
+  "school": "부천일신중학교",
   "grade": 2,
   "subject": "수학",
   "sheet": 4,
-  "difficulty": "어려움",
+  "difficulty": "보통",
   "timeLimit": 40,
   "totalScore": 100,
-  "scorePerMC": 4,
-  "scorePerEssay": 4,
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "$a < b$이고 $c < 0$일 때 다음 중 옳은 것은?",
+      "question": "연립방정식 $\\begin{cases} x + y = 7 \\\\ x - y = 3 \\end{cases}$의 해는?",
       "choices": [
-        "$ac < bc$",
-        "$a + c > b + c$",
-        "$-a < -b$",
-        "$\\frac{a}{c} > \\frac{b}{c}$",
-        "$ac > bc$"
+        "$(5, 1)$",
+        "$(5, 2)$",
+        "$(4, 2)$",
+        "$(4, 3)$",
+        "$(6, 1)$"
       ],
-      "answer": 4,
-      "explanation": "$c < 0$으로 곱하면 방향 반전: $ac > bc$"
+      "answer": 1,
+      "explanation": "두 식을 더하면 $2x = 10$, $x = 5$. 대입하면 $y = 2$. 해: $(5, 2)$"
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "$4x - 8 \\geq 0$의 해는?",
+      "question": "연립방정식 $\\begin{cases} 2x + y = 8 \\\\ x - y = 1 \\end{cases}$의 해는?",
       "choices": [
-        "$x \\geq 2$",
-        "$x \\geq -2$",
-        "$x > 2$",
-        "$x \\leq -2$",
-        "$x \\leq 2$"
+        "$(2, 4)$",
+        "$(3, 2)$",
+        "$(4, 0)$",
+        "$(1, 6)$",
+        "$(2, 5)$"
       ],
-      "answer": 0,
-      "explanation": "$4x \\geq 8 \\Rightarrow x \\geq 2$"
+      "answer": 1,
+      "explanation": "두 식을 더하면 $3x = 9$, $x = 3$. 대입하면 $y = 2$. 해: $(3, 2)$"
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "$\\frac{x}{-2} \\geq -3$의 해는?",
+      "question": "연립방정식 $\\begin{cases} y = x - 1 \\\\ y = -x + 3 \\end{cases}$의 해는?",
       "choices": [
-        "$x < 6$",
-        "$x \\leq -6$",
-        "$x \\leq 6$",
-        "$x \\geq -6$",
-        "$x \\geq 6$"
+        "$(1, 2)$",
+        "$(2, 1)$",
+        "$(3, 0)$",
+        "$(0, 3)$",
+        "$(4, -1)$"
       ],
-      "answer": 2,
-      "explanation": "나누기 음수 → 방향 반전: $x \\leq 6$"
+      "answer": 1,
+      "explanation": "$x - 1 = -x + 3$, $2x = 4$, $x = 2$, $y = 1$. 해: $(2, 1)$"
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "$6x + 5 > 4x - 3$의 해는?",
+      "question": "연립방정식 $\\begin{cases} 3x - y = 7 \\\\ x + 2y = 7 \\end{cases}$의 해는?",
       "choices": [
-        "$x \\geq -4$",
-        "$x > 4$",
-        "$x < -4$",
-        "$x > -4$",
-        "$x < 4$"
+        "$(3, 1)$",
+        "$(3, 2)$",
+        "$(2, 3)$",
+        "$(4, 1)$",
+        "$(1, 4)$"
       ],
-      "answer": 3,
-      "explanation": "$2x > -8 \\Rightarrow x > -4$"
+      "answer": 1,
+      "explanation": "첫 번째 $\\times 2$: $6x - 2y = 14$. 더하면 $7x = 21$, $x = 3$, $y = 2$. 해: $(3, 2)$"
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "$1 < 2x - 3 \\leq 5$를 풀면?",
+      "question": "연립방정식 $\\begin{cases} 5x + 2y = 17 \\\\ 3x - y = 8 \\end{cases}$의 해는?",
       "choices": [
-        "$2 < x \\leq 4$",
-        "$-2 < x \\leq 4$",
-        "$2 \\leq x < 4$",
-        "$-1 < x \\leq 4$",
-        "$2 < x < 4$"
+        "$(3, 1)$",
+        "$(2, 3)$",
+        "$(1, 6)$",
+        "$(4, 0)$",
+        "$(3, 2)$"
       ],
       "answer": 0,
-      "explanation": "$1+3 < 2x \\leq 5+3 \\Rightarrow 4 < 2x \\leq 8 \\Rightarrow 2 < x \\leq 4$"
+      "explanation": "두 번째 $\\times 2$: $6x - 2y = 16$. 더하면 $11x = 33$, $x = 3$, $y = 1$. 해: $(3, 1)$"
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = 2x^2 - x + 1$에서 $f(-1)$의 값은?",
+      "question": "연립방정식 $\\begin{cases} x + 2y = 10 \\\\ 2x - y = 5 \\end{cases}$의 해는?",
       "choices": [
-        "$2$",
-        "$4$",
-        "$-2$",
-        "$0$",
-        "$-4$"
+        "$(4, 3)$",
+        "$(3, 4)$",
+        "$(5, 2)$",
+        "$(2, 4)$",
+        "$(6, 2)$"
       ],
-      "answer": 1,
-      "explanation": "$f(-1) = 2(1) - (-1) + 1 = 2 + 1 + 1 = 4$"
+      "answer": 0,
+      "explanation": "첫 번째 $\\times 2$: $2x + 4y = 20$. 빼면 $5y = 15$, $y = 3$, $x = 4$. 해: $(4, 3)$"
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = \\frac{3x - 1}{2}$일 때 $f(5)$의 값은?",
+      "question": "연립방정식 $\\begin{cases} ax + 3y = 11 \\\\ x - y = 1 \\end{cases}$의 해가 $(2, 1)$일 때, $a$의 값은?",
       "choices": [
-        "$-14$",
-        "$-7$",
-        "$14$",
-        "$3$",
-        "$7$"
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
       ],
-      "answer": 4,
-      "explanation": "$f(5) = (15-1)/2 = 7$"
+      "answer": 2,
+      "explanation": "$(2, 1)$ 대입: $2a + 3 = 11$, $2a = 8$, $a = 4$"
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "연속하는 세 정수 중 가운데 수를 $x$라 할 때, 세 수의 합이 $30$보다 크면 $x$의 최솟값은?",
+      "question": "연립방정식 $\\begin{cases} 2x + y = 9 \\\\ x - 2y = 2 \\end{cases}$의 해에서 $x + y$의 값은?",
       "choices": [
-        "$9$",
-        "$10$",
-        "$12$",
-        "$13$",
-        "$11$"
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
       ],
-      "answer": 4,
-      "explanation": "$3x > 30 \\Rightarrow x > 10$. 최솟값 $= 11$"
+      "answer": 2,
+      "explanation": "첫 번째 $\\times 2$: $4x + 2y = 18$. 더하면 $5x = 20$, $x = 4$, $y = 1$. $x + y = 5$"
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "$g(x) = 5x - 2$에서 $g(t) > 13$일 때 $t$의 범위는?",
+      "question": "연립부등식 $\\begin{cases} 2x + 3 > 7 \\\\ x - 1 < 3 \\end{cases}$의 해는?",
       "choices": [
-        "$t < -3$",
-        "$t > -3$",
-        "$t > 3$",
-        "$t < 3$",
-        "$t \\geq 3$"
+        "$1 < x < 4$",
+        "$2 < x < 4$",
+        "$2 < x \\leq 4$",
+        "$2 \\leq x < 4$",
+        "$2 < x < 5$"
       ],
-      "answer": 2,
-      "explanation": "$5t > 15 \\Rightarrow t > 3$"
+      "answer": 1,
+      "explanation": "$x > 2$이고 $x < 4$이므로 $2 < x < 4$"
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "$0.2x + 0.5 \\leq -0.3$의 해는?",
+      "question": "연립부등식 $\\begin{cases} 4x - 3 \\geq x + 6 \\\\ x + 5 < 2x + 2 \\end{cases}$의 해는?",
       "choices": [
-        "$x < -4$",
+        "$x > 3$",
+        "$x \\geq 3$",
+        "$x > 4$",
         "$x \\geq 4$",
-        "$x \\leq 4$",
-        "$x \\leq -4$",
-        "$x \\geq -4$"
+        "$3 < x \\leq 4$"
       ],
-      "answer": 3,
-      "explanation": "$0.2x \\leq -0.8 \\Rightarrow x \\leq -4$"
+      "answer": 0,
+      "explanation": "$x \\geq 3$이고 $x > 3$이므로 공통 해는 $x > 3$"
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "$y = ax + b$에서 $x=2$일 때 $y=5$, $x=4$일 때 $y=11$이면 $x=6$일 때 $y$는?",
+      "question": "연립부등식 $-2 < 3x + 1 \\leq 10$의 해는?",
       "choices": [
-        "$21$",
-        "$15$",
-        "$17$",
-        "$13$",
-        "$19$"
+        "$-1 \\leq x \\leq 3$",
+        "$-1 < x \\leq 3$",
+        "$-1 < x < 3$",
+        "$0 < x \\leq 3$",
+        "$-1 < x \\leq 4$"
       ],
-      "answer": 2,
-      "explanation": "기울기 $=(11-5)/2=3$. $5=6+b \\Rightarrow b=-1$. $y(6)=18-1=17$"
+      "answer": 1,
+      "explanation": "$-3 < 3x \\leq 9$이므로 $-1 < x \\leq 3$"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "$2(3x + 1) - 4 > 3(2x - 1)$의 해는?",
+      "question": "연립방정식 $\\begin{cases} 2x + 3y = 13 \\\\ x + y = 5 \\end{cases}$의 해에서 $x - y$의 값은?",
       "choices": [
-        "해 없음",
-        "$x < 0$",
-        "$x > 0$",
-        "모든 실수",
-        "$x = 0$"
+        "-3",
+        "-2",
+        "-1",
+        "0",
+        "1"
       ],
-      "answer": 3,
-      "explanation": "$6x - 2 > 6x - 3 \\Rightarrow -2 > -3$ 항상 참 → 해는 모든 실수"
+      "answer": 2,
+      "explanation": "두 번째 $\\times 3$: $3x + 3y = 15$. 빼면 $x = 2$. $y = 3$. $x - y = -1$"
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "$\\frac{x}{2} - \\frac{2x + 1}{3} > -1$의 해는?",
+      "question": "어른 $3$명, 어린이 $2$명의 입장료 합이 $26000$원이고, 어른 $1$명의 입장료가 어린이 $1$명보다 $2000$원 비싸다. 어린이 $1$명의 입장료는?",
       "choices": [
-        "$x \\leq 4$",
-        "$x < 4$",
-        "$x > 4$",
-        "$x < -4$",
-        "$x > -4$"
+        "2000원",
+        "3000원",
+        "4000원",
+        "5000원",
+        "6000원"
       ],
-      "answer": 1,
-      "explanation": "$\\frac{3x - 2(2x+1)}{6} > -1 \\Rightarrow -x-2>-6 \\Rightarrow -x>-4 \\Rightarrow x<4$"
+      "answer": 2,
+      "explanation": "어린이를 $c$원, 어른을 $c + 2000$원으로 놓으면 $3(c+2000)+2c = 26000$, $5c = 20000$, $c = 4000$원"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = -x + k$에서 $f(3) = -1$일 때 $f(2k)$의 값은?",
+      "question": "합이 $20$이고, 큰 수에서 작은 수를 빼면 $4$인 두 수의 곱은?",
       "choices": [
-        "$-2$",
-        "$0$",
-        "$1$",
-        "$2$",
-        "$-1$"
+        "80",
+        "88",
+        "96",
+        "104",
+        "112"
       ],
-      "answer": 0,
-      "explanation": "$k=2$. $f(2k)=f(4)=-4+2=-2$"
+      "answer": 2,
+      "explanation": "$x + y = 20$, $x - y = 4$. $x = 12$, $y = 8$. 곱 $= 96$"
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "$3x + a \\leq 0$의 해가 $x \\leq -2$일 때 $a$의 값은?",
+      "question": "두 각도의 합이 $90°$이고 차이가 $20°$일 때, 작은 각도는?",
       "choices": [
-        "$6$",
-        "$-2$",
-        "$3$",
-        "$2$",
-        "$-6$"
+        "25°",
+        "30°",
+        "35°",
+        "40°",
+        "45°"
       ],
-      "answer": 0,
-      "explanation": "$x \\leq -a/3$. $-a/3=-2 \\Rightarrow a=6$"
+      "answer": 2,
+      "explanation": "$x + y = 90$, $x - y = 20$. $x = 55$, $y = 35$. 작은 각 $= 35°$"
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "$x > 3$과 $x < a + 1$의 공통해가 존재하려면?",
+      "question": "연립방정식 $\\begin{cases} 3x + 2y = 11 \\\\ x + y = 4 \\end{cases}$의 해에서 $xy$의 값은?",
       "choices": [
-        "$a > 3$",
-        "$a < 3$",
-        "$a < 2$",
-        "$a \\geq 2$",
-        "$a > 2$"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
-      "answer": 4,
-      "explanation": "$a+1>3 \\Rightarrow a>2$"
+      "answer": 2,
+      "explanation": "두 번째 $\\times 2$: $2x + 2y = 8$. 빼면 $x = 3$, $y = 1$. $xy = 3$"
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = 2x + 3$이고 $g(x) = x - 1$일 때 $f(g(2))$의 값은?",
+      "question": "연립부등식 $\\begin{cases} ax - 2 > 0 \\\\ 3x - 1 \\leq 5 \\end{cases}$의 해가 $\\frac{1}{2} < x \\leq 2$일 때, $a$의 값은?",
       "choices": [
-        "$7$",
-        "$-3$",
-        "$3$",
-        "$-5$",
-        "$5$"
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
       ],
-      "answer": 4,
-      "explanation": "$g(2)=1$. $f(1)=2+3=5$"
+      "answer": 2,
+      "explanation": "$3x \\leq 6$, $x \\leq 2$ ✓. $ax > 2$, $x > \\frac{2}{a}$. $\\frac{2}{a} = \\frac{1}{2}$이므로 $a = 4$"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "현재 $50000$원을 가지고 매달 $30000$원을 저축할 때 $200000$원 이상이 되려면 최소 몇 달?",
+      "question": "빵 $3$개와 음료 $2$개의 가격이 $2800$원이고, 빵 $2$개와 음료 $3$개의 가격이 $2700$원이다. 빵 한 개의 가격은?",
       "choices": [
-        "$3$개월",
-        "$7$개월",
-        "$5$개월",
-        "$4$개월",
-        "$6$개월"
+        "400원",
+        "500원",
+        "600원",
+        "700원",
+        "800원"
       ],
       "answer": 2,
-      "explanation": "$50000+30000n \\geq 200000 \\Rightarrow n \\geq 5$. 최소 5개월"
+      "explanation": "$3x + 2y = 2800$, $2x + 3y = 2700$. 첫 번째 $\\times 3$, 두 번째 $\\times 2$: $5x = 3000$, $x = 600$원"
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = 3x - 2$에서 $-1 \\leq x \\leq 3$일 때 최댓값과 최솟값의 합은?",
+      "question": "두 일차함수 $f(x) = 3x - 2$, $g(x) = x + 4$에서 $f(a) = g(a)$인 $a$의 값은?",
       "choices": [
-        "$-5$",
-        "$-2$",
-        "$2$",
-        "$5$",
-        "$7$"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
       "answer": 2,
-      "explanation": "$f(-1)=-5$, $f(3)=7$. 합 $= -5+7=2$"
+      "explanation": "$3a - 2 = a + 4$, $2a = 6$이므로 $a = 3$"
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "넓이가 $48\\text{cm}^2$ 이하인 직사각형의 가로가 $(2x+4)\\text{cm}$이고 세로가 $4\\text{cm}$일 때 $x$의 최댓값은?",
+      "question": "연립방정식 $\\begin{cases} 2x - y = a \\\\ x + 2y = b \\end{cases}$의 해가 $(1, 2)$일 때, $a - b$의 값은?",
       "choices": [
-        "$8$",
-        "$4$",
-        "$6$",
-        "$3$",
-        "$2$"
+        "-7",
+        "-6",
+        "-5",
+        "-4",
+        "-3"
       ],
-      "answer": 1,
-      "explanation": "$(2x+4) \\times 4 \\leq 48 \\Rightarrow 2x+4 \\leq 12 \\Rightarrow x \\leq 4$"
+      "answer": 2,
+      "explanation": "$(1, 2)$ 대입: $a = 2-2 = 0$, $b = 1+4 = 5$. $a - b = -5$"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "$3(2x - 1) \\leq 2(x + 4) + 1$을 풀어라.",
-      "answer": "$x \\leq 3$",
-      "expectedAnswer": "x≤3",
-      "rubric": "[2점] 분배: $6x-3 \\leq 2x+9$ [2점] 이항: $4x \\leq 12 \\Rightarrow x \\leq 3$"
+      "question": "연립방정식 $\\begin{cases} 3x + y = 10 \\\\ x - 2y = 1 \\end{cases}$을 풀어라.",
+      "answer": "x=3, y=1",
+      "explanation": "첫 번째 $\\times 2$: $6x + 2y = 20$. 더하면 $7x = 21$, $x = 3$, $y = 1$"
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "집에서 편의점까지 $2\\text{km}$이다. 분속 $v\\text{m}$로 걸을 때 $30$분 이내에 도착하려면 $v$의 최솟값은?",
-      "answer": "$\\frac{200}{3}\\text{m/분}$ (약 $66.7\\text{m/분}$)",
-      "expectedAnswer": "200/3",
-      "rubric": "[2점] $2000/v \\leq 30 \\Rightarrow v \\geq 200/3$ [2점] 최솟값 $\\approx 66.7\\text{m/분}$"
+      "question": "두 수의 합이 $25$이고 차이가 $5$이다. 두 수를 각각 구하여라.",
+      "answer": "15와 10",
+      "explanation": "$x + y = 25$, $x - y = 5$. $x = 15$, $y = 10$"
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "$f(x) = ax + b$에서 $f(2) - f(-2) = 12$이고 $f(0) = 1$일 때 $a$와 $b$를 구하여라.",
-      "answer": "$a = 3$, $b = 1$",
-      "expectedAnswer": "a=3, b=1",
-      "rubric": "[1점] $f(0)=b=1$ [2점] $f(2)-f(-2)=4a=12 \\Rightarrow a=3$ [1점] 최종 답"
+      "question": "연립부등식 $\\begin{cases} 5x - 3 > 2x + 6 \\\\ 7x - 2 \\leq 4x + 10 \\end{cases}$의 해를 구하여라.",
+      "answer": "3 < x ≤ 4",
+      "explanation": "$x > 3$이고 $x \\leq 4$이므로 $3 < x \\leq 4$"
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "$f(x) = -2x + 5$에서 $f(x) \\geq -1$을 만족하는 자연수 $x$의 합을 구하여라.",
-      "answer": "$6$",
-      "expectedAnswer": "6",
-      "rubric": "[2점] $-2x+5 \\geq -1 \\Rightarrow x \\leq 3$ [2점] 자연수 $1,2,3$의 합 $= 6$"
+      "question": "연립방정식 $\\begin{cases} 2x + 3y = 12 \\\\ x + y = 5 \\end{cases}$의 해에서 $x^2 + y^2$의 값을 구하여라.",
+      "answer": "13",
+      "explanation": "두 번째 $\\times 3$: $3x + 3y = 15$. 빼면 $x = 3$, $y = 2$. $x^2 + y^2 = 9 + 4 = 13$"
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "현재 수학 성적이 $75$점이다. 다음 시험에서 $x$점을 받아 두 시험의 평균이 $80$점 이상이 되려면 $x$의 최솟값은?",
-      "answer": "$85$",
-      "expectedAnswer": "85",
-      "rubric": "[2점] $(75+x)/2 \\geq 80$ [2점] $75+x \\geq 160 \\Rightarrow x \\geq 85$. 최솟값 $=85$"
+      "question": "$100$ g에 $3000$원인 고급 커피와 $100$ g에 $1500$원인 일반 커피를 섞어 $100$ g에 $2100$원인 커피 $500$ g을 만들려면, 고급 커피는 몇 g이 필요한가?",
+      "answer": "200g",
+      "explanation": "고급 $x$ g, 일반 $y$ g. $x + y = 500$, $3000x + 1500y = 2100 \\times 500$. 풀면 $x = 200$ g"
     }
   ]
 }

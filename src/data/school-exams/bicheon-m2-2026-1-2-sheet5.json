@@ -1,360 +1,354 @@
 {
   "id": "bicheon-m2-2026-1-2-sheet5",
-  "title": "부천일신중 2학년 수학 2차 모의고사 5회",
-  "school": "부천일신중",
+  "title": "부천일신중 2학년 수학 1학기 기말 모의고사 5회",
+  "category": "학교",
+  "school": "부천일신중학교",
   "grade": 2,
   "subject": "수학",
   "sheet": 5,
-  "difficulty": "어려움",
+  "difficulty": "보통",
   "timeLimit": 40,
   "totalScore": 100,
-  "scorePerMC": 4,
-  "scorePerEssay": 4,
   "questions": [
     {
       "id": 1,
       "type": "mc",
       "score": 4,
-      "question": "다음 중 $x = -2$가 해인 부등식은?",
+      "question": "다음 중 $x = -2$가 해인 일차부등식은?",
       "choices": [
-        "$-x > 1$",
-        "$x + 1 > 0$",
-        "$x - 1 < -4$",
-        "$2x + 3 > 0$",
-        "$3x + 5 > 0$"
+        "$x + 2 < 1$",
+        "$2x + 1 > 0$",
+        "$-x < -3$",
+        "$3x + 7 > 0$",
+        "$x - 1 \\geq 0$"
       ],
       "answer": 0,
-      "explanation": "$-(-2)=2>1$ → ②가 참. ① $-1>0$ 거짓, ③ $-1>0$ 거짓, ④ $-3<-4$ 거짓, ⑤ $-1>0$ 거짓"
+      "explanation": "$x = -2$ 대입: $-2 + 2 = 0 < 1$ ✓"
     },
     {
       "id": 2,
       "type": "mc",
       "score": 4,
-      "question": "$3x + 7 > 1$의 해는?",
+      "question": "일차부등식 $2x + 6 > 0$의 해는?",
       "choices": [
-        "$x \\geq -2$",
-        "$x < 2$",
+        "$x > -3$",
         "$x > -2$",
-        "$x > 2$",
-        "$x < -2$"
+        "$x < -3$",
+        "$x > 3$",
+        "$x < 3$"
       ],
-      "answer": 2,
-      "explanation": "$3x > -6 \\Rightarrow x > -2$"
+      "answer": 0,
+      "explanation": "$2x > -6$이므로 $x > -3$"
     },
     {
       "id": 3,
       "type": "mc",
       "score": 4,
-      "question": "$-5x + 10 > 0$의 해는?",
+      "question": "일차함수 $y = 5x - 2$의 기울기와 $y$절편은?",
       "choices": [
-        "$x < 2$",
-        "$x < -2$",
-        "$x > -2$",
-        "$x > 2$",
-        "$x \\leq 2$"
+        "기울기 5, $y$절편 2",
+        "기울기 $-5$, $y$절편 $-2$",
+        "기울기 5, $y$절편 $-2$",
+        "기울기 2, $y$절편 $-5$",
+        "기울기 $-2$, $y$절편 5"
       ],
-      "answer": 0,
-      "explanation": "$-5x > -10 \\Rightarrow x < 2$"
+      "answer": 2,
+      "explanation": "$y = ax + b$에서 기울기 $a = 5$, $y$절편 $b = -2$"
     },
     {
       "id": 4,
       "type": "mc",
       "score": 4,
-      "question": "$4x - 1 > 2x + 7$의 해는?",
+      "question": "일차함수 $y = -4x + 8$의 $x$절편과 $y$절편은?",
       "choices": [
-        "$x > 4$",
-        "$x < -4$",
-        "$x > -4$",
-        "$x < 4$",
-        "$x \\geq 4$"
+        "$x$절편 2, $y$절편 8",
+        "$x$절편 8, $y$절편 2",
+        "$x$절편 $-2$, $y$절편 8",
+        "$x$절편 2, $y$절편 $-8$",
+        "$x$절편 4, $y$절편 8"
       ],
       "answer": 0,
-      "explanation": "$2x > 8 \\Rightarrow x > 4$"
+      "explanation": "$y = 0$이면 $x = 2$. $x = 0$이면 $y = 8$"
     },
     {
       "id": 5,
       "type": "mc",
       "score": 4,
-      "question": "$f(1)=2$, $f(2)=4$, $f(3)=6$일 때 이 함수를 식으로 나타내면?",
+      "question": "연립방정식 $\\begin{cases} x + y = 10 \\\\ x - y = 4 \\end{cases}$의 해는?",
       "choices": [
-        "$y = 2x$",
-        "$y = x + 2$",
-        "$y = 3x - 1$",
-        "$y = x^2$",
-        "$y = x + 1$"
+        "$(7, 3)$",
+        "$(6, 4)$",
+        "$(8, 2)$",
+        "$(5, 5)$",
+        "$(3, 7)$"
       ],
       "answer": 0,
-      "explanation": "규칙: $y = 2x$"
+      "explanation": "두 식을 더하면 $2x = 14$, $x = 7$, $y = 3$. 해: $(7, 3)$"
     },
     {
       "id": 6,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = x^2 - 2x + 1$일 때 $f(3)$의 값은?",
+      "question": "$f(x) = -4x + 10$일 때, $f(2)$의 값은?",
       "choices": [
-        "$0$",
-        "$6$",
-        "$8$",
-        "$4$",
-        "$2$"
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
       ],
-      "answer": 3,
-      "explanation": "$9 - 6 + 1 = 4$"
+      "answer": 2,
+      "explanation": "$f(2) = -8 + 10 = 2$"
     },
     {
       "id": 7,
       "type": "mc",
       "score": 4,
-      "question": "$\\frac{2x-1}{3} - \\frac{x+1}{2} > 0$의 해는?",
+      "question": "일차부등식 $3(x - 2) > x + 2$의 해는?",
       "choices": [
+        "$x > 2$",
         "$x > 3$",
-        "$x < 5$",
-        "$x < 1$",
+        "$x > 4$",
         "$x > 5$",
-        "$x > 1$"
+        "$x > 6$"
       ],
-      "answer": 3,
-      "explanation": "$\\frac{2(2x-1)-3(x+1)}{6}>0 \\Rightarrow x-5>0 \\Rightarrow x>5$"
+      "answer": 2,
+      "explanation": "$3x - 6 > x + 2$, $2x > 8$이므로 $x > 4$"
     },
     {
       "id": 8,
       "type": "mc",
       "score": 4,
-      "question": "어떤 수 $x$에서 $5$를 뺀 값이 그 수의 $\\frac{1}{3}$보다 작다. $x$의 범위는?",
+      "question": "$y = 2x - 1$과 $y = -x + 5$의 교점은?",
       "choices": [
-        "$x > 15$",
-        "$x < 5$",
-        "$x < 7.5$",
-        "$x < 15$",
-        "$x > 7.5$"
+        "$(1, 4)$",
+        "$(2, 3)$",
+        "$(3, 5)$",
+        "$(2, 5)$",
+        "$(3, 2)$"
       ],
-      "answer": 2,
-      "explanation": "$x-5<x/3 \\Rightarrow 3x-15<x \\Rightarrow 2x<15 \\Rightarrow x<7.5$"
+      "answer": 1,
+      "explanation": "$2x - 1 = -x + 5$, $3x = 6$, $x = 2$, $y = 3$. 교점 $(2, 3)$"
     },
     {
       "id": 9,
       "type": "mc",
       "score": 4,
-      "question": "$f(x)=ax+b$에서 $f(0)=2$, $f(2)=6$일 때 $f(5)$의 값은?",
+      "question": "연립방정식 $\\begin{cases} 3x - 2y = 8 \\\\ x + y = 6 \\end{cases}$의 해는?",
       "choices": [
-        "$10$",
-        "$12$",
-        "$8$",
-        "$14$",
-        "$16$"
+        "$(3, 3)$",
+        "$(4, 2)$",
+        "$(5, 1)$",
+        "$(2, 4)$",
+        "$(6, 0)$"
       ],
       "answer": 1,
-      "explanation": "$b=2$. $2a+2=6 \\Rightarrow a=2$. $f(5)=12$"
+      "explanation": "$x = 6 - y$, $3(6-y)-2y = 8$, $18-5y = 8$, $y = 2$, $x = 4$. 해: $(4, 2)$"
     },
     {
       "id": 10,
       "type": "mc",
       "score": 4,
-      "question": "A상점($500x$원)과 B상점($200x+600$원) 중 A가 더 저렴하려면?",
+      "question": "연립부등식 $\\begin{cases} x + 2 > 4 \\\\ 2x - 1 \\leq 7 \\end{cases}$의 해는?",
       "choices": [
-        "$x > 2$",
-        "$x > 3$",
-        "$x < 3$",
-        "$x \\leq 2$",
-        "$x < 2$"
+        "$2 < x \\leq 4$",
+        "$2 \\leq x \\leq 4$",
+        "$2 < x < 4$",
+        "$1 < x \\leq 4$",
+        "$2 < x \\leq 5$"
       ],
-      "answer": 4,
-      "explanation": "$500x < 200x+600 \\Rightarrow 300x<600 \\Rightarrow x<2$"
+      "answer": 0,
+      "explanation": "$x > 2$이고 $x \\leq 4$이므로 $2 < x \\leq 4$"
     },
     {
       "id": 11,
       "type": "mc",
       "score": 4,
-      "question": "$f(x) = 2x + 4$에서 $-2 \\leq x \\leq 1$일 때 최댓값과 최솟값의 차는?",
+      "question": "두 점 $(1, 5)$와 $(2, 8)$을 지나는 일차함수의 $y$절편은?",
       "choices": [
-        "$8$",
-        "$2$",
-        "$4$",
-        "$6$",
-        "$10$"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
-      "answer": 3,
-      "explanation": "$f(-2)=0$, $f(1)=6$. 차 $=6-0=6$"
+      "answer": 1,
+      "explanation": "기울기 $= \\frac{8-5}{2-1} = 3$. $(1, 5)$: $5 = 3 + b$, $b = 2$"
     },
     {
       "id": 12,
       "type": "mc",
       "score": 4,
-      "question": "$2 \\leq x \\leq 5$이면 $-x + 3$의 범위는?",
+      "question": "연립부등식 $4x - 3 > 2x + 5$이면서 $3x + 1 \\leq 2x + 7$의 해는?",
       "choices": [
-        "$-2 \\leq -x+3 \\leq 0$",
-        "$0 \\leq -x+3 \\leq 1$",
-        "$-2 \\leq -x+3 \\leq 1$",
-        "$1 \\leq -x+3 \\leq 5$",
-        "$-1 \\leq -x+3 \\leq 2$"
+        "$4 < x \\leq 6$",
+        "$4 \\leq x \\leq 6$",
+        "$4 < x < 6$",
+        "$3 < x \\leq 6$",
+        "$4 < x \\leq 7$"
       ],
-      "answer": 2,
-      "explanation": "$x$가 최대 $5$이면 $-x+3$은 최소 $-2$. $x$가 최소 $2$이면 $-x+3$은 최대 $1$. 따라서 $-2 \\leq -x+3 \\leq 1$"
+      "answer": 0,
+      "explanation": "$x > 4$이고 $x \\leq 6$이므로 $4 < x \\leq 6$"
     },
     {
       "id": 13,
       "type": "mc",
       "score": 4,
-      "question": "$2(x - a) < x + 3$의 해가 $x < 5$일 때 $a$의 값은?",
+      "question": "시험에서 맞히면 $3$점, 틀리면 $1$점 감점. 총 $25$문제 중 $x$문제를 맞혔을 때, 총점이 $50$점 이상이 되려면 최소 몇 문제를 맞혀야 하는가?",
       "choices": [
-        "$3$",
-        "$-2$",
-        "$-1$",
-        "$1$",
-        "$2$"
+        "17문제",
+        "18문제",
+        "19문제",
+        "20문제",
+        "21문제"
       ],
-      "answer": 3,
-      "explanation": "$x < 3+2a$. 해가 $x<5 \\Rightarrow 3+2a=5 \\Rightarrow a=1$"
+      "answer": 2,
+      "explanation": "$3x - (25 - x) \\geq 50$, $4x \\geq 75$, $x \\geq 18.75$이므로 최소 19문제"
     },
     {
       "id": 14,
       "type": "mc",
       "score": 4,
-      "question": "$f(x)=3x-5$이고 $h(x)=f(2x)-2$일 때 $h(3)$의 값은?",
+      "question": "$f(x) = ax + b$에서 $f(0) = 3$, $f(2) = 7$일 때, $f(4)$의 값은?",
       "choices": [
-        "$7$",
-        "$9$",
-        "$15$",
-        "$11$",
-        "$13$"
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
       ],
-      "answer": 3,
-      "explanation": "$f(6)=13$. $h(3)=13-2=11$"
+      "answer": 2,
+      "explanation": "$b = 3$, $2a + 3 = 7$, $a = 2$. $f(4) = 8 + 3 = 11$"
     },
     {
       "id": 15,
       "type": "mc",
       "score": 4,
-      "question": "$3 \\leq 2x - 1 < 9$를 만족하는 정수 $x$의 합은?",
+      "question": "연립방정식 $\\begin{cases} 2x + 3y = 17 \\\\ x - y = 1 \\end{cases}$의 해에서 $x + y$의 값은?",
       "choices": [
-        "$8$",
-        "$7$",
-        "$9$",
-        "$6$",
-        "$12$"
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
       ],
       "answer": 2,
-      "explanation": "$4 \\leq 2x < 10 \\Rightarrow 2 \\leq x < 5$. 정수: $2,3,4$. 합 $=9$"
+      "explanation": "$x = y + 1$. $2(y+1)+3y = 17$, $5y = 15$, $y = 3$, $x = 4$. $x + y = 7$"
     },
     {
       "id": 16,
       "type": "mc",
       "score": 4,
-      "question": "$|2x - 1| < 3$을 일차부등식으로 나타내면?",
+      "question": "연립방정식 $\\begin{cases} 3x - y = 7 \\\\ 2x + 3y = 1 \\end{cases}$의 해에서 $x + y$의 값은?",
       "choices": [
-        "$-2 < x < 4$",
-        "$x > -1$",
-        "$-1 < x < 2$",
-        "$x < 2$",
-        "$-1 \\leq x \\leq 2$"
+        "-1",
+        "0",
+        "1",
+        "2",
+        "3"
       ],
       "answer": 2,
-      "explanation": "$-3<2x-1<3 \\Rightarrow -2<2x<4 \\Rightarrow -1<x<2$"
+      "explanation": "첫 번째 $\\times 3$: $9x - 3y = 21$. 더하면 $11x = 22$, $x = 2$, $y = -1$. $x + y = 1$"
     },
     {
       "id": 17,
       "type": "mc",
       "score": 4,
-      "question": "$f(x)=ax+b$이고 $f(f(1))=7$, $f(1)=3$일 때 $a+b$는?",
+      "question": "두 점 $(0, a)$와 $(3, 7)$을 지나는 일차함수의 기울기가 $2$일 때, $a$의 값은?",
       "choices": [
-        "$-3$",
-        "$3$",
-        "$5$",
-        "$-2$",
-        "$2$"
+        "-1",
+        "0",
+        "1",
+        "2",
+        "3"
       ],
-      "answer": 1,
-      "explanation": "$f(1)=a+b=3$. $f(3)=3a+b=7$. $2a=4 \\Rightarrow a=2, b=1$. $a+b=3$"
+      "answer": 2,
+      "explanation": "기울기 $= \\frac{7 - a}{3 - 0} = 2$. $7 - a = 6$이므로 $a = 1$"
     },
     {
       "id": 18,
       "type": "mc",
       "score": 4,
-      "question": "$-2.4 < x \\leq 3.2$에 포함되는 정수의 개수는?",
+      "question": "일정한 속력의 기차가 $300$ m 터널을 통과하는 데 $30$초, $700$ m 터널을 통과하는 데 $50$초 걸린다. 기차의 길이는?",
       "choices": [
-        "$4$개",
-        "$6$개",
-        "$8$개",
-        "$5$개",
-        "$7$개"
+        "100 m",
+        "200 m",
+        "300 m",
+        "400 m",
+        "500 m"
       ],
-      "answer": 1,
-      "explanation": "정수: $-2,-1,0,1,2,3 \\Rightarrow 6$개"
+      "answer": 2,
+      "explanation": "$\\frac{L + 300}{30} = \\frac{L + 700}{50}$. $50(L+300) = 30(L+700)$, $20L = 6000$, $L = 300$ m"
     },
     {
       "id": 19,
       "type": "mc",
       "score": 4,
-      "question": "$f(x)=2x+1$에서 $f(n)<10$을 만족하는 자연수 $n$의 최댓값은?",
+      "question": "$y = ax + b$에서 $x$절편이 $3$이고 $y$절편이 $-6$일 때, $a + b$의 값은?",
       "choices": [
-        "$3$",
-        "$2$",
-        "$5$",
-        "$4$",
-        "$6$"
+        "-6",
+        "-5",
+        "-4",
+        "-3",
+        "-2"
       ],
-      "answer": 3,
-      "explanation": "$2n+1<10 \\Rightarrow n<4.5$. 최대 자연수 $n=4$"
+      "answer": 2,
+      "explanation": "$y$절편 $b = -6$. $x$절편: $0 = 3a - 6$, $a = 2$. $a + b = 2 + (-6) = -4$"
     },
     {
       "id": 20,
       "type": "mc",
       "score": 4,
-      "question": "$f(x)=ax+b$이고 $f(0)=3$, $f(1)\\cdot f(-1)=-16$일 때 $a^2$의 값은?",
+      "question": "$f(x) = 2x + 3$, $g(x) = -x + 9$에서 $f(p) = g(q) = 7$일 때, $p + q$의 값은?",
       "choices": [
-        "$25$",
-        "$9$",
-        "$19$",
-        "$16$",
-        "$17$"
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
       ],
-      "answer": 0,
-      "explanation": "$b=3$. $(a+3)(-a+3)=9-a^2=-16 \\Rightarrow a^2=25$"
+      "answer": 2,
+      "explanation": "$f(p) = 7$: $2p + 3 = 7$, $p = 2$. $g(q) = 7$: $-q + 9 = 7$, $q = 2$. $p + q = 4$"
     },
     {
       "id": 21,
       "type": "short",
       "score": 4,
-      "question": "$3x - 2 > 4$이고 $5x + 1 < 21$을 동시에 만족하는 정수 $x$의 개수를 구하여라.",
-      "answer": "$1$개",
-      "expectedAnswer": "1",
-      "rubric": "[1점] $x>2$ [1점] $x<4$ [1점] $2<x<4$ [1점] 정수: $3$ → $1$개"
+      "question": "일차부등식 $5x + 3 < 2x + 12$를 풀어라.",
+      "answer": "x < 3",
+      "explanation": "$3x < 9$이므로 $x < 3$"
     },
     {
       "id": 22,
       "type": "short",
       "score": 4,
-      "question": "농구공 한 개의 가격은 $15000$원이고 $10$개 이상 구매 시 개당 $12000$원이다. $x$개($x < 10$)를 살 때 $10$개 구매보다 금액이 적으려면 $x$의 최댓값은?",
-      "answer": "$7$개",
-      "expectedAnswer": "7",
-      "rubric": "[2점] $15000x < 12000 \\times 10 = 120000$ [2점] $x < 8$. 최대 $7$개"
+      "question": "가로의 길이가 세로보다 $4$ cm 더 긴 직사각형의 둘레가 $40$ cm 이하가 되려면 세로의 길이는 얼마 이하이어야 하는가?",
+      "answer": "8 cm 이하",
+      "explanation": "세로 $x$, 가로 $x + 4$. $2(x + x + 4) \\leq 40$, $4x + 8 \\leq 40$, $x \\leq 8$"
     },
     {
       "id": 23,
       "type": "short",
       "score": 4,
-      "question": "$f(x)=ax+b$에서 $f(0)=3$이고 $f(3)=9$일 때 $f(7)$의 값을 구하여라.",
-      "answer": "$17$",
-      "expectedAnswer": "17",
-      "rubric": "[1점] $b=f(0)=3$ [2점] $3a+3=9 \\Rightarrow a=2$ [1점] $f(7)=14+3=17$"
+      "question": "두 일차함수 $y = 3x - 5$와 $y = ax + 1$이 평행할 때, $a$의 값과 두 직선의 $y$절편의 차(절댓값)를 구하여라.",
+      "answer": "a=3, y절편 차=6",
+      "explanation": "평행하면 기울기가 같으므로 $a = 3$. $y$절편: $-5$와 $1$. 차 $= |-5 - 1| = 6$"
     },
     {
       "id": 24,
       "type": "short",
       "score": 4,
-      "question": "$f(x)=ax+b$의 그래프가 점 $(-1, 1)$과 $(2, 4)$를 지날 때, $f(x) > 0$을 만족하는 $x$의 최소 정수를 구하여라.",
-      "answer": "$-1$",
-      "expectedAnswer": "-1",
-      "rubric": "[1점] 기울기 $=1$ [1점] $b=2$ [1점] $x+2>0 \\Rightarrow x>-2$ [1점] 최소 정수 $=-1$"
+      "question": "연립방정식 $\\begin{cases} x + 2y = 7 \\\\ 2x - y = 4 \\end{cases}$의 해에서 $x^2 - y^2$의 값을 구하여라.",
+      "answer": "5",
+      "explanation": "두 번째 $\\times 2$: $4x - 2y = 8$. 더하면 $5x = 15$, $x = 3$, $y = 2$. $x^2 - y^2 = 9 - 4 = 5$"
     },
     {
       "id": 25,
       "type": "short",
       "score": 4,
-      "question": "형과 동생이 $1200\\text{m}$ 떨어진 도서관에 동시에 출발한다. 형은 분속 $80\\text{m}$로 걷는다. 형이 도착하는 시간 이내에 동생도 도착하려면 동생의 속도 $v$(분속 $\\text{m}$)의 최솟값은?",
-      "answer": "$80$",
-      "expectedAnswer": "80",
-      "rubric": "[1점] 형 도착 시간: $1200 \\div 80 = 15$분 [2점] $1200/v \\leq 15 \\Rightarrow v \\geq 80$ [1점] 최솟값 $=80\\text{m/분}$"
+      "question": "어른 $x$명과 어린이 $y$명이 박물관에 입장했다. 어른 입장료 $5000$원, 어린이 입장료 $3000$원이고 총 인원이 $8$명, 총 입장료가 $34000$원이다. 어른은 몇 명인가?",
+      "answer": "5명",
+      "explanation": "$x + y = 8$, $5000x + 3000y = 34000$. 풀면 $x = 5$명"
     }
   ]
 }
