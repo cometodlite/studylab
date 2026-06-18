@@ -94,5 +94,45 @@
     "description": "문제집 탭(workbooks) 관리자/개발자 권한 제한. 관리자(role==='admin') 또는 개발자 코드 입력 사용자만 접근 가능. 권한 없으면 코드 입력 폼 표시, 일치 시 localStorage에 저장하여 세션 유지",
     "files": ["src/app/(protected)/workbooks/page.tsx"],
     "author": "claude"
+  },
+  {
+    "id": "dbg-013",
+    "date": "2026-06-19",
+    "category": "bug_fix",
+    "description": "Firestore 참고자료(referenceLinks, referenceBookmarks, referenceHistory) 보안 규칙 정비. 소유자 본인 또는 관리자만 조회·수정 가능하도록 권한 검증 강화",
+    "files": ["firestore.rules"],
+    "author": "codex"
+  },
+  {
+    "id": "dbg-014",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "관리자 문의 탭 MVP 세부 UI 완성. All/New/Read/Resolved 필터, 상태별 카운트, 문의 상세의 상태 선택 드롭다운 및 상태 변경 버튼 추가",
+    "files": ["src/app/(protected)/admin/page.tsx"],
+    "author": "codex"
+  },
+  {
+    "id": "dbg-015",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "문제 개발 탭을 시험 콘텐츠 검수/수정 도구로 확장. 시험 메타·문항 편집, 저장 전 검증, GitHub 검토 브랜치·커밋·PR 생성 흐름 추가",
+    "files": ["src/app/(protected)/admin/page.tsx", "src/app/api/admin/exam-files/route.ts", "src/data/debug-history.json"],
+    "author": "codex"
+  },
+  {
+    "id": "dbg-016",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "관리자 사용자 리포트 탭 추가. 최근 시험 응시 기록, 사용자 닉네임·이메일·학교·학년, 시험명, 점수, 획득 포인트, 응시 시간을 조회 가능",
+    "files": ["src/app/(protected)/admin/page.tsx", "src/app/api/admin/user-reports/route.ts"],
+    "author": "codex"
+  },
+  {
+    "id": "dbg-017",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "시험 성적 분석 기능 추가. 시험 제출 후 문제별·카테고리별 취약점, 회차별 성적 추이, 맞춤 피드백, 정답률 통계 제공",
+    "files": ["src/app/(protected)/exam/[id]/page.tsx", "src/app/api/school-exams/[id]/grade/route.ts", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

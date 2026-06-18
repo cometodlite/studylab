@@ -37,6 +37,22 @@ const inquiryStatusOptions: Array<{ value: InquiryStatus; label: string }> = [
   { value: 'resolved', label: '해결됨' },
 ];
 
+const debugCategoryLabels: Record<string, string> = {
+  answer_fix: '정답 수정',
+  question_fix: '문제 수정',
+  json_fix: 'JSON 수정',
+  bug_fix: '버그 수정',
+  feature_add: '기능 추가',
+};
+
+const debugCategoryStyles: Record<string, string> = {
+  answer_fix: 'bg-red-100 text-red-600',
+  question_fix: 'bg-orange-100 text-orange-600',
+  json_fix: 'bg-yellow-100 text-yellow-600',
+  bug_fix: 'bg-rose-100 text-rose-600',
+  feature_add: 'bg-blue-100 text-blue-600',
+};
+
 interface AdminStats {
   totalUsers: number;
   activeUsers24h: number;
@@ -945,15 +961,8 @@ export default function AdminPage() {
             [...debugHistory].reverse().map(entry => (
               <div key={entry.id} className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className={`text-xs font-semibold rounded-full px-2 py-0.5 ${
-                    entry.category === 'answer_fix' ? 'bg-red-100 text-red-600' :
-                    entry.category === 'question_fix' ? 'bg-orange-100 text-orange-600' :
-                    entry.category === 'json_fix' ? 'bg-yellow-100 text-yellow-600' :
-                    'bg-blue-100 text-blue-600'
-                  }`}>
-                    {entry.category === 'answer_fix' ? '정답 수정' :
-                     entry.category === 'question_fix' ? '문제 수정' :
-                     entry.category === 'json_fix' ? 'JSON 수정' : '기능 추가'}
+                  <span className={`text-xs font-semibold rounded-full px-2 py-0.5 ${debugCategoryStyles[entry.category] ?? 'bg-gray-100 text-gray-600'}`}>
+                    {debugCategoryLabels[entry.category] ?? entry.category}
                   </span>
                   <span className="text-xs text-gray-400">{entry.date}</span>
                 </div>
