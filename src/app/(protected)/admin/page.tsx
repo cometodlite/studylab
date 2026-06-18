@@ -56,21 +56,39 @@ interface ExamFile {
   questionCount: number;
 }
 
-interface ExamPreviewQuestion {
+type ExamQuestionType = 'mc' | 'short' | 'essay';
+
+interface ExamQuestion {
   id: number;
+  type: ExamQuestionType;
+  score: number;
   question: string;
   choices?: string[];
-  answer?: number;
+  answer?: number | string;
+  expectedAnswer?: string;
   explanation?: string;
+  rubric?: string;
 }
 
-interface ExamPreview {
+interface ExamContent {
   id: string;
   title: string;
+  category?: string;
   school?: string;
-  totalScore?: number;
-  timeLimit?: number;
-  questions?: ExamPreviewQuestion[];
+  grade?: number;
+  subject?: string;
+  sheet?: number;
+  difficulty?: string;
+  timeLimit: number;
+  totalScore: number;
+  questions: ExamQuestion[];
+  [key: string]: unknown;
+}
+
+interface ExamPrResult {
+  branch: string;
+  commitSha: string;
+  pullRequestUrl: string;
 }
 
 type AdminTab = 'stats' | 'coupons' | 'upload' | 'debug' | 'inquiries' | 'exam-dev';
@@ -94,8 +112,14 @@ export default function AdminPage() {
 
   // 문제 개발 탭 상태
   const [examFiles, setExamFiles] = useState<ExamFile[]>([]);
-  const [selectedExam, setSelectedExam] = useState<ExamPreview | null>(null);
+  const [selectedExam, setSelectedExam] = useState<ExamContent | null>(null);
+  const [selectedExamFile, setSelectedExamFile] = useState<string | null>(null);
   const [examLoading, setExamLoading] = useState(false);
+  const [examSaveLoading, setExamSaveLoading] = useState(false);
+  const [examValidationErrors, setExamValidationErrors] = useState<string[]>([]);
+  const [examChangeSummary, setExamChangeSummary] = useState('');
+  const [examPrResult, setExamPrResult] = useState<ExamPrResult | null>(null);
+  const [examSaveError, setExamSaveError] = useState('');
 
   // 새 쿠폰 폼
   const [newName, setNewName] = useState('');
@@ -226,7 +250,113 @@ export default function AdminPage() {
       body: JSON.stringify({ filename }),
     });
     const data = await res.json();
-    setSelectedExam(data as ExamPreview);
+    setSelectedExam(data as ExamContent);
+    setSelectedExamFile(filename);
+    setExamValidationErrors([]);
+    setExamChangeSummary('');
+    setExamPrResult(null);
+    setExamSaveError('');
+  }
+
+  function updateExamField<K extends keyof ExamContent>(field: K, value: ExamContent[K]) {
+    setSelectedExam(prev => prev ? { ...prev, [field]: value } : prev);
+  }
+
+  function updateQuestion(index: number, patch: Partial<ExamQuestion>) {
+    setSelectedExam(prev => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        questions: prev.questions.map((question, qi) => qi === index ? { ...question, ...patch } : question),
+      };
+    });
+  }
+
+  function updateChoice(questionIndex: number, choiceIndex: number, value: string) {
+    setSelectedExam(prev => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        questions: prev.questions.map((question, qi) => {
+          if (qi !== questionIndex) return question;
+          const choices = [...(question.choices ?? [])];
+          choices[choiceIndex] = value;
+          return { ...question, choices };
+        }),
+      };
+    });
+  }
+
+  function validateExamDraft(exam: ExamContent | null): string[] {
+    const errors: string[] = [];
+    if (!exam) return ['시험을 선택해 주세요.'];
+    if (!exam.id?.trim()) errors.push('id는 필수입니다.');
+    if (!exam.title?.trim()) errors.push('제목은 필수입니다.');
+    if (!Number.isFinite(exam.timeLimit) || exam.timeLimit <= 0) errors.push('제한시간은 1 이상의 숫자여야 합니다.');
+    if (!Number.isFinite(exam.totalScore) || exam.totalScore <= 0) errors.push('총점은 1 이상의 숫자여야 합니다.');
+    if (!Array.isArray(exam.questions) || exam.questions.length === 0) errors.push('문제가 1개 이상 필요합니다.');
+
+    const scoreSum = exam.questions.reduce((sum, question) => sum + (Number.isFinite(question.score) ? question.score : 0), 0);
+    if (scoreSum !== exam.totalScore) errors.push(`문제 점수 합계(${scoreSum})와 총점(${exam.totalScore})이 일치해야 합니다.`);
+
+    exam.questions.forEach((question, index) => {
+      const label = `Q${index + 1}`;
+      if (!['mc', 'short', 'essay'].includes(question.type)) errors.push(`${label}: 지원하지 않는 문제 유형입니다.`);
+      if (!Number.isFinite(question.score) || question.score <= 0) errors.push(`${label}: 점수는 1 이상의 숫자여야 합니다.`);
+      if (!question.question?.trim()) errors.push(`${label}: 문제 본문은 필수입니다.`);
+
+      if (question.type === 'mc') {
+        const choices = question.choices ?? [];
+        if (choices.length < 2) errors.push(`${label}: 객관식은 선택지가 2개 이상이어야 합니다.`);
+        if (choices.some(choice => !choice.trim())) errors.push(`${label}: 선택지는 비어 있을 수 없습니다.`);
+        if (typeof question.answer !== 'number' || question.answer < 0 || question.answer >= choices.length) {
+          errors.push(`${label}: 정답은 선택지 범위 안이어야 합니다.`);
+        }
+      } else {
+        const answer = typeof question.answer === 'string' ? question.answer.trim() : '';
+        const expectedAnswer = question.expectedAnswer?.trim() ?? '';
+        if (!answer && !expectedAnswer) errors.push(`${label}: 주관식/서술형은 모범답안 또는 기대답안이 필요합니다.`);
+      }
+    });
+
+    return errors;
+  }
+
+  async function handleCreateExamPr() {
+    const errors = validateExamDraft(selectedExam);
+    setExamValidationErrors(errors);
+    setExamPrResult(null);
+    setExamSaveError('');
+    if (errors.length > 0 || !selectedExam || !selectedExamFile) return;
+
+    if (!examChangeSummary.trim()) {
+      setExamValidationErrors(['변경 메모를 입력해 주세요.']);
+      return;
+    }
+
+    setExamSaveLoading(true);
+    try {
+      const token = await getToken();
+      const res = await fetch('/api/admin/exam-files', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({
+          filename: selectedExamFile,
+          exam: selectedExam,
+          changeSummary: examChangeSummary.trim(),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        const details = Array.isArray(data.details) ? data.details.join('\n') : data.error;
+        throw new Error(details || '검토 PR 생성에 실패했습니다.');
+      }
+      setExamPrResult(data as ExamPrResult);
+    } catch (error) {
+      setExamSaveError(error instanceof Error ? error.message : '검토 PR 생성에 실패했습니다.');
+    } finally {
+      setExamSaveLoading(false);
+    }
   }
 
   function selectTab(nextTab: AdminTab) {
@@ -251,6 +381,116 @@ export default function AdminPage() {
     { value: 'read', label: `Read (${inquiryCounts.read})` },
     { value: 'resolved', label: `Resolved (${inquiryCounts.resolved})` },
   ];
+
+  function renderExamEditor() {
+    if (!selectedExam) return null;
+
+    const labelClass = 'text-xs font-semibold text-gray-600';
+    const inputClass = 'mt-1 w-full border border-gray-300 rounded-lg px-3 py-2 text-sm font-normal text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400';
+    const scoreSum = selectedExam.questions.reduce((sum, question) => sum + question.score, 0);
+
+    return (
+      <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm space-y-4">
+        <div className="flex items-start justify-between gap-4 flex-wrap">
+          <div>
+            <h2 className="font-bold text-gray-800 text-lg">시험 콘텐츠 편집</h2>
+            <p className="text-xs text-gray-400 mt-1 font-mono">{selectedExamFile}</p>
+          </div>
+          <div className="text-xs text-gray-500">점수 합계 {scoreSum} / {selectedExam.totalScore}</div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 border-t border-gray-100 pt-4">
+          <label className={labelClass}>제목<input value={selectedExam.title} onChange={e => updateExamField('title', e.target.value)} className={inputClass} /></label>
+          <label className={labelClass}>학교<input value={selectedExam.school ?? ''} onChange={e => updateExamField('school', e.target.value)} className={inputClass} /></label>
+          <label className={labelClass}>학년<input type="number" value={selectedExam.grade ?? 0} onChange={e => updateExamField('grade', Number(e.target.value))} className={inputClass} /></label>
+          <label className={labelClass}>과목<input value={selectedExam.subject ?? ''} onChange={e => updateExamField('subject', e.target.value)} className={inputClass} /></label>
+          <label className={labelClass}>난이도<input value={selectedExam.difficulty ?? ''} onChange={e => updateExamField('difficulty', e.target.value)} className={inputClass} /></label>
+          <label className={labelClass}>회차<input type="number" value={selectedExam.sheet ?? 0} onChange={e => updateExamField('sheet', Number(e.target.value))} className={inputClass} /></label>
+          <label className={labelClass}>제한시간<input type="number" min="1" value={selectedExam.timeLimit} onChange={e => updateExamField('timeLimit', Number(e.target.value))} className={inputClass} /></label>
+          <label className={labelClass}>총점<input type="number" min="1" value={selectedExam.totalScore} onChange={e => updateExamField('totalScore', Number(e.target.value))} className={inputClass} /></label>
+        </div>
+
+        <div className="border-t border-gray-100 pt-4 space-y-4 max-h-[44rem] overflow-y-auto pr-1">
+          {selectedExam.questions.map((question, qi) => (
+            <div key={`${question.id}-${qi}`} className="rounded-xl border border-gray-200 p-4 space-y-3">
+              <div className="flex items-center justify-between gap-3 flex-wrap">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-indigo-600">Q{question.id}</span>
+                  <span className="text-xs rounded-full bg-gray-100 text-gray-600 px-2 py-0.5">{question.type}</span>
+                </div>
+                <label className={`${labelClass} flex items-center gap-2`}>
+                  점수
+                  <input type="number" min="1" value={question.score} onChange={e => updateQuestion(qi, { score: Number(e.target.value) })} className="w-20 border border-gray-300 rounded-lg px-2 py-1 text-xs font-normal text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                </label>
+              </div>
+
+              <label className={`${labelClass} block`}>
+                문제
+                <textarea value={question.question} onChange={e => updateQuestion(qi, { question: e.target.value })} rows={3} className={inputClass} />
+              </label>
+
+              {question.type === 'mc' && (
+                <div className="space-y-2">
+                  <p className={labelClass}>선택지</p>
+                  {(question.choices ?? []).map((choice, ci) => (
+                    <div key={ci} className="flex items-center gap-2">
+                      <span className="text-xs text-gray-400 w-6">{ci + 1}</span>
+                      <input value={choice} onChange={e => updateChoice(qi, ci, e.target.value)} className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                    </div>
+                  ))}
+                  <label className={`${labelClass} block`}>
+                    정답
+                    <select value={typeof question.answer === 'number' ? question.answer : 0} onChange={e => updateQuestion(qi, { answer: Number(e.target.value) })} className={inputClass}>
+                      {(question.choices ?? []).map((choice, ci) => <option key={ci} value={ci}>{ci + 1}. {choice || '빈 선택지'}</option>)}
+                    </select>
+                  </label>
+                </div>
+              )}
+
+              {question.type !== 'mc' && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <label className={labelClass}>모범답안<textarea value={typeof question.answer === 'string' ? question.answer : ''} onChange={e => updateQuestion(qi, { answer: e.target.value })} rows={3} className={inputClass} /></label>
+                  <label className={labelClass}>기대답안<textarea value={question.expectedAnswer ?? ''} onChange={e => updateQuestion(qi, { expectedAnswer: e.target.value })} rows={3} className={inputClass} /></label>
+                </div>
+              )}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <label className={labelClass}>해설<textarea value={question.explanation ?? ''} onChange={e => updateQuestion(qi, { explanation: e.target.value })} rows={3} className={inputClass} /></label>
+                <label className={labelClass}>채점기준<textarea value={question.rubric ?? ''} onChange={e => updateQuestion(qi, { rubric: e.target.value })} rows={3} className={inputClass} /></label>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-gray-100 pt-4 space-y-3">
+          <label className={`${labelClass} block`}>
+            변경 메모
+            <textarea value={examChangeSummary} onChange={e => setExamChangeSummary(e.target.value)} rows={2} className={inputClass} />
+          </label>
+
+          {examValidationErrors.length > 0 && (
+            <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs text-red-700 space-y-1">
+              {examValidationErrors.map(error => <p key={error}>{error}</p>)}
+            </div>
+          )}
+
+          {examSaveError && <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs text-red-700 whitespace-pre-wrap">{examSaveError}</div>}
+
+          {examPrResult && (
+            <div className="rounded-lg border border-green-200 bg-green-50 px-3 py-2 text-xs text-green-700 space-y-1">
+              <p>검토 PR이 생성되었습니다.</p>
+              <a href={examPrResult.pullRequestUrl} target="_blank" rel="noreferrer" className="font-semibold underline">{examPrResult.pullRequestUrl}</a>
+              <p className="font-mono text-green-600">{examPrResult.branch} · {examPrResult.commitSha.slice(0, 8)}</p>
+            </div>
+          )}
+
+          <button onClick={handleCreateExamPr} disabled={examSaveLoading} className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2 rounded-xl text-sm transition disabled:opacity-50">
+            {examSaveLoading ? 'PR 생성 중...' : '검토 PR 생성'}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (!profile || profile.role !== 'admin') return null;
   if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
@@ -593,9 +833,9 @@ export default function AdminPage() {
       )}
 
       {tab === 'exam-dev' && (
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* 파일 목록 */}
-          <div className="col-span-1">
+          <div className="lg:col-span-1">
             <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
               <h2 className="font-semibold text-gray-700 mb-3">문제 파일</h2>
               {examLoading ? (
@@ -609,7 +849,7 @@ export default function AdminPage() {
                       key={idx}
                       onClick={() => loadExamContent(file.filename)}
                       className={`w-full text-left px-3 py-2 rounded-lg text-sm transition ${
-                        selectedExam?.id === file.id
+                        selectedExamFile === file.filename
                           ? 'bg-indigo-100 text-indigo-700 font-medium'
                           : 'hover:bg-gray-50 text-gray-700'
                       }`}
@@ -624,53 +864,8 @@ export default function AdminPage() {
           </div>
 
           {/* 문제 미리보기 */}
-          <div className="col-span-2">
-            {selectedExam ? (
-              <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm space-y-4">
-                <div>
-                  <h2 className="font-bold text-gray-800 text-lg">{selectedExam.title}</h2>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {selectedExam.school} · {selectedExam.totalScore}점 · {selectedExam.timeLimit}분
-                  </p>
-                </div>
-
-                <div className="border-t pt-4 max-h-96 overflow-y-auto space-y-4">
-                  {selectedExam.questions && selectedExam.questions.map((q, idx) => (
-                    <div key={idx} className="pb-4 border-b last:border-b-0">
-                      <div className="flex items-start gap-3">
-                        <span className="font-bold text-indigo-600 shrink-0">{q.id}.</span>
-                        <div className="flex-1 min-w-0">
-                          <div dangerouslySetInnerHTML={{ __html: q.question.replace(/\$([^$]+)\$/g, '<code>$$$1$$</code>') }} className="text-sm text-gray-800 mb-2" />
-                          <div className="space-y-1">
-                            {q.choices && q.choices.map((choice: string, ci: number) => (
-                              <div
-                                key={ci}
-                                className={`text-sm px-2 py-1 rounded ${
-                                  ci === q.answer
-                                    ? 'bg-green-100 text-green-700 font-semibold'
-                                    : 'bg-gray-50 text-gray-600'
-                                }`}
-                              >
-                                {ci + 1}. {choice}
-                              </div>
-                            ))}
-                          </div>
-                          {q.explanation && (
-                            <div className="text-xs text-gray-500 mt-2 bg-gray-50 p-2 rounded">
-                              <strong>풀이:</strong> {q.explanation.substring(0, 100)}...
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="pt-4 border-t text-xs text-gray-500">
-                  <p>총 {selectedExam.questions?.length ?? 0}문제</p>
-                </div>
-              </div>
-            ) : (
+          <div className="lg:col-span-3">
+            {selectedExam ? renderExamEditor() : (
               <div className="text-center py-20 text-gray-400">
                 <div className="text-4xl mb-2">📝</div>
                 <p>파일을 선택하면 문제를 볼 수 있습니다.</p>
