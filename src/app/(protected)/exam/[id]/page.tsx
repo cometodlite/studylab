@@ -26,6 +26,7 @@ interface ExamData {
   scorePerMC: number;
   scorePerEssay: number;
   questions: Question[];
+  passage?: string;
 }
 
 interface GradeResult {
@@ -261,6 +262,16 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
           style={{ width: `${((current + 1) / allQuestions.length) * 100}%` }}
         />
       </div>
+
+      {/* 본문 (영어) */}
+      {exam.passage && (
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 shadow-sm">
+          <div className="text-xs font-semibold text-blue-700 mb-3 uppercase">📖 본문</div>
+          <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap font-mono">
+            {exam.passage}
+          </p>
+        </div>
+      )}
 
       {/* 문제 */}
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
