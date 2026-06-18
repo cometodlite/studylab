@@ -358,7 +358,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                   : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
               }`}
             >
-              서{i + 1}
+              {i + 1}
             </button>
           ))}
         </div>
