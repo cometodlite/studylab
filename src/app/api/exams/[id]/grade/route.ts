@@ -68,7 +68,7 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
     }));
 
   const correct = results.filter(r => r.correct).length;
-  const total = results.length;
+  const total = exam.questions.length;
   const difficulty = (exam.difficulty ?? '기본') as Difficulty;
   const pts = calcExamPoints(correct, total, difficulty);
 
