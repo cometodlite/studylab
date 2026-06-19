@@ -492,6 +492,11 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                       {ci + 1}. <MathText text={c} />
                     </div>
                   ))}
+                  {r.yourAnswer === -1 && (
+                    <div className="text-sm px-3 py-1.5 rounded-lg bg-gray-100 text-gray-500">
+                      ⊘ 잘 모르겠음으로 건너뜀
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -544,7 +549,9 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
   const allQuestions = exam.questions;
   const q = allQuestions[current];
   const mcAnswered = Object.keys(mcAnswers).length;
-  const essayAnswered = Object.keys(essayAnswers).filter(k => essayAnswers[Number(k)]?.trim()).length;
+  const essayAnswered = essayQuestions.filter(q =>
+    essayAnswers[q.id] === '__SKIP__' || !!essayAnswers[q.id]?.trim()
+  ).length;
   const totalAnswered = mcAnswered + essayAnswered;
   const isUrgent = timeLeft <= 300; // 5분 이하
 
@@ -607,6 +614,23 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                 {ci + 1}. <MathText text={c} />
               </button>
             ))}
+            <button
+              onClick={() => setMcAnswers(prev => {
+                if (prev[q.id] === -1) {
+                  const next = { ...prev };
+                  delete next[q.id];
+                  return next;
+                }
+                return { ...prev, [q.id]: -1 };
+              })}
+              className={`w-full text-left px-4 py-3 rounded-xl text-sm transition border ${
+                mcAnswers[q.id] === -1
+                  ? 'border-gray-400 bg-gray-100 text-gray-600 font-semibold'
+                  : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-500'
+              }`}
+            >
+              6. 잘 모르겠음
+            </button>
           </div>
         )}
 
@@ -617,13 +641,32 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                 📌 <MathText text={(q as EssayQuestion).rubric!} />
               </div>
             )}
-            <textarea
-              value={essayAnswers[q.id] ?? ''}
-              onChange={e => setEssayAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
-              placeholder="풀이 과정과 답을 서술하세요..."
-              rows={5}
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300 resize-none"
-            />
+            {essayAnswers[q.id] === '__SKIP__' ? (
+              <div className="w-full border border-gray-200 rounded-xl px-4 py-3 bg-gray-50 text-sm text-gray-400">
+                잘 모르겠음으로 표시됨
+              </div>
+            ) : (
+              <textarea
+                value={essayAnswers[q.id] ?? ''}
+                onChange={e => setEssayAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
+                placeholder="풀이 과정과 답을 서술하세요..."
+                rows={5}
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300 resize-none"
+              />
+            )}
+            <button
+              onClick={() => setEssayAnswers(prev => ({
+                ...prev,
+                [q.id]: prev[q.id] === '__SKIP__' ? '' : '__SKIP__',
+              }))}
+              className={`mt-2 px-4 py-2 rounded-xl text-sm transition border ${
+                essayAnswers[q.id] === '__SKIP__'
+                  ? 'border-gray-400 bg-gray-100 text-gray-600 font-semibold'
+                  : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-500'
+              }`}
+            >
+              잘 모르겠음
+            </button>
           </div>
         )}
 
@@ -634,13 +677,32 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                 📌 <MathText text={(q as EssayQuestion).rubric!} />
               </div>
             )}
-            <input
-              type="text"
-              value={essayAnswers[q.id] ?? ''}
-              onChange={e => setEssayAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
-              placeholder="답을 입력하세요..."
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-            />
+            {essayAnswers[q.id] === '__SKIP__' ? (
+              <div className="w-full border border-gray-200 rounded-xl px-4 py-3 bg-gray-50 text-sm text-gray-400">
+                잘 모르겠음으로 표시됨
+              </div>
+            ) : (
+              <input
+                type="text"
+                value={essayAnswers[q.id] ?? ''}
+                onChange={e => setEssayAnswers(prev => ({ ...prev, [q.id]: e.target.value }))}
+                placeholder="답을 입력하세요..."
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              />
+            )}
+            <button
+              onClick={() => setEssayAnswers(prev => ({
+                ...prev,
+                [q.id]: prev[q.id] === '__SKIP__' ? '' : '__SKIP__',
+              }))}
+              className={`mt-2 px-4 py-2 rounded-xl text-sm transition border ${
+                essayAnswers[q.id] === '__SKIP__'
+                  ? 'border-gray-400 bg-gray-100 text-gray-600 font-semibold'
+                  : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-500'
+              }`}
+            >
+              잘 모르겠음
+            </button>
           </div>
         )}
       </div>
@@ -655,6 +717,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
               onClick={() => goToQuestion(allQuestions.indexOf(qq))}
               className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
                 allQuestions.indexOf(qq) === current ? 'bg-indigo-600 text-white'
+                  : mcAnswers[qq.id] === -1 ? 'bg-gray-200 text-gray-500'
                   : mcAnswers[qq.id] !== undefined ? 'bg-indigo-100 text-indigo-700'
                   : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
               }`}
@@ -671,6 +734,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
               onClick={() => goToQuestion(allQuestions.indexOf(qq))}
               className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
                 allQuestions.indexOf(qq) === current ? 'bg-purple-600 text-white'
+                  : essayAnswers[qq.id] === '__SKIP__' ? 'bg-gray-200 text-gray-500'
                   : essayAnswers[qq.id]?.trim() ? 'bg-purple-100 text-purple-700'
                   : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
               }`}
@@ -699,9 +763,10 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
         </button>
         <button
           onClick={() => {
-            if (confirm(`${totalAnswered}/${allQuestions.length}문항 답안으로 제출하시겠습니까?`)) handleSubmit();
+            if (confirm('모든 문항의 답안을 제출하고 채점하시겠습니까?')) handleSubmit();
           }}
-          disabled={submitting || totalAnswered === 0}
+          disabled={submitting || totalAnswered < allQuestions.length}
+          title={totalAnswered < allQuestions.length ? `모든 문항에 답하거나 '잘 모르겠음'을 선택해야 제출할 수 있습니다. (${totalAnswered}/${allQuestions.length})` : undefined}
           className="ml-auto text-sm font-semibold px-5 py-2.5 rounded-xl transition disabled:opacity-50 bg-indigo-600 hover:bg-indigo-700 text-white"
         >
           {submitting ? '채점 중...' : `제출 (${totalAnswered}/${allQuestions.length})`}

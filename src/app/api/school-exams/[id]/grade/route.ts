@@ -496,7 +496,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         timeSpent: timings[String(q.id)] ?? 0,
       });
 
-      if (!correct && userAns !== undefined) {
+      if (!correct && userAns !== undefined && userAns !== -1) {
         const noteId = `${uid}__${id}__${q.id}`;
         wrongNoteWrites.push({
           type: 'add',
@@ -520,17 +520,19 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         });
       }
     } else {
-      const userAns = (essayAnswers[String(q.id)] ?? '').trim();
+      const userAnsRaw = essayAnswers[String(q.id)] ?? '';
+      const isSkipped = userAnsRaw === '__SKIP__';
+      const userAns = isSkipped ? '' : userAnsRaw.trim();
       const expected = (q.expectedAnswer ?? '').trim().toLowerCase().replace(/\s/g, '');
       const normalized = userAns.toLowerCase().replace(/\s/g, '');
-      const correct = normalized === expected;
+      const correct = !isSkipped && normalized !== '' && normalized === expected;
       if (correct) essayScore += q.score;
       results.push({
         id: q.id,
         type: q.type,
         category: questionCategory(q),
         question: q.question,
-        yourAnswer: userAns,
+        yourAnswer: isSkipped ? undefined : userAns,
         correctAnswer: q.expectedAnswer,
         correct,
         score: q.score,
@@ -540,7 +542,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         timeSpent: timings[String(q.id)] ?? 0,
       });
 
-      if (!correct && userAns) {
+      if (!correct && userAns && !isSkipped) {
         const noteId = `${uid}__${id}__${q.id}`;
         wrongNoteWrites.push({
           type: 'add',
