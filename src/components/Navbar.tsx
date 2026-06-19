@@ -58,6 +58,7 @@ export default function Navbar() {
             </div>
           </div>
 
+          <Link href="/planner" className="text-gray-600 hover:text-indigo-600 transition">플래너</Link>
           <Link href="/workbooks" className="text-gray-600 hover:text-indigo-600 transition">📒 문제집</Link>
           <Link href="/exam" className="text-gray-600 hover:text-indigo-600 transition">시험</Link>
           <Link href="/store" className="text-gray-600 hover:text-indigo-600 transition">상점</Link>
@@ -165,6 +166,10 @@ export default function Navbar() {
               )}
             </div>
 
+            <Link href="/planner" onClick={() => setOpen(false)}
+              className="flex items-center px-3 py-2.5 rounded-xl text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
+              📅 플래너
+            </Link>
             <Link href="/workbooks" onClick={() => setOpen(false)}
               className="flex items-center px-3 py-2.5 rounded-xl text-sm font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition">
               📒 문제집

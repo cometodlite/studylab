@@ -396,7 +396,7 @@ export default function DashboardPage() {
         </Link>
 
         {/* 빠른 메뉴 */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             href="/exam"
             className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl p-6 transition flex items-center gap-4"
@@ -405,6 +405,16 @@ export default function DashboardPage() {
             <div>
               <div className="font-bold text-lg">시험 풀기</div>
               <div className="text-indigo-200 text-sm">정답 1개당 10p 획득</div>
+            </div>
+          </Link>
+          <Link
+            href="/planner"
+            className="bg-white hover:bg-indigo-50 border border-indigo-100 rounded-xl p-6 transition flex items-center gap-4"
+          >
+            <span className="text-4xl">📅</span>
+            <div>
+              <div className="font-bold text-lg text-gray-800">플래너</div>
+              <div className="text-gray-400 text-sm">목표와 추천 확인</div>
             </div>
           </Link>
           <Link

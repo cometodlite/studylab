@@ -198,5 +198,13 @@
     "description": "실시간 알림 기능 추가. 보호 레이아웃에서 사용자 문서의 배지 변화를 실시간 구독해 배지 획득 알림을 표시하고, 학습 스트릭·학교 시험 업적 목표 달성 임박 알림을 채점 결과와 연동",
     "files": ["src/components/RealtimeNotificationCenter.tsx", "src/lib/notifications.ts", "src/lib/learning-streak.ts", "src/app/api/school-exams/[id]/grade/route.ts", "src/app/(protected)/layout.tsx", "src/app/(protected)/exam/[id]/page.tsx", "src/app/(protected)/practice/[id]/page.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-026",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "공부 플래너 추가. 사용자별 주간/월간 목표를 users 문서에 저장하고, 시험 응시·오답 재풀이·월간 응시 진도와 오답/점수/스트릭 기반 자동 추천 및 알림을 /planner 화면에 표시",
+    "files": ["src/app/api/planner/route.ts", "src/app/(protected)/planner/page.tsx", "src/components/Navbar.tsx", "src/app/(protected)/dashboard/page.tsx", "src/contexts/AuthContext.tsx", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

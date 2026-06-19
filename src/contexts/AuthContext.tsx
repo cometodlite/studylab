@@ -28,6 +28,13 @@ interface UserProfile {
   learningStreakDays?: number;
   learningStreakBest?: number;
   learningStreakLastDate?: string | null;
+  studyPlanner?: {
+    weeklyExamGoal?: number;
+    weeklyWrongRetryGoal?: number;
+    monthlyExamGoal?: number;
+    focusMode?: string;
+    reminderEnabled?: boolean;
+  };
 }
 
 interface AuthContextType {
