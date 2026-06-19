@@ -496,7 +496,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         timeSpent: timings[String(q.id)] ?? 0,
       });
 
-      if (!correct && userAns !== undefined && userAns !== -1) {
+      if (!correct && userAns !== undefined) {
         const noteId = `${uid}__${id}__${q.id}`;
         wrongNoteWrites.push({
           type: 'add',
@@ -542,7 +542,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
         timeSpent: timings[String(q.id)] ?? 0,
       });
 
-      if (!correct && userAns && !isSkipped) {
+      if (!correct) {
         const noteId = `${uid}__${id}__${q.id}`;
         wrongNoteWrites.push({
           type: 'add',

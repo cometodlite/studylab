@@ -75,9 +75,9 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
 
   const now = new Date();
 
-  // 오답 노트 저장 (잘 모르겠음(-1) 선택 문항 제외)
+  // 오답 노트 저장
   const wrongNoteWrites: WriteOp[] = results
-    .filter(r => !r.correct && r.yourAnswer !== -1)
+    .filter(r => !r.correct)
     .map(r => ({
       type: 'add' as const,
       collection: 'wrong_notes',
