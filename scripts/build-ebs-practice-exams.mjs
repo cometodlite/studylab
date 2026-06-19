@@ -203,79 +203,7 @@ function makeChoices(correct, distractors, id) {
 }
 
 function naturalPrompt(ctx, question) {
-  const openingsByDifficulty = {
-    '기본': [
-      '정의를 확인하며',
-      '공식 하나를 적용하여',
-      '간단한 계산 순서에 맞추어',
-      '주어진 값을 바로 대입하여',
-      '핵심 성질을 확인하여',
-      '계산 실수를 줄이며',
-      '가장 기본 관계를 이용하여',
-      '짧은 풀이로',
-      '표준 기호를 읽고',
-      '기초 연산을 정리하여',
-      '필수 개념을 떠올리며',
-      '한 단계 계산으로',
-      '보기의 값을 차례로 확인하여',
-      '공식의 의미를 살펴',
-      '기초 예제처럼',
-    ],
-    '유형별': [
-      '대표 풀이 흐름에 맞추어',
-      '교과서 표준 유형처럼',
-      '조건을 식으로 바꾸어',
-      '풀이 순서를 잡고',
-      '자주 나오는 패턴을 적용하여',
-      '자료를 읽고 필요한 값을 골라',
-      '두 조건을 차례로 사용하여',
-      '보기의 차이를 비교하며',
-      '중간값을 먼저 구해',
-      '표준 변형 문항처럼',
-      '계산 결과를 연결하여',
-      '조건의 의미를 확인하며',
-      '문장 속 수량을 정리하여',
-      '대표 유형의 결론을 떠올려',
-      '유사 문항을 푸는 방식으로',
-    ],
-    '심화': [
-      '조건을 연결하여',
-      '중간 결과를 해석하며',
-      '숨은 제한을 확인하여',
-      '거꾸로 조건을 추적하여',
-      '가능한 경우를 나누어',
-      '자료 사이의 관계를 비교하여',
-      '경계값을 함께 살펴',
-      '두 개념을 결합하여',
-      '문장 조건을 빠짐없이 반영하여',
-      '풀이 과정의 빈틈을 점검하며',
-      '결과에서 원인을 되짚어',
-      '조건의 순서를 바꾸어 생각하며',
-      '실생활 조건을 식으로 모델링하여',
-      '질문한 대상을 바꾸어',
-      '마지막 조건까지 고려하여',
-    ],
-    '킬러': [
-      '여러 조건을 종합하여',
-      '숨은 조건과 경계값을 함께 추론하여',
-      '가능한 경우를 정밀하게 나누어',
-      '역추론으로 조건을 좁혀',
-      '겹치는 경우를 제외하며',
-      '최댓값과 최솟값 후보를 비교하여',
-      '조건 강화와 완화를 함께 생각하여',
-      '불변 관계를 찾아',
-      '복합 조건을 단계적으로 정리하여',
-      '끝값과 내부 조건을 동시에 확인하여',
-      '보기의 함정을 피하며',
-      '문제의 구조를 재해석하여',
-      '여러 풀이 경로를 비교하여',
-      '숨은 매개변수의 영향을 따져',
-      '최종 조건까지 압축하여',
-    ],
-  };
-  const phrases = openingsByDifficulty[ctx.difficulty] ?? openingsByDifficulty['유형별'];
-  const roundLabel = ctx.round === 0 ? ctx.examCore : `${ctx.examCore} 2차 변형`;
-  return `${roundLabel}에서 ${phrases[(ctx.variant.variantNo - 1) % phrases.length]}, ${question}`;
+  return question;
 }
 
 function numericValue(value) {
@@ -894,6 +822,12 @@ const GENERATORS = {
   statistics: statisticsQuestion,
 };
 
+const generatedQuestionTexts = new Set();
+
+function normalizeGeneratedQuestion(question) {
+  return String(question ?? '').replace(/\s+/g, ' ').trim();
+}
+
 function buildExam(file) {
   const filePath = path.join(mathDir, file);
   const current = JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -903,20 +837,33 @@ function buildExam(file) {
   const core = titleCore(current.title);
   const seed = hashText(`${current.id}:${current.grade}:${current.unit}:${current.difficulty}`);
 
+  const localQuestionTexts = new Set();
   const questions = Array.from({ length: 30 }, (_, index) => {
     const variant = TYPE_VARIANTS[index % TYPE_VARIANTS.length];
-    const ctx = {
-    id: seed + index + 1 + variant.variantNo * 37 + Math.floor(index / TYPE_VARIANTS.length) * 101,
-    displayId: index + 1,
-      difficulty: current.difficulty,
-      family,
-      unit: current.unit,
-      examCore: core,
-      variant,
-      round: Math.floor(index / TYPE_VARIANTS.length),
-      seed,
-    };
-    return generator(ctx);
+
+    for (let attempt = 0; attempt < 50; attempt += 1) {
+      const attemptSeed = seed + attempt * 104729;
+      const ctx = {
+        id: attemptSeed + index + 1 + variant.variantNo * 37 + Math.floor(index / TYPE_VARIANTS.length) * 101,
+        displayId: index + 1,
+        difficulty: current.difficulty,
+        family,
+        unit: current.unit,
+        examCore: core,
+        variant,
+        round: Math.floor(index / TYPE_VARIANTS.length),
+        seed: attemptSeed,
+      };
+      const candidate = generator(ctx);
+      const key = normalizeGeneratedQuestion(candidate.question);
+      if (!generatedQuestionTexts.has(key) && !localQuestionTexts.has(key)) {
+        generatedQuestionTexts.add(key);
+        localQuestionTexts.add(key);
+        return candidate;
+      }
+    }
+
+    throw new Error(`Unable to generate a unique question for ${current.id} Q${index + 1}`);
   });
 
   return {
