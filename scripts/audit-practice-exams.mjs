@@ -107,9 +107,19 @@ function unique(values) {
 }
 
 function normalizeQuestionShape(value) {
-  return normalizeText(value)
+  const text = normalizeText(value);
+  const coreStart = text.indexOf(', ');
+  const coreText = coreStart >= 0 ? text.slice(coreStart + 2) : text;
+  const preservedMath = [];
+  return coreText
+    .replace(/\$[^$]*A[^$]*\$/g, formula => {
+      const token = `__FORMULA${String.fromCharCode(65 + preservedMath.length)}__`;
+      preservedMath.push(formula);
+      return token;
+    })
     .replace(/\$[^$]*\$/g, '$#')
-    .replace(numberPattern, '#');
+    .replace(numberPattern, '#')
+    .replace(/__FORMULA([A-Z])__/g, (_, letter) => preservedMath[letter.charCodeAt(0) - 65] ?? '$#');
 }
 
 function collectLargeNumbers(value) {

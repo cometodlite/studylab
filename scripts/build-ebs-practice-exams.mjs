@@ -241,7 +241,146 @@ function naturalPrompt(ctx, question) {
   return `${ctx.examCore}에서 ${phrases[(ctx.variant.variantNo - 1) % phrases.length]}, ${question}`;
 }
 
+function numericValue(value) {
+  if (typeof value === 'number' && Number.isFinite(value)) return value;
+  if (typeof value === 'string' && /^-?\d+$/.test(value)) return Number(value);
+  return null;
+}
+
+function transformNumericQuestion(ctx, question, correct, distractors, explanation) {
+  const value = numericValue(correct);
+  if (value === null) {
+    const suffixes = [
+      '',
+      ' 같은 값을 보기에서 고르면?',
+      ' 이 값과 같은 표현을 고르면?',
+      ' 조건을 만족하는 값을 보기에서 찾으면?',
+      ' 옳은 답을 하나 고르면?',
+      ' 계산 결과와 같은 보기는?',
+      ' 최종값으로 알맞은 것은?',
+      ' 같은 의미의 값을 고르면?',
+      ' 보기 중 맞는 값을 고르면?',
+      ' 정리한 결과로 옳은 것은?',
+      ' 풀이의 마지막 값은?',
+      ' 조건에 맞는 답은?',
+      ' 문제 상황에 맞는 값은?',
+      ' 변형해도 같은 값은?',
+      ' 종합하면 알맞은 답은?',
+    ];
+    const suffix = suffixes[(ctx.variant.variantNo - 1) % suffixes.length];
+    return {
+      question: `${question}${suffix}`,
+      correct,
+      distractors,
+      explanation,
+    };
+  }
+
+  const transforms = [
+    {
+      suffix: '',
+      calc: x => x,
+      explain: '',
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A+1')}의 값은?`,
+      calc: x => x + 1,
+      explain: ` 따라서 ${math(`A+1=${value}+1=${value + 1}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('2A')}의 값은?`,
+      calc: x => x * 2,
+      explain: ` 따라서 ${math(`2A=2\\times${value}=${value * 2}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A+3')}의 값은?`,
+      calc: x => x + 3,
+      explain: ` 따라서 ${math(`A+3=${value + 3}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A-2')}의 값은?`,
+      calc: x => x - 2,
+      explain: ` 따라서 ${math(`A-2=${value - 2}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A+4')}의 값은?`,
+      calc: x => x + 4,
+      explain: ` 따라서 ${math(`A+4=${value + 4}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math(`3A`)}의 값은?`,
+      calc: x => x * 3,
+      explain: ` 따라서 ${math(`3A=3\\times${value}=${value * 3}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A+5')}의 값은?`,
+      calc: x => x + 5,
+      explain: ` 따라서 ${math(`A+5=${value + 5}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math(`2A+1`)}의 값은?`,
+      calc: x => 2 * x + 1,
+      explain: ` 따라서 ${math(`2A+1=${2 * value + 1}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math(`2A-1`)}의 값은?`,
+      calc: x => 2 * x - 1,
+      explain: ` 따라서 ${math(`2A-1=${2 * value - 1}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A+6')}의 값은?`,
+      calc: x => x + 6,
+      explain: ` 따라서 ${math(`A+6=${value + 6}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math(`10-A`)}의 값은?`,
+      calc: x => 10 - x,
+      explain: ` 따라서 ${math(`10-A=${10 - value}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math(`A+7`)}의 값은?`,
+      calc: x => x + 7,
+      explain: ` 따라서 ${math(`A+7=${value + 7}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('2A+3')}의 값은?`,
+      calc: x => 2 * x + 3,
+      explain: ` 따라서 ${math(`2A+3=${2 * value + 3}`)}이다.`,
+    },
+    {
+      suffix: ` 구한 값을 ${math('A')}라 할 때 ${math('A+8')}의 값은?`,
+      calc: x => x + 8,
+      explain: ` 따라서 ${math(`A+8=${value + 8}`)}이다.`,
+    },
+  ];
+
+  const transform = transforms[(ctx.variant.variantNo - 1) % transforms.length];
+  if (!transform.suffix) return { question, correct, distractors, explanation };
+
+  const nextCorrect = transform.calc(value);
+  const numericDistractors = [
+    nextCorrect - 2,
+    nextCorrect - 1,
+    nextCorrect + 1,
+    nextCorrect + 2,
+    nextCorrect + 3,
+  ];
+
+  return {
+    question: `${question} ${transform.suffix}`,
+    correct: nextCorrect,
+    distractors: numericDistractors,
+    explanation: `${explanation}${transform.explain}`,
+  };
+}
+
 function q(ctx, typeTag, skills, question, correct, distractors, explanation) {
+  const transformed = transformNumericQuestion(ctx, question, correct, distractors, explanation);
+  question = transformed.question;
+  correct = transformed.correct;
+  distractors = transformed.distractors;
+  explanation = transformed.explanation;
+
   const { choices, answer } = makeChoices(String(correct), distractors, ctx.displayId ?? ctx.id);
   const profile = DIFFICULTY_PROFILE[ctx.difficulty];
   const familyLabel = FAMILY_LABELS[ctx.family] ?? '수학';
