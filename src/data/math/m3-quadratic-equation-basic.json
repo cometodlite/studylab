@@ -6,16 +6,17 @@
   "unit": "이차방정식",
   "difficulty": "기본",
   "ebsStyle": {
-    "version": 1,
+    "version": 2,
     "role": "개념 확인",
     "expectedSteps": 1,
+    "typeVariantCount": 5,
     "family": "quadraticEquation",
     "generatedAt": "2026-06-19"
   },
   "questions": [
     {
       "id": 1,
-      "question": "EBS 이차방정식 개념 확인 01형. $(x-4)(x-6)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 핵심 계산 01형. $(x-4)(x-6)=0$의 두 근의 합은?",
       "choices": [
         "$8$",
         "$9$",
@@ -28,11 +29,14 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 핵심 계산",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -40,7 +44,7 @@
     },
     {
       "id": 2,
-      "question": "EBS 이차방정식 개념 확인 02형. $(x-5)(x-8)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 조건 해석 02형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $(x-5)(x-8)=0$의 두 근의 합은?",
       "choices": [
         "$11$",
         "$13$",
@@ -49,15 +53,18 @@
         "$3$"
       ],
       "answer": 1,
-      "explanation": "두 근은 $5$, $8$이므로 합은 $13$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 두 근은 $5$, $8$이므로 합은 $13$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 조건 해석",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -65,7 +72,7 @@
     },
     {
       "id": 3,
-      "question": "EBS 이차방정식 개념 확인 03형. $(x-1)(x-2)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 역추론 03형. 구하려는 값을 거꾸로 추적하여 해결하시오. $(x-1)(x-2)=0$의 두 근의 합은?",
       "choices": [
         "$1$",
         "$2$",
@@ -74,15 +81,18 @@
         "$5$"
       ],
       "answer": 3,
-      "explanation": "두 근은 $1$, $2$이므로 합은 $3$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 두 근은 $1$, $2$이므로 합은 $3$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 역추론",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -90,7 +100,7 @@
     },
     {
       "id": 4,
-      "question": "EBS 이차방정식 개념 확인 04형. $(x-2)(x-4)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 보기 판별 04형. 보기 중 조건을 만족하는 값을 고르시오. $(x-2)(x-4)=0$의 두 근의 합은?",
       "choices": [
         "$6$",
         "$4$",
@@ -99,15 +109,18 @@
         "$2$"
       ],
       "answer": 0,
-      "explanation": "두 근은 $2$, $4$이므로 합은 $6$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 두 근은 $2$, $4$이므로 합은 $6$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 보기 판별",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -115,7 +128,7 @@
     },
     {
       "id": 5,
-      "question": "EBS 이차방정식 개념 확인 05형. $(x-3)(x-6)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 실전 적용 05형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $(x-3)(x-6)=0$의 두 근의 합은?",
       "choices": [
         "$7$",
         "$8$",
@@ -124,15 +137,18 @@
         "$3$"
       ],
       "answer": 2,
-      "explanation": "두 근은 $3$, $6$이므로 합은 $9$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 두 근은 $3$, $6$이므로 합은 $9$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 실전 적용",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -140,7 +156,7 @@
     },
     {
       "id": 6,
-      "question": "EBS 이차방정식 개념 확인 06형. $(x-4)(x-5)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 핵심 계산 06형. $(x-4)(x-5)=0$의 두 근의 합은?",
       "choices": [
         "$7$",
         "$8$",
@@ -153,11 +169,14 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 핵심 계산",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -165,7 +184,7 @@
     },
     {
       "id": 7,
-      "question": "EBS 이차방정식 개념 확인 07형. $(x-5)(x-7)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 조건 해석 07형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $(x-5)(x-7)=0$의 두 근의 합은?",
       "choices": [
         "$10$",
         "$12$",
@@ -174,15 +193,18 @@
         "$2$"
       ],
       "answer": 1,
-      "explanation": "두 근은 $5$, $7$이므로 합은 $12$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 두 근은 $5$, $7$이므로 합은 $12$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 조건 해석",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -190,7 +212,7 @@
     },
     {
       "id": 8,
-      "question": "EBS 이차방정식 개념 확인 08형. $(x-1)(x-4)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 역추론 08형. 구하려는 값을 거꾸로 추적하여 해결하시오. $(x-1)(x-4)=0$의 두 근의 합은?",
       "choices": [
         "$3$",
         "$4$",
@@ -199,15 +221,18 @@
         "$7$"
       ],
       "answer": 3,
-      "explanation": "두 근은 $1$, $4$이므로 합은 $5$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 두 근은 $1$, $4$이므로 합은 $5$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 역추론",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -215,7 +240,7 @@
     },
     {
       "id": 9,
-      "question": "EBS 이차방정식 개념 확인 09형. $(x-2)(x-3)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 보기 판별 09형. 보기 중 조건을 만족하는 값을 고르시오. $(x-2)(x-3)=0$의 두 근의 합은?",
       "choices": [
         "$5$",
         "$3$",
@@ -224,15 +249,18 @@
         "$1$"
       ],
       "answer": 0,
-      "explanation": "두 근은 $2$, $3$이므로 합은 $5$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 두 근은 $2$, $3$이므로 합은 $5$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 보기 판별",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -240,7 +268,7 @@
     },
     {
       "id": 10,
-      "question": "EBS 이차방정식 개념 확인 10형. $(x-3)(x-5)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 실전 적용 10형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $(x-3)(x-5)=0$의 두 근의 합은?",
       "choices": [
         "$6$",
         "$7$",
@@ -249,15 +277,18 @@
         "$2$"
       ],
       "answer": 2,
-      "explanation": "두 근은 $3$, $5$이므로 합은 $8$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 두 근은 $3$, $5$이므로 합은 $8$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 실전 적용",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -265,7 +296,7 @@
     },
     {
       "id": 11,
-      "question": "EBS 이차방정식 개념 확인 11형. $(x-4)(x-7)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 핵심 계산 11형. $(x-4)(x-7)=0$의 두 근의 합은?",
       "choices": [
         "$9$",
         "$10$",
@@ -278,11 +309,14 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 핵심 계산",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -290,7 +324,7 @@
     },
     {
       "id": 12,
-      "question": "EBS 이차방정식 개념 확인 12형. $(x-5)(x-6)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 조건 해석 12형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $(x-5)(x-6)=0$의 두 근의 합은?",
       "choices": [
         "$9$",
         "$11$",
@@ -299,15 +333,18 @@
         "$1$"
       ],
       "answer": 1,
-      "explanation": "두 근은 $5$, $6$이므로 합은 $11$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 두 근은 $5$, $6$이므로 합은 $11$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 조건 해석",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -315,7 +352,7 @@
     },
     {
       "id": 13,
-      "question": "EBS 이차방정식 개념 확인 13형. $(x-1)(x-3)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 역추론 13형. 구하려는 값을 거꾸로 추적하여 해결하시오. $(x-1)(x-3)=0$의 두 근의 합은?",
       "choices": [
         "$2$",
         "$3$",
@@ -324,15 +361,18 @@
         "$6$"
       ],
       "answer": 3,
-      "explanation": "두 근은 $1$, $3$이므로 합은 $4$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 두 근은 $1$, $3$이므로 합은 $4$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 역추론",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -340,7 +380,7 @@
     },
     {
       "id": 14,
-      "question": "EBS 이차방정식 개념 확인 14형. $(x-2)(x-5)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 보기 판별 14형. 보기 중 조건을 만족하는 값을 고르시오. $(x-2)(x-5)=0$의 두 근의 합은?",
       "choices": [
         "$7$",
         "$5$",
@@ -349,15 +389,18 @@
         "$3$"
       ],
       "answer": 0,
-      "explanation": "두 근은 $2$, $5$이므로 합은 $7$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 두 근은 $2$, $5$이므로 합은 $7$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 보기 판별",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -365,7 +408,7 @@
     },
     {
       "id": 15,
-      "question": "EBS 이차방정식 개념 확인 15형. $(x-3)(x-4)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 실전 적용 15형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $(x-3)(x-4)=0$의 두 근의 합은?",
       "choices": [
         "$5$",
         "$6$",
@@ -374,15 +417,18 @@
         "$1$"
       ],
       "answer": 2,
-      "explanation": "두 근은 $3$, $4$이므로 합은 $7$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 두 근은 $3$, $4$이므로 합은 $7$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 실전 적용",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -390,7 +436,7 @@
     },
     {
       "id": 16,
-      "question": "EBS 이차방정식 개념 확인 16형. $(x-4)(x-6)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 핵심 계산 16형. $(x-4)(x-6)=0$의 두 근의 합은?",
       "choices": [
         "$8$",
         "$9$",
@@ -403,11 +449,14 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 핵심 계산",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -415,7 +464,7 @@
     },
     {
       "id": 17,
-      "question": "EBS 이차방정식 개념 확인 17형. $(x-5)(x-8)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 조건 해석 17형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $(x-5)(x-8)=0$의 두 근의 합은?",
       "choices": [
         "$11$",
         "$13$",
@@ -424,15 +473,18 @@
         "$3$"
       ],
       "answer": 1,
-      "explanation": "두 근은 $5$, $8$이므로 합은 $13$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 두 근은 $5$, $8$이므로 합은 $13$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 조건 해석",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -440,7 +492,7 @@
     },
     {
       "id": 18,
-      "question": "EBS 이차방정식 개념 확인 18형. $(x-1)(x-2)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 역추론 18형. 구하려는 값을 거꾸로 추적하여 해결하시오. $(x-1)(x-2)=0$의 두 근의 합은?",
       "choices": [
         "$1$",
         "$2$",
@@ -449,15 +501,18 @@
         "$5$"
       ],
       "answer": 3,
-      "explanation": "두 근은 $1$, $2$이므로 합은 $3$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 두 근은 $1$, $2$이므로 합은 $3$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 역추론",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -465,7 +520,7 @@
     },
     {
       "id": 19,
-      "question": "EBS 이차방정식 개념 확인 19형. $(x-2)(x-4)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 보기 판별 19형. 보기 중 조건을 만족하는 값을 고르시오. $(x-2)(x-4)=0$의 두 근의 합은?",
       "choices": [
         "$6$",
         "$4$",
@@ -474,15 +529,18 @@
         "$2$"
       ],
       "answer": 0,
-      "explanation": "두 근은 $2$, $4$이므로 합은 $6$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 두 근은 $2$, $4$이므로 합은 $6$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 보기 판별",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -490,7 +548,7 @@
     },
     {
       "id": 20,
-      "question": "EBS 이차방정식 개념 확인 20형. $(x-3)(x-6)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 실전 적용 20형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $(x-3)(x-6)=0$의 두 근의 합은?",
       "choices": [
         "$7$",
         "$8$",
@@ -499,15 +557,18 @@
         "$3$"
       ],
       "answer": 2,
-      "explanation": "두 근은 $3$, $6$이므로 합은 $9$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 두 근은 $3$, $6$이므로 합은 $9$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 실전 적용",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -515,7 +576,7 @@
     },
     {
       "id": 21,
-      "question": "EBS 이차방정식 개념 확인 21형. $(x-4)(x-5)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 핵심 계산 21형. $(x-4)(x-5)=0$의 두 근의 합은?",
       "choices": [
         "$7$",
         "$8$",
@@ -528,11 +589,14 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 핵심 계산",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -540,7 +604,7 @@
     },
     {
       "id": 22,
-      "question": "EBS 이차방정식 개념 확인 22형. $(x-5)(x-7)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 조건 해석 22형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $(x-5)(x-7)=0$의 두 근의 합은?",
       "choices": [
         "$10$",
         "$12$",
@@ -549,15 +613,18 @@
         "$2$"
       ],
       "answer": 1,
-      "explanation": "두 근은 $5$, $7$이므로 합은 $12$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 두 근은 $5$, $7$이므로 합은 $12$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 조건 해석",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -565,7 +632,7 @@
     },
     {
       "id": 23,
-      "question": "EBS 이차방정식 개념 확인 23형. $(x-1)(x-4)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 역추론 23형. 구하려는 값을 거꾸로 추적하여 해결하시오. $(x-1)(x-4)=0$의 두 근의 합은?",
       "choices": [
         "$3$",
         "$4$",
@@ -574,15 +641,18 @@
         "$7$"
       ],
       "answer": 3,
-      "explanation": "두 근은 $1$, $4$이므로 합은 $5$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 두 근은 $1$, $4$이므로 합은 $5$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 역추론",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -590,7 +660,7 @@
     },
     {
       "id": 24,
-      "question": "EBS 이차방정식 개념 확인 24형. $(x-2)(x-3)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 보기 판별 24형. 보기 중 조건을 만족하는 값을 고르시오. $(x-2)(x-3)=0$의 두 근의 합은?",
       "choices": [
         "$5$",
         "$3$",
@@ -599,15 +669,18 @@
         "$1$"
       ],
       "answer": 0,
-      "explanation": "두 근은 $2$, $3$이므로 합은 $5$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 두 근은 $2$, $3$이므로 합은 $5$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 보기 판별",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -615,7 +688,7 @@
     },
     {
       "id": 25,
-      "question": "EBS 이차방정식 개념 확인 25형. $(x-3)(x-5)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 실전 적용 25형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $(x-3)(x-5)=0$의 두 근의 합은?",
       "choices": [
         "$6$",
         "$7$",
@@ -624,15 +697,18 @@
         "$2$"
       ],
       "answer": 2,
-      "explanation": "두 근은 $3$, $5$이므로 합은 $8$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 두 근은 $3$, $5$이므로 합은 $8$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 실전 적용",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -640,7 +716,7 @@
     },
     {
       "id": 26,
-      "question": "EBS 이차방정식 개념 확인 26형. $(x-4)(x-7)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 핵심 계산 26형. $(x-4)(x-7)=0$의 두 근의 합은?",
       "choices": [
         "$9$",
         "$10$",
@@ -653,11 +729,14 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 핵심 계산",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -665,7 +744,7 @@
     },
     {
       "id": 27,
-      "question": "EBS 이차방정식 개념 확인 27형. $(x-5)(x-6)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 조건 해석 27형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $(x-5)(x-6)=0$의 두 근의 합은?",
       "choices": [
         "$9$",
         "$11$",
@@ -674,15 +753,18 @@
         "$1$"
       ],
       "answer": 1,
-      "explanation": "두 근은 $5$, $6$이므로 합은 $11$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 두 근은 $5$, $6$이므로 합은 $11$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 조건 해석",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -690,7 +772,7 @@
     },
     {
       "id": 28,
-      "question": "EBS 이차방정식 개념 확인 28형. $(x-1)(x-3)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 역추론 28형. 구하려는 값을 거꾸로 추적하여 해결하시오. $(x-1)(x-3)=0$의 두 근의 합은?",
       "choices": [
         "$2$",
         "$3$",
@@ -699,15 +781,18 @@
         "$6$"
       ],
       "answer": 3,
-      "explanation": "두 근은 $1$, $3$이므로 합은 $4$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 두 근은 $1$, $3$이므로 합은 $4$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 역추론",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -715,7 +800,7 @@
     },
     {
       "id": 29,
-      "question": "EBS 이차방정식 개념 확인 29형. $(x-2)(x-5)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 보기 판별 29형. 보기 중 조건을 만족하는 값을 고르시오. $(x-2)(x-5)=0$의 두 근의 합은?",
       "choices": [
         "$7$",
         "$5$",
@@ -724,15 +809,18 @@
         "$3$"
       ],
       "answer": 0,
-      "explanation": "두 근은 $2$, $5$이므로 합은 $7$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 두 근은 $2$, $5$이므로 합은 $7$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 보기 판별",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"
@@ -740,7 +828,7 @@
     },
     {
       "id": 30,
-      "question": "EBS 이차방정식 개념 확인 30형. $(x-3)(x-4)=0$의 두 근의 합은?",
+      "question": "EBS 이차방정식 개념 확인 · 인수분해로 이차방정식 풀기 · 실전 적용 30형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $(x-3)(x-4)=0$의 두 근의 합은?",
       "choices": [
         "$5$",
         "$6$",
@@ -749,15 +837,18 @@
         "$1$"
       ],
       "answer": 2,
-      "explanation": "두 근은 $3$, $4$이므로 합은 $7$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 두 근은 $3$, $4$이므로 합은 $7$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "인수분해로 이차방정식 풀기",
+        "typeTag": "인수분해로 이차방정식 풀기 · 실전 적용",
         "skills": [
           "이차방정식",
-          "인수분해"
+          "인수분해",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "quadraticEquation"

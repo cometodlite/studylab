@@ -6,16 +6,17 @@
   "unit": "일차함수",
   "difficulty": "심화",
   "ebsStyle": {
-    "version": 1,
+    "version": 2,
     "role": "조건 결합",
     "expectedSteps": 4,
+    "typeVariantCount": 5,
     "family": "linear",
     "generatedAt": "2026-06-19"
   },
   "questions": [
     {
       "id": 1,
-      "question": "EBS 일차함수와 그래프 조건 결합 01형. $\\frac{x}{4}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 핵심 계산 01형. $\\frac{x}{4}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{7}{2}$",
         "$12$",
@@ -28,11 +29,14 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 핵심 계산",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -40,7 +44,7 @@
     },
     {
       "id": 2,
-      "question": "EBS 일차함수와 그래프 조건 결합 02형. $\\frac{x}{5}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 조건 해석 02형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\frac{x}{5}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{9}{2}$",
         "$20$",
@@ -49,15 +53,18 @@
         "$10$"
       ],
       "answer": 4,
-      "explanation": "$x$절편은 $5$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times5\\times4=10$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $x$절편은 $5$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times5\\times4=10$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 조건 해석",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -65,7 +72,7 @@
     },
     {
       "id": 3,
-      "question": "EBS 일차함수와 그래프 조건 결합 03형. $\\frac{x}{6}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 역추론 03형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\frac{x}{6}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{11}{2}$",
         "$15$",
@@ -74,15 +81,18 @@
         "$1$"
       ],
       "answer": 1,
-      "explanation": "$x$절편은 $6$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times6\\times5=15$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $x$절편은 $6$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times6\\times5=15$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 역추론",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -90,7 +100,7 @@
     },
     {
       "id": 4,
-      "question": "EBS 일차함수와 그래프 조건 결합 04형. $\\frac{x}{2}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 보기 판별 04형. 보기 중 조건을 만족하는 값을 고르시오. $\\frac{x}{2}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$4$",
         "$12$",
@@ -99,15 +109,18 @@
         "$8$"
       ],
       "answer": 3,
-      "explanation": "$x$절편은 $2$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times2\\times6=6$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $x$절편은 $2$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times2\\times6=6$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 보기 판별",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -115,7 +128,7 @@
     },
     {
       "id": 5,
-      "question": "EBS 일차함수와 그래프 조건 결합 05형. $\\frac{x}{3}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 실전 적용 05형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\frac{x}{3}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{9}{2}$",
         "$3$",
@@ -124,15 +137,18 @@
         "$0$"
       ],
       "answer": 0,
-      "explanation": "$x$절편은 $3$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times3\\times3=\\frac{9}{2}$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $x$절편은 $3$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times3\\times3=\\frac{9}{2}$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 실전 적용",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -140,7 +156,7 @@
     },
     {
       "id": 6,
-      "question": "EBS 일차함수와 그래프 조건 결합 06형. $\\frac{x}{4}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 핵심 계산 06형. $\\frac{x}{4}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$4$",
         "$16$",
@@ -153,11 +169,14 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 핵심 계산",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -165,7 +184,7 @@
     },
     {
       "id": 7,
-      "question": "EBS 일차함수와 그래프 조건 결합 07형. $\\frac{x}{5}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 조건 해석 07형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\frac{x}{5}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$5$",
         "$25$",
@@ -174,15 +193,18 @@
         "$\\frac{25}{2}$"
       ],
       "answer": 4,
-      "explanation": "$x$절편은 $5$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times5\\times5=\\frac{25}{2}$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $x$절편은 $5$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times5\\times5=\\frac{25}{2}$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 조건 해석",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -190,7 +212,7 @@
     },
     {
       "id": 8,
-      "question": "EBS 일차함수와 그래프 조건 결합 08형. $\\frac{x}{6}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 역추론 08형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\frac{x}{6}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$6$",
         "$18$",
@@ -199,15 +221,18 @@
         "$0$"
       ],
       "answer": 1,
-      "explanation": "$x$절편은 $6$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times6\\times6=18$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $x$절편은 $6$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times6\\times6=18$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 역추론",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -215,7 +240,7 @@
     },
     {
       "id": 9,
-      "question": "EBS 일차함수와 그래프 조건 결합 09형. $\\frac{x}{2}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 보기 판별 09형. 보기 중 조건을 만족하는 값을 고르시오. $\\frac{x}{2}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{5}{2}$",
         "$6$",
@@ -224,15 +249,18 @@
         "$1$"
       ],
       "answer": 3,
-      "explanation": "$x$절편은 $2$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times2\\times3=3$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $x$절편은 $2$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times2\\times3=3$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 보기 판별",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -240,7 +268,7 @@
     },
     {
       "id": 10,
-      "question": "EBS 일차함수와 그래프 조건 결합 10형. $\\frac{x}{3}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 실전 적용 10형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\frac{x}{3}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$6$",
         "$\\frac{7}{2}$",
@@ -249,15 +277,18 @@
         "$1$"
       ],
       "answer": 0,
-      "explanation": "$x$절편은 $3$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times3\\times4=6$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $x$절편은 $3$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times3\\times4=6$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 실전 적용",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -265,7 +296,7 @@
     },
     {
       "id": 11,
-      "question": "EBS 일차함수와 그래프 조건 결합 11형. $\\frac{x}{4}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 핵심 계산 11형. $\\frac{x}{4}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{9}{2}$",
         "$20$",
@@ -278,11 +309,14 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 핵심 계산",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -290,7 +324,7 @@
     },
     {
       "id": 12,
-      "question": "EBS 일차함수와 그래프 조건 결합 12형. $\\frac{x}{5}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 조건 해석 12형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\frac{x}{5}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{11}{2}$",
         "$30$",
@@ -299,15 +333,18 @@
         "$15$"
       ],
       "answer": 4,
-      "explanation": "$x$절편은 $5$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times5\\times6=15$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $x$절편은 $5$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times5\\times6=15$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 조건 해석",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -315,7 +352,7 @@
     },
     {
       "id": 13,
-      "question": "EBS 일차함수와 그래프 조건 결합 13형. $\\frac{x}{6}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 역추론 13형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\frac{x}{6}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{9}{2}$",
         "$9$",
@@ -324,15 +361,18 @@
         "$3$"
       ],
       "answer": 1,
-      "explanation": "$x$절편은 $6$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times6\\times3=9$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $x$절편은 $6$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times6\\times3=9$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 역추론",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -340,7 +380,7 @@
     },
     {
       "id": 14,
-      "question": "EBS 일차함수와 그래프 조건 결합 14형. $\\frac{x}{2}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 보기 판별 14형. 보기 중 조건을 만족하는 값을 고르시오. $\\frac{x}{2}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$3$",
         "$8$",
@@ -349,15 +389,18 @@
         "$2$"
       ],
       "answer": 3,
-      "explanation": "$x$절편은 $2$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times2\\times4=4$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $x$절편은 $2$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times2\\times4=4$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 보기 판별",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -365,7 +408,7 @@
     },
     {
       "id": 15,
-      "question": "EBS 일차함수와 그래프 조건 결합 15형. $\\frac{x}{3}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 실전 적용 15형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\frac{x}{3}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{15}{2}$",
         "$4$",
@@ -374,15 +417,18 @@
         "$2$"
       ],
       "answer": 0,
-      "explanation": "$x$절편은 $3$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times3\\times5=\\frac{15}{2}$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $x$절편은 $3$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times3\\times5=\\frac{15}{2}$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 실전 적용",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -390,7 +436,7 @@
     },
     {
       "id": 16,
-      "question": "EBS 일차함수와 그래프 조건 결합 16형. $\\frac{x}{4}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 핵심 계산 16형. $\\frac{x}{4}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$5$",
         "$24$",
@@ -403,11 +449,14 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 핵심 계산",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -415,7 +464,7 @@
     },
     {
       "id": 17,
-      "question": "EBS 일차함수와 그래프 조건 결합 17형. $\\frac{x}{5}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 조건 해석 17형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\frac{x}{5}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$4$",
         "$15$",
@@ -424,15 +473,18 @@
         "$\\frac{15}{2}$"
       ],
       "answer": 4,
-      "explanation": "$x$절편은 $5$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times5\\times3=\\frac{15}{2}$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $x$절편은 $5$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times5\\times3=\\frac{15}{2}$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 조건 해석",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -440,7 +492,7 @@
     },
     {
       "id": 18,
-      "question": "EBS 일차함수와 그래프 조건 결합 18형. $\\frac{x}{6}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 역추론 18형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\frac{x}{6}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$5$",
         "$12$",
@@ -449,15 +501,18 @@
         "$2$"
       ],
       "answer": 1,
-      "explanation": "$x$절편은 $6$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times6\\times4=12$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $x$절편은 $6$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times6\\times4=12$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 역추론",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -465,7 +520,7 @@
     },
     {
       "id": 19,
-      "question": "EBS 일차함수와 그래프 조건 결합 19형. $\\frac{x}{2}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 보기 판별 19형. 보기 중 조건을 만족하는 값을 고르시오. $\\frac{x}{2}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{7}{2}$",
         "$10$",
@@ -474,15 +529,18 @@
         "$3$"
       ],
       "answer": 3,
-      "explanation": "$x$절편은 $2$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times2\\times5=5$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $x$절편은 $2$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times2\\times5=5$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 보기 판별",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -490,7 +548,7 @@
     },
     {
       "id": 20,
-      "question": "EBS 일차함수와 그래프 조건 결합 20형. $\\frac{x}{3}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 실전 적용 20형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\frac{x}{3}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$9$",
         "$\\frac{9}{2}$",
@@ -499,15 +557,18 @@
         "$3$"
       ],
       "answer": 0,
-      "explanation": "$x$절편은 $3$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times3\\times6=9$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $x$절편은 $3$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times3\\times6=9$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 실전 적용",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -515,7 +576,7 @@
     },
     {
       "id": 21,
-      "question": "EBS 일차함수와 그래프 조건 결합 21형. $\\frac{x}{4}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 핵심 계산 21형. $\\frac{x}{4}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{7}{2}$",
         "$12$",
@@ -528,11 +589,14 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 핵심 계산",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -540,7 +604,7 @@
     },
     {
       "id": 22,
-      "question": "EBS 일차함수와 그래프 조건 결합 22형. $\\frac{x}{5}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 조건 해석 22형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\frac{x}{5}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{9}{2}$",
         "$20$",
@@ -549,15 +613,18 @@
         "$10$"
       ],
       "answer": 4,
-      "explanation": "$x$절편은 $5$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times5\\times4=10$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $x$절편은 $5$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times5\\times4=10$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 조건 해석",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -565,7 +632,7 @@
     },
     {
       "id": 23,
-      "question": "EBS 일차함수와 그래프 조건 결합 23형. $\\frac{x}{6}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 역추론 23형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\frac{x}{6}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{11}{2}$",
         "$15$",
@@ -574,15 +641,18 @@
         "$1$"
       ],
       "answer": 1,
-      "explanation": "$x$절편은 $6$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times6\\times5=15$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $x$절편은 $6$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times6\\times5=15$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 역추론",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -590,7 +660,7 @@
     },
     {
       "id": 24,
-      "question": "EBS 일차함수와 그래프 조건 결합 24형. $\\frac{x}{2}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 보기 판별 24형. 보기 중 조건을 만족하는 값을 고르시오. $\\frac{x}{2}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$4$",
         "$12$",
@@ -599,15 +669,18 @@
         "$8$"
       ],
       "answer": 3,
-      "explanation": "$x$절편은 $2$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times2\\times6=6$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $x$절편은 $2$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times2\\times6=6$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 보기 판별",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -615,7 +688,7 @@
     },
     {
       "id": 25,
-      "question": "EBS 일차함수와 그래프 조건 결합 25형. $\\frac{x}{3}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 실전 적용 25형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\frac{x}{3}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{9}{2}$",
         "$3$",
@@ -624,15 +697,18 @@
         "$0$"
       ],
       "answer": 0,
-      "explanation": "$x$절편은 $3$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times3\\times3=\\frac{9}{2}$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $x$절편은 $3$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times3\\times3=\\frac{9}{2}$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 실전 적용",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -640,7 +716,7 @@
     },
     {
       "id": 26,
-      "question": "EBS 일차함수와 그래프 조건 결합 26형. $\\frac{x}{4}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 핵심 계산 26형. $\\frac{x}{4}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$4$",
         "$16$",
@@ -653,11 +729,14 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 핵심 계산",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -665,7 +744,7 @@
     },
     {
       "id": 27,
-      "question": "EBS 일차함수와 그래프 조건 결합 27형. $\\frac{x}{5}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 조건 해석 27형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\frac{x}{5}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$5$",
         "$25$",
@@ -674,15 +753,18 @@
         "$\\frac{25}{2}$"
       ],
       "answer": 4,
-      "explanation": "$x$절편은 $5$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times5\\times5=\\frac{25}{2}$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $x$절편은 $5$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times5\\times5=\\frac{25}{2}$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 조건 해석",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -690,7 +772,7 @@
     },
     {
       "id": 28,
-      "question": "EBS 일차함수와 그래프 조건 결합 28형. $\\frac{x}{6}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 역추론 28형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\frac{x}{6}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$6$",
         "$18$",
@@ -699,15 +781,18 @@
         "$0$"
       ],
       "answer": 1,
-      "explanation": "$x$절편은 $6$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times6\\times6=18$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $x$절편은 $6$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times6\\times6=18$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 역추론",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -715,7 +800,7 @@
     },
     {
       "id": 29,
-      "question": "EBS 일차함수와 그래프 조건 결합 29형. $\\frac{x}{2}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 보기 판별 29형. 보기 중 조건을 만족하는 값을 고르시오. $\\frac{x}{2}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$\\frac{5}{2}$",
         "$6$",
@@ -724,15 +809,18 @@
         "$1$"
       ],
       "answer": 3,
-      "explanation": "$x$절편은 $2$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times2\\times3=3$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $x$절편은 $2$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times2\\times3=3$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 보기 판별",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"
@@ -740,7 +828,7 @@
     },
     {
       "id": 30,
-      "question": "EBS 일차함수와 그래프 조건 결합 30형. $\\frac{x}{3}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "question": "EBS 일차함수와 그래프 조건 결합 · 절편과 넓이 · 실전 적용 30형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\frac{x}{3}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
       "choices": [
         "$6$",
         "$\\frac{7}{2}$",
@@ -749,15 +837,18 @@
         "$1$"
       ],
       "answer": 0,
-      "explanation": "$x$절편은 $3$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times3\\times4=6$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $x$절편은 $3$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times3\\times4=6$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "절편과 넓이",
+        "typeTag": "절편과 넓이 · 실전 적용",
         "skills": [
           "절편",
-          "삼각형 넓이"
+          "삼각형 넓이",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "linear"

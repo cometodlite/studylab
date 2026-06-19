@@ -6,16 +6,17 @@
   "unit": "삼각비",
   "difficulty": "심화",
   "ebsStyle": {
-    "version": 1,
+    "version": 2,
     "role": "조건 결합",
     "expectedSteps": 4,
+    "typeVariantCount": 5,
     "family": "trigonometry",
     "generatedAt": "2026-06-19"
   },
   "questions": [
     {
       "id": 1,
-      "question": "EBS 삼각비 조건 결합 01형. $\\sin A=\\frac{48}{102}$, $\\cos A=\\frac{90}{102}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 핵심 계산 01형. $\\sin A=\\frac{48}{102}$, $\\cos A=\\frac{90}{102}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$48$",
         "$90$",
@@ -28,12 +29,15 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 핵심 계산",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -41,7 +45,7 @@
     },
     {
       "id": 2,
-      "question": "EBS 삼각비 조건 결합 02형. $\\sin A=\\frac{42}{150}$, $\\cos A=\\frac{144}{150}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 조건 해석 02형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\sin A=\\frac{42}{150}$, $\\cos A=\\frac{144}{150}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$42$",
         "$144$",
@@ -50,16 +54,19 @@
         "$186$"
       ],
       "answer": 4,
-      "explanation": "$c(\\frac{42}{150}+\\frac{144}{150})=42+144=186$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $c(\\frac{42}{150}+\\frac{144}{150})=42+144=186$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 조건 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -67,7 +74,7 @@
     },
     {
       "id": 3,
-      "question": "EBS 삼각비 조건 결합 03형. $\\sin A=\\frac{21}{35}$, $\\cos A=\\frac{28}{35}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 역추론 03형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\sin A=\\frac{21}{35}$, $\\cos A=\\frac{28}{35}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$21$",
         "$49$",
@@ -76,16 +83,19 @@
         "$50$"
       ],
       "answer": 1,
-      "explanation": "$c(\\frac{21}{35}+\\frac{28}{35})=21+28=49$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $c(\\frac{21}{35}+\\frac{28}{35})=21+28=49$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 역추론",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -93,7 +103,7 @@
     },
     {
       "id": 4,
-      "question": "EBS 삼각비 조건 결합 04형. $\\sin A=\\frac{35}{91}$, $\\cos A=\\frac{84}{91}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 보기 판별 04형. 보기 중 조건을 만족하는 값을 고르시오. $\\sin A=\\frac{35}{91}$, $\\cos A=\\frac{84}{91}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$35$",
         "$84$",
@@ -102,16 +112,19 @@
         "$120$"
       ],
       "answer": 3,
-      "explanation": "$c(\\frac{35}{91}+\\frac{84}{91})=35+84=119$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $c(\\frac{35}{91}+\\frac{84}{91})=35+84=119$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 보기 판별",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -119,7 +132,7 @@
     },
     {
       "id": 5,
-      "question": "EBS 삼각비 조건 결합 05형. $\\sin A=\\frac{56}{119}$, $\\cos A=\\frac{105}{119}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 실전 적용 05형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\sin A=\\frac{56}{119}$, $\\cos A=\\frac{105}{119}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$161$",
         "$56$",
@@ -128,16 +141,19 @@
         "$162$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{56}{119}+\\frac{105}{119})=56+105=161$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $c(\\frac{56}{119}+\\frac{105}{119})=56+105=161$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 실전 적용",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -145,7 +161,7 @@
     },
     {
       "id": 6,
-      "question": "EBS 삼각비 조건 결합 06형. $\\sin A=\\frac{49}{175}$, $\\cos A=\\frac{168}{175}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 핵심 계산 06형. $\\sin A=\\frac{49}{175}$, $\\cos A=\\frac{168}{175}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$49$",
         "$168$",
@@ -158,12 +174,15 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 핵심 계산",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -171,7 +190,7 @@
     },
     {
       "id": 7,
-      "question": "EBS 삼각비 조건 결합 07형. $\\sin A=\\frac{24}{40}$, $\\cos A=\\frac{32}{40}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 조건 해석 07형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\sin A=\\frac{24}{40}$, $\\cos A=\\frac{32}{40}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$24$",
         "$32$",
@@ -180,16 +199,19 @@
         "$56$"
       ],
       "answer": 4,
-      "explanation": "$c(\\frac{24}{40}+\\frac{32}{40})=24+32=56$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $c(\\frac{24}{40}+\\frac{32}{40})=24+32=56$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 조건 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -197,7 +219,7 @@
     },
     {
       "id": 8,
-      "question": "EBS 삼각비 조건 결합 08형. $\\sin A=\\frac{40}{104}$, $\\cos A=\\frac{96}{104}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 역추론 08형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\sin A=\\frac{40}{104}$, $\\cos A=\\frac{96}{104}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$40$",
         "$136$",
@@ -206,16 +228,19 @@
         "$137$"
       ],
       "answer": 1,
-      "explanation": "$c(\\frac{40}{104}+\\frac{96}{104})=40+96=136$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $c(\\frac{40}{104}+\\frac{96}{104})=40+96=136$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 역추론",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -223,7 +248,7 @@
     },
     {
       "id": 9,
-      "question": "EBS 삼각비 조건 결합 09형. $\\sin A=\\frac{64}{136}$, $\\cos A=\\frac{120}{136}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 보기 판별 09형. 보기 중 조건을 만족하는 값을 고르시오. $\\sin A=\\frac{64}{136}$, $\\cos A=\\frac{120}{136}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$64$",
         "$120$",
@@ -232,16 +257,19 @@
         "$185$"
       ],
       "answer": 3,
-      "explanation": "$c(\\frac{64}{136}+\\frac{120}{136})=64+120=184$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $c(\\frac{64}{136}+\\frac{120}{136})=64+120=184$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 보기 판별",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -249,7 +277,7 @@
     },
     {
       "id": 10,
-      "question": "EBS 삼각비 조건 결합 10형. $\\sin A=\\frac{56}{200}$, $\\cos A=\\frac{192}{200}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 실전 적용 10형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\sin A=\\frac{56}{200}$, $\\cos A=\\frac{192}{200}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$248$",
         "$56$",
@@ -258,16 +286,19 @@
         "$249$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{56}{200}+\\frac{192}{200})=56+192=248$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $c(\\frac{56}{200}+\\frac{192}{200})=56+192=248$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 실전 적용",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -275,7 +306,7 @@
     },
     {
       "id": 11,
-      "question": "EBS 삼각비 조건 결합 11형. $\\sin A=\\frac{27}{45}$, $\\cos A=\\frac{36}{45}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 핵심 계산 11형. $\\sin A=\\frac{27}{45}$, $\\cos A=\\frac{36}{45}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$27$",
         "$36$",
@@ -288,12 +319,15 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 핵심 계산",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -301,7 +335,7 @@
     },
     {
       "id": 12,
-      "question": "EBS 삼각비 조건 결합 12형. $\\sin A=\\frac{45}{117}$, $\\cos A=\\frac{108}{117}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 조건 해석 12형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\sin A=\\frac{45}{117}$, $\\cos A=\\frac{108}{117}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$45$",
         "$108$",
@@ -310,16 +344,19 @@
         "$153$"
       ],
       "answer": 4,
-      "explanation": "$c(\\frac{45}{117}+\\frac{108}{117})=45+108=153$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $c(\\frac{45}{117}+\\frac{108}{117})=45+108=153$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 조건 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -327,7 +364,7 @@
     },
     {
       "id": 13,
-      "question": "EBS 삼각비 조건 결합 13형. $\\sin A=\\frac{72}{153}$, $\\cos A=\\frac{135}{153}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 역추론 13형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\sin A=\\frac{72}{153}$, $\\cos A=\\frac{135}{153}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$72$",
         "$207$",
@@ -336,16 +373,19 @@
         "$208$"
       ],
       "answer": 1,
-      "explanation": "$c(\\frac{72}{153}+\\frac{135}{153})=72+135=207$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $c(\\frac{72}{153}+\\frac{135}{153})=72+135=207$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 역추론",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -353,7 +393,7 @@
     },
     {
       "id": 14,
-      "question": "EBS 삼각비 조건 결합 14형. $\\sin A=\\frac{63}{225}$, $\\cos A=\\frac{216}{225}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 보기 판별 14형. 보기 중 조건을 만족하는 값을 고르시오. $\\sin A=\\frac{63}{225}$, $\\cos A=\\frac{216}{225}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$63$",
         "$216$",
@@ -362,16 +402,19 @@
         "$280$"
       ],
       "answer": 3,
-      "explanation": "$c(\\frac{63}{225}+\\frac{216}{225})=63+216=279$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $c(\\frac{63}{225}+\\frac{216}{225})=63+216=279$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 보기 판별",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -379,7 +422,7 @@
     },
     {
       "id": 15,
-      "question": "EBS 삼각비 조건 결합 15형. $\\sin A=\\frac{30}{50}$, $\\cos A=\\frac{40}{50}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 실전 적용 15형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\sin A=\\frac{30}{50}$, $\\cos A=\\frac{40}{50}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$70$",
         "$30$",
@@ -388,16 +431,19 @@
         "$71$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{30}{50}+\\frac{40}{50})=30+40=70$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $c(\\frac{30}{50}+\\frac{40}{50})=30+40=70$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 실전 적용",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -405,7 +451,7 @@
     },
     {
       "id": 16,
-      "question": "EBS 삼각비 조건 결합 16형. $\\sin A=\\frac{50}{130}$, $\\cos A=\\frac{120}{130}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 핵심 계산 16형. $\\sin A=\\frac{50}{130}$, $\\cos A=\\frac{120}{130}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$50$",
         "$120$",
@@ -418,12 +464,15 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 핵심 계산",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -431,7 +480,7 @@
     },
     {
       "id": 17,
-      "question": "EBS 삼각비 조건 결합 17형. $\\sin A=\\frac{80}{170}$, $\\cos A=\\frac{150}{170}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 조건 해석 17형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\sin A=\\frac{80}{170}$, $\\cos A=\\frac{150}{170}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$80$",
         "$150$",
@@ -440,16 +489,19 @@
         "$230$"
       ],
       "answer": 4,
-      "explanation": "$c(\\frac{80}{170}+\\frac{150}{170})=80+150=230$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $c(\\frac{80}{170}+\\frac{150}{170})=80+150=230$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 조건 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -457,7 +509,7 @@
     },
     {
       "id": 18,
-      "question": "EBS 삼각비 조건 결합 18형. $\\sin A=\\frac{70}{250}$, $\\cos A=\\frac{240}{250}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 역추론 18형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\sin A=\\frac{70}{250}$, $\\cos A=\\frac{240}{250}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$70$",
         "$310$",
@@ -466,16 +518,19 @@
         "$311$"
       ],
       "answer": 1,
-      "explanation": "$c(\\frac{70}{250}+\\frac{240}{250})=70+240=310$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $c(\\frac{70}{250}+\\frac{240}{250})=70+240=310$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 역추론",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -483,7 +538,7 @@
     },
     {
       "id": 19,
-      "question": "EBS 삼각비 조건 결합 19형. $\\sin A=\\frac{33}{55}$, $\\cos A=\\frac{44}{55}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 보기 판별 19형. 보기 중 조건을 만족하는 값을 고르시오. $\\sin A=\\frac{33}{55}$, $\\cos A=\\frac{44}{55}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$33$",
         "$44$",
@@ -492,16 +547,19 @@
         "$78$"
       ],
       "answer": 3,
-      "explanation": "$c(\\frac{33}{55}+\\frac{44}{55})=33+44=77$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $c(\\frac{33}{55}+\\frac{44}{55})=33+44=77$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 보기 판별",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -509,7 +567,7 @@
     },
     {
       "id": 20,
-      "question": "EBS 삼각비 조건 결합 20형. $\\sin A=\\frac{55}{143}$, $\\cos A=\\frac{132}{143}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 실전 적용 20형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\sin A=\\frac{55}{143}$, $\\cos A=\\frac{132}{143}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$187$",
         "$55$",
@@ -518,16 +576,19 @@
         "$188$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{55}{143}+\\frac{132}{143})=55+132=187$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $c(\\frac{55}{143}+\\frac{132}{143})=55+132=187$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 실전 적용",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -535,7 +596,7 @@
     },
     {
       "id": 21,
-      "question": "EBS 삼각비 조건 결합 21형. $\\sin A=\\frac{88}{187}$, $\\cos A=\\frac{165}{187}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 핵심 계산 21형. $\\sin A=\\frac{88}{187}$, $\\cos A=\\frac{165}{187}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$88$",
         "$165$",
@@ -548,12 +609,15 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 핵심 계산",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -561,7 +625,7 @@
     },
     {
       "id": 22,
-      "question": "EBS 삼각비 조건 결합 22형. $\\sin A=\\frac{77}{275}$, $\\cos A=\\frac{264}{275}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 조건 해석 22형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\sin A=\\frac{77}{275}$, $\\cos A=\\frac{264}{275}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$77$",
         "$264$",
@@ -570,16 +634,19 @@
         "$341$"
       ],
       "answer": 4,
-      "explanation": "$c(\\frac{77}{275}+\\frac{264}{275})=77+264=341$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $c(\\frac{77}{275}+\\frac{264}{275})=77+264=341$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 조건 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -587,7 +654,7 @@
     },
     {
       "id": 23,
-      "question": "EBS 삼각비 조건 결합 23형. $\\sin A=\\frac{36}{60}$, $\\cos A=\\frac{48}{60}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 역추론 23형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\sin A=\\frac{36}{60}$, $\\cos A=\\frac{48}{60}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$36$",
         "$84$",
@@ -596,16 +663,19 @@
         "$85$"
       ],
       "answer": 1,
-      "explanation": "$c(\\frac{36}{60}+\\frac{48}{60})=36+48=84$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $c(\\frac{36}{60}+\\frac{48}{60})=36+48=84$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 역추론",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -613,7 +683,7 @@
     },
     {
       "id": 24,
-      "question": "EBS 삼각비 조건 결합 24형. $\\sin A=\\frac{60}{156}$, $\\cos A=\\frac{144}{156}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 보기 판별 24형. 보기 중 조건을 만족하는 값을 고르시오. $\\sin A=\\frac{60}{156}$, $\\cos A=\\frac{144}{156}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$60$",
         "$144$",
@@ -622,16 +692,19 @@
         "$205$"
       ],
       "answer": 3,
-      "explanation": "$c(\\frac{60}{156}+\\frac{144}{156})=60+144=204$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $c(\\frac{60}{156}+\\frac{144}{156})=60+144=204$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 보기 판별",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -639,7 +712,7 @@
     },
     {
       "id": 25,
-      "question": "EBS 삼각비 조건 결합 25형. $\\sin A=\\frac{96}{204}$, $\\cos A=\\frac{180}{204}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 실전 적용 25형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\sin A=\\frac{96}{204}$, $\\cos A=\\frac{180}{204}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$276$",
         "$96$",
@@ -648,16 +721,19 @@
         "$277$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{96}{204}+\\frac{180}{204})=96+180=276$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $c(\\frac{96}{204}+\\frac{180}{204})=96+180=276$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 실전 적용",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -665,7 +741,7 @@
     },
     {
       "id": 26,
-      "question": "EBS 삼각비 조건 결합 26형. $\\sin A=\\frac{84}{300}$, $\\cos A=\\frac{288}{300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 핵심 계산 26형. $\\sin A=\\frac{84}{300}$, $\\cos A=\\frac{288}{300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$84$",
         "$288$",
@@ -678,12 +754,15 @@
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 핵심 계산",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -691,7 +770,7 @@
     },
     {
       "id": 27,
-      "question": "EBS 삼각비 조건 결합 27형. $\\sin A=\\frac{39}{65}$, $\\cos A=\\frac{52}{65}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 조건 해석 27형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. $\\sin A=\\frac{39}{65}$, $\\cos A=\\frac{52}{65}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$39$",
         "$52$",
@@ -700,16 +779,19 @@
         "$91$"
       ],
       "answer": 4,
-      "explanation": "$c(\\frac{39}{65}+\\frac{52}{65})=39+52=91$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. $c(\\frac{39}{65}+\\frac{52}{65})=39+52=91$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 조건 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -717,7 +799,7 @@
     },
     {
       "id": 28,
-      "question": "EBS 삼각비 조건 결합 28형. $\\sin A=\\frac{65}{169}$, $\\cos A=\\frac{156}{169}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 역추론 28형. 구하려는 값을 거꾸로 추적하여 해결하시오. $\\sin A=\\frac{65}{169}$, $\\cos A=\\frac{156}{169}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$65$",
         "$221$",
@@ -726,16 +808,19 @@
         "$222$"
       ],
       "answer": 1,
-      "explanation": "$c(\\frac{65}{169}+\\frac{156}{169})=65+156=221$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. $c(\\frac{65}{169}+\\frac{156}{169})=65+156=221$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 역추론",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -743,7 +828,7 @@
     },
     {
       "id": 29,
-      "question": "EBS 삼각비 조건 결합 29형. $\\sin A=\\frac{104}{221}$, $\\cos A=\\frac{195}{221}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 보기 판별 29형. 보기 중 조건을 만족하는 값을 고르시오. $\\sin A=\\frac{104}{221}$, $\\cos A=\\frac{195}{221}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$104$",
         "$195$",
@@ -752,16 +837,19 @@
         "$300$"
       ],
       "answer": 3,
-      "explanation": "$c(\\frac{104}{221}+\\frac{195}{221})=104+195=299$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. $c(\\frac{104}{221}+\\frac{195}{221})=104+195=299$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 보기 판별",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -769,7 +857,7 @@
     },
     {
       "id": 30,
-      "question": "EBS 삼각비 조건 결합 30형. $\\sin A=\\frac{91}{325}$, $\\cos A=\\frac{312}{325}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 · 삼각비 복합 계산 · 실전 적용 30형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. $\\sin A=\\frac{91}{325}$, $\\cos A=\\frac{312}{325}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$403$",
         "$91$",
@@ -778,16 +866,19 @@
         "$404$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{91}{325}+\\frac{312}{325})=91+312=403$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. $c(\\frac{91}{325}+\\frac{312}{325})=91+312=403$이다.",
       "ebs": {
         "role": "조건 결합",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산",
+        "typeTag": "삼각비 복합 계산 · 실전 적용",
         "skills": [
           "sin",
           "cos",
-          "비례식"
+          "비례식",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"

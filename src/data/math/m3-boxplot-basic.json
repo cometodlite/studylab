@@ -6,16 +6,17 @@
   "unit": "통계",
   "difficulty": "기본",
   "ebsStyle": {
-    "version": 1,
+    "version": 2,
     "role": "개념 확인",
     "expectedSteps": 1,
+    "typeVariantCount": 5,
     "family": "statistics",
     "generatedAt": "2026-06-19"
   },
   "questions": [
     {
       "id": 1,
-      "question": "EBS 상자그림과 산점도 개념 확인 01형. 자료 $20, 22, 24$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 핵심 계산 01형. 자료 $20, 22, 24$의 평균은?",
       "choices": [
         "$20$",
         "$21$",
@@ -28,10 +29,13 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 핵심 계산",
         "skills": [
-          "평균"
+          "평균",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -39,7 +43,7 @@
     },
     {
       "id": 2,
-      "question": "EBS 상자그림과 산점도 개념 확인 02형. 자료 $21, 23, 25$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 조건 해석 02형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. 자료 $21, 23, 25$의 평균은?",
       "choices": [
         "$21$",
         "$23$",
@@ -48,14 +52,17 @@
         "$25$"
       ],
       "answer": 1,
-      "explanation": "평균은 $\\frac{21+23+25}{3}=23$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 평균은 $\\frac{21+23+25}{3}=23$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 조건 해석",
         "skills": [
-          "평균"
+          "평균",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -63,7 +70,7 @@
     },
     {
       "id": 3,
-      "question": "EBS 상자그림과 산점도 개념 확인 03형. 자료 $22, 24, 26$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 역추론 03형. 구하려는 값을 거꾸로 추적하여 해결하시오. 자료 $22, 24, 26$의 평균은?",
       "choices": [
         "$22$",
         "$23$",
@@ -72,14 +79,17 @@
         "$26$"
       ],
       "answer": 3,
-      "explanation": "평균은 $\\frac{22+24+26}{3}=24$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 평균은 $\\frac{22+24+26}{3}=24$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 역추론",
         "skills": [
-          "평균"
+          "평균",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -87,7 +97,7 @@
     },
     {
       "id": 4,
-      "question": "EBS 상자그림과 산점도 개념 확인 04형. 자료 $23, 25, 27$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 보기 판별 04형. 보기 중 조건을 만족하는 값을 고르시오. 자료 $23, 25, 27$의 평균은?",
       "choices": [
         "$25$",
         "$23$",
@@ -96,14 +106,17 @@
         "$27$"
       ],
       "answer": 0,
-      "explanation": "평균은 $\\frac{23+25+27}{3}=25$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 평균은 $\\frac{23+25+27}{3}=25$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 보기 판별",
         "skills": [
-          "평균"
+          "평균",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -111,7 +124,7 @@
     },
     {
       "id": 5,
-      "question": "EBS 상자그림과 산점도 개념 확인 05형. 자료 $24, 26, 28$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 실전 적용 05형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. 자료 $24, 26, 28$의 평균은?",
       "choices": [
         "$24$",
         "$25$",
@@ -120,14 +133,17 @@
         "$28$"
       ],
       "answer": 2,
-      "explanation": "평균은 $\\frac{24+26+28}{3}=26$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 평균은 $\\frac{24+26+28}{3}=26$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 실전 적용",
         "skills": [
-          "평균"
+          "평균",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -135,7 +151,7 @@
     },
     {
       "id": 6,
-      "question": "EBS 상자그림과 산점도 개념 확인 06형. 자료 $25, 27, 29$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 핵심 계산 06형. 자료 $25, 27, 29$의 평균은?",
       "choices": [
         "$25$",
         "$26$",
@@ -148,10 +164,13 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 핵심 계산",
         "skills": [
-          "평균"
+          "평균",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -159,7 +178,7 @@
     },
     {
       "id": 7,
-      "question": "EBS 상자그림과 산점도 개념 확인 07형. 자료 $26, 28, 30$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 조건 해석 07형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. 자료 $26, 28, 30$의 평균은?",
       "choices": [
         "$26$",
         "$28$",
@@ -168,14 +187,17 @@
         "$30$"
       ],
       "answer": 1,
-      "explanation": "평균은 $\\frac{26+28+30}{3}=28$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 평균은 $\\frac{26+28+30}{3}=28$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 조건 해석",
         "skills": [
-          "평균"
+          "평균",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -183,7 +205,7 @@
     },
     {
       "id": 8,
-      "question": "EBS 상자그림과 산점도 개념 확인 08형. 자료 $27, 29, 31$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 역추론 08형. 구하려는 값을 거꾸로 추적하여 해결하시오. 자료 $27, 29, 31$의 평균은?",
       "choices": [
         "$27$",
         "$28$",
@@ -192,14 +214,17 @@
         "$31$"
       ],
       "answer": 3,
-      "explanation": "평균은 $\\frac{27+29+31}{3}=29$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 평균은 $\\frac{27+29+31}{3}=29$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 역추론",
         "skills": [
-          "평균"
+          "평균",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -207,7 +232,7 @@
     },
     {
       "id": 9,
-      "question": "EBS 상자그림과 산점도 개념 확인 09형. 자료 $28, 30, 32$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 보기 판별 09형. 보기 중 조건을 만족하는 값을 고르시오. 자료 $28, 30, 32$의 평균은?",
       "choices": [
         "$30$",
         "$28$",
@@ -216,14 +241,17 @@
         "$32$"
       ],
       "answer": 0,
-      "explanation": "평균은 $\\frac{28+30+32}{3}=30$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 평균은 $\\frac{28+30+32}{3}=30$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 보기 판별",
         "skills": [
-          "평균"
+          "평균",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -231,7 +259,7 @@
     },
     {
       "id": 10,
-      "question": "EBS 상자그림과 산점도 개념 확인 10형. 자료 $29, 31, 33$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 실전 적용 10형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. 자료 $29, 31, 33$의 평균은?",
       "choices": [
         "$29$",
         "$30$",
@@ -240,14 +268,17 @@
         "$33$"
       ],
       "answer": 2,
-      "explanation": "평균은 $\\frac{29+31+33}{3}=31$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 평균은 $\\frac{29+31+33}{3}=31$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 실전 적용",
         "skills": [
-          "평균"
+          "평균",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -255,7 +286,7 @@
     },
     {
       "id": 11,
-      "question": "EBS 상자그림과 산점도 개념 확인 11형. 자료 $30, 32, 34$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 핵심 계산 11형. 자료 $30, 32, 34$의 평균은?",
       "choices": [
         "$30$",
         "$31$",
@@ -268,10 +299,13 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 핵심 계산",
         "skills": [
-          "평균"
+          "평균",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -279,7 +313,7 @@
     },
     {
       "id": 12,
-      "question": "EBS 상자그림과 산점도 개념 확인 12형. 자료 $31, 33, 35$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 조건 해석 12형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. 자료 $31, 33, 35$의 평균은?",
       "choices": [
         "$31$",
         "$33$",
@@ -288,14 +322,17 @@
         "$35$"
       ],
       "answer": 1,
-      "explanation": "평균은 $\\frac{31+33+35}{3}=33$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 평균은 $\\frac{31+33+35}{3}=33$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 조건 해석",
         "skills": [
-          "평균"
+          "평균",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -303,7 +340,7 @@
     },
     {
       "id": 13,
-      "question": "EBS 상자그림과 산점도 개념 확인 13형. 자료 $32, 34, 36$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 역추론 13형. 구하려는 값을 거꾸로 추적하여 해결하시오. 자료 $32, 34, 36$의 평균은?",
       "choices": [
         "$32$",
         "$33$",
@@ -312,14 +349,17 @@
         "$36$"
       ],
       "answer": 3,
-      "explanation": "평균은 $\\frac{32+34+36}{3}=34$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 평균은 $\\frac{32+34+36}{3}=34$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 역추론",
         "skills": [
-          "평균"
+          "평균",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -327,7 +367,7 @@
     },
     {
       "id": 14,
-      "question": "EBS 상자그림과 산점도 개념 확인 14형. 자료 $33, 35, 37$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 보기 판별 14형. 보기 중 조건을 만족하는 값을 고르시오. 자료 $33, 35, 37$의 평균은?",
       "choices": [
         "$35$",
         "$33$",
@@ -336,14 +376,17 @@
         "$37$"
       ],
       "answer": 0,
-      "explanation": "평균은 $\\frac{33+35+37}{3}=35$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 평균은 $\\frac{33+35+37}{3}=35$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 보기 판별",
         "skills": [
-          "평균"
+          "평균",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -351,7 +394,7 @@
     },
     {
       "id": 15,
-      "question": "EBS 상자그림과 산점도 개념 확인 15형. 자료 $34, 36, 38$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 실전 적용 15형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. 자료 $34, 36, 38$의 평균은?",
       "choices": [
         "$34$",
         "$35$",
@@ -360,14 +403,17 @@
         "$38$"
       ],
       "answer": 2,
-      "explanation": "평균은 $\\frac{34+36+38}{3}=36$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 평균은 $\\frac{34+36+38}{3}=36$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 실전 적용",
         "skills": [
-          "평균"
+          "평균",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -375,7 +421,7 @@
     },
     {
       "id": 16,
-      "question": "EBS 상자그림과 산점도 개념 확인 16형. 자료 $35, 37, 39$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 핵심 계산 16형. 자료 $35, 37, 39$의 평균은?",
       "choices": [
         "$35$",
         "$36$",
@@ -388,10 +434,13 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 핵심 계산",
         "skills": [
-          "평균"
+          "평균",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -399,7 +448,7 @@
     },
     {
       "id": 17,
-      "question": "EBS 상자그림과 산점도 개념 확인 17형. 자료 $36, 38, 40$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 조건 해석 17형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. 자료 $36, 38, 40$의 평균은?",
       "choices": [
         "$36$",
         "$38$",
@@ -408,14 +457,17 @@
         "$40$"
       ],
       "answer": 1,
-      "explanation": "평균은 $\\frac{36+38+40}{3}=38$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 평균은 $\\frac{36+38+40}{3}=38$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 조건 해석",
         "skills": [
-          "평균"
+          "평균",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -423,7 +475,7 @@
     },
     {
       "id": 18,
-      "question": "EBS 상자그림과 산점도 개념 확인 18형. 자료 $37, 39, 41$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 역추론 18형. 구하려는 값을 거꾸로 추적하여 해결하시오. 자료 $37, 39, 41$의 평균은?",
       "choices": [
         "$37$",
         "$38$",
@@ -432,14 +484,17 @@
         "$41$"
       ],
       "answer": 3,
-      "explanation": "평균은 $\\frac{37+39+41}{3}=39$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 평균은 $\\frac{37+39+41}{3}=39$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 역추론",
         "skills": [
-          "평균"
+          "평균",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -447,7 +502,7 @@
     },
     {
       "id": 19,
-      "question": "EBS 상자그림과 산점도 개념 확인 19형. 자료 $38, 40, 42$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 보기 판별 19형. 보기 중 조건을 만족하는 값을 고르시오. 자료 $38, 40, 42$의 평균은?",
       "choices": [
         "$40$",
         "$38$",
@@ -456,14 +511,17 @@
         "$42$"
       ],
       "answer": 0,
-      "explanation": "평균은 $\\frac{38+40+42}{3}=40$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 평균은 $\\frac{38+40+42}{3}=40$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 보기 판별",
         "skills": [
-          "평균"
+          "평균",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -471,7 +529,7 @@
     },
     {
       "id": 20,
-      "question": "EBS 상자그림과 산점도 개념 확인 20형. 자료 $39, 41, 43$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 실전 적용 20형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. 자료 $39, 41, 43$의 평균은?",
       "choices": [
         "$39$",
         "$40$",
@@ -480,14 +538,17 @@
         "$43$"
       ],
       "answer": 2,
-      "explanation": "평균은 $\\frac{39+41+43}{3}=41$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 평균은 $\\frac{39+41+43}{3}=41$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 실전 적용",
         "skills": [
-          "평균"
+          "평균",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -495,7 +556,7 @@
     },
     {
       "id": 21,
-      "question": "EBS 상자그림과 산점도 개념 확인 21형. 자료 $40, 42, 44$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 핵심 계산 21형. 자료 $40, 42, 44$의 평균은?",
       "choices": [
         "$40$",
         "$41$",
@@ -508,10 +569,13 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 핵심 계산",
         "skills": [
-          "평균"
+          "평균",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -519,7 +583,7 @@
     },
     {
       "id": 22,
-      "question": "EBS 상자그림과 산점도 개념 확인 22형. 자료 $41, 43, 45$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 조건 해석 22형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. 자료 $41, 43, 45$의 평균은?",
       "choices": [
         "$41$",
         "$43$",
@@ -528,14 +592,17 @@
         "$45$"
       ],
       "answer": 1,
-      "explanation": "평균은 $\\frac{41+43+45}{3}=43$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 평균은 $\\frac{41+43+45}{3}=43$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 조건 해석",
         "skills": [
-          "평균"
+          "평균",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -543,7 +610,7 @@
     },
     {
       "id": 23,
-      "question": "EBS 상자그림과 산점도 개념 확인 23형. 자료 $42, 44, 46$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 역추론 23형. 구하려는 값을 거꾸로 추적하여 해결하시오. 자료 $42, 44, 46$의 평균은?",
       "choices": [
         "$42$",
         "$43$",
@@ -552,14 +619,17 @@
         "$46$"
       ],
       "answer": 3,
-      "explanation": "평균은 $\\frac{42+44+46}{3}=44$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 평균은 $\\frac{42+44+46}{3}=44$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 역추론",
         "skills": [
-          "평균"
+          "평균",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -567,7 +637,7 @@
     },
     {
       "id": 24,
-      "question": "EBS 상자그림과 산점도 개념 확인 24형. 자료 $43, 45, 47$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 보기 판별 24형. 보기 중 조건을 만족하는 값을 고르시오. 자료 $43, 45, 47$의 평균은?",
       "choices": [
         "$45$",
         "$43$",
@@ -576,14 +646,17 @@
         "$47$"
       ],
       "answer": 0,
-      "explanation": "평균은 $\\frac{43+45+47}{3}=45$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 평균은 $\\frac{43+45+47}{3}=45$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 보기 판별",
         "skills": [
-          "평균"
+          "평균",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -591,7 +664,7 @@
     },
     {
       "id": 25,
-      "question": "EBS 상자그림과 산점도 개념 확인 25형. 자료 $44, 46, 48$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 실전 적용 25형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. 자료 $44, 46, 48$의 평균은?",
       "choices": [
         "$44$",
         "$45$",
@@ -600,14 +673,17 @@
         "$48$"
       ],
       "answer": 2,
-      "explanation": "평균은 $\\frac{44+46+48}{3}=46$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 평균은 $\\frac{44+46+48}{3}=46$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 실전 적용",
         "skills": [
-          "평균"
+          "평균",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -615,7 +691,7 @@
     },
     {
       "id": 26,
-      "question": "EBS 상자그림과 산점도 개념 확인 26형. 자료 $45, 47, 49$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 핵심 계산 26형. 자료 $45, 47, 49$의 평균은?",
       "choices": [
         "$45$",
         "$46$",
@@ -628,10 +704,13 @@
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 핵심 계산",
         "skills": [
-          "평균"
+          "평균",
+          "핵심 계산"
         ],
+        "typeVariant": "핵심 계산",
+        "typeVariantId": 1,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -639,7 +718,7 @@
     },
     {
       "id": 27,
-      "question": "EBS 상자그림과 산점도 개념 확인 27형. 자료 $46, 48, 50$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 조건 해석 27형. 조건을 식으로 옮기는 과정을 먼저 생각하시오. 자료 $46, 48, 50$의 평균은?",
       "choices": [
         "$46$",
         "$48$",
@@ -648,14 +727,17 @@
         "$50$"
       ],
       "answer": 1,
-      "explanation": "평균은 $\\frac{46+48+50}{3}=48$이다.",
+      "explanation": "조건을 수식으로 정리한 뒤 계산한다. 평균은 $\\frac{46+48+50}{3}=48$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 조건 해석",
         "skills": [
-          "평균"
+          "평균",
+          "조건 해석"
         ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 2,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -663,7 +745,7 @@
     },
     {
       "id": 28,
-      "question": "EBS 상자그림과 산점도 개념 확인 28형. 자료 $47, 49, 51$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 역추론 28형. 구하려는 값을 거꾸로 추적하여 해결하시오. 자료 $47, 49, 51$의 평균은?",
       "choices": [
         "$47$",
         "$48$",
@@ -672,14 +754,17 @@
         "$51$"
       ],
       "answer": 3,
-      "explanation": "평균은 $\\frac{47+49+51}{3}=49$이다.",
+      "explanation": "목표값에서 필요한 중간 조건을 거꾸로 확인한다. 평균은 $\\frac{47+49+51}{3}=49$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 역추론",
         "skills": [
-          "평균"
+          "평균",
+          "역추론"
         ],
+        "typeVariant": "역추론",
+        "typeVariantId": 3,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -687,7 +772,7 @@
     },
     {
       "id": 29,
-      "question": "EBS 상자그림과 산점도 개념 확인 29형. 자료 $48, 50, 52$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 보기 판별 29형. 보기 중 조건을 만족하는 값을 고르시오. 자료 $48, 50, 52$의 평균은?",
       "choices": [
         "$50$",
         "$48$",
@@ -696,14 +781,17 @@
         "$52$"
       ],
       "answer": 0,
-      "explanation": "평균은 $\\frac{48+50+52}{3}=50$이다.",
+      "explanation": "각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. 평균은 $\\frac{48+50+52}{3}=50$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 보기 판별",
         "skills": [
-          "평균"
+          "평균",
+          "보기 판별"
         ],
+        "typeVariant": "보기 판별",
+        "typeVariantId": 4,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
@@ -711,7 +799,7 @@
     },
     {
       "id": 30,
-      "question": "EBS 상자그림과 산점도 개념 확인 30형. 자료 $49, 51, 53$의 평균은?",
+      "question": "EBS 상자그림과 산점도 개념 확인 · 평균 · 실전 적용 30형. 실전 문항처럼 필요한 개념을 연결하여 해결하시오. 자료 $49, 51, 53$의 평균은?",
       "choices": [
         "$49$",
         "$50$",
@@ -720,14 +808,17 @@
         "$53$"
       ],
       "answer": 2,
-      "explanation": "평균은 $\\frac{49+51+53}{3}=51$이다.",
+      "explanation": "핵심 개념을 적용한 뒤 계산 결과를 확인한다. 평균은 $\\frac{49+51+53}{3}=51$이다.",
       "ebs": {
         "role": "개념 확인",
         "steps": 1,
-        "typeTag": "평균",
+        "typeTag": "평균 · 실전 적용",
         "skills": [
-          "평균"
+          "평균",
+          "실전 적용"
         ],
+        "typeVariant": "실전 적용",
+        "typeVariantId": 5,
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "기본",
         "family": "statistics"
