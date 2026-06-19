@@ -1,5 +1,6 @@
 import { AchievementId, UserAchievement, createAchievement } from '@/lib/achievements';
 import { fsBatch, fsGet, WriteOp } from '@/lib/firestore-rest';
+import type { GoalAlert } from '@/lib/notifications';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 const STREAK_ACHIEVEMENTS: Array<{ days: number; id: AchievementId }> = [
@@ -22,6 +23,7 @@ export type LearningStreakResult = {
   alreadyUpdatedToday: boolean;
   achievementsUnlocked: UserAchievement[];
   achievementPointsEarned: number;
+  goalAlerts: GoalAlert[];
 };
 
 function genId() {
@@ -49,10 +51,26 @@ function toPositiveInteger(value: unknown) {
   return typeof value === 'number' && Number.isFinite(value) && value > 0 ? Math.floor(value) : 0;
 }
 
+function buildStreakGoalAlerts(streakDays: number, existingAchievements: UserAchievement[]): GoalAlert[] {
+  const existingIds = new Set(existingAchievements.map(achievement => achievement.id));
+  const next = STREAK_ACHIEVEMENTS.find(achievement => streakDays === achievement.days - 1 && !existingIds.has(achievement.id));
+  if (!next) return [];
+  return [
+    {
+      id: `streak-near-${next.id}`,
+      emoji: '🔥',
+      title: `${next.days}일 연속 배지까지 하루 남았어요`,
+      message: '내일 한 번만 더 시험/문제를 풀면 바로 달성할 수 있습니다.',
+      href: '/exam',
+    },
+  ];
+}
+
 export async function updateLearningStreak(uid: string, token: string, now = new Date()): Promise<LearningStreakResult> {
   const today = dateKST(now);
   const yesterday = dateKST(new Date(now.getTime() - DAY_MS));
   const userDoc = await fsGet(`users/${uid}`, token) as UserStreakDoc | null;
+  const existingAchievements = normalizeAchievements(userDoc?.achievements);
   const previousDays = toPositiveInteger(userDoc?.learningStreakDays);
   const previousBest = toPositiveInteger(userDoc?.learningStreakBest);
   const previousDate = typeof userDoc?.learningStreakLastDate === 'string' ? userDoc.learningStreakLastDate : null;
@@ -65,12 +83,12 @@ export async function updateLearningStreak(uid: string, token: string, now = new
       alreadyUpdatedToday: true,
       achievementsUnlocked: [],
       achievementPointsEarned: 0,
+      goalAlerts: buildStreakGoalAlerts(previousDays, existingAchievements),
     };
   }
 
   const streakDays = previousDate === yesterday ? previousDays + 1 : 1;
   const bestStreak = Math.max(previousBest, streakDays);
-  const existingAchievements = normalizeAchievements(userDoc?.achievements);
   const existingIds = new Set(existingAchievements.map(achievement => achievement.id));
   const achievementsUnlocked = STREAK_ACHIEVEMENTS
     .filter(achievement => streakDays >= achievement.days && !existingIds.has(achievement.id))
@@ -117,5 +135,6 @@ export async function updateLearningStreak(uid: string, token: string, now = new
     alreadyUpdatedToday: false,
     achievementsUnlocked,
     achievementPointsEarned,
+    goalAlerts: buildStreakGoalAlerts(streakDays, [...existingAchievements, ...achievementsUnlocked]),
   };
 }

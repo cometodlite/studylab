@@ -190,5 +190,13 @@
     "description": "학습 스트릭 기능 추가. 시험/문제 풀이 완료일을 KST 기준으로 연속 기록하고 7일·15일·30일 학습 스트릭 배지와 보너스 포인트, 대시보드 표시를 제공",
     "files": ["src/lib/learning-streak.ts", "src/lib/achievements.ts", "src/app/api/exams/[id]/grade/route.ts", "src/app/api/school-exams/[id]/grade/route.ts", "src/app/api/reports/learning/route.ts", "src/app/(protected)/dashboard/page.tsx", "src/app/(protected)/practice/[id]/page.tsx", "src/contexts/AuthContext.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-025",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "실시간 알림 기능 추가. 보호 레이아웃에서 사용자 문서의 배지 변화를 실시간 구독해 배지 획득 알림을 표시하고, 학습 스트릭·학교 시험 업적 목표 달성 임박 알림을 채점 결과와 연동",
+    "files": ["src/components/RealtimeNotificationCenter.tsx", "src/lib/notifications.ts", "src/lib/learning-streak.ts", "src/app/api/school-exams/[id]/grade/route.ts", "src/app/(protected)/layout.tsx", "src/app/(protected)/exam/[id]/page.tsx", "src/app/(protected)/practice/[id]/page.tsx", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

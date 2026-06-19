@@ -5,6 +5,7 @@ import { verifyFirebaseToken } from '@/lib/firebase-jwt';
 import { fsGet, fsSet, fsBatch, fsQuery, WriteOp } from '@/lib/firestore-rest';
 import { AchievementId, UserAchievement, createAchievement } from '@/lib/achievements';
 import { updateLearningStreak, type LearningStreakResult } from '@/lib/learning-streak';
+import type { GoalAlert } from '@/lib/notifications';
 
 const SCHOOL_EXAM_DIR = path.join(process.cwd(), 'src', 'data', 'school-exams');
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
@@ -366,6 +367,63 @@ function evaluateNewAchievements(params: {
   return unlocked;
 }
 
+function buildAchievementGoalAlerts(params: {
+  achievements: UserAchievement[];
+  sessions: Array<{ examId: string; totalScore: number; maxScore: number; sheet: number | null; completedAtSeconds: number }>;
+  currentSeriesKey: string;
+  currentExam: SchoolExamFileMeta;
+}): GoalAlert[] {
+  const existingIds = new Set(params.achievements.map(achievement => achievement.id));
+  const orderedSessions = [...params.sessions].sort((a, b) => a.completedAtSeconds - b.completedAtSeconds);
+  const alerts: GoalAlert[] = [];
+
+  if (!existingIds.has('honor-student')) {
+    const recentTwo = orderedSessions.slice(-2);
+    if (recentTwo.length === 2 && recentTwo.every(session => scoreRate(session.totalScore, session.maxScore) >= 90)) {
+      alerts.push({
+        id: 'near-honor-student',
+        emoji: '🏆',
+        title: '우등생 배지까지 한 번 남았어요',
+        message: '다음 시험도 90점 이상이면 3회 연속 90점 이상으로 우등생 배지를 받을 수 있습니다.',
+        href: '/exam',
+      });
+    }
+  }
+
+  const seriesSessions = orderedSessions.filter(session => examSeriesKey(session.examId) === params.currentSeriesKey);
+  const completedSheets = new Set(seriesSessions.map(session => session.sheet).filter((sheet): sheet is number => typeof sheet === 'number'));
+  const missingCoreSheets = [1, 2, 3, 4, 5].filter(sheet => !completedSheets.has(sheet));
+  const label = seriesLabel(params.currentExam) || '시험 시리즈';
+  if (!existingIds.has('perfectionist') && missingCoreSheets.length === 1) {
+    alerts.push({
+      id: 'near-perfectionist',
+      emoji: '🎯',
+      title: '완벽주의자 배지까지 한 회차 남았어요',
+      message: `${label} ${missingCoreSheets[0]}회차만 완료하면 5회차 완주 배지를 받을 수 있습니다.`,
+      href: '/exam',
+    });
+  }
+
+  const availableSheets = getAvailableSeriesSheets(params.currentSeriesKey);
+  const bestRateBySheet = new Map<number, number>();
+  for (const session of seriesSessions) {
+    if (typeof session.sheet !== 'number') continue;
+    bestRateBySheet.set(session.sheet, Math.max(bestRateBySheet.get(session.sheet) ?? 0, scoreRate(session.totalScore, session.maxScore)));
+  }
+  const nearMasterSheets = availableSheets.filter(sheet => (bestRateBySheet.get(sheet) ?? 0) < 90);
+  if (!existingIds.has('master') && availableSheets.length >= 5 && nearMasterSheets.length === 1) {
+    alerts.push({
+      id: 'near-master',
+      emoji: '💎',
+      title: '마스터 배지까지 한 회차 남았어요',
+      message: `${label} ${nearMasterSheets[0]}회차에서 90점 이상을 만들면 마스터 배지를 받을 수 있습니다.`,
+      href: '/exam',
+    });
+  }
+
+  return alerts.slice(0, 2);
+}
+
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
@@ -582,6 +640,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
 
   let achievementsUnlocked: UserAchievement[] = [];
   let achievementPointsEarned = 0;
+  let existingAchievementsForGoals: UserAchievement[] = [];
   const currentSession = {
     examId: id,
     totalScore,
@@ -606,6 +665,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   try {
     const userDoc = await fsGet(`users/${uid}`, token) as UserDoc | null;
     const existingAchievements = normalizeAchievements(userDoc?.achievements);
+    existingAchievementsForGoals = existingAchievements;
     achievementsUnlocked = evaluateNewAchievements({
       existingAchievements,
       sessions: sessionsForAchievements,
@@ -654,6 +714,16 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   } catch (e) {
     console.error('[school-exams/grade] learning streak update failed:', e);
   }
+  const combinedAchievements = [...existingAchievementsForGoals, ...achievementsUnlocked];
+  const goalAlerts = [
+    ...buildAchievementGoalAlerts({
+      achievements: combinedAchievements,
+      sessions: sessionsForAchievements,
+      currentSeriesKey: examSeriesKey(id),
+      currentExam: exam,
+    }),
+    ...(learningStreak?.goalAlerts ?? []),
+  ];
 
   // 분석 데이터 계산
   const mcCount = exam.questions.filter((q: RawQuestion) => q.type === 'mc').length;
@@ -773,6 +843,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     achievementsUnlocked,
     alreadyRewarded,
     learningStreak,
+    goalAlerts,
     results,
     analysis: {
       mcCorrectCount: mcCorrect,

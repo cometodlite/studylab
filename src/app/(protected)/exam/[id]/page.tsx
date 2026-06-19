@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect, useState, use, useRef } from 'react';
+import { useCallback, useEffect, useState, use, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { getIdToken } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import MathText from '@/components/MathText';
 import type { UserAchievement } from '@/lib/achievements';
+import type { GoalAlert } from '@/lib/notifications';
 
 type MCQuestion = { id: number; type: 'mc'; score: number; question: string; choices: string[] };
 type EssayQuestion = { id: number; type: 'essay' | 'short'; score: number; question: string; rubric?: string };
@@ -96,6 +97,7 @@ interface GradeResponse {
   pointsEarned: number;
   achievementPointsEarned?: number;
   achievementsUnlocked?: UserAchievement[];
+  goalAlerts?: GoalAlert[];
   alreadyRewarded: boolean;
   results: GradeResult[];
   analysis?: {
@@ -140,8 +142,8 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
-  const [timesUp, setTimesUp] = useState(false);
   const autoSubmitRef = useRef(false);
+  const handleSubmitRef = useRef<() => Promise<void>>(async () => {});
 
   const startTimeRef = useRef<number>(0);
   const questionStartTimeRef = useRef<number>(0);
@@ -169,7 +171,9 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
           clearInterval(t);
           if (!autoSubmitRef.current) {
             autoSubmitRef.current = true;
-            setTimesUp(true);
+            window.setTimeout(() => {
+              void handleSubmitRef.current();
+            }, 0);
           }
           return 0;
         }
@@ -180,8 +184,13 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
   }, [exam, gradeResult]);
 
   useEffect(() => {
-    if (timesUp && !gradeResult) handleSubmit();
-  }, [timesUp]);
+    if (!gradeResult?.goalAlerts?.length) return;
+    gradeResult.goalAlerts.forEach(alert => {
+      window.dispatchEvent(new CustomEvent('studylab:notify', {
+        detail: { ...alert, variant: 'goal' },
+      }));
+    });
+  }, [gradeResult]);
 
   function formatTime(s: number) {
     const m = Math.floor(s / 60);
@@ -189,7 +198,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
   }
 
-  function recordCurrentQuestionTime() {
+  const recordCurrentQuestionTime = useCallback(() => {
     if (!exam || gradeResult) return;
     const currentQuestion = exam.questions[current];
     if (!currentQuestion) return;
@@ -198,7 +207,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     questionTimingsRef.current[currentQuestion.id] =
       (questionTimingsRef.current[currentQuestion.id] || 0) + elapsed;
     questionStartTimeRef.current = Date.now();
-  }
+  }, [current, exam, gradeResult]);
 
   function goToQuestion(nextIndex: number) {
     if (nextIndex === current) return;
@@ -206,7 +215,7 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     setCurrent(nextIndex);
   }
 
-  async function handleSubmit() {
+  const handleSubmit = useCallback(async () => {
     if (!user || !exam || submitting) return;
     setSubmitting(true);
     try {
@@ -231,7 +240,11 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
     } finally {
       setSubmitting(false);
     }
-  }
+  }, [essayAnswers, exam, id, mcAnswers, recordCurrentQuestionTime, refreshProfile, submitting, user]);
+
+  useEffect(() => {
+    handleSubmitRef.current = handleSubmit;
+  }, [handleSubmit]);
 
   if (loading) return <div className="text-center py-20 text-gray-400">시험 불러오는 중...</div>;
   if (!exam) return <div className="text-center py-20 text-gray-400">시험을 찾을 수 없습니다.</div>;

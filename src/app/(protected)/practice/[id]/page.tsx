@@ -8,6 +8,7 @@ import { auth } from '@/lib/firebase';
 import MathText from '@/components/MathText';
 import { Difficulty } from '@/lib/points';
 import type { UserAchievement } from '@/lib/achievements';
+import type { GoalAlert } from '@/lib/notifications';
 
 interface Question {
   id: number;
@@ -39,6 +40,7 @@ interface GradeResponse {
     alreadyUpdatedToday: boolean;
     achievementsUnlocked: UserAchievement[];
     achievementPointsEarned: number;
+    goalAlerts: GoalAlert[];
   } | null;
 }
 
@@ -80,6 +82,15 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
     const t = setInterval(() => setElapsed(s => s + 1), 1000);
     return () => clearInterval(t);
   }, [exam, gradeResult]);
+
+  useEffect(() => {
+    if (!gradeResult?.learningStreak?.goalAlerts.length) return;
+    gradeResult.learningStreak.goalAlerts.forEach(alert => {
+      window.dispatchEvent(new CustomEvent('studylab:notify', {
+        detail: { ...alert, variant: 'goal' },
+      }));
+    });
+  }, [gradeResult]);
 
   function formatTime(s: number) {
     return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;

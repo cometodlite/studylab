@@ -6,6 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import Navbar from '@/components/Navbar';
 import PageTransition from '@/components/PageTransition';
 import MotivationalModal from '@/components/MotivationalModal';
+import RealtimeNotificationCenter from '@/components/RealtimeNotificationCenter';
 
 export default function ProtectedLayout({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -31,6 +32,7 @@ export default function ProtectedLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-gray-50">
       <MotivationalModal />
+      <RealtimeNotificationCenter />
       <Navbar />
       <main className="max-w-4xl mx-auto px-4 py-8">
         <PageTransition>{children}</PageTransition>
