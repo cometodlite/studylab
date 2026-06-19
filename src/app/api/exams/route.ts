@@ -1,10 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { verifyFirebaseToken } from '@/lib/firebase-jwt';
+import { fsGet } from '@/lib/firestore-rest';
+import { getPracticeExamQuality, isPracticeExamBlocked } from '@/lib/practice-exam-quality';
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
 
 const SKIP_DIRS = new Set(['archive', 'school-exams', 'roadway', 'workbooks']);
+
+async function isAdminRequest(req: NextRequest): Promise<boolean> {
+  const token = req.headers.get('Authorization')?.split('Bearer ')[1];
+  if (!token) return false;
+
+  try {
+    const uid = await verifyFirebaseToken(token);
+    const userDoc = await fsGet(`users/${uid}`, token);
+    return userDoc?.role === 'admin';
+  } catch {
+    return false;
+  }
+}
 
 function scanJsonFiles(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
@@ -23,11 +39,15 @@ export async function GET(req: NextRequest) {
   const grade = searchParams.get('grade');
   const unit = searchParams.get('unit');
   const difficulty = searchParams.get('difficulty');
+  const canIncludeBlocked = searchParams.get('includeBlocked') === '1' && await isAdminRequest(req);
 
   const exams = scanJsonFiles(DATA_DIR)
     .map(f => {
       const d = JSON.parse(fs.readFileSync(f, 'utf8'));
       if (!Array.isArray(d.questions)) return null;
+      const quality = getPracticeExamQuality(d.id);
+      if (!canIncludeBlocked && isPracticeExamBlocked(d.id)) return null;
+
       return {
         id: d.id,
         title: d.title,
@@ -36,6 +56,8 @@ export async function GET(req: NextRequest) {
         unit: d.unit ?? null,
         difficulty: d.difficulty ?? null,
         questionCount: d.questions.length,
+        qualityStatus: canIncludeBlocked ? quality.status : undefined,
+        qualityReason: canIncludeBlocked ? quality.reason : undefined,
       };
     })
     .filter((e): e is NonNullable<typeof e> => e !== null);

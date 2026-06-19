@@ -63,6 +63,7 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
   const [gradeResult, setGradeResult] = useState<GradeResponse | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<{ status?: number; message: string; reason?: string } | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
@@ -73,8 +74,26 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
     if (count) qs.set('count', count);
 
     fetch(`/api/exams/${id}?${qs}`)
-      .then(r => r.json())
-      .then(data => { setExam(data); setLoading(false); });
+      .then(async r => {
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok) {
+          setLoadError({
+            status: r.status,
+            message: data.error ?? '문제를 불러올 수 없습니다.',
+            reason: data.reason,
+          });
+          setExam(null);
+          setLoading(false);
+          return;
+        }
+        setLoadError(null);
+        setExam(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoadError({ message: '문제를 불러오는 중 오류가 발생했습니다.' });
+        setLoading(false);
+      });
   }, [id, searchParams]);
 
   useEffect(() => {
@@ -122,6 +141,28 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
   }
 
   if (loading) return <div className="text-center py-20 text-gray-400">문제 불러오는 중...</div>;
+  if (loadError) {
+    const isLocked = loadError.status === 423;
+    return (
+      <div className="max-w-xl mx-auto bg-white rounded-2xl border border-gray-100 shadow-sm p-8 text-center">
+        <div className="text-5xl mb-4">{isLocked ? '🔒' : '⚠️'}</div>
+        <h1 className="text-xl font-bold text-gray-800">
+          {isLocked ? '검수 중인 문제입니다' : loadError.message}
+        </h1>
+        <p className="text-sm text-gray-500 mt-2">
+          {isLocked
+            ? loadError.reason ?? '문항 품질 검수 후 다시 공개됩니다.'
+            : '잠시 후 다시 시도해주세요.'}
+        </p>
+        <button
+          onClick={() => router.push('/practice')}
+          className="mt-6 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
+        >
+          문제 목록으로 돌아가기
+        </button>
+      </div>
+    );
+  }
   if (!exam) return <div className="text-center py-20 text-gray-400">문제를 찾을 수 없습니다.</div>;
 
   // 결과 화면

@@ -206,5 +206,13 @@
     "description": "공부 플래너 추가. 사용자별 주간/월간 목표를 users 문서에 저장하고, 시험 응시·오답 재풀이·월간 응시 진도와 오답/점수/스트릭 기반 자동 추천 및 알림을 /planner 화면에 표시",
     "files": ["src/app/api/planner/route.ts", "src/app/(protected)/planner/page.tsx", "src/components/Navbar.tsx", "src/app/(protected)/dashboard/page.tsx", "src/contexts/AuthContext.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-027",
+    "date": "2026-06-19",
+    "category": "quality_gate",
+    "description": "문제풀이 라이브러리 품질 게이트 추가. 오류 의심 문항·정답 편중이 확인된 연습문제 파일을 학생 목록에서 임시 숨김 처리하고, 직접 접근 시 검수 중 안내를 표시. 재발 방지를 위한 감사 스크립트 추가",
+    "files": ["src/data/practice-exam-quality.json", "src/lib/practice-exam-quality.ts", "src/app/api/exams/route.ts", "src/app/api/exams/[id]/route.ts", "src/app/api/exams/[id]/grade/route.ts", "src/app/(protected)/practice/[id]/page.tsx", "scripts/audit-practice-exams.mjs", "package.json", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

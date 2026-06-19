@@ -5,13 +5,16 @@ import { verifyFirebaseToken } from '@/lib/firebase-jwt';
 import { fsGet, fsSet, fsBatch, WriteOp } from '@/lib/firestore-rest';
 import { updateLearningStreak, type LearningStreakResult } from '@/lib/learning-streak';
 import { calcExamPoints, Difficulty } from '@/lib/points';
+import { getPracticeExamQuality, isPracticeExamBlocked } from '@/lib/practice-exam-quality';
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
+const SKIP_DIRS = new Set(['archive', 'school-exams', 'roadway', 'workbooks']);
 
 function scanJsonFiles(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
   const result: string[] = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (SKIP_DIRS.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) result.push(...scanJsonFiles(full));
     else if (entry.name.endsWith('.json')) result.push(full);
@@ -50,6 +53,14 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
 
   const exam = findExam(id);
   if (!exam) return NextResponse.json({ error: '시험을 찾을 수 없습니다.' }, { status: 404 });
+  if (isPracticeExamBlocked(id)) {
+    const quality = getPracticeExamQuality(id);
+    return NextResponse.json({
+      error: '검수 중인 문제입니다.',
+      status: quality.status,
+      reason: quality.reason ?? '문항 품질 검수 후 다시 공개됩니다.',
+    }, { status: 423 });
+  }
 
   const body = await req.json();
   const answers: Record<string, number> = body.answers ?? {};
