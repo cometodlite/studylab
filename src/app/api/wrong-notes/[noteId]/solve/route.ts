@@ -32,10 +32,9 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ not
   const now = new Date();
   const writes: WriteOp[] = [
     {
-      type: 'add',
-      collection: 'wrong_notes',
-      id: noteId,
-      data: { ...note, archived: true, archivedAt: now },
+      type: 'update',
+      path: `wrong_notes/${noteId}`,
+      data: { archived: true, archivedAt: now },
     },
   ];
 

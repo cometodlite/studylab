@@ -142,5 +142,13 @@
     "description": "배지/업적 시스템 강화. 학교 시험 채점 후 3회 연속 90점 이상(우등생), 5회차 완주(완벽주의자), 전 회차 90점 이상(마스터) 업적 판정 및 보너스 포인트 지급 추가",
     "files": ["src/lib/achievements.ts", "src/app/api/school-exams/[id]/grade/route.ts", "src/app/(protected)/exam/[id]/page.tsx", "src/app/(protected)/dashboard/page.tsx", "src/contexts/AuthContext.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-019",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "오답 재풀이 시험 모드 추가. wrong_notes API에 재풀이 GET/POST 엔드포인트를 추가하고, 오답노트 화면에서 객관식 오답을 최대 20문항까지 시험처럼 풀고 맞힌 문항을 자동 아카이브하도록 구현",
+    "files": ["src/app/(protected)/wrong-notes/page.tsx", "src/app/api/wrong-notes/retry/route.ts", "src/app/api/wrong-notes/[noteId]/solve/route.ts", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]
