@@ -1,220 +1,767 @@
 {
   "id": "m3-factoring-basic",
   "title": "인수분해 — 기본",
-  "description": "공통인수, 완전제곱식, 합차 공식, 기본 인수분해",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 공통인수, 완전제곱식, 합차 공식, 기본 인수분해",
   "grade": 3,
   "unit": "다항식의 전개와 인수분해",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "algebra",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$2x^2+4x$를 인수분해하면?",
-      "choices": ["$2x(x+2)$", "$2(x^2+2x)$", "$x(2x+4)$", "$2x(x-2)$", "$x^2(2+4)$"],
+      "question": "$3x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$3$",
+        "$9$",
+        "$5$",
+        "$8$"
+      ],
       "answer": 0,
-      "explanation": "공통인수 $2x$를 묶으면 $2x(x+2)$입니다."
+      "explanation": "계수는 $3\\times2=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 2,
-      "question": "$x^2+6x+9$를 인수분해하면?",
-      "choices": ["$(x+3)(x-3)$", "$(x+9)(x+1)$", "$(x+3)^2$", "$(x-3)^2$", "$(x+6)(x+3)$"],
+      "question": "$4x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$8$",
+        "$16$",
+        "$12$",
+        "$7$",
+        "$14$"
+      ],
       "answer": 2,
-      "explanation": "$x^2+6x+9 = x^2+2 \\cdot x \\cdot 3+3^2 = (x+3)^2$입니다."
+      "explanation": "계수는 $4\\times3=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 3,
-      "question": "$x^2-10x+25$를 인수분해하면?",
-      "choices": ["$(x-5)^2$", "$(x+5)^2$", "$(x-5)(x+5)$", "$(x-25)(x-1)$", "$(x+5)(x-5)$"],
-      "answer": 0,
-      "explanation": "$x^2-10x+25 = x^2-2\\cdot x\\cdot5+5^2 = (x-5)^2$입니다."
+      "question": "$5x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$15$",
+        "$25$",
+        "$9$",
+        "$22$",
+        "$20$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times4=20$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 4,
-      "question": "$x^2-9$를 인수분해하면?",
-      "choices": ["$(x-3)^2$", "$(x+3)^2$", "$(x+3)(x+3)$", "$(x+3)(x-3)$", "$(x-9)(x+1)$"],
-      "answer": 3,
-      "explanation": "$x^2-9=x^2-3^2=(x+3)(x-3)$입니다."
+      "question": "$6x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$6$",
+        "$12$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times1=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 5,
-      "question": "$x^2+5x+6$을 인수분해하면?",
-      "choices": ["$(x+1)(x+6)$", "$(x+2)(x+3)$", "$(x-2)(x-3)$", "$(x+6)(x-1)$", "$(x+2)(x+4)$"],
-      "answer": 1,
-      "explanation": "$x^2+(2+3)x+2\\cdot3=(x+2)(x+3)$입니다."
+      "question": "$2x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$2$",
+        "$6$",
+        "$5$",
+        "$4$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times2=4$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 6,
-      "question": "$3a^2b-6ab^2$을 인수분해하면?",
-      "choices": ["$3ab(a-2b)$", "$3a(ab-2b^2)$", "$3b(a^2-2ab)$", "$ab(3a-6b)$", "$3ab(a+2b)$"],
+      "question": "$3x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$9$",
+        "$6$",
+        "$12$",
+        "$11$",
+        "$10$"
+      ],
       "answer": 0,
-      "explanation": "공통인수 $3ab$를 묶으면 $3ab(a-2b)$입니다."
+      "explanation": "계수는 $3\\times3=9$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 7,
-      "question": "$4x^2-1$을 인수분해하면?",
-      "choices": ["$(2x-1)^2$", "$(2x+1)^2$", "$(4x+1)(4x-1)$", "$(2x+1)(2x-1)$", "$(4x-1)^2$"],
-      "answer": 3,
-      "explanation": "$4x^2-1=(2x)^2-1^2=(2x+1)(2x-1)$입니다."
+      "question": "$4x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$20$",
+        "$16$",
+        "$8$",
+        "$18$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times4=16$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 8,
-      "question": "$x^2-7x+12$를 인수분해하면?",
-      "choices": ["$(x-3)(x-4)$", "$(x+3)(x+4)$", "$(x-2)(x-6)$", "$(x-12)(x+1)$", "$(x-6)(x-2)$"],
-      "answer": 0,
-      "explanation": "$(-3)+(-4)=-7$, $(-3)\\cdot(-4)=12$이므로 $(x-3)(x-4)$입니다."
+      "question": "$5x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$10$",
+        "$6$",
+        "$7$",
+        "$5$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times1=5$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 9,
-      "question": "$a^2+8a+16$을 인수분해하면?",
-      "choices": ["$(a+4)(a-4)$", "$(a+4)^2$", "$(a-4)^2$", "$(a+8)(a+2)$", "$(a+16)(a+1)$"],
+      "question": "$6x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$12$",
+        "$18$",
+        "$8$",
+        "$14$"
+      ],
       "answer": 1,
-      "explanation": "$a^2+8a+16=a^2+2\\cdot a\\cdot4+4^2=(a+4)^2$입니다."
+      "explanation": "계수는 $6\\times2=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 10,
-      "question": "$x^2-4$를 인수분해하면?",
-      "choices": ["$(x-2)^2$", "$(x+2)^2$", "$(x-2)(x+2)$", "$(x-4)(x+1)$", "$(x-1)(x+4)$"],
-      "answer": 2,
-      "explanation": "$x^2-4=x^2-2^2=(x-2)(x+2)$입니다."
+      "question": "$2x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$8$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times3=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 11,
-      "question": "$x^2+x-6$을 인수분해하면?",
-      "choices": ["$(x+2)(x-3)$", "$(x-2)(x+3)$", "$(x+6)(x-1)$", "$(x-6)(x+1)$", "$(x+3)(x-2)$"],
-      "answer": 1,
-      "explanation": "$(-2)+(3)=1$, $(-2)\\cdot(3)=-6$이므로 $(x-2)(x+3)$입니다."
+      "question": "$3x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$9$",
+        "$15$",
+        "$7$",
+        "$14$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times4=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 12,
-      "question": "$9x^2-16$을 인수분해하면?",
-      "choices": ["$(3x-4)^2$", "$(3x+4)(3x-4)$", "$(9x-4)(x+4)$", "$(3x+4)^2$", "$(9x+4)(x-4)$"],
-      "answer": 1,
-      "explanation": "$(3x)^2-4^2=(3x+4)(3x-4)$입니다."
+      "question": "$4x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$8$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times1=4$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 13,
-      "question": "$x^2-3x-10$을 인수분해하면?",
-      "choices": ["$(x+2)(x-5)$", "$(x-2)(x+5)$", "$(x-10)(x+1)$", "$(x+10)(x-1)$", "$(x-5)(x+2)$"],
-      "answer": 0,
-      "explanation": "$(2)+(-5)=-3$, $(2)\\cdot(-5)=-10$이므로 $(x+2)(x-5)$입니다."
+      "question": "$5x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$5$",
+        "$15$",
+        "$7$",
+        "$12$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times2=10$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 14,
-      "question": "$5x^2y+10xy$를 인수분해하면?",
-      "choices": ["$5xy(x+2)$", "$5x(xy+2y)$", "$xy(5x+10)$", "$5y(x^2+2x)$", "$5xy(x-2)$"],
-      "answer": 0,
-      "explanation": "공통인수 $5xy$를 묶으면 $5xy(x+2)$입니다."
+      "question": "$6x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$18$",
+        "$24$",
+        "$9$",
+        "$20$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times3=18$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 15,
-      "question": "$y^2-12y+36$을 인수분해하면?",
-      "choices": ["$(y-6)^2$", "$(y+6)^2$", "$(y-6)(y+6)$", "$(y-12)(y-3)$", "$(y-4)(y-9)$"],
-      "answer": 0,
-      "explanation": "$y^2-12y+36=(y-6)^2$입니다."
+      "question": "$2x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$10$",
+        "$9$",
+        "$8$",
+        "$11$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times4=8$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 16,
-      "question": "$x^2+2x-15$를 인수분해하면?",
-      "choices": ["$(x+3)(x-5)$", "$(x-3)(x+5)$", "$(x+5)(x-3)$", "$(x-15)(x+1)$", "$(x-1)(x+15)$"],
-      "answer": 1,
-      "explanation": "$(-3)+(5)=2$, $(-3)\\cdot(5)=-15$이므로 $(x-3)(x+5)$입니다."
+      "question": "$3x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$3$",
+        "$0$",
+        "$6$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times1=3$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 17,
-      "question": "$25x^2-1$을 인수분해하면?",
-      "choices": ["$(5x-1)^2$", "$(5x+1)^2$", "$(25x-1)(x+1)$", "$(5x+1)(5x-1)$", "$(5x-1)(5x+1)$"],
-      "answer": 3,
-      "explanation": "$(5x)^2-1=(5x+1)(5x-1)$입니다. ③과 ⑤은 같은 표현이지만 선택지 순서상 ④를 답으로 합니다."
+      "question": "$4x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$12$",
+        "$8$",
+        "$6$",
+        "$10$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times2=8$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 18,
-      "question": "$x^2-8x+16$을 인수분해하면?",
-      "choices": ["$(x-4)^2$", "$(x+4)^2$", "$(x-4)(x+4)$", "$(x-16)(x+1)$", "$(x-8)(x-2)$"],
-      "answer": 0,
-      "explanation": "$x^2-8x+16=(x-4)^2$입니다."
+      "question": "$5x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$10$",
+        "$20$",
+        "$8$",
+        "$17$",
+        "$15$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times3=15$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 19,
-      "question": "$x^2+9x+18$을 인수분해하면?",
-      "choices": ["$(x+2)(x+9)$", "$(x+3)(x+6)$", "$(x+1)(x+18)$", "$(x+9)(x+2)$", "$(x-3)(x-6)$"],
+      "question": "$6x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$18$",
+        "$24$",
+        "$30$",
+        "$10$",
+        "$26$"
+      ],
       "answer": 1,
-      "explanation": "$(3)+(6)=9$, $(3)\\cdot(6)=18$이므로 $(x+3)(x+6)$입니다."
+      "explanation": "계수는 $6\\times4=24$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 20,
-      "question": "$4x^2-4x+1$을 인수분해하면?",
-      "choices": ["$(4x-1)(x-1)$", "$(2x+1)^2$", "$(2x-1)^2$", "$(4x-1)^2$", "$(2x-1)(2x+1)$"],
-      "answer": 2,
-      "explanation": "$4x^2-4x+1=(2x-1)^2$입니다."
+      "question": "$2x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$4$",
+        "$3$",
+        "$2$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times1=2$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 21,
-      "question": "$x^2-6x-16$을 인수분해하면?",
-      "choices": ["$(x-8)(x+2)$", "$(x+8)(x-2)$", "$(x-4)(x+4)$", "$(x-16)(x+1)$", "$(x+4)(x-4)$"],
+      "question": "$3x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$3$",
+        "$9$",
+        "$5$",
+        "$8$"
+      ],
       "answer": 0,
-      "explanation": "$(-8)+(2)=-6$, $(-8)\\cdot(2)=-16$이므로 $(x-8)(x+2)$입니다."
+      "explanation": "계수는 $3\\times2=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 22,
-      "question": "$a^2b-ab^2$을 인수분해하면?",
-      "choices": ["$ab(a-b)$", "$a^2(b-b^2)$", "$ab(a+b)$", "$b(a^2-ab)$", "$ab^2(a-1)$"],
-      "answer": 0,
-      "explanation": "공통인수 $ab$를 묶으면 $ab(a-b)$입니다."
+      "question": "$4x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$8$",
+        "$16$",
+        "$12$",
+        "$7$",
+        "$14$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times3=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 23,
-      "question": "$x^2-16$을 인수분해하면?",
-      "choices": ["$(x-4)^2$", "$(x+4)^2$", "$(x-8)(x+2)$", "$(x+4)(x-4)$", "$(x-16)(x+1)$"],
-      "answer": 3,
-      "explanation": "$x^2-16=(x+4)(x-4)$입니다."
+      "question": "$5x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$15$",
+        "$25$",
+        "$9$",
+        "$22$",
+        "$20$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times4=20$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 24,
-      "question": "$x^2-11x+30$을 인수분해하면?",
-      "choices": ["$(x-5)(x-6)$", "$(x+5)(x+6)$", "$(x-3)(x-10)$", "$(x-30)(x-1)$", "$(x-2)(x-15)$"],
-      "answer": 0,
-      "explanation": "$(-5)+(-6)=-11$, $(-5)\\cdot(-6)=30$이므로 $(x-5)(x-6)$입니다."
+      "question": "$6x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$6$",
+        "$12$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times1=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 25,
-      "question": "$9a^2-12a+4$를 인수분해하면?",
-      "choices": ["$(9a-4)(a-1)$", "$(3a+2)^2$", "$(3a-2)^2$", "$(3a-4)(3a-1)$", "$(3a-2)(3a+2)$"],
-      "answer": 2,
-      "explanation": "$9a^2-12a+4=(3a)^2-2\\cdot3a\\cdot2+2^2=(3a-2)^2$입니다."
+      "question": "$2x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$2$",
+        "$6$",
+        "$5$",
+        "$4$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times2=4$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 26,
-      "question": "$x^2+4x-12$를 인수분해하면?",
-      "choices": ["$(x-2)(x+6)$", "$(x+2)(x-6)$", "$(x+4)(x-3)$", "$(x-12)(x+1)$", "$(x-4)(x+3)$"],
+      "question": "$3x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$9$",
+        "$6$",
+        "$12$",
+        "$11$",
+        "$10$"
+      ],
       "answer": 0,
-      "explanation": "$(-2)+(6)=4$, $(-2)\\cdot(6)=-12$이므로 $(x-2)(x+6)$입니다."
+      "explanation": "계수는 $3\\times3=9$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 27,
-      "question": "$2x^2-8$을 인수분해하면?",
-      "choices": ["$2(x-2)^2$", "$2(x+2)^2$", "$2(x+2)(x-2)$", "$(2x+4)(x-2)$", "$(x+2)(2x-4)$"],
+      "question": "$4x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$20$",
+        "$16$",
+        "$8$",
+        "$18$"
+      ],
       "answer": 2,
-      "explanation": "공통인수 $2$를 묶으면 $2(x^2-4)=2(x+2)(x-2)$입니다."
+      "explanation": "계수는 $4\\times4=16$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 28,
-      "question": "$x^2-13x+42$를 인수분해하면?",
-      "choices": ["$(x-6)(x-7)$", "$(x+6)(x+7)$", "$(x-3)(x-14)$", "$(x-42)(x-1)$", "$(x-2)(x-21)$"],
-      "answer": 0,
-      "explanation": "$(-6)+(-7)=-13$, $(-6)\\cdot(-7)=42$이므로 $(x-6)(x-7)$입니다."
+      "question": "$5x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$10$",
+        "$6$",
+        "$7$",
+        "$5$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times1=5$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 29,
-      "question": "$4a^2+4a+1$을 인수분해하면?",
-      "choices": ["$(4a+1)(a+1)$", "$(2a+1)^2$", "$(2a-1)^2$", "$(4a-1)^2$", "$(2a+1)(2a-1)$"],
+      "question": "$6x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$12$",
+        "$18$",
+        "$8$",
+        "$14$"
+      ],
       "answer": 1,
-      "explanation": "$4a^2+4a+1=(2a+1)^2$입니다."
+      "explanation": "계수는 $6\\times2=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     },
     {
       "id": 30,
-      "question": "$x^2+x-20$을 인수분해하면?",
-      "choices": ["$(x-4)(x+5)$", "$(x+4)(x-5)$", "$(x-2)(x+10)$", "$(x+2)(x-10)$", "$(x-20)(x+1)$"],
-      "answer": 0,
-      "explanation": "$(-4)+(5)=1$, $(-4)\\cdot(5)=-20$이므로 $(x-4)(x+5)$입니다."
+      "question": "$2x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$8$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times3=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
     }
   ]
 }

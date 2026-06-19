@@ -22,6 +22,13 @@ const redFlagPatterns = [
   /없다\.?$/,
 ];
 
+const ebsRoles = {
+  '기본': { role: '개념 확인', steps: 1 },
+  '유형별': { role: '대표 유형', steps: 2 },
+  '심화': { role: '조건 결합', steps: 4 },
+  '킬러': { role: '고난도 추론', steps: 6 },
+};
+
 function scanJsonFiles(dir) {
   if (!fs.existsSync(dir)) return [];
 
@@ -71,9 +78,22 @@ function auditExam(filePath) {
   if (!Array.isArray(exam.questions)) return null;
 
   const issueQuestionIds = new Set();
+  const ebsProblems = [];
   const duplicateQuestionTexts = [];
   const answerCounts = new Map();
   let multipleChoiceCount = 0;
+  const expectedEbs = ebsRoles[exam.difficulty];
+
+  if (!exam.ebsStyle || typeof exam.ebsStyle !== 'object') {
+    ebsProblems.push('top-level ebsStyle metadata is missing');
+  } else if (expectedEbs) {
+    if (exam.ebsStyle.role !== expectedEbs.role) {
+      ebsProblems.push(`ebsStyle.role should be "${expectedEbs.role}"`);
+    }
+    if (exam.ebsStyle.expectedSteps !== expectedEbs.steps) {
+      ebsProblems.push(`ebsStyle.expectedSteps should be ${expectedEbs.steps}`);
+    }
+  }
 
   for (const question of exam.questions) {
     const qId = Number.isFinite(question?.id) ? question.id : exam.questions.indexOf(question) + 1;
@@ -102,6 +122,23 @@ function auditExam(filePath) {
     if (redFlagPatterns.some(pattern => pattern.test(searchableText))) {
       issueQuestionIds.add(qId);
     }
+
+    if (!question?.ebs || typeof question.ebs !== 'object') {
+      ebsProblems.push(`Q${qId}: ebs metadata is missing`);
+    } else if (expectedEbs) {
+      if (question.ebs.role !== expectedEbs.role) {
+        ebsProblems.push(`Q${qId}: ebs.role should be "${expectedEbs.role}"`);
+      }
+      if (question.ebs.steps !== expectedEbs.steps) {
+        ebsProblems.push(`Q${qId}: ebs.steps should be ${expectedEbs.steps}`);
+      }
+      if (question.ebs.difficulty !== exam.difficulty) {
+        ebsProblems.push(`Q${qId}: ebs.difficulty should match exam difficulty`);
+      }
+      if (!question.ebs.typeTag) {
+        ebsProblems.push(`Q${qId}: ebs.typeTag is missing`);
+      }
+    }
   }
 
   const answerIndex0Rate = multipleChoiceCount > 0
@@ -118,9 +155,10 @@ function auditExam(filePath) {
     relativePath,
     questionCount: exam.questions.length,
     issueQuestionIds: issueIds,
+    ebsProblems,
     answerIndex0Rate,
     duplicateQuestionTexts,
-    highRisk: issueIds.length > 0 || issueIds.length >= 5 || answerIndex0Rate >= 90,
+    highRisk: issueIds.length > 0 || answerIndex0Rate >= 90 || ebsProblems.length > 0,
   };
 }
 
@@ -134,6 +172,12 @@ function collectCrossDifficultyDuplicates(reportsByQuestionText) {
   }
 
   return duplicates;
+}
+
+function collectDuplicateQuestionTexts(reportsByQuestionText) {
+  return [...reportsByQuestionText.entries()]
+    .filter(([, reports]) => reports.length > 1)
+    .map(([text, reports]) => ({ text, reports }));
 }
 
 const qualityMap = loadQualityMap();
@@ -166,6 +210,7 @@ for (const filePath of scanJsonFiles(dataDir)) {
 const highRiskReports = reports.filter(report => report.highRisk);
 const unblockedHighRisk = highRiskReports.filter(report => qualityMap[report.id]?.status !== 'blocked');
 const blockedCount = Object.values(qualityMap).filter(entry => entry?.status === 'blocked').length;
+const duplicateQuestionTexts = collectDuplicateQuestionTexts(reportsByQuestionText);
 const crossDifficultyDuplicates = collectCrossDifficultyDuplicates(reportsByQuestionText);
 
 console.log(`Practice exam audit`);
@@ -173,6 +218,7 @@ console.log(`- scanned files: ${reports.length}`);
 console.log(`- blocked in quality metadata: ${blockedCount}`);
 console.log(`- high-risk files detected: ${highRiskReports.length}`);
 console.log(`- unblocked high-risk files: ${unblockedHighRisk.length}`);
+console.log(`- exact duplicate question texts across all files: ${duplicateQuestionTexts.length}`);
 console.log(`- exact duplicate question texts across difficulties: ${crossDifficultyDuplicates.length}`);
 
 if (highRiskReports.length > 0) {
@@ -180,7 +226,8 @@ if (highRiskReports.length > 0) {
   for (const report of highRiskReports) {
     const status = qualityMap[report.id]?.status ?? 'ok';
     const issueText = report.issueQuestionIds.length > 0 ? `issues Q${report.issueQuestionIds.join(',')}` : 'no issue ids';
-    console.log(`- [${status}] ${report.id} (${report.relativePath}) - ${issueText}, answer0 ${report.answerIndex0Rate}%`);
+    const ebsText = report.ebsProblems.length > 0 ? `, ebs ${report.ebsProblems.length}` : '';
+    console.log(`- [${status}] ${report.id} (${report.relativePath}) - ${issueText}, answer0 ${report.answerIndex0Rate}%${ebsText}`);
   }
 }
 

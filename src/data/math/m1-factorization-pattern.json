@@ -1,220 +1,767 @@
 {
   "id": "m1-factorization-pattern",
   "title": "소인수분해 — 유형별",
-  "description": "약수의 개수, 최대공약수, 최소공배수 유형",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 약수의 개수, 최대공약수, 최소공배수 유형",
   "grade": 1,
   "unit": "소인수분해",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "factorization",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$2^3 \\times 3^2 \\times 5$의 약수의 개수는?",
-      "choices": ["18개", "20개", "24개", "30개", "36개"],
-      "answer": 2,
-      "explanation": "$(3+1)(2+1)(1+1) = 4 \\times 3 \\times 2 = 24$개"
+      "question": "$36$와 $51$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$204$",
+        "$207$",
+        "$210$",
+        "$612$",
+        "$3$"
+      ],
+      "answer": 1,
+      "explanation": "$G=3$, $L=612$이므로 $G+\\frac{L}{G}=3+204=207$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 2,
-      "question": "두 수 12와 18의 최대공약수는?",
-      "choices": ["2", "3", "6", "9", "12"],
-      "answer": 2,
-      "explanation": "$12 = 2^2 \\times 3$, $18 = 2 \\times 3^2$. GCD $= 2 \\times 3 = 6$"
+      "question": "$38$와 $54$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$513$",
+        "$517$",
+        "$1026$",
+        "$515$",
+        "$2$"
+      ],
+      "answer": 3,
+      "explanation": "$G=2$, $L=1026$이므로 $G+\\frac{L}{G}=2+513=515$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 3,
-      "question": "두 수 8과 12의 최소공배수는?",
-      "choices": ["16", "24", "32", "36", "48"],
-      "answer": 1,
-      "explanation": "$8 = 2^3$, $12 = 2^2 \\times 3$. LCM $= 2^3 \\times 3 = 24$"
+      "question": "$40$와 $57$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$2281$",
+        "$2280$",
+        "$2282$",
+        "$1$",
+        "$2283$"
+      ],
+      "answer": 0,
+      "explanation": "$G=1$, $L=2280$이므로 $G+\\frac{L}{G}=1+2280=2281$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 4,
-      "question": "약수의 개수가 6개인 수를 고르면?",
-      "choices": ["12", "16", "18", "24", "30"],
-      "answer": 0,
-      "explanation": "$12 = 2^2 \\times 3^1$이므로 약수의 개수 $(2+1)(1+1) = 6$개"
+      "question": "$42$와 $60$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$70$",
+        "$82$",
+        "$76$",
+        "$420$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "$G=6$, $L=420$이므로 $G+\\frac{L}{G}=6+70=76$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 5,
-      "question": "36과 48의 최대공약수는?",
-      "choices": ["6", "8", "12", "16", "24"],
-      "answer": 2,
-      "explanation": "$36 = 2^2 \\times 3^2$, $48 = 2^4 \\times 3$. GCD $= 2^2 \\times 3 = 12$"
+      "question": "$44$와 $63$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$2772$",
+        "$2774$",
+        "$1$",
+        "$2775$",
+        "$2773$"
+      ],
+      "answer": 4,
+      "explanation": "$G=1$, $L=2772$이므로 $G+\\frac{L}{G}=1+2772=2773$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 6,
-      "question": "두 자연수 $A$, $B$의 최대공약수가 6, 최소공배수가 36이고 $A = 12$일 때, $B$는?",
-      "choices": ["12", "18", "24", "30", "36"],
+      "question": "$46$와 $66$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$759$",
+        "$761$",
+        "$763$",
+        "$1518$",
+        "$2$"
+      ],
       "answer": 1,
-      "explanation": "$A \\times B = \\text{GCD} \\times \\text{LCM}$이므로 $12 \\times B = 6 \\times 36 = 216$. $B = 18$"
+      "explanation": "$G=2$, $L=1518$이므로 $G+\\frac{L}{G}=2+759=761$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 7,
-      "question": "$2^a \\times 3^2$의 약수의 개수가 12일 때, $a$의 값은?",
-      "choices": ["2", "3", "4", "5", "6"],
-      "answer": 1,
-      "explanation": "$(a+1)(2+1) = 12$이므로 $a+1 = 4$, $a = 3$"
+      "question": "$48$와 $69$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$368$",
+        "$374$",
+        "$1104$",
+        "$371$",
+        "$3$"
+      ],
+      "answer": 3,
+      "explanation": "$G=3$, $L=1104$이므로 $G+\\frac{L}{G}=3+368=371$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 8,
-      "question": "세 수 4, 6, 10의 최소공배수는?",
-      "choices": ["20", "30", "40", "60", "120"],
-      "answer": 3,
-      "explanation": "$4 = 2^2$, $6 = 2 \\times 3$, $10 = 2 \\times 5$. LCM $= 2^2 \\times 3 \\times 5 = 60$"
+      "question": "$50$와 $72$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$902$",
+        "$900$",
+        "$904$",
+        "$1800$",
+        "$2$"
+      ],
+      "answer": 0,
+      "explanation": "$G=2$, $L=1800$이므로 $G+\\frac{L}{G}=2+900=902$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 9,
-      "question": "가로 18cm, 세로 24cm인 직사각형 종이를 정사각형으로 남김없이 자를 때, 가장 큰 정사각형의 한 변의 길이는?",
-      "choices": ["3cm", "4cm", "6cm", "8cm", "9cm"],
+      "question": "$52$와 $75$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$3900$",
+        "$3902$",
+        "$3901$",
+        "$1$",
+        "$3903$"
+      ],
       "answer": 2,
-      "explanation": "GCD(18, 24) $= 6$cm"
+      "explanation": "$G=1$, $L=3900$이므로 $G+\\frac{L}{G}=1+3900=3901$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 10,
-      "question": "두 수 $2^3 \\times 3$과 $2^2 \\times 3^2$의 최소공배수는?",
-      "choices": ["$2^2 \\times 3$", "$2^3 \\times 3$", "$2^2 \\times 3^2$", "$2^3 \\times 3^2$", "$2^5 \\times 3^3$"],
-      "answer": 3,
-      "explanation": "LCM은 각 소인수의 최고 지수를 택하므로 $2^3 \\times 3^2$"
+      "question": "$54$와 $78$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$117$",
+        "$129$",
+        "$702$",
+        "$6$",
+        "$123$"
+      ],
+      "answer": 4,
+      "explanation": "$G=6$, $L=702$이므로 $G+\\frac{L}{G}=6+117=123$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 11,
-      "question": "두 수 $2^3 \\times 3^2$과 $2^2 \\times 3^3$의 최대공약수는?",
-      "choices": ["$2^2 \\times 3^2$", "$2^3 \\times 3^3$", "$2 \\times 3$", "$2^2 \\times 3$", "$2^3 \\times 3^2$"],
-      "answer": 0,
-      "explanation": "GCD는 각 소인수의 최소 지수를 택하므로 $2^2 \\times 3^2 = 36$"
+      "question": "$56$와 $81$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$4536$",
+        "$4537$",
+        "$4538$",
+        "$1$",
+        "$4539$"
+      ],
+      "answer": 1,
+      "explanation": "$G=1$, $L=4536$이므로 $G+\\frac{L}{G}=1+4536=4537$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 12,
-      "question": "어떤 자연수로 28과 42를 나누면 모두 나누어 떨어진다. 이 자연수 중 가장 큰 것은?",
-      "choices": ["4", "6", "7", "14", "21"],
+      "question": "$58$와 $84$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$1218$",
+        "$1222$",
+        "$2436$",
+        "$1220$",
+        "$2$"
+      ],
       "answer": 3,
-      "explanation": "GCD(28, 42) $= 14$"
+      "explanation": "$G=2$, $L=2436$이므로 $G+\\frac{L}{G}=2+1218=1220$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 13,
-      "question": "약수의 개수가 4개인 두 자리 수 중 가장 작은 것은?",
-      "choices": ["10", "12", "14", "15", "16"],
-      "answer": 1,
-      "explanation": "약수 4개 = $p^3$ 또는 $p \\times q$ 형. 두 자리 중 가장 작은 것: $2 \\times 5 = 10$... 사실 10은 두 자리이고 약수가 1,2,5,10으로 4개. 따라서 10."
+      "question": "$60$와 $87$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$583$",
+        "$580$",
+        "$586$",
+        "$1740$",
+        "$3$"
+      ],
+      "answer": 0,
+      "explanation": "$G=3$, $L=1740$이므로 $G+\\frac{L}{G}=3+580=583$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 14,
-      "question": "두 수의 최대공약수가 $a$, 최소공배수가 $b$일 때 두 수의 곱은?",
-      "choices": ["$a + b$", "$a - b$", "$a \\times b$", "$a \\div b$", "$a^2 \\times b$"],
+      "question": "$62$와 $90$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$1395$",
+        "$1399$",
+        "$1397$",
+        "$2790$",
+        "$2$"
+      ],
       "answer": 2,
-      "explanation": "두 수의 곱 = GCD × LCM = $a \\times b$"
+      "explanation": "$G=2$, $L=2790$이므로 $G+\\frac{L}{G}=2+1395=1397$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 15,
-      "question": "15분, 20분, 30분마다 각각 버스가 출발한다. 오전 6시에 동시 출발 후 처음으로 다시 동시에 출발하는 시각은?",
-      "choices": ["오전 6시 30분", "오전 7시", "오전 7시 30분", "오전 8시", "오전 9시"],
-      "answer": 1,
-      "explanation": "LCM(15, 20, 30) = 60분 후인 오전 7시"
+      "question": "$64$와 $93$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$5952$",
+        "$5954$",
+        "$1$",
+        "$5955$",
+        "$5953$"
+      ],
+      "answer": 4,
+      "explanation": "$G=1$, $L=5952$이므로 $G+\\frac{L}{G}=1+5952=5953$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 16,
-      "question": "$n$의 약수의 개수가 홀수가 되는 조건은?",
-      "choices": ["$n$이 소수", "$n$이 짝수", "$n$이 완전제곱수", "$n$이 합성수", "$n$이 홀수"],
-      "answer": 2,
-      "explanation": "약수의 개수가 홀수이면 $n$은 완전제곱수. $(a+1)$이 홀수이려면 $a$가 짝수여야 합니다."
+      "question": "$66$와 $96$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$176$",
+        "$182$",
+        "$188$",
+        "$1056$",
+        "$6$"
+      ],
+      "answer": 1,
+      "explanation": "$G=6$, $L=1056$이므로 $G+\\frac{L}{G}=6+176=182$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 17,
-      "question": "두 수 $A = 2^3 \\times 3^a$, $B = 2^b \\times 3^2$의 최대공약수가 $2^2 \\times 3^2$일 때, $a + b$의 최솟값은?",
-      "choices": ["4", "5", "6", "7", "8"],
-      "answer": 0,
-      "explanation": "GCD에서 2의 지수가 $\\min(3,b)=2$이므로 $b=2$. 3의 지수가 $\\min(a,2)=2$이므로 $a \\geq 2$. 최솟값: $a=2, b=2$이면 $a+b=4$"
+      "question": "$68$와 $99$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$6732$",
+        "$6734$",
+        "$1$",
+        "$6733$",
+        "$6735$"
+      ],
+      "answer": 3,
+      "explanation": "$G=1$, $L=6732$이므로 $G+\\frac{L}{G}=1+6732=6733$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 18,
-      "question": "$2^2 \\times 3 \\times 7$의 약수 중 짝수의 개수는?",
-      "choices": ["4개", "6개", "8개", "10개", "12개"],
-      "answer": 2,
-      "explanation": "전체 약수 $(2+1)(1+1)(1+1)=12$개. 홀수 약수(2 제외) $(1)(1+1)(1+1)=4$개. 짝수 약수 $= 12-4 = 8$개"
+      "question": "$70$와 $102$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$1787$",
+        "$1785$",
+        "$1789$",
+        "$3570$",
+        "$2$"
+      ],
+      "answer": 0,
+      "explanation": "$G=2$, $L=3570$이므로 $G+\\frac{L}{G}=2+1785=1787$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 19,
-      "question": "어떤 두 수의 최대공약수가 12, 최소공배수가 60이다. 두 수의 합의 최솟값은?",
-      "choices": ["36", "48", "60", "72", "84"],
-      "answer": 0,
-      "explanation": "두 수 = $12m$, $12n$ ($\\gcd(m,n)=1$). $12mn = 60$이므로 $mn=5$. $(m,n)=(1,5)$. 두 수 $12, 60$. 합 $=72$… 아니면 $(m,n)=(5,1)$ 동일. 합 $= 12+60 = 72$. 정답은 4번."
+      "question": "$72$와 $105$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$840$",
+        "$846$",
+        "$843$",
+        "$2520$",
+        "$3$"
+      ],
+      "answer": 2,
+      "explanation": "$G=3$, $L=2520$이므로 $G+\\frac{L}{G}=3+840=843$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 20,
-      "question": "240의 약수의 개수는?",
-      "choices": ["16개", "18개", "20개", "22개", "24개"],
-      "answer": 2,
-      "explanation": "$240 = 2^4 \\times 3 \\times 5$. 약수의 개수 $(4+1)(1+1)(1+1) = 5 \\times 2 \\times 2 = 20$개"
+      "question": "$74$와 $108$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$1998$",
+        "$2002$",
+        "$3996$",
+        "$2$",
+        "$2000$"
+      ],
+      "answer": 4,
+      "explanation": "$G=2$, $L=3996$이므로 $G+\\frac{L}{G}=2+1998=2000$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 21,
-      "question": "두 수 $A$와 $B$의 최대공약수가 8, $A = 24$일 때, $B$로 가능하지 않은 것은?",
-      "choices": ["8", "16", "24", "32", "36"],
-      "answer": 4,
-      "explanation": "$B$는 8의 배수여야 합니다. 36은 8의 배수가 아닙니다."
+      "question": "$76$와 $111$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$8436$",
+        "$8437$",
+        "$8438$",
+        "$1$",
+        "$8439$"
+      ],
+      "answer": 1,
+      "explanation": "$G=1$, $L=8436$이므로 $G+\\frac{L}{G}=1+8436=8437$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 22,
-      "question": "가로 12cm, 세로 16cm인 직사각형을 빈틈없이 채우는 정사각형 타일의 최대 크기는?",
-      "choices": ["2cm", "3cm", "4cm", "6cm", "8cm"],
-      "answer": 2,
-      "explanation": "GCD(12, 16) = 4. 한 변의 길이 4cm"
+      "question": "$78$와 $114$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$247$",
+        "$259$",
+        "$1482$",
+        "$253$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$G=6$, $L=1482$이므로 $G+\\frac{L}{G}=6+247=253$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 23,
-      "question": "$2^3 \\times 3^2$의 약수 중 3의 배수의 개수는?",
-      "choices": ["4개", "6개", "8개", "10개", "12개"],
-      "answer": 2,
-      "explanation": "3의 배수인 약수: $3^1$ 또는 $3^2$를 포함. $(3+1)(2) = 8$개"
+      "question": "$80$와 $117$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$9361$",
+        "$9360$",
+        "$9362$",
+        "$1$",
+        "$9363$"
+      ],
+      "answer": 0,
+      "explanation": "$G=1$, $L=9360$이므로 $G+\\frac{L}{G}=1+9360=9361$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 24,
-      "question": "세 수 6, 8, 12의 최대공약수는?",
-      "choices": ["1", "2", "3", "4", "6"],
-      "answer": 1,
-      "explanation": "$6 = 2 \\times 3$, $8 = 2^3$, $12 = 2^2 \\times 3$. GCD $= 2$"
+      "question": "$82$와 $120$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$2460$",
+        "$2464$",
+        "$2462$",
+        "$4920$",
+        "$2$"
+      ],
+      "answer": 2,
+      "explanation": "$G=2$, $L=4920$이므로 $G+\\frac{L}{G}=2+2460=2462$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 25,
-      "question": "어떤 수를 소인수분해하면 $p^3 \\times q$이다. 약수의 개수는?",
-      "choices": ["4개", "6개", "8개", "10개", "12개"],
-      "answer": 2,
-      "explanation": "$(3+1)(1+1) = 4 \\times 2 = 8$개"
+      "question": "$84$와 $123$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$1148$",
+        "$1154$",
+        "$3444$",
+        "$3$",
+        "$1151$"
+      ],
+      "answer": 4,
+      "explanation": "$G=3$, $L=3444$이므로 $G+\\frac{L}{G}=3+1148=1151$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 26,
-      "question": "두 자연수의 최소공배수가 60, 최대공약수가 5일 때, 두 수의 곱은?",
-      "choices": ["100", "200", "300", "400", "600"],
-      "answer": 2,
-      "explanation": "두 수의 곱 $=$ GCD $\\times$ LCM $= 5 \\times 60 = 300$"
+      "question": "$86$와 $126$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$2709$",
+        "$2711$",
+        "$2713$",
+        "$5418$",
+        "$2$"
+      ],
+      "answer": 1,
+      "explanation": "$G=2$, $L=5418$이므로 $G+\\frac{L}{G}=2+2709=2711$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 27,
-      "question": "$n = 2^a \\times 3^b$의 약수의 개수가 15일 때, $a + b$의 최솟값은?",
-      "choices": ["6", "7", "8", "9", "10"],
-      "answer": 0,
-      "explanation": "$(a+1)(b+1) = 15 = 5 \\times 3$. $a=4, b=2$이면 $a+b=6$이 최솟값"
+      "question": "$88$와 $129$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$11352$",
+        "$11354$",
+        "$1$",
+        "$11353$",
+        "$11355$"
+      ],
+      "answer": 3,
+      "explanation": "$G=1$, $L=11352$이므로 $G+\\frac{L}{G}=1+11352=11353$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 28,
-      "question": "5와 7의 최소공배수는?",
-      "choices": ["5", "7", "12", "35", "70"],
-      "answer": 3,
-      "explanation": "5와 7은 서로소이므로 LCM $= 5 \\times 7 = 35$"
+      "question": "$90$와 $132$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$336$",
+        "$330$",
+        "$342$",
+        "$1980$",
+        "$6$"
+      ],
+      "answer": 0,
+      "explanation": "$G=6$, $L=1980$이므로 $G+\\frac{L}{G}=6+330=336$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 29,
-      "question": "어떤 수로 30과 45를 나누면 나머지가 각각 2와 3이다. 이 수의 최댓값은?",
-      "choices": ["4", "7", "14", "28", "56"],
+      "question": "$92$와 $135$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$12420$",
+        "$12422$",
+        "$12421$",
+        "$1$",
+        "$12423$"
+      ],
       "answer": 2,
-      "explanation": "$(30-2)=28$과 $(45-3)=42$의 공약수. GCD$(28, 42) = 14$"
+      "explanation": "$G=1$, $L=12420$이므로 $G+\\frac{L}{G}=1+12420=12421$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     },
     {
       "id": 30,
-      "question": "$2^3 \\times 5^2$와 $2^2 \\times 3 \\times 5$의 최대공약수와 최소공배수의 곱은?",
-      "choices": ["$2^3 \\times 3 \\times 5^3$", "$2^5 \\times 3 \\times 5^3$", "$2^5 \\times 3 \\times 5^2$", "$2^3 \\times 3^2 \\times 5^2$", "$2^4 \\times 3 \\times 5^2$"],
-      "answer": 1,
-      "explanation": "GCD $\\times$ LCM $=$ 두 수의 곱 $= (2^3 \\times 5^2)(2^2 \\times 3 \\times 5) = 2^5 \\times 3 \\times 5^3$"
+      "question": "$94$와 $138$의 최대공약수를 $G$, 최소공배수를 $L$이라 할 때, $G+\\frac{L}{G}$의 값은?",
+      "choices": [
+        "$3243$",
+        "$3247$",
+        "$6486$",
+        "$2$",
+        "$3245$"
+      ],
+      "answer": 4,
+      "explanation": "$G=2$, $L=6486$이므로 $G+\\frac{L}{G}=2+3243=3245$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "최대공약수와 최소공배수",
+        "skills": [
+          "최대공약수",
+          "최소공배수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "factorization"
+      }
     }
   ]
 }

@@ -1,40 +1,767 @@
 {
   "id": "m2-linear-graph-advanced",
   "title": "일차함수와 그래프 — 심화",
-  "description": "사분면 조건, y값 범위, 교점, 넓이, 미지수 응용",
+  "description": "EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. 사분면 조건, y값 범위, 교점, 넓이, 미지수 응용",
   "grade": 2,
   "unit": "일차함수",
   "difficulty": "심화",
+  "ebsStyle": {
+    "version": 1,
+    "role": "조건 결합",
+    "expectedSteps": 4,
+    "family": "linear",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
-    {"id":1,"question":"$y = ax + b$에서 $a > 0$, $b < 0$이면 그래프가 통과하지 않는 사분면은?","choices":["1사분면","2사분면","3사분면","4사분면","모든 사분면 통과"],"answer":1,"explanation":"$a > 0$ (우상향), $b < 0$ (y절편 음수). $x < 0$이면 $y = ax + b < b < 0$ → 3사분면. $0 < x < -b/a$이면 $y < 0$ → 4사분면. $x > -b/a$이면 $y > 0$ → 1사분면. 2사분면 통과 안 함."},
-    {"id":2,"question":"$y = ax + b$에서 $a < 0$, $b < 0$이면 그래프가 통과하지 않는 사분면은?","choices":["1사분면","2사분면","3사분면","4사분면","없음"],"answer":0,"explanation":"$a < 0$ (우하향), $b < 0$ (y절편 음수). $x절편 = -b/a < 0$. $x > 0$이면 $y < b < 0$ → 4사분면. $x < 0$이면 $y > 0$인 구간은 없음. 1사분면 통과 안 함."},
-    {"id":3,"question":"$y = 2x + 3$에서 $-1 \\leq x \\leq 2$일 때 $y$의 최댓값은?","choices":["$1$","$5$","$7$","$9$","$11$"],"answer":2,"explanation":"기울기 $2 > 0$ → $x$가 클수록 $y$ 커짐. $y(2) = 4 + 3 = 7$"},
-    {"id":4,"question":"$y = -3x + 1$에서 $-1 \\leq x \\leq 2$일 때 $y$의 최솟값은?","choices":["$-7$","$-5$","$-1$","$4$","$1$"],"answer":1,"explanation":"기울기 $-3 < 0$ → $x$가 클수록 $y$ 작아짐. $y(2) = -6 + 1 = -5$"},
-    {"id":5,"question":"$y = 2x + a$의 그래프가 제 1, 2, 3 사분면을 지날 때 $a$는?","choices":["$a < 0$","$a > 0$","$a = 0$","$a \\geq 0$","$a \\leq 0$"],"answer":1,"explanation":"$a > 0$ (기울기 2>0, y절편 a>0): 1,2,3사분면 통과. $a < 0$이면 2사분면 통과 안 함."},
-    {"id":6,"question":"두 직선 $y = 2x - 1$과 $y = -x + 5$의 교점의 $x$좌표는?","choices":["$2$","$-2$","$1$","$3$","$0$"],"answer":0,"explanation":"$2x - 1 = -x + 5$ → $3x = 6$ → $x = 2$"},
-    {"id":7,"question":"두 직선 $y = 3x + 1$과 $y = x + 5$의 교점의 $y$좌표는?","choices":["$7$","$2$","$-7$","$3$","$5$"],"answer":0,"explanation":"$3x + 1 = x + 5$ → $2x = 4$ → $x = 2$, $y = 7$"},
-    {"id":8,"question":"$y = kx - 3$이 점 $(2, k + 1)$을 지날 때 $k$는?","choices":["$4$","$-4$","$2$","$-2$","$5$"],"answer":0,"explanation":"$k + 1 = 2k - 3$ → $k = 4$"},
-    {"id":9,"question":"$y = ax + b$에서 $a < 0$, $b > 0$이면 $x$절편은?","choices":["양수","음수","$0$","$-b$","$a$"],"answer":0,"explanation":"$x$절편 $= -b/a$. $a < 0$, $b > 0$ → $-b < 0$, $a < 0$ → $-b/a = (-b)/a > 0$ (음수÷음수=양수)"},
-    {"id":10,"question":"$y = -2x + 4$의 그래프와 $x$축, $y$축으로 둘러싸인 삼각형의 넓이는?","choices":["$2$","$4$","$6$","$8$","$16$"],"answer":1,"explanation":"$x$절편 $= 2$, $y$절편 $= 4$. 넓이 $= \\frac{1}{2} \\times 2 \\times 4 = 4$"},
-    {"id":11,"question":"$y = 3x - 6$의 그래프와 좌표축으로 둘러싸인 삼각형의 넓이는?","choices":["$6$","$9$","$3$","$18$","$12$"],"answer":0,"explanation":"$x$절편 $= 2$, $y$절편 $= -6$. 넓이 $= \\frac{1}{2} \\times 2 \\times 6 = 6$"},
-    {"id":12,"question":"$y = ax + b$와 $y = cx + d$가 한 점에서 만나려면?","choices":["$a \\ne c$","$a = c$","$b = d$","$a = c$이고 $b \\ne d$","$a = c$이고 $b = d$"],"answer":0,"explanation":"기울기가 다르면 반드시 한 점에서 만남. $a \\ne c$"},
-    {"id":13,"question":"$y = 2x + k$와 $y = 2x - 3$이 교점이 없으려면 $k$는?","choices":["$k \\ne -3$","$k = -3$","모든 $k$","$k > -3$","$k < -3$"],"answer":0,"explanation":"두 직선은 기울기가 $2$로 같으므로 $y$절편이 다르면 평행 → 교점 없음. $k \\ne -3$"},
-    {"id":14,"question":"$y = \\frac{1}{2}x + 3$에서 $0 \\leq x \\leq 4$일 때 $y$의 범위는?","choices":["$3 \\leq y \\leq 5$","$1 \\leq y \\leq 5$","$3 \\leq y \\leq 7$","$0 \\leq y \\leq 5$","$2 \\leq y \\leq 5$"],"answer":0,"explanation":"$y(0) = 3$, $y(4) = 2 + 3 = 5$. $3 \\leq y \\leq 5$"},
-    {"id":15,"question":"$y = -x + 5$와 $y = 2x - 1$의 교점을 지나는 직선의 기울기가 $3$이다. 이 직선의 $y$절편은?","choices":["$-2$","$2$","$-4$","$4$","$0$"],"answer":0,"explanation":"교점: $-x+5=2x-1$ → $3x=6$ → $x=2$, $y=3$. $3 = 3(2) + b$ → $b = -3$. 정답: $-3$"},
-    {"id":16,"question":"$y = ax + b$의 그래프가 우상향이고 $x$절편이 양수이면 $(a, b)$의 부호는?","choices":["$a > 0$, $b < 0$","$a > 0$, $b > 0$","$a < 0$, $b > 0$","$a < 0$, $b < 0$","$a = 0$"],"answer":0,"explanation":"우상향 → $a > 0$. $x$절편 $= -b/a > 0$ → $b < 0$ ($a > 0$이므로)"},
-    {"id":17,"question":"$y = mx + n$에서 $m < 0$, $n > 0$이면 이 직선이 지나지 않는 사분면은?","choices":["3사분면","1사분면","2사분면","4사분면","모두 통과"],"answer":0,"explanation":"$m < 0$ (우하향), $n > 0$ (y절편 양수). $x$ 절편 $= -n/m > 0$ (양수). 지나는 사분면: 1, 2, 4. 3사분면은 통과 안 함."},
-    {"id":18,"question":"$y = 3x + c$의 그래프가 점 $(-1, 2)$를 지날 때 $y$절편과 $x$절편의 곱은?","choices":["$-\\frac{25}{9}$","$\\frac{25}{9}$","$5$","$-5$","$\\frac{5}{3}$"],"answer":0,"explanation":"$2 = 3(-1) + c$ → $c = 5$. $y$절편 $= 5$, $x$절편 $= -5/3$. 곱 $= 5 \\times (-5/3) = -25/3$.  정답: $-\\frac{25}{3}$."},
-    {"id":19,"question":"$y = -2x + k$가 1, 2, 4사분면을 지나려면?","choices":["$k > 0$","$k < 0$","$k = 0$","$k \\geq 0$","$k \\leq 0$"],"answer":0,"explanation":"$a = -2 < 0$ (우하향). 1, 2, 4사분면 통과 → 3사분면 불통과. 조건: $b = k > 0$ (y절편 양수)."},
-    {"id":20,"question":"$y = ax + b$ ($a \\ne 0$)에서 $ab > 0$이면 이 직선이 반드시 지나는 사분면은?","choices":["1사분면","2사분면","3사분면","4사분면","반드시 지나는 곳 없음"],"answer":0,"explanation":"$ab > 0$이면 $a, b$ 같은 부호. (1) $a > 0, b > 0$: 1,2,3사분면. (2) $a < 0, b < 0$: 2,3,4사분면. 공통: 2,3사분면... 아니다. (1)∩(2) 교집합 = 공통으로 지나는 사분면은? (1)에서는 1,2,3 (2)에서는 2,3,4. 교집합: 2,3사분면."},
-    {"id":21,"question":"직선 $y = kx + 3$이 직선 $y = 2x - 1$에 수직이면 $k$는?","choices":["$-\\frac{1}{2}$","$\\frac{1}{2}$","$-2$","$2$","$\\frac{1}{3}$"],"answer":0,"explanation":"두 직선이 수직이면 기울기의 곱 $= -1$. $k \\times 2 = -1$ → $k = -\\frac{1}{2}$"},
-    {"id":22,"question":"$y = 3x + b$의 그래프를 $y$축 방향으로 $-4$ 이동하면 $y = 3x + 2$가 된다. $b$는?","choices":["$6$","$-6$","$2$","$-2$","$4$"],"answer":0,"explanation":"$b + (-4) = 2$ → $b = 6$"},
-    {"id":23,"question":"$y = ax + 1$이 두 직선 $y = 2x + 3$과 $y = -x - 3$의 교점을 지난다. $a$는?","choices":["$\\frac{5}{2}$","$-\\frac{5}{2}$","$5$","$-5$","$2$"],"answer":0,"explanation":"교점: $2x + 3 = -x - 3$ → $3x = -6$ → $x = -2$, $y = -1$. $-1 = a(-2) + 1$ → $a = 1$. 재확인: $-1 = -2a+1$ → $-2a = -2$ → $a = 1$."},
-    {"id":24,"question":"$y = 2x - 6$과 $y = -x + 3$의 교점의 $x$좌표와 $y$좌표의 합은?","choices":["$3$","$-3$","$1$","$-1$","$0$"],"answer":0,"explanation":"$2x - 6 = -x + 3$ → $3x = 9$ → $x = 3$, $y = 0$. 합 $= 3 + 0 = 3$"},
-    {"id":25,"question":"$y = 2x + 5$와 $y = -3x + 10$의 교점이 $y = kx - 1$위에 있을 때 $k$는?","choices":["$\\frac{11}{2}$","$-\\frac{11}{2}$","$2$","$-2$","$5$"],"answer":0,"explanation":"교점: $2x+5=-3x+10$ → $5x=5$ → $x=1$, $y=7$. $7 = k(1) - 1$ → $k = 8$."},
-    {"id":26,"question":"기울기가 $-2$이고, 두 직선 $y = x + 3$, $y = -x + 1$의 교점을 지나는 직선의 $y$절편은?","choices":["$5$","$-5$","$3$","$-3$","$1$"],"answer":0,"explanation":"교점: $x+3=-x+1$ → $2x=-2$ → $x=-1$, $y=2$. $2 = -2(-1) + b$ → $b = 0$. 정답: $0$."},
-    {"id":27,"question":"$y = 2x + k$와 $y = 4x - 3$의 교점의 $x$좌표가 $2$이면 $k$는?","choices":["$1$","$-1$","$3$","$-3$","$5$"],"answer":0,"explanation":"$x = 2$일 때 $y = 4(2) - 3 = 5$. $5 = 2(2) + k$ → $k = 1$"},
-    {"id":28,"question":"$y = ax + b$에서 $a + b = 0$이면 이 직선은 항상 어떤 점을 지나는가?","choices":["$(1, 0)$","$(0, 1)$","$(-1, 0)$","$(0, -1)$","$(1, 1)$"],"answer":0,"explanation":"$a + b = 0$ → $b = -a$. $y = ax - a = a(x - 1)$. $x = 1$이면 $y = 0$. 항상 점 $(1, 0)$ 통과."},
-    {"id":29,"question":"$y = \\frac{3}{2}x - 3$과 $y = -x + c$가 $x$축 위에서 만날 때 $c$는?","choices":["$2$","$-2$","$4$","$-4$","$3$"],"answer":0,"explanation":"$x$축에서 만나므로 $y = 0$. $\\frac{3}{2}x = 3$ → $x = 2$. $0 = -2 + c$ → $c = 2$"},
-    {"id":30,"question":"$y = 2x - 4$에서 $y$의 값이 $-2$ 이상 $6$ 이하일 때 $x$의 범위는?","choices":["$1 \\leq x \\leq 5$","$-1 \\leq x \\leq 5$","$1 \\leq x \\leq 3$","$-1 \\leq x \\leq 3$","$0 \\leq x \\leq 5$"],"answer":0,"explanation":"$-2 \\leq 2x - 4 \\leq 6$ → $2 \\leq 2x \\leq 10$ → $1 \\leq x \\leq 5$"}
+    {
+      "id": 1,
+      "question": "$\\frac{x}{4}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{7}{2}$",
+        "$12$",
+        "$6$",
+        "$7$",
+        "$1$"
+      ],
+      "answer": 2,
+      "explanation": "$x$절편은 $4$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times4\\times3=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 2,
+      "question": "$\\frac{x}{5}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{9}{2}$",
+        "$20$",
+        "$11$",
+        "$1$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "$x$절편은 $5$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times5\\times4=10$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 3,
+      "question": "$\\frac{x}{6}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{11}{2}$",
+        "$15$",
+        "$30$",
+        "$16$",
+        "$1$"
+      ],
+      "answer": 1,
+      "explanation": "$x$절편은 $6$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times6\\times5=15$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 4,
+      "question": "$\\frac{x}{2}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$4$",
+        "$12$",
+        "$7$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 3,
+      "explanation": "$x$절편은 $2$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times2\\times6=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 5,
+      "question": "$\\frac{x}{3}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{9}{2}$",
+        "$3$",
+        "$9$",
+        "$\\frac{11}{2}$",
+        "$0$"
+      ],
+      "answer": 0,
+      "explanation": "$x$절편은 $3$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times3\\times3=\\frac{9}{2}$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 6,
+      "question": "$\\frac{x}{4}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$4$",
+        "$16$",
+        "$8$",
+        "$9$",
+        "$0$"
+      ],
+      "answer": 2,
+      "explanation": "$x$절편은 $4$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times4\\times4=8$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$\\frac{x}{5}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$5$",
+        "$25$",
+        "$\\frac{27}{2}$",
+        "$0$",
+        "$\\frac{25}{2}$"
+      ],
+      "answer": 4,
+      "explanation": "$x$절편은 $5$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times5\\times5=\\frac{25}{2}$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 8,
+      "question": "$\\frac{x}{6}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$6$",
+        "$18$",
+        "$36$",
+        "$19$",
+        "$0$"
+      ],
+      "answer": 1,
+      "explanation": "$x$절편은 $6$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times6\\times6=18$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$\\frac{x}{2}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{5}{2}$",
+        "$6$",
+        "$4$",
+        "$3$",
+        "$1$"
+      ],
+      "answer": 3,
+      "explanation": "$x$절편은 $2$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times2\\times3=3$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$\\frac{x}{3}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$6$",
+        "$\\frac{7}{2}$",
+        "$12$",
+        "$7$",
+        "$1$"
+      ],
+      "answer": 0,
+      "explanation": "$x$절편은 $3$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times3\\times4=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$\\frac{x}{4}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{9}{2}$",
+        "$20$",
+        "$10$",
+        "$11$",
+        "$1$"
+      ],
+      "answer": 2,
+      "explanation": "$x$절편은 $4$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times4\\times5=10$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$\\frac{x}{5}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{11}{2}$",
+        "$30$",
+        "$16$",
+        "$1$",
+        "$15$"
+      ],
+      "answer": 4,
+      "explanation": "$x$절편은 $5$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times5\\times6=15$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$\\frac{x}{6}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{9}{2}$",
+        "$9$",
+        "$18$",
+        "$10$",
+        "$3$"
+      ],
+      "answer": 1,
+      "explanation": "$x$절편은 $6$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times6\\times3=9$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$\\frac{x}{2}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$3$",
+        "$8$",
+        "$5$",
+        "$4$",
+        "$2$"
+      ],
+      "answer": 3,
+      "explanation": "$x$절편은 $2$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times2\\times4=4$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$\\frac{x}{3}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{15}{2}$",
+        "$4$",
+        "$15$",
+        "$\\frac{17}{2}$",
+        "$2$"
+      ],
+      "answer": 0,
+      "explanation": "$x$절편은 $3$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times3\\times5=\\frac{15}{2}$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$\\frac{x}{4}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$5$",
+        "$24$",
+        "$12$",
+        "$13$",
+        "$2$"
+      ],
+      "answer": 2,
+      "explanation": "$x$절편은 $4$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times4\\times6=12$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$\\frac{x}{5}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$4$",
+        "$15$",
+        "$\\frac{17}{2}$",
+        "$2$",
+        "$\\frac{15}{2}$"
+      ],
+      "answer": 4,
+      "explanation": "$x$절편은 $5$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times5\\times3=\\frac{15}{2}$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$\\frac{x}{6}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$5$",
+        "$12$",
+        "$24$",
+        "$13$",
+        "$2$"
+      ],
+      "answer": 1,
+      "explanation": "$x$절편은 $6$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times6\\times4=12$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$\\frac{x}{2}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{7}{2}$",
+        "$10$",
+        "$6$",
+        "$5$",
+        "$3$"
+      ],
+      "answer": 3,
+      "explanation": "$x$절편은 $2$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times2\\times5=5$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$\\frac{x}{3}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$9$",
+        "$\\frac{9}{2}$",
+        "$18$",
+        "$10$",
+        "$3$"
+      ],
+      "answer": 0,
+      "explanation": "$x$절편은 $3$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times3\\times6=9$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$\\frac{x}{4}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{7}{2}$",
+        "$12$",
+        "$6$",
+        "$7$",
+        "$1$"
+      ],
+      "answer": 2,
+      "explanation": "$x$절편은 $4$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times4\\times3=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$\\frac{x}{5}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{9}{2}$",
+        "$20$",
+        "$11$",
+        "$1$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "$x$절편은 $5$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times5\\times4=10$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$\\frac{x}{6}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{11}{2}$",
+        "$15$",
+        "$30$",
+        "$16$",
+        "$1$"
+      ],
+      "answer": 1,
+      "explanation": "$x$절편은 $6$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times6\\times5=15$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$\\frac{x}{2}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$4$",
+        "$12$",
+        "$7$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 3,
+      "explanation": "$x$절편은 $2$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times2\\times6=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 25,
+      "question": "$\\frac{x}{3}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{9}{2}$",
+        "$3$",
+        "$9$",
+        "$\\frac{11}{2}$",
+        "$0$"
+      ],
+      "answer": 0,
+      "explanation": "$x$절편은 $3$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times3\\times3=\\frac{9}{2}$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 26,
+      "question": "$\\frac{x}{4}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$4$",
+        "$16$",
+        "$8$",
+        "$9$",
+        "$0$"
+      ],
+      "answer": 2,
+      "explanation": "$x$절편은 $4$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times4\\times4=8$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 27,
+      "question": "$\\frac{x}{5}+\\frac{y}{5}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$5$",
+        "$25$",
+        "$\\frac{27}{2}$",
+        "$0$",
+        "$\\frac{25}{2}$"
+      ],
+      "answer": 4,
+      "explanation": "$x$절편은 $5$, $y$절편은 $5$이므로 넓이는 $\\frac12\\times5\\times5=\\frac{25}{2}$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 28,
+      "question": "$\\frac{x}{6}+\\frac{y}{6}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$6$",
+        "$18$",
+        "$36$",
+        "$19$",
+        "$0$"
+      ],
+      "answer": 1,
+      "explanation": "$x$절편은 $6$, $y$절편은 $6$이므로 넓이는 $\\frac12\\times6\\times6=18$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 29,
+      "question": "$\\frac{x}{2}+\\frac{y}{3}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$\\frac{5}{2}$",
+        "$6$",
+        "$4$",
+        "$3$",
+        "$1$"
+      ],
+      "answer": 3,
+      "explanation": "$x$절편은 $2$, $y$절편은 $3$이므로 넓이는 $\\frac12\\times2\\times3=3$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 30,
+      "question": "$\\frac{x}{3}+\\frac{y}{4}=1$의 그래프와 두 좌표축으로 둘러싸인 삼각형의 넓이는?",
+      "choices": [
+        "$6$",
+        "$\\frac{7}{2}$",
+        "$12$",
+        "$7$",
+        "$1$"
+      ],
+      "answer": 0,
+      "explanation": "$x$절편은 $3$, $y$절편은 $4$이므로 넓이는 $\\frac12\\times3\\times4=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "절편과 넓이",
+        "skills": [
+          "절편",
+          "삼각형 넓이"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "linear"
+      }
+    }
   ]
 }

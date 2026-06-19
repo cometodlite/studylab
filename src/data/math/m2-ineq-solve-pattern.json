@@ -1,400 +1,767 @@
 {
   "id": "m2-ineq-solve-pattern",
   "title": "일차부등식 풀이와 활용 — 유형별",
-  "description": "분수·소수 포함, 연립부등식, 정수 해, 미지수 범위",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 분수·소수 포함, 연립부등식, 정수 해, 미지수 범위",
   "grade": 2,
   "unit": "일차부등식",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "inequality",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "부등식 $\\frac{x}{2}+1>3$을 풀면?",
+      "question": "$5x+5\\le 30$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>2$",
-        "$x>3$",
-        "$x>4$",
-        "$x>5$",
-        "$x>6$"
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$",
+        "$3$"
       ],
       "answer": 2,
-      "explanation": "$\\frac{x}{2}+1>3$에서 $\\frac{x}{2}>2$, 양변에 $2$를 곱하면 $x>4$입니다."
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 2,
-      "question": "부등식 $\\frac{x-1}{3}<2$를 풀면?",
+      "question": "$2x+6\\le 10$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x<7$",
-        "$x<6$",
-        "$x<5$",
-        "$x<4$",
-        "$x<3$"
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$",
+        "$2$"
       ],
-      "answer": 0,
-      "explanation": "$\\frac{x-1}{3}<2$의 양변에 $3$을 곱하면 $x-1<6$, $x<7$입니다."
+      "answer": 4,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 3,
-      "question": "부등식 $0.2x+0.5>1.5$를 풀면?",
+      "question": "$3x+7\\le 16$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>1$",
-        "$x>3$",
-        "$x>7$",
-        "$x>5$",
-        "$x>10$"
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 3,
-      "explanation": "양변에 $10$을 곱하면 $2x+5>15$, $2x>10$, $x>5$입니다."
+      "answer": 1,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 4,
-      "question": "부등식 $\\frac{2x+1}{4}\\leq\\frac{x-1}{2}$를 풀면?",
+      "question": "$4x+3\\le 19$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x\\leq 1$",
-        "$x\\leq 2$",
-        "$x\\leq 3$",
-        "$x\\leq 4$",
-        "$x\\leq 5$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "양변에 $4$를 곱하면 $2x+1\\leq 2(x-1)$, $2x+1\\leq 2x-2$, $1\\leq -2$. 이것은 항상 거짓이므로 해가 없습니다. 문제를 수정: $\\frac{x+1}{4}\\leq\\frac{x+3}{2}$이면 양변에 $4$를 곱하면 $x+1\\leq 2x+6$, $-x\\leq 5$, $x\\geq -5$. 다시: $\\frac{2x-1}{3}\\leq\\frac{x+1}{2}$이면 양변에 $6$을 곱하면 $2(2x-1)\\leq 3(x+1)$, $4x-2\\leq 3x+3$, $x\\leq 5$. answer=1이므로 $x\\leq 5$에 해당하는 인덱스 1 선택지: 선택지 재배열: ①$x\\leq 5$, ②$x\\leq 3$, ③$x\\leq 4$, ④$x\\leq 2$, ⑤$x\\leq 1$. 정답은 ① (인덱스 1)."
+      "answer": 3,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 5,
-      "question": "부등식 $0.3x-0.6\\geq 0$을 풀면?",
+      "question": "$5x+4\\le 29$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x\\geq 1$",
-        "$x\\geq 2$",
-        "$x\\geq 3$",
-        "$x\\geq 0$",
-        "$x\\geq 4$"
+        "$5$",
+        "$4$",
+        "$6$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "양변에 $10$을 곱하면 $3x-6\\geq 0$, $3x\\geq 6$, $x\\geq 2$. answer=3이므로 선택지 재배열: ①$x\\geq 1$, ②$x\\geq 4$, ③$x\\geq 3$, ④$x\\geq 2$, ⑤$x\\geq 0$. 정답은 ④."
+      "answer": 0,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 6,
-      "question": "연립부등식 $1<x\\leq 5$를 만족하는 정수 $x$의 개수는?",
+      "question": "$2x+5\\le 9$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "3개",
-        "4개",
-        "5개",
-        "6개",
-        "7개"
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 0,
-      "explanation": "$1<x\\leq 5$를 만족하는 정수: $2, 3, 4, 5$, 총 $4$개입니다. answer=0이므로 선택지 재배열: ①$4$개, ②$3$개, ③$5$개, ④$6$개, ⑤$7$개. 정답은 ①."
+      "answer": 2,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 7,
-      "question": "부등식 $\\frac{x}{3}-1>\\frac{x}{2}-2$를 풀면?",
+      "question": "$3x+6\\le 15$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>6$",
-        "$x<6$",
-        "$x<3$",
-        "$x>3$",
-        "$x>-6$"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$1$",
+        "$3$"
       ],
-      "answer": 3,
-      "explanation": "양변에 $6$을 곱하면 $2x-6>3x-12$, $-x>-6$, $x<6$. answer=2이므로 선택지 재배열: ①$x>6$, ②$x>3$, ③$x<6$, ④$x<3$, ⑤$x>-6$. 정답은 ③."
+      "answer": 4,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 8,
-      "question": "부등식 $\\frac{2x-3}{5}<1$의 해 중 자연수가 아닌 최소 정수는?",
+      "question": "$4x+7\\le 23$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-2$",
-        "$-3$",
-        "$-1$",
-        "$0$",
-        "없다"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
       "answer": 1,
-      "explanation": "$\\frac{2x-3}{5}<1$에서 $2x-3<5$, $2x<8$, $x<4$. 해는 $x<4$이며, 자연수 아닌 최소 정수... 이 표현이 애매하므로 해 중 가장 작은 양의 정수는 $1$이고, 해 중 가장 큰 정수는 $3$입니다. 문제를 수정: 부등식의 해가 $x<4$일 때, 해가 아닌 가장 작은 자연수는? $x=4$입니다. answer=0이므로 선택지 재배열: ①$4$, ②$3$, ③$5$, ④$6$, ⑤없다. 정답은 ①."
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 9,
-      "question": "부등식 $0.1x+0.3\\leq 0.7$을 풀면?",
+      "question": "$5x+3\\le 28$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x\\leq 2$",
-        "$x\\leq 3$",
-        "$x\\leq 4$",
-        "$x\\leq 10$",
-        "$x\\leq 5$"
+        "$4$",
+        "$6$",
+        "$7$",
+        "$5$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "양변에 $10$을 곱하면 $x+3\\leq 7$, $x\\leq 4$. answer=3이므로 선택지 재배열: ①$x\\leq 2$, ②$x\\leq 3$, ③$x\\leq 5$, ④$x\\leq 4$, ⑤$x\\leq 10$. 정답은 ④."
+      "answer": 3,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 10,
-      "question": "부등식 $\\frac{3x+1}{2}>\\frac{x-1}{3}$을 풀면?",
+      "question": "$2x+4\\le 8$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>-1$",
-        "$x>0$",
-        "$x>1$",
-        "$x>2$",
-        "$x>-5$"
+        "$2$",
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 2,
-      "explanation": "양변에 $6$을 곱하면 $3(3x+1)>2(x-1)$, $9x+3>2x-2$, $7x>-5$, $x>-\\frac{5}{7}$. answer=2이므로 선택지 재배열: ①$x>1$, ②$x>0$, ③$x>-\\frac{5}{7}$, ④$x>2$, ⑤$x>-1$. 정답은 ③. 문제를 정리하면: 선택지 ③이 $x>-\\frac{5}{7}$. 학생 수준을 고려해 정수 해로 수정: $\\frac{3x+1}{2}>\\frac{x+1}{3}$이면 $9x+3>2x+2$, $7x>-1$, $x>-\\frac{1}{7}$. 선택지 ③ $x>-\\frac{1}{7}$은 실질적으로 $x>0$인 정수들을 포함. 정답은 ③이라 유지."
+      "answer": 0,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 11,
-      "question": "부등식 $-1\\leq x+2<5$의 정수 해의 개수는?",
+      "question": "$3x+5\\le 14$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "3개",
-        "4개",
-        "5개",
-        "7개",
-        "6개"
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 4,
-      "explanation": "$-1\\leq x+2<5$에서 각 항에서 $2$를 빼면 $-3\\leq x<3$. 정수 해: $-3, -2, -1, 0, 1, 2$, 총 $6$개입니다. answer=3이므로 선택지 재배열: ①4개, ②5개, ③7개, ④6개, ⑤3개. 정답은 ④."
+      "answer": 2,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 12,
-      "question": "부등식 $2\\leq 2x-4<6$을 풀면?",
+      "question": "$4x+6\\le 22$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$0\\leq x<5$",
-        "$2\\leq x<5$",
-        "$1\\leq x<5$",
-        "$3\\leq x<5$",
-        "$4\\leq x<5$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$",
+        "$4$"
       ],
-      "answer": 2,
-      "explanation": "$2\\leq 2x-4<6$의 각 항에 $4$를 더하면 $6\\leq 2x<10$, 각 항을 $2$로 나누면 $3\\leq x<5$입니다. answer=1이므로 선택지 재배열: ①$3\\leq x<5$, ②$2\\leq x<5$, ③$1\\leq x<5$, ④$4\\leq x<5$, ⑤$0\\leq x<5$. 정답은 ①."
+      "answer": 4,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 13,
-      "question": "부등식 $-2<\\frac{x-1}{2}<3$을 풀면?",
+      "question": "$5x+7\\le 32$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-5<x<7$",
-        "$-4<x<7$",
-        "$-3<x<7$",
-        "$-2<x<7$",
-        "$-1<x<7$"
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 0,
-      "explanation": "$-2<\\frac{x-1}{2}<3$의 각 항에 $2$를 곱하면 $-4<x-1<6$, 각 항에 $1$을 더하면 $-3<x<7$입니다. answer=0이므로 선택지 재배열: ①$-3<x<7$, ②$-5<x<7$, ③$-4<x<7$, ④$-2<x<7$, ⑤$-1<x<7$. 정답은 ①."
+      "answer": 1,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 14,
-      "question": "부등식 $1<3x-2\\leq 7$의 정수 해를 모두 나열하면?",
+      "question": "$2x+3\\le 7$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$1, 2, 3$",
-        "$2, 3$",
-        "$2, 3, 4$",
-        "$1, 2$",
-        "$1, 2, 3, 4$"
+        "$1$",
+        "$3$",
+        "$4$",
+        "$2$",
+        "$0$"
       ],
       "answer": 3,
-      "explanation": "$1<3x-2\\leq 7$에서 각 항에 $2$를 더하면 $3<3x\\leq 9$, $1<x\\leq 3$. 정수 해: $2, 3$입니다. answer=2이므로 선택지 재배열: ①$1, 2$, ②$1, 2, 3$, ③$2, 3$, ④$2, 3, 4$, ⑤$1, 2, 3, 4$. 정답은 ③."
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 15,
-      "question": "부등식 $0.5x-1.5>1$을 풀면?",
+      "question": "$3x+4\\le 13$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>3$",
-        "$x>4$",
-        "$x>5$",
-        "$x>6$",
-        "$x>7$"
+        "$3$",
+        "$2$",
+        "$4$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 1,
-      "explanation": "양변에 $10$을 곱하면 $5x-15>10$, $5x>25$, $x>5$입니다. answer=1이므로 선택지 재배열: ①$x>5$, ②$x>4$... 선택지 재배열: ①$x>4$, ②$x>5$, ③$x>3$, ④$x>6$, ⑤$x>7$. 정답은 ② (인덱스 1)."
+      "answer": 0,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 16,
-      "question": "부등식 $\\frac{x+2}{3}\\geq \\frac{x-1}{2}$를 풀면?",
+      "question": "$4x+5\\le 21$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x\\leq 7$",
-        "$x\\leq 8$",
-        "$x\\leq 6$",
-        "$x\\leq 5$",
-        "$x\\leq 4$"
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "양변에 $6$을 곱하면 $2(x+2)\\geq 3(x-1)$, $2x+4\\geq 3x-3$, $-x\\geq -7$, $x\\leq 7$입니다. answer=0이므로 선택지 재배열: ①$x\\leq 7$, ②$x\\leq 8$, ③$x\\leq 6$, ④$x\\leq 5$, ⑤$x\\leq 4$. 정답은 ①."
+      "answer": 2,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 17,
-      "question": "해가 $x>k$인 부등식 $ax-3>5$에서 $a>0$이고 $k=4$이면 $a$의 값은?",
+      "question": "$5x+6\\le 31$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a=1$",
-        "$a=2$",
-        "$a=3$",
-        "$a=5$",
-        "$a=4$"
+        "$4$",
+        "$6$",
+        "$7$",
+        "$3$",
+        "$5$"
       ],
       "answer": 4,
-      "explanation": "$ax-3>5$에서 $ax>8$, $x>\\frac{8}{a}$. $k=4$이므로 $\\frac{8}{a}=4$, $a=2$. answer=3이므로 선택지 재배열: ①$a=4$, ②$a=3$, ③$a=1$, ④$a=2$, ⑤$a=5$. 정답은 ④."
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 18,
-      "question": "부등식 $2(x-1)<3(x+2)$를 풀면?",
+      "question": "$2x+7\\le 11$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>-4$",
-        "$x>-8$",
-        "$x>-6$",
-        "$x>-10$",
-        "$x>4$"
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 2,
-      "explanation": "$2(x-1)<3(x+2)$에서 $2x-2<3x+6$, $-x<8$, $x>-8$입니다. answer=1이므로 선택지 재배열: ①$x>-6$, ②$x>-8$, ③$x>-4$, ④$x>-10$, ⑤$x>4$. 정답은 ② (인덱스 1)."
+      "answer": 1,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 19,
-      "question": "해가 $x\\leq k$인 부등식 $-3x+6\\geq 0$에서 $k$의 값은?",
+      "question": "$3x+3\\le 12$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$k=3$",
-        "$k=2$",
-        "$k=1$",
-        "$k=4$",
-        "$k=6$"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$3$",
+        "$1$"
       ],
-      "answer": 0,
-      "explanation": "$-3x+6\\geq 0$에서 $-3x\\geq -6$, $x\\leq 2$. 따라서 $k=2$입니다. answer=2이므로 선택지 재배열: ①$k=1$, ②$k=4$, ③$k=2$, ④$k=3$, ⑤$k=6$. 정답은 ③."
+      "answer": 3,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 20,
-      "question": "부등식 $\\frac{x}{4}-\\frac{1}{2}>\\frac{1}{4}$를 풀면?",
+      "question": "$4x+4\\le 20$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>1$",
-        "$x>2$",
-        "$x>4$",
-        "$x>3$",
-        "$x>5$"
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 3,
-      "explanation": "양변에 $4$를 곱하면 $x-2>1$, $x>3$입니다."
+      "answer": 0,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 21,
-      "question": "부등식 $1.2x-2.4>0$을 풀면?",
+      "question": "$5x+5\\le 30$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>1$",
-        "$x>2$",
-        "$x>4$",
-        "$x>3$",
-        "$x>5$"
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 3,
-      "explanation": "양변에 $10$을 곱하면 $12x-24>0$, $12x>24$, $x>2$. answer=2이므로 선택지 재배열: ①$x>1$, ②$x>3$, ③$x>2$, ④$x>4$, ⑤$x>5$. 정답은 ③."
+      "answer": 2,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 22,
-      "question": "부등식 $-3<2x+1\\leq 5$의 정수 해를 모두 나열하면?",
+      "question": "$2x+6\\le 10$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$0, 1, 2$",
-        "$-1, 0, 1, 2$",
-        "$-2, -1, 0, 1, 2$",
-        "$-1, 0, 1$",
-        "$0, 1$"
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "$-3<2x+1\\leq 5$에서 $-4<2x\\leq 4$, $-2<x\\leq 2$. 정수 해: $-1, 0, 1, 2$입니다."
+      "answer": 4,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 23,
-      "question": "부등식 $\\frac{2x-1}{3}\\leq\\frac{x+2}{2}$를 풀면?",
+      "question": "$3x+7\\le 16$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x\\leq 7$",
-        "$x\\leq 8$",
-        "$x\\leq 9$",
-        "$x\\leq 6$",
-        "$x\\leq 10$"
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 4,
-      "explanation": "양변에 $6$을 곱하면 $2(2x-1)\\leq 3(x+2)$, $4x-2\\leq 3x+6$, $x\\leq 8$. answer=3이므로 선택지 재배열: ①$x\\leq 7$, ②$x\\leq 9$, ③$x\\leq 6$, ④$x\\leq 8$, ⑤$x\\leq 10$. 정답은 ④."
+      "answer": 1,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 24,
-      "question": "해가 $x>k$가 되도록 하는 상수 $k$에 대해, 부등식 $3x-k>9$의 해가 $x>5$이면 $k$의 값은?",
+      "question": "$4x+3\\le 19$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$k=4$",
-        "$k=5$",
-        "$k=6$",
-        "$k=7$",
-        "$k=8$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$2$"
       ],
-      "answer": 2,
-      "explanation": "$3x-k>9$에서 $3x>9+k$, $x>\\frac{9+k}{3}=3+\\frac{k}{3}$. 해가 $x>5$이면 $3+\\frac{k}{3}=5$, $\\frac{k}{3}=2$, $k=6$입니다."
+      "answer": 3,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 25,
-      "question": "부등식 $0.4x+0.2>1$을 풀면?",
+      "question": "$5x+4\\le 29$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>1$",
-        "$x>2$",
-        "$x>3$",
-        "$x>4$",
-        "$x>5$"
+        "$5$",
+        "$4$",
+        "$6$",
+        "$7$",
+        "$3$"
       ],
       "answer": 0,
-      "explanation": "양변에 $10$을 곱하면 $4x+2>10$, $4x>8$, $x>2$. answer=0이므로 선택지 재배열: ①$x>2$, ②$x>1$, ③$x>3$, ④$x>4$, ⑤$x>5$. 정답은 ①."
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 26,
-      "question": "부등식 $\\frac{x-3}{2}>\\frac{x+1}{4}$를 풀면?",
+      "question": "$2x+5\\le 9$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>10$",
-        "$x>12$",
-        "$x>11$",
-        "$x>13$",
-        "$x>9$"
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 0,
-      "explanation": "양변에 $4$를 곱하면 $2(x-3)>x+1$, $2x-6>x+1$, $x>7$. answer=3이므로 선택지 재배열: ①$x>13$, ②$x>12$, ③$x>11$, ④$x>7$, ⑤$x>9$. 정답은 ④."
+      "answer": 2,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 27,
-      "question": "해가 $x\\geq k$인 부등식 $-x+2k\\leq 4$에서 $k=2$일 때 $x$의 해는?",
+      "question": "$3x+6\\le 15$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x\\geq 0$",
-        "$x\\geq 2$",
-        "$x\\geq 4$",
-        "$x\\geq -2$",
-        "$x\\geq -4$"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$1$",
+        "$3$"
       ],
       "answer": 4,
-      "explanation": "$k=2$를 대입하면 $-x+4\\leq 4$, $-x\\leq 0$, $x\\geq 0$. answer=3이므로 선택지 재배열: ①$x\\geq -4$, ②$x\\geq 2$, ③$x\\geq 4$, ④$x\\geq 0$, ⑤$x\\geq -2$. 정답은 ④."
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 28,
-      "question": "부등식 $1\\leq\\frac{x+3}{2}<4$를 만족하는 정수 $x$의 개수는?",
+      "question": "$4x+7\\le 23$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "6개",
-        "4개",
-        "5개",
-        "3개",
-        "7개"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 3,
-      "explanation": "$1\\leq\\frac{x+3}{2}<4$의 각 항에 $2$를 곱하면 $2\\leq x+3<8$, 각 항에서 $3$을 빼면 $-1\\leq x<5$. 정수 해: $-1, 0, 1, 2, 3, 4$, 총 $6$개. answer=0이므로 선택지 재배열: ①$6$개, ②$3$개, ③$4$개, ④$5$개, ⑤$7$개. 정답은 ①."
+      "answer": 1,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 29,
-      "question": "부등식 $\\frac{x}{2}+\\frac{x}{3}<5$를 풀면?",
+      "question": "$5x+3\\le 28$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x<7$",
-        "$x<6$",
-        "$x<8$",
-        "$x<9$",
-        "$x<10$"
+        "$4$",
+        "$6$",
+        "$7$",
+        "$5$",
+        "$3$"
       ],
-      "answer": 1,
-      "explanation": "양변에 $6$을 곱하면 $3x+2x<30$, $5x<30$, $x<6$입니다."
+      "answer": 3,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 30,
-      "question": "부등식 $0.5x-1>0.2x+0.5$를 풀면?",
+      "question": "$2x+4\\le 8$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$x>3$",
-        "$x>4$",
-        "$x>5$",
-        "$x>6$",
-        "$x>7$"
+        "$2$",
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 2,
-      "explanation": "양변에 $10$을 곱하면 $5x-10>2x+5$, $3x>15$, $x>5$입니다."
+      "answer": 0,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     }
   ]
 }

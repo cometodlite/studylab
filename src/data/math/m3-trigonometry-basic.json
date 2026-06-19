@@ -1,220 +1,767 @@
 {
   "id": "m3-trigonometry-basic",
   "title": "삼각비 — 기본",
-  "description": "삼각비의 뜻과 값",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 삼각비의 뜻과 값",
   "grade": 3,
   "unit": "삼각비",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "trigonometry",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "직각삼각형 ABC에서 $\\angle C = 90°$이고, $AB = 5$, $BC = 3$, $CA = 4$일 때, $\\sin A$의 값은?",
-      "choices": ["$\\frac{3}{5}$", "$\\frac{4}{5}$", "$\\frac{3}{4}$", "$\\frac{4}{3}$", "$\\frac{5}{3}$"],
-      "answer": 0,
-      "explanation": "$\\sin A = \\frac{\\text{대변}}{\\text{빗변}} = \\frac{BC}{AB} = \\frac{3}{5}$입니다. 각 A의 대변은 BC=3이고, 빗변은 AB=5입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $35$, 빗변이 $125$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$"
+      ],
+      "answer": 1,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{35}{125}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 2,
-      "question": "직각삼각형 ABC에서 $\\angle C = 90°$이고, $AB = 5$, $BC = 3$, $CA = 4$일 때, $\\cos A$의 값은?",
-      "choices": ["$\\frac{3}{5}$", "$\\frac{3}{4}$", "$\\frac{4}{5}$", "$\\frac{5}{4}$", "$\\frac{5}{3}$"],
-      "answer": 2,
-      "explanation": "$\\cos A = \\frac{\\text{이웃변}}{\\text{빗변}} = \\frac{CA}{AB} = \\frac{4}{5}$입니다. 각 A의 이웃변은 CA=4이고, 빗변은 AB=5입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $18$, 빗변이 $30$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer": 3,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{18}{30}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 3,
-      "question": "직각삼각형 ABC에서 $\\angle C = 90°$이고, $AB = 5$, $BC = 3$, $CA = 4$일 때, $\\tan A$의 값은?",
-      "choices": ["$\\frac{4}{5}$", "$\\frac{5}{3}$", "$\\frac{5}{4}$", "$\\frac{3}{4}$", "$\\frac{4}{3}$"],
-      "answer": 3,
-      "explanation": "$\\tan A = \\frac{\\text{대변}}{\\text{이웃변}} = \\frac{BC}{CA} = \\frac{3}{4}$입니다. 각 A의 대변은 BC=3이고, 이웃변은 CA=4입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $30$, 빗변이 $78$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{5}{13}$",
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{13}{12}$"
+      ],
+      "answer": 0,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{30}{78}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 4,
-      "question": "$\\sin 30°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$1$", "$\\frac{1}{2}$"],
-      "answer": 4,
-      "explanation": "$\\sin 30° = \\frac{1}{2}$입니다. 30-60-90 직각삼각형에서 30°에 대한 대변의 비율은 빗변의 절반입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $48$, 빗변이 $102$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{8}{17}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{17}{15}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{48}{102}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 5,
-      "question": "$\\cos 60°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{2}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$1$"],
-      "answer": 1,
-      "explanation": "$\\cos 60° = \\frac{1}{2}$입니다. 30-60-90 직각삼각형에서 60°에 대한 이웃변은 빗변의 절반입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $42$, 빗변이 $150$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$",
+        "$\\frac{7}{25}$"
+      ],
+      "answer": 4,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{42}{150}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 6,
-      "question": "$\\tan 45°$의 값은?",
-      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\sqrt{3}$", "$\\frac{\\sqrt{3}}{3}$", "$1$"],
-      "answer": 4,
-      "explanation": "$\\tan 45° = 1$입니다. 직각이등변삼각형(45-45-90)에서 두 변의 길이가 같으므로 대변과 이웃변의 비가 1입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $21$, 빗변이 $35$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer": 1,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{21}{35}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 7,
-      "question": "$\\sin 60°$의 값은?",
-      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$1$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{2}}{2}$"],
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $35$, 빗변이 $91$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{13}{12}$"
+      ],
       "answer": 3,
-      "explanation": "$\\sin 60° = \\frac{\\sqrt{3}}{2}$입니다. 30-60-90 직각삼각형에서 빗변을 2, 짧은 변을 1로 놓으면 긴 변은 $\\sqrt{3}$이므로 $\\sin 60° = \\frac{\\sqrt{3}}{2}$입니다."
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{35}{91}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 8,
-      "question": "$\\cos 30°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{2}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$\\sqrt{3}$"],
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $56$, 빗변이 $119$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{8}{17}$",
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{17}{15}$"
+      ],
       "answer": 0,
-      "explanation": "$\\cos 30° = \\frac{\\sqrt{3}}{2}$입니다. 30-60-90 직각삼각형에서 30°의 이웃변은 $\\sqrt{3}$, 빗변은 2이므로 $\\cos 30° = \\frac{\\sqrt{3}}{2}$입니다."
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{56}{119}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 9,
-      "question": "$\\tan 30°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{3}$", "$\\frac{1}{2}$", "$\\sqrt{3}$", "$\\frac{\\sqrt{2}}{2}$", "$1$"],
-      "answer": 0,
-      "explanation": "$\\tan 30° = \\frac{\\sin 30°}{\\cos 30°} = \\frac{\\frac{1}{2}}{\\frac{\\sqrt{3}}{2}} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $49$, 빗변이 $175$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{49}{175}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 10,
-      "question": "$\\tan 60°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{3}$", "$\\frac{1}{2}$", "$\\sqrt{3}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{2}$"],
-      "answer": 2,
-      "explanation": "$\\tan 60° = \\frac{\\sin 60°}{\\cos 60°} = \\frac{\\frac{\\sqrt{3}}{2}}{\\frac{1}{2}} = \\sqrt{3}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $24$, 빗변이 $40$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{4}$",
+        "$\\frac{3}{5}$"
+      ],
+      "answer": 4,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{24}{40}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 11,
-      "question": "$\\sin 45°$의 값은?",
-      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$1$"],
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $40$, 빗변이 $104$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{13}{12}$"
+      ],
       "answer": 1,
-      "explanation": "$\\sin 45° = \\frac{\\sqrt{2}}{2}$입니다. 직각이등변삼각형에서 두 변의 길이를 1로 놓으면 빗변은 $\\sqrt{2}$이므로 $\\sin 45° = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$입니다."
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{40}{104}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 12,
-      "question": "$\\cos 45°$의 값은?",
-      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$\\frac{\\sqrt{2}}{2}$", "$1$"],
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $64$, 빗변이 $136$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{8}{17}$",
+        "$\\frac{17}{15}$"
+      ],
       "answer": 3,
-      "explanation": "$\\cos 45° = \\frac{\\sqrt{2}}{2}$입니다. 직각이등변삼각형에서 $\\sin 45° = \\cos 45° = \\frac{\\sqrt{2}}{2}$입니다."
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{64}{136}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 13,
-      "question": "$\\sin^2 30° + \\cos^2 30°$의 값은?",
-      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{3}{4}$", "$\\frac{1}{4}$", "$1$"],
-      "answer": 4,
-      "explanation": "삼각비의 기본 항등식 $\\sin^2 A + \\cos^2 A = 1$에 의해, $\\sin^2 30° + \\cos^2 30° = \\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2 = \\frac{1}{4} + \\frac{3}{4} = 1$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $56$, 빗변이 $200$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{7}{25}$",
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$"
+      ],
+      "answer": 0,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{56}{200}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 14,
-      "question": "$\\sin^2 45° + \\cos^2 45°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{2}}{2}$", "$1$", "$\\frac{1}{2}$", "$\\sqrt{2}$", "$2$"],
-      "answer": 1,
-      "explanation": "$\\sin^2 45° + \\cos^2 45° = \\left(\\frac{\\sqrt{2}}{2}\\right)^2 + \\left(\\frac{\\sqrt{2}}{2}\\right)^2 = \\frac{1}{2} + \\frac{1}{2} = 1$입니다. 이는 $\\sin^2 A + \\cos^2 A = 1$이 항상 성립함을 보여줍니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $27$, 빗변이 $45$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{27}{45}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 15,
-      "question": "$\\tan A = \\frac{\\sin A}{\\cos A}$를 이용하여 $\\sin A = \\frac{3}{5}$, $\\cos A = \\frac{4}{5}$일 때 $\\tan A$의 값은?",
-      "choices": ["$\\frac{4}{5}$", "$\\frac{4}{3}$", "$\\frac{3}{4}$", "$\\frac{5}{4}$", "$\\frac{5}{3}$"],
-      "answer": 2,
-      "explanation": "$\\tan A = \\frac{\\sin A}{\\cos A} = \\frac{\\frac{3}{5}}{\\frac{4}{5}} = \\frac{3}{5} \\times \\frac{5}{4} = \\frac{3}{4}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $45$, 빗변이 $117$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{13}{12}$",
+        "$\\frac{5}{13}$"
+      ],
+      "answer": 4,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{45}{117}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 16,
-      "question": "직각삼각형에서 $\\angle B = 90°$, $AB = 6$, $BC = 8$일 때 $\\sin C$의 값은? (AC는 빗변)",
-      "choices": ["$\\frac{3}{5}$", "$\\frac{4}{5}$", "$\\frac{3}{4}$", "$\\frac{4}{3}$", "$\\frac{5}{4}$"],
-      "answer": 0,
-      "explanation": "피타고라스 정리로 $AC = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10$. $\\sin C = \\frac{\\text{대변}}{\\text{빗변}} = \\frac{AB}{AC} = \\frac{6}{10} = \\frac{3}{5}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $72$, 빗변이 $153$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{17}{15}$"
+      ],
+      "answer": 1,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{72}{153}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 17,
-      "question": "직각삼각형에서 $\\angle B = 90°$, $AB = 6$, $BC = 8$, $AC = 10$일 때 $\\cos C$의 값은?",
-      "choices": ["$\\frac{3}{5}$", "$\\frac{4}{5}$", "$\\frac{3}{4}$", "$\\frac{5}{3}$", "$\\frac{5}{4}$"],
-      "answer": 1,
-      "explanation": "$\\cos C = \\frac{\\text{이웃변}}{\\text{빗변}} = \\frac{BC}{AC} = \\frac{8}{10} = \\frac{4}{5}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $63$, 빗변이 $225$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{25}{24}$"
+      ],
+      "answer": 3,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{63}{225}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 18,
-      "question": "$\\sin 60° \\times \\cos 30°$의 값은?",
-      "choices": ["$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{3}{4}$", "$\\frac{\\sqrt{3}}{4}$", "$1$"],
-      "answer": 2,
-      "explanation": "$\\sin 60° = \\frac{\\sqrt{3}}{2}$, $\\cos 30° = \\frac{\\sqrt{3}}{2}$이므로 $\\sin 60° \\times \\cos 30° = \\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{3}{4}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $30$, 빗변이 $50$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{3}{5}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer": 0,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{30}{50}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 19,
-      "question": "$\\sin 30° + \\cos 60°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{2}$", "$1$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{3}{2}$", "$\\sqrt{3}$"],
-      "answer": 1,
-      "explanation": "$\\sin 30° = \\frac{1}{2}$, $\\cos 60° = \\frac{1}{2}$이므로 $\\sin 30° + \\cos 60° = \\frac{1}{2} + \\frac{1}{2} = 1$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $50$, 빗변이 $130$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{13}{12}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{50}{130}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 20,
-      "question": "$\\tan 45° + \\sin 30°$의 값은?",
-      "choices": ["$\\frac{3}{2}$", "$\\frac{1}{2}$", "$\\sqrt{3}$", "$\\frac{\\sqrt{3}}{2}$", "$2$"],
-      "answer": 0,
-      "explanation": "$\\tan 45° = 1$, $\\sin 30° = \\frac{1}{2}$이므로 $\\tan 45° + \\sin 30° = 1 + \\frac{1}{2} = \\frac{3}{2}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $80$, 빗변이 $170$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{17}{15}$",
+        "$\\frac{8}{17}$"
+      ],
+      "answer": 4,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{80}{170}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 21,
-      "question": "$\\cos 0°$의 값은?",
-      "choices": ["$0$", "$1$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{2}$"],
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $70$, 빗변이 $250$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$"
+      ],
       "answer": 1,
-      "explanation": "$\\cos 0° = 1$입니다. 단위원에서 0°일 때 x좌표가 1이므로 $\\cos 0° = 1$입니다."
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{70}{250}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 22,
-      "question": "$\\sin 90°$의 값은?",
-      "choices": ["$0$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{1}{2}$", "$1$"],
-      "answer": 4,
-      "explanation": "$\\sin 90° = 1$입니다. 단위원에서 90°일 때 y좌표가 1이므로 $\\sin 90° = 1$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $33$, 빗변이 $55$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer": 3,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{33}{55}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 23,
-      "question": "직각삼각형 ABC에서 $\\angle C = 90°$, $\\angle A = 30°$, $AB = 10$일 때, $BC$의 길이는?",
-      "choices": ["$10\\sqrt{3}$", "$5\\sqrt{3}$", "$5\\sqrt{2}$", "$5$", "$10$"],
-      "answer": 3,
-      "explanation": "$\\sin A = \\frac{BC}{AB}$이므로 $BC = AB \\times \\sin 30° = 10 \\times \\frac{1}{2} = 5$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $55$, 빗변이 $143$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{5}{13}$",
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{13}{12}$"
+      ],
+      "answer": 0,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{55}{143}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 24,
-      "question": "직각삼각형 ABC에서 $\\angle C = 90°$, $\\angle A = 45°$, $AB = 8$일 때, $BC$의 길이는?",
-      "choices": ["$4\\sqrt{2}$", "$4\\sqrt{3}$", "$4$", "$8\\sqrt{2}$", "$8$"],
-      "answer": 0,
-      "explanation": "$BC = AB \\times \\sin 45° = 8 \\times \\frac{\\sqrt{2}}{2} = 4\\sqrt{2}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $88$, 빗변이 $187$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{8}{17}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{17}{15}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{88}{187}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 25,
-      "question": "직각삼각형 ABC에서 $\\angle C = 90°$, $\\angle A = 60°$, $AB = 6$일 때, $CA$의 길이는?",
-      "choices": ["$6\\sqrt{3}$", "$3\\sqrt{3}$", "$6$", "$3$", "$3\\sqrt{2}$"],
-      "answer": 3,
-      "explanation": "$\\cos A = \\frac{CA}{AB}$이므로 $CA = AB \\times \\cos 60° = 6 \\times \\frac{1}{2} = 3$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $77$, 빗변이 $275$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$",
+        "$\\frac{7}{25}$"
+      ],
+      "answer": 4,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{77}{275}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 26,
-      "question": "$\\sin^2 A + \\cos^2 A$의 값은? (단, $0° < A < 90°$)",
-      "choices": ["$0$", "$\\sin A$", "$\\cos A$", "$2$", "$1$"],
-      "answer": 4,
-      "explanation": "삼각비의 기본 항등식: $\\sin^2 A + \\cos^2 A = 1$은 직각삼각형의 피타고라스 정리에서 도출됩니다. 빗변의 길이를 $c$, 대변을 $a$, 이웃변을 $b$로 놓으면 $\\left(\\frac{a}{c}\\right)^2 + \\left(\\frac{b}{c}\\right)^2 = \\frac{a^2+b^2}{c^2} = 1$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $36$, 빗변이 $60$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{4}$"
+      ],
+      "answer": 1,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{36}{60}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 27,
-      "question": "$\\cos A = \\frac{5}{13}$일 때, $\\sin^2 A$의 값은? (단, $0° < A < 90°$)",
-      "choices": ["$\\frac{144}{169}$", "$\\frac{25}{169}$", "$\\frac{12}{13}$", "$\\frac{5}{12}$", "$\\frac{1}{169}$"],
-      "answer": 0,
-      "explanation": "$\\sin^2 A + \\cos^2 A = 1$이므로 $\\sin^2 A = 1 - \\cos^2 A = 1 - \\left(\\frac{5}{13}\\right)^2 = 1 - \\frac{25}{169} = \\frac{144}{169}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $60$, 빗변이 $156$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{13}{12}$"
+      ],
+      "answer": 3,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{60}{156}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 28,
-      "question": "$\\sin 60° - \\cos 30°$의 값은?",
-      "choices": ["$1$", "$0$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{1}{2}$", "$\\sqrt{3}$"],
-      "answer": 1,
-      "explanation": "$\\sin 60° = \\frac{\\sqrt{3}}{2}$이고 $\\cos 30° = \\frac{\\sqrt{3}}{2}$이므로 $\\sin 60° - \\cos 30° = \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{3}}{2} = 0$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $96$, 빗변이 $204$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{8}{17}$",
+        "$\\frac{15}{17}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{17}{8}$",
+        "$\\frac{17}{15}$"
+      ],
+      "answer": 0,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{96}{204}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 29,
-      "question": "$\\sin 45° \\times \\tan 45°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{2}}{2}$", "$\\frac{1}{2}$", "$1$", "$\\sqrt{2}$", "$\\frac{\\sqrt{3}}{2}$"],
-      "answer": 0,
-      "explanation": "$\\sin 45° = \\frac{\\sqrt{2}}{2}$, $\\tan 45° = 1$이므로 $\\sin 45° \\times \\tan 45° = \\frac{\\sqrt{2}}{2} \\times 1 = \\frac{\\sqrt{2}}{2}$입니다."
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $84$, 빗변이 $300$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{25}{24}$"
+      ],
+      "answer": 2,
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{84}{300}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     },
     {
       "id": 30,
-      "question": "$\\tan 30° \\times \\tan 60°$의 값은?",
-      "choices": ["$\\frac{\\sqrt{3}}{3}$", "$\\sqrt{3}$", "$\\frac{1}{3}$", "$3$", "$1$"],
+      "question": "직각삼각형에서 한 예각 $A$의 대변이 $39$, 빗변이 $65$일 때 $\\sin A$의 값은?",
+      "choices": [
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{3}$",
+        "$\\frac{5}{4}$",
+        "$\\frac{3}{5}$"
+      ],
       "answer": 4,
-      "explanation": "$\\tan 30° = \\frac{\\sqrt{3}}{3}$, $\\tan 60° = \\sqrt{3}$이므로 $\\tan 30° \\times \\tan 60° = \\frac{\\sqrt{3}}{3} \\times \\sqrt{3} = \\frac{3}{3} = 1$입니다."
+      "explanation": "$\\sin A=\\frac{대변}{빗변}=\\frac{39}{65}$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "삼각비 기본",
+        "skills": [
+          "직각삼각형",
+          "sin"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "trigonometry"
+      }
     }
   ]
 }

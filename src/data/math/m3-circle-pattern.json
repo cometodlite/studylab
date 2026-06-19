@@ -1,220 +1,767 @@
 {
   "id": "m3-circle-pattern",
   "title": "원의 성질 — 유형별",
-  "description": "원주각 응용, 반원의 원주각, 원에 내접하는 사각형",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 원주각 응용, 반원의 원주각, 원에 내접하는 사각형",
   "grade": 3,
   "unit": "원의 성질",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "circle",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle A = 75°$일 때, $\\angle C$는?",
-      "choices": ["$75°$", "$105°$", "$115°$", "$90°$", "$150°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $28$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$26$",
+        "$28$",
+        "$27$",
+        "$29$",
+        "$30$"
+      ],
       "answer": 1,
-      "explanation": "원에 내접하는 사각형에서 대각의 합은 180°입니다. $\\angle A + \\angle C = 180°$이므로 $\\angle C = 180° - 75° = 105°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $28$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 2,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle B = 110°$일 때, $\\angle D$는?",
-      "choices": ["$55°$", "$70°$", "$80°$", "$110°$", "$140°$"],
-      "answer": 1,
-      "explanation": "원에 내접하는 사각형에서 $\\angle B + \\angle D = 180°$이므로 $\\angle D = 180° - 110° = 70°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $29$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$27$",
+        "$28$",
+        "$30$",
+        "$29$",
+        "$31$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $29$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 3,
-      "question": "원에서 호 AB 위의 같은 쪽에 있는 두 원주각 $\\angle APB = 40°$와 $\\angle AQB$의 관계는?",
-      "choices": ["$\\angle AQB = 20°$", "$\\angle AQB = 80°$", "$\\angle AQB = 40°$", "$\\angle AQB = 140°$", "$\\angle AQB = 100°$"],
-      "answer": 2,
-      "explanation": "같은 호에 대해 같은 쪽에 있는 원주각은 모두 같습니다. $\\angle AQB = \\angle APB = 40°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $30$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$30$",
+        "$28$",
+        "$29$",
+        "$31$",
+        "$32$"
+      ],
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $30$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 4,
-      "question": "원에서 호 AB에 대한 원주각 $\\angle APB = 50°$이고, Q가 P와 호 AB의 반대쪽에 있을 때, $\\angle AQB$는?",
-      "choices": ["$50°$", "$100°$", "$130°$", "$80°$", "$40°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $31$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$29$",
+        "$30$",
+        "$31$",
+        "$32$",
+        "$33$"
+      ],
       "answer": 2,
-      "explanation": "P와 Q가 호 AB의 반대쪽에 있으면 $\\angle APB + \\angle AQB = 180°$입니다. $\\angle AQB = 180° - 50° = 130°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $31$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 5,
-      "question": "원에 내접하는 삼각형 ABC에서 $\\overline{AB}$가 지름이고, $\\angle BAC = 30°$이다. $\\angle ABC$는?",
-      "choices": ["$30°$", "$60°$", "$90°$", "$120°$", "$150°$"],
-      "answer": 1,
-      "explanation": "AB가 지름이므로 $\\angle ACB = 90°$. $\\angle ABC = 180° - 90° - 30° = 60°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $32$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$30$",
+        "$31$",
+        "$33$",
+        "$34$",
+        "$32$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $32$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 6,
-      "question": "원 안에서 두 현 AC와 BD가 교점 P를 가질 때, 호 AB의 중심각이 80°, 호 CD의 중심각이 100°이면 $\\angle APB$는?",
-      "choices": ["$80°$", "$90°$", "$100°$", "$180°$", "$70°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $33$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$31$",
+        "$33$",
+        "$32$",
+        "$34$",
+        "$35$"
+      ],
       "answer": 1,
-      "explanation": "두 현이 원 안에서 만날 때, 교각 $= \\frac{1}{2}$(두 호의 중심각의 합). $\\angle APB = \\frac{1}{2}(80°+100°) = 90°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $33$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 7,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle A = 3x$, $\\angle C = 2x+20°$일 때, $x$의 값은?",
-      "choices": ["$28$", "$32$", "$36$", "$40$", "$44$"],
-      "answer": 1,
-      "explanation": "$\\angle A + \\angle C = 180°$이므로 $3x + (2x+20) = 180$, $5x = 160$, $x = 32$입니다. $\\angle A = 96°$, $\\angle C = 84°$, 합 $= 180°$ 확인."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $34$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$32$",
+        "$33$",
+        "$35$",
+        "$34$",
+        "$36$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $34$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 8,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle D$의 외각이 $70°$일 때, $\\angle B$는?",
-      "choices": ["$70°$", "$110°$", "$55°$", "$140°$", "$90°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $35$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$35$",
+        "$33$",
+        "$34$",
+        "$36$",
+        "$37$"
+      ],
       "answer": 0,
-      "explanation": "원에 내접하는 사각형에서 한 꼭짓점의 외각은 그 내대각과 같습니다. $\\angle D$의 외각 $= \\angle B = 70°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $35$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 9,
-      "question": "원 O에서 중심각 $\\angle AOB = 100°$이고 P가 호 AB(짧은 호) 위의 점일 때, $\\angle APB$는?",
-      "choices": ["$100°$", "$50°$", "$200°$", "$25°$", "$80°$"],
-      "answer": 1,
-      "explanation": "원주각 $= \\frac{1}{2} \\times$ 중심각 $= \\frac{1}{2} \\times 100° = 50°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $36$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$34$",
+        "$35$",
+        "$36$",
+        "$37$",
+        "$38$"
+      ],
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $36$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 10,
-      "question": "원 위의 네 점 A, B, C, D에서 $\\angle ABD = 35°$이고 B와 C가 호 AD에 대해 같은 쪽에 있을 때, $\\angle ACD$는?",
-      "choices": ["$70°$", "$55°$", "$35°$", "$145°$", "$17.5°$"],
-      "answer": 2,
-      "explanation": "같은 호 AD에 대한 원주각 $\\angle ABD = \\angle ACD$이므로 $\\angle ACD = 35°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $37$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$35$",
+        "$36$",
+        "$38$",
+        "$39$",
+        "$37$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $37$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 11,
-      "question": "원에 내접하는 삼각형 ABC에서 $\\overline{BC}$가 지름이고, $BC = 10$, $AB = 6$이면 $AC$는?",
-      "choices": ["$6$", "$8$", "$10$", "$4$", "$\\sqrt{136}$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $38$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$36$",
+        "$38$",
+        "$37$",
+        "$39$",
+        "$40$"
+      ],
       "answer": 1,
-      "explanation": "BC가 지름이므로 $\\angle BAC = 90°$. 피타고라스: $AC = \\sqrt{BC^2-AB^2} = \\sqrt{100-36} = 8$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $38$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 12,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle CAD = 40°$일 때, $\\angle CBD$는?",
-      "choices": ["$80°$", "$40°$", "$50°$", "$20°$", "$140°$"],
-      "answer": 1,
-      "explanation": "$\\angle CAD$와 $\\angle CBD$는 같은 호 CD에 대한 원주각이므로 $\\angle CBD = \\angle CAD = 40°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $39$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$37$",
+        "$38$",
+        "$40$",
+        "$39$",
+        "$41$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $39$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 13,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle BAD = 85°$일 때, $\\angle BCD$는?",
-      "choices": ["$85°$", "$95°$", "$90°$", "$100°$", "$80°$"],
-      "answer": 1,
-      "explanation": "원에 내접하는 사각형에서 $\\angle BAD + \\angle BCD = 180°$이므로 $\\angle BCD = 180° - 85° = 95°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $40$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$40$",
+        "$38$",
+        "$39$",
+        "$41$",
+        "$42$"
+      ],
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $40$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 14,
-      "question": "원에서 원주각 $\\angle ACB = 65°$일 때, 같은 호 AB에 대한 중심각 $\\angle AOB$는?",
-      "choices": ["$32.5°$", "$65°$", "$130°$", "$195°$", "$260°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $41$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$39$",
+        "$40$",
+        "$41$",
+        "$42$",
+        "$43$"
+      ],
       "answer": 2,
-      "explanation": "중심각 $= 2 \\times$ 원주각 $= 2 \\times 65° = 130°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $41$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 15,
-      "question": "원에서 $\\overline{AB}$가 지름이고, 원 위의 점 C에서 $\\angle CAB = 40°$이면 $\\angle ABC$는?",
-      "choices": ["$40°$", "$50°$", "$90°$", "$80°$", "$140°$"],
-      "answer": 1,
-      "explanation": "AB가 지름이므로 $\\angle ACB = 90°$. 삼각형 ABC에서 $\\angle ABC = 180° - 90° - 40° = 50°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $42$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$40$",
+        "$41$",
+        "$43$",
+        "$44$",
+        "$42$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $42$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 16,
-      "question": "원에 내접하는 삼각형 ABC에서 $\\angle BAC = 50°$일 때, 호 BC에 대한 중심각 $\\angle BOC$는? (O는 원의 중심)",
-      "choices": ["$50°$", "$100°$", "$130°$", "$25°$", "$200°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $43$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$41$",
+        "$43$",
+        "$42$",
+        "$44$",
+        "$45$"
+      ],
       "answer": 1,
-      "explanation": "중심각 $\\angle BOC = 2 \\times \\angle BAC = 2 \\times 50° = 100°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $43$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 17,
-      "question": "원 위의 네 점 A, B, C, D가 순서대로 있을 때, $\\angle ADB = 55°$이면 $\\angle ACB$는?",
-      "choices": ["$110°$", "$55°$", "$35°$", "$125°$", "$90°$"],
-      "answer": 1,
-      "explanation": "$\\angle ADB$와 $\\angle ACB$는 모두 호 AB에 대한 원주각이고 D, C가 같은 쪽이므로 $\\angle ACB = 55°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $44$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$42$",
+        "$43$",
+        "$45$",
+        "$44$",
+        "$46$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $44$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 18,
-      "question": "원에 내접하는 사각형 ABCD에서 대각선 AC와 BD의 교점 E에서, $\\angle ABD = 30°$, $\\angle CAB = 40°$이면 $\\angle AEB$는?",
-      "choices": ["$70°$", "$30°$", "$40°$", "$110°$", "$60°$"],
-      "answer": 3,
-      "explanation": "삼각형 ABE에서 $\\angle AEB + \\angle ABE + \\angle BAE = 180°$. $\\angle ABE = \\angle ABD = 30°$, $\\angle BAE = \\angle CAB = 40°$이므로 $\\angle AEB = 180° - 30° - 40° = 110°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $45$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$45$",
+        "$43$",
+        "$44$",
+        "$46$",
+        "$47$"
+      ],
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $45$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 19,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle DAB = 70°$이고 대각선 AC가 $\\angle DAB$를 이등분한다. $\\angle DAC$는?",
-      "choices": ["$35°$", "$70°$", "$55°$", "$45°$", "$25°$"],
-      "answer": 0,
-      "explanation": "대각선 AC가 $\\angle DAB$를 이등분하므로 $\\angle DAC = \\frac{70°}{2} = 35°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $46$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$44$",
+        "$45$",
+        "$46$",
+        "$47$",
+        "$48$"
+      ],
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $46$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 20,
-      "question": "원에서 두 현 PQ, RS가 원 안의 점 T에서 만난다. 호 PR의 중심각이 80°, 호 QS의 중심각이 60°이면 $\\angle PTR$은?",
-      "choices": ["$70°$", "$80°$", "$60°$", "$140°$", "$40°$"],
-      "answer": 0,
-      "explanation": "원 안에서 두 현이 만날 때, $\\angle PTR = \\frac{1}{2}(\\text{호 PR 중심각}+\\text{호 QS 중심각}) = \\frac{1}{2}(80°+60°) = 70°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $47$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$45$",
+        "$46$",
+        "$48$",
+        "$49$",
+        "$47$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $47$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 21,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle B + \\angle D$의 값은?",
-      "choices": ["$90°$", "$180°$", "$270°$", "$360°$", "$120°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $48$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$46$",
+        "$48$",
+        "$47$",
+        "$49$",
+        "$50$"
+      ],
       "answer": 1,
-      "explanation": "원에 내접하는 사각형에서 대각의 합은 항상 180°입니다. $\\angle B + \\angle D = 180°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $48$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 22,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle A = 80°$, $\\angle B = 95°$이면 $\\angle D$는?",
-      "choices": ["$80°$", "$85°$", "$90°$", "$95°$", "$100°$"],
-      "answer": 1,
-      "explanation": "$\\angle B + \\angle D = 180°$이므로 $\\angle D = 180° - 95° = 85°$입니다. ($\\angle A + \\angle C = 180°$이므로 $\\angle C = 100°$)"
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $49$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$47$",
+        "$48$",
+        "$50$",
+        "$49$",
+        "$51$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $49$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 23,
-      "question": "반지름이 $5$인 원에서 원주각 $\\angle APB = 30°$일 때, 현 AB의 길이는?",
-      "choices": ["$5$", "$4$", "$\\sqrt{5}$", "$5\\sqrt{3}$", "$3$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $50$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$50$",
+        "$48$",
+        "$49$",
+        "$51$",
+        "$52$"
+      ],
       "answer": 0,
-      "explanation": "중심각 $\\angle AOB = 60°$. 삼각형 OAB에서 $OA = OB = 5$이고 $\\angle AOB = 60°$이므로 정삼각형. $AB = 5$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $50$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 24,
-      "question": "원에서 $\\angle PQR = 70°$ (Q는 원 위의 점, P, R도 원 위)일 때, 호 PR에 대한 중심각은?",
-      "choices": ["$35°$", "$70°$", "$140°$", "$210°$", "$105°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $51$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$49$",
+        "$50$",
+        "$51$",
+        "$52$",
+        "$53$"
+      ],
       "answer": 2,
-      "explanation": "중심각 $= 2 \\times$ 원주각 $= 2 \\times 70° = 140°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $51$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 25,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle B = 2\\angle D$일 때, $\\angle D$는?",
-      "choices": ["$45°$", "$60°$", "$72°$", "$80°$", "$90°$"],
-      "answer": 1,
-      "explanation": "$\\angle B + \\angle D = 180°$이고 $\\angle B = 2\\angle D$이므로 $2\\angle D + \\angle D = 180°$, $3\\angle D = 180°$, $\\angle D = 60°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $52$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$50$",
+        "$51$",
+        "$53$",
+        "$54$",
+        "$52$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $52$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 26,
-      "question": "원에서 $\\angle ABC = 55°$ (B는 원 위의 점), D가 B와 반대쪽 호에 있을 때, $\\angle ADC$는?",
-      "choices": ["$55°$", "$110°$", "$125°$", "$70°$", "$90°$"],
-      "answer": 2,
-      "explanation": "D가 B와 반대쪽 호에 있으면 $\\angle ABC + \\angle ADC = 180°$. $\\angle ADC = 180° - 55° = 125°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $53$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$51$",
+        "$53$",
+        "$52$",
+        "$54$",
+        "$55$"
+      ],
+      "answer": 1,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $53$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 27,
-      "question": "원에 내접하는 삼각형 ABC에서 $\\overline{AB}$가 지름이고 $BC = 6$, $AB = 10$이면 삼각형 ABC의 넓이는?",
-      "choices": ["$24$", "$30$", "$36$", "$48$", "$60$"],
-      "answer": 0,
-      "explanation": "AB가 지름이므로 $\\angle ACB = 90°$. $AC = \\sqrt{AB^2-BC^2} = \\sqrt{100-36} = 8$. 넓이 $= \\frac{1}{2} \\times BC \\times AC = \\frac{1}{2} \\times 6 \\times 8 = 24$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $54$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$52$",
+        "$53$",
+        "$55$",
+        "$54$",
+        "$56$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $54$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 28,
-      "question": "원에서 $\\angle BAC = 30°$, $\\angle CAD = 25°$이고 ABCD가 원에 내접하는 사각형일 때, $\\angle BCD$는?",
-      "choices": ["$125°$", "$55°$", "$130°$", "$100°$", "$150°$"],
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $55$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$55$",
+        "$53$",
+        "$54$",
+        "$56$",
+        "$57$"
+      ],
       "answer": 0,
-      "explanation": "$\\angle BAD = \\angle BAC + \\angle CAD = 30° + 25° = 55°$. $\\angle BAD + \\angle BCD = 180°$이므로 $\\angle BCD = 125°$입니다."
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $55$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 29,
-      "question": "원 위의 네 점 A, B, C, D가 순서대로 있다. $\\angle ABD = 60°$이면 $\\angle ACD$는?",
-      "choices": ["$30°$", "$60°$", "$120°$", "$90°$", "$45°$"],
-      "answer": 1,
-      "explanation": "$\\angle ABD$와 $\\angle ACD$는 모두 호 AD에 대한 원주각이고 같은 쪽이므로 $\\angle ACD = \\angle ABD = 60°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $56$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$54$",
+        "$55$",
+        "$56$",
+        "$57$",
+        "$58$"
+      ],
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $56$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     },
     {
       "id": 30,
-      "question": "원에 내접하는 사각형 ABCD에서 $\\angle A = x+10°$, $\\angle C = 2x-10°$일 때, $\\angle A$는?",
-      "choices": ["$60°$", "$70°$", "$80°$", "$100°$", "$110°$"],
-      "answer": 1,
-      "explanation": "$\\angle A + \\angle C = 180°$이므로 $(x+10)+(2x-10) = 180$, $3x = 180$, $x = 60$. $\\angle A = x+10 = 70°$입니다."
+      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $57$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$55$",
+        "$56$",
+        "$58$",
+        "$59$",
+        "$57$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $57$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "접선의 길이",
+        "skills": [
+          "접선",
+          "외부점"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
     }
   ]
 }

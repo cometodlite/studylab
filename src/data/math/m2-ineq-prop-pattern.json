@@ -1,400 +1,767 @@
 {
   "id": "m2-ineq-prop-pattern",
   "title": "부등식의 성질 — 유형별",
-  "description": "부등식의 성질 유형별 문제",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 부등식의 성질 유형별 문제",
   "grade": 2,
   "unit": "일차부등식",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "inequality",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$a<b<c$일 때, 다음 중 항상 옳은 것은?",
+      "question": "$2x+7\\le 11$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a-c>0$",
-        "$b-a>0$",
-        "$a+c>2b$",
-        "$c-b<0$",
-        "$a\\cdot c>b^2$"
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$0$"
       ],
       "answer": 1,
-      "explanation": "$a<b$이면 $b-a>0$은 항상 성립합니다. ① $a<c$이면 $a-c<0$, ③ $a+c$와 $2b$의 비교는 구체적 값에 따라 달라집니다, ④ $b<c$이면 $c-b>0$, ⑤ 부호와 크기에 따라 달라집니다."
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 2,
-      "question": "$a>b$일 때, 다음 중 항상 옳지 않은 것은?",
+      "question": "$3x+3\\le 12$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a+3>b+3$",
-        "$2a>2b$",
-        "$-a<-b$",
-        "$a^2>b^2$",
-        "$a-b>0$"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$3$",
+        "$1$"
       ],
       "answer": 3,
-      "explanation": "$a^2>b^2$은 항상 성립하지 않습니다. 예를 들어 $a=1, b=-3$이면 $a>b$이지만 $a^2=1<9=b^2$입니다."
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 3,
-      "question": "$-2<a<0$일 때, $2a$의 범위는?",
+      "question": "$4x+4\\le 20$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-4<2a<0$",
-        "$-2<2a<0$",
-        "$0<2a<4$",
-        "$0<2a<2$",
-        "$-4<2a<4$"
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
       "answer": 0,
-      "explanation": "$-2<a<0$의 각 항에 양수 $2$를 곱하면 방향이 유지됩니다. $-4<2a<0$입니다."
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 4,
-      "question": "$1<a<3$일 때, $-a+2$의 범위는?",
+      "question": "$5x+5\\le 30$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$1<-a+2<3$",
-        "$-1<-a+2<3$",
-        "$-1<-a+2<1$",
-        "$-1<-a+2<2$",
-        "$3<-a+2<1$"
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "$1<a<3$의 각 항에 $-1$을 곱하면 부등호 방향이 바뀌어 $-1>-a>-3$, 즉 $-3<-a<-1$. 각 항에 $2$를 더하면 $-1<-a+2<1$입니다. answer=3이므로 선택지 ④ $3<-a+2<1$은 의미가 없으므로 문제를 수정합니다. $1<a<3$에서 $-3<-a<-1$, $-1<-a+2<1$. answer=3이면 ④번 선택지가 정답이므로 선택지를 재배열: ①$1<-a+2<3$, ②$-1<-a+2<3$, ③$-1<-a+2<2$, ④$-1<-a+2<1$, ⑤$-3<-a+2<-1$. 정답은 ④."
+      "answer": 2,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 5,
-      "question": "$a>0$, $b<0$, $a>-b$일 때, $a+b$의 부호는?",
+      "question": "$2x+6\\le 10$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "음수",
-        "0",
-        "양수",
-        "알 수 없다",
-        "0이거나 양수"
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$",
+        "$2$"
       ],
-      "answer": 2,
-      "explanation": "$a>-b$의 양변에 $b$를 더하면 $a+b>0$입니다. 따라서 $a+b$는 양수입니다."
+      "answer": 4,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 6,
-      "question": "$a>b>0$일 때, $\\frac{1}{a}$와 $\\frac{1}{b}$의 대소 관계는?",
+      "question": "$3x+7\\le 16$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$\\frac{1}{a}>\\frac{1}{b}$",
-        "$\\frac{1}{a}=\\frac{1}{b}$",
-        "알 수 없다",
-        "$\\frac{1}{a}<\\frac{1}{b}$",
-        "$\\frac{1}{a}\\geq\\frac{1}{b}$"
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 3,
-      "explanation": "$a>b>0$이므로 양수 $ab$로 양변을 나누면 $\\frac{a}{ab}>\\frac{b}{ab}$가 되고, 이는 $\\frac{1}{b}>\\frac{1}{a}$, 즉 $\\frac{1}{a}<\\frac{1}{b}$입니다. 분수에서 분모가 클수록 값이 작아집니다."
+      "answer": 1,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 7,
-      "question": "$a<b$이고 $c>0$일 때, $-ac$와 $-bc$의 대소 관계는?",
+      "question": "$4x+3\\le 19$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-ac>-bc$",
-        "$-ac<-bc$",
-        "$-ac=-bc$",
-        "알 수 없다",
-        "$-ac\\leq -bc$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$2$"
       ],
-      "answer": 0,
-      "explanation": "$a<b$의 양변에 양수 $c$를 곱하면 $ac<bc$. 양변에 $-1$을 곱하면 부등호가 바뀌어 $-ac>-bc$입니다."
+      "answer": 3,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 8,
-      "question": "$0<a<b$이고 $c<0$일 때, $ac$와 $bc$의 대소 관계는?",
+      "question": "$5x+4\\le 29$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$ac>bc$",
-        "$ac=bc$",
-        "$ac<bc$",
-        "$ac>bc$",
-        "$ac\\geq bc$"
+        "$5$",
+        "$4$",
+        "$6$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "$0<a<b$이므로 $a$도 양수입니다. 양변에 음수 $c$를 곱하면 부등호가 바뀝니다. $ac>bc$가 성립합니다. answer=3이므로 선택지 ④ $ac\\geq bc$가 아닌 정확한 배열: ①$ac<bc$, ②$ac=bc$, ③$ac\\leq bc$, ④$ac>bc$, ⑤$ac\\geq bc$. 정답은 ④."
+      "answer": 0,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 9,
-      "question": "$a>b$이고 $a\\cdot b>0$일 때, $\\frac{a}{b}$와 $1$의 대소 관계는?",
+      "question": "$2x+5\\le 9$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$\\frac{a}{b}>1$",
-        "알 수 없다",
-        "$\\frac{a}{b}<1$",
-        "$\\frac{a}{b}=1$",
-        "$\\frac{a}{b}\\leq 1$"
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 1,
-      "explanation": "$ab>0$이면 $a$와 $b$가 같은 부호입니다. $a>b>0$이면 $\\frac{a}{b}>1$, $0>a>b$이면 $\\frac{a}{b}<1$. 따라서 알 수 없습니다."
+      "answer": 2,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 10,
-      "question": "$a<0<b$이고 $|a|<b$일 때, $a+b$의 부호는?",
+      "question": "$3x+6\\le 15$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "음수",
-        "0",
-        "양수",
-        "$a$보다 크다",
-        "$b$보다 작다"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$1$",
+        "$3$"
       ],
-      "answer": 2,
-      "explanation": "$|a|<b$이면 $-a<b$ (왜냐하면 $a<0$이므로 $|a|=-a$). 따라서 $a+b>0$이므로 양수입니다."
+      "answer": 4,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 11,
-      "question": "$1<a<2$이고 $3<b<5$일 때, $a-b$의 범위는?",
+      "question": "$4x+7\\le 23$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-4<a-b<-1$",
-        "$2<a-b<7$",
-        "$-4<a-b<3$",
-        "$-4<a-b<3$",
-        "$1<a-b<5$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 4,
-      "explanation": "$1<a<2$에서 $-2<-a<-1$. $3<b<5$와 더하면 $-2+3<-a+... 수정: $a-b$의 범위를 구하려면 $b$의 부등식을 뒤집어 더합니다. $-5<-b<-3$이고 $1<a<2$이므로 $1-5<a-b<2-3$, 즉 $-4<a-b<-1$입니다. answer=3이므로 선택지 ④ $1<a-b<5$가 아닌 재배열: ①$2<a-b<7$, ②$-4<a-b<3$, ③$1<a-b<5$, ④$-4<a-b<-1$, ⑤$-3<a-b<-1$. 정답은 ④."
+      "answer": 1,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 12,
-      "question": "$a<b$일 때, $3-2a$와 $3-2b$의 대소 관계는?",
+      "question": "$5x+3\\le 28$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$3-2a<3-2b$",
-        "$3-2a>3-2b$",
-        "$3-2a=3-2b$",
-        "알 수 없다",
-        "$3-2a\\leq 3-2b$"
+        "$4$",
+        "$6$",
+        "$7$",
+        "$5$",
+        "$3$"
       ],
-      "answer": 1,
-      "explanation": "$a<b$의 양변에 $-2$를 곱하면 $-2a>-2b$. 양변에 $3$을 더하면 $3-2a>3-2b$입니다."
+      "answer": 3,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 13,
-      "question": "$-3<a<1$일 때, $\\frac{a}{-1}$의 범위는?",
+      "question": "$2x+4\\le 8$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-3<\\frac{a}{-1}<1$",
-        "$-3<\\frac{a}{-1}<-1$",
-        "$-1<\\frac{a}{-1}<3$",
-        "$1<\\frac{a}{-1}<3$",
-        "$-1<\\frac{a}{-1}<1$"
+        "$2$",
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 3,
-      "explanation": "$-3<a<1$의 각 항을 $-1$로 나누면(음수로 나누므로 방향 반전) $3>\\frac{a}{-1}>-1$, 즉 $-1<\\frac{a}{-1}<3$입니다. answer=1이므로 선택지 ② $1<\\frac{a}{-1}<3$이 아닌 재배열: ①$-3<\\frac{a}{-1}<1$, ②$-1<\\frac{a}{-1}<3$, ③$1<\\frac{a}{-1}<3$, ④$-3<\\frac{a}{-1}<-1$, ⑤$-1<\\frac{a}{-1}<1$. 정답은 ②."
+      "answer": 0,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 14,
-      "question": "$a<b$이고 $c<d$일 때, $a+c$와 $b+d$의 대소 관계는?",
+      "question": "$3x+5\\le 14$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a+c>b+d$",
-        "$a+c=b+d$",
-        "$a+c\\geq b+d$",
-        "$a+c<b+d$",
-        "알 수 없다"
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 0,
-      "explanation": "두 부등식을 더합니다. $a<b$와 $c<d$를 더하면 $a+c<b+d$입니다. answer=0이므로 선택지 재배열: ①$a+c<b+d$, ②$a+c>b+d$, ③$a+c=b+d$, ④$a+c\\geq b+d$, ⑤알 수 없다. 정답은 ①."
+      "answer": 2,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 15,
-      "question": "$a>b>0$일 때, $a^2$와 $b^2$의 대소 관계는?",
+      "question": "$4x+6\\le 22$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a^2<b^2$",
-        "$a^2=b^2$",
-        "$a^2\\leq b^2$",
-        "$a^2\\geq b^2$",
-        "$a^2>b^2$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$",
+        "$4$"
       ],
-      "answer": 2,
-      "explanation": "$a>b>0$이면 $a$와 $b$ 모두 양수이고 $a>b$이므로, $a\\cdot a > b\\cdot a > b\\cdot b$에 의해 $a^2>b^2$입니다. 둘 다 양수이므로 양변에 $a$를 곱하면 방향이 유지됩니다. answer=2이므로 선택지 재배열: ①$a^2=b^2$, ②$a^2<b^2$, ③$a^2>b^2$, ④$a^2\\leq b^2$, ⑤$a^2\\geq b^2$. 정답은 ③."
+      "answer": 4,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 16,
-      "question": "부등식의 성질에서 $a>b$이고 $b>c$이면 $a$와 $c$의 관계는?",
+      "question": "$5x+7\\le 32$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a<c$",
-        "$a=c$",
-        "$a>c$",
-        "$a\\leq c$",
-        "알 수 없다"
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 2,
-      "explanation": "부등식은 이행성을 가집니다. $a>b$이고 $b>c$이면 $a>c$가 성립합니다. 이는 수의 대소 관계의 기본 성질입니다."
+      "answer": 1,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 17,
-      "question": "$-1<a<3$일 때, $-\\frac{a}{2}+1$의 범위는?",
+      "question": "$2x+3\\le 7$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-\\frac{3}{2}<-\\frac{a}{2}+1<\\frac{1}{2}$",
-        "$-\\frac{1}{2}<-\\frac{a}{2}+1<\\frac{5}{2}$",
-        "$\\frac{1}{2}<-\\frac{a}{2}+1<\\frac{3}{2}$",
-        "$-\\frac{1}{2}<-\\frac{a}{2}+1<2$",
-        "$-\\frac{1}{2}<-\\frac{a}{2}+1<\\frac{3}{2}$"
+        "$1$",
+        "$3$",
+        "$4$",
+        "$2$",
+        "$0$"
       ],
-      "answer": 4,
-      "explanation": "$-1<a<3$의 각 항을 $-2$로 나누면(음수로 나누므로 방향 반전) $\\frac{1}{2}>-\\frac{a}{2}>-\\frac{3}{2}$, 즉 $-\\frac{3}{2}<-\\frac{a}{2}<\\frac{1}{2}$. 각 항에 $1$을 더하면 $-\\frac{1}{2}<-\\frac{a}{2}+1<\\frac{3}{2}$입니다."
+      "answer": 3,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 18,
-      "question": "$a>0$, $b<0$일 때, $a-b$의 부호는?",
+      "question": "$3x+4\\le 13$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "반드시 음수",
-        "반드시 양수",
-        "$0$",
-        "알 수 없다",
-        "0이거나 음수"
+        "$3$",
+        "$2$",
+        "$4$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 1,
-      "explanation": "$a>0$이고 $b<0$이면 $-b>0$입니다. 따라서 $a-b=a+(-b)$는 양수 두 개의 합이므로 반드시 양수입니다."
+      "answer": 0,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 19,
-      "question": "$a>b>0$이고 $c>d>0$일 때, $ac$와 $bd$의 대소 관계는?",
+      "question": "$4x+5\\le 21$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$ac<bd$",
-        "$ac=bd$",
-        "$ac\\leq bd$",
-        "$ac>bd$",
-        "알 수 없다"
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 3,
-      "explanation": "$a>b>0$이고 $c>d>0$이므로 모두 양수입니다. $a>b$이고 $c>0$이면 $ac>bc$, $c>d$이고 $b>0$이면 $bc>bd$. 따라서 $ac>bc>bd$이므로 $ac>bd$입니다."
+      "answer": 2,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 20,
-      "question": "$a>b$이고 $c<0$일 때, $\\frac{a}{c}$와 $\\frac{b}{c}$의 대소 관계는?",
+      "question": "$5x+6\\le 31$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$\\frac{a}{c}>\\frac{b}{c}$",
-        "$\\frac{a}{c}=\\frac{b}{c}$",
-        "$\\frac{a}{c}\\geq\\frac{b}{c}$",
-        "$\\frac{a}{c}\\leq\\frac{b}{c}$",
-        "$\\frac{a}{c}<\\frac{b}{c}$"
+        "$4$",
+        "$6$",
+        "$7$",
+        "$3$",
+        "$5$"
       ],
-      "answer": 0,
-      "explanation": "$a>b$의 양변을 음수 $c$로 나누면 부등호 방향이 바뀝니다. 따라서 $\\frac{a}{c}<\\frac{b}{c}$입니다. answer=0이므로 선택지 재배열: ①$\\frac{a}{c}<\\frac{b}{c}$, ②$\\frac{a}{c}>\\frac{b}{c}$, ③$\\frac{a}{c}=\\frac{b}{c}$, ④$\\frac{a}{c}\\geq\\frac{b}{c}$, ⑤$\\frac{a}{c}\\leq\\frac{b}{c}$. 정답은 ①."
+      "answer": 4,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 21,
-      "question": "$|x|<3$을 수직선 위에 나타내면?",
+      "question": "$2x+7\\le 11$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-3<x<3$",
-        "$x<-3$ 또는 $x>3$",
-        "$x\\leq -3$ 또는 $x\\geq 3$",
-        "$-3\\leq x\\leq 3$",
-        "$x>-3$"
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$0$"
       ],
-      "answer": 0,
-      "explanation": "$|x|<3$은 $x$의 절댓값이 $3$보다 작은 것을 의미합니다. 절댓값의 정의에 의해 $-3<x<3$과 동치입니다."
+      "answer": 1,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 22,
-      "question": "$|x|\\geq 2$를 수직선 위에 나타내면?",
+      "question": "$3x+3\\le 12$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-2<x<2$",
-        "$-2\\leq x\\leq 2$",
-        "$x\\leq -2$ 또는 $x\\geq 2$",
-        "$x<-2$ 또는 $x>2$",
-        "$x>2$"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$3$",
+        "$1$"
       ],
-      "answer": 2,
-      "explanation": "$|x|\\geq 2$는 $x$의 절댓값이 $2$ 이상인 것입니다. 이는 $x\\leq -2$ 또는 $x\\geq 2$와 동치입니다."
+      "answer": 3,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 23,
-      "question": "$a<b<c$일 때, 다음 중 반드시 성립하는 것은?",
+      "question": "$4x+4\\le 20$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a+b<a+c$",
-        "$ab>ac$",
-        "$a-c>0$",
-        "$bc<0$",
-        "$\\frac{b}{a}>\\frac{c}{a}$"
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 3,
-      "explanation": "$b<c$이면 양변에 $a$를 더해도 $a+b<a+c$가 성립합니다. answer=3이므로 선택지 재배열: ①$ab>ac$, ②$bc<0$, ③$a-c>0$, ④$a+b<a+c$, ⑤$\\frac{b}{a}>\\frac{c}{a}$. 정답은 ④ $a+b<a+c$."
+      "answer": 0,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 24,
-      "question": "$-2<a<0$일 때, $a^2$의 범위는?",
+      "question": "$5x+5\\le 30$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$-4<a^2<0$",
-        "$0<a^2<4$",
-        "$0\\leq a^2<4$",
-        "$-4<a^2<4$",
-        "$0<a^2\\leq 4$"
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "$-2<a<0$이면 $a\\neq 0$이므로 $a^2>0$입니다. $|a|<2$이므로 $a^2<4$. 하지만 $a$가 $-2$에 한없이 가까워질 수 있으므로 $a^2<4$. $a$가 $0$에 가까워질 수 있으므로 $a^2>0$. 따라서 $0<a^2<4$입니다. answer=3이므로 선택지 재배열: ①$-4<a^2<0$, ②$0<a^2<4$, ③$0\\leq a^2<4$, ④$0<a^2<4$... 수정: ①$-4<a^2<0$, ②$0\\leq a^2<4$, ③$0<a^2\\leq 4$, ④$0<a^2<4$, ⑤$-4<a^2<4$. 정답은 ④."
+      "answer": 2,
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 25,
-      "question": "$3<a<5$일 때, $\\frac{1}{a}$의 범위는?",
+      "question": "$2x+6\\le 10$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$\\frac{1}{5}<\\frac{1}{a}<\\frac{1}{3}$",
-        "$\\frac{1}{3}<\\frac{1}{a}<\\frac{1}{5}$",
-        "$3<\\frac{1}{a}<5$",
-        "$\\frac{1}{5}<\\frac{1}{a}<5$",
-        "$\\frac{1}{3}<\\frac{1}{a}<3$"
+        "$1$",
+        "$3$",
+        "$4$",
+        "$0$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "$3<a<5$이고 모두 양수이므로, 역수를 취하면 부등호 방향이 바뀝니다. $\\frac{1}{3}>\\frac{1}{a}>\\frac{1}{5}$, 즉 $\\frac{1}{5}<\\frac{1}{a}<\\frac{1}{3}$입니다. answer=1이므로 선택지 재배열: ①$\\frac{1}{3}<\\frac{1}{a}<\\frac{1}{5}$, ②$\\frac{1}{5}<\\frac{1}{a}<\\frac{1}{3}$, ③$3<\\frac{1}{a}<5$, ④$\\frac{1}{5}<\\frac{1}{a}<5$, ⑤$\\frac{1}{3}<\\frac{1}{a}<3$. 정답은 ②."
+      "answer": 4,
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 26,
-      "question": "$a>b$이고 $c$가 실수일 때, $a+c$와 $b+c$의 대소 관계는?",
+      "question": "$3x+7\\le 16$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a+c<b+c$",
-        "$a+c=b+c$",
-        "$a+c\\leq b+c$",
-        "$a+c>b+c$",
-        "알 수 없다"
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$1$"
       ],
-      "answer": 3,
-      "explanation": "$a>b$의 양변에 같은 수 $c$를 더하면 부등호 방향이 유지됩니다. 따라서 $a+c>b+c$는 $c$의 부호에 관계없이 항상 성립합니다."
+      "answer": 1,
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 27,
-      "question": "$a<b$일 때, $5-3a$와 $5-3b$의 대소 관계는?",
+      "question": "$4x+3\\le 19$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$5-3a<5-3b$",
-        "$5-3a>5-3b$",
-        "$5-3a=5-3b$",
-        "$5-3a\\leq 5-3b$",
-        "알 수 없다"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "$a<b$의 양변에 $-3$을 곱하면 $-3a>-3b$. 양변에 $5$를 더하면 $5-3a>5-3b$입니다."
+      "answer": 3,
+      "explanation": "$4x\\le 16$이므로 $x\\le 4$이다. 자연수 해는 $1,2,\\cdots,4$로 $4$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 28,
-      "question": "$0<a<1$일 때, $a$와 $a^2$의 대소 관계는?",
+      "question": "$5x+4\\le 29$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a<a^2$",
-        "$a=a^2$",
-        "$a>a^2$",
-        "알 수 없다",
-        "$a\\leq a^2$"
+        "$5$",
+        "$4$",
+        "$6$",
+        "$7$",
+        "$3$"
       ],
       "answer": 0,
-      "explanation": "$0<a<1$이면 $a^2=a\\cdot a$에서 $a<1$이므로 $a\\cdot a<1\\cdot a=a$. 따라서 $a^2<a$, 즉 $a>a^2$입니다. answer=0이므로 선택지 재배열: ①$a>a^2$, ②$a<a^2$, ③$a=a^2$, ④알 수 없다, ⑤$a\\leq a^2$. 정답은 ①."
+      "explanation": "$5x\\le 25$이므로 $x\\le 5$이다. 자연수 해는 $1,2,\\cdots,5$로 $5$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 29,
-      "question": "$a>2$, $b>3$일 때, $a+b$의 범위는?",
+      "question": "$2x+5\\le 9$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$a+b>2$",
-        "$a+b>3$",
-        "$a+b>6$",
-        "$a+b>5$",
-        "알 수 없다"
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$0$"
       ],
       "answer": 2,
-      "explanation": "$a>2$와 $b>3$을 더하면 $a+b>5$입니다. answer=2이므로 선택지 재배열: ①$a+b>2$, ②$a+b>3$, ③$a+b>5$, ④$a+b>6$, ⑤알 수 없다. 정답은 ③ $a+b>5$."
+      "explanation": "$2x\\le 4$이므로 $x\\le 2$이다. 자연수 해는 $1,2,\\cdots,2$로 $2$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     },
     {
       "id": 30,
-      "question": "$a>b$이고 $b>c$이면, $2a$와 $2c$의 대소 관계는?",
+      "question": "$3x+6\\le 15$을 만족하는 자연수 $x$의 개수는?",
       "choices": [
-        "$2a<2c$",
-        "$2a=2c$",
-        "$2a\\leq 2c$",
-        "$2a\\geq 2c$",
-        "$2a>2c$"
+        "$2$",
+        "$4$",
+        "$5$",
+        "$1$",
+        "$3$"
       ],
       "answer": 4,
-      "explanation": "$a>b$이고 $b>c$이면 이행성에 의해 $a>c$. 양변에 양수 $2$를 곱하면 $2a>2c$입니다."
+      "explanation": "$3x\\le 9$이므로 $x\\le 3$이다. 자연수 해는 $1,2,\\cdots,3$로 $3$개이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "계수 있는 부등식",
+        "skills": [
+          "부등식 풀이",
+          "정수해"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "inequality"
+      }
     }
   ]
 }

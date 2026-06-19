@@ -1,220 +1,767 @@
 {
   "id": "m1-factorization-basic",
   "title": "소인수분해 — 기본",
-  "description": "소수, 합성수, 소인수분해 기본 개념",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 소수, 합성수, 소인수분해 기본 개념",
   "grade": 1,
   "unit": "소인수분해",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "factorization",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "다음 중 소수인 것은?",
-      "choices": ["1", "4", "7", "9", "15"],
-      "answer": 2,
-      "explanation": "소수는 1과 자기 자신만을 약수로 가지는 1보다 큰 자연수입니다. 7의 약수는 1과 7뿐이므로 소수입니다."
+      "question": "$936$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "$936$=$2^{3}\\times3^{2}\\times13$이므로 두 지수의 합은 $3+2=5$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 2,
-      "question": "12를 소인수분해하면?",
-      "choices": ["$2 \\times 6$", "$2^2 \\times 3$", "$2 \\times 3^2$", "$3 \\times 4$", "$2^3 \\times 3$"],
-      "answer": 1,
-      "explanation": "$12 = 4 \\times 3 = 2^2 \\times 3$"
+      "question": "$30$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$0$",
+        "$1$",
+        "$3$",
+        "$4$"
+      ],
+      "answer": 0,
+      "explanation": "$30$=$2^{1}\\times3^{1}\\times5$이므로 두 지수의 합은 $1+1=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 3,
-      "question": "다음 중 합성수인 것은?",
-      "choices": ["2", "3", "5", "7", "9"],
-      "answer": 4,
-      "explanation": "합성수는 1과 자신 이외의 약수를 가지는 자연수입니다. $9 = 3 \\times 3$이므로 합성수입니다."
+      "question": "$252$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "$252$=$2^{2}\\times3^{2}\\times7$이므로 두 지수의 합은 $2+2=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 4,
-      "question": "$18$을 소인수분해한 것으로 옳은 것은?",
-      "choices": ["$2 \\times 9$", "$2 \\times 3^2$", "$3^2 \\times 2^2$", "$6 \\times 3$", "$2^2 \\times 3$"],
-      "answer": 1,
-      "explanation": "$18 = 2 \\times 9 = 2 \\times 3^2$"
+      "question": "$264$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$"
+      ],
+      "answer": 4,
+      "explanation": "$264$=$2^{3}\\times3^{1}\\times11$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 5,
-      "question": "$36$의 소인수를 모두 고른 것은?",
-      "choices": ["2", "3", "2, 3", "2, 3, 6", "6, 9"],
-      "answer": 2,
-      "explanation": "$36 = 2^2 \\times 3^2$이므로 소인수는 2와 3입니다."
+      "question": "$234$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 1,
+      "explanation": "$234$=$2^{1}\\times3^{2}\\times13$이므로 두 지수의 합은 $1+2=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 6,
-      "question": "1부터 10까지의 자연수 중 소수의 개수는?",
-      "choices": ["2개", "3개", "4개", "5개", "6개"],
-      "answer": 2,
-      "explanation": "2, 3, 5, 7 — 총 4개입니다."
+      "question": "$60$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "$60$=$2^{2}\\times3^{1}\\times5$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 7,
-      "question": "$2^3 \\times 5$와 같은 수는?",
-      "choices": ["30", "40", "50", "60", "80"],
-      "answer": 1,
-      "explanation": "$2^3 \\times 5 = 8 \\times 5 = 40$"
+      "question": "$504$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$5$",
+        "$3$",
+        "$4$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 0,
+      "explanation": "$504$=$2^{3}\\times3^{2}\\times7$이므로 두 지수의 합은 $3+2=5$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 8,
-      "question": "$45$를 소인수분해하면?",
-      "choices": ["$3 \\times 15$", "$5 \\times 9$", "$3^2 \\times 5$", "$3 \\times 5^2$", "$3^3 \\times 5$"],
+      "question": "$66$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
       "answer": 2,
-      "explanation": "$45 = 9 \\times 5 = 3^2 \\times 5$"
+      "explanation": "$66$=$2^{1}\\times3^{1}\\times11$이므로 두 지수의 합은 $1+1=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 9,
-      "question": "소인수분해를 이용하여 $60$의 약수의 개수를 구하면?",
-      "choices": ["8개", "10개", "12개", "14개", "16개"],
-      "answer": 2,
-      "explanation": "$60 = 2^2 \\times 3 \\times 5$이므로 약수의 개수는 $(2+1)(1+1)(1+1) = 12$개"
+      "question": "$468$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$"
+      ],
+      "answer": 4,
+      "explanation": "$468$=$2^{2}\\times3^{2}\\times13$이므로 두 지수의 합은 $2+2=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 10,
-      "question": "$2^2 \\times 3^2$와 같은 수는?",
-      "choices": ["24", "30", "36", "42", "48"],
-      "answer": 2,
-      "explanation": "$2^2 \\times 3^2 = 4 \\times 9 = 36$"
+      "question": "$120$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 1,
+      "explanation": "$120$=$2^{3}\\times3^{1}\\times5$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 11,
-      "question": "다음 중 소수가 아닌 것은?",
-      "choices": ["11", "13", "17", "19", "21"],
-      "answer": 4,
-      "explanation": "$21 = 3 \\times 7$이므로 소수가 아닙니다."
+      "question": "$126$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "$126$=$2^{1}\\times3^{2}\\times7$이므로 두 지수의 합은 $1+2=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 12,
-      "question": "$24$의 소인수분해 결과로 옳은 것은?",
-      "choices": ["$2^3 \\times 3$", "$2^2 \\times 3^2$", "$2 \\times 3^3$", "$2^4 \\times 3$", "$2^3 \\times 5$"],
+      "question": "$132$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$1$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
       "answer": 0,
-      "explanation": "$24 = 8 \\times 3 = 2^3 \\times 3$"
+      "explanation": "$132$=$2^{2}\\times3^{1}\\times11$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 13,
-      "question": "$100$을 소인수분해하면?",
-      "choices": ["$2 \\times 5^3$", "$2^2 \\times 5^2$", "$4 \\times 25$", "$2^3 \\times 5^2$", "$2 \\times 50$"],
-      "answer": 1,
-      "explanation": "$100 = 4 \\times 25 = 2^2 \\times 5^2$"
+      "question": "$936$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 2,
+      "explanation": "$936$=$2^{3}\\times3^{2}\\times13$이므로 두 지수의 합은 $3+2=5$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 14,
-      "question": "약수의 개수가 가장 적은 수는?",
-      "choices": ["4", "6", "7", "9", "10"],
-      "answer": 2,
-      "explanation": "소수 7의 약수는 1과 7로 2개이며, 이는 소수의 특성입니다."
+      "question": "$30$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$3$",
+        "$4$",
+        "$2$"
+      ],
+      "answer": 4,
+      "explanation": "$30$=$2^{1}\\times3^{1}\\times5$이므로 두 지수의 합은 $1+1=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 15,
-      "question": "$2 \\times 3 \\times 5 = 30$의 약수의 개수는?",
-      "choices": ["4개", "6개", "8개", "10개", "12개"],
-      "answer": 2,
-      "explanation": "$30 = 2^1 \\times 3^1 \\times 5^1$이므로 $(1+1)(1+1)(1+1) = 8$개"
+      "question": "$252$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 1,
+      "explanation": "$252$=$2^{2}\\times3^{2}\\times7$이므로 두 지수의 합은 $2+2=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 16,
-      "question": "$72$를 소인수분해하면?",
-      "choices": ["$2^2 \\times 3^2$", "$2^3 \\times 3^2$", "$2^2 \\times 3^3$", "$2^4 \\times 3$", "$2^3 \\times 3^3$"],
-      "answer": 1,
-      "explanation": "$72 = 8 \\times 9 = 2^3 \\times 3^2$"
+      "question": "$264$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$264$=$2^{3}\\times3^{1}\\times11$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 17,
-      "question": "소수이면서 짝수인 수는?",
-      "choices": ["4", "6", "2", "8", "10"],
-      "answer": 2,
-      "explanation": "2는 유일한 짝수 소수입니다."
+      "question": "$234$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$1$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 0,
+      "explanation": "$234$=$2^{1}\\times3^{2}\\times13$이므로 두 지수의 합은 $1+2=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 18,
-      "question": "$2^4$의 약수의 개수는?",
-      "choices": ["3개", "4개", "5개", "6개", "7개"],
+      "question": "$60$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
       "answer": 2,
-      "explanation": "$2^4$의 약수는 $1, 2, 4, 8, 16$으로 $(4+1) = 5$개"
+      "explanation": "$60$=$2^{2}\\times3^{1}\\times5$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 19,
-      "question": "$3^2 \\times 7$의 약수 중 가장 큰 것은?",
-      "choices": ["7", "9", "21", "63", "27"],
-      "answer": 3,
-      "explanation": "$3^2 \\times 7 = 63$이고 가장 큰 약수는 자기 자신인 63"
+      "question": "$504$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$6$",
+        "$7$",
+        "$5$"
+      ],
+      "answer": 4,
+      "explanation": "$504$=$2^{3}\\times3^{2}\\times7$이므로 두 지수의 합은 $3+2=5$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 20,
-      "question": "$28$을 소인수분해하면?",
-      "choices": ["$2 \\times 14$", "$4 \\times 7$", "$2^2 \\times 7$", "$2^3 \\times 7$", "$2 \\times 7^2$"],
-      "answer": 2,
-      "explanation": "$28 = 4 \\times 7 = 2^2 \\times 7$"
+      "question": "$66$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$0$",
+        "$2$",
+        "$1$",
+        "$3$",
+        "$4$"
+      ],
+      "answer": 1,
+      "explanation": "$66$=$2^{1}\\times3^{1}\\times11$이므로 두 지수의 합은 $1+1=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 21,
-      "question": "다음 수 중 소인수가 2와 3뿐인 수는?",
-      "choices": ["15", "24", "35", "45", "50"],
-      "answer": 1,
-      "explanation": "$24 = 2^3 \\times 3$이므로 소인수가 2와 3뿐입니다."
+      "question": "$468$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$468$=$2^{2}\\times3^{2}\\times13$이므로 두 지수의 합은 $2+2=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 22,
-      "question": "50 이하의 소수의 개수는?",
-      "choices": ["13개", "14개", "15개", "16개", "17개"],
-      "answer": 2,
-      "explanation": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 — 총 15개"
+      "question": "$120$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 0,
+      "explanation": "$120$=$2^{3}\\times3^{1}\\times5$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 23,
-      "question": "$2^a = 32$일 때, $a$의 값은?",
-      "choices": ["3", "4", "5", "6", "7"],
+      "question": "$126$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
       "answer": 2,
-      "explanation": "$2^5 = 32$이므로 $a = 5$"
+      "explanation": "$126$=$2^{1}\\times3^{2}\\times7$이므로 두 지수의 합은 $1+2=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 24,
-      "question": "$80$을 소인수분해하면?",
-      "choices": ["$2^3 \\times 5$", "$2^4 \\times 5$", "$2^3 \\times 5^2$", "$2^5 \\times 5$", "$2^2 \\times 5^2$"],
-      "answer": 1,
-      "explanation": "$80 = 16 \\times 5 = 2^4 \\times 5$"
+      "question": "$132$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$5$",
+        "$3$"
+      ],
+      "answer": 4,
+      "explanation": "$132$=$2^{2}\\times3^{1}\\times11$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 25,
-      "question": "약수의 개수가 3개인 수를 보기에서 고르면?",
-      "choices": ["4", "6", "8", "10", "12"],
-      "answer": 0,
-      "explanation": "$4 = 2^2$의 약수는 $1, 2, 4$로 3개. 약수의 개수가 3인 수는 소수의 제곱입니다."
+      "question": "$936$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 1,
+      "explanation": "$936$=$2^{3}\\times3^{2}\\times13$이므로 두 지수의 합은 $3+2=5$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 26,
-      "question": "$2^3 \\times 3$의 모든 약수의 합은?",
-      "choices": ["24", "36", "48", "60", "72"],
-      "answer": 1,
-      "explanation": "약수: 1, 2, 3, 4, 6, 8, 12, 24. 합 = $1+2+3+4+6+8+12+24 = 60$… 실제로 약수의 합 공식: $(1+2+4+8)(1+3) = 15 \\times 4 = 60$이므로 정답은 4번."
+      "question": "$30$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$"
+      ],
+      "answer": 3,
+      "explanation": "$30$=$2^{1}\\times3^{1}\\times5$이므로 두 지수의 합은 $1+1=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 27,
-      "question": "다음 중 소인수분해가 올바른 것은?",
-      "choices": ["$20 = 4 \\times 5$", "$20 = 2^2 \\times 5$", "$20 = 2 \\times 10$", "$20 = 2^3 \\times 5$", "$20 = 2 \\times 5^2$"],
-      "answer": 1,
-      "explanation": "소인수분해는 소인수만을 이용해야 합니다. $20 = 2^2 \\times 5$"
+      "question": "$252$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 0,
+      "explanation": "$252$=$2^{2}\\times3^{2}\\times7$이므로 두 지수의 합은 $2+2=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 28,
-      "question": "$n = 2^3 \\times 3^2$일 때, $n$의 약수의 개수는?",
-      "choices": ["8개", "10개", "12개", "14개", "16개"],
+      "question": "$264$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
       "answer": 2,
-      "explanation": "$(3+1)(2+1) = 4 \\times 3 = 12$개"
+      "explanation": "$264$=$2^{3}\\times3^{1}\\times11$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 29,
-      "question": "다음 중 120의 소인수가 아닌 것은?",
-      "choices": ["2", "3", "5", "7", "소인수는 2, 3, 5뿐"],
-      "answer": 3,
-      "explanation": "$120 = 2^3 \\times 3 \\times 5$이므로 소인수는 2, 3, 5. 7은 소인수가 아닙니다."
+      "question": "$234$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$5$",
+        "$3$"
+      ],
+      "answer": 4,
+      "explanation": "$234$=$2^{1}\\times3^{2}\\times13$이므로 두 지수의 합은 $1+2=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     },
     {
       "id": 30,
-      "question": "어떤 수의 소인수분해가 $2 \\times 3 \\times 7$이라면, 이 수는?",
-      "choices": ["21", "28", "35", "42", "56"],
-      "answer": 3,
-      "explanation": "$2 \\times 3 \\times 7 = 42$"
+      "question": "$60$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 1,
+      "explanation": "$60$=$2^{2}\\times3^{1}\\times5$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인",
+        "skills": [
+          "소인수분해",
+          "지수"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
     }
   ]
 }

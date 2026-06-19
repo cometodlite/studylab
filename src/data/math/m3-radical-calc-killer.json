@@ -1,400 +1,767 @@
 {
   "id": "m3-radical-calc-killer",
   "title": "근호를 포함한 식의 계산 — 킬러",
-  "description": "근호 계산 최고난도",
+  "description": "EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다. EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다. EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다. EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다. EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다. 근호 계산 최고난도",
   "grade": 3,
   "unit": "제곱근과 실수",
   "difficulty": "킬러",
+  "ebsStyle": {
+    "version": 1,
+    "role": "고난도 추론",
+    "expectedSteps": 6,
+    "family": "radical",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$\\sqrt{7}=2.646$일 때, $\\sqrt{700}$의 값은?",
+      "question": "$\\sqrt{180n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$264.6$",
-        "$26.46$",
-        "$2.646$",
-        "$0.2646$",
-        "$2646$"
+        "$10$",
+        "$15$",
+        "$5$",
+        "$25$",
+        "$11$"
       ],
-      "answer": 1,
-      "explanation": "$\\sqrt{700}=10\\sqrt{7}=10\\times2.646=26.46$."
+      "answer": 2,
+      "explanation": "$180$의 제곱인수를 제거하면 남는 부분은 $5$이다. 따라서 최소 $n=5$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 2,
-      "question": "$\\sqrt{3}=a$로 놓을 때, $\\frac{6}{\\sqrt{3}}+\\sqrt{75}$를 $a$로 나타내면?",
+      "question": "$\\sqrt{216n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$6a$",
-        "$4a$",
-        "$8a$",
-        "$7a$",
-        "$5a$"
+        "$12$",
+        "$18$",
+        "$36$",
+        "$7$",
+        "$6$"
       ],
-      "answer": 3,
-      "explanation": "$\\frac{6}{\\sqrt{3}}=\\frac{6\\sqrt{3}}{3}=2\\sqrt{3}=2a$. $\\sqrt{75}=5\\sqrt{3}=5a$. 합: $7a$."
+      "answer": 4,
+      "explanation": "$216$의 제곱인수를 제거하면 남는 부분은 $6$이다. 따라서 최소 $n=6$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 3,
-      "question": "$\\sqrt{5}$의 소수 부분을 $a$라 할 때, $a^2+4a$의 값은?",
+      "question": "$\\sqrt{252n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$1$",
-        "$4\\sqrt{5}-9$",
-        "$2\\sqrt{5}-4$",
-        "$9-4\\sqrt{5}$",
-        "$2$"
+        "$14$",
+        "$7$",
+        "$21$",
+        "$49$",
+        "$13$"
       ],
-      "answer": 0,
-      "explanation": "$2<\\sqrt{5}<3$이므로 $a=\\sqrt{5}-2$. $a^2=(9-4\\sqrt{5})$, $4a=4\\sqrt{5}-8$. 합: $9-4\\sqrt{5}+4\\sqrt{5}-8=1$."
+      "answer": 1,
+      "explanation": "$252$의 제곱인수를 제거하면 남는 부분은 $7$이다. 따라서 최소 $n=7$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 4,
-      "question": "$a>0$, $b<0$일 때, $\\sqrt{\\frac{a^2}{b^2}}+\\frac{a}{|b|}$를 간단히 하면?",
+      "question": "$\\sqrt{360n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$0$",
-        "$\\frac{2a}{b}$",
-        "$\\frac{a}{|b|}$",
-        "$-\\frac{2a}{b}$",
-        "$\\frac{2a}{|b|}$"
+        "$20$",
+        "$30$",
+        "$100$",
+        "$10$",
+        "$16$"
       ],
-      "answer": 4,
-      "explanation": "$\\sqrt{\\frac{a^2}{b^2}}=\\frac{|a|}{|b|}=\\frac{a}{|b|}$ ($a>0$). 합: $\\frac{a}{|b|}+\\frac{a}{|b|}=\\frac{2a}{|b|}$."
+      "answer": 3,
+      "explanation": "$360$의 제곱인수를 제거하면 남는 부분은 $10$이다. 따라서 최소 $n=10$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 5,
-      "question": "$\\sqrt{2}=a$로 놓을 때, $\\frac{4}{\\sqrt{2}}+\\sqrt{18}-\\sqrt{8}$를 $a$로 나타내면?",
+      "question": "$\\sqrt{98n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$4a$",
-        "$5a$",
-        "$3a$",
-        "$2a$",
-        "$6a$"
+        "$2$",
+        "$4$",
+        "$6$",
+        "$9$",
+        "$3$"
       ],
-      "answer": 2,
-      "explanation": "$\\frac{4}{\\sqrt{2}}=2\\sqrt{2}=2a$. $\\sqrt{18}=3\\sqrt{2}=3a$. $\\sqrt{8}=2\\sqrt{2}=2a$. 합: $2a+3a-2a=3a$."
+      "answer": 0,
+      "explanation": "$98$의 제곱인수를 제거하면 남는 부분은 $2$이다. 따라서 최소 $n=2$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 6,
-      "question": "$\\sqrt{3}=a$로 놓을 때, $\\sqrt{27}-\\frac{3}{\\sqrt{3}}+\\sqrt{48}$를 $a$로 나타내면?",
+      "question": "$\\sqrt{147n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$5a$",
-        "$8a$",
-        "$4a$",
-        "$6a$",
-        "$9a$"
+        "$6$",
+        "$9$",
+        "$3$",
+        "$10$",
+        "$4$"
       ],
-      "answer": 3,
-      "explanation": "$\\sqrt{27}=3a$, $\\frac{3}{\\sqrt{3}}=\\sqrt{3}=a$, $\\sqrt{48}=4a$. 합: $3a-a+4a=6a$."
+      "answer": 2,
+      "explanation": "$147$의 제곱인수를 제거하면 남는 부분은 $3$이다. 따라서 최소 $n=3$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 7,
-      "question": "$\\sqrt{5}$의 정수 부분을 $n$이라 할 때, $(\\sqrt{5}-n)(\\sqrt{5}+n)$의 값은?",
+      "question": "$\\sqrt{245n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$5$",
-        "$1$",
-        "$-4$",
-        "$4$",
-        "$-1$"
+        "$10$",
+        "$15$",
+        "$25$",
+        "$12$",
+        "$5$"
       ],
-      "answer": 1,
-      "explanation": "$2<\\sqrt{5}<3$이므로 $n=2$. $(\\sqrt{5}-2)(\\sqrt{5}+2)=5-4=1$."
+      "answer": 4,
+      "explanation": "$245$의 제곱인수를 제거하면 남는 부분은 $5$이다. 따라서 최소 $n=5$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 8,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{3}=b$로 놓을 때, $\\frac{\\sqrt{6}+\\sqrt{12}}{\\sqrt{2}}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{294n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$a+b$",
-        "$b+2b$",
-        "$ab+a$",
-        "$ab+2a$",
-        "$b+ab$"
+        "$12$",
+        "$6$",
+        "$18$",
+        "$36$",
+        "$13$"
       ],
-      "answer": 4,
-      "explanation": "$\\frac{\\sqrt{6}}{\\sqrt{2}}=\\sqrt{3}=b$, $\\frac{\\sqrt{12}}{\\sqrt{2}}=\\sqrt{6}=ab$. 합: $b+ab$."
+      "answer": 1,
+      "explanation": "$294$의 제곱인수를 제거하면 남는 부분은 $6$이다. 따라서 최소 $n=6$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 9,
-      "question": "$\\sqrt{11}=3.317$일 때, $\\sqrt{1100}$의 값은?",
+      "question": "$\\sqrt{343n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$33.17$",
-        "$331.7$",
-        "$0.3317$",
-        "$3317$",
-        "$3.317$"
+        "$14$",
+        "$21$",
+        "$49$",
+        "$7$",
+        "$8$"
       ],
-      "answer": 0,
-      "explanation": "$\\sqrt{1100}=\\sqrt{100\\cdot11}=10\\sqrt{11}=33.17$."
+      "answer": 3,
+      "explanation": "$343$의 제곱인수를 제거하면 남는 부분은 $7$이다. 따라서 최소 $n=7$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 10,
-      "question": "$a>0$, $b<0$일 때, $\\sqrt{(a-b)^2}-\\sqrt{a^2}$를 간단히 하면?",
+      "question": "$\\sqrt{490n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$a-b$",
-        "$2a-b$",
-        "$-b$",
-        "$b$",
-        "$-2a+b$"
+        "$10$",
+        "$20$",
+        "$30$",
+        "$100$",
+        "$17$"
       ],
-      "answer": 2,
-      "explanation": "$a>0$, $b<0$이면 $a-b>0$이므로 $\\sqrt{(a-b)^2}=a-b$. $\\sqrt{a^2}=a$. 차: $(a-b)-a=-b$."
+      "answer": 0,
+      "explanation": "$490$의 제곱인수를 제거하면 남는 부분은 $10$이다. 따라서 최소 $n=10$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 11,
-      "question": "$\\sqrt{3}$의 소수 부분을 $p$라 할 때, $p^2+2p$의 값은?",
+      "question": "$\\sqrt{128n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$0$",
-        "$1$",
-        "$\\sqrt{3}-1$",
-        "$2\\sqrt{3}-2$",
-        "$2$"
+        "$4$",
+        "$6$",
+        "$2$",
+        "$10$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "$1<\\sqrt{3}<2$이므로 $p=\\sqrt{3}-1$. $p^2=4-2\\sqrt{3}$, $2p=2\\sqrt{3}-2$. 합: $2$."
+      "answer": 2,
+      "explanation": "$128$의 제곱인수를 제거하면 남는 부분은 $2$이다. 따라서 최소 $n=2$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 12,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{3}=b$로 놓을 때, $\\frac{\\sqrt{6}}{2}-\\frac{\\sqrt{2}}{3}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{192n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$\\frac{3ab-2a}{6}$",
-        "$\\frac{ab-a}{3}$",
-        "$\\frac{3ab+2a}{6}$",
-        "$\\frac{ab}{2}-a$",
-        "$\\frac{ab-2a}{6}$"
-      ],
-      "answer": 0,
-      "explanation": "$\\frac{\\sqrt{6}}{2}=\\frac{ab}{2}$, $\\frac{\\sqrt{2}}{3}=\\frac{a}{3}$. $\\frac{ab}{2}-\\frac{a}{3}=\\frac{3ab-2a}{6}$."
-    },
-    {
-      "id": 13,
-      "question": "$\\sqrt{5}$의 소수 부분을 $a$라 할 때, $a^2+4a+3$의 값은?",
-      "choices": [
-        "$4\\sqrt{5}-8$",
-        "$6\\sqrt{5}-13$",
-        "$2\\sqrt{5}-2$",
+        "$6$",
+        "$9$",
+        "$11$",
         "$4$",
         "$3$"
       ],
-      "answer": 3,
-      "explanation": "$a=\\sqrt{5}-2$. $a^2+4a=1$ (위와 동일). $a^2+4a+3=1+3=4$."
+      "answer": 4,
+      "explanation": "$192$의 제곱인수를 제거하면 남는 부분은 $3$이다. 따라서 최소 $n=3$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$\\sqrt{320n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
+      "choices": [
+        "$10$",
+        "$5$",
+        "$15$",
+        "$25$",
+        "$13$"
+      ],
+      "answer": 1,
+      "explanation": "$320$의 제곱인수를 제거하면 남는 부분은 $5$이다. 따라서 최소 $n=5$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 14,
-      "question": "$\\sqrt{3}=a$로 놓을 때, $\\sqrt{12}+\\frac{6}{\\sqrt{3}}-\\sqrt{27}$를 $a$로 나타내면?",
+      "question": "$\\sqrt{384n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$0$",
-        "$2a$",
-        "$a$",
-        "$3a$",
-        "$-a$"
+        "$12$",
+        "$18$",
+        "$36$",
+        "$6$",
+        "$14$"
       ],
-      "answer": 2,
-      "explanation": "$\\sqrt{12}=2a$, $\\frac{6}{\\sqrt{3}}=2a$, $\\sqrt{27}=3a$. $2a+2a-3a=a$."
+      "answer": 3,
+      "explanation": "$384$의 제곱인수를 제거하면 남는 부분은 $6$이다. 따라서 최소 $n=6$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 15,
-      "question": "$\\sqrt{3}$의 소수 부분을 $p$라 할 때, $p^2+2p$의 값은? (단, $p=\\sqrt{3}-1$)",
+      "question": "$\\sqrt{448n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$0$",
-        "$2$",
-        "$\\sqrt{3}$",
-        "$2\\sqrt{3}-2$",
-        "$1$"
+        "$7$",
+        "$14$",
+        "$21$",
+        "$49$",
+        "$15$"
       ],
-      "answer": 1,
-      "explanation": "$p=\\sqrt{3}-1$이면 $p+1=\\sqrt{3}$, $(p+1)^2=3$, $p^2+2p+1=3$, $p^2+2p=2$."
+      "answer": 0,
+      "explanation": "$448$의 제곱인수를 제거하면 남는 부분은 $7$이다. 따라서 최소 $n=7$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 16,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{3}=b$로 놓을 때, $\\sqrt{54}+\\sqrt{8}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{640n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$3ab+2a$",
-        "$3b+2a$",
-        "$9b+4a$",
-        "$6ab+4a$",
-        "$3ab+a$"
+        "$20$",
+        "$30$",
+        "$10$",
+        "$100$",
+        "$18$"
       ],
-      "answer": 0,
-      "explanation": "$\\sqrt{54}=3\\sqrt{6}=3\\sqrt{2}\\cdot\\sqrt{3}=3ab$. $\\sqrt{8}=2\\sqrt{2}=2a$. 합: $3ab+2a$."
+      "answer": 2,
+      "explanation": "$640$의 제곱인수를 제거하면 남는 부분은 $10$이다. 따라서 최소 $n=10$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 17,
-      "question": "$\\sqrt{2}=1.414$일 때, $\\sqrt{0.02}$의 값은?",
+      "question": "$\\sqrt{162n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$0.01414$",
-        "$1.414$",
-        "$14.14$",
-        "$141.4$",
-        "$0.1414$"
+        "$4$",
+        "$6$",
+        "$11$",
+        "$3$",
+        "$2$"
       ],
       "answer": 4,
-      "explanation": "$\\sqrt{0.02}=\\sqrt{\\frac{2}{100}}=\\frac{\\sqrt{2}}{10}=\\frac{1.414}{10}=0.1414$."
+      "explanation": "$162$의 제곱인수를 제거하면 남는 부분은 $2$이다. 따라서 최소 $n=2$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 18,
-      "question": "$a>0$, $b<0$, $a+b<0$일 때, $\\sqrt{(a+b)^2}+\\sqrt{(a-b)^2}$를 간단히 하면?",
+      "question": "$\\sqrt{243n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$2a$",
-        "$2b$",
-        "$-2b$",
-        "$2a+2b$",
-        "$-2a$"
+        "$6$",
+        "$3$",
+        "$9$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 2,
-      "explanation": "$a+b<0$이므로 $\\sqrt{(a+b)^2}=-(a+b)$. $a-b>0$이므로 $\\sqrt{(a-b)^2}=a-b$. 합: $-(a+b)+(a-b)=-2b$."
+      "answer": 1,
+      "explanation": "$243$의 제곱인수를 제거하면 남는 부분은 $3$이다. 따라서 최소 $n=3$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 19,
-      "question": "$\\sqrt{5}=a$, $\\sqrt{3}=b$로 놓을 때, $\\sqrt{15}+\\sqrt{135}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{405n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$ab+3a$",
-        "$ab+3b$",
-        "$3ab+a$",
-        "$4ab$",
-        "$ab+9b$"
+        "$10$",
+        "$15$",
+        "$25$",
+        "$5$",
+        "$14$"
       ],
       "answer": 3,
-      "explanation": "$\\sqrt{15}=\\sqrt{5}\\cdot\\sqrt{3}=ab$. $\\sqrt{135}=\\sqrt{9\\cdot15}=3\\sqrt{15}=3ab$. 합: $4ab$."
+      "explanation": "$405$의 제곱인수를 제거하면 남는 부분은 $5$이다. 따라서 최소 $n=5$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 20,
-      "question": "$\\sqrt{3}$의 소수 부분을 $p$라 할 때, $p$의 값은?",
+      "question": "$\\sqrt{486n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$3-\\sqrt{3}$",
-        "$\\sqrt{3}-1$",
-        "$2-\\sqrt{3}$",
-        "$\\sqrt{3}$",
-        "$1$"
+        "$6$",
+        "$12$",
+        "$18$",
+        "$36$",
+        "$15$"
       ],
-      "answer": 1,
-      "explanation": "$1<\\sqrt{3}<2$이므로 정수 부분은 $1$. 소수 부분 $p=\\sqrt{3}-1$."
+      "answer": 0,
+      "explanation": "$486$의 제곱인수를 제거하면 남는 부분은 $6$이다. 따라서 최소 $n=6$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 21,
-      "question": "$\\sqrt{11}$의 소수 부분은?",
+      "question": "$\\sqrt{567n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$4-\\sqrt{11}$",
-        "$\\sqrt{11}+3$",
-        "$\\sqrt{11}-3$",
-        "$3-\\sqrt{11}$",
-        "$\\sqrt{11}$"
+        "$14$",
+        "$21$",
+        "$7$",
+        "$49$",
+        "$16$"
       ],
       "answer": 2,
-      "explanation": "$3<\\sqrt{11}<4$이므로 정수 부분은 $3$. 소수 부분 $=\\sqrt{11}-3$."
+      "explanation": "$567$의 제곱인수를 제거하면 남는 부분은 $7$이다. 따라서 최소 $n=7$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 22,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{3}=b$로 놓을 때, $\\sqrt{96}+\\sqrt{54}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{810n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$4ab+3a$",
-        "$7ab$",
-        "$4ab+3b$",
-        "$7a$",
-        "$7b$"
+        "$20$",
+        "$30$",
+        "$100$",
+        "$19$",
+        "$10$"
       ],
-      "answer": 1,
-      "explanation": "$\\sqrt{96}=4\\sqrt{6}=4ab$. $\\sqrt{54}=3\\sqrt{6}=3ab$. 합: $7ab$."
+      "answer": 4,
+      "explanation": "$810$의 제곱인수를 제거하면 남는 부분은 $10$이다. 따라서 최소 $n=10$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 23,
-      "question": "$\\sqrt{5}=a$로 놓을 때, $\\frac{10}{\\sqrt{5}}+\\sqrt{45}$를 $a$로 나타내면?",
+      "question": "$\\sqrt{200n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$3a$",
-        "$4a$",
-        "$6a$",
-        "$2a$",
-        "$5a$"
+        "$4$",
+        "$2$",
+        "$6$",
+        "$12$",
+        "$3$"
       ],
-      "answer": 4,
-      "explanation": "$\\frac{10}{\\sqrt{5}}=2\\sqrt{5}=2a$. $\\sqrt{45}=3\\sqrt{5}=3a$. 합: $5a$."
+      "answer": 1,
+      "explanation": "$200$의 제곱인수를 제거하면 남는 부분은 $2$이다. 따라서 최소 $n=2$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 24,
-      "question": "$\\sqrt{2}=1.414$일 때, $\\frac{\\sqrt{2}}{10}$의 값은?",
+      "question": "$\\sqrt{300n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$0.1414$",
-        "$14.14$",
-        "$1.414$",
-        "$141.4$",
-        "$0.01414$"
+        "$6$",
+        "$9$",
+        "$13$",
+        "$3$",
+        "$4$"
       ],
-      "answer": 0,
-      "explanation": "$\\frac{\\sqrt{2}}{10}=\\frac{1.414}{10}=0.1414$."
+      "answer": 3,
+      "explanation": "$300$의 제곱인수를 제거하면 남는 부분은 $3$이다. 따라서 최소 $n=3$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 25,
-      "question": "$\\sqrt{2}$의 소수 부분을 $a$라 할 때, $a^2+2a$의 값은?",
+      "question": "$\\sqrt{500n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$4\\sqrt{2}-4$",
-        "$2\\sqrt{2}-2$",
-        "$0$",
-        "$1$",
-        "$2$"
+        "$5$",
+        "$10$",
+        "$15$",
+        "$25$",
+        "$6$"
       ],
-      "answer": 3,
-      "explanation": "$1<\\sqrt{2}<2$이므로 $a=\\sqrt{2}-1$. $a^2=3-2\\sqrt{2}$, $2a=2\\sqrt{2}-2$. 합: $1$."
+      "answer": 0,
+      "explanation": "$500$의 제곱인수를 제거하면 남는 부분은 $5$이다. 따라서 최소 $n=5$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 26,
-      "question": "$\\sqrt{3}=a$, $\\sqrt{2}=b$로 놓을 때, $\\frac{\\sqrt{6}+\\sqrt{3}}{\\sqrt{2}}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{600n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$a+1$",
-        "$a+ab$",
-        "$ab+a$",
-        "$\\frac{ab+a}{b}$",
-        "$a+\\frac{a}{b}$"
+        "$12$",
+        "$18$",
+        "$6$",
+        "$36$",
+        "$16$"
       ],
-      "answer": 4,
-      "explanation": "$\\frac{\\sqrt{6}}{\\sqrt{2}}=\\sqrt{3}=a$. $\\frac{\\sqrt{3}}{\\sqrt{2}}=\\frac{a}{b}$. 합: $a+\\frac{a}{b}$."
+      "answer": 2,
+      "explanation": "$600$의 제곱인수를 제거하면 남는 부분은 $6$이다. 따라서 최소 $n=6$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 27,
-      "question": "$\\sqrt{5}$의 소수 부분을 $a$, $\\sqrt{3}$의 소수 부분을 $b$라 할 때, $a-b$의 값은?",
+      "question": "$\\sqrt{700n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$\\sqrt{5}-\\sqrt{3}-1$",
-        "$\\sqrt{5}-\\sqrt{3}$",
-        "$\\sqrt{5}+\\sqrt{3}-3$",
-        "$\\sqrt{5}-\\sqrt{3}+1$",
-        "$1$"
+        "$14$",
+        "$21$",
+        "$49$",
+        "$17$",
+        "$7$"
       ],
-      "answer": 0,
-      "explanation": "$a=\\sqrt{5}-2$, $b=\\sqrt{3}-1$. $a-b=\\sqrt{5}-\\sqrt{3}-1$."
+      "answer": 4,
+      "explanation": "$700$의 제곱인수를 제거하면 남는 부분은 $7$이다. 따라서 최소 $n=7$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 28,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{5}=b$로 놓을 때, $\\sqrt{250}+\\sqrt{8}$를 $a$, $b$로 나타내면?",
+      "question": "$\\sqrt{1000n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$5ab+a$",
-        "$5b+2a$",
-        "$5ab+4a$",
-        "$5ab+2a$",
-        "$5b^2+2a$"
+        "$20$",
+        "$10$",
+        "$30$",
+        "$100$",
+        "$11$"
       ],
-      "answer": 3,
-      "explanation": "$\\sqrt{250}=5\\sqrt{10}=5\\sqrt{2}\\cdot\\sqrt{5}=5ab$. $\\sqrt{8}=2a$. 합: $5ab+2a$."
+      "answer": 1,
+      "explanation": "$1000$의 제곱인수를 제거하면 남는 부분은 $10$이다. 따라서 최소 $n=10$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 29,
-      "question": "$\\sqrt{6}$의 정수 부분을 $m$이라 할 때, $(\\sqrt{6}-m)^2+(\\sqrt{6}+m)^2$의 값은?",
+      "question": "$\\sqrt{242n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$16$",
-        "$20$",
-        "$24$",
-        "$12$",
-        "$8$"
+        "$4$",
+        "$6$",
+        "$13$",
+        "$2$",
+        "$3$"
       ],
-      "answer": 1,
-      "explanation": "$m=2$. $(\\sqrt{6}-2)^2+(\\sqrt{6}+2)^2=2(\\sqrt{6})^2+2\\cdot4=12+8=20$."
+      "answer": 3,
+      "explanation": "$242$의 제곱인수를 제거하면 남는 부분은 $2$이다. 따라서 최소 $n=2$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     },
     {
       "id": 30,
-      "question": "$\\sqrt{3}=a$로 놓을 때, $\\sqrt{48}-\\frac{12}{\\sqrt{3}}+\\sqrt{75}$를 $a$로 나타내면?",
+      "question": "$\\sqrt{363n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$의 값은?",
       "choices": [
-        "$7a$",
-        "$9a$",
-        "$5a$",
-        "$3a$",
-        "$4a$"
+        "$3$",
+        "$6$",
+        "$9$",
+        "$14$",
+        "$4$"
       ],
-      "answer": 2,
-      "explanation": "$\\sqrt{48}=4a$, $\\frac{12}{\\sqrt{3}}=4\\sqrt{3}=4a$, $\\sqrt{75}=5a$. 합: $4a-4a+5a=5a$."
+      "answer": 0,
+      "explanation": "$363$의 제곱인수를 제거하면 남는 부분은 $3$이다. 따라서 최소 $n=3$를 곱하면 근호 안이 완전제곱수가 된다.",
+      "ebs": {
+        "role": "고난도 추론",
+        "steps": 6,
+        "typeTag": "제곱근 조건 역추론",
+        "skills": [
+          "제곱근",
+          "자연수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "radical"
+      }
     }
   ]
 }

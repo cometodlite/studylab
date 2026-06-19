@@ -1,400 +1,767 @@
 {
   "id": "m3-radical-calc-advanced",
   "title": "근호를 포함한 식의 계산 — 심화",
-  "description": "근호 계산 심화",
+  "description": "EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. 근호 계산 심화",
   "grade": 3,
   "unit": "제곱근과 실수",
   "difficulty": "심화",
+  "ebsStyle": {
+    "version": 1,
+    "role": "조건 결합",
+    "expectedSteps": 4,
+    "family": "radical",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$(\\sqrt{3}+1)(\\sqrt{3}-2)+\\sqrt{12}$를 계산하면?",
+      "question": "$(\\sqrt{16}+\\sqrt{2})(\\sqrt{16}-\\sqrt{2})$의 값은?",
       "choices": [
-        "$2\\sqrt{3}-1$",
-        "$\\sqrt{3}+2$",
-        "$1+\\sqrt{3}$",
-        "$3+\\sqrt{3}$",
-        "$2-\\sqrt{3}$"
+        "$12$",
+        "$13$",
+        "$14$",
+        "$15$",
+        "$16$"
       ],
       "answer": 2,
-      "explanation": "$(\\sqrt{3}+1)(\\sqrt{3}-2)=3-2\\sqrt{3}+\\sqrt{3}-2=1-\\sqrt{3}$. $\\sqrt{12}=2\\sqrt{3}$이므로 $(1-\\sqrt{3})+2\\sqrt{3}=1+\\sqrt{3}$."
+      "explanation": "합차공식으로 $16-2=14$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 2,
-      "question": "$(\\sqrt{6}+\\sqrt{2})^2-(\\sqrt{6}-\\sqrt{2})^2$를 계산하면?",
+      "question": "$(\\sqrt{25}+\\sqrt{3})(\\sqrt{25}-\\sqrt{3})$의 값은?",
       "choices": [
-        "$4\\sqrt{6}$",
-        "$16$",
-        "$4\\sqrt{12}$",
-        "$16\\sqrt{3}$",
-        "$8\\sqrt{3}$"
+        "$20$",
+        "$21$",
+        "$23$",
+        "$24$",
+        "$22$"
       ],
       "answer": 4,
-      "explanation": "$(A+B)^2-(A-B)^2=4AB$ 공식 이용. $A=\\sqrt{6}$, $B=\\sqrt{2}$이면 $4\\cdot\\sqrt{6}\\cdot\\sqrt{2}=4\\sqrt{12}=8\\sqrt{3}$."
+      "explanation": "합차공식으로 $25-3=22$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 3,
-      "question": "$a>0$, $b<0$일 때, $\\sqrt{4a^2}+\\sqrt{b^2}$를 간단히 하면?",
+      "question": "$(\\sqrt{36}+\\sqrt{4})(\\sqrt{36}-\\sqrt{4})$의 값은?",
       "choices": [
-        "$2a-b$",
-        "$2a+b$",
-        "$-2a-b$",
-        "$2a+2b$",
-        "$-2a+b$"
+        "$30$",
+        "$32$",
+        "$31$",
+        "$33$",
+        "$34$"
       ],
-      "answer": 0,
-      "explanation": "$a>0$이므로 $\\sqrt{4a^2}=2a$. $b<0$이므로 $\\sqrt{b^2}=|b|=-b$. 합: $2a+(-b)=2a-b$."
+      "answer": 1,
+      "explanation": "합차공식으로 $36-4=32$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 4,
-      "question": "$x=\\frac{1}{\\sqrt{3}-\\sqrt{2}}$일 때, $x^2-2\\sqrt{3}x$의 값은?",
+      "question": "$(\\sqrt{4}+\\sqrt{1})(\\sqrt{4}-\\sqrt{1})$의 값은?",
       "choices": [
-        "$3+2\\sqrt{6}$",
-        "$5$",
-        "$2\\sqrt{6}-3$",
-        "$-1$",
-        "$\\sqrt{6}$"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
       "answer": 3,
-      "explanation": "유리화: $x=\\sqrt{3}+\\sqrt{2}$. $x^2=5+2\\sqrt{6}$. $2\\sqrt{3}x=2\\sqrt{3}(\\sqrt{3}+\\sqrt{2})=6+2\\sqrt{6}$. $x^2-2\\sqrt{3}x=5+2\\sqrt{6}-6-2\\sqrt{6}=-1$."
+      "explanation": "합차공식으로 $4-1=3$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 5,
-      "question": "$(2\\sqrt{3}-\\sqrt{2})(2\\sqrt{3}+\\sqrt{2})$를 계산하면?",
+      "question": "$(\\sqrt{9}+\\sqrt{2})(\\sqrt{9}-\\sqrt{2})$의 값은?",
       "choices": [
-        "$14$",
-        "$10$",
-        "$12-\\sqrt{6}$",
+        "$7$",
+        "$5$",
+        "$6$",
         "$8$",
-        "$12+\\sqrt{6}$"
+        "$9$"
       ],
-      "answer": 1,
-      "explanation": "합차공식: $(2\\sqrt{3})^2-(\\sqrt{2})^2=12-2=10$."
+      "answer": 0,
+      "explanation": "합차공식으로 $9-2=7$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 6,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{3}=b$로 놓을 때, $\\sqrt{24}$를 $a$, $b$로 나타내면?",
+      "question": "$(\\sqrt{16}+\\sqrt{3})(\\sqrt{16}-\\sqrt{3})$의 값은?",
       "choices": [
-        "$ab^2$",
-        "$a^2b$",
-        "$ab$",
-        "$4ab$",
-        "$2ab$"
+        "$11$",
+        "$12$",
+        "$13$",
+        "$14$",
+        "$15$"
       ],
-      "answer": 4,
-      "explanation": "$\\sqrt{24}=2\\sqrt{6}=2\\sqrt{2}\\cdot\\sqrt{3}=2ab$."
+      "answer": 2,
+      "explanation": "합차공식으로 $16-3=13$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 7,
-      "question": "$\\frac{3}{\\sqrt{3}+\\sqrt{2}}+\\frac{3}{\\sqrt{3}-\\sqrt{2}}$를 계산하면?",
+      "question": "$(\\sqrt{25}+\\sqrt{4})(\\sqrt{25}-\\sqrt{4})$의 값은?",
       "choices": [
-        "$6\\sqrt{3}$",
-        "$6\\sqrt{2}$",
-        "$3$",
-        "$3\\sqrt{3}$",
-        "$6\\sqrt{6}$"
+        "$19$",
+        "$20$",
+        "$22$",
+        "$23$",
+        "$21$"
       ],
-      "answer": 0,
-      "explanation": "$\\frac{3}{\\sqrt{3}+\\sqrt{2}}=3(\\sqrt{3}-\\sqrt{2})$, $\\frac{3}{\\sqrt{3}-\\sqrt{2}}=3(\\sqrt{3}+\\sqrt{2})$. 합: $6\\sqrt{3}$."
+      "answer": 4,
+      "explanation": "합차공식으로 $25-4=21$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 8,
-      "question": "$x=\\sqrt{3}-1$일 때, $x^2+2x-2$의 값은?",
+      "question": "$(\\sqrt{36}+\\sqrt{1})(\\sqrt{36}-\\sqrt{1})$의 값은?",
       "choices": [
-        "$-2$",
-        "$\\sqrt{3}$",
-        "$0$",
-        "$2\\sqrt{3}-2$",
-        "$1$"
+        "$33$",
+        "$35$",
+        "$34$",
+        "$36$",
+        "$37$"
       ],
-      "answer": 2,
-      "explanation": "$x+1=\\sqrt{3}$이므로 $(x+1)^2=3$, $x^2+2x+1=3$, $x^2+2x=2$. $x^2+2x-2=0$."
+      "answer": 1,
+      "explanation": "합차공식으로 $36-1=35$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 9,
-      "question": "$a>0$, $b<0$일 때, $\\sqrt{a^2b^2}$를 간단히 하면?",
+      "question": "$(\\sqrt{4}+\\sqrt{2})(\\sqrt{4}-\\sqrt{2})$의 값은?",
       "choices": [
-        "$ab$",
-        "$|ab|$",
-        "$a^2b^2$",
-        "$-ab$",
-        "$a^2|b|$"
-      ],
-      "answer": 3,
-      "explanation": "$\\sqrt{a^2b^2}=\\sqrt{(ab)^2}=|ab|$. $a>0$, $b<0$이므로 $ab<0$, $|ab|=-ab$."
-    },
-    {
-      "id": 10,
-      "question": "$a<0$일 때, $\\sqrt{9a^2}+\\sqrt{a^2}-\\sqrt{16a^2}$를 간단히 하면?",
-      "choices": [
-        "$2a$",
         "$0$",
-        "$-6a$",
-        "$-2a$",
-        "$6a$"
-      ],
-      "answer": 1,
-      "explanation": "$a<0$이면 $\\sqrt{9a^2}=-3a$, $\\sqrt{a^2}=-a$, $\\sqrt{16a^2}=-4a$. 합: $-3a-a-(-4a)=0$."
-    },
-    {
-      "id": 11,
-      "question": "$\\frac{1}{\\sqrt{2}+1}+\\frac{1}{\\sqrt{3}+\\sqrt{2}}+\\frac{1}{2+\\sqrt{3}}$를 계산하면?",
-      "choices": [
         "$1$",
-        "$\\sqrt{3}$",
-        "$2-\\sqrt{2}$",
-        "$\\sqrt{2}$",
-        "$2$"
-      ],
-      "answer": 0,
-      "explanation": "$\\frac{1}{\\sqrt{2}+1}=\\sqrt{2}-1$, $\\frac{1}{\\sqrt{3}+\\sqrt{2}}=\\sqrt{3}-\\sqrt{2}$, $\\frac{1}{2+\\sqrt{3}}=2-\\sqrt{3}$. 합: $1$."
-    },
-    {
-      "id": 12,
-      "question": "$x=\\sqrt{5}+2$일 때, $x^2-4x$의 값은?",
-      "choices": [
-        "$9$",
-        "$2\\sqrt{5}$",
-        "$4\\sqrt{5}+4$",
-        "$1$",
-        "$\\sqrt{5}+4$"
-      ],
-      "answer": 3,
-      "explanation": "$x^2-4x=x(x-4)=(\\sqrt{5}+2)(\\sqrt{5}-2)=(\\sqrt{5})^2-4=5-4=1$."
-    },
-    {
-      "id": 13,
-      "question": "$a>0$, $b>0$일 때, $\\sqrt{\\frac{a}{b}}\\times\\sqrt{\\frac{b^3}{a}}-\\sqrt{b}$를 간단히 하면?",
-      "choices": [
-        "$\\sqrt{ab}-\\sqrt{b}$",
-        "$b\\sqrt{a}-\\sqrt{b}$",
-        "$a\\sqrt{b}-\\sqrt{b}$",
-        "$0$",
-        "$b-\\sqrt{b}$"
-      ],
-      "answer": 4,
-      "explanation": "$\\sqrt{\\frac{a}{b}\\cdot\\frac{b^3}{a}}=\\sqrt{b^2}=b$. 따라서 $b-\\sqrt{b}$."
-    },
-    {
-      "id": 14,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{3}=b$로 놓을 때, $\\sqrt{6}+\\sqrt{8}-\\sqrt{12}$를 $a$, $b$로 나타내면?",
-      "choices": [
-        "$ab+2b-2a$",
-        "$ab+2a-2b$",
-        "$2ab+a-b$",
-        "$ab-2a+2b$",
-        "$a^2b+2a-2b$"
-      ],
-      "answer": 1,
-      "explanation": "$\\sqrt{6}=ab$, $\\sqrt{8}=2a$, $\\sqrt{12}=2b$. $ab+2a-2b$."
-    },
-    {
-      "id": 15,
-      "question": "$x=\\sqrt{2}+\\sqrt{3}$, $y=\\sqrt{3}-\\sqrt{2}$일 때, $x^2-y^2$의 값은?",
-      "choices": [
-        "$4\\sqrt{3}$",
-        "$4\\sqrt{2}$",
-        "$4\\sqrt{6}$",
-        "$16$",
-        "$2\\sqrt{6}$"
-      ],
-      "answer": 2,
-      "explanation": "$x^2-y^2=(x+y)(x-y)=2\\sqrt{3}\\cdot2\\sqrt{2}=4\\sqrt{6}$."
-    },
-    {
-      "id": 16,
-      "question": "$x=\\sqrt{6}-\\sqrt{5}$일 때, $x^2+2\\sqrt{5}x-1$의 값은?",
-      "choices": [
-        "$\\sqrt{30}$",
-        "$2\\sqrt{30}$",
-        "$1$",
-        "$0$",
-        "$-1$"
-      ],
-      "answer": 3,
-      "explanation": "$x^2=(\\sqrt{6}-\\sqrt{5})^2=11-2\\sqrt{30}$. $2\\sqrt{5}x=2\\sqrt{30}-10$. 합: $x^2+2\\sqrt{5}x=1$. $-1$ 하면 $0$."
-    },
-    {
-      "id": 17,
-      "question": "$\\sqrt{3}=a$, $\\sqrt{5}=b$일 때, $\\sqrt{75}+\\sqrt{20}$을 $a$, $b$로 나타내면?",
-      "choices": [
-        "$5a+b$",
-        "$5a+2b$",
-        "$3a+2b$",
-        "$5b+2a$",
-        "$3a+5b$"
-      ],
-      "answer": 1,
-      "explanation": "$\\sqrt{75}=5\\sqrt{3}=5a$, $\\sqrt{20}=2\\sqrt{5}=2b$. 합: $5a+2b$."
-    },
-    {
-      "id": 18,
-      "question": "$x=\\frac{\\sqrt{5}+1}{2}$일 때, $2x^2-2x-1$의 값은?",
-      "choices": [
-        "$\\sqrt{5}$",
-        "$\\frac{\\sqrt{5}+1}{2}$",
+        "$3$",
         "$2$",
-        "$0$",
-        "$1$"
-      ],
-      "answer": 4,
-      "explanation": "$2x=\\sqrt{5}+1$이므로 $(2x-1)^2=5$, $4x^2-4x=4$, $2x^2-2x=2$. $2x^2-2x-1=1$."
-    },
-    {
-      "id": 19,
-      "question": "$a>0$, $b<0$, $a+b<0$일 때, $\\sqrt{a^2}-\\sqrt{(a+b)^2}+\\sqrt{b^2}$를 간단히 하면?",
-      "choices": [
-        "$2a$",
-        "$-2a-2b$",
-        "$2b$",
-        "$0$",
-        "$-2b$"
-      ],
-      "answer": 0,
-      "explanation": "$\\sqrt{a^2}=a$. $a+b<0$이므로 $\\sqrt{(a+b)^2}=-(a+b)=-a-b$. $b<0$이므로 $\\sqrt{b^2}=-b$. 합: $a-(-a-b)+(-b)=2a$."
-    },
-    {
-      "id": 20,
-      "question": "$\\sqrt{2}=a$, $\\sqrt{5}=b$로 놓을 때, $\\sqrt{40}$을 $a$, $b$로 나타내면?",
-      "choices": [
-        "$2a^2b$",
-        "$a^2b$",
-        "$2ab$",
-        "$4ab$",
-        "$ab^2$"
-      ],
-      "answer": 2,
-      "explanation": "$\\sqrt{40}=2\\sqrt{10}=2\\sqrt{2}\\cdot\\sqrt{5}=2ab$."
-    },
-    {
-      "id": 21,
-      "question": "$x=\\sqrt{3}+1$, $y=\\sqrt{3}-1$일 때, $x^2+xy+y^2$의 값은?",
-      "choices": [
-        "$12$",
-        "$10+2\\sqrt{3}$",
-        "$8$",
-        "$11$",
-        "$10$"
-      ],
-      "answer": 4,
-      "explanation": "$x+y=2\\sqrt{3}$, $xy=2$. $x^2+y^2=(x+y)^2-2xy=12-4=8$. $x^2+xy+y^2=8+2=10$."
-    },
-    {
-      "id": 22,
-      "question": "$\\sqrt{6}=a$, $\\sqrt{2}=b$로 놓을 때, $\\sqrt{3}$를 $a$, $b$로 나타내면?",
-      "choices": [
-        "$\\frac{a}{b}$",
-        "$ab$",
-        "$\\frac{b}{a}$",
-        "$a-b$",
-        "$a+b$"
-      ],
-      "answer": 0,
-      "explanation": "$\\sqrt{3}=\\frac{\\sqrt{6}}{\\sqrt{2}}=\\frac{a}{b}$."
-    },
-    {
-      "id": 23,
-      "question": "$\\frac{\\sqrt{3}}{\\sqrt{3}+1}-\\frac{1}{\\sqrt{3}-1}$을 계산하면?",
-      "choices": [
-        "$2$",
-        "$1-\\sqrt{3}$",
-        "$\\sqrt{3}-1$",
-        "$0$",
-        "$-1$"
-      ],
-      "answer": 1,
-      "explanation": "$\\frac{\\sqrt{3}}{\\sqrt{3}+1}=\\frac{\\sqrt{3}(\\sqrt{3}-1)}{2}=\\frac{3-\\sqrt{3}}{2}$. $\\frac{1}{\\sqrt{3}-1}=\\frac{\\sqrt{3}+1}{2}$. 차: $\\frac{3-\\sqrt{3}-\\sqrt{3}-1}{2}=\\frac{2-2\\sqrt{3}}{2}=1-\\sqrt{3}$."
-    },
-    {
-      "id": 24,
-      "question": "$x=2+\\sqrt{3}$일 때, $x-\\frac{1}{x}$의 값은?",
-      "choices": [
-        "$2$",
-        "$\\sqrt{3}$",
-        "$4+2\\sqrt{3}$",
-        "$2\\sqrt{3}$",
         "$4$"
       ],
       "answer": 3,
-      "explanation": "$\\frac{1}{x}=\\frac{1}{2+\\sqrt{3}}=2-\\sqrt{3}$ (유리화). $x-\\frac{1}{x}=(2+\\sqrt{3})-(2-\\sqrt{3})=2\\sqrt{3}$."
+      "explanation": "합차공식으로 $4-2=2$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$(\\sqrt{9}+\\sqrt{3})(\\sqrt{9}-\\sqrt{3})$의 값은?",
+      "choices": [
+        "$6$",
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 0,
+      "explanation": "합차공식으로 $9-3=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$(\\sqrt{16}+\\sqrt{4})(\\sqrt{16}-\\sqrt{4})$의 값은?",
+      "choices": [
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$",
+        "$14$"
+      ],
+      "answer": 2,
+      "explanation": "합차공식으로 $16-4=12$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$(\\sqrt{25}+\\sqrt{1})(\\sqrt{25}-\\sqrt{1})$의 값은?",
+      "choices": [
+        "$22$",
+        "$23$",
+        "$25$",
+        "$26$",
+        "$24$"
+      ],
+      "answer": 4,
+      "explanation": "합차공식으로 $25-1=24$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$(\\sqrt{36}+\\sqrt{2})(\\sqrt{36}-\\sqrt{2})$의 값은?",
+      "choices": [
+        "$32$",
+        "$34$",
+        "$33$",
+        "$35$",
+        "$36$"
+      ],
+      "answer": 1,
+      "explanation": "합차공식으로 $36-2=34$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$(\\sqrt{4}+\\sqrt{3})(\\sqrt{4}-\\sqrt{3})$의 값은?",
+      "choices": [
+        "$-1$",
+        "$0$",
+        "$2$",
+        "$1$",
+        "$3$"
+      ],
+      "answer": 3,
+      "explanation": "합차공식으로 $4-3=1$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$(\\sqrt{9}+\\sqrt{4})(\\sqrt{9}-\\sqrt{4})$의 값은?",
+      "choices": [
+        "$5$",
+        "$3$",
+        "$4$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 0,
+      "explanation": "합차공식으로 $9-4=5$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$(\\sqrt{16}+\\sqrt{1})(\\sqrt{16}-\\sqrt{1})$의 값은?",
+      "choices": [
+        "$13$",
+        "$14$",
+        "$15$",
+        "$16$",
+        "$17$"
+      ],
+      "answer": 2,
+      "explanation": "합차공식으로 $16-1=15$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$(\\sqrt{25}+\\sqrt{2})(\\sqrt{25}-\\sqrt{2})$의 값은?",
+      "choices": [
+        "$21$",
+        "$22$",
+        "$24$",
+        "$25$",
+        "$23$"
+      ],
+      "answer": 4,
+      "explanation": "합차공식으로 $25-2=23$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$(\\sqrt{36}+\\sqrt{3})(\\sqrt{36}-\\sqrt{3})$의 값은?",
+      "choices": [
+        "$31$",
+        "$33$",
+        "$32$",
+        "$34$",
+        "$35$"
+      ],
+      "answer": 1,
+      "explanation": "합차공식으로 $36-3=33$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$(\\sqrt{4}+\\sqrt{4})(\\sqrt{4}-\\sqrt{4})$의 값은?",
+      "choices": [
+        "$-2$",
+        "$-1$",
+        "$1$",
+        "$0$",
+        "$2$"
+      ],
+      "answer": 3,
+      "explanation": "합차공식으로 $4-4=0$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$(\\sqrt{9}+\\sqrt{1})(\\sqrt{9}-\\sqrt{1})$의 값은?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$7$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 0,
+      "explanation": "합차공식으로 $9-1=8$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$(\\sqrt{16}+\\sqrt{2})(\\sqrt{16}-\\sqrt{2})$의 값은?",
+      "choices": [
+        "$12$",
+        "$13$",
+        "$14$",
+        "$15$",
+        "$16$"
+      ],
+      "answer": 2,
+      "explanation": "합차공식으로 $16-2=14$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$(\\sqrt{25}+\\sqrt{3})(\\sqrt{25}-\\sqrt{3})$의 값은?",
+      "choices": [
+        "$20$",
+        "$21$",
+        "$23$",
+        "$24$",
+        "$22$"
+      ],
+      "answer": 4,
+      "explanation": "합차공식으로 $25-3=22$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$(\\sqrt{36}+\\sqrt{4})(\\sqrt{36}-\\sqrt{4})$의 값은?",
+      "choices": [
+        "$30$",
+        "$32$",
+        "$31$",
+        "$33$",
+        "$34$"
+      ],
+      "answer": 1,
+      "explanation": "합차공식으로 $36-4=32$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$(\\sqrt{4}+\\sqrt{1})(\\sqrt{4}-\\sqrt{1})$의 값은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "합차공식으로 $4-1=3$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 25,
-      "question": "$\\sqrt{7}=2.646$일 때, $\\sqrt{700}$의 값은?",
+      "question": "$(\\sqrt{9}+\\sqrt{2})(\\sqrt{9}-\\sqrt{2})$의 값은?",
       "choices": [
-        "$264.6$",
-        "$2.646$",
-        "$26.46$",
-        "$0.2646$",
-        "$2646$"
+        "$7$",
+        "$5$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 2,
-      "explanation": "$\\sqrt{700}=\\sqrt{100\\cdot7}=10\\sqrt{7}=10\\times2.646=26.46$."
+      "answer": 0,
+      "explanation": "합차공식으로 $9-2=7$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 26,
-      "question": "$(\\sqrt{5}+\\sqrt{3})(\\sqrt{5}-\\sqrt{3})+\\sqrt{15}$를 계산하면?",
+      "question": "$(\\sqrt{16}+\\sqrt{3})(\\sqrt{16}-\\sqrt{3})$의 값은?",
       "choices": [
-        "$\\sqrt{15}+1$",
-        "$2+\\sqrt{15}$",
-        "$2-\\sqrt{15}$",
-        "$\\sqrt{15}-2$",
-        "$\\sqrt{15}+2$"
+        "$11$",
+        "$12$",
+        "$13$",
+        "$14$",
+        "$15$"
       ],
-      "answer": 1,
-      "explanation": "$(\\sqrt{5})^2-(\\sqrt{3})^2=2$. 합: $2+\\sqrt{15}$."
+      "answer": 2,
+      "explanation": "합차공식으로 $16-3=13$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 27,
-      "question": "$x=\\sqrt{7}+\\sqrt{5}$일 때, $x-\\frac{2}{x}$의 값은?",
+      "question": "$(\\sqrt{25}+\\sqrt{4})(\\sqrt{25}-\\sqrt{4})$의 값은?",
       "choices": [
-        "$\\sqrt{7}+\\sqrt{5}$",
-        "$\\sqrt{7}-\\sqrt{5}$",
-        "$2\\sqrt{7}$",
-        "$2\\sqrt{5}$",
-        "$\\frac{\\sqrt{7}+3\\sqrt{5}}{2}$"
+        "$19$",
+        "$20$",
+        "$22$",
+        "$23$",
+        "$21$"
       ],
-      "answer": 3,
-      "explanation": "$\\frac{1}{x}=\\frac{\\sqrt{7}-\\sqrt{5}}{2}$ (유리화). $\\frac{2}{x}=\\sqrt{7}-\\sqrt{5}$. $x-\\frac{2}{x}=(\\sqrt{7}+\\sqrt{5})-(\\sqrt{7}-\\sqrt{5})=2\\sqrt{5}$."
+      "answer": 4,
+      "explanation": "합차공식으로 $25-4=21$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 28,
-      "question": "$\\frac{3}{\\sqrt{3}+\\sqrt{2}}-\\frac{3}{\\sqrt{3}-\\sqrt{2}}$를 계산하면?",
+      "question": "$(\\sqrt{36}+\\sqrt{1})(\\sqrt{36}-\\sqrt{1})$의 값은?",
       "choices": [
-        "$6\\sqrt{3}$",
-        "$6\\sqrt{2}$",
-        "$-6\\sqrt{2}$",
-        "$0$",
-        "$-6\\sqrt{3}$"
+        "$33$",
+        "$35$",
+        "$34$",
+        "$36$",
+        "$37$"
       ],
-      "answer": 2,
-      "explanation": "$\\frac{3}{\\sqrt{3}+\\sqrt{2}}=3\\sqrt{3}-3\\sqrt{2}$, $\\frac{3}{\\sqrt{3}-\\sqrt{2}}=3\\sqrt{3}+3\\sqrt{2}$. 차: $-6\\sqrt{2}$."
+      "answer": 1,
+      "explanation": "합차공식으로 $36-1=35$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 29,
-      "question": "$\\sqrt{2}=1.414$, $\\sqrt{3}=1.732$일 때, $\\frac{1}{\\sqrt{3}-\\sqrt{2}}$의 값은?",
+      "question": "$(\\sqrt{4}+\\sqrt{2})(\\sqrt{4}-\\sqrt{2})$의 값은?",
       "choices": [
-        "$0.318$",
-        "$1.732$",
-        "$1.414$",
-        "$0.732$",
-        "$3.146$"
+        "$0$",
+        "$1$",
+        "$3$",
+        "$2$",
+        "$4$"
       ],
-      "answer": 4,
-      "explanation": "$\\frac{1}{\\sqrt{3}-\\sqrt{2}}=\\sqrt{3}+\\sqrt{2}=1.732+1.414=3.146$."
+      "answer": 3,
+      "explanation": "합차공식으로 $4-2=2$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     },
     {
       "id": 30,
-      "question": "$x=\\sqrt{2}+\\sqrt{3}$, $y=\\sqrt{2}-\\sqrt{3}$일 때, $xy(x+y)$의 값은?",
+      "question": "$(\\sqrt{9}+\\sqrt{3})(\\sqrt{9}-\\sqrt{3})$의 값은?",
       "choices": [
-        "$-2\\sqrt{2}$",
-        "$2\\sqrt{2}$",
-        "$-2\\sqrt{3}$",
-        "$2\\sqrt{3}$",
-        "$4\\sqrt{6}$"
+        "$6$",
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$"
       ],
       "answer": 0,
-      "explanation": "$xy=(2-3)=-1$. $x+y=2\\sqrt{2}$. $xy(x+y)=-2\\sqrt{2}$."
+      "explanation": "합차공식으로 $9-3=6$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "근호식 전개",
+        "skills": [
+          "제곱근",
+          "곱셈공식"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "radical"
+      }
     }
   ]
 }

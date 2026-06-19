@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit:practice-exams": "node scripts/audit-practice-exams.mjs"
+    "audit:practice-exams": "node scripts/audit-practice-exams.mjs",
+    "build:ebs-practice-exams": "node scripts/build-ebs-practice-exams.mjs"
   },
   "dependencies": {
     "firebase": "^12.14.0",

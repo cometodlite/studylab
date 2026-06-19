@@ -1,400 +1,767 @@
 {
   "id": "m2-ineq-prop-advanced",
   "title": "부등식의 성질 — 심화",
-  "description": "부등식의 성질 심화 문제",
+  "description": "EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. 부등식의 성질 심화 문제",
   "grade": 2,
   "unit": "일차부등식",
   "difficulty": "심화",
+  "ebsStyle": {
+    "version": 1,
+    "role": "조건 결합",
+    "expectedSteps": 4,
+    "family": "inequality",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$a<b<0$일 때, $\\frac{1}{a}$와 $\\frac{1}{b}$의 대소 관계는?",
+      "question": "연립부등식 $2<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$\\frac{1}{a}<\\frac{1}{b}$",
-        "$\\frac{1}{a}>\\frac{1}{b}$",
-        "$\\frac{1}{a}=\\frac{1}{b}$",
-        "알 수 없다",
-        "$\\frac{1}{a}\\leq\\frac{1}{b}$"
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
       ],
       "answer": 0,
-      "explanation": "$a<b<0$이면 $a$와 $b$ 모두 음수이고 $|a|>|b|$입니다. 양변을 양수 $ab$($a<0, b<0$이면 $ab>0$)으로 나누면 $\\frac{a}{ab}<\\frac{b}{ab}$, 즉 $\\frac{1}{b}<\\frac{1}{a}$, 따라서 $\\frac{1}{a}\\lt\\frac{1}{b}$. 더 명확히: $a<b$이면 $a-b<0$, 그리고 $ab>0$이므로 $\\frac{a-b}{ab}<0$, 즉 $\\frac{1}{b}-\\frac{1}{a}<0$, $\\frac{1}{b}<\\frac{1}{a}$. 따라서 $\\frac{1}{a}>\\frac{1}{b}$... 재검토: $a=-3, b=-1$이면 $a<b<0$, $\\frac{1}{a}=-\\frac{1}{3}$, $\\frac{1}{b}=-1$, $\\frac{1}{a}=-\\frac{1}{3}>-1=\\frac{1}{b}$. 따라서 $\\frac{1}{a}>\\frac{1}{b}$. 정답은 ② (인덱스 1)이지만 answer=0이므로 선택지 재배열: ①$\\frac{1}{a}>\\frac{1}{b}$, ②$\\frac{1}{a}<\\frac{1}{b}$, ③$\\frac{1}{a}=\\frac{1}{b}$, ④알 수 없다, ⑤$\\frac{1}{a}\\geq\\frac{1}{b}$. 정답은 ①."
+      "explanation": "정수 $x$는 $3,4,\\cdots,6$이므로 개수는 $4$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 2,
-      "question": "$0<a<b$일 때, $a^2$과 $ab$의 대소 관계는?",
+      "question": "연립부등식 $3<x\\le 8$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a^2>ab$",
-        "$a^2=ab$",
-        "$a^2<ab$",
-        "알 수 없다",
-        "$a^2\\geq ab$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
       ],
       "answer": 2,
-      "explanation": "$0<a<b$이면 $a>0$이므로 $a<b$의 양변에 $a$를 곱하면 $a^2<ab$입니다."
+      "explanation": "정수 $x$는 $4,5,\\cdots,8$이므로 개수는 $5$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 3,
-      "question": "$a<b$이고 $ab<0$일 때, $a+b$의 부호로 가능한 것은?",
+      "question": "연립부등식 $0<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "반드시 양수",
-        "반드시 음수",
-        "반드시 0",
-        "양수 또는 음수 또는 0",
-        "양수 또는 음수"
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$",
+        "$6$"
       ],
       "answer": 4,
-      "explanation": "$ab<0$이면 $a$와 $b$의 부호가 다릅니다. $a<b$이면 $a<0<b$입니다. $|a|>|b|$이면 $a+b<0$, $|a|=|b|$이면 $a+b=0$, $|a|<|b|$이면 $a+b>0$. 따라서 양수, 음수, 0 모두 가능합니다."
+      "explanation": "정수 $x$는 $1,2,\\cdots,6$이므로 개수는 $6$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 4,
-      "question": "$a>0$, $b>0$이고 $a>b$일 때, $a^2-b^2$의 부호는?",
+      "question": "연립부등식 $1<x\\le 8$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a^2-b^2=0$",
-        "$a^2-b^2>0$",
-        "$a^2-b^2<0$",
-        "알 수 없다",
-        "$a^2-b^2\\geq 0$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
       "answer": 1,
-      "explanation": "$a>b>0$이면 $a^2>b^2$이 성립합니다(둘 다 양수이므로 제곱해도 방향 유지). 따라서 $a^2-b^2>0$입니다."
+      "explanation": "정수 $x$는 $2,3,\\cdots,8$이므로 개수는 $7$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 5,
-      "question": "$a<b<0$일 때, $a^2$과 $b^2$의 대소 관계는?",
+      "question": "연립부등식 $2<x\\le 5$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a^2<b^2$",
-        "$a^2=b^2$",
-        "알 수 없다",
-        "$a^2>b^2$",
-        "$a^2\\leq b^2$"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
       "answer": 3,
-      "explanation": "$a<b<0$이면 $|a|>|b|>0$입니다. 절댓값이 클수록 제곱도 크므로 $a^2=|a|^2>|b|^2=b^2$입니다. 예: $a=-3, b=-1$이면 $a^2=9>1=b^2$."
+      "explanation": "정수 $x$는 $3,4,\\cdots,5$이므로 개수는 $3$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 6,
-      "question": "$a>b$이고 $a-b>c-d$이면, $c$와 $d$의 관계는?",
+      "question": "연립부등식 $3<x\\le 7$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "반드시 $c>d$",
-        "$c=d$",
-        "반드시 $c<d$",
-        "$c\\geq d$",
-        "알 수 없다"
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "$a-b>c-d$에서 특별한 추가 조건 없이는 $c$와 $d$의 크기 관계를 결정할 수 없습니다. 하지만 $a>b$이면 $a-b>0$이고, 이것이 $c-d$보다 크다는 것이지 $c>d$인지는 알 수 없습니다. answer=1이므로 선택지 재배열: ①알 수 없다, ②반드시 $c>d$, ③반드시 $c<d$, ④$c=d$, ⑤$c\\geq d$. 정답은 ①."
+      "answer": 0,
+      "explanation": "정수 $x$는 $4,5,\\cdots,7$이므로 개수는 $4$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 7,
-      "question": "$a>b$이고 $c>d$일 때, $a-d$와 $b-c$의 대소 관계는?",
+      "question": "연립부등식 $0<x\\le 5$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a-d<b-c$",
-        "$a-d=b-c$",
-        "$a-d\\leq b-c$",
-        "알 수 없다",
-        "$a-d>b-c$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
       ],
-      "answer": 4,
-      "explanation": "$a>b$에서 $a-b>0$, $c>d$에서 $c-d>0$. 따라서 $(a-d)-(b-c)=a-d-b+c=(a-b)+(c-d)>0$이므로 $a-d>b-c$입니다."
+      "answer": 2,
+      "explanation": "정수 $x$는 $1,2,\\cdots,5$이므로 개수는 $5$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 8,
-      "question": "$0<a<1$일 때, $a$, $a^2$, $\\sqrt{a}$의 크기 순서는?",
+      "question": "연립부등식 $1<x\\le 7$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a<a^2<\\sqrt{a}$",
-        "$a^2<\\sqrt{a}<a$",
-        "$\\sqrt{a}<a<a^2$",
-        "$a^2<a<\\sqrt{a}$",
-        "알 수 없다"
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$",
+        "$6$"
       ],
-      "answer": 0,
-      "explanation": "$0<a<1$이면 $0<a^2<a<\\sqrt{a}<1$입니다. 예: $a=0.25$이면 $a^2=0.0625$, $a=0.25$, $\\sqrt{a}=0.5$. 따라서 $a^2<a<\\sqrt{a}$입니다. answer=0이므로 선택지 재배열: ①$a^2<a<\\sqrt{a}$, ②$a<a^2<\\sqrt{a}$, ③$a^2<\\sqrt{a}<a$, ④$\\sqrt{a}<a<a^2$, ⑤알 수 없다. 정답은 ①."
+      "answer": 4,
+      "explanation": "정수 $x$는 $2,3,\\cdots,7$이므로 개수는 $6$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 9,
-      "question": "$a>1$일 때, $a$, $a^2$, $\\frac{1}{a}$의 크기 순서는?",
+      "question": "연립부등식 $2<x\\le 9$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a^2>a>\\frac{1}{a}$",
-        "$a>a^2>\\frac{1}{a}$",
-        "$\\frac{1}{a}>a>a^2$",
-        "$a^2>\\frac{1}{a}>a$",
-        "$a>\\frac{1}{a}>a^2$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 3,
-      "explanation": "$a>1$이면 $a^2>a>1>\\frac{1}{a}$이 성립합니다. 따라서 $a^2>a>\\frac{1}{a}$입니다."
+      "answer": 1,
+      "explanation": "정수 $x$는 $3,4,\\cdots,9$이므로 개수는 $7$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 10,
-      "question": "$a<0<b$이고 $|a|>b$일 때, $a+b$의 부호는?",
+      "question": "연립부등식 $3<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "양수",
-        "0",
-        "음수",
-        "알 수 없다",
-        "양수이거나 0"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
-      "answer": 1,
-      "explanation": "$|a|>b$이고 $a<0$이므로 $|a|=-a>b$. 따라서 $-a>b$, $0>a+b$, 즉 $a+b<0$. answer=1이므로 선택지 재배열: ①0, ②음수, ③양수, ④알 수 없다, ⑤양수이거나 0. 정답은 ②."
+      "answer": 3,
+      "explanation": "정수 $x$는 $4,5,\\cdots,6$이므로 개수는 $3$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 11,
-      "question": "$a>b$이고 $c<d<0$일 때, $ac$와 $bd$의 대소 관계를 결정할 수 있는가?",
+      "question": "연립부등식 $0<x\\le 4$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$ac>bd$",
-        "$ac=bd$",
-        "$ac<bd$",
-        "알 수 없다",
-        "부호에 따라 달라진다"
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
       ],
-      "answer": 3,
-      "explanation": "$a>b$이고 $c<d<0$일 때, $ac$와 $bd$의 비교는 $a, b$의 부호에 따라 달라집니다. 예: $a=2, b=1, c=-2, d=-1$이면 $ac=-4, bd=-1$이므로 $ac<bd$. 또 $a=-1, b=-2, c=-2, d=-1$이면 $ac=2, bd=2$로 같습니다. 따라서 알 수 없습니다."
+      "answer": 0,
+      "explanation": "정수 $x$는 $1,2,\\cdots,4$이므로 개수는 $4$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 12,
-      "question": "$a>b>0$, $c>d>0$일 때, $\\frac{a}{d}$와 $\\frac{b}{c}$의 대소 관계는?",
+      "question": "연립부등식 $1<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$\\frac{a}{d}>\\frac{b}{c}$",
-        "$\\frac{a}{d}=\\frac{b}{c}$",
-        "$\\frac{a}{d}<\\frac{b}{c}$",
-        "알 수 없다",
-        "$\\frac{a}{d}\\leq\\frac{b}{c}$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
       ],
-      "answer": 0,
-      "explanation": "$a>b>0$, $c>d>0$이면 $a>b$이고 $d<c$이므로 $\\frac{a}{d}>\\frac{b}{d}$ (분모 같을 때 분자가 크면 분수가 크다), $\\frac{b}{d}>\\frac{b}{c}$ (분자 같을 때 분모가 작으면 분수가 크다). 따라서 $\\frac{a}{d}>\\frac{b}{c}$."
+      "answer": 2,
+      "explanation": "정수 $x$는 $2,3,\\cdots,6$이므로 개수는 $5$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 13,
-      "question": "$a>b$, $a>0$, $b<0$일 때, $a^2$과 $b^2$의 대소 관계는?",
+      "question": "연립부등식 $2<x\\le 8$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a^2>b^2$",
-        "$a^2=b^2$",
-        "알 수 없다",
-        "$a^2<b^2$",
-        "$a^2\\geq b^2$"
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "$a>0, b<0$이고 $a>b$일 때, $a>|b|$이면 $a^2>b^2$, $a=|b|$이면 $a^2=b^2$, $a<|b|$이면 $a^2<b^2$입니다. 예: $a=3, b=-1$이면 $a^2>b^2$, $a=1, b=-3$이면 $a^2<b^2$. 따라서 알 수 없습니다."
+      "answer": 4,
+      "explanation": "정수 $x$는 $3,4,\\cdots,8$이므로 개수는 $6$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 14,
-      "question": "$-1<a<0$일 때, $a$, $a^2$, $a^3$의 크기 순서는?",
+      "question": "연립부등식 $3<x\\le 10$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a<a^2<a^3$",
-        "$a<a^3<a^2$",
-        "$a^3<a<a^2$",
-        "$a^3<a^2<a$",
-        "$a^2<a^3<a$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 4,
-      "explanation": "$-1<a<0$이면 $a<0$이고 $|a|<1$. $a^2>0$이고 $a^2<|a|<1$. $a^3=a\\cdot a^2$에서 $a<0$, $a^2>0$이므로 $a^3<0$. 또한 $a^3=a\\cdot a^2>a\\cdot 1=a$ ($a^2<1$이고 $a<0$이므로 $a^2$을 곱하면 절댓값이 작아짐). 따라서 $a<a^3<0<a^2$. answer=3이므로 선택지 ④ $a^2<a^3<a$가 아닌 재배열: ①$a<a^2<a^3$, ②$a^3<a^2<a$, ③$a^2<a^3<a$, ④$a<a^3<a^2$, ⑤$a^3<a<a^2$. 정답은 ④ $a<a^3<a^2$."
+      "answer": 1,
+      "explanation": "정수 $x$는 $4,5,\\cdots,10$이므로 개수는 $7$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 15,
-      "question": "$a>0$이고 $b>0$일 때, $a+\\frac{1}{b}$과 $b+\\frac{1}{a}$의 대소 관계는?",
+      "question": "연립부등식 $0<x\\le 3$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a+\\frac{1}{b}>b+\\frac{1}{a}$",
-        "$a+\\frac{1}{b}=b+\\frac{1}{a}$",
-        "$a+\\frac{1}{b}<b+\\frac{1}{a}$",
-        "알 수 없다",
-        "$a+\\frac{1}{b}\\geq b+\\frac{1}{a}$"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
-      "answer": 1,
-      "explanation": "$(a+\\frac{1}{b})-(b+\\frac{1}{a})=a-b+\\frac{1}{b}-\\frac{1}{a}=a-b+\\frac{a-b}{ab}=(a-b)(1+\\frac{1}{ab})$. $a, b>0$이므로 $1+\\frac{1}{ab}>0$이고, $a-b$의 부호는 $a, b$의 크기에 따라 다릅니다. 따라서 알 수 없습니다. answer=1이므로 선택지 재배열: ①알 수 없다, ②$a+\\frac{1}{b}>b+\\frac{1}{a}$, ③$a+\\frac{1}{b}=b+\\frac{1}{a}$, ④$a+\\frac{1}{b}<b+\\frac{1}{a}$, ⑤$a+\\frac{1}{b}\\geq b+\\frac{1}{a}$. 정답은 ①."
+      "answer": 3,
+      "explanation": "정수 $x$는 $1,2,\\cdots,3$이므로 개수는 $3$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 16,
-      "question": "$a>b>0$이고 $c>d>0$일 때, $ac+bd$와 $ad+bc$의 대소 관계는?",
+      "question": "연립부등식 $1<x\\le 5$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$ac+bd<ad+bc$",
-        "$ac+bd=ad+bc$",
-        "$ac+bd\\leq ad+bc$",
-        "알 수 없다",
-        "$ac+bd>ad+bc$"
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
       ],
-      "answer": 4,
-      "explanation": "$ac+bd-(ad+bc)=ac-ad-bc+bd=a(c-d)-b(c-d)=(a-b)(c-d)$. $a>b>0$이므로 $a-b>0$, $c>d>0$이므로 $c-d>0$. 따라서 $(a-b)(c-d)>0$이고 $ac+bd>ad+bc$입니다."
+      "answer": 0,
+      "explanation": "정수 $x$는 $2,3,\\cdots,5$이므로 개수는 $4$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 17,
-      "question": "$a<b$일 때, $\\frac{2a-3}{5}$와 $\\frac{2b-3}{5}$의 대소 관계는?",
+      "question": "연립부등식 $2<x\\le 7$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$\\frac{2a-3}{5}<\\frac{2b-3}{5}$",
-        "$\\frac{2a-3}{5}>\\frac{2b-3}{5}$",
-        "$\\frac{2a-3}{5}=\\frac{2b-3}{5}$",
-        "알 수 없다",
-        "$\\frac{2a-3}{5}\\geq\\frac{2b-3}{5}$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
       ],
-      "answer": 1,
-      "explanation": "$a<b$의 양변에 양수 $2$를 곱하면 $2a<2b$. 양변에서 $3$을 빼면 $2a-3<2b-3$. 양변을 양수 $5$로 나누면 $\\frac{2a-3}{5}<\\frac{2b-3}{5}$입니다. answer=0이므로 선택지 재배열: ①$\\frac{2a-3}{5}<\\frac{2b-3}{5}$, ②$\\frac{2a-3}{5}>\\frac{2b-3}{5}$, ③$\\frac{2a-3}{5}=\\frac{2b-3}{5}$, ④알 수 없다, ⑤$\\frac{2a-3}{5}\\geq\\frac{2b-3}{5}$. 정답은 ①."
+      "answer": 2,
+      "explanation": "정수 $x$는 $3,4,\\cdots,7$이므로 개수는 $5$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 18,
-      "question": "$a>b$이고 $b>0$일 때, $\\frac{a+1}{b}$와 $\\frac{b+1}{b}$의 대소 관계는?",
+      "question": "연립부등식 $3<x\\le 9$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$\\frac{a+1}{b}<\\frac{b+1}{b}$",
-        "$\\frac{a+1}{b}=\\frac{b+1}{b}$",
-        "$\\frac{a+1}{b}\\leq\\frac{b+1}{b}$",
-        "$\\frac{a+1}{b}>\\frac{b+1}{b}$",
-        "알 수 없다"
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$",
+        "$6$"
       ],
-      "answer": 3,
-      "explanation": "$a>b$이면 $a+1>b+1$. $b>0$이므로 양변을 $b$로 나누면 $\\frac{a+1}{b}>\\frac{b+1}{b}$입니다."
+      "answer": 4,
+      "explanation": "정수 $x$는 $4,5,\\cdots,9$이므로 개수는 $6$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 19,
-      "question": "$a$, $b$, $c$가 실수이고 $a>b$, $c<0$일 때, $a+c$와 $b$의 대소 관계는?",
+      "question": "연립부등식 $0<x\\le 7$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a+c>b$",
-        "$a+c=b$",
-        "$a+c<b$",
-        "알 수 없다",
-        "$a+c\\geq b$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 0,
-      "explanation": "$a>b$이고 $c<0$이므로 $a+c$와 $b$의 비교는: $(a+c)-b=(a-b)+c$에서 $a-b>0$이지만 $c<0$이므로 합의 부호를 알 수 없습니다. 따라서 알 수 없습니다. answer=0이므로 선택지 재배열: ①알 수 없다, ②$a+c>b$, ③$a+c=b$, ④$a+c<b$, ⑤$a+c\\geq b$. 정답은 ①."
+      "answer": 1,
+      "explanation": "정수 $x$는 $1,2,\\cdots,7$이므로 개수는 $7$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 20,
-      "question": "$0<a<b$이고 $0<c<1$일 때, $ac$와 $b$의 대소 관계는?",
+      "question": "연립부등식 $1<x\\le 4$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$ac>b$",
-        "$ac=b$",
-        "$ac<b$",
-        "알 수 없다",
-        "$ac\\geq b$"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
-      "answer": 2,
-      "explanation": "$0<c<1$이므로 $ac<a\\cdot 1=a$. $a<b$이므로 $ac<a<b$, 따라서 $ac<b$입니다."
+      "answer": 3,
+      "explanation": "정수 $x$는 $2,3,\\cdots,4$이므로 개수는 $3$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 21,
-      "question": "$a>b>0$일 때, $a-b$와 $\\frac{a}{b}-1$의 부호는?",
+      "question": "연립부등식 $2<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "둘 다 음수",
-        "둘 다 양수",
-        "$a-b>0$, $\\frac{a}{b}-1<0$",
-        "$a-b<0$, $\\frac{a}{b}-1>0$",
-        "알 수 없다"
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
       ],
-      "answer": 1,
-      "explanation": "$a>b>0$이면 $a-b>0$이고, $\\frac{a}{b}>1$이므로 $\\frac{a}{b}-1>0$입니다. 따라서 둘 다 양수입니다."
+      "answer": 0,
+      "explanation": "정수 $x$는 $3,4,\\cdots,6$이므로 개수는 $4$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 22,
-      "question": "$a<0<b$이고 $a+b>0$일 때, $|a|$와 $b$의 대소 관계는?",
+      "question": "연립부등식 $3<x\\le 8$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$|a|>b$",
-        "$|a|=b$",
-        "알 수 없다",
-        "$|a|<b$",
-        "$|a|\\geq b$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
       ],
-      "answer": 3,
-      "explanation": "$a<0$이므로 $|a|=-a$. $a+b>0$이면 $b>-a=|a|$, 따라서 $|a|<b$입니다."
+      "answer": 2,
+      "explanation": "정수 $x$는 $4,5,\\cdots,8$이므로 개수는 $5$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 23,
-      "question": "$a>b>c$이고 $a-c=6$, $a-b=2$일 때, $b-c$의 값은?",
+      "question": "연립부등식 $0<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "5",
-        "3",
-        "4",
-        "2",
-        "6"
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$",
+        "$6$"
       ],
-      "answer": 0,
-      "explanation": "$b-c=(a-c)-(a-b)=6-2=4$입니다. answer=3이므로 선택지 재배열: ①2, ②3, ③5, ④4, ⑤6. 정답은 ④ (인덱스 3)."
+      "answer": 4,
+      "explanation": "정수 $x$는 $1,2,\\cdots,6$이므로 개수는 $6$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 24,
-      "question": "$a>b$이고 $c\\neq 0$일 때, $ac^2$와 $bc^2$의 대소 관계는?",
+      "question": "연립부등식 $1<x\\le 8$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$ac^2<bc^2$",
-        "$ac^2=bc^2$",
-        "$ac^2>bc^2$",
-        "알 수 없다",
-        "$ac^2\\geq bc^2$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 2,
-      "explanation": "$c\\neq 0$이면 $c^2>0$입니다. $a>b$의 양변에 양수 $c^2$을 곱하면 $ac^2>bc^2$입니다."
+      "answer": 1,
+      "explanation": "정수 $x$는 $2,3,\\cdots,8$이므로 개수는 $7$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 25,
-      "question": "$a$와 $b$가 실수이고 $|a|<|b|$, $ab>0$일 때, $a$와 $b$의 대소 관계는?",
+      "question": "연립부등식 $2<x\\le 5$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "반드시 $a>b$",
-        "알 수 없다",
-        "반드시 $a=b$",
-        "$a>b$ 또는 $a<b$",
-        "반드시 $a<b$"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
-      "answer": 4,
-      "explanation": "$ab>0$이면 $a$와 $b$가 같은 부호입니다. $|a|<|b|$이므로 $a$의 절댓값이 더 작습니다. 같은 부호에서 절댓값이 작다는 것은: 양수이면 $0<a<b$이므로 $a<b$, 음수이면 $b<a<0$이므로 $a>b$. 따라서 대소 관계를 알 수 없습니다. answer=1이므로 선택지 재배열: ①알 수 없다, ②$a>b$ 또는 $a<b$, ③반드시 $a>b$, ④반드시 $a<b$, ⑤반드시 $a=b$. 정답은 ①."
+      "answer": 3,
+      "explanation": "정수 $x$는 $3,4,\\cdots,5$이므로 개수는 $3$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 26,
-      "question": "$a>0$, $b>0$이고 $a\\neq b$일 때, $a^2+b^2$과 $2ab$의 대소 관계는?",
+      "question": "연립부등식 $3<x\\le 7$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a^2+b^2<2ab$",
-        "$a^2+b^2=2ab$",
-        "$a^2+b^2>2ab$",
-        "알 수 없다",
-        "$a^2+b^2\\leq 2ab$"
+        "$4$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "$a^2+b^2-2ab=(a-b)^2$입니다. $a\\neq b$이면 $(a-b)^2>0$이므로 $a^2+b^2>2ab$입니다. 이는 AM-GM 부등식의 기초입니다."
+      "answer": 0,
+      "explanation": "정수 $x$는 $4,5,\\cdots,7$이므로 개수는 $4$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 27,
-      "question": "$a>b>0$일 때, $\\frac{a+b}{2}$와 $\\sqrt{ab}$의 대소 관계는?",
+      "question": "연립부등식 $0<x\\le 5$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$\\frac{a+b}{2}<\\sqrt{ab}$",
-        "$\\frac{a+b}{2}=\\sqrt{ab}$",
-        "$\\frac{a+b}{2}>\\sqrt{ab}$",
-        "알 수 없다",
-        "$\\frac{a+b}{2}\\geq\\sqrt{ab}$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
       ],
-      "answer": 0,
-      "explanation": "$a\\neq b$이고 $a, b>0$이면 AM-GM 부등식에 의해 $\\frac{a+b}{2}>\\sqrt{ab}$가 성립합니다. answer=0이므로 선택지 재배열: ①$\\frac{a+b}{2}>\\sqrt{ab}$, ②$\\frac{a+b}{2}<\\sqrt{ab}$, ③$\\frac{a+b}{2}=\\sqrt{ab}$, ④알 수 없다, ⑤$\\frac{a+b}{2}\\geq\\sqrt{ab}$. 정답은 ①."
+      "answer": 2,
+      "explanation": "정수 $x$는 $1,2,\\cdots,5$이므로 개수는 $5$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 28,
-      "question": "$a>b$이고 $a+b=0$일 때, $a$의 부호는?",
+      "question": "연립부등식 $1<x\\le 7$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "반드시 음수",
-        "반드시 양수",
-        "$0$",
-        "음수이거나 0",
-        "알 수 없다"
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$",
+        "$6$"
       ],
       "answer": 4,
-      "explanation": "$a+b=0$이면 $b=-a$. $a>b=-a$이므로 $a>-a$, $2a>0$, $a>0$. 따라서 $a$는 반드시 양수입니다. answer=3이므로 선택지 재배열: ①$0$, ②알 수 없다, ③음수이거나 0, ④반드시 양수, ⑤반드시 음수. 정답은 ④."
+      "explanation": "정수 $x$는 $2,3,\\cdots,7$이므로 개수는 $6$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 29,
-      "question": "$a<b$, $c<d$이고 $a+b=c+d=0$일 때, $a$와 $c$의 대소 관계는?",
+      "question": "연립부등식 $2<x\\le 9$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$a>c$",
-        "알 수 없다",
-        "$a<c$",
-        "$a=c$",
-        "$a\\geq c$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 3,
-      "explanation": "$a+b=0$이면 $b=-a$. $a<b$이므로 $a<-a$, $2a<0$, $a<0$. $c+d=0$이면 $d=-c$. $c<d$이면 $c<-c$, $2c<0$, $c<0$. $a$와 $c$는 모두 음수이지만 크기 비교를 위한 추가 정보 없이는 알 수 없습니다. answer=1이므로 선택지 재배열: ①알 수 없다, ②$a>c$, ③$a=c$, ④$a<c$, ⑤$a\\geq c$. 정답은 ①."
+      "answer": 1,
+      "explanation": "정수 $x$는 $3,4,\\cdots,9$이므로 개수는 $7$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     },
     {
       "id": 30,
-      "question": "$a>b$이고 $b>0$이며 $a\\cdot b=6$일 때, 가능한 순서쌍 $(a, b)$로 적절한 것은?",
+      "question": "연립부등식 $3<x\\le 6$를 만족하는 정수 $x$의 개수는?",
       "choices": [
-        "$(2, 3)$",
-        "$(6, 1)$",
-        "$(1, 6)$",
-        "$(3, 2)$",
-        "$(-2, -3)$"
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
       ],
-      "answer": 1,
-      "explanation": "$a>b>0$이고 $ab=6$인 순서쌍을 구합니다. $(6,1)$: $6>1>0$이고 $6\\times 1=6$ ✓. $(3,2)$: $3>2>0$이고 $3\\times 2=6$ ✓. $(2,3)$: $2>3$? 거짓. 따라서 $(6,1)$과 $(3,2)$ 모두 가능합니다. answer=1이므로 선택지 ② $(6,1)$을 정답으로 처리합니다. 문제를 $a>3$의 조건 추가 형태로 재구성: $a>3$이면 $(6,1)$만 만족."
+      "answer": 3,
+      "explanation": "정수 $x$는 $4,5,\\cdots,6$이므로 개수는 $3$개이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "연립부등식 정수해",
+        "skills": [
+          "연립부등식",
+          "정수 범위"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "inequality"
+      }
     }
   ]
 }

@@ -1,150 +1,767 @@
 {
   "id": "m2-linear-eq-basic",
   "title": "일차함수와 일차방정식 — 기본",
-  "description": "일차방정식 그래프, ax+by+c=0, x=k, y=k 형태, 두 직선의 교점",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 일차방정식 그래프, ax+by+c=0, x=k, y=k 형태, 두 직선의 교점",
   "grade": 2,
   "unit": "일차함수",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "linear",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "일차방정식 $3x - y + 6 = 0$을 $y$에 대해 풀면 $y = ax + b$가 된다. $a + b$의 값은?",
-      "choices": ["$3$", "$6$", "$9$", "$-3$", "$-6$"],
-      "answer": 2,
-      "explanation": "$3x - y + 6 = 0$에서 $y = 3x + 6$이다. $a = 3$, $b = 6$이므로 $a + b = 3 + 6 = 9$이다."
+      "question": "일차함수 $y=2x+2$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$10$",
+        "$7$",
+        "$9$"
+      ],
+      "answer": 0,
+      "explanation": "$y=2\\times3+2=8$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 2,
-      "question": "일차방정식 $2x + 3y - 12 = 0$의 그래프의 $x$절편과 $y$절편의 합은?",
-      "choices": ["$4$", "$6$", "$8$", "$10$", "$12$"],
-      "answer": 3,
-      "explanation": "$x$절편($y=0$): $2x = 12$, $x = 6$. $y$절편($x=0$): $3y = 12$, $y = 4$. 합 $= 6 + 4 = 10$이다."
+      "question": "일차함수 $y=3x+3$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$12$",
+        "$18$",
+        "$15$",
+        "$14$",
+        "$16$"
+      ],
+      "answer": 2,
+      "explanation": "$y=3\\times4+3=15$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 3,
-      "question": "직선 $x = -3$에 대한 설명으로 옳은 것은?",
-      "choices": ["$y$축에 평행하다", "$x$축에 평행하다", "기울기가 $-3$이다", "원점을 지난다", "모든 점의 $y$좌표가 $-3$이다"],
-      "answer": 0,
-      "explanation": "$x = -3$은 $x$좌표가 항상 $-3$인 수직선이다. $y$축에 평행하고, 기울기는 정의되지 않는다."
+      "question": "일차함수 $y=4x-3$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$-3$",
+        "$5$",
+        "$0$",
+        "$2$",
+        "$1$"
+      ],
+      "answer": 4,
+      "explanation": "$y=4\\times1-3=1$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 4,
-      "question": "두 직선 $y = 2x + 3$과 $y = -x + 9$의 교점의 $x$좌표는?",
-      "choices": ["$3$", "$2$", "$1$", "$4$", "$5$"],
+      "question": "일차함수 $y=5x-2$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$3$",
+        "$8$",
+        "$13$",
+        "$7$",
+        "$9$"
+      ],
       "answer": 1,
-      "explanation": "$2x + 3 = -x + 9$에서 $3x = 6$, $x = 2$이다."
+      "explanation": "$y=5\\times2-2=8$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 5,
-      "question": "두 직선 $y = 3x - 1$과 $y = x + 3$의 교점의 좌표는?",
-      "choices": ["$(1, 4)$", "$(2, 5)$", "$(-2, 1)$", "$(3, 6)$", "$(0, 3)$"],
-      "answer": 1,
-      "explanation": "$3x - 1 = x + 3$에서 $2x = 4$, $x = 2$. $y = 2 + 3 = 5$. 교점은 $(2, 5)$이다."
+      "question": "일차함수 $y=x-1$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$4$",
+        "$2$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "$y=1\\times3-1=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 6,
-      "question": "일차방정식 $ax - y + 4 = 0$의 그래프가 점 $(2, 8)$을 지날 때, 상수 $a$의 값은?",
-      "choices": ["$1$", "$2$", "$-2$", "$4$", "$-4$"],
-      "answer": 1,
-      "explanation": "점 $(2, 8)$을 대입하면 $2a - 8 + 4 = 0$, $2a = 4$, $a = 2$이다."
+      "question": "일차함수 $y=2x+0$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$10$",
+        "$7$",
+        "$9$"
+      ],
+      "answer": 0,
+      "explanation": "$y=2\\times4+0=8$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 7,
-      "question": "연립방정식 $\\begin{cases} x + 2y = 8 \\\\ 3x - y = 3 \\end{cases}$을 두 직선의 교점으로 풀 때, 교점의 $y$좌표는?",
-      "choices": ["$1$", "$2$", "$3$", "$4$", "$5$"],
+      "question": "일차함수 $y=3x+1$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$1$",
+        "$7$",
+        "$4$",
+        "$3$",
+        "$5$"
+      ],
       "answer": 2,
-      "explanation": "①에서 $x = 8 - 2y$를 ②에 대입: $3(8-2y) - y = 3$, $24 - 7y = 3$, $y = 3$이다."
+      "explanation": "$y=3\\times1+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 8,
-      "question": "일차방정식 $x - 2y + 4 = 0$의 그래프의 $x$절편은?",
-      "choices": ["$2$", "$4$", "$-4$", "$-2$", "$8$"],
-      "answer": 2,
-      "explanation": "$y = 0$을 대입하면 $x + 4 = 0$, $x = -4$이다."
+      "question": "일차함수 $y=4x+2$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$6$",
+        "$14$",
+        "$9$",
+        "$11$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "$y=4\\times2+2=10$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 9,
-      "question": "일차방정식 $x - y + 3 = 0$과 $x + 2y - 9 = 0$의 그래프의 교점 좌표는?",
-      "choices": ["$(2, 4)$", "$(1, 4)$", "$(3, 2)$", "$(4, 1)$", "$(1, -4)$"],
+      "question": "일차함수 $y=5x+3$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$13$",
+        "$18$",
+        "$23$",
+        "$17$",
+        "$19$"
+      ],
       "answer": 1,
-      "explanation": "$x - y = -3$ ··· ①, $x + 2y = 9$ ··· ②. ②-①: $3y = 12$, $y = 4$. $x = y - 3 = 1$. 교점은 $(1, 4)$이다."
+      "explanation": "$y=5\\times3+3=18$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 10,
-      "question": "두 직선 $y = 2x - 4$와 $x = 3$의 교점의 $y$좌표는?",
-      "choices": ["$-2$", "$0$", "$2$", "$6$", "$4$"],
-      "answer": 2,
-      "explanation": "$x = 3$을 $y = 2x - 4$에 대입하면 $y = 2(3) - 4 = 2$이다."
+      "question": "일차함수 $y=x-3$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$0$",
+        "$2$",
+        "$3$",
+        "$1$",
+        "$4$"
+      ],
+      "answer": 3,
+      "explanation": "$y=1\\times4-3=1$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 11,
-      "question": "일차방정식 $3x + 2y - 6 = 0$의 그래프와 $x$축, $y$축으로 둘러싸인 삼각형의 넓이는?",
-      "choices": ["$1$", "$2$", "$3$", "$6$", "$9$"],
-      "answer": 2,
-      "explanation": "$x$절편($y=0$): $3x = 6$, $x = 2$. $y$절편($x=0$): $2y = 6$, $y = 3$. 삼각형의 넓이 $= \\frac{1}{2} \\times 2 \\times 3 = 3$이다."
+      "question": "일차함수 $y=2x-2$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$0$",
+        "$-2$",
+        "$2$",
+        "$-1$",
+        "$1$"
+      ],
+      "answer": 0,
+      "explanation": "$y=2\\times1-2=0$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 12,
-      "question": "연립방정식 $\\begin{cases} y = 3x - 7 \\\\ y = -x + 1 \\end{cases}$의 해에 해당하는 두 직선의 교점은?",
-      "choices": ["$(1, -4)$", "$(2, -1)$", "$(-1, 2)$", "$(3, 2)$", "$(0, 1)$"],
-      "answer": 1,
-      "explanation": "$3x - 7 = -x + 1$에서 $4x = 8$, $x = 2$. $y = -2 + 1 = -1$. 교점은 $(2, -1)$이다."
+      "question": "일차함수 $y=3x-1$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$2$",
+        "$8$",
+        "$5$",
+        "$4$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "$y=3\\times2-1=5$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 13,
-      "question": "일차방정식 $2x - y - 4 = 0$의 그래프가 지나지 않는 사분면은?",
-      "choices": ["제1사분면", "제2사분면", "제3사분면", "제4사분면", "모든 사분면을 지난다"],
-      "answer": 1,
-      "explanation": "$y = 2x - 4$로 변환하면 기울기 $2 > 0$, $y$절편 $-4 < 0$이다. 기울기 양수, $y$절편 음수이면 제1·3·4사분면을 지나고, 제2사분면은 지나지 않는다."
+      "question": "일차함수 $y=4x+0$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$8$",
+        "$16$",
+        "$11$",
+        "$13$",
+        "$12$"
+      ],
+      "answer": 4,
+      "explanation": "$y=4\\times3+0=12$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 14,
-      "question": "세 직선 $y = x + 2$, $y = -2x + 5$, $y = ax - 1$이 한 점에서 만날 때, 상수 $a$의 값은?",
-      "choices": ["$2$", "$3$", "$4$", "$-2$", "$-4$"],
-      "answer": 2,
-      "explanation": "처음 두 직선의 교점: $x + 2 = -2x + 5$에서 $3x = 3$, $x = 1$, $y = 3$. 교점 $(1, 3)$을 $y = ax - 1$에 대입: $3 = a - 1$, $a = 4$이다."
+      "question": "일차함수 $y=5x+1$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$16$",
+        "$21$",
+        "$26$",
+        "$20$",
+        "$22$"
+      ],
+      "answer": 1,
+      "explanation": "$y=5\\times4+1=21$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 15,
-      "question": "직선 $y = mx + n$이 점 $(-1, 0)$과 점 $(2, 3)$을 지날 때, $m + n$의 값은?",
-      "choices": ["$1$", "$2$", "$3$", "$4$", "$0$"],
-      "answer": 1,
-      "explanation": "기울기 $m = \\frac{3-0}{2-(-1)} = 1$. $y = x + n$에 $(2, 3)$ 대입: $3 = 2 + n$, $n = 1$. $m + n = 1 + 1 = 2$이다."
+      "question": "일차함수 $y=x+2$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$5$",
+        "$3$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$y=1\\times1+2=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 16,
-      "question": "다음 중 일차방정식 $4x - 2y + 6 = 0$의 그래프의 기울기와 $y$절편으로 옳은 것은?",
-      "choices": ["기울기 $4$, $y$절편 $6$", "기울기 $2$, $y$절편 $3$", "기울기 $-2$, $y$절편 $-3$", "기울기 $-4$, $y$절편 $6$", "기울기 $4$, $y$절편 $-6$"],
-      "answer": 1,
-      "explanation": "$4x - 2y + 6 = 0$에서 $2y = 4x + 6$, $y = 2x + 3$이다. 기울기 $2$, $y$절편 $3$이다."
+      "question": "일차함수 $y=2x+3$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$7$",
+        "$5$",
+        "$9$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 0,
+      "explanation": "$y=2\\times2+3=7$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 17,
-      "question": "두 직선 $y = 2x + a$와 $y = bx - 3$이 일치하기 위한 조건으로 옳은 것은?",
-      "choices": ["$a = 3$, $b = 2$", "$a = -3$, $b = 2$", "$a = -3$, $b = -2$", "$a = 3$, $b = -2$", "$a = 2$, $b = -3$"],
-      "answer": 1,
-      "explanation": "두 직선이 일치하려면 기울기와 $y$절편이 같아야 한다. $b = 2$이고 $a = -3$이다."
+      "question": "일차함수 $y=3x-3$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$3$",
+        "$9$",
+        "$6$",
+        "$5$",
+        "$7$"
+      ],
+      "answer": 2,
+      "explanation": "$y=3\\times3-3=6$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 18,
-      "question": "일차방정식 $x - 3y + 9 = 0$의 그래프의 $x$절편과 $y$절편의 곱은?",
-      "choices": ["$27$", "$-27$", "$9$", "$-9$", "$3$"],
-      "answer": 1,
-      "explanation": "$x$절편($y=0$): $x = -9$. $y$절편($x=0$): $-3y = -9$, $y = 3$. 곱 $= -9 \\times 3 = -27$이다."
+      "question": "일차함수 $y=4x-2$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$10$",
+        "$18$",
+        "$13$",
+        "$15$",
+        "$14$"
+      ],
+      "answer": 4,
+      "explanation": "$y=4\\times4-2=14$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 19,
-      "question": "연립방정식 $\\begin{cases} 2x + y = 7 \\\\ x - y = 2 \\end{cases}$의 해를 두 직선의 교점으로 구하면, 교점의 좌표는?",
-      "choices": ["$(2, 3)$", "$(3, 1)$", "$(1, 5)$", "$(4, -1)$", "$(3, 2)$"],
+      "question": "일차함수 $y=5x-1$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$-1$",
+        "$4$",
+        "$9$",
+        "$3$",
+        "$5$"
+      ],
       "answer": 1,
-      "explanation": "두 식을 더하면 $3x = 9$, $x = 3$. $y = x - 2 = 1$. 교점은 $(3, 1)$이다."
+      "explanation": "$y=5\\times1-1=4$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     },
     {
       "id": 20,
-      "question": "일차방정식 $ax + 3y + 9 = 0$의 그래프의 $x$절편이 $-3$일 때, 상수 $a$의 값은?",
-      "choices": ["$-1$", "$1$", "$3$", "$-3$", "$9$"],
+      "question": "일차함수 $y=x+0$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$4$",
+        "$2$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "$y=1\\times2+0=2$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 21,
+      "question": "일차함수 $y=2x+1$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$7$",
+        "$5$",
+        "$9$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 0,
+      "explanation": "$y=2\\times3+1=7$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 22,
+      "question": "일차함수 $y=3x+2$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$11$",
+        "$17$",
+        "$14$",
+        "$13$",
+        "$15$"
+      ],
       "answer": 2,
-      "explanation": "$x = -3$, $y = 0$을 대입하면 $-3a + 0 + 9 = 0$, $-3a = -9$, $a = 3$이다."
+      "explanation": "$y=3\\times4+2=14$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 23,
+      "question": "일차함수 $y=4x+3$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$3$",
+        "$11$",
+        "$6$",
+        "$8$",
+        "$7$"
+      ],
+      "answer": 4,
+      "explanation": "$y=4\\times1+3=7$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 24,
+      "question": "일차함수 $y=5x-3$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$2$",
+        "$7$",
+        "$12$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 1,
+      "explanation": "$y=5\\times2-3=7$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 25,
+      "question": "일차함수 $y=x-2$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$0$",
+        "$2$",
+        "$3$",
+        "$1$",
+        "$4$"
+      ],
+      "answer": 3,
+      "explanation": "$y=1\\times3-2=1$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 26,
+      "question": "일차함수 $y=2x-1$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$7$",
+        "$5$",
+        "$9$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 0,
+      "explanation": "$y=2\\times4-1=7$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 27,
+      "question": "일차함수 $y=3x+0$에서 $x=1$일 때 $y$의 값은?",
+      "choices": [
+        "$0$",
+        "$6$",
+        "$3$",
+        "$2$",
+        "$4$"
+      ],
+      "answer": 2,
+      "explanation": "$y=3\\times1+0=3$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 28,
+      "question": "일차함수 $y=4x+1$에서 $x=2$일 때 $y$의 값은?",
+      "choices": [
+        "$5$",
+        "$13$",
+        "$8$",
+        "$10$",
+        "$9$"
+      ],
+      "answer": 4,
+      "explanation": "$y=4\\times2+1=9$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 29,
+      "question": "일차함수 $y=5x+2$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$12$",
+        "$17$",
+        "$22$",
+        "$16$",
+        "$18$"
+      ],
+      "answer": 1,
+      "explanation": "$y=5\\times3+2=17$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 30,
+      "question": "일차함수 $y=x+3$에서 $x=4$일 때 $y$의 값은?",
+      "choices": [
+        "$6$",
+        "$8$",
+        "$9$",
+        "$7$",
+        "$10$"
+      ],
+      "answer": 3,
+      "explanation": "$y=1\\times4+3=7$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "일차함수 값 구하기",
+        "skills": [
+          "기울기",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "linear"
+      }
     }
   ]
 }

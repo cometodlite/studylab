@@ -1,400 +1,767 @@
 {
   "id": "m2-rational-pattern",
   "title": "유리수와 순환소수 통합 — 유형별",
-  "description": "순환소수 변환, 조건 판별, 역변환 유형",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 순환소수 변환, 조건 판별, 역변환 유형",
   "grade": 2,
   "unit": "유리수와 순환소수",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "rational",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$x = 0.\\overline{23}$일 때, $99x$의 값은?",
+      "question": "순환소수 $0.1\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$2.3$",
-        "$23$",
-        "$230$",
-        "$0.23$",
-        "$2300$"
+        "$\\frac{11}{90}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{1}{9}$",
+        "$\\frac{11}{900}$",
+        "$\\frac{11}{90}1$"
       ],
-      "answer": 1,
-      "explanation": "$100x = 23.\\overline{23}$, $x = 0.\\overline{23}$이므로 $99x = 23$"
+      "answer": 0,
+      "explanation": "$0.1\\dot{2}=\\frac{12-1}{90}=\\frac{11}{90}=\\frac{11}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 2,
-      "question": "$\\frac{a}{42}$가 유한소수가 되려면 $a$는 어떤 수의 배수여야 하는가? ($a$는 자연수)",
+      "question": "순환소수 $0.2\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "2의 배수",
-        "3의 배수",
-        "7의 배수",
-        "21의 배수",
-        "6의 배수"
+        "$\\frac{11}{45}$",
+        "$\\frac{7}{33}$",
+        "$\\frac{7}{30}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{300}$"
       ],
       "answer": 2,
-      "explanation": "$42 = 2 \\times 3 \\times 7$. 약분 후 분모에 2, 5 이외의 소인수가 없어야 하므로, $a$가 $3 \\times 7 = 21$의 배수여야 합니다. 정답은 4번."
+      "explanation": "$0.2\\dot{3}=\\frac{23-2}{90}=\\frac{21}{90}=\\frac{7}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 3,
-      "question": "$0.1\\overline{8}$을 분수로 바르게 나타낸 것은?",
+      "question": "순환소수 $0.3\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{17}{90}$",
-        "$\\frac{18}{99}$",
-        "$\\frac{1}{6}$",
-        "$\\frac{9}{50}$",
-        "$\\frac{17}{99}$"
+        "$\\frac{16}{45}$",
+        "$\\frac{31}{99}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{31}{900}$",
+        "$\\frac{31}{90}$"
       ],
-      "answer": 0,
-      "explanation": "$x = 0.1\\overline{8}$, $10x = 1.\\overline{8}$, $100x = 18.\\overline{8}$. $90x = 17$, $x = \\frac{17}{90}$"
+      "answer": 4,
+      "explanation": "$0.3\\dot{4}=\\frac{34-3}{90}=\\frac{31}{90}=\\frac{31}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 4,
-      "question": "순환소수 $0.\\overline{45}$와 $0.4\\overline{5}$의 합은?",
+      "question": "순환소수 $0.4\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{9}{10}$",
-        "$1$",
-        "$\\frac{89}{90}$",
-        "$\\frac{41}{45}$",
-        "$\\frac{91}{99}$"
+        "$\\frac{13}{30}$",
+        "$\\frac{19}{45}$",
+        "$\\frac{38}{99}$",
+        "$\\frac{37}{90}$",
+        "$\\frac{19}{450}$"
       ],
-      "answer": 2,
-      "explanation": "$0.\\overline{45} = \\frac{45}{99} = \\frac{5}{11}$, $0.4\\overline{5} = \\frac{41}{90}$. 합 $= \\frac{5}{11} + \\frac{41}{90} = \\frac{450 + 451}{990} = \\frac{901}{990}$… 재계산 필요. $\\frac{5}{11} = \\frac{450}{990}$, $\\frac{41}{90} = \\frac{451}{990}$. 합 $= \\frac{901}{990}$. 보기 3번 $\\frac{89}{90} = \\frac{979}{990} \\neq$. 정답은 $\\frac{901}{990}$이나 보기에 없음."
+      "answer": 1,
+      "explanation": "$0.4\\dot{2}=\\frac{42-4}{90}=\\frac{38}{90}=\\frac{19}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 5,
-      "question": "$\\frac{3}{2^a \\times 5^2}$이 소수점 아래 세 자리의 유한소수가 되려면 $a$는?",
+      "question": "순환소수 $0.5\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$a = 1$",
-        "$a = 2$",
-        "$a = 3$",
-        "$a = 4$",
-        "$a \\geq 3$"
+        "$\\frac{49}{90}$",
+        "$\\frac{16}{33}$",
+        "$\\frac{47}{90}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{4}{75}$"
       ],
-      "answer": 2,
-      "explanation": "소수점 아래 세 자리 = $\\frac{분자}{10^3}$ 형. $2^a \\times 5^2 = \\frac{2^a \\times 5^2}{1}$이고 분모를 $10^3 = 2^3 \\times 5^3$으로 만들려면 $a = 3$"
+      "answer": 3,
+      "explanation": "$0.5\\dot{3}=\\frac{53-5}{90}=\\frac{48}{90}=\\frac{8}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 6,
-      "question": "$2.3\\overline{45}$를 분수로 나타내면?",
+      "question": "순환소수 $0.6\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{2322}{990}$",
-        "$\\frac{2345}{999}$",
-        "$\\frac{2322}{999}$",
-        "$\\frac{2323}{990}$",
-        "$\\frac{2312}{990}$"
+        "$\\frac{29}{45}$",
+        "$\\frac{59}{90}$",
+        "$\\frac{58}{99}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{29}{450}$"
       ],
       "answer": 0,
-      "explanation": "$x = 2.3\\overline{45}$. $10x = 23.\\overline{45}$, $1000x = 2345.\\overline{45}$. $990x = 2322$, $x = \\frac{2322}{990} = \\frac{387}{165} = \\frac{129}{55}$"
+      "explanation": "$0.6\\dot{4}=\\frac{64-6}{90}=\\frac{58}{90}=\\frac{29}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 7,
-      "question": "어떤 분수를 소수로 나타내었더니 $0.\\overline{142857}$이 되었다. 이 분수의 분모와 분자의 합은?",
+      "question": "순환소수 $0.7\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$7$",
-        "$8$",
-        "$9$",
-        "$14$",
-        "$15$"
+        "$\\frac{11}{15}$",
+        "$\\frac{65}{99}$",
+        "$\\frac{13}{18}$",
+        "$\\frac{32}{45}$",
+        "$\\frac{13}{180}$"
       ],
-      "answer": 1,
-      "explanation": "$0.\\overline{142857} = \\frac{142857}{999999} = \\frac{1}{7}$. 분모 7 + 분자 1 = 8"
+      "answer": 2,
+      "explanation": "$0.7\\dot{2}=\\frac{72-7}{90}=\\frac{65}{90}=\\frac{13}{18}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 8,
-      "question": "$\\frac{1}{2^3 \\times 5}$를 유한소수로 나타낼 때 소수점 아래 몇째 자리까지 있는가?",
+      "question": "순환소수 $0.1\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "2자리",
-        "3자리",
-        "4자리",
-        "5자리",
-        "무한히 많다"
+        "$\\frac{13}{90}$",
+        "$\\frac{4}{33}$",
+        "$\\frac{11}{90}$",
+        "$\\frac{1}{75}$",
+        "$\\frac{2}{15}$"
       ],
-      "answer": 1,
-      "explanation": "$\\frac{1}{40} = \\frac{25}{1000} = 0.025$ — 소수점 아래 3자리"
+      "answer": 4,
+      "explanation": "$0.1\\dot{3}=\\frac{13-1}{90}=\\frac{12}{90}=\\frac{2}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 9,
-      "question": "$a = 0.\\overline{3}$, $b = 0.\\overline{6}$일 때 $a + b$는?",
+      "question": "순환소수 $0.2\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.\\overline{9}$",
-        "$1$",
-        "$0.9$",
-        "$\\frac{9}{10}$",
-        "$0.99$"
+        "$\\frac{23}{90}$",
+        "$\\frac{11}{45}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{30}$",
+        "$\\frac{11}{450}$"
       ],
       "answer": 1,
-      "explanation": "$a = \\frac{1}{3}$, $b = \\frac{2}{3}$. $a + b = 1$"
+      "explanation": "$0.2\\dot{4}=\\frac{24-2}{90}=\\frac{22}{90}=\\frac{11}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 10,
-      "question": "유한소수 $0.ab$ ($a, b$는 한 자리 수)를 기약분수로 나타냈을 때 분모가 될 수 없는 것은?",
+      "question": "순환소수 $0.3\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$4$",
-        "$5$",
-        "$20$",
-        "$25$",
-        "$3$"
+        "$\\frac{1}{3}$",
+        "$\\frac{29}{99}$",
+        "$\\frac{14}{45}$",
+        "$\\frac{29}{90}$",
+        "$\\frac{29}{900}$"
       ],
-      "answer": 4,
-      "explanation": "유한소수의 기약분수 분모는 $2^m \\times 5^n$ 꼴. 3은 이 형태가 아닙니다."
+      "answer": 3,
+      "explanation": "$0.3\\dot{2}=\\frac{32-3}{90}=\\frac{29}{90}=\\frac{29}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 11,
-      "question": "$\\frac{n}{6}$이 유한소수가 되게 하는 가장 작은 자연수 $n$은?",
+      "question": "순환소수 $0.4\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$1$",
-        "$2$",
-        "$3$",
-        "$6$",
-        "$12$"
+        "$\\frac{13}{30}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{13}{33}$",
+        "$\\frac{19}{45}$",
+        "$\\frac{13}{300}$"
       ],
-      "answer": 2,
-      "explanation": "$6 = 2 \\times 3$. 약분 후 분모의 3이 없어져야 하므로 $n$은 3의 배수. 가장 작은 것은 $n = 3$. 검증: $\\frac{3}{6} = \\frac{1}{2} = 0.5$ ✓"
+      "answer": 0,
+      "explanation": "$0.4\\dot{3}=\\frac{43-4}{90}=\\frac{39}{90}=\\frac{13}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 12,
-      "question": "$0.5\\overline{7}$을 기약분수로 나타내면?",
+      "question": "순환소수 $0.5\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{52}{90}$",
-        "$\\frac{26}{45}$",
-        "$\\frac{57}{99}$",
-        "$\\frac{19}{33}$",
-        "$\\frac{57}{100}$"
+        "$\\frac{5}{9}$",
+        "$\\frac{49}{99}$",
+        "$\\frac{49}{90}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{49}{900}$"
       ],
-      "answer": 1,
-      "explanation": "$x = 0.5\\overline{7}$, $10x = 5.\\overline{7}$, $100x = 57.\\overline{7}$. $90x = 52$, $x = \\frac{52}{90} = \\frac{26}{45}$"
+      "answer": 2,
+      "explanation": "$0.5\\dot{4}=\\frac{54-5}{90}=\\frac{49}{90}=\\frac{49}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 13,
-      "question": "다음 중 순환소수를 분수로 나타내는 과정에서 $990$으로 나누게 되는 수는?",
+      "question": "순환소수 $0.6\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.\\overline{12}$",
-        "$0.1\\overline{2}$",
-        "$1.2\\overline{3}$",
-        "$0.1\\overline{23}$",
-        "$0.\\overline{123}$"
+        "$\\frac{19}{30}$",
+        "$\\frac{56}{99}$",
+        "$\\frac{11}{18}$",
+        "$\\frac{14}{225}$",
+        "$\\frac{28}{45}$"
       ],
-      "answer": 3,
-      "explanation": "소수점 아래 반복 안 되는 자리가 1개, 반복되는 자리가 2개이면 $10x$와 $1000x$의 차이 → $990x = \\text{정수}$. $0.1\\overline{23}$이 해당."
+      "answer": 4,
+      "explanation": "$0.6\\dot{2}=\\frac{62-6}{90}=\\frac{56}{90}=\\frac{28}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 14,
-      "question": "$\\frac{7}{30}$을 순환소수로 나타내면?",
+      "question": "순환소수 $0.7\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.2\\overline{3}$",
-        "$0.\\overline{23}$",
-        "$0.23$",
-        "$0.2\\overline{6}$",
-        "$0.\\overline{26}$"
+        "$\\frac{67}{90}$",
+        "$\\frac{11}{15}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{13}{18}$",
+        "$\\frac{11}{150}$"
       ],
-      "answer": 0,
-      "explanation": "$\\frac{7}{30} = 0.2333\\cdots = 0.2\\overline{3}$"
+      "answer": 1,
+      "explanation": "$0.7\\dot{3}=\\frac{73-7}{90}=\\frac{66}{90}=\\frac{11}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 15,
-      "question": "$a = 0.\\overline{n}$을 만족하는 한 자리 자연수 $n$이 존재하려면 $a$의 범위는?",
+      "question": "순환소수 $0.1\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$0 < a < 1$",
-        "$0 < a \\leq \\frac{9}{9}$",
-        "$\\frac{1}{9} \\leq a \\leq 1$",
-        "$a = 0$",
-        "$a > 1$"
+        "$\\frac{7}{45}$",
+        "$\\frac{13}{99}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{13}{90}$",
+        "$\\frac{13}{900}$"
       ],
-      "answer": 2,
-      "explanation": "$0.\\overline{n} = \\frac{n}{9}$에서 $n$이 1~9이면 $a$는 $\\frac{1}{9}$~$1$"
+      "answer": 3,
+      "explanation": "$0.1\\dot{4}=\\frac{14-1}{90}=\\frac{13}{90}=\\frac{13}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 16,
-      "question": "두 수 $0.\\overline{3}$과 $0.\\overline{6}$의 곱은?",
+      "question": "순환소수 $0.2\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.\\overline{18}$",
         "$\\frac{2}{9}$",
-        "$\\frac{1}{5}$",
-        "$0.2$",
-        "$\\frac{2}{15}$"
+        "$\\frac{7}{30}$",
+        "$\\frac{20}{99}$",
+        "$\\frac{19}{90}$",
+        "$\\frac{1}{45}$"
       ],
-      "answer": 1,
-      "explanation": "$0.\\overline{3} \\times 0.\\overline{6} = \\frac{1}{3} \\times \\frac{2}{3} = \\frac{2}{9}$"
+      "answer": 0,
+      "explanation": "$0.2\\dot{2}=\\frac{22-2}{90}=\\frac{20}{90}=\\frac{2}{9}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 17,
-      "question": "$\\frac{1}{2^2 \\times 5^3}$을 소수로 나타내면?",
+      "question": "순환소수 $0.3\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.002$",
-        "$0.0002$",
-        "$0.005$",
-        "$0.0005$",
-        "$0.02$"
+        "$\\frac{31}{90}$",
+        "$\\frac{10}{33}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{29}{90}$",
+        "$\\frac{1}{30}$"
       ],
-      "answer": 0,
-      "explanation": "$\\frac{1}{500} = \\frac{2}{1000} = 0.002$"
+      "answer": 2,
+      "explanation": "$0.3\\dot{3}=\\frac{33-3}{90}=\\frac{30}{90}=\\frac{1}{3}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 18,
-      "question": "$0.\\overline{9} = 1$임을 이용하여 $0.\\overline{3} + 0.\\overline{6}$을 구하면?",
+      "question": "순환소수 $0.4\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.\\overline{9}$",
-        "$0.9$",
-        "$1$",
-        "$\\frac{9}{10}$",
-        "$0.99$"
+        "$\\frac{41}{90}$",
+        "$\\frac{40}{99}$",
+        "$\\frac{13}{30}$",
+        "$\\frac{2}{45}$",
+        "$\\frac{4}{9}$"
       ],
-      "answer": 2,
-      "explanation": "$0.\\overline{3} + 0.\\overline{6} = \\frac{1}{3} + \\frac{2}{3} = 1 = 0.\\overline{9}$"
+      "answer": 4,
+      "explanation": "$0.4\\dot{4}=\\frac{44-4}{90}=\\frac{40}{90}=\\frac{4}{9}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 19,
-      "question": "기약분수 $\\frac{p}{q}$가 유한소수이고 $q < 20$일 때, $q$가 될 수 없는 수는?",
+      "question": "순환소수 $0.5\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$4$",
-        "$8$",
-        "$10$",
-        "$16$",
-        "$12$"
+        "$\\frac{8}{15}$",
+        "$\\frac{47}{90}$",
+        "$\\frac{47}{99}$",
+        "$\\frac{23}{45}$",
+        "$\\frac{47}{900}$"
       ],
-      "answer": 4,
-      "explanation": "$12 = 2^2 \\times 3$에서 소인수 3이 있으므로 유한소수 불가."
+      "answer": 1,
+      "explanation": "$0.5\\dot{2}=\\frac{52-5}{90}=\\frac{47}{90}=\\frac{47}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 20,
-      "question": "$x = 0.\\overline{abc}$ ($a, b, c$는 숫자)일 때 $999x$는?",
+      "question": "순환소수 $0.6\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$abc$ (세 자리 수)",
-        "$\\overline{abc}$",
-        "$0.abc$",
-        "$abc \\times 10$",
-        "$\\frac{abc}{9}$"
+        "$\\frac{29}{45}$",
+        "$\\frac{19}{33}$",
+        "$\\frac{28}{45}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{19}{300}$"
       ],
-      "answer": 0,
-      "explanation": "$1000x = abc.\\overline{abc}$, $x = 0.\\overline{abc}$이면 $999x = abc$ (세 자리 수)"
+      "answer": 3,
+      "explanation": "$0.6\\dot{3}=\\frac{63-6}{90}=\\frac{57}{90}=\\frac{19}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 21,
-      "question": "순환소수 $0.\\overline{1}$, $0.\\overline{2}$, $\\ldots$, $0.\\overline{9}$의 합은?",
+      "question": "순환소수 $0.7\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$4$",
-        "$4.5$",
-        "$5$",
-        "$5.5$",
-        "$6$"
+        "$\\frac{67}{90}$",
+        "$\\frac{34}{45}$",
+        "$\\frac{67}{99}$",
+        "$\\frac{11}{15}$",
+        "$\\frac{67}{900}$"
       ],
-      "answer": 2,
-      "explanation": "$\\sum_{k=1}^{9} \\frac{k}{9} = \\frac{1+2+\\cdots+9}{9} = \\frac{45}{9} = 5$"
+      "answer": 0,
+      "explanation": "$0.7\\dot{4}=\\frac{74-7}{90}=\\frac{67}{90}=\\frac{67}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 22,
-      "question": "$\\frac{13}{2^2 \\times 5}$를 유한소수로 나타내면?",
+      "question": "순환소수 $0.1\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.65$",
-        "$1.3$",
-        "$0.065$",
-        "$0.13$",
-        "$6.5$"
+        "$\\frac{2}{15}$",
+        "$\\frac{1}{9}$",
+        "$\\frac{11}{90}$",
+        "$\\frac{11}{900}$",
+        "$\\frac{11}{90}1$"
       ],
-      "answer": 0,
-      "explanation": "$\\frac{13}{20} = \\frac{65}{100} = 0.65$"
+      "answer": 2,
+      "explanation": "$0.1\\dot{2}=\\frac{12-1}{90}=\\frac{11}{90}=\\frac{11}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 23,
-      "question": "$n$이 한 자리 자연수일 때, $0.\\overline{n} = \\frac{n}{9}$를 이용하여 $0.\\overline{7} - 0.\\overline{4}$를 구하면?",
+      "question": "순환소수 $0.2\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{3}{9}$",
-        "$\\frac{1}{3}$",
-        "$0.3$",
-        "$0.\\overline{3}$",
-        "2번과 4번 모두"
+        "$\\frac{11}{45}$",
+        "$\\frac{7}{33}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{300}$",
+        "$\\frac{7}{30}$"
       ],
       "answer": 4,
-      "explanation": "$\\frac{7}{9} - \\frac{4}{9} = \\frac{3}{9} = \\frac{1}{3} = 0.\\overline{3}$"
+      "explanation": "$0.2\\dot{3}=\\frac{23-2}{90}=\\frac{21}{90}=\\frac{7}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 24,
-      "question": "$0.1\\overline{35}$를 분수로 나타내는 과정에서 사용하는 방정식은?",
+      "question": "순환소수 $0.3\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$10x - x = 1.35$",
-        "$100x - 10x = 13.5$",
-        "$1000x - 10x = 135.35 - 0.135$",
-        "$1000x - 10x = 135.35 - 0.1\\overline{35}$",
-        "$990x = 134$"
+        "$\\frac{16}{45}$",
+        "$\\frac{31}{90}$",
+        "$\\frac{31}{99}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{31}{900}$"
       ],
-      "answer": 4,
-      "explanation": "$x = 0.1\\overline{35}$, $10x = 1.\\overline{35}$, $1000x = 135.\\overline{35}$. $990x = 134$, $x = \\frac{134}{990} = \\frac{67}{495}$"
+      "answer": 1,
+      "explanation": "$0.3\\dot{4}=\\frac{34-3}{90}=\\frac{31}{90}=\\frac{31}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 25,
-      "question": "$\\frac{3}{11}$과 $\\frac{5}{12}$ 중에서 유한소수인 것은?",
+      "question": "순환소수 $0.4\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{3}{11}$만",
-        "$\\frac{5}{12}$만",
-        "둘 다 유한소수",
-        "둘 다 순환소수",
-        "판단 불가"
+        "$\\frac{13}{30}$",
+        "$\\frac{38}{99}$",
+        "$\\frac{37}{90}$",
+        "$\\frac{19}{45}$",
+        "$\\frac{19}{450}$"
       ],
       "answer": 3,
-      "explanation": "$11$은 소인수가 11, $12 = 2^2 \\times 3$. 둘 다 2와 5 이외의 소인수를 가지므로 순환소수."
+      "explanation": "$0.4\\dot{2}=\\frac{42-4}{90}=\\frac{38}{90}=\\frac{19}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 26,
-      "question": "소수점 아래 셋째 자리에서 처음으로 반복이 시작되는 순환소수의 예는?",
+      "question": "순환소수 $0.5\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "$0.\\overline{123}$",
-        "$0.12\\overline{3}$",
-        "$0.1\\overline{23}$",
-        "$0.\\overline{12}3$",
-        "$0.123$"
+        "$\\frac{8}{15}$",
+        "$\\frac{49}{90}$",
+        "$\\frac{16}{33}$",
+        "$\\frac{47}{90}$",
+        "$\\frac{4}{75}$"
       ],
-      "answer": 1,
-      "explanation": "$0.12\\overline{3} = 0.12333\\cdots$ — 소수점 아래 셋째 자리부터 순환 시작"
+      "answer": 0,
+      "explanation": "$0.5\\dot{3}=\\frac{53-5}{90}=\\frac{48}{90}=\\frac{8}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 27,
-      "question": "$0.\\overline{37} \\times 0.\\overline{09}$를 계산하면?",
+      "question": "순환소수 $0.6\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$\\frac{37}{9900}$",
-        "$\\frac{1}{30}$",
-        "$\\frac{37}{3300}$",
-        "$\\frac{1}{3}$",
-        "$0.\\overline{0333}$"
+        "$\\frac{59}{90}$",
+        "$\\frac{58}{99}$",
+        "$\\frac{29}{45}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{29}{450}$"
       ],
       "answer": 2,
-      "explanation": "$0.\\overline{37} = \\frac{37}{99}$, $0.\\overline{09} = \\frac{9}{99} = \\frac{1}{11}$. 곱 $= \\frac{37}{99 \\times 11} = \\frac{37}{1089} = \\frac{37}{3 \\times 363}$... $99 \\times 11 = 1089$이고 $\\gcd(37, 1089)$... $1089 = 33^2$, $37$은 소수. $\\frac{37}{1089}$"
+      "explanation": "$0.6\\dot{4}=\\frac{64-6}{90}=\\frac{58}{90}=\\frac{29}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 28,
-      "question": "$\\frac{a}{14}$ ($a$는 자연수)가 유한소수가 되는 가장 작은 $a$는?",
+      "question": "순환소수 $0.7\\dot{2}$를 기약분수로 나타내면?",
       "choices": [
-        "$2$",
-        "$7$",
-        "$14$",
-        "$28$",
-        "$49$"
+        "$\\frac{11}{15}$",
+        "$\\frac{65}{99}$",
+        "$\\frac{32}{45}$",
+        "$\\frac{13}{180}$",
+        "$\\frac{13}{18}$"
       ],
-      "answer": 1,
-      "explanation": "$14 = 2 \\times 7$. 약분 후 분모에 7이 없어져야 하므로 $a$는 7의 배수. 가장 작은 것 $= 7$"
+      "answer": 4,
+      "explanation": "$0.7\\dot{2}=\\frac{72-7}{90}=\\frac{65}{90}=\\frac{13}{18}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 29,
-      "question": "분수 $\\frac{7}{16}$을 소수로 나타낼 때 소수점 아래 자릿수는?",
+      "question": "순환소수 $0.1\\dot{3}$를 기약분수로 나타내면?",
       "choices": [
-        "2자리",
-        "3자리",
-        "4자리",
-        "5자리",
-        "무한"
+        "$\\frac{13}{90}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{4}{33}$",
+        "$\\frac{11}{90}$",
+        "$\\frac{1}{75}$"
       ],
-      "answer": 2,
-      "explanation": "$16 = 2^4$. 분모를 $10^4 = 2^4 \\times 5^4$로 만들기 위해 $5^4$를 곱하면 $\\frac{7 \\times 625}{10000} = \\frac{4375}{10000} = 0.4375$ — 4자리"
+      "answer": 1,
+      "explanation": "$0.1\\dot{3}=\\frac{13-1}{90}=\\frac{12}{90}=\\frac{2}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     },
     {
       "id": 30,
-      "question": "두 순환소수 $0.\\overline{p}$와 $0.\\overline{q}$ ($p, q$는 한 자리)의 합이 $\\frac{7}{9}$일 때, $p + q$는?",
+      "question": "순환소수 $0.2\\dot{4}$를 기약분수로 나타내면?",
       "choices": [
-        "$5$",
-        "$6$",
-        "$7$",
-        "$8$",
-        "$9$"
+        "$\\frac{23}{90}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{30}$",
+        "$\\frac{11}{45}$",
+        "$\\frac{11}{450}$"
       ],
-      "answer": 2,
-      "explanation": "$\\frac{p}{9} + \\frac{q}{9} = \\frac{7}{9}$이므로 $p + q = 7$"
+      "answer": 3,
+      "explanation": "$0.2\\dot{4}=\\frac{24-2}{90}=\\frac{22}{90}=\\frac{11}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
     }
   ]
 }

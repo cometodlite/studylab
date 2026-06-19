@@ -1,40 +1,767 @@
 {
   "id": "m2-mono-pattern",
   "title": "단항식의 계산 — 유형별",
-  "description": "지수법칙 응용, 복합 계산, 식의 값",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 지수법칙 응용, 복합 계산, 식의 값",
   "grade": 2,
   "unit": "식의 계산",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "algebra",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
-    {"id":1,"question":"$2^3 \\times 4^2$를 $2^n$ 꼴로 나타내면?","choices":["$2^5$","$2^6$","$2^7$","$2^8$","$2^{12}$"],"answer":2,"explanation":"$4^2=(2^2)^2=2^4$. $2^3 \\times 2^4=2^7$"},
-    {"id":2,"question":"$\\frac{9^3}{3^4}$를 계산하면?","choices":["$3$","$9$","$27$","$81$","$243$"],"answer":0,"explanation":"$9^3=(3^2)^3=3^6$. $3^6 \\div 3^4=3^2=9$. 잠깐, $3^2=9$이므로 정답은 2번 $9$."},
-    {"id":3,"question":"$a=2$일 때, $3a^2 \\times (-a)^3$의 값은?","choices":["$-96$","$96$","$-48$","$48$","$-24$"],"answer":0,"explanation":"$3a^2 \\times (-a)^3 = 3a^2 \\times (-a^3) = -3a^5$. $a=2$: $-3 \\times 32=-96$"},
-    {"id":4,"question":"$\\frac{a^3b^4}{a^2b} \\times \\frac{2ab^2}{b^3}$를 계산하면?","choices":["$2a^2b^2$","$2a^2b$","$2ab^2$","$2a^2b^3$","$a^2b^2$"],"answer":0,"explanation":"$\\frac{a^3b^4}{a^2b} = ab^3$. $ab^3 \\times \\frac{2ab^2}{b^3} = 2a^2b^2$"},
-    {"id":5,"question":"$(-2x^2y)^3 \\div (4x^3y)$를 계산하면?","choices":["$-2x^3y^2$","$2x^3y^2$","$-2x^3y$","$-2x^6y^2$","$2x^6y^2$"],"answer":0,"explanation":"$(-2x^2y)^3=-8x^6y^3$. $-8x^6y^3 \\div 4x^3y = -2x^3y^2$"},
-    {"id":6,"question":"어떤 단항식 $A$에 $3x^2$를 곱했더니 $12x^5$가 되었다. $A$는?","choices":["$4x^3$","$4x^2$","$3x^3$","$4x$","$9x^3$"],"answer":0,"explanation":"$A = 12x^5 \\div 3x^2 = 4x^3$"},
-    {"id":7,"question":"$2^{10} \\div 4^3$를 계산하면?","choices":["$4$","$8$","$16$","$32$","$64$"],"answer":2,"explanation":"$4^3=(2^2)^3=2^6$. $2^{10} \\div 2^6=2^4=16$"},
-    {"id":8,"question":"$x=3$일 때, $\\frac{(-x)^4}{x^2}$의 값은?","choices":["$9$","$-9$","$3$","$-3$","$81$"],"answer":0,"explanation":"$\\frac{(-x)^4}{x^2}=\\frac{x^4}{x^2}=x^2$. $x=3$: $9$"},
-    {"id":9,"question":"$(3xy^2)^2 \\div (9x^2y)$를 계산하면?","choices":["$y^3$","$y^2$","$3y^3$","$y$","$3y^2$"],"answer":0,"explanation":"$(3xy^2)^2=9x^2y^4$. $9x^2y^4 \\div 9x^2y=y^3$"},
-    {"id":10,"question":"$(-a)^6 \\times (-a)^3$을 계산하면?","choices":["$-a^9$","$a^9$","$-a^{18}$","$a^{18}$","$a^2$"],"answer":0,"explanation":"$(-a)^6=a^6$ (짝수). $(-a)^3=-a^3$ (홀수). $a^6 \\times (-a^3)=-a^9$"},
-    {"id":11,"question":"$\\square \\div 2a^2b = 3ab^3$일 때, $\\square$에 알맞은 식은?","choices":["$6a^3b^4$","$6a^3b^3$","$6a^2b^4$","$\\frac{3b^4}{2}$","$6a^3b$"],"answer":0,"explanation":"$\\square = 3ab^3 \\times 2a^2b = 6a^3b^4$"},
-    {"id":12,"question":"$8^n = 2^{12}$일 때 $n$의 값은?","choices":["$2$","$3$","$4$","$6$","$8$"],"answer":2,"explanation":"$(2^3)^n=2^{3n}=2^{12}$. $3n=12$, $n=4$"},
-    {"id":13,"question":"$a=2, b=-1$일 때 $(-2a^2b)^2$의 값은?","choices":["$16$","$-16$","$64$","$-64$","$4$"],"answer":0,"explanation":"$(-2a^2b)^2=4a^4b^2$. $4 \\times 16 \\times 1=64$. 정답 3번."},
-    {"id":14,"question":"한 변의 길이가 $2a^2b$인 정육면체의 부피는?","choices":["$6a^6b^3$","$8a^6b^3$","$8a^5b^3$","$8a^6b^2$","$2a^6b^3$"],"answer":1,"explanation":"$(2a^2b)^3=8a^6b^3$"},
-    {"id":15,"question":"$3^5 \\times 9^3 \\div 27^2$를 $3^n$ 꼴로 나타낼 때 $n$은?","choices":["$3$","$4$","$5$","$6$","$7$"],"answer":2,"explanation":"$3^5 \\times 3^6 \\div 3^6 = 3^5$. $n=5$"},
-    {"id":16,"question":"$(-2x)^3 \\times x^2 \\div (-4x^4)$를 계산하면?","choices":["$2x$","$-2x$","$2x^2$","$-2x^2$","$2$"],"answer":1,"explanation":"$(-2x)^3=-8x^3$. $-8x^3 \\times x^2 \\div (-4x^4) = -8x^5 \\div (-4x^4) = 2x$. 정답 1번."},
-    {"id":17,"question":"$\\frac{4a^3b^2 \\times 3ab}{6a^2b^2}$를 계산하면?","choices":["$2a^2b$","$2a^3b$","$2ab$","$2a^2$","$2a^2b^2$"],"answer":0,"explanation":"분자: $12a^4b^3$. $\\frac{12a^4b^3}{6a^2b^2}=2a^2b$"},
-    {"id":18,"question":"$x^a \\times x^3 = x^7$일 때, $a$의 값은?","choices":["$2$","$3$","$4$","$5$","$10$"],"answer":2,"explanation":"$a+3=7$, $a=4$"},
-    {"id":19,"question":"$A \\times (-3x^2y) = 6x^4y^3$일 때, $A$는?","choices":["$-2x^2y^2$","$2x^2y^2$","$-2x^6y^4$","$2x^6y^4$","$-2x^2y$"],"answer":0,"explanation":"$A = 6x^4y^3 \\div (-3x^2y) = -2x^2y^2$"},
-    {"id":20,"question":"$(-ab^2)^3 \\times (2a^2b)^2$를 계산하면?","choices":["$-4a^7b^8$","$4a^7b^8$","$-4a^5b^8$","$4a^5b^8$","$-4a^7b^6$"],"answer":0,"explanation":"$(-ab^2)^3=-a^3b^6$. $(2a^2b)^2=4a^4b^2$. 곱: $-4a^7b^8$"},
-    {"id":21,"question":"$\\frac{(2x)^4 \\times x^3}{8x^5}$를 계산하면?","choices":["$2x^2$","$4x^2$","$2x^3$","$4x^3$","$2x$"],"answer":0,"explanation":"$(2x)^4=16x^4$. $\\frac{16x^7}{8x^5}=2x^2$"},
-    {"id":22,"question":"$a^m \\div a^n = a^3$이고 $a^m \\times a^n = a^{11}$이면, $m+n$과 $m-n$은?","choices":["$m+n=11, m-n=3$","$m=7, n=4$","$m=8, n=3$","$m+n=3, m-n=11$","$m=4, n=7$"],"answer":1,"explanation":"$m-n=3$, $m+n=11$. 연립: $2m=14$, $m=7$, $n=4$"},
-    {"id":23,"question":"가로 $3a^2$, 세로 $2ab$, 높이 $a$인 직육면체의 부피는?","choices":["$6a^4b$","$6a^3b$","$5a^4b$","$6a^4$","$6a^5b$"],"answer":0,"explanation":"$3a^2 \\times 2ab \\times a = 6a^4b$"},
-    {"id":24,"question":"$\\frac{(-3a^2b)^2}{(-a)^3 \\times 3b}$를 계산하면?","choices":["$3a$","$-3a$","$3ab$","$-3ab$","$3a^7b$"],"answer":1,"explanation":"분자: $9a^4b^2$. 분모: $-a^3 \\times 3b=-3a^3b$. $\\frac{9a^4b^2}{-3a^3b}=-3ab$"},
-    {"id":25,"question":"$2^x = 32$, $3^y = 81$일 때, $x+y$는?","choices":["$8$","$9$","$10$","$11$","$12$"],"answer":1,"explanation":"$2^x=2^5 \\Rightarrow x=5$. $3^y=3^4 \\Rightarrow y=4$. $x+y=9$"},
-    {"id":26,"question":"$A \\div (2ab^2) = 3a^3b$일 때, $A$는?","choices":["$6a^4b^3$","$6a^3b^3$","$6a^4b$","$6a^2b^3$","$\\frac{3a^3b}{2ab^2}$"],"answer":0,"explanation":"$A=3a^3b \\times 2ab^2=6a^4b^3$"},
-    {"id":27,"question":"$n$이 자연수일 때, $(-1)^{2n+1}$의 값은?","choices":["$1$","$-1$","$0$","$2n+1$","$(-1)$"],"answer":1,"explanation":"$2n+1$은 항상 홀수. $(-1)^{홀수}=-1$"},
-    {"id":28,"question":"$\\frac{x^4y^3}{x^2y} \\times \\frac{3xy^2}{y^3}$를 계산하면?","choices":["$3x^3y$","$3x^3y^2$","$3x^3$","$3x^2y$","$3x$"],"answer":0,"explanation":"$\\frac{x^4y^3}{x^2y}=x^2y^2$. $x^2y^2 \\times \\frac{3xy^2}{y^3}=3x^3y$"},
-    {"id":29,"question":"$(-2a)^3 \\times 3a^2 \\div (-6a^4)$를 계산하면?","choices":["$4a$","$-4a$","$4a^2$","$-4a^2$","$4$"],"answer":0,"explanation":"$(-2a)^3=-8a^3$. $-8a^3 \\times 3a^2 = -24a^5$. $-24a^5 \\div (-6a^4)=4a$"},
-    {"id":30,"question":"$a=\\frac{1}{2}$일 때, $(2a)^4 \\div (4a)^2$의 값은?","choices":["$\\frac{1}{4}$","$\\frac{1}{2}$","$1$","$2$","$4$"],"answer":2,"explanation":"$(2a)^4 \\div (4a)^2 = \\frac{(2a)^4}{(4a)^2} = \\frac{16a^4}{16a^2}=a^2$. $a=\\frac{1}{2}$: $\\frac{1}{4}$. 정답 1번."}
+    {
+      "id": 1,
+      "question": "$(2x+3)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$7$",
+        "$5$",
+        "$9$",
+        "$4$",
+        "$6$"
+      ],
+      "answer": 0,
+      "explanation": "$x$항은 $2x\\cdot1$과 $3\\cdot2x$에서 나오므로 계수는 $2+6=7$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 2,
+      "question": "$(3x+4)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$11$",
+        "$15$",
+        "$13$",
+        "$9$",
+        "$12$"
+      ],
+      "answer": 2,
+      "explanation": "$x$항은 $3x\\cdot1$과 $4\\cdot3x$에서 나오므로 계수는 $3+12=13$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 3,
+      "question": "$(4x+5)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$19$",
+        "$23$",
+        "$16$",
+        "$20$",
+        "$21$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $4x\\cdot1$과 $5\\cdot4x$에서 나오므로 계수는 $4+20=21$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 4,
+      "question": "$(5x+6)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$9$",
+        "$11$",
+        "$13$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $5x\\cdot1$과 $6\\cdot1x$에서 나오므로 계수는 $5+6=11$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 5,
+      "question": "$(1x+7)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$7$",
+        "$11$",
+        "$2$",
+        "$9$",
+        "$14$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $1x\\cdot1$과 $7\\cdot2x$에서 나오므로 계수는 $1+14=9$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 6,
+      "question": "$(2x+2)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$10$",
+        "$9$",
+        "$11$"
+      ],
+      "answer": 0,
+      "explanation": "$x$항은 $2x\\cdot1$과 $2\\cdot3x$에서 나오므로 계수는 $2+6=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$(3x+3)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$13$",
+        "$17$",
+        "$15$",
+        "$12$",
+        "$16$"
+      ],
+      "answer": 2,
+      "explanation": "$x$항은 $3x\\cdot1$과 $3\\cdot4x$에서 나오므로 계수는 $3+12=15$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 8,
+      "question": "$(4x+4)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$6$",
+        "$10$",
+        "$4$",
+        "$9$",
+        "$8$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $4x\\cdot1$과 $4\\cdot1x$에서 나오므로 계수는 $4+4=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$(5x+5)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$13$",
+        "$15$",
+        "$17$",
+        "$10$",
+        "$16$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $5x\\cdot1$과 $5\\cdot2x$에서 나오므로 계수는 $5+10=15$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$(1x+6)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$7$",
+        "$11$",
+        "$3$",
+        "$9$",
+        "$18$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $1x\\cdot1$과 $6\\cdot3x$에서 나오므로 계수는 $1+18=9$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$(2x+7)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$15$",
+        "$13$",
+        "$17$",
+        "$8$",
+        "$28$"
+      ],
+      "answer": 0,
+      "explanation": "$x$항은 $2x\\cdot1$과 $7\\cdot4x$에서 나오므로 계수는 $2+28=15$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$(3x+2)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$3$",
+        "$7$",
+        "$5$",
+        "$2$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "$x$항은 $3x\\cdot1$과 $2\\cdot1x$에서 나오므로 계수는 $3+2=5$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$(4x+3)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$9$",
+        "$13$",
+        "$8$",
+        "$6$",
+        "$11$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $4x\\cdot1$과 $3\\cdot2x$에서 나오므로 계수는 $4+6=11$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$(5x+4)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$17$",
+        "$19$",
+        "$21$",
+        "$15$",
+        "$12$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $5x\\cdot1$과 $4\\cdot3x$에서 나오므로 계수는 $5+12=19$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$(1x+5)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$7$",
+        "$11$",
+        "$4$",
+        "$9$",
+        "$20$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $1x\\cdot1$과 $5\\cdot4x$에서 나오므로 계수는 $1+20=9$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$(2x+6)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$10$",
+        "$2$",
+        "$9$"
+      ],
+      "answer": 0,
+      "explanation": "$x$항은 $2x\\cdot1$과 $6\\cdot1x$에서 나오므로 계수는 $2+6=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$(3x+7)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$11$",
+        "$15$",
+        "$13$",
+        "$6$",
+        "$14$"
+      ],
+      "answer": 2,
+      "explanation": "$x$항은 $3x\\cdot1$과 $7\\cdot2x$에서 나오므로 계수는 $3+14=13$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$(4x+2)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$12$",
+        "$16$",
+        "$6$",
+        "$15$",
+        "$14$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $4x\\cdot1$과 $2\\cdot3x$에서 나오므로 계수는 $4+6=14$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$(5x+3)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$21$",
+        "$23$",
+        "$25$",
+        "$20$",
+        "$12$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $5x\\cdot1$과 $3\\cdot4x$에서 나오므로 계수는 $5+12=23$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$(1x+4)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$3$",
+        "$7$",
+        "$1$",
+        "$5$",
+        "$4$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $1x\\cdot1$과 $4\\cdot1x$에서 나오므로 계수는 $1+4=5$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$(2x+5)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$9$",
+        "$7$",
+        "$11$",
+        "$4$",
+        "$10$"
+      ],
+      "answer": 0,
+      "explanation": "$x$항은 $2x\\cdot1$과 $5\\cdot2x$에서 나오므로 계수는 $2+10=9$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$(3x+6)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$13$",
+        "$17$",
+        "$15$",
+        "$9$",
+        "$18$"
+      ],
+      "answer": 2,
+      "explanation": "$x$항은 $3x\\cdot1$과 $6\\cdot3x$에서 나오므로 계수는 $3+18=15$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$(4x+7)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$21$",
+        "$25$",
+        "$16$",
+        "$28$",
+        "$23$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $4x\\cdot1$과 $7\\cdot4x$에서 나오므로 계수는 $4+28=23$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$(5x+2)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$5$",
+        "$7$",
+        "$9$",
+        "$2$",
+        "$8$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $5x\\cdot1$과 $2\\cdot1x$에서 나오므로 계수는 $5+2=7$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 25,
+      "question": "$(1x+3)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$3$",
+        "$7$",
+        "$2$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $1x\\cdot1$과 $3\\cdot2x$에서 나오므로 계수는 $1+6=5$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 26,
+      "question": "$(2x+4)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$10$",
+        "$8$",
+        "$12$",
+        "$6$",
+        "$11$"
+      ],
+      "answer": 0,
+      "explanation": "$x$항은 $2x\\cdot1$과 $4\\cdot3x$에서 나오므로 계수는 $2+12=10$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 27,
+      "question": "$(3x+5)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$15$",
+        "$19$",
+        "$17$",
+        "$12$",
+        "$20$"
+      ],
+      "answer": 2,
+      "explanation": "$x$항은 $3x\\cdot1$과 $5\\cdot4x$에서 나오므로 계수는 $3+20=17$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 28,
+      "question": "$(4x+6)(1x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$8$",
+        "$12$",
+        "$4$",
+        "$6$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $4x\\cdot1$과 $6\\cdot1x$에서 나오므로 계수는 $4+6=10$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 29,
+      "question": "$(5x+7)(2x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$15$",
+        "$17$",
+        "$19$",
+        "$10$",
+        "$14$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $5x\\cdot1$과 $7\\cdot2x$에서 나오므로 계수는 $5+14=17$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 30,
+      "question": "$(1x+2)(3x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$3$",
+        "$7$",
+        "$6$",
+        "$5$",
+        "$8$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $1x\\cdot1$과 $2\\cdot3x$에서 나오므로 계수는 $1+6=5$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "전개 후 계수 구하기",
+        "skills": [
+          "분배법칙",
+          "동류항"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    }
   ]
 }

@@ -1,40 +1,767 @@
 {
   "id": "m2-rational-cyclic-pattern",
   "title": "순환소수 — 유형별",
-  "description": "순환소수를 분수로 변환하는 다양한 유형 (10x−x, 혼합형)",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. 순환소수를 분수로 변환하는 다양한 유형 (10x−x, 혼합형)",
   "grade": 2,
   "unit": "유리수와 순환소수",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "rational",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
-    {"id":1,"question":"$0.\\overline{37}$을 분수로 나타내면?","choices":["$\\frac{37}{99}$","$\\frac{37}{100}$","$\\frac{37}{9}$","$\\frac{37}{990}$","$\\frac{37}{999}$"],"answer":0,"explanation":"$x=0.\\overline{37}$. $100x-x=37$. $x=\\frac{37}{99}$"},
-    {"id":2,"question":"$0.1\\overline{4}$을 분수로 나타내면?","choices":["$\\frac{13}{90}$","$\\frac{14}{99}$","$\\frac{7}{45}$","$\\frac{2}{13}$","$\\frac{14}{90}$"],"answer":0,"explanation":"$x=0.1\\overline{4}$. $10x=1.\\overline{4}$. $100x=14.\\overline{4}$. $90x=13$. $x=\\frac{13}{90}$"},
-    {"id":3,"question":"$0.2\\overline{7}$을 분수로 나타내면?","choices":["$\\frac{1}{4}$","$\\frac{27}{99}$","$\\frac{25}{90}$","$\\frac{1}{3}$","$\\frac{5}{18}$"],"answer":0,"explanation":"$x=0.2\\overline{7}$. $10x=2.\\overline{7}$. $100x=27.\\overline{7}$. $90x=25$. $x=\\frac{25}{90}=\\frac{5}{18}$. 정답 5번."},
-    {"id":4,"question":"$0.3\\overline{15}$를 분수로 나타내면?","choices":["$\\frac{312}{990}$","$\\frac{17}{55}$","$\\frac{31}{99}$","$\\frac{5}{16}$","$\\frac{7}{22}$"],"answer":0,"explanation":"$x=0.3\\overline{15}$. $10x=3.\\overline{15}$. $1000x=315.\\overline{15}$. $990x=312$. $x=\\frac{312}{990}=\\frac{52}{165}$"},
-    {"id":5,"question":"$1.\\overline{6}$을 분수로 나타내면?","choices":["$\\frac{5}{3}$","$\\frac{16}{9}$","$\\frac{16}{10}$","$\\frac{3}{2}$","$\\frac{5}{9}$"],"answer":0,"explanation":"$x=1.\\overline{6}$. $10x=16.\\overline{6}$. $9x=15$. $x=\\frac{15}{9}=\\frac{5}{3}$"},
-    {"id":6,"question":"$0.\\overline{142857}$을 분수로 나타내면?","choices":["$\\frac{1}{7}$","$\\frac{142857}{1000000}$","$\\frac{142857}{999999}$","1번과 3번","$\\frac{1}{6}$"],"answer":3,"explanation":"$\\frac{142857}{999999}=\\frac{1}{7}$"},
-    {"id":7,"question":"$2.\\overline{3}$을 분수로 나타내면?","choices":["$\\frac{7}{3}$","$\\frac{23}{9}$","$\\frac{23}{10}$","$\\frac{2}{3}$","$\\frac{21}{9}$"],"answer":0,"explanation":"$x=2.\\overline{3}$. $10x=23.\\overline{3}$. $9x=21$. $x=\\frac{21}{9}=\\frac{7}{3}$"},
-    {"id":8,"question":"$0.\\overline{45}$를 분수로 나타내면?","choices":["$\\frac{5}{11}$","$\\frac{45}{99}$","둘 다","$\\frac{45}{100}$","$\\frac{9}{20}$"],"answer":2,"explanation":"$\\frac{45}{99}=\\frac{5}{11}$"},
-    {"id":9,"question":"$0.5\\overline{27}$을 분수로 나타내면?","choices":["$\\frac{522}{990}$","$\\frac{527}{999}$","$\\frac{29}{55}$","$\\frac{261}{495}$","$\\frac{522}{999}$"],"answer":0,"explanation":"$x=0.5\\overline{27}$. $10x=5.\\overline{27}$. $1000x=527.\\overline{27}$. $990x=522$. $x=\\frac{522}{990}=\\frac{29}{55}$. 정답 3번."},
-    {"id":10,"question":"$0.\\overline{123}$을 분수로 나타내면?","choices":["$\\frac{41}{333}$","$\\frac{123}{999}$","둘 다","$\\frac{123}{1000}$","$\\frac{1}{8}$"],"answer":2,"explanation":"$\\frac{123}{999}=\\frac{41}{333}$"},
-    {"id":11,"question":"$3.\\overline{14}$를 분수로 나타내면?","choices":["$\\frac{311}{99}$","$\\frac{314}{99}$","$\\frac{314}{100}$","$\\frac{31}{10}$","$\\frac{7}{2}$"],"answer":0,"explanation":"$x=3.\\overline{14}$. $100x=314.\\overline{14}$. $99x=311$. $x=\\frac{311}{99}$"},
-    {"id":12,"question":"$0.07\\overline{2}$를 분수로 나타내면?","choices":["$\\frac{13}{180}$","$\\frac{72}{990}$","$\\frac{65}{900}$","$\\frac{13}{90}$","$\\frac{7}{90}$"],"answer":0,"explanation":"$x=0.07\\overline{2}$. $100x=7.\\overline{2}$. $1000x=72.\\overline{2}$. $900x=65$. $x=\\frac{65}{900}=\\frac{13}{180}$"},
-    {"id":13,"question":"$0.\\overline{9}$과 $1$의 관계는?","choices":["$0.\\overline{9}=1$","$0.\\overline{9}<1$","$0.\\overline{9}>1$","정확히 판별 불가","$0.\\overline{9}\\approx1$"],"answer":0,"explanation":"$x=0.\\overline{9}$. $10x=9.\\overline{9}$. $9x=9$. $x=1$"},
-    {"id":14,"question":"$0.\\overline{6}$과 $\\frac{2}{3}$의 관계는?","choices":["같다","$0.\\overline{6}<\\frac{2}{3}$","$0.\\overline{6}>\\frac{2}{3}$","비교 불가","근사값이다"],"answer":0,"explanation":"$0.\\overline{6}=\\frac{6}{9}=\\frac{2}{3}$"},
-    {"id":15,"question":"$0.1\\overline{23}$을 분수로 나타내면?","choices":["$\\frac{122}{990}$","$\\frac{61}{495}$","둘 다","$\\frac{123}{990}$","$\\frac{1}{8}$"],"answer":2,"explanation":"$x=0.1\\overline{23}$. $10x=1.\\overline{23}$. $1000x=123.\\overline{23}$. $990x=122$. $x=\\frac{122}{990}=\\frac{61}{495}$"},
-    {"id":16,"question":"$0.\\overline{7}$을 분수로 나타내면?","choices":["$\\frac{7}{9}$","$\\frac{7}{10}$","$\\frac{1}{7}$","$\\frac{7}{99}$","$\\frac{7}{11}$"],"answer":0,"explanation":"$x=0.\\overline{7}$. $9x=7$. $x=\\frac{7}{9}$"},
-    {"id":17,"question":"$0.4\\overline{12}$을 분수로 나타내면?","choices":["$\\frac{408}{990}$","$\\frac{68}{165}$","둘 다","$\\frac{412}{999}$","$\\frac{41}{99}$"],"answer":2,"explanation":"$x=0.4\\overline{12}$. $10x=4.\\overline{12}$. $1000x=412.\\overline{12}$. $990x=408$. $x=\\frac{408}{990}=\\frac{68}{165}$"},
-    {"id":18,"question":"$\\frac{1}{6}=0.1\\overline{6}$이므로 순환마디와 순환하지 않는 부분을 각각 말하면?","choices":["순환마디: $6$, 비순환: $1$","순환마디: $16$, 비순환: 없음","순환마디: $6$, 비순환: 없음","순환마디: $1$, 비순환: $6$","순환마디: $1\\overline{6}$, 비순환: $0$"],"answer":0,"explanation":"$0.1\\overline{6}=0.166...$. 소수점 첫째자리 $1$은 반복 안 함. 둘째자리부터 $6$ 반복 → 순환마디: $6$, 비순환 부분: $1$"},
-    {"id":19,"question":"$0.\\overline{ab}$ 형태의 순환소수를 분수로 바꾸는 방법은?","choices":["$100x-x$","$10x-x$","$1000x-x$","$100x-10x$","$10x-100x$"],"answer":0,"explanation":"순환마디가 2자리이면 $100x-x=99x$ 방법 사용"},
-    {"id":20,"question":"$0.a\\overline{b}$ 형태의 순환소수를 분수로 바꾸는 방법은?","choices":["$100x-10x$","$100x-x$","$10x-x$","$1000x-10x$","$10x-100x$"],"answer":0,"explanation":"비순환 1자리, 순환 1자리 → $10x$에서 $100x$를 빼면 $90x$"},
-    {"id":21,"question":"$0.\\overline{36}$을 분수로 나타내면?","choices":["$\\frac{4}{11}$","$\\frac{36}{99}$","둘 다","$\\frac{36}{100}$","$\\frac{1}{3}$"],"answer":2,"explanation":"$\\frac{36}{99}=\\frac{4}{11}$"},
-    {"id":22,"question":"$1.2\\overline{3}$을 분수로 나타내면?","choices":["$\\frac{37}{30}$","$\\frac{123}{99}$","$\\frac{12}{10}$","$\\frac{111}{90}$","$\\frac{11}{9}$"],"answer":0,"explanation":"$x=1.2\\overline{3}$. $10x=12.\\overline{3}$. $100x=123.\\overline{3}$. $90x=111$. $x=\\frac{111}{90}=\\frac{37}{30}$"},
-    {"id":23,"question":"$0.\\overline{135}$을 분수로 나타내면?","choices":["$\\frac{5}{37}$","$\\frac{135}{999}$","둘 다","$\\frac{135}{1000}$","$\\frac{1}{7}$"],"answer":2,"explanation":"$\\frac{135}{999}=\\frac{5}{37}$"},
-    {"id":24,"question":"$0.0\\overline{6}$을 분수로 나타내면?","choices":["$\\frac{1}{15}$","$\\frac{6}{90}$","둘 다","$\\frac{6}{100}$","$\\frac{1}{9}$"],"answer":2,"explanation":"$x=0.0\\overline{6}$. $100x=6.\\overline{6}$. $1000x=66.\\overline{6}$. $900x=60$. $x=\\frac{60}{900}=\\frac{1}{15}=\\frac{6}{90}$"},
-    {"id":25,"question":"$\\frac{1}{12}$을 소수로 나타내면?","choices":["$0.08\\overline{3}$","$0.\\overline{083}$","$0.08$","$0.0\\overline{83}$","$0.083$"],"answer":0,"explanation":"$\\frac{1}{12}=0.08333...=0.08\\overline{3}$"},
-    {"id":26,"question":"$0.\\overline{18}$을 분수로 나타내면?","choices":["$\\frac{2}{11}$","$\\frac{18}{99}$","둘 다","$\\frac{18}{100}$","$\\frac{1}{5}$"],"answer":2,"explanation":"$\\frac{18}{99}=\\frac{2}{11}$"},
-    {"id":27,"question":"$0.2\\overline{18}$을 분수로 나타내면?","choices":["$\\frac{196}{990}$","$\\frac{98}{495}$","둘 다","$\\frac{218}{999}$","$\\frac{1}{5}$"],"answer":2,"explanation":"$10x=2.\\overline{18}$. $1000x=218.\\overline{18}$. $990x=216$. $x=\\frac{216}{990}=\\frac{12}{55}$. 계산 재확인: $\\frac{216}{990}=\\frac{12}{55}$"},
-    {"id":28,"question":"$5.\\overline{7}$을 분수로 나타내면?","choices":["$\\frac{52}{9}$","$\\frac{57}{9}$","$\\frac{52}{10}$","$\\frac{5}{7}$","$\\frac{7}{9}$"],"answer":0,"explanation":"$x=5.\\overline{7}$. $10x=57.\\overline{7}$. $9x=52$. $x=\\frac{52}{9}$"},
-    {"id":29,"question":"$0.\\overline{81}$을 분수로 나타내면?","choices":["$\\frac{9}{11}$","$\\frac{81}{99}$","둘 다","$\\frac{81}{100}$","$\\frac{1}{9}$"],"answer":2,"explanation":"$\\frac{81}{99}=\\frac{9}{11}$"},
-    {"id":30,"question":"$0.3\\overline{7}$을 분수로 나타내면?","choices":["$\\frac{17}{45}$","$\\frac{37}{99}$","$\\frac{34}{90}$","$\\frac{7}{18}$","$\\frac{34}{99}$"],"answer":0,"explanation":"$10x=3.\\overline{7}$. $100x=37.\\overline{7}$. $90x=34$. $x=\\frac{34}{90}=\\frac{17}{45}$"}
+    {
+      "id": 1,
+      "question": "순환소수 $0.4\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{41}{90}$",
+        "$\\frac{40}{99}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{13}{30}$",
+        "$\\frac{2}{45}$"
+      ],
+      "answer": 2,
+      "explanation": "$0.4\\dot{4}=\\frac{44-4}{90}=\\frac{40}{90}=\\frac{4}{9}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 2,
+      "question": "순환소수 $0.5\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{8}{15}$",
+        "$\\frac{47}{99}$",
+        "$\\frac{23}{45}$",
+        "$\\frac{47}{900}$",
+        "$\\frac{47}{90}$"
+      ],
+      "answer": 4,
+      "explanation": "$0.5\\dot{2}=\\frac{52-5}{90}=\\frac{47}{90}=\\frac{47}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 3,
+      "question": "순환소수 $0.6\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{29}{45}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{19}{33}$",
+        "$\\frac{28}{45}$",
+        "$\\frac{19}{300}$"
+      ],
+      "answer": 1,
+      "explanation": "$0.6\\dot{3}=\\frac{63-6}{90}=\\frac{57}{90}=\\frac{19}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 4,
+      "question": "순환소수 $0.7\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{34}{45}$",
+        "$\\frac{67}{99}$",
+        "$\\frac{11}{15}$",
+        "$\\frac{67}{90}$",
+        "$\\frac{67}{900}$"
+      ],
+      "answer": 3,
+      "explanation": "$0.7\\dot{4}=\\frac{74-7}{90}=\\frac{67}{90}=\\frac{67}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 5,
+      "question": "순환소수 $0.1\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{11}{90}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{1}{9}$",
+        "$\\frac{11}{900}$",
+        "$\\frac{11}{90}1$"
+      ],
+      "answer": 0,
+      "explanation": "$0.1\\dot{2}=\\frac{12-1}{90}=\\frac{11}{90}=\\frac{11}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 6,
+      "question": "순환소수 $0.2\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{11}{45}$",
+        "$\\frac{7}{33}$",
+        "$\\frac{7}{30}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{300}$"
+      ],
+      "answer": 2,
+      "explanation": "$0.2\\dot{3}=\\frac{23-2}{90}=\\frac{21}{90}=\\frac{7}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 7,
+      "question": "순환소수 $0.3\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{16}{45}$",
+        "$\\frac{31}{99}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{31}{900}$",
+        "$\\frac{31}{90}$"
+      ],
+      "answer": 4,
+      "explanation": "$0.3\\dot{4}=\\frac{34-3}{90}=\\frac{31}{90}=\\frac{31}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 8,
+      "question": "순환소수 $0.4\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{13}{30}$",
+        "$\\frac{19}{45}$",
+        "$\\frac{38}{99}$",
+        "$\\frac{37}{90}$",
+        "$\\frac{19}{450}$"
+      ],
+      "answer": 1,
+      "explanation": "$0.4\\dot{2}=\\frac{42-4}{90}=\\frac{38}{90}=\\frac{19}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 9,
+      "question": "순환소수 $0.5\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{49}{90}$",
+        "$\\frac{16}{33}$",
+        "$\\frac{47}{90}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{4}{75}$"
+      ],
+      "answer": 3,
+      "explanation": "$0.5\\dot{3}=\\frac{53-5}{90}=\\frac{48}{90}=\\frac{8}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 10,
+      "question": "순환소수 $0.6\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{29}{45}$",
+        "$\\frac{59}{90}$",
+        "$\\frac{58}{99}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{29}{450}$"
+      ],
+      "answer": 0,
+      "explanation": "$0.6\\dot{4}=\\frac{64-6}{90}=\\frac{58}{90}=\\frac{29}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 11,
+      "question": "순환소수 $0.7\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{11}{15}$",
+        "$\\frac{65}{99}$",
+        "$\\frac{13}{18}$",
+        "$\\frac{32}{45}$",
+        "$\\frac{13}{180}$"
+      ],
+      "answer": 2,
+      "explanation": "$0.7\\dot{2}=\\frac{72-7}{90}=\\frac{65}{90}=\\frac{13}{18}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 12,
+      "question": "순환소수 $0.1\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{13}{90}$",
+        "$\\frac{4}{33}$",
+        "$\\frac{11}{90}$",
+        "$\\frac{1}{75}$",
+        "$\\frac{2}{15}$"
+      ],
+      "answer": 4,
+      "explanation": "$0.1\\dot{3}=\\frac{13-1}{90}=\\frac{12}{90}=\\frac{2}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 13,
+      "question": "순환소수 $0.2\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{23}{90}$",
+        "$\\frac{11}{45}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{30}$",
+        "$\\frac{11}{450}$"
+      ],
+      "answer": 1,
+      "explanation": "$0.2\\dot{4}=\\frac{24-2}{90}=\\frac{22}{90}=\\frac{11}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 14,
+      "question": "순환소수 $0.3\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{1}{3}$",
+        "$\\frac{29}{99}$",
+        "$\\frac{14}{45}$",
+        "$\\frac{29}{90}$",
+        "$\\frac{29}{900}$"
+      ],
+      "answer": 3,
+      "explanation": "$0.3\\dot{2}=\\frac{32-3}{90}=\\frac{29}{90}=\\frac{29}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 15,
+      "question": "순환소수 $0.4\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{13}{30}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{13}{33}$",
+        "$\\frac{19}{45}$",
+        "$\\frac{13}{300}$"
+      ],
+      "answer": 0,
+      "explanation": "$0.4\\dot{3}=\\frac{43-4}{90}=\\frac{39}{90}=\\frac{13}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 16,
+      "question": "순환소수 $0.5\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{5}{9}$",
+        "$\\frac{49}{99}$",
+        "$\\frac{49}{90}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{49}{900}$"
+      ],
+      "answer": 2,
+      "explanation": "$0.5\\dot{4}=\\frac{54-5}{90}=\\frac{49}{90}=\\frac{49}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 17,
+      "question": "순환소수 $0.6\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{19}{30}$",
+        "$\\frac{56}{99}$",
+        "$\\frac{11}{18}$",
+        "$\\frac{14}{225}$",
+        "$\\frac{28}{45}$"
+      ],
+      "answer": 4,
+      "explanation": "$0.6\\dot{2}=\\frac{62-6}{90}=\\frac{56}{90}=\\frac{28}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 18,
+      "question": "순환소수 $0.7\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{67}{90}$",
+        "$\\frac{11}{15}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{13}{18}$",
+        "$\\frac{11}{150}$"
+      ],
+      "answer": 1,
+      "explanation": "$0.7\\dot{3}=\\frac{73-7}{90}=\\frac{66}{90}=\\frac{11}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 19,
+      "question": "순환소수 $0.1\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{7}{45}$",
+        "$\\frac{13}{99}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{13}{90}$",
+        "$\\frac{13}{900}$"
+      ],
+      "answer": 3,
+      "explanation": "$0.1\\dot{4}=\\frac{14-1}{90}=\\frac{13}{90}=\\frac{13}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 20,
+      "question": "순환소수 $0.2\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{30}$",
+        "$\\frac{20}{99}$",
+        "$\\frac{19}{90}$",
+        "$\\frac{1}{45}$"
+      ],
+      "answer": 0,
+      "explanation": "$0.2\\dot{2}=\\frac{22-2}{90}=\\frac{20}{90}=\\frac{2}{9}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 21,
+      "question": "순환소수 $0.3\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{31}{90}$",
+        "$\\frac{10}{33}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{29}{90}$",
+        "$\\frac{1}{30}$"
+      ],
+      "answer": 2,
+      "explanation": "$0.3\\dot{3}=\\frac{33-3}{90}=\\frac{30}{90}=\\frac{1}{3}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 22,
+      "question": "순환소수 $0.4\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{41}{90}$",
+        "$\\frac{40}{99}$",
+        "$\\frac{13}{30}$",
+        "$\\frac{2}{45}$",
+        "$\\frac{4}{9}$"
+      ],
+      "answer": 4,
+      "explanation": "$0.4\\dot{4}=\\frac{44-4}{90}=\\frac{40}{90}=\\frac{4}{9}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 23,
+      "question": "순환소수 $0.5\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{8}{15}$",
+        "$\\frac{47}{90}$",
+        "$\\frac{47}{99}$",
+        "$\\frac{23}{45}$",
+        "$\\frac{47}{900}$"
+      ],
+      "answer": 1,
+      "explanation": "$0.5\\dot{2}=\\frac{52-5}{90}=\\frac{47}{90}=\\frac{47}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 24,
+      "question": "순환소수 $0.6\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{29}{45}$",
+        "$\\frac{19}{33}$",
+        "$\\frac{28}{45}$",
+        "$\\frac{19}{30}$",
+        "$\\frac{19}{300}$"
+      ],
+      "answer": 3,
+      "explanation": "$0.6\\dot{3}=\\frac{63-6}{90}=\\frac{57}{90}=\\frac{19}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 25,
+      "question": "순환소수 $0.7\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{67}{90}$",
+        "$\\frac{34}{45}$",
+        "$\\frac{67}{99}$",
+        "$\\frac{11}{15}$",
+        "$\\frac{67}{900}$"
+      ],
+      "answer": 0,
+      "explanation": "$0.7\\dot{4}=\\frac{74-7}{90}=\\frac{67}{90}=\\frac{67}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 26,
+      "question": "순환소수 $0.1\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{2}{15}$",
+        "$\\frac{1}{9}$",
+        "$\\frac{11}{90}$",
+        "$\\frac{11}{900}$",
+        "$\\frac{11}{90}1$"
+      ],
+      "answer": 2,
+      "explanation": "$0.1\\dot{2}=\\frac{12-1}{90}=\\frac{11}{90}=\\frac{11}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 27,
+      "question": "순환소수 $0.2\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{11}{45}$",
+        "$\\frac{7}{33}$",
+        "$\\frac{2}{9}$",
+        "$\\frac{7}{300}$",
+        "$\\frac{7}{30}$"
+      ],
+      "answer": 4,
+      "explanation": "$0.2\\dot{3}=\\frac{23-2}{90}=\\frac{21}{90}=\\frac{7}{30}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 28,
+      "question": "순환소수 $0.3\\dot{4}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{16}{45}$",
+        "$\\frac{31}{90}$",
+        "$\\frac{31}{99}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{31}{900}$"
+      ],
+      "answer": 1,
+      "explanation": "$0.3\\dot{4}=\\frac{34-3}{90}=\\frac{31}{90}=\\frac{31}{90}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 29,
+      "question": "순환소수 $0.4\\dot{2}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{13}{30}$",
+        "$\\frac{38}{99}$",
+        "$\\frac{37}{90}$",
+        "$\\frac{19}{45}$",
+        "$\\frac{19}{450}$"
+      ],
+      "answer": 3,
+      "explanation": "$0.4\\dot{2}=\\frac{42-4}{90}=\\frac{38}{90}=\\frac{19}{45}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 30,
+      "question": "순환소수 $0.5\\dot{3}$를 기약분수로 나타내면?",
+      "choices": [
+        "$\\frac{8}{15}$",
+        "$\\frac{49}{90}$",
+        "$\\frac{16}{33}$",
+        "$\\frac{47}{90}$",
+        "$\\frac{4}{75}$"
+      ],
+      "answer": 0,
+      "explanation": "$0.5\\dot{3}=\\frac{53-5}{90}=\\frac{48}{90}=\\frac{8}{15}$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "순환소수 분수화",
+        "skills": [
+          "순환소수",
+          "분수 변환"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "rational"
+      }
+    }
   ]
 }

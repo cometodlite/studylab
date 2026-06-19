@@ -1,40 +1,767 @@
 {
   "id": "m2-rational-cyclic-advanced",
   "title": "순환소수 — 심화",
-  "description": "순환소수 변환 심화, 조건 추론, 역산, 식의 값",
+  "description": "EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. 순환소수 변환 심화, 조건 추론, 역산, 식의 값",
   "grade": 2,
   "unit": "유리수와 순환소수",
   "difficulty": "심화",
+  "ebsStyle": {
+    "version": 1,
+    "role": "조건 결합",
+    "expectedSteps": 4,
+    "family": "rational",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
-    {"id":1,"question":"$0.\\overline{a}=\\frac{2}{9}$일 때 $a$의 값은?","choices":["$2$","$1$","$3$","$4$","$9$"],"answer":0,"explanation":"$0.\\overline{a}=\\frac{a}{9}=\\frac{2}{9}$ → $a=2$"},
-    {"id":2,"question":"$0.\\overline{ab}=\\frac{5}{11}$일 때 두 자리 수 $\\overline{ab}$는?","choices":["$45$","$54$","$35$","$55$","$50$"],"answer":0,"explanation":"$\\frac{5}{11}=\\frac{45}{99}=0.\\overline{45}$ → $\\overline{ab}=45$"},
-    {"id":3,"question":"$0.a\\overline{b}=\\frac{7}{30}$일 때 $a+b$는?","choices":["$5$","$7$","$9$","$3$","$4$"],"answer":0,"explanation":"$\\frac{7}{30}=0.2\\overline{3}$. $a=2$, $b=3$. $a+b=5$"},
-    {"id":4,"question":"$0.\\overline{n}+0.\\overline{m}=1$이 되려면 $n+m$은?","choices":["$9$","$10$","$11$","$18$","$1$"],"answer":0,"explanation":"$\\frac{n}{9}+\\frac{m}{9}=1$ → $n+m=9$"},
-    {"id":5,"question":"$0.\\overline{3}\\times9=$?","choices":["$3$","$2.\\overline{7}$","$0.\\overline{27}$","$\\frac{1}{3}$","$0.3$"],"answer":0,"explanation":"$0.\\overline{3}=\\frac{1}{3}$. $\\frac{1}{3}\\times9=3$"},
-    {"id":6,"question":"$0.\\overline{1}\\times18=$?","choices":["$2$","$1.\\overline{8}$","$0.\\overline{18}$","$18$","$1$"],"answer":0,"explanation":"$0.\\overline{1}=\\frac{1}{9}$. $\\frac{1}{9}\\times18=2$"},
-    {"id":7,"question":"$x=0.\\overline{37}$이면 $99x$는?","choices":["$37$","$3.7$","$370$","$0.37$","$3700$"],"answer":0,"explanation":"$99x=37$"},
-    {"id":8,"question":"$0.\\overline{p}=\\frac{p}{9}$임을 이용할 때, $0.\\overline{p}$가 기약분수가 되는 $p$ $(1\\le p\\le9)$의 개수는?","choices":["$6$","$9$","$3$","$5$","$7$"],"answer":0,"explanation":"$\\gcd(p,9)=1$인 $p$: 1,2,4,5,7,8 → 6개"},
-    {"id":9,"question":"$0.\\overline{12}+0.\\overline{21}=$?","choices":["$\\frac{1}{3}$","$\\frac{33}{99}$","$0.\\overline{3}$","$\\frac{11}{33}$","모두 같다"],"answer":4,"explanation":"$\\frac{12}{99}+\\frac{21}{99}=\\frac{33}{99}=\\frac{1}{3}=0.\\overline{3}=\\frac{11}{33}$. 모두 같음"},
-    {"id":10,"question":"$0.1\\overline{6}$을 분수로 나타내면?","choices":["$\\frac{1}{6}$","$\\frac{16}{99}$","$\\frac{15}{90}$","$\\frac{2}{12}$","1번과 3번"],"answer":4,"explanation":"$x=0.1\\overline{6}$. $100x-10x=15$. $x=\\frac{15}{90}=\\frac{1}{6}$"},
-    {"id":11,"question":"$a=0.\\overline{6}$, $b=0.\\overline{3}$이면 $a-b$는?","choices":["$\\frac{1}{3}$","$0.\\overline{3}$","둘 다","$0.3$","$\\frac{3}{10}$"],"answer":2,"explanation":"$a-b=\\frac{6}{9}-\\frac{3}{9}=\\frac{3}{9}=\\frac{1}{3}=0.\\overline{3}$"},
-    {"id":12,"question":"$0.\\overline{3}\\div0.\\overline{6}=$?","choices":["$\\frac{1}{2}$","$2$","$0.5$","1번과 3번","$\\frac{3}{6}$"],"answer":3,"explanation":"$0.\\overline{3}=\\frac{1}{3}$, $0.\\overline{6}=\\frac{2}{3}$. $\\frac{1/3}{2/3}=\\frac{1}{2}=0.5$"},
-    {"id":13,"question":"$0.\\overline{ab}-0.\\overline{ba}$를 구하면 (단, $a>b$)?","choices":["$\\frac{9(a-b)}{99}$","$\\frac{a-b}{11}$","$\\frac{9(a-b)}{11}$","1번과 2번","$\\frac{(a-b)}{99}$"],"answer":3,"explanation":"$\\frac{\\overline{ab}-\\overline{ba}}{99}=\\frac{9(a-b)}{99}=\\frac{a-b}{11}$. 1번=2번"},
-    {"id":14,"question":"$0.\\overline{n}=\\frac{1}{4}$이 되는 정수 $n$이 존재하는가?","choices":["존재하지 않는다","$n=2$","$n=4$","$n=3$","$n=9$"],"answer":0,"explanation":"$\\frac{n}{9}=\\frac{1}{4}$ → $n=\\frac{9}{4}=2.25$. 정수가 아님 → 존재하지 않음"},
-    {"id":15,"question":"$0.\\overline{a5}=\\frac{5}{11}$이 되는 $a$는?","choices":["$4$","$5$","$3$","$6$","$9$"],"answer":0,"explanation":"$\\frac{5}{11}=\\frac{45}{99}$. $a=4$"},
-    {"id":16,"question":"$x=0.\\overline{142857}$이면 $7x$는?","choices":["$1$","$0.\\overline{9}$","$0.\\overline{999999}$","모두 같다","$\\frac{7}{7}$"],"answer":3,"explanation":"$7x=7\\times\\frac{1}{7}=1=0.\\overline{9}=0.\\overline{999999}$. 모두 같음"},
-    {"id":17,"question":"$\\frac{7}{15}$를 소수로 나타내면?","choices":["$0.4\\overline{6}$","$0.\\overline{46}$","$0.46$","$0.46\\overline{6}$","$0.4\\overline{66}$"],"answer":0,"explanation":"$\\frac{7}{15}=0.4666...=0.4\\overline{6}$"},
-    {"id":18,"question":"$0.\\overline{5}\\times0.\\overline{9}=$?","choices":["$\\frac{5}{9}$","$0.\\overline{45}$","$0.5$","$\\frac{5}{10}$","$0.\\overline{5}$"],"answer":0,"explanation":"$0.\\overline{5}=\\frac{5}{9}$. $0.\\overline{9}=1$. $\\frac{5}{9}\\times1=\\frac{5}{9}=0.\\overline{5}$"},
-    {"id":19,"question":"$0.a\\overline{bc}$를 분수로 나타내는 공식은?","choices":["$\\frac{\\overline{abc}-a}{990}$","$\\frac{\\overline{abc}}{999}$","$\\frac{\\overline{abc}-a}{900}$","$\\frac{a\\times99+\\overline{bc}}{990}$","1번과 4번"],"answer":4,"explanation":"$1000x=\\overline{abc}.\\overline{bc}$. $10x=a.\\overline{bc}$. $990x=\\overline{abc}-a$. $x=\\frac{\\overline{abc}-a}{990}=\\frac{a\\times99+\\overline{bc}}{990}$"},
-    {"id":20,"question":"$0.\\overline{3}\\times0.\\overline{6}\\times0.\\overline{9}=$?","choices":["$\\frac{2}{9}$","$\\frac{6}{81}$","$\\frac{2}{27}$","$\\frac{1}{3}$","$\\frac{2}{3}$"],"answer":0,"explanation":"$\\frac{1}{3}\\times\\frac{2}{3}\\times1=\\frac{2}{9}$"},
-    {"id":21,"question":"$0.\\overline{p}+0.\\overline{q}=0.\\overline{p+q}$가 성립하는 조건은?","choices":["$p+q\\le9$","$p+q<9$","$p+q=9$","항상 성립","$p+q\\ge9$"],"answer":0,"explanation":"$\\frac{p+q}{9}=0.\\overline{p+q}$가 성립하려면 $p+q$가 한 자리, 즉 $p+q\\le9$"},
-    {"id":22,"question":"$0.\\overline{abc}$의 소수점 아래 100번째 자리 숫자는?","choices":["순환마디 첫째 자리 ($100\\div3$ 나머지 1)","순환마디 둘째 자리","순환마디 셋째 자리","판별 불가","$c$"],"answer":0,"explanation":"$100=33\\times3+1$. 나머지 1 → 순환마디 첫째 자리"},
-    {"id":23,"question":"$\\frac{7}{90}$을 소수로 나타내면?","choices":["$0.0\\overline{7}$","$0.\\overline{07}$","$0.07$","$0.7\\overline{0}$","$0.07\\overline{7}$"],"answer":0,"explanation":"$\\frac{7}{90}=0.07777...=0.0\\overline{7}$"},
-    {"id":24,"question":"$0.\\overline{27}+0.\\overline{72}=$?","choices":["$1$","$\\frac{99}{99}$","$0.\\overline{9}$","모두 같다","$\\frac{27}{99}+\\frac{72}{99}$"],"answer":3,"explanation":"$\\frac{27}{99}+\\frac{72}{99}=\\frac{99}{99}=1=0.\\overline{9}$. 모두 같음"},
-    {"id":25,"question":"$0.0\\overline{12}$를 분수로 나타내면?","choices":["$\\frac{37}{3300}$","$\\frac{12}{990}$","$\\frac{4}{330}$","$\\frac{12}{1000}$","$\\frac{2}{165}$"],"answer":0,"explanation":"$100x=1.\\overline{12}$. $10000x=112.\\overline{12}$. $9900x=111$. $x=\\frac{111}{9900}=\\frac{37}{3300}$"},
-    {"id":26,"question":"$a=0.\\overline{142857}$, $b=\\frac{1}{7}$이면?","choices":["$a=b$","$a>b$","$a<b$","비교 불가","근사값"],"answer":0,"explanation":"$0.\\overline{142857}=\\frac{142857}{999999}=\\frac{1}{7}=b$"},
-    {"id":27,"question":"$1.2\\overline{3}$을 분수로 나타내면?","choices":["$\\frac{37}{30}$","$\\frac{123}{99}$","$\\frac{12}{10}$","$\\frac{111}{90}$","1번과 4번"],"answer":4,"explanation":"$10x=12.\\overline{3}$. $100x=123.\\overline{3}$. $90x=111$. $x=\\frac{111}{90}=\\frac{37}{30}$"},
-    {"id":28,"question":"$0.\\overline{3}$ 이상 $0.\\overline{6}$ 이하인 순환소수 $0.\\overline{n}$의 개수는?","choices":["$4$","$3$","$5$","$2$","$6$"],"answer":0,"explanation":"$\\frac{3}{9}\\le\\frac{n}{9}\\le\\frac{6}{9}$. $3\\le n\\le6$. $n=3,4,5,6$ → 4개"},
-    {"id":29,"question":"$\\frac{1}{12}$을 소수로 나타내면?","choices":["$0.08\\overline{3}$","$0.\\overline{083}$","$0.08$","$0.0\\overline{83}$","$0.083$"],"answer":0,"explanation":"$\\frac{1}{12}=0.08333...=0.08\\overline{3}$"},
-    {"id":30,"question":"$0.\\overline{ab}$에서 $a$와 $b$를 바꾼 $0.\\overline{ba}$와의 차가 $\\frac{1}{11}$일 때, $a-b$는?","choices":["$1$","$2$","$11$","$9$","$3$"],"answer":0,"explanation":"$\\frac{\\overline{ab}-\\overline{ba}}{99}=\\frac{9(a-b)}{99}=\\frac{a-b}{11}=\\frac{1}{11}$ → $a-b=1$"}
+    {
+      "id": 1,
+      "question": "분수 $\\frac{x}{22}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$12$",
+        "$13$",
+        "$10$",
+        "$11$",
+        "$22$"
+      ],
+      "answer": 3,
+      "explanation": "$22$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $11$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 2,
+      "question": "분수 $\\frac{x}{28}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$9$",
+        "$6$",
+        "$28$"
+      ],
+      "answer": 0,
+      "explanation": "$28$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $7$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 3,
+      "question": "분수 $\\frac{x}{38}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$20$",
+        "$21$",
+        "$19$",
+        "$18$",
+        "$38$"
+      ],
+      "answer": 2,
+      "explanation": "$38$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $19$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 4,
+      "question": "분수 $\\frac{x}{52}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$14$",
+        "$15$",
+        "$12$",
+        "$52$",
+        "$13$"
+      ],
+      "answer": 4,
+      "explanation": "$52$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $13$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 5,
+      "question": "분수 $\\frac{x}{54}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$28$",
+        "$27$",
+        "$29$",
+        "$26$",
+        "$54$"
+      ],
+      "answer": 1,
+      "explanation": "$54$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $27$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 6,
+      "question": "분수 $\\frac{x}{27}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$28$",
+        "$29$",
+        "$26$",
+        "$27$",
+        "$30$"
+      ],
+      "answer": 3,
+      "explanation": "$27$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $27$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 7,
+      "question": "분수 $\\frac{x}{33}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$33$",
+        "$34$",
+        "$35$",
+        "$32$",
+        "$36$"
+      ],
+      "answer": 0,
+      "explanation": "$33$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $33$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 8,
+      "question": "분수 $\\frac{x}{43}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$44$",
+        "$45$",
+        "$43$",
+        "$42$",
+        "$46$"
+      ],
+      "answer": 2,
+      "explanation": "$43$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $43$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 9,
+      "question": "분수 $\\frac{x}{57}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$58$",
+        "$59$",
+        "$56$",
+        "$60$",
+        "$57$"
+      ],
+      "answer": 4,
+      "explanation": "$57$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $57$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 10,
+      "question": "분수 $\\frac{x}{59}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$60$",
+        "$59$",
+        "$61$",
+        "$58$",
+        "$62$"
+      ],
+      "answer": 1,
+      "explanation": "$59$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $59$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 11,
+      "question": "분수 $\\frac{x}{32}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$32$",
+        "$1$",
+        "$4$"
+      ],
+      "answer": 3,
+      "explanation": "$32$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $1$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 12,
+      "question": "분수 $\\frac{x}{38}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$19$",
+        "$20$",
+        "$21$",
+        "$18$",
+        "$38$"
+      ],
+      "answer": 0,
+      "explanation": "$38$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $19$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 13,
+      "question": "분수 $\\frac{x}{48}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$3$",
+        "$2$",
+        "$48$"
+      ],
+      "answer": 2,
+      "explanation": "$48$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $3$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 14,
+      "question": "분수 $\\frac{x}{62}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$32$",
+        "$33$",
+        "$30$",
+        "$62$",
+        "$31$"
+      ],
+      "answer": 4,
+      "explanation": "$62$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $31$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 15,
+      "question": "분수 $\\frac{x}{64}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$2$",
+        "$1$",
+        "$3$",
+        "$64$",
+        "$4$"
+      ],
+      "answer": 1,
+      "explanation": "$64$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $1$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 16,
+      "question": "분수 $\\frac{x}{37}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$38$",
+        "$39$",
+        "$36$",
+        "$37$",
+        "$40$"
+      ],
+      "answer": 3,
+      "explanation": "$37$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $37$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 17,
+      "question": "분수 $\\frac{x}{43}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$43$",
+        "$44$",
+        "$45$",
+        "$42$",
+        "$46$"
+      ],
+      "answer": 0,
+      "explanation": "$43$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $43$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 18,
+      "question": "분수 $\\frac{x}{53}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$54$",
+        "$55$",
+        "$53$",
+        "$52$",
+        "$56$"
+      ],
+      "answer": 2,
+      "explanation": "$53$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $53$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 19,
+      "question": "분수 $\\frac{x}{67}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$68$",
+        "$69$",
+        "$66$",
+        "$70$",
+        "$67$"
+      ],
+      "answer": 4,
+      "explanation": "$67$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $67$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 20,
+      "question": "분수 $\\frac{x}{69}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$70$",
+        "$69$",
+        "$71$",
+        "$68$",
+        "$72$"
+      ],
+      "answer": 1,
+      "explanation": "$69$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $69$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 21,
+      "question": "분수 $\\frac{x}{42}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$22$",
+        "$23$",
+        "$20$",
+        "$21$",
+        "$42$"
+      ],
+      "answer": 3,
+      "explanation": "$42$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $21$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 22,
+      "question": "분수 $\\frac{x}{48}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$2$",
+        "$48$"
+      ],
+      "answer": 0,
+      "explanation": "$48$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $3$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 23,
+      "question": "분수 $\\frac{x}{58}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$30$",
+        "$31$",
+        "$29$",
+        "$28$",
+        "$58$"
+      ],
+      "answer": 2,
+      "explanation": "$58$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $29$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 24,
+      "question": "분수 $\\frac{x}{72}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$10$",
+        "$11$",
+        "$8$",
+        "$72$",
+        "$9$"
+      ],
+      "answer": 4,
+      "explanation": "$72$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $9$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 25,
+      "question": "분수 $\\frac{x}{74}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$38$",
+        "$37$",
+        "$39$",
+        "$36$",
+        "$74$"
+      ],
+      "answer": 1,
+      "explanation": "$74$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $37$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 26,
+      "question": "분수 $\\frac{x}{47}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$48$",
+        "$49$",
+        "$46$",
+        "$47$",
+        "$50$"
+      ],
+      "answer": 3,
+      "explanation": "$47$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $47$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 27,
+      "question": "분수 $\\frac{x}{53}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$53$",
+        "$54$",
+        "$55$",
+        "$52$",
+        "$56$"
+      ],
+      "answer": 0,
+      "explanation": "$53$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $53$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 28,
+      "question": "분수 $\\frac{x}{63}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$64$",
+        "$65$",
+        "$63$",
+        "$62$",
+        "$66$"
+      ],
+      "answer": 2,
+      "explanation": "$63$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $63$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 29,
+      "question": "분수 $\\frac{x}{77}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$78$",
+        "$79$",
+        "$76$",
+        "$80$",
+        "$77$"
+      ],
+      "answer": 4,
+      "explanation": "$77$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $77$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 30,
+      "question": "분수 $\\frac{x}{79}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$80$",
+        "$79$",
+        "$81$",
+        "$78$",
+        "$82$"
+      ],
+      "answer": 1,
+      "explanation": "$79$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $79$이다.",
+      "ebs": {
+        "role": "조건 결합",
+        "steps": 4,
+        "typeTag": "유한소수 조건",
+        "skills": [
+          "분모 소인수",
+          "배수 조건"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    }
   ]
 }

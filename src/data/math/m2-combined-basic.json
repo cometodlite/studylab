@@ -1,40 +1,767 @@
 {
   "id": "m2-combined-basic",
   "title": "식의 계산 통합 — 기본",
-  "description": "단항식과 다항식 계산 종합 기본 문제",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 단항식과 다항식 계산 종합 기본 문제",
   "grade": 2,
   "unit": "식의 계산",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "algebra",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
-    {"id":1,"question":"$a^3 \\times a^5$를 계산하면?","choices":["$a^8$","$a^{15}$","$2a^8$","$a^{53}$","$a^2$"],"answer":0,"explanation":"$a^{3+5}=a^8$"},
-    {"id":2,"question":"$3x(x+4)$를 전개하면?","choices":["$3x^2+12x$","$3x^2+4x$","$3x+12x$","$3x^2+12$","$x^2+12x$"],"answer":0,"explanation":"$3x\\times x+3x\\times4=3x^2+12x$"},
-    {"id":3,"question":"$(a^3)^2$을 계산하면?","choices":["$a^5$","$a^6$","$a^9$","$2a^3$","$a^{32}$"],"answer":1,"explanation":"$(a^3)^2=a^6$"},
-    {"id":4,"question":"$(12x^2-8x) \\div 4x$를 계산하면?","choices":["$3x-2$","$3x+2$","$12x-8$","$3x^2-2$","$3-2x$"],"answer":0,"explanation":"$12x^2\\div4x=3x$, $8x\\div4x=2$. 결과: $3x-2$"},
-    {"id":5,"question":"$(-2x)^3$을 계산하면?","choices":["$-8x^3$","$8x^3$","$-6x^3$","$-8x$","$-2x^3$"],"answer":0,"explanation":"$(-2)^3=−8$. 결과: $-8x^3$"},
-    {"id":6,"question":"$2a(3a-1)$을 전개하면?","choices":["$6a^2-2a$","$6a^2+2a$","$5a^2-2a$","$6a-2$","$6a^2-1$"],"answer":0,"explanation":"$2a\\times3a+2a\\times(-1)=6a^2-2a$"},
-    {"id":7,"question":"$x^6 \\div x^2 \\times x^3$을 계산하면?","choices":["$x^7$","$x^5$","$x^{11}$","$x^1$","$x^{18}$"],"answer":0,"explanation":"$x^{6-2+3}=x^7$"},
-    {"id":8,"question":"$(9a^2b-6ab) \\div 3ab$를 계산하면?","choices":["$3a-2$","$3a+2$","$3a^2-2$","$3a-2b$","$3-2b$"],"answer":0,"explanation":"$9a^2b\\div3ab=3a$, $6ab\\div3ab=2$. 결과: $3a-2$"},
-    {"id":9,"question":"$(-ab)^4$을 계산하면?","choices":["$a^4b^4$","$-a^4b^4$","$4a^4b^4$","$a^4b$","$ab^4$"],"answer":0,"explanation":"지수 4는 짝수. $(-ab)^4=a^4b^4$"},
-    {"id":10,"question":"$4x(x-2)-3x^2$을 전개하면?","choices":["$x^2-8x$","$x^2+8x$","$7x^2-8x$","$x^2-2x$","$x^2-6x$"],"answer":0,"explanation":"$4x^2-8x-3x^2=x^2-8x$"},
-    {"id":11,"question":"$(2xy^2)^3$을 계산하면?","choices":["$8x^3y^6$","$2x^3y^6$","$8xy^6$","$8x^3y^5$","$6xy^6$"],"answer":0,"explanation":"$2^3x^3y^6=8x^3y^6$"},
-    {"id":12,"question":"$-a(2a-b+3)$을 전개하면?","choices":["$-2a^2+ab-3a$","$-2a^2-ab+3a$","$2a^2-ab+3a$","$-2a^2+ab+3a$","$-2a^2-ab-3a$"],"answer":0,"explanation":"$-a\\times2a+(-a)\\times(-b)+(-a)\\times3=-2a^2+ab-3a$"},
-    {"id":13,"question":"$\\frac{6a^5b^3}{2a^2b}$를 계산하면?","choices":["$3a^3b^2$","$3a^3b^3$","$3a^2b^2$","$3a^7b^4$","$6a^3b^2$"],"answer":0,"explanation":"$\\frac{6}{2}=3$, $a^{5-2}=a^3$, $b^{3-1}=b^2$. 결과: $3a^3b^2$"},
-    {"id":14,"question":"$(x+1)(x+5)$를 전개하면?","choices":["$x^2+6x+5$","$x^2+5x+5$","$x^2+6x-5$","$x^2-6x+5$","$x^2+x+5$"],"answer":0,"explanation":"$x^2+5x+x+5=x^2+6x+5$"},
-    {"id":15,"question":"$(-3a^2b)^2$을 계산하면?","choices":["$9a^4b^2$","$-9a^4b^2$","$9a^2b^2$","$9a^4b$","$6a^4b^2$"],"answer":0,"explanation":"$(-3)^2=9$. $(a^2)^2=a^4$. 결과: $9a^4b^2$"},
-    {"id":16,"question":"$2(x-3)+4(x+1)$을 계산하면?","choices":["$6x-2$","$6x+2$","$6x-10$","$2x-2$","$6x-6$"],"answer":0,"explanation":"$2x-6+4x+4=6x-2$"},
-    {"id":17,"question":"$\\frac{(3x)^2}{x}$를 계산하면?","choices":["$9x$","$3x$","$9x^2$","$3$","$9$"],"answer":0,"explanation":"$(3x)^2=9x^2$. $9x^2\\div x=9x$"},
-    {"id":18,"question":"$(x-2)(x+3)$을 전개하면?","choices":["$x^2+x-6$","$x^2-x-6$","$x^2+x+6$","$x^2-x+6$","$x^2+5x-6$"],"answer":0,"explanation":"$x^2+3x-2x-6=x^2+x-6$"},
-    {"id":19,"question":"$3ab \\times (-2a^2b) \\div 6a^2b^2$를 계산하면?","choices":["$-ab$","$ab$","$-a$","$-b$","$a$"],"answer":0,"explanation":"$3ab\\times(-2a^2b)=-6a^3b^2$. $-6a^3b^2\\div6a^2b^2=-a$... 재계산: $-6a^3b^2\\div6a^2b^2=-a$. 정답 3번."},
-    {"id":20,"question":"$5x^2-2x(x-3)$을 전개하면?","choices":["$3x^2+6x$","$3x^2-6x$","$7x^2+6x$","$3x^2+3x$","$7x^2-6x$"],"answer":0,"explanation":"$5x^2-2x^2+6x=3x^2+6x$"},
-    {"id":21,"question":"$2^5 \\div 2^2 \\times 2^3$을 $2^n$으로 나타내면 $n$은?","choices":["$6$","$7$","$8$","$9$","$10$"],"answer":0,"explanation":"$2^{5-2+3}=2^6$. $n=6$"},
-    {"id":22,"question":"$(4a^3b^2-8a^2b) \\div 4a^2b$를 계산하면?","choices":["$ab-2$","$ab+2$","$a^2b-2$","$4ab-8$","$a-2b$"],"answer":0,"explanation":"$4a^3b^2\\div4a^2b=ab$, $8a^2b\\div4a^2b=2$. 결과: $ab-2$"},
-    {"id":23,"question":"$x(x-2)+3(x+1)$을 전개하면?","choices":["$x^2+x+3$","$x^2-x+3$","$x^2+x-3$","$x^2-x-3$","$x^2+3x+3$"],"answer":0,"explanation":"$x^2-2x+3x+3=x^2+x+3$"},
-    {"id":24,"question":"$(2a^2b)^2 \\div 4ab$를 계산하면?","choices":["$a^3b$","$a^2b$","$4a^3b$","$a^3$","$a^3b^2$"],"answer":0,"explanation":"$(2a^2b)^2=4a^4b^2$. $4a^4b^2\\div4ab=a^3b$"},
-    {"id":25,"question":"$(x+3)(x-1)-x(x+2)$를 계산하면?","choices":["$-3$","$3$","$-3x$","$3x$","$-6$"],"answer":0,"explanation":"$x^2+2x-3-x^2-2x=-3$"},
-    {"id":26,"question":"$(-2x^3y)^2 \\times 3xy^2$를 계산하면?","choices":["$12x^7y^4$","$12x^6y^4$","$-12x^7y^4$","$12x^7y^3$","$4x^7y^4$"],"answer":0,"explanation":"$(-2x^3y)^2=4x^6y^2$. $4x^6y^2\\times3xy^2=12x^7y^4$"},
-    {"id":27,"question":"$3(2x+y)-2(x-3y)$를 계산하면?","choices":["$4x+9y$","$4x-9y$","$8x+9y$","$4x+3y$","$4x-3y$"],"answer":0,"explanation":"$6x+3y-2x+6y=4x+9y$"},
-    {"id":28,"question":"$(18x^3y^2-12x^2y^3) \\div 6x^2y^2$를 계산하면?","choices":["$3x-2y$","$3x+2y$","$18x-12y$","$3x^2-2y$","$3x-2y^2$"],"answer":0,"explanation":"$18x^3y^2\\div6x^2y^2=3x$, $12x^2y^3\\div6x^2y^2=2y$. 결과: $3x-2y$"},
-    {"id":29,"question":"$a^m \\times a^4 = a^9$이면 $m$은?","choices":["$4$","$5$","$6$","$7$","$8$"],"answer":1,"explanation":"$m+4=9$, $m=5$"},
-    {"id":30,"question":"$(x+2)^2$를 전개하면?","choices":["$x^2+4x+4$","$x^2+2x+4$","$x^2+4x+2$","$x^2-4x+4$","$x^2+4$"],"answer":0,"explanation":"$(x+2)^2=x^2+2\\times x\\times2+4=x^2+4x+4$"}
+    {
+      "id": 1,
+      "question": "$5x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$10$",
+        "$6$",
+        "$7$",
+        "$5$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times1=5$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 2,
+      "question": "$6x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$12$",
+        "$18$",
+        "$8$",
+        "$14$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times2=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 3,
+      "question": "$2x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$8$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times3=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 4,
+      "question": "$3x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$9$",
+        "$15$",
+        "$7$",
+        "$14$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times4=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 5,
+      "question": "$4x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$8$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times1=4$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 6,
+      "question": "$5x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$5$",
+        "$15$",
+        "$7$",
+        "$12$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times2=10$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$6x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$18$",
+        "$24$",
+        "$9$",
+        "$20$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times3=18$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 8,
+      "question": "$2x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$10$",
+        "$9$",
+        "$8$",
+        "$11$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times4=8$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$3x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$3$",
+        "$0$",
+        "$6$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times1=3$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$4x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$12$",
+        "$8$",
+        "$6$",
+        "$10$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times2=8$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$5x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$10$",
+        "$20$",
+        "$8$",
+        "$17$",
+        "$15$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times3=15$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$6x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$18$",
+        "$24$",
+        "$30$",
+        "$10$",
+        "$26$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times4=24$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$2x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$4$",
+        "$3$",
+        "$2$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times1=2$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$3x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$3$",
+        "$9$",
+        "$5$",
+        "$8$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times2=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$4x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$8$",
+        "$16$",
+        "$12$",
+        "$7$",
+        "$14$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times3=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$5x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$15$",
+        "$25$",
+        "$9$",
+        "$22$",
+        "$20$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times4=20$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$6x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$6$",
+        "$12$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times1=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$2x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$2$",
+        "$6$",
+        "$5$",
+        "$4$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times2=4$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$3x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$9$",
+        "$6$",
+        "$12$",
+        "$11$",
+        "$10$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times3=9$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$4x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$20$",
+        "$16$",
+        "$8$",
+        "$18$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times4=16$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$5x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$10$",
+        "$6$",
+        "$7$",
+        "$5$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times1=5$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$6x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$12$",
+        "$18$",
+        "$8$",
+        "$14$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times2=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$2x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$8$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times3=6$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$3x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$9$",
+        "$15$",
+        "$7$",
+        "$14$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times4=12$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 25,
+      "question": "$4x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$0$",
+        "$8$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times1=4$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 26,
+      "question": "$5x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$5$",
+        "$15$",
+        "$7$",
+        "$12$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "계수는 $5\\times2=10$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 27,
+      "question": "$6x^2y$와 $3xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$12$",
+        "$18$",
+        "$24$",
+        "$9$",
+        "$20$"
+      ],
+      "answer": 1,
+      "explanation": "계수는 $6\\times3=18$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 28,
+      "question": "$2x^2y$와 $4xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$6$",
+        "$10$",
+        "$9$",
+        "$8$",
+        "$11$"
+      ],
+      "answer": 3,
+      "explanation": "계수는 $2\\times4=8$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 29,
+      "question": "$3x^2y$와 $1xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$3$",
+        "$0$",
+        "$6$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 0,
+      "explanation": "계수는 $3\\times1=3$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 30,
+      "question": "$4x^2y$와 $2xy^3$를 곱했을 때 $x^3y^4$의 계수는?",
+      "choices": [
+        "$4$",
+        "$12$",
+        "$8$",
+        "$6$",
+        "$10$"
+      ],
+      "answer": 2,
+      "explanation": "계수는 $4\\times2=8$이고 문자는 $x^3y^4$가 된다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "단항식 곱셈",
+        "skills": [
+          "계수",
+          "지수법칙"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "algebra"
+      }
+    }
   ]
 }

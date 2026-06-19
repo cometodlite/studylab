@@ -1,220 +1,767 @@
 {
   "id": "m3-circle-basic",
   "title": "원의 성질 — 기본",
-  "description": "현의 성질, 접선의 성질, 원주각과 중심각",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 현의 성질, 접선의 성질, 원주각과 중심각",
   "grade": 3,
   "unit": "원의 성질",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "circle",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "원의 중심 O에서 현 AB에 내린 수선의 발을 M이라 할 때, 다음 중 항상 옳은 것은?",
-      "choices": ["$AM > BM$", "$AM = BM$", "$AM < BM$", "$OM > AM$", "$OM < BM$"],
-      "answer": 1,
-      "explanation": "원의 중심에서 현에 내린 수선은 현을 이등분합니다. 따라서 $AM = BM$이 항상 성립합니다."
+      "question": "같은 호에 대한 중심각의 크기가 $70^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$70^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$35^\\circ$",
+        "$55^\\circ$"
+      ],
+      "answer": 3,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $35^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 2,
-      "question": "반지름이 $10$인 원에서 중심에서 현까지의 거리가 $6$일 때, 현의 길이는?",
-      "choices": ["$8$", "$12$", "$16$", "$18$", "$20$"],
-      "answer": 2,
-      "explanation": "반지름 $r=10$, 중심에서 현까지 거리 $d=6$. 현의 절반 $= \\sqrt{r^2-d^2} = \\sqrt{100-36} = \\sqrt{64} = 8$. 현의 길이 $= 2 \\times 8 = 16$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $74^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$37^\\circ$",
+        "$74^\\circ$",
+        "$47^\\circ$",
+        "$64^\\circ$",
+        "$53^\\circ$"
+      ],
+      "answer": 0,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $37^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 3,
-      "question": "반지름이 $13$인 원에서 길이가 $10$인 현의 중심에서의 거리는?",
-      "choices": ["$5$", "$8$", "$12$", "$10$", "$\\sqrt{119}$"],
+      "question": "같은 호에 대한 중심각의 크기가 $78^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$78^\\circ$",
+        "$49^\\circ$",
+        "$39^\\circ$",
+        "$68^\\circ$",
+        "$51^\\circ$"
+      ],
       "answer": 2,
-      "explanation": "현의 절반 $= 5$. 중심에서 현까지 거리 $= \\sqrt{r^2-(\\frac{AB}{2})^2} = \\sqrt{169-25} = \\sqrt{144} = 12$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $39^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 4,
-      "question": "한 원에서 중심으로부터 같은 거리에 있는 두 현의 관계는?",
-      "choices": ["두 현이 평행하다", "두 현의 길이가 같다", "두 현이 수직이다", "두 현이 원의 지름이다", "두 현이 서로를 이등분한다"],
-      "answer": 1,
-      "explanation": "한 원에서 중심으로부터 같은 거리에 있는 두 현의 길이는 같습니다. 역으로 길이가 같은 두 현은 중심에서 같은 거리에 있습니다."
+      "question": "같은 호에 대한 중심각의 크기가 $82^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$82^\\circ$",
+        "$51^\\circ$",
+        "$72^\\circ$",
+        "$49^\\circ$",
+        "$41^\\circ$"
+      ],
+      "answer": 4,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $41^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 5,
-      "question": "원 O에서 $\\overline{AB} = 8$이고 중심 O에서 AB에 내린 수선의 발을 M이라 할 때, $OM = 3$이면 원의 반지름은?",
-      "choices": ["$\\sqrt{13}$", "$5$", "$\\sqrt{15}$", "$4$", "$\\sqrt{7}$"],
+      "question": "같은 호에 대한 중심각의 크기가 $86^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$86^\\circ$",
+        "$43^\\circ$",
+        "$53^\\circ$",
+        "$76^\\circ$",
+        "$47^\\circ$"
+      ],
       "answer": 1,
-      "explanation": "$AM = 4$ (현의 이등분). 반지름 $r = \\sqrt{OM^2+AM^2} = \\sqrt{9+16} = \\sqrt{25} = 5$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $43^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 6,
-      "question": "원 밖의 점 P에서 원에 그은 두 접선의 접점을 각각 A, B라 할 때, $PA$와 $PB$의 관계는?",
-      "choices": ["$PA > PB$", "$PA < PB$", "$PA = PB$", "$PA + PB = AB$", "$PA - PB = AB$"],
-      "answer": 2,
-      "explanation": "원 밖의 한 점에서 원에 그은 두 접선의 길이는 같습니다. 따라서 $PA = PB$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $90^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$90^\\circ$",
+        "$55^\\circ$",
+        "$80^\\circ$",
+        "$45^\\circ$",
+        "$45^\\circ1$"
+      ],
+      "answer": 3,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $45^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 7,
-      "question": "원 O의 반지름이 $5$이고, 원 밖의 점 P에서 원의 중심까지의 거리가 $13$일 때, 점 P에서 원에 그은 접선의 길이는?",
-      "choices": ["$8$", "$10$", "$12$", "$14$", "$6$"],
-      "answer": 2,
-      "explanation": "접선의 길이 $= \\sqrt{PO^2 - r^2} = \\sqrt{169-25} = \\sqrt{144} = 12$입니다. (접선과 반지름은 수직이므로 직각삼각형 이용)"
+      "question": "같은 호에 대한 중심각의 크기가 $94^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$47^\\circ$",
+        "$94^\\circ$",
+        "$57^\\circ$",
+        "$84^\\circ$",
+        "$43^\\circ$"
+      ],
+      "answer": 0,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $47^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 8,
-      "question": "원에서 접선은 접점에서의 반지름과 어떤 관계인가?",
-      "choices": ["평행하다", "이루는 각이 45°이다", "수직이다", "이루는 각이 60°이다", "일치한다"],
+      "question": "같은 호에 대한 중심각의 크기가 $98^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$98^\\circ$",
+        "$59^\\circ$",
+        "$49^\\circ$",
+        "$88^\\circ$",
+        "$41^\\circ$"
+      ],
       "answer": 2,
-      "explanation": "원에서 접선은 접점에서의 반지름에 수직입니다. 이는 접선의 가장 중요한 성질 중 하나입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $49^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 9,
-      "question": "원 O에서 중심각 $\\angle AOB = 80°$일 때, 호 AB에 대한 원주각의 크기는?",
-      "choices": ["$160°$", "$80°$", "$40°$", "$20°$", "$120°$"],
-      "answer": 2,
-      "explanation": "원주각 $= \\frac{1}{2} \\times$ 중심각이므로 원주각 $= \\frac{1}{2} \\times 80° = 40°$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $102^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$102^\\circ$",
+        "$61^\\circ$",
+        "$92^\\circ$",
+        "$39^\\circ$",
+        "$51^\\circ$"
+      ],
+      "answer": 4,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $51^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 10,
-      "question": "원 O에서 원주각 $\\angle APB = 35°$일 때, 같은 호에 대한 중심각 $\\angle AOB$의 크기는?",
-      "choices": ["$17.5°$", "$35°$", "$70°$", "$105°$", "$140°$"],
-      "answer": 2,
-      "explanation": "중심각 $= 2 \\times$ 원주각이므로 $\\angle AOB = 2 \\times 35° = 70°$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $106^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$106^\\circ$",
+        "$53^\\circ$",
+        "$63^\\circ$",
+        "$96^\\circ$",
+        "$37^\\circ$"
+      ],
+      "answer": 1,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $53^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 11,
-      "question": "반원에서 반원의 호에 대한 원주각의 크기는?",
-      "choices": ["$45°$", "$60°$", "$90°$", "$120°$", "$180°$"],
-      "answer": 2,
-      "explanation": "반원의 호에 대한 중심각 $= 180°$이므로 원주각 $= \\frac{1}{2} \\times 180° = 90°$입니다. 따라서 반원의 지름에 대한 원주각은 항상 직각입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $110^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$110^\\circ$",
+        "$65^\\circ$",
+        "$100^\\circ$",
+        "$55^\\circ$",
+        "$35^\\circ$"
+      ],
+      "answer": 3,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $55^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 12,
-      "question": "원에서 같은 호 AB에 대한 두 원주각 $\\angle APB$와 $\\angle AQB$ (P, Q 모두 같은 쪽 호 위)의 관계는?",
-      "choices": ["$\\angle APB > \\angle AQB$", "$\\angle APB < \\angle AQB$", "$\\angle APB = \\angle AQB$", "$\\angle APB + \\angle AQB = 180°$", "$\\angle APB + \\angle AQB = 90°$"],
-      "answer": 2,
-      "explanation": "같은 호에 대한 원주각의 크기는 모두 같습니다. P와 Q가 같은 호(같은 쪽)에 있으면 $\\angle APB = \\angle AQB$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $114^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$57^\\circ$",
+        "$114^\\circ$",
+        "$67^\\circ$",
+        "$104^\\circ$",
+        "$33^\\circ$"
+      ],
+      "answer": 0,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $57^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 13,
-      "question": "원에서 $\\angle AOB = 120°$일 때 (O는 중심), 호 AB에 대한 원주각은?",
-      "choices": ["$30°$", "$60°$", "$90°$", "$120°$", "$240°$"],
-      "answer": 1,
-      "explanation": "원주각 $= \\frac{1}{2} \\times$ 중심각 $= \\frac{1}{2} \\times 120° = 60°$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $118^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$118^\\circ$",
+        "$69^\\circ$",
+        "$59^\\circ$",
+        "$108^\\circ$",
+        "$31^\\circ$"
+      ],
+      "answer": 2,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $59^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 14,
-      "question": "반지름이 $5$인 원에서 현의 길이가 $6$일 때, 중심에서 현까지의 거리는?",
-      "choices": ["$3$", "$4$", "$5$", "$\\sqrt{7}$", "$2$"],
-      "answer": 1,
-      "explanation": "현의 절반 $= 3$. 중심에서 현까지 거리 $= \\sqrt{5^2-3^2} = \\sqrt{25-9} = \\sqrt{16} = 4$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $122^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$122^\\circ$",
+        "$71^\\circ$",
+        "$112^\\circ$",
+        "$29^\\circ$",
+        "$61^\\circ$"
+      ],
+      "answer": 4,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $61^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 15,
-      "question": "원 O에서 $\\overline{PA}$가 접선이고 (A는 접점), $\\overline{PA} = 8$, $\\overline{PO} = 10$일 때, 원의 반지름은?",
-      "choices": ["$2$", "$4$", "$6$", "$8$", "$\\sqrt{164}$"],
-      "answer": 2,
-      "explanation": "접선과 반지름은 수직이므로 직각삼각형 OAP에서 $OA^2 = PO^2 - PA^2 = 100-64 = 36$. 반지름 $= 6$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $126^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$126^\\circ$",
+        "$63^\\circ$",
+        "$73^\\circ$",
+        "$116^\\circ$",
+        "$27^\\circ$"
+      ],
+      "answer": 1,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $63^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 16,
-      "question": "원 밖의 점 P에서 그은 접선의 접점이 A이고, $\\overline{PA} = 6$, 반지름 $= 4$일 때, $\\overline{PO}$의 길이는?",
-      "choices": ["$2\\sqrt{2}$", "$\\sqrt{52}$", "$\\sqrt{20}$", "$2\\sqrt{13}$", "$10$"],
+      "question": "같은 호에 대한 중심각의 크기가 $130^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$130^\\circ$",
+        "$75^\\circ$",
+        "$120^\\circ$",
+        "$65^\\circ$",
+        "$25^\\circ$"
+      ],
       "answer": 3,
-      "explanation": "$PO^2 = PA^2 + OA^2 = 36+16 = 52$이므로 $PO = \\sqrt{52} = 2\\sqrt{13}$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $65^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 17,
-      "question": "원에서 길이가 같은 두 현은?",
-      "choices": ["반드시 평행하다", "중심에서 같은 거리에 있다", "반드시 수직으로 만난다", "원의 지름이다", "서로를 이등분한다"],
-      "answer": 1,
-      "explanation": "한 원에서 길이가 같은 두 현은 원의 중심에서 같은 거리에 있습니다."
+      "question": "같은 호에 대한 중심각의 크기가 $134^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$67^\\circ$",
+        "$134^\\circ$",
+        "$77^\\circ$",
+        "$124^\\circ$",
+        "$23^\\circ$"
+      ],
+      "answer": 0,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $67^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 18,
-      "question": "원 O에서 현 AB와 현 CD의 길이가 같다고 한다. 중심에서 AB까지의 거리를 $m$, CD까지의 거리를 $n$이라 할 때?",
-      "choices": ["$m > n$", "$m < n$", "$m = n$", "$m + n = r$ (r은 반지름)", "$mn = r^2$"],
+      "question": "같은 호에 대한 중심각의 크기가 $138^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$138^\\circ$",
+        "$79^\\circ$",
+        "$69^\\circ$",
+        "$128^\\circ$",
+        "$21^\\circ$"
+      ],
       "answer": 2,
-      "explanation": "길이가 같은 두 현은 중심에서 같은 거리에 있으므로 $m = n$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $69^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 19,
-      "question": "원 O에서 $\\angle APB = 25°$ (P는 원주 위)이고 P가 호 AB (짧은 호) 위에 있을 때, 중심각 $\\angle AOB$는?",
-      "choices": ["$12.5°$", "$25°$", "$50°$", "$100°$", "$125°$"],
-      "answer": 2,
-      "explanation": "중심각 $= 2 \\times$ 원주각 $= 2 \\times 25° = 50°$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $142^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$142^\\circ$",
+        "$81^\\circ$",
+        "$132^\\circ$",
+        "$19^\\circ$",
+        "$71^\\circ$"
+      ],
+      "answer": 4,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $71^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 20,
-      "question": "반지름이 $r$인 원에서, 중심에서 거리가 $d$인 현의 길이는?",
-      "choices": ["$\\sqrt{r^2+d^2}$", "$r-d$", "$2\\sqrt{r^2-d^2}$", "$2(r-d)$", "$\\sqrt{r-d}$"],
-      "answer": 2,
-      "explanation": "현의 절반 $= \\sqrt{r^2-d^2}$이므로 현의 길이 $= 2\\sqrt{r^2-d^2}$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $146^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$146^\\circ$",
+        "$73^\\circ$",
+        "$83^\\circ$",
+        "$136^\\circ$",
+        "$17^\\circ$"
+      ],
+      "answer": 1,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $73^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 21,
-      "question": "반지름이 $10$인 원에서 중심에서의 거리가 $8$인 현의 길이는?",
-      "choices": ["$4$", "$6$", "$8$", "$12$", "$10$"],
+      "question": "같은 호에 대한 중심각의 크기가 $30^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$30^\\circ$",
+        "$25^\\circ$",
+        "$20^\\circ$",
+        "$15^\\circ$",
+        "$75^\\circ$"
+      ],
       "answer": 3,
-      "explanation": "현의 절반 $= \\sqrt{10^2-8^2} = \\sqrt{100-64} = \\sqrt{36} = 6$. 현의 길이 $= 12$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $15^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 22,
-      "question": "원 O에서 $\\overline{OM} \\perp \\overline{AB}$이고 $OM = 4$, $AM = 3$일 때, 반지름은?",
-      "choices": ["$5$", "$7$", "$\\sqrt{7}$", "$6$", "$\\sqrt{11}$"],
+      "question": "같은 호에 대한 중심각의 크기가 $34^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$17^\\circ$",
+        "$34^\\circ$",
+        "$27^\\circ$",
+        "$24^\\circ$",
+        "$73^\\circ$"
+      ],
       "answer": 0,
-      "explanation": "반지름 $= \\sqrt{OM^2+AM^2} = \\sqrt{16+9} = \\sqrt{25} = 5$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $17^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 23,
-      "question": "원주각이 $\\angle APB = 90°$일 때, 호 AB는?",
-      "choices": ["$\\frac{1}{4}$원", "$\\frac{1}{3}$원", "$\\frac{1}{2}$원 (반원)", "$\\frac{3}{4}$원", "$\\frac{2}{3}$원"],
+      "question": "같은 호에 대한 중심각의 크기가 $38^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$38^\\circ$",
+        "$29^\\circ$",
+        "$19^\\circ$",
+        "$28^\\circ$",
+        "$71^\\circ$"
+      ],
       "answer": 2,
-      "explanation": "원주각 $90°$이면 중심각 $= 180°$이므로 호 AB는 반원입니다. (지름에 대한 원주각 = 90°)"
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $19^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 24,
-      "question": "원 밖의 점 P에서 원에 그은 두 접선의 접점 A, B에 대해 $\\overline{PA} = 5$일 때, $\\overline{PB}$의 길이는?",
-      "choices": ["$3$", "$4$", "$5$", "$6$", "$10$"],
-      "answer": 2,
-      "explanation": "원 밖의 한 점에서 원에 그은 두 접선의 길이는 같으므로 $PB = PA = 5$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $42^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$42^\\circ$",
+        "$31^\\circ$",
+        "$32^\\circ$",
+        "$69^\\circ$",
+        "$21^\\circ$"
+      ],
+      "answer": 4,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $21^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 25,
-      "question": "원 O의 반지름이 $6$이고, 원 위의 점 A와 원 밖의 점 P 사이의 거리 $PA = 8$이다. A가 접점일 때, $\\overline{PO}$의 길이는?",
-      "choices": ["$10$", "$\\sqrt{28}$", "$\\sqrt{100}$", "$14$", "$8$"],
-      "answer": 0,
-      "explanation": "직각삼각형 OAP에서 $PO = \\sqrt{PA^2+OA^2} = \\sqrt{64+36} = \\sqrt{100} = 10$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $46^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$46^\\circ$",
+        "$23^\\circ$",
+        "$33^\\circ$",
+        "$36^\\circ$",
+        "$67^\\circ$"
+      ],
+      "answer": 1,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $23^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 26,
-      "question": "원 O에서 두 현 AB, CD가 중심에서 같은 거리에 있다. $\\overline{AB} = 2x+4$, $\\overline{CD} = 3x-1$일 때, $x$의 값은?",
-      "choices": ["$3$", "$4$", "$5$", "$6$", "$7$"],
-      "answer": 2,
-      "explanation": "중심에서 같은 거리에 있는 두 현의 길이는 같으므로 $2x+4 = 3x-1$, $x = 5$입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $50^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$50^\\circ$",
+        "$35^\\circ$",
+        "$40^\\circ$",
+        "$25^\\circ$",
+        "$65^\\circ$"
+      ],
+      "answer": 3,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $25^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 27,
-      "question": "원에서 중심각의 크기가 같은 두 호에 대한 원주각의 크기는?",
-      "choices": ["다르다", "같다", "합이 180°이다", "합이 90°이다", "두 배 차이난다"],
-      "answer": 1,
-      "explanation": "원주각 $= \\frac{1}{2} \\times$ 중심각이므로, 중심각이 같으면 원주각도 같습니다."
+      "question": "같은 호에 대한 중심각의 크기가 $54^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$27^\\circ$",
+        "$54^\\circ$",
+        "$37^\\circ$",
+        "$44^\\circ$",
+        "$63^\\circ$"
+      ],
+      "answer": 0,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $27^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 28,
-      "question": "원 O에서 $\\overline{AB}$가 지름이고, 원 위의 점 C에 대해 $\\angle ACB$의 크기는?",
-      "choices": ["$45°$", "$60°$", "$90°$", "$120°$", "$180°$"],
+      "question": "같은 호에 대한 중심각의 크기가 $58^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$58^\\circ$",
+        "$39^\\circ$",
+        "$29^\\circ$",
+        "$48^\\circ$",
+        "$61^\\circ$"
+      ],
       "answer": 2,
-      "explanation": "지름에 대한 원주각은 항상 $90°$입니다. (반원의 호에 대한 원주각 = 90°)"
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $29^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 29,
-      "question": "반지름이 $r$인 원에서, 중심에서 현 AB까지의 거리가 $0$이면 이 현은?",
-      "choices": ["반지름", "접선", "지름", "할선", "현의 수직이등분선"],
-      "answer": 2,
-      "explanation": "중심에서의 거리가 0이면 현이 원의 중심을 지나므로 지름입니다. 지름이 가장 긴 현입니다."
+      "question": "같은 호에 대한 중심각의 크기가 $62^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$62^\\circ$",
+        "$41^\\circ$",
+        "$52^\\circ$",
+        "$59^\\circ$",
+        "$31^\\circ$"
+      ],
+      "answer": 4,
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $31^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     },
     {
       "id": 30,
-      "question": "원 O에서 $\\overline{OM} = 5$, $\\overline{MB} = 5$ (M은 현 AB의 중점)일 때, 반지름의 길이는?",
-      "choices": ["$5$", "$5\\sqrt{2}$", "$10$", "$5\\sqrt{3}$", "$\\sqrt{50}$"],
+      "question": "같은 호에 대한 중심각의 크기가 $66^\\circ$일 때 원주각의 크기는?",
+      "choices": [
+        "$66^\\circ$",
+        "$33^\\circ$",
+        "$43^\\circ$",
+        "$56^\\circ$",
+        "$57^\\circ$"
+      ],
       "answer": 1,
-      "explanation": "$OM \\perp AB$이므로 반지름 $= \\sqrt{OM^2+MB^2} = \\sqrt{25+25} = \\sqrt{50} = 5\\sqrt{2}$입니다."
+      "explanation": "같은 호에 대한 원주각은 중심각의 절반이므로 $33^\\circ$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "원주각",
+        "skills": [
+          "중심각",
+          "원주각"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "circle"
+      }
     }
   ]
 }

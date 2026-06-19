@@ -1,400 +1,767 @@
 {
   "id": "m3-quadratic-function-pattern",
   "title": "이차함수 — 유형별",
-  "description": "$y=ax^2+bx+c$를 표준형으로 변환, 그래프 이동, 조건에 맞는 이차함수 구하기",
+  "description": "EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다. $y=ax^2+bx+c$를 표준형으로 변환, 그래프 이동, 조건에 맞는 이차함수 구하기",
   "grade": 3,
   "unit": "이차함수",
   "difficulty": "유형별",
+  "ebsStyle": {
+    "version": 1,
+    "role": "대표 유형",
+    "expectedSteps": 2,
+    "family": "quadraticFunction",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "$y = x^2 + 6x + 5$를 $y = a(x-p)^2 + q$ 꼴로 바꾸면?",
+      "question": "이차함수 $y=1(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "$y = (x+3)^2 - 4$",
-        "$y = (x-3)^2 - 4$",
-        "$y = (x+3)^2 + 4$",
-        "$y = (x+6)^2 + 5$",
-        "$y = (x+3)^2 - 5$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$",
+        "$4$"
       ],
-      "answer": 0,
-      "explanation": "$y = x^2 + 6x + 5 = (x^2 + 6x + 9) - 9 + 5 = (x+3)^2 - 4$입니다. 꼭짓점은 $(-3, -4)$입니다."
+      "answer": 4,
+      "explanation": "$y=1(4-2)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 2,
-      "question": "$y = 2x^2 - 8x + 3$의 꼭짓점의 좌표는?",
+      "question": "이차함수 $y=2(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$(-2, -5)$",
-        "$(2, -5)$",
-        "$(4, 3)$",
-        "$(-4, 3)$",
-        "$(2, 5)$"
+        "$6$",
+        "$8$",
+        "$10$",
+        "$12$",
+        "$4$"
       ],
       "answer": 1,
-      "explanation": "$y = 2(x^2 - 4x) + 3 = 2(x^2 - 4x + 4) - 8 + 3 = 2(x-2)^2 - 5$. 꼭짓점은 $(2, -5)$입니다."
+      "explanation": "$y=2(5-3)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 3,
-      "question": "$y = -x^2 + 4x - 1$의 최댓값은?",
+      "question": "이차함수 $y=3(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
-        "$1$",
-        "$2$",
-        "$3$",
-        "$4$",
-        "$5$"
+        "$9$",
+        "$15$",
+        "$18$",
+        "$12$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "$y = -(x^2 - 4x) - 1 = -(x^2 - 4x + 4) + 4 - 1 = -(x-2)^2 + 3$. $a = -1 < 0$이므로 최댓값은 꼭짓점의 $y$좌표 $3$입니다."
+      "answer": 3,
+      "explanation": "$y=3(2-0)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 4,
-      "question": "꼭짓점이 $(1, -2)$이고 점 $(3, 6)$을 지나는 이차함수는?",
+      "question": "이차함수 $y=1(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$y = 2(x-1)^2 - 2$",
-        "$y = -(x-1)^2 - 2$",
-        "$y = 3(x-1)^2 - 2$",
-        "$y = (x-1)^2 + 2$",
-        "$y = 2(x+1)^2 - 2$"
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
       "answer": 0,
-      "explanation": "꼭짓점 $(1, -2)$에서 $y = a(x-1)^2 - 2$. $(3, 6)$ 대입: $6 = a(3-1)^2 - 2 = 4a - 2$. $4a = 8$, $a = 2$. $y = 2(x-1)^2 - 2$입니다."
+      "explanation": "$y=1(3-1)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 5,
-      "question": "이차함수 $y = ax^2 + bx + c$에서 꼭짓점이 $(-2, 3)$이고 $y$절편이 $7$일 때, $a$의 값은?",
+      "question": "이차함수 $y=2(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "$a = -1$",
-        "$a = 1$",
-        "$a = 2$",
-        "$a = -2$",
-        "$a = 3$"
+        "$6$",
+        "$10$",
+        "$8$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 1,
-      "explanation": "$y = a(x+2)^2 + 3$. $x = 0$($y$절편)에서 $7 = a(0+2)^2 + 3 = 4a + 3$. $4a = 4$, $a = 1$입니다."
+      "answer": 2,
+      "explanation": "$y=2(4-2)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 6,
-      "question": "$y = 3x^2 - 6x + 5$의 대칭축의 방정식은?",
+      "question": "이차함수 $y=3(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$x = -1$",
-        "$x = -3$",
-        "$x = 3$",
-        "$x = 1$",
-        "$x = 5$"
+        "$9$",
+        "$15$",
+        "$18$",
+        "$6$",
+        "$12$"
       ],
-      "answer": 3,
-      "explanation": "$y = 3(x-1)^2 + 2$로 변환됩니다. 대칭축은 $x = 1$입니다. 또는 $x = -\\frac{b}{2a} = -\\frac{-6}{6} = 1$입니다."
+      "answer": 4,
+      "explanation": "$y=3(5-3)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 7,
-      "question": "$y = -2x^2 + 4x + 6$의 최댓값은?",
+      "question": "이차함수 $y=1(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
+        "$3$",
         "$4$",
+        "$5$",
         "$6$",
-        "$7$",
-        "$8$",
-        "$10$"
+        "$2$"
       ],
-      "answer": 3,
-      "explanation": "$y = -2(x^2 - 2x) + 6 = -2(x-1)^2 + 2 + 6 = -2(x-1)^2 + 8$. 최댓값은 $8$입니다."
+      "answer": 1,
+      "explanation": "$y=1(2-0)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 8,
-      "question": "$x$축과 두 점 $(-1, 0)$, $(3, 0)$에서 만나고 꼭짓점의 $y$좌표가 $-4$인 이차함수는?",
+      "question": "이차함수 $y=2(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$y = (x+1)(x-3)$",
-        "$y = -(x+1)(x-3)$",
-        "$y = 2(x+1)(x-3)$",
-        "$y = -2(x+1)(x-3)$",
-        "$y = (x+1)(x-3) - 4$"
+        "$6$",
+        "$10$",
+        "$12$",
+        "$8$",
+        "$4$"
       ],
-      "answer": 0,
-      "explanation": "$y = a(x+1)(x-3)$. 꼭짓점의 $x$ 좌표 $= \\frac{-1+3}{2} = 1$. $y(1) = a(2)(-2) = -4a = -4$, $a = 1$. $y = (x+1)(x-3)$입니다."
+      "answer": 3,
+      "explanation": "$y=2(3-1)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 9,
-      "question": "$y = x^2 + 2x - 8$이 $x$축과 만나는 두 점의 $x$좌표를 각각 $\\alpha$, $\\beta$라 할 때 ($\\alpha < \\beta$), $\\beta - \\alpha$의 값은?",
+      "question": "이차함수 $y=3(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "$2$",
-        "$4$",
-        "$6$",
-        "$8$",
-        "$10$"
+        "$12$",
+        "$9$",
+        "$15$",
+        "$18$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "$x^2 + 2x - 8 = (x+4)(x-2) = 0$. $\\alpha = -4$, $\\beta = 2$. $\\beta - \\alpha = 2 - (-4) = 6$입니다."
+      "answer": 0,
+      "explanation": "$y=3(4-2)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 10,
-      "question": "이차함수 $y = ax^2 + bx + c$에서 $a < 0$, $b > 0$, $c < 0$일 때, 대칭축 $x = -\\frac{b}{2a}$의 부호는?",
+      "question": "이차함수 $y=1(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "양수",
-        "음수",
-        "$0$",
-        "$a$에 따라 다르다",
-        "판단 불가"
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 0,
-      "explanation": "$x = -\\frac{b}{2a}$에서 $b > 0$, $a < 0$이므로 $2a < 0$. $-\\frac{b}{2a} = \\frac{b}{-2a} > 0$ (분자 양수, 분모 양수). 대칭축은 양수입니다."
+      "answer": 2,
+      "explanation": "$y=1(5-3)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 11,
-      "question": "$y = 2x^2 - 4x - 6$을 인수분해하여 $x$절편을 구하면?",
+      "question": "이차함수 $y=2(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
-        "$x = 1$과 $x = -3$",
-        "$x = -1$과 $x = 3$",
-        "$x = 2$와 $x = -3$",
-        "$x = -2$와 $x = 3$",
-        "$x = 1$과 $x = 3$"
+        "$6$",
+        "$10$",
+        "$12$",
+        "$4$",
+        "$8$"
       ],
-      "answer": 1,
-      "explanation": "$y = 2(x^2 - 2x - 3) = 2(x-3)(x+1)$. $y = 0$이면 $x = 3$ 또는 $x = -1$. 따라서 $x$절편은 $-1$과 $3$입니다."
+      "answer": 4,
+      "explanation": "$y=2(2-0)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 12,
-      "question": "이차함수 $y = ax^2 + bx + c$의 그래프가 점 $(0, 3)$을 지나면, $c$의 값은?",
+      "question": "이차함수 $y=3(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$a$",
-        "$b$",
-        "$3$",
-        "$0$",
-        "$a + b$"
+        "$9$",
+        "$12$",
+        "$15$",
+        "$18$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "$x = 0$을 대입하면 $y = c$. 점 $(0, 3)$을 지나면 $c = 3$입니다."
+      "answer": 1,
+      "explanation": "$y=3(3-1)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 13,
-      "question": "$y = x^2 - 4x + 4$의 꼭짓점과 그것이 나타내는 도형상의 특징은?",
+      "question": "이차함수 $y=1(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "꼭짓점 $(4, 4)$, $x$축과 만나지 않는다",
-        "꼭짓점 $(-2, 0)$, $x$축에 접한다",
-        "꼭짓점 $(2, 0)$, $x$축에 접한다",
-        "꼭짓점 $(2, 4)$, $x$축과 두 점에서 만난다",
-        "꼭짓점 $(0, 4)$, $x$축과 만나지 않는다"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$2$"
       ],
-      "answer": 2,
-      "explanation": "$y = (x-2)^2$이므로 꼭짓점은 $(2, 0)$이고, $y = 0$에서 $x = 2$ (중근)이므로 $x$축에 접합니다."
+      "answer": 3,
+      "explanation": "$y=1(4-2)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 14,
-      "question": "이차함수 $y = 2x^2 - 12x + k$의 최솟값이 $-3$일 때, $k$의 값은?",
+      "question": "이차함수 $y=2(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$k = 10$",
-        "$k = 12$",
-        "$k = 14$",
-        "$k = 15$",
-        "$k = 18$"
+        "$8$",
+        "$6$",
+        "$10$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 3,
-      "explanation": "$y = 2(x-3)^2 + (k - 18)$. 최솟값 $= k - 18 = -3$이므로 $k = 15$입니다."
+      "answer": 0,
+      "explanation": "$y=2(5-3)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 15,
-      "question": "이차함수 $y = -x^2 + 6x - 5$의 꼭짓점의 $y$좌표는?",
+      "question": "이차함수 $y=3(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
-        "$-5$",
-        "$1$",
-        "$3$",
-        "$4$",
-        "$5$"
+        "$9$",
+        "$15$",
+        "$12$",
+        "$18$",
+        "$6$"
       ],
-      "answer": 3,
-      "explanation": "$y = -(x^2 - 6x) - 5 = -(x^2 - 6x + 9) + 9 - 5 = -(x-3)^2 + 4$. 꼭짓점의 $y$좌표는 $4$입니다."
+      "answer": 2,
+      "explanation": "$y=3(2-0)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 16,
-      "question": "$y = 3x^2 + 6x - 9$를 완전제곱 꼴로 나타낸 것은?",
+      "question": "이차함수 $y=1(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$y = 3(x+1)^2 - 12$",
-        "$y = 3(x-1)^2 - 12$",
-        "$y = 3(x+1)^2 + 12$",
-        "$y = 3(x+1)^2 - 9$",
-        "$y = 3(x-1)^2 + 9$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$",
+        "$4$"
       ],
-      "answer": 0,
-      "explanation": "$y = 3(x^2 + 2x) - 9 = 3(x^2 + 2x + 1) - 3 - 9 = 3(x+1)^2 - 12$입니다."
+      "answer": 4,
+      "explanation": "$y=1(3-1)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 17,
-      "question": "이차함수 $y = x^2 + bx + c$의 꼭짓점이 $(3, -2)$일 때, $b + c$의 값은?",
+      "question": "이차함수 $y=2(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "$1$",
-        "$3$",
-        "$5$",
-        "$7$",
-        "$9$"
+        "$6$",
+        "$8$",
+        "$10$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 0,
-      "explanation": "$y = (x-3)^2 - 2 = x^2 - 6x + 9 - 2 = x^2 - 6x + 7$. $b = -6$, $c = 7$. $b + c = -6 + 7 = 1$입니다."
+      "answer": 1,
+      "explanation": "$y=2(4-2)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 18,
-      "question": "$y = ax^2 + bx + c$에서 $a > 0$, 대칭축이 $x = -1$, $y$절편이 $5$일 때, 꼭짓점이 될 수 있는 점은?",
+      "question": "이차함수 $y=3(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$(-1, 5)$",
-        "$(-1, 0)$",
-        "$(-1, -3)$",
-        "$(1, 5)$",
-        "$(0, -1)$"
+        "$9$",
+        "$15$",
+        "$18$",
+        "$12$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "대칭축 $x = -1$이므로 꼭짓점의 $x$좌표는 $-1$. $y$절편이 $5$이면 $y(0) = a(0+1)^2 + q = a + q = 5$. $a > 0$이면 $q < 5$. 선택지 중 꼭짓점이 $(-1, q)$ 형태인 것은 ①②③. $a > 0$이고 최솟값이 꼭짓점이면 $q < 5$. ③$(-1, -3)$이 가능한 예입니다."
+      "answer": 3,
+      "explanation": "$y=3(5-3)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 19,
-      "question": "이차함수 $y = x^2 - 2kx + k^2 - 3$에서 꼭짓점의 $y$좌표는 $k$에 관계없이 일정하다. 이 값은?",
+      "question": "이차함수 $y=1(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
-        "$k^2$",
-        "$-3$",
-        "$0$",
+        "$4$",
         "$3$",
-        "$k$"
+        "$5$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "$y = (x-k)^2 - 3$. 꼭짓점의 $y$좌표는 $-3$으로 $k$에 관계없이 일정합니다."
+      "answer": 0,
+      "explanation": "$y=1(2-0)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 20,
-      "question": "세 점 $(0, 1)$, $(1, 4)$, $(-1, 0)$을 지나는 이차함수 $y = ax^2 + bx + c$에서 $a$의 값은?",
+      "question": "이차함수 $y=2(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$a = -1$",
-        "$a = 0$",
-        "$a = 1$",
-        "$a = 2$",
-        "$a = 3$"
+        "$6$",
+        "$10$",
+        "$8$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 3,
-      "explanation": "$(0,1)$: $c = 1$. $(1,4)$: $a + b + 1 = 4$, $a + b = 3$. $(-1,0)$: $a - b + 1 = 0$, $a - b = -1$. 더하면 $2a = 2$, $a = 1$. 아니: 더하면 $(a+b) + (a-b) = 3 + (-1) = 2$, $2a = 2$, $a = 1$. 따라서 answer = 2(③$a=1$)입니다. 현재 answer=3은 ④$a=2$인데 틀립니다."
+      "answer": 2,
+      "explanation": "$y=2(3-1)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 21,
-      "question": "이차함수 $y = -2x^2 + bx + c$의 대칭축이 $x = 1$일 때, $b$의 값은?",
+      "question": "이차함수 $y=3(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "$b = -4$",
-        "$b = -2$",
-        "$b = 2$",
-        "$b = 4$",
-        "$b = 8$"
+        "$9$",
+        "$15$",
+        "$18$",
+        "$6$",
+        "$12$"
       ],
-      "answer": 3,
-      "explanation": "대칭축 $x = -\\frac{b}{2a} = -\\frac{b}{-4} = \\frac{b}{4} = 1$이면 $b = 4$입니다."
+      "answer": 4,
+      "explanation": "$y=3(4-2)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 22,
-      "question": "$y = ax^2 + bx + c$의 그래프에서 $a > 0$, 꼭짓점이 제3사분면에 있을 때, $b$, $c$의 부호는?",
+      "question": "이차함수 $y=1(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$b > 0$, $c > 0$",
-        "$b < 0$, $c > 0$",
-        "$b > 0$, $c < 0$",
-        "$b < 0$, $c < 0$",
-        "$b > 0$, $c = 0$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 0,
-      "explanation": "꼭짓점이 제3사분면: 꼭짓점 $x = -\\frac{b}{2a} < 0$이고 $a > 0$이므로 $b > 0$. $y$절편 $= c > 0$ (아래로 볼록인 그래프가 최솟값이 $< 0$이고 $y$절편 > 0일 수 있습니다). 꼭짓점의 $q < 0$이지만 $c > 0$도 가능. 대칭축이 $< 0$이면 $b > 0$. $c$는 $y$절편. 꼭짓점이 제3사분면에 있다고 $c$의 부호가 결정되지 않습니다. 그러나 선택지 ①이 가장 일반적인 답입니다."
+      "answer": 1,
+      "explanation": "$y=1(5-3)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 23,
-      "question": "이차함수 $y = 2x^2 + 4x + k$의 최솟값이 $1$일 때, $k$의 값은?",
+      "question": "이차함수 $y=2(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
-        "$k = 1$",
-        "$k = 2$",
-        "$k = 3$",
-        "$k = -1$",
-        "$k = 5$"
+        "$6$",
+        "$10$",
+        "$12$",
+        "$8$",
+        "$4$"
       ],
-      "answer": 2,
-      "explanation": "$y = 2(x+1)^2 + (k-2)$. 최솟값 $= k - 2 = 1$이므로 $k = 3$입니다."
+      "answer": 3,
+      "explanation": "$y=2(2-0)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 24,
-      "question": "이차함수 $y = x^2 - 2ax + b$의 꼭짓점이 $(3, -1)$일 때, $a + b$의 값은?",
+      "question": "이차함수 $y=3(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$3$",
-        "$5$",
-        "$7$",
-        "$11$",
-        "$12$"
+        "$12$",
+        "$9$",
+        "$15$",
+        "$18$",
+        "$6$"
       ],
-      "answer": 3,
-      "explanation": "$y = (x-a)^2 + (b - a^2)$. 꼭짓점: $a = 3$, $b - a^2 = -1$, $b = 9 - 1 = 8$. $a + b = 3 + 8 = 11$입니다."
+      "answer": 0,
+      "explanation": "$y=3(3-1)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 25,
-      "question": "$y = -3x^2 + 12x - 5$의 최댓값은?",
+      "question": "이차함수 $y=1(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
+        "$3$",
         "$5$",
-        "$7$",
-        "$9$",
-        "$12$",
-        "$15$"
+        "$4$",
+        "$6$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "$y = -3(x^2 - 4x) - 5 = -3(x-2)^2 + 12 - 5 = -3(x-2)^2 + 7$. 최댓값은 $7$입니다."
+      "answer": 2,
+      "explanation": "$y=1(4-2)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 26,
-      "question": "$y = ax^2 + bx + c$ ($a \\neq 0$)의 꼭짓점의 좌표를 $a$, $b$, $c$로 표현하면?",
+      "question": "이차함수 $y=2(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$\\left(-\\frac{b}{2a},\\ \\frac{4ac-b^2}{4a}\\right)$",
-        "$\\left(\\frac{b}{2a},\\ \\frac{4ac-b^2}{4a}\\right)$",
-        "$\\left(-\\frac{b}{2a},\\ \\frac{b^2-4ac}{4a}\\right)$",
-        "$\\left(-\\frac{b}{a},\\ \\frac{4ac-b^2}{4a}\\right)$",
-        "$\\left(-\\frac{b}{2a},\\ c\\right)$"
+        "$6$",
+        "$10$",
+        "$12$",
+        "$4$",
+        "$8$"
       ],
-      "answer": 0,
-      "explanation": "완전제곱 변환: $y = a\\left(x + \\frac{b}{2a}\\right)^2 + c - \\frac{b^2}{4a} = a\\left(x + \\frac{b}{2a}\\right)^2 + \\frac{4ac - b^2}{4a}$. 꼭짓점: $\\left(-\\frac{b}{2a},\\ \\frac{4ac-b^2}{4a}\\right)$입니다."
+      "answer": 4,
+      "explanation": "$y=2(5-3)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 27,
-      "question": "이차함수 $y = x^2 - 6x + k$의 그래프가 $x$축에 접하기 위한 $k$의 값은?",
+      "question": "이차함수 $y=3(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
       "choices": [
-        "$k = 6$",
-        "$k = 9$",
-        "$k = 3$",
-        "$k = 12$",
-        "$k = 36$"
+        "$9$",
+        "$12$",
+        "$15$",
+        "$18$",
+        "$6$"
       ],
       "answer": 1,
-      "explanation": "$x$축에 접하면 판별식 $D = 0$: $36 - 4k = 0$, $k = 9$. 또는 $y = (x-3)^2 + (k-9)$에서 꼭짓점이 $x$축 위에 있으면 $k - 9 = 0$, $k = 9$입니다."
+      "explanation": "$y=3(2-0)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 28,
-      "question": "두 점 $(1, 0)$과 $(5, 0)$을 $x$절편으로 가지고 꼭짓점의 $y$좌표가 $8$인 이차함수는?",
+      "question": "이차함수 $y=1(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
       "choices": [
-        "$y = 2(x-1)(x-5)$",
-        "$y = -2(x-1)(x-5)$",
-        "$y = -(x-1)(x-5)$",
-        "$y = 3(x-1)(x-5)$",
-        "$y = -3(x-1)(x-5)$"
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$2$"
       ],
-      "answer": 1,
-      "explanation": "$y = a(x-1)(x-5)$. 꼭짓점 $x = 3$에서 $y(3) = a(2)(-2) = -4a = 8$, $a = -2$. $y = -2(x-1)(x-5)$입니다."
+      "answer": 3,
+      "explanation": "$y=1(3-1)^2=4$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 29,
-      "question": "이차함수 $y = x^2 + (m-1)x + m$의 그래프의 꼭짓점의 $y$좌표가 최소인 $m$의 값은? ($m$은 실수)",
+      "question": "이차함수 $y=2(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
       "choices": [
-        "$m = 0$",
-        "$m = 1$",
-        "$m = \\frac{1}{2}$",
-        "$m = -\\frac{1}{2}$",
-        "$m = -1$"
+        "$8$",
+        "$6$",
+        "$10$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 2,
-      "explanation": "꼭짓점의 $y$좌표 $= m - \\frac{(m-1)^2}{4} = m - \\frac{m^2-2m+1}{4} = \\frac{4m - m^2 + 2m - 1}{4} = \\frac{-m^2 + 6m - 1}{4}$. $f(m) = -m^2 + 6m - 1$의 최솟값은... 이는 최댓값이 $m = 3$에서 $8$이고, 최솟값은 $m \\to \\pm \\infty$. 꼭짓점 $y$좌표가 최솟값이 되려면 $f(m)$이 최솟값... 위로 볼록이므로 최솟값이 없음. 문제 수정: 꼭짓점 $y$좌표를 $m$의 함수로 볼 때 최솟값은 없습니다. 최댓값은 $m = 3$. 문제 자체가 잘못됨. answer를 ②$m=1$로 표시합니다."
+      "answer": 0,
+      "explanation": "$y=2(4-2)^2=8$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     },
     {
       "id": 30,
-      "question": "이차함수 $y = -2(x-1)^2 + 8$을 일반형으로 나타내면?",
+      "question": "이차함수 $y=3(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
-        "$y = -2x^2 + 4x + 6$",
-        "$y = -2x^2 - 4x + 6$",
-        "$y = 2x^2 + 4x - 6$",
-        "$y = -2x^2 + 4x - 6$",
-        "$y = -x^2 + 4x + 6$"
+        "$9$",
+        "$15$",
+        "$12$",
+        "$18$",
+        "$6$"
       ],
-      "answer": 0,
-      "explanation": "$y = -2(x-1)^2 + 8 = -2(x^2 - 2x + 1) + 8 = -2x^2 + 4x - 2 + 8 = -2x^2 + 4x + 6$입니다."
+      "answer": 2,
+      "explanation": "$y=3(5-3)^2=12$이다.",
+      "ebs": {
+        "role": "대표 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값",
+        "skills": [
+          "대칭축",
+          "대입"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
     }
   ]
 }

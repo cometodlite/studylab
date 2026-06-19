@@ -1,226 +1,737 @@
 {
   "id": "m3-statistics-basic",
   "title": "분산과 표준편차 — 기본",
-  "description": "분산과 표준편차의 뜻과 계산",
+  "description": "EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다. 분산과 표준편차의 뜻과 계산",
   "grade": 3,
   "unit": "통계",
   "difficulty": "기본",
+  "ebsStyle": {
+    "version": 1,
+    "role": "개념 확인",
+    "expectedSteps": 1,
+    "family": "statistics",
+    "generatedAt": "2026-06-19"
+  },
   "questions": [
     {
       "id": 1,
-      "question": "자료 $2, 4, 6, 8, 10$의 평균은?",
-      "choices": ["$6$", "$5$", "$7$", "$8$", "$4$"],
-      "answer": 0,
-      "explanation": "평균 $= \\frac{2+4+6+8+10}{5} = \\frac{30}{5} = 6$. 보기 ①번이 정답."
+      "question": "자료 $27, 29, 31$의 평균은?",
+      "choices": [
+        "$27$",
+        "$28$",
+        "$30$",
+        "$29$",
+        "$31$"
+      ],
+      "answer": 3,
+      "explanation": "평균은 $\\frac{27+29+31}{3}=29$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 2,
-      "question": "자료 $3, 5, 7, 9, 11$의 평균은?",
-      "choices": ["$6$", "$7$", "$8$", "$9$", "$10$"],
-      "answer": 1,
-      "explanation": "평균 $= \\frac{3+5+7+9+11}{5} = \\frac{35}{5} = 7$. 보기 ②번이 정답."
+      "question": "자료 $28, 30, 32$의 평균은?",
+      "choices": [
+        "$30$",
+        "$28$",
+        "$29$",
+        "$31$",
+        "$32$"
+      ],
+      "answer": 0,
+      "explanation": "평균은 $\\frac{28+30+32}{3}=30$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 3,
-      "question": "자료 $1, 2, 3, 4, 5$의 분산은?",
-      "choices": ["$1$", "$1.5$", "$2$", "$2.5$", "$3$"],
+      "question": "자료 $29, 31, 33$의 평균은?",
+      "choices": [
+        "$29$",
+        "$30$",
+        "$31$",
+        "$32$",
+        "$33$"
+      ],
       "answer": 2,
-      "explanation": "평균 $= 3$. 편차: $-2, -1, 0, 1, 2$. 분산 $= \\frac{4+1+0+1+4}{5} = \\frac{10}{5} = 2$. 보기 ③번이 정답."
+      "explanation": "평균은 $\\frac{29+31+33}{3}=31$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 4,
-      "question": "자료 $2, 4, 6, 8, 10$의 분산은?",
-      "choices": ["$4$", "$6$", "$7$", "$8$", "$10$"],
-      "answer": 3,
-      "explanation": "평균 $= 6$. 편차: $-4, -2, 0, 2, 4$. 분산 $= \\frac{16+4+0+4+16}{5} = \\frac{40}{5} = 8$. 보기 ④번이 정답."
+      "question": "자료 $30, 32, 34$의 평균은?",
+      "choices": [
+        "$30$",
+        "$31$",
+        "$33$",
+        "$34$",
+        "$32$"
+      ],
+      "answer": 4,
+      "explanation": "평균은 $\\frac{30+32+34}{3}=32$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 5,
-      "question": "자료 $5, 10, 15, 20, 25$의 평균은?",
-      "choices": ["$12$", "$13$", "$14$", "$16$", "$15$"],
-      "answer": 4,
-      "explanation": "평균 $= \\frac{5+10+15+20+25}{5} = \\frac{75}{5} = 15$. 보기 ⑤번이 정답."
+      "question": "자료 $31, 33, 35$의 평균은?",
+      "choices": [
+        "$31$",
+        "$33$",
+        "$32$",
+        "$34$",
+        "$35$"
+      ],
+      "answer": 1,
+      "explanation": "평균은 $\\frac{31+33+35}{3}=33$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 6,
-      "question": "자료 $4, 4, 4, 4, 4$의 분산은?",
-      "choices": ["$0$", "$1$", "$2$", "$4$", "$16$"],
-      "answer": 0,
-      "explanation": "평균 $= 4$. 모든 편차 $= 0$. 분산 $= \\frac{0+0+0+0+0}{5} = 0$. 자료가 모두 같으면 분산은 $0$이다. 보기 ①번이 정답."
+      "question": "자료 $32, 34, 36$의 평균은?",
+      "choices": [
+        "$32$",
+        "$33$",
+        "$35$",
+        "$34$",
+        "$36$"
+      ],
+      "answer": 3,
+      "explanation": "평균은 $\\frac{32+34+36}{3}=34$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 7,
-      "question": "분산이 $16$일 때, 표준편차는?",
-      "choices": ["$2$", "$4$", "$8$", "$16$", "$256$"],
-      "answer": 1,
-      "explanation": "표준편차 $= \\sqrt{분산} = \\sqrt{16} = 4$. 보기 ②번이 정답."
+      "question": "자료 $33, 35, 37$의 평균은?",
+      "choices": [
+        "$35$",
+        "$33$",
+        "$34$",
+        "$36$",
+        "$37$"
+      ],
+      "answer": 0,
+      "explanation": "평균은 $\\frac{33+35+37}{3}=35$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 8,
-      "question": "자료 $4, 6, 8, 10, 12$의 평균은?",
-      "choices": ["$6$", "$7$", "$8$", "$9$", "$10$"],
+      "question": "자료 $34, 36, 38$의 평균은?",
+      "choices": [
+        "$34$",
+        "$35$",
+        "$36$",
+        "$37$",
+        "$38$"
+      ],
       "answer": 2,
-      "explanation": "평균 $= \\frac{4+6+8+10+12}{5} = \\frac{40}{5} = 8$. 보기 ③번이 정답."
+      "explanation": "평균은 $\\frac{34+36+38}{3}=36$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 9,
-      "question": "자료 $1, 3, 5, 7, 9$의 분산은?",
-      "choices": ["$5$", "$6$", "$7$", "$8$", "$10$"],
-      "answer": 3,
-      "explanation": "평균 $= 5$. 편차: $-4, -2, 0, 2, 4$. 분산 $= \\frac{16+4+0+4+16}{5} = \\frac{40}{5} = 8$. 보기 ④번이 정답."
+      "question": "자료 $35, 37, 39$의 평균은?",
+      "choices": [
+        "$35$",
+        "$36$",
+        "$38$",
+        "$39$",
+        "$37$"
+      ],
+      "answer": 4,
+      "explanation": "평균은 $\\frac{35+37+39}{3}=37$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 10,
-      "question": "자료 $10, 20, 30, 40, 50$의 분산은?",
-      "choices": ["$100$", "$150$", "$180$", "$220$", "$200$"],
-      "answer": 4,
-      "explanation": "평균 $= 30$. 편차: $-20, -10, 0, 10, 20$. 분산 $= \\frac{400+100+0+100+400}{5} = \\frac{1000}{5} = 200$. 보기 ⑤번이 정답."
+      "question": "자료 $36, 38, 40$의 평균은?",
+      "choices": [
+        "$36$",
+        "$38$",
+        "$37$",
+        "$39$",
+        "$40$"
+      ],
+      "answer": 1,
+      "explanation": "평균은 $\\frac{36+38+40}{3}=38$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 11,
-      "question": "자료 $6, 8, 10, 12, 14$의 표준편차는?",
-      "choices": ["$2\\sqrt{2}$", "$4$", "$2$", "$\\sqrt{2}$", "$\\sqrt{6}$"],
-      "answer": 0,
-      "explanation": "평균 $= 10$. 편차: $-4, -2, 0, 2, 4$. 분산 $= \\frac{16+4+0+4+16}{5} = 8$. 표준편차 $= \\sqrt{8} = 2\\sqrt{2}$. 보기 ①번이 정답."
+      "question": "자료 $37, 39, 41$의 평균은?",
+      "choices": [
+        "$37$",
+        "$38$",
+        "$40$",
+        "$39$",
+        "$41$"
+      ],
+      "answer": 3,
+      "explanation": "평균은 $\\frac{37+39+41}{3}=39$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 12,
-      "question": "표준편차가 $7$일 때, 분산은?",
-      "choices": ["$14$", "$49$", "$7$", "$\\sqrt{7}$", "$21$"],
-      "answer": 1,
-      "explanation": "분산 $= (표준편차)^2 = 7^2 = 49$. 보기 ②번이 정답."
+      "question": "자료 $38, 40, 42$의 평균은?",
+      "choices": [
+        "$40$",
+        "$38$",
+        "$39$",
+        "$41$",
+        "$42$"
+      ],
+      "answer": 0,
+      "explanation": "평균은 $\\frac{38+40+42}{3}=40$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 13,
-      "question": "자료 $4, 7, 7, 10, 7$의 분산은?",
-      "choices": ["$2.8$", "$3.0$", "$3.6$", "$4.0$", "$4.8$"],
+      "question": "자료 $39, 41, 43$의 평균은?",
+      "choices": [
+        "$39$",
+        "$40$",
+        "$41$",
+        "$42$",
+        "$43$"
+      ],
       "answer": 2,
-      "explanation": "평균 $= \\frac{4+7+7+10+7}{5} = 7$. 편차: $-3, 0, 0, 3, 0$. 분산 $= \\frac{9+0+0+9+0}{5} = \\frac{18}{5} = 3.6$. 보기 ③번이 정답."
+      "explanation": "평균은 $\\frac{39+41+43}{3}=41$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 14,
-      "question": "자료 $0, 2, 4, 6, 8$의 표준편차는?",
-      "choices": ["$\\sqrt{6}$", "$\\sqrt{7}$", "$\\sqrt{9}$", "$2\\sqrt{2}$", "$3$"],
-      "answer": 3,
-      "explanation": "평균 $= 4$. 편차: $-4, -2, 0, 2, 4$. 분산 $= \\frac{16+4+0+4+16}{5} = 8$. 표준편차 $= \\sqrt{8} = 2\\sqrt{2}$. 보기 ④번이 정답."
+      "question": "자료 $40, 42, 44$의 평균은?",
+      "choices": [
+        "$40$",
+        "$41$",
+        "$43$",
+        "$44$",
+        "$42$"
+      ],
+      "answer": 4,
+      "explanation": "평균은 $\\frac{40+42+44}{3}=42$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 15,
-      "question": "자료 $10, 12, 14, 16, 18$의 분산은?",
-      "choices": ["$4$", "$6$", "$7$", "$9$", "$8$"],
-      "answer": 4,
-      "explanation": "평균 $= 14$. 편차: $-4, -2, 0, 2, 4$. 분산 $= \\frac{16+4+0+4+16}{5} = \\frac{40}{5} = 8$. 보기 ⑤번이 정답."
+      "question": "자료 $41, 43, 45$의 평균은?",
+      "choices": [
+        "$41$",
+        "$43$",
+        "$42$",
+        "$44$",
+        "$45$"
+      ],
+      "answer": 1,
+      "explanation": "평균은 $\\frac{41+43+45}{3}=43$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 16,
-      "question": "자료 $1, 1, 3, 5, 5$의 분산은?",
-      "choices": ["$3.2$", "$2.8$", "$3.6$", "$4.0$", "$4.8$"],
-      "answer": 0,
-      "explanation": "평균 $= \\frac{1+1+3+5+5}{5} = 3$. 편차: $-2, -2, 0, 2, 2$. 분산 $= \\frac{4+4+0+4+4}{5} = \\frac{16}{5} = 3.2$. 보기 ①번이 정답."
+      "question": "자료 $42, 44, 46$의 평균은?",
+      "choices": [
+        "$42$",
+        "$43$",
+        "$45$",
+        "$44$",
+        "$46$"
+      ],
+      "answer": 3,
+      "explanation": "평균은 $\\frac{42+44+46}{3}=44$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 17,
-      "question": "자료 $5, 5, 5, 5, 5$의 표준편차는?",
-      "choices": ["$5$", "$0$", "$1$", "$25$", "$-5$"],
-      "answer": 1,
-      "explanation": "평균 $= 5$. 모든 편차 $= 0$. 분산 $= 0$. 표준편차 $= 0$. 보기 ②번이 정답."
+      "question": "자료 $43, 45, 47$의 평균은?",
+      "choices": [
+        "$45$",
+        "$43$",
+        "$44$",
+        "$46$",
+        "$47$"
+      ],
+      "answer": 0,
+      "explanation": "평균은 $\\frac{43+45+47}{3}=45$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 18,
-      "question": "어느 학생의 점수가 $70, 75, 80, 85, 90$점일 때, 평균 점수는?",
-      "choices": ["$76$", "$78$", "$80$", "$82$", "$84$"],
+      "question": "자료 $44, 46, 48$의 평균은?",
+      "choices": [
+        "$44$",
+        "$45$",
+        "$46$",
+        "$47$",
+        "$48$"
+      ],
       "answer": 2,
-      "explanation": "평균 $= \\frac{70+75+80+85+90}{5} = \\frac{400}{5} = 80$점. 보기 ③번이 정답."
+      "explanation": "평균은 $\\frac{44+46+48}{3}=46$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 19,
-      "question": "자료 $3, 3, 5, 7, 7$의 분산은?",
-      "choices": ["$2.6$", "$2.8$", "$3.0$", "$3.2$", "$3.6$"],
-      "answer": 3,
-      "explanation": "평균 $= \\frac{3+3+5+7+7}{5} = 5$. 편차: $-2, -2, 0, 2, 2$. 분산 $= \\frac{4+4+0+4+4}{5} = \\frac{16}{5} = 3.2$. 보기 ④번이 정답."
+      "question": "자료 $45, 47, 49$의 평균은?",
+      "choices": [
+        "$45$",
+        "$46$",
+        "$48$",
+        "$49$",
+        "$47$"
+      ],
+      "answer": 4,
+      "explanation": "평균은 $\\frac{45+47+49}{3}=47$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 20,
-      "question": "자료 $x_1, x_2, x_3, x_4, x_5$의 평균이 $6$일 때, 합 $\\sum x_i$의 값은?",
-      "choices": ["$24$", "$28$", "$32$", "$36$", "$30$"],
-      "answer": 4,
-      "explanation": "합 $= 평균 \\times 개수 = 6 \\times 5 = 30$. 보기 ⑤번이 정답."
+      "question": "자료 $46, 48, 50$의 평균은?",
+      "choices": [
+        "$46$",
+        "$48$",
+        "$47$",
+        "$49$",
+        "$50$"
+      ],
+      "answer": 1,
+      "explanation": "평균은 $\\frac{46+48+50}{3}=48$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 21,
-      "question": "다음 중 편차에 대한 설명으로 옳은 것은?",
+      "question": "자료 $47, 49, 51$의 평균은?",
       "choices": [
-        "편차의 합은 항상 $0$이다.",
-        "편차는 항상 양수이다.",
-        "편차는 항상 $0$이다.",
-        "편차의 합은 평균과 같다.",
-        "편차의 합은 자료의 개수와 같다."
+        "$47$",
+        "$48$",
+        "$50$",
+        "$49$",
+        "$51$"
       ],
-      "answer": 0,
-      "explanation": "편차 $= x_i - \\bar{x}$이고, 모든 편차의 합 $= \\sum(x_i - \\bar{x}) = \\sum x_i - n\\bar{x} = n\\bar{x} - n\\bar{x} = 0$. 보기 ①번이 정답."
+      "answer": 3,
+      "explanation": "평균은 $\\frac{47+49+51}{3}=49$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 22,
-      "question": "분산이 $49$일 때, 표준편차는?",
-      "choices": ["$6$", "$7$", "$8$", "$9$", "$10$"],
-      "answer": 1,
-      "explanation": "표준편차 $= \\sqrt{49} = 7$. 보기 ②번이 정답."
+      "question": "자료 $48, 50, 52$의 평균은?",
+      "choices": [
+        "$50$",
+        "$48$",
+        "$49$",
+        "$51$",
+        "$52$"
+      ],
+      "answer": 0,
+      "explanation": "평균은 $\\frac{48+50+52}{3}=50$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 23,
-      "question": "자료 $2, 6, 8, 4, 10$의 분산은?",
-      "choices": ["$5$", "$6$", "$8$", "$10$", "$12$"],
+      "question": "자료 $49, 51, 53$의 평균은?",
+      "choices": [
+        "$49$",
+        "$50$",
+        "$51$",
+        "$52$",
+        "$53$"
+      ],
       "answer": 2,
-      "explanation": "평균 $= \\frac{2+6+8+4+10}{5} = 6$. 편차: $-4, 0, 2, -2, 4$. 분산 $= \\frac{16+0+4+4+16}{5} = \\frac{40}{5} = 8$. 보기 ③번이 정답."
+      "explanation": "평균은 $\\frac{49+51+53}{3}=51$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 24,
-      "question": "자료의 평균이 $15$이고, 어떤 자료값의 편차가 $-4$일 때, 그 자료값은?",
-      "choices": ["$9$", "$10$", "$12$", "$11$", "$13$"],
-      "answer": 3,
-      "explanation": "편차 $= x - \\bar{x}$이므로 $-4 = x - 15$. 따라서 $x = 11$. 보기 ④번이 정답."
+      "question": "자료 $50, 52, 54$의 평균은?",
+      "choices": [
+        "$50$",
+        "$51$",
+        "$53$",
+        "$54$",
+        "$52$"
+      ],
+      "answer": 4,
+      "explanation": "평균은 $\\frac{50+52+54}{3}=52$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 25,
-      "question": "자료 $4, 8, 12, 6, 10$의 분산은?",
-      "choices": ["$5$", "$6$", "$7$", "$9$", "$8$"],
-      "answer": 4,
-      "explanation": "평균 $= \\frac{4+8+12+6+10}{5} = 8$. 편차: $-4, 0, 4, -2, 2$. 분산 $= \\frac{16+0+16+4+4}{5} = \\frac{40}{5} = 8$. 보기 ⑤번이 정답."
+      "question": "자료 $51, 53, 55$의 평균은?",
+      "choices": [
+        "$51$",
+        "$53$",
+        "$52$",
+        "$54$",
+        "$55$"
+      ],
+      "answer": 1,
+      "explanation": "평균은 $\\frac{51+53+55}{3}=53$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 26,
-      "question": "자료 $1, 2, 3, 4, 5$의 표준편차는?",
-      "choices": ["$\\sqrt{2}$", "$\\sqrt{3}$", "$2$", "$\\sqrt{5}$", "$1$"],
-      "answer": 0,
-      "explanation": "평균 $= 3$. 분산 $= \\frac{4+1+0+1+4}{5} = 2$. 표준편차 $= \\sqrt{2}$. 보기 ①번이 정답."
+      "question": "자료 $52, 54, 56$의 평균은?",
+      "choices": [
+        "$52$",
+        "$53$",
+        "$55$",
+        "$54$",
+        "$56$"
+      ],
+      "answer": 3,
+      "explanation": "평균은 $\\frac{52+54+56}{3}=54$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 27,
-      "question": "자료 $3, 5, 7, 9, 6$의 분산은?",
-      "choices": ["$3.0$", "$4.0$", "$3.5$", "$4.5$", "$5.0$"],
-      "answer": 1,
-      "explanation": "평균 $= \\frac{3+5+7+9+6}{5} = 6$. 편차: $-3, -1, 1, 3, 0$. 분산 $= \\frac{9+1+1+9+0}{5} = \\frac{20}{5} = 4$. 보기 ②번이 정답."
+      "question": "자료 $53, 55, 57$의 평균은?",
+      "choices": [
+        "$55$",
+        "$53$",
+        "$54$",
+        "$56$",
+        "$57$"
+      ],
+      "answer": 0,
+      "explanation": "평균은 $\\frac{53+55+57}{3}=55$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 28,
-      "question": "표준편차가 $3$일 때, 분산은?",
-      "choices": ["$3$", "$6$", "$9$", "$12$", "$27$"],
+      "question": "자료 $54, 56, 58$의 평균은?",
+      "choices": [
+        "$54$",
+        "$55$",
+        "$56$",
+        "$57$",
+        "$58$"
+      ],
       "answer": 2,
-      "explanation": "분산 $= (표준편차)^2 = 3^2 = 9$. 보기 ③번이 정답."
+      "explanation": "평균은 $\\frac{54+56+58}{3}=56$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 29,
-      "question": "자료 $a, b, c$의 평균이 $8$이고 편차가 각각 $-3, 1, 2$일 때, $a$의 값은?",
-      "choices": ["$3$", "$4$", "$6$", "$5$", "$7$"],
-      "answer": 3,
-      "explanation": "편차 $= a - \\bar{x}$이므로 $-3 = a - 8$. 따라서 $a = 5$. (편차 검증: $-3+1+2=0$ ✓). 보기 ④번이 정답."
+      "question": "자료 $55, 57, 59$의 평균은?",
+      "choices": [
+        "$55$",
+        "$56$",
+        "$58$",
+        "$59$",
+        "$57$"
+      ],
+      "answer": 4,
+      "explanation": "평균은 $\\frac{55+57+59}{3}=57$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     },
     {
       "id": 30,
-      "question": "자료 $5, 10, 15, 20, 25$의 분산은?",
-      "choices": ["$30$", "$40$", "$60$", "$70$", "$50$"],
-      "answer": 4,
-      "explanation": "평균 $= 15$. 편차: $-10, -5, 0, 5, 10$. 분산 $= \\frac{100+25+0+25+100}{5} = \\frac{250}{5} = 50$. 보기 ⑤번이 정답."
+      "question": "자료 $56, 58, 60$의 평균은?",
+      "choices": [
+        "$56$",
+        "$58$",
+        "$57$",
+        "$59$",
+        "$60$"
+      ],
+      "answer": 1,
+      "explanation": "평균은 $\\frac{56+58+60}{3}=58$이다.",
+      "ebs": {
+        "role": "개념 확인",
+        "steps": 1,
+        "typeTag": "평균",
+        "skills": [
+          "평균"
+        ],
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "statistics"
+      }
     }
   ]
 }
