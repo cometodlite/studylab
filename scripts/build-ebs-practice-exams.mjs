@@ -167,6 +167,17 @@ function decorateQuestion(question, core, role, index) {
   return `EBS ${core} ${role} ${variantNo}형. ${question}`;
 }
 
+function cleanDescription(description = '') {
+  let cleaned = description;
+  for (const profile of Object.values(DIFFICULTY_PROFILE)) {
+    cleaned = cleaned.split(profile.description).join('');
+  }
+
+  return cleaned
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function factorizationQuestion(id, difficulty) {
   if (difficulty === '기본') {
     const twos = id % 3 + 1;
@@ -630,6 +641,7 @@ function buildExam(file) {
   const generator = GENERATORS[family] ?? algebraQuestion;
   const core = titleCore(current.title);
   const seedOffset = hashText(current.id) % 37;
+  const legacyDescription = cleanDescription(current.description);
 
   const questions = Array.from({ length: 30 }, (_, index) => {
     const question = generator(index + 1 + seedOffset, current.difficulty, current.id);
@@ -649,7 +661,7 @@ function buildExam(file) {
   return {
     id: current.id,
     title: `${core} — ${current.difficulty}`,
-    description: `${profile.description} ${current.description ?? ''}`.trim(),
+    description: `${profile.description}${legacyDescription ? ` ${legacyDescription}` : ''}`,
     grade: current.grade,
     unit: current.unit,
     difficulty: current.difficulty,

@@ -29,6 +29,13 @@ const ebsRoles = {
   '킬러': { role: '고난도 추론', steps: 6 },
 };
 
+const ebsDescriptionPhrases = [
+  'EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다.',
+  'EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다.',
+  'EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다.',
+  'EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다.',
+];
+
 function scanJsonFiles(dir) {
   if (!fs.existsSync(dir)) return [];
 
@@ -92,6 +99,18 @@ function auditExam(filePath) {
     }
     if (exam.ebsStyle.expectedSteps !== expectedEbs.steps) {
       ebsProblems.push(`ebsStyle.expectedSteps should be ${expectedEbs.steps}`);
+    }
+  }
+
+  if (typeof exam.description === 'string') {
+    if (exam.description.length > 180) {
+      ebsProblems.push('description is too long for the practice list');
+    }
+    for (const phrase of ebsDescriptionPhrases) {
+      const count = exam.description.split(phrase).length - 1;
+      if (count > 1) {
+        ebsProblems.push(`description repeats "${phrase}" ${count} times`);
+      }
     }
   }
 

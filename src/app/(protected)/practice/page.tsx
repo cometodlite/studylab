@@ -30,16 +30,9 @@ export default function PracticeListPage() {
   const [exams, setExams] = useState<ExamMeta[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [gradeFilter, setGradeFilter] = useState<string>('');
+  const [manualGradeFilter, setManualGradeFilter] = useState<string | null>(null);
   const [unitFilter, setUnitFilter] = useState<string>('');
   const [diffFilter, setDiffFilter] = useState<string>('');
-
-  // Pre-fill grade filter from profile
-  useEffect(() => {
-    if (profile?.gradeLevel) {
-      setGradeFilter(String(profile.gradeLevel));
-    }
-  }, [profile?.gradeLevel]);
 
   useEffect(() => {
     fetch('/api/exams')
@@ -48,6 +41,7 @@ export default function PracticeListPage() {
       .catch(() => setLoading(false));
   }, []);
 
+  const gradeFilter = manualGradeFilter ?? (profile?.gradeLevel ? String(profile.gradeLevel) : '');
   const grades = [...new Set(exams.map(e => e.grade).filter(Boolean))].sort() as number[];
   const units = [...new Set(
     exams.filter(e => !gradeFilter || String(e.grade) === gradeFilter).map(e => e.unit).filter(Boolean)
@@ -101,7 +95,7 @@ export default function PracticeListPage() {
           <div className="flex flex-wrap gap-2">
             <select
               value={gradeFilter}
-              onChange={e => { setGradeFilter(e.target.value); setUnitFilter(''); }}
+              onChange={e => { setManualGradeFilter(e.target.value); setUnitFilter(''); }}
               className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
             >
               <option value="">전체 학년</option>
@@ -133,8 +127,8 @@ export default function PracticeListPage() {
             {filteredExams.map(exam => {
               const mp = maxPoints(exam.difficulty, exam.questionCount);
               return (
-                <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
-                  <div className="flex-1 min-w-0">
+                <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm min-w-0 overflow-hidden">
+                  <div className="flex-1 min-w-0 overflow-hidden">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
                       {exam.grade && (
                         <span className="text-xs bg-gray-100 text-gray-600 rounded-full px-2 py-0.5 font-medium">
@@ -153,7 +147,7 @@ export default function PracticeListPage() {
                       )}
                     </div>
                     <h2 className="font-bold text-gray-800">{exam.title}</h2>
-                    {exam.description && <p className="text-gray-500 text-sm mt-0.5 truncate">{exam.description}</p>}
+                    {exam.description && <p className="text-gray-500 text-sm mt-0.5 max-w-full overflow-hidden text-ellipsis whitespace-nowrap">{exam.description}</p>}
                     <div className="flex items-center gap-3 mt-1.5">
                       <span className="text-indigo-500 text-sm font-medium">{exam.questionCount}문제</span>
                       {mp !== null && (

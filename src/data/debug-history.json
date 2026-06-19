@@ -230,5 +230,13 @@
     "description": "EBS형 수학 문제집 2차 품질 보정. 각 문항 지문에 단원·난이도 역할·유형 번호를 부여해 파일 간 정확 중복 지문을 제거하고, 감사 스크립트가 중복 지문을 배포 차단 조건으로 검사하도록 강화",
     "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-030",
+    "date": "2026-06-19",
+    "category": "bug_fix",
+    "description": "문제풀이 목록의 EBS형 설명이 생성 스크립트 재실행마다 누적 반복되는 버그 수정. 88개 수학 문제집 설명을 정리하고, 목록 카드 overflow 방어 및 반복 설명 감사 규칙 추가",
+    "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/app/(protected)/practice/page.tsx", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]
