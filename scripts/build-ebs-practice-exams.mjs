@@ -470,7 +470,7 @@ function rationalQuestion(ctx) {
 }
 
 function algebraQuestion(ctx) {
-  const { a, b, c, d, sign } = nums(ctx);
+  const { a, b, c, d } = nums(ctx);
   const mode = variantMode(ctx);
   if (ctx.difficulty === '기본') {
     if (mode === 1) {
@@ -557,36 +557,39 @@ function algebraQuestion(ctx) {
       answer, [answer - 2, answer + 2, a + b, a * b],
       `전개하면 ${math(`2(${a}+${b})x+${a * a - b * b}`)}이므로 계수는 ${math(answer)}이다.`);
   }
+  const xVal = 10 + ((ctx.id + ctx.variant.variantNo) % 5);
+  const yVal = 4 + ((ctx.round + ctx.variant.variantNo) % 4);
+  const sum = xVal + yVal;
+  const product = xVal * yVal;
+  const diff = xVal - yVal;
   if (mode === 1) {
-    const answer = (a + b) ** 2 - 2 * a * b;
+    const answer = sum ** 2 - 2 * product;
     return q(ctx, '대칭식 역추론', ['식 변형', '역추론'],
-      `${math(`x+y=${a + b}`)}, ${math(`xy=${a * b}`)}일 때 ${math('x^2+y^2')}의 값은?`,
-      answer, [answer - 2, answer + 2, (a + b) ** 2, a * b],
+      `${math(`x+y=${sum}`)}, ${math(`xy=${product}`)}일 때 ${math('x^2+y^2')}의 값은?`,
+      answer, [answer - 2, answer + 2, sum ** 2, product],
       `${math('x^2+y^2=(x+y)^2-2xy')}를 사용한다.`);
   }
   if (mode === 2) {
-    const answer = (a - b) ** 2;
+    const answer = sum ** 2 - 4 * product;
     return q(ctx, '조건식 최솟값형', ['완전제곱식', '식 변형'],
-      `${math(`x+y=${a + b}`)}, ${math(`xy=${a * b}`)}일 때 ${math('(x-y)^2')}의 값은?`,
-      answer, [answer - 2, answer + 2, a + b, a * b],
+      `${math(`x+y=${sum}`)}, ${math(`xy=${product}`)}일 때 ${math('(x-y)^2')}의 값은?`,
+      answer, [answer - 2, answer + 2, sum, product],
       `${math('(x-y)^2=(x+y)^2-4xy')}를 이용한다.`);
   }
   if (mode === 3) {
-    const answer = a * a - b * b;
+    const answer = sum * diff;
     return q(ctx, '두 식 동시 추론', ['식 변형', '역추론'],
-      `${math(`x+y=${a + b}`)}, ${math(`x-y=${a - b}`)}일 때 ${math('x^2-y^2')}의 값은?`,
-      answer, [answer - 2, answer + 2, (a + b) ** 2, (a - b) ** 2],
+      `${math(`x+y=${sum}`)}, ${math(`x-y=${diff}`)}일 때 ${math('x^2-y^2')}의 값은?`,
+      answer, [answer - 2, answer + 2, sum ** 2, diff ** 2],
       `${math('x^2-y^2=(x+y)(x-y)')}이다.`);
   }
-  const x = a;
-  const y = b * sign;
-  const s = x + y;
-  const diff = x - y;
-  const answer = x * x + 2 * x * y;
+  const p = 2 * xVal + yVal;
+  const qDiff = xVal - yVal;
+  const answer = xVal * xVal + 2 * xVal * yVal;
   return q(ctx, '두 식으로 값 구하기', ['식 변형', '역추론'],
-    `${math(`x+y=${s}`)}, ${math(`x-y=${diff}`)}일 때 ${math('x^2+2xy')}의 값은?`,
-    answer, [answer - a, answer + b, s * s, x * y],
-    `두 식을 더해 ${math(`x=${x}`)}를 구하고, 빼서 ${math(`y=${y}`)}를 구한 뒤 대입한다.`);
+    `${math(`2x+y=${p}`)}, ${math(`x-y=${qDiff}`)}일 때 ${math('x^2+2xy')}의 값은?`,
+    answer, [answer - a, answer + b, sum ** 2, product],
+    `두 식을 연립해 ${math(`x=${xVal}`)}, ${math(`y=${yVal}`)}를 구한 뒤 대입한다.`);
 }
 
 function inequalityQuestion(ctx) {
