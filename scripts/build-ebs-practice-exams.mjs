@@ -48,7 +48,6 @@ const TYPE_VARIANTS = [
     schoolExamType: '대표 표준 문항',
     transformPattern: '문항의 축소·확대·변형',
     skill: '표준 풀이 적용',
-    stem: '교과서 대표 풀이 흐름을 떠올리며 해결하시오. ',
     explanation: '표준 풀이 틀에 맞춰 조건을 정리한다. ',
   },
   {
@@ -58,7 +57,6 @@ const TYPE_VARIANTS = [
     schoolExamType: '실생활 문장제 독해',
     transformPattern: '조건 및 구하는 값 변경',
     skill: '조건 해석',
-    stem: '학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. ',
     explanation: '문장 속 필요한 조건을 골라 수식으로 바꾼다. ',
   },
   {
@@ -68,7 +66,6 @@ const TYPE_VARIANTS = [
     schoolExamType: '오류 찾기 및 과정 교정',
     transformPattern: '풀이 과정 단계화',
     skill: '과정 점검',
-    stem: '풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. ',
     explanation: '계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. ',
   },
   {
@@ -78,7 +75,6 @@ const TYPE_VARIANTS = [
     schoolExamType: '말장난 방지 보기 고르기',
     transformPattern: '조건의 강화·완화',
     skill: '복합 추론',
-    stem: '발전 문항처럼 숨은 조건까지 함께 확인하시오. ',
     explanation: '조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. ',
   },
 ];
@@ -264,9 +260,8 @@ function titleCore(title) {
   return title.split('—')[0].trim();
 }
 
-function decorateQuestion(question, core, role, typeTag, index) {
-  const variantNo = String(index + 1).padStart(2, '0');
-  return `EBS ${core} ${role} · ${typeTag} ${variantNo}형. ${question}`;
+function decorateQuestion(question) {
+  return question;
 }
 
 function cleanDescription(description = '') {
@@ -295,7 +290,6 @@ function schoolExamTypeFor(variant, family) {
 function applyTypeVariant(question, variant, family) {
   return {
     ...question,
-    question: `${variant.stem}${question.question}`,
     explanation: `${variant.explanation}${question.explanation}`,
     ebs: {
       ...question.ebs,
@@ -1118,21 +1112,23 @@ function buildExam(file) {
   const family = familyFor(current.id);
   const generator = GENERATORS[family] ?? algebraQuestion;
   const core = titleCore(current.title);
-  const seedOffset = hashText(current.id) % 37;
+  const seedOffset = hashText(current.id) % 1009;
   const legacyDescription = cleanDescription(current.description);
 
   const questions = Array.from({ length: 30 }, (_, index) => {
     const variant = TYPE_VARIANTS[index % TYPE_VARIANTS.length];
-    const rawQuestion = generator(index + 1 + seedOffset, current.difficulty, current.id);
+    const variantRound = Math.floor(index / TYPE_VARIANTS.length);
+    const questionSeed = seedOffset + (index + 1) * 9973 + variantRound * 1013;
+    const rawQuestion = generator(questionSeed, current.difficulty, current.id);
     const question = applyTypeVariant(
-      familyTypeQuestion(family, index + 1 + seedOffset, current.difficulty, variant.id, rawQuestion),
+      familyTypeQuestion(family, questionSeed, current.difficulty, variant.id, rawQuestion),
       variant,
       family
     );
     return {
       ...question,
       id: index + 1,
-      question: decorateQuestion(question.question, core, profile.role, question.ebs.typeTag, index),
+      question: decorateQuestion(question.question),
       ebs: {
         ...question.ebs,
         sourceFormat: 'EBS 단계형 5지선다',

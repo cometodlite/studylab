@@ -53,790 +53,15 @@
   "questions": [
     {
       "id": 1,
-      "question": "EBS 소인수분해 개념 확인 연산 · 소인수분해 지수 확인 · 개념 확인 연산 01형. $936$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
-      "choices": [
-        "$3$",
-        "$4$",
-        "$6$",
-        "$5$",
-        "$7$"
-      ],
-      "answer": 3,
-      "explanation": "$936$=$2^{3}\\times3^{2}\\times13$이므로 두 지수의 합은 $3+2=5$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
-        "skills": [
-          "소인수분해",
-          "지수",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 2,
-      "question": "EBS 소인수분해 개념 확인 연산 · 약수의 개수 판별 · 대표 교과서 유형 02형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $2^{2}\\times3^{1}$의 양의 약수의 개수는?",
-      "choices": [
-        "$6$",
-        "$4$",
-        "$5$",
-        "$7$",
-        "$8$"
-      ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(2+1)(1+1)=6$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
-        "skills": [
-          "소인수분해",
-          "약수의 개수",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 3,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최대공약수 조건 · 기출 변형 핵심 03형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $49$와 $92$의 공약수 중 가장 큰 수는?",
-      "choices": [
-        "$2$",
-        "$3$",
-        "$1$",
-        "$141$",
-        "$4$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $1$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
-        "skills": [
-          "최대공약수",
-          "공약수",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 4,
-      "question": "EBS 소인수분해 개념 확인 연산 · 완전제곱수 만들기 · 서술형 대비 04형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $1080$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
-      "choices": [
-        "$60$",
-        "$31$",
-        "$29$",
-        "$90$",
-        "$30$"
-      ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $30$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "완전제곱수 만들기 · 서술형 대비",
-        "skills": [
-          "소인수분해",
-          "제곱수 조건",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 5,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최소공배수 활용 · 최고 수준/발전 05형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $5$일마다 오는 일정과 $2$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
-      "choices": [
-        "$7$",
-        "$10$",
-        "$3$",
-        "$11$",
-        "$12$"
-      ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $5$와 $2$의 최소공배수이므로 $10$일이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최소공배수 활용 · 최고 수준/발전",
-        "skills": [
-          "최소공배수",
-          "배수 조건",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 6,
-      "question": "EBS 소인수분해 개념 확인 연산 · 소인수분해 지수 확인 · 개념 확인 연산 06형. $60$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
-      "choices": [
-        "$1$",
-        "$2$",
-        "$4$",
-        "$3$",
-        "$5$"
-      ],
-      "answer": 3,
-      "explanation": "$60$=$2^{2}\\times3^{1}\\times5$이므로 두 지수의 합은 $2+1=3$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
-        "skills": [
-          "소인수분해",
-          "지수",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 7,
-      "question": "EBS 소인수분해 개념 확인 연산 · 약수의 개수 판별 · 대표 교과서 유형 07형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $2^{3}\\times3^{3}$의 양의 약수의 개수는?",
-      "choices": [
-        "$16$",
-        "$14$",
-        "$15$",
-        "$17$",
-        "$18$"
-      ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(3+1)(3+1)=16$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
-        "skills": [
-          "소인수분해",
-          "약수의 개수",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 8,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최대공약수 조건 · 기출 변형 핵심 08형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $54$와 $102$의 공약수 중 가장 큰 수는?",
-      "choices": [
-        "$4$",
-        "$7$",
-        "$6$",
-        "$8$",
-        "$156$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $6$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
-        "skills": [
-          "최대공약수",
-          "공약수",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 9,
-      "question": "EBS 소인수분해 개념 확인 연산 · 완전제곱수 만들기 · 서술형 대비 09형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $1620$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
-      "choices": [
-        "$10$",
-        "$6$",
-        "$4$",
-        "$15$",
-        "$5$"
-      ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $5$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "완전제곱수 만들기 · 서술형 대비",
-        "skills": [
-          "소인수분해",
-          "제곱수 조건",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 10,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최소공배수 활용 · 최고 수준/발전 10형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $2$일마다 오는 일정과 $4$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
-      "choices": [
-        "$8$",
-        "$4$",
-        "$6$",
-        "$2$",
-        "$5$"
-      ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $2$와 $4$의 최소공배수이므로 $4$일이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최소공배수 활용 · 최고 수준/발전",
-        "skills": [
-          "최소공배수",
-          "배수 조건",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 11,
-      "question": "EBS 소인수분해 개념 확인 연산 · 소인수분해 지수 확인 · 개념 확인 연산 11형. $126$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
-      "choices": [
-        "$1$",
-        "$2$",
-        "$4$",
-        "$3$",
-        "$5$"
-      ],
-      "answer": 3,
-      "explanation": "$126$=$2^{1}\\times3^{2}\\times7$이므로 두 지수의 합은 $1+2=3$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
-        "skills": [
-          "소인수분해",
-          "지수",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 12,
-      "question": "EBS 소인수분해 개념 확인 연산 · 약수의 개수 판별 · 대표 교과서 유형 12형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $2^{4}\\times3^{2}$의 양의 약수의 개수는?",
-      "choices": [
-        "$15$",
-        "$13$",
-        "$14$",
-        "$16$",
-        "$17$"
-      ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(4+1)(2+1)=15$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
-        "skills": [
-          "소인수분해",
-          "약수의 개수",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 13,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최대공약수 조건 · 기출 변형 핵심 13형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $59$와 $112$의 공약수 중 가장 큰 수는?",
-      "choices": [
-        "$2$",
-        "$3$",
-        "$1$",
-        "$171$",
-        "$4$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $1$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
-        "skills": [
-          "최대공약수",
-          "공약수",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 14,
-      "question": "EBS 소인수분해 개념 확인 연산 · 완전제곱수 만들기 · 서술형 대비 14형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $30$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
-      "choices": [
-        "$60$",
-        "$31$",
-        "$29$",
-        "$90$",
-        "$30$"
-      ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $30$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "완전제곱수 만들기 · 서술형 대비",
-        "skills": [
-          "소인수분해",
-          "제곱수 조건",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 15,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최소공배수 활용 · 최고 수준/발전 15형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $3$일마다 오는 일정과 $3$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
-      "choices": [
-        "$9$",
-        "$3$",
-        "$6$",
-        "$0$",
-        "$4$"
-      ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $3$와 $3$의 최소공배수이므로 $3$일이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최소공배수 활용 · 최고 수준/발전",
-        "skills": [
-          "최소공배수",
-          "배수 조건",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 16,
-      "question": "EBS 소인수분해 개념 확인 연산 · 소인수분해 지수 확인 · 개념 확인 연산 16형. $264$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
-      "choices": [
-        "$2$",
-        "$3$",
-        "$5$",
-        "$4$",
-        "$6$"
-      ],
-      "answer": 3,
-      "explanation": "$264$=$2^{3}\\times3^{1}\\times11$이므로 두 지수의 합은 $3+1=4$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
-        "skills": [
-          "소인수분해",
-          "지수",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 17,
-      "question": "EBS 소인수분해 개념 확인 연산 · 약수의 개수 판별 · 대표 교과서 유형 17형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $2^{5}\\times3^{1}$의 양의 약수의 개수는?",
-      "choices": [
-        "$12$",
-        "$10$",
-        "$11$",
-        "$13$",
-        "$14$"
-      ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(5+1)(1+1)=12$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
-        "skills": [
-          "소인수분해",
-          "약수의 개수",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 18,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최대공약수 조건 · 기출 변형 핵심 18형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $64$와 $122$의 공약수 중 가장 큰 수는?",
-      "choices": [
-        "$1$",
-        "$3$",
-        "$2$",
-        "$4$",
-        "$186$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $2$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
-        "skills": [
-          "최대공약수",
-          "공약수",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 19,
-      "question": "EBS 소인수분해 개념 확인 연산 · 완전제곱수 만들기 · 서술형 대비 19형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $360$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
-      "choices": [
-        "$20$",
-        "$11$",
-        "$9$",
-        "$30$",
-        "$10$"
-      ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $10$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "완전제곱수 만들기 · 서술형 대비",
-        "skills": [
-          "소인수분해",
-          "제곱수 조건",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 20,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최소공배수 활용 · 최고 수준/발전 20형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $4$일마다 오는 일정과 $2$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
-      "choices": [
-        "$8$",
-        "$4$",
-        "$6$",
-        "$2$",
-        "$5$"
-      ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $4$와 $2$의 최소공배수이므로 $4$일이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최소공배수 활용 · 최고 수준/발전",
-        "skills": [
-          "최소공배수",
-          "배수 조건",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 21,
-      "question": "EBS 소인수분해 개념 확인 연산 · 소인수분해 지수 확인 · 개념 확인 연산 21형. $468$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
-      "choices": [
-        "$2$",
-        "$3$",
-        "$5$",
-        "$4$",
-        "$6$"
-      ],
-      "answer": 3,
-      "explanation": "$468$=$2^{2}\\times3^{2}\\times13$이므로 두 지수의 합은 $2+2=4$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
-        "skills": [
-          "소인수분해",
-          "지수",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 22,
-      "question": "EBS 소인수분해 개념 확인 연산 · 약수의 개수 판별 · 대표 교과서 유형 22형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $2^{2}\\times3^{3}$의 양의 약수의 개수는?",
-      "choices": [
-        "$12$",
-        "$10$",
-        "$11$",
-        "$13$",
-        "$14$"
-      ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(2+1)(3+1)=12$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
-        "skills": [
-          "소인수분해",
-          "약수의 개수",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 23,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최대공약수 조건 · 기출 변형 핵심 23형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $69$와 $132$의 공약수 중 가장 큰 수는?",
-      "choices": [
-        "$1$",
-        "$4$",
-        "$3$",
-        "$5$",
-        "$201$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $3$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
-        "skills": [
-          "최대공약수",
-          "공약수",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 24,
-      "question": "EBS 소인수분해 개념 확인 연산 · 완전제곱수 만들기 · 서술형 대비 24형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $540$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
-      "choices": [
-        "$30$",
-        "$16$",
-        "$14$",
-        "$45$",
-        "$15$"
-      ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $15$이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "완전제곱수 만들기 · 서술형 대비",
-        "skills": [
-          "소인수분해",
-          "제곱수 조건",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 25,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최소공배수 활용 · 최고 수준/발전 25형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $5$일마다 오는 일정과 $4$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
-      "choices": [
-        "$9$",
-        "$20$",
-        "$1$",
-        "$21$",
-        "$22$"
-      ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $5$와 $4$의 최소공배수이므로 $20$일이다.",
-      "ebs": {
-        "role": "개념 확인 연산",
-        "steps": 1,
-        "typeTag": "최소공배수 활용 · 최고 수준/발전",
-        "skills": [
-          "최소공배수",
-          "배수 조건",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "기본",
-        "family": "factorization"
-      }
-    },
-    {
-      "id": 26,
-      "question": "EBS 소인수분해 개념 확인 연산 · 소인수분해 지수 확인 · 개념 확인 연산 26형. $30$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "question": "$30$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
       "choices": [
         "$0$",
         "$1$",
         "$3$",
-        "$2$",
-        "$4$"
+        "$4$",
+        "$2$"
       ],
-      "answer": 3,
+      "answer": 4,
       "explanation": "$30$=$2^{1}\\times3^{1}\\times5$이므로 두 지수의 합은 $1+1=2$이다.",
       "ebs": {
         "role": "개념 확인 연산",
@@ -858,8 +83,8 @@
       }
     },
     {
-      "id": 27,
-      "question": "EBS 소인수분해 개념 확인 연산 · 약수의 개수 판별 · 대표 교과서 유형 27형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $2^{3}\\times3^{2}$의 양의 약수의 개수는?",
+      "id": 2,
+      "question": "$2^{3}\\times3^{2}$의 양의 약수의 개수는?",
       "choices": [
         "$12$",
         "$10$",
@@ -889,16 +114,16 @@
       }
     },
     {
-      "id": 28,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최대공약수 조건 · 기출 변형 핵심 28형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $74$와 $142$의 공약수 중 가장 큰 수는?",
+      "id": 3,
+      "question": "$30386$와 $60766$의 공약수 중 가장 큰 수는?",
       "choices": [
         "$1$",
-        "$3$",
         "$2$",
+        "$3$",
         "$4$",
-        "$216$"
+        "$91152$"
       ],
-      "answer": 2,
+      "answer": 1,
       "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $2$이다.",
       "ebs": {
         "role": "개념 확인 연산",
@@ -920,8 +145,318 @@
       }
     },
     {
-      "id": 29,
-      "question": "EBS 소인수분해 개념 확인 연산 · 완전제곱수 만들기 · 서술형 대비 29형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $810$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
+      "id": 4,
+      "question": "$810$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
+      "choices": [
+        "$20$",
+        "$11$",
+        "$10$",
+        "$9$",
+        "$30$"
+      ],
+      "answer": 2,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $10$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "완전제곱수 만들기 · 서술형 대비",
+        "skills": [
+          "소인수분해",
+          "제곱수 조건",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 5,
+      "question": "$2$일마다 오는 일정과 $3$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
+      "choices": [
+        "$5$",
+        "$1$",
+        "$7$",
+        "$6$",
+        "$8$"
+      ],
+      "answer": 3,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $2$와 $3$의 최소공배수이므로 $6$일이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최소공배수 활용 · 최고 수준/발전",
+        "skills": [
+          "최소공배수",
+          "배수 조건",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 6,
+      "question": "$132$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$3$",
+        "$1$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 0,
+      "explanation": "$132$=$2^{2}\\times3^{1}\\times11$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
+        "skills": [
+          "소인수분해",
+          "지수",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$2^{5}\\times3^{3}$의 양의 약수의 개수는?",
+      "choices": [
+        "$22$",
+        "$24$",
+        "$23$",
+        "$25$",
+        "$26$"
+      ],
+      "answer": 1,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(5+1)(3+1)=24$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
+        "skills": [
+          "소인수분해",
+          "약수의 개수",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 8,
+      "question": "$81264$와 $162522$의 공약수 중 가장 큰 수는?",
+      "choices": [
+        "$4$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$243786$"
+      ],
+      "answer": 2,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $6$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
+        "skills": [
+          "최대공약수",
+          "공약수",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$180$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
+      "choices": [
+        "$10$",
+        "$6$",
+        "$4$",
+        "$5$",
+        "$15$"
+      ],
+      "answer": 3,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $5$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "완전제곱수 만들기 · 서술형 대비",
+        "skills": [
+          "소인수분해",
+          "제곱수 조건",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$4$일마다 오는 일정과 $4$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
+      "choices": [
+        "$16$",
+        "$8$",
+        "$0$",
+        "$5$",
+        "$4$"
+      ],
+      "answer": 4,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $4$와 $4$의 최소공배수이므로 $4$일이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최소공배수 활용 · 최고 수준/발전",
+        "skills": [
+          "최소공배수",
+          "배수 조건",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$120$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$",
+        "$6$"
+      ],
+      "answer": 1,
+      "explanation": "$120$=$2^{3}\\times3^{1}\\times5$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
+        "skills": [
+          "소인수분해",
+          "지수",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$2^{3}\\times3^{1}$의 양의 약수의 개수는?",
+      "choices": [
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 2,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(3+1)(1+1)=8$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
+        "skills": [
+          "소인수분해",
+          "약수의 개수",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$132142$와 $264278$의 공약수 중 가장 큰 수는?",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$4$",
+        "$2$",
+        "$396420$"
+      ],
+      "answer": 3,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $2$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
+        "skills": [
+          "최대공약수",
+          "공약수",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$3240$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
       "choices": [
         "$20$",
         "$11$",
@@ -951,17 +486,482 @@
       }
     },
     {
-      "id": 30,
-      "question": "EBS 소인수분해 개념 확인 연산 · 최소공배수 활용 · 최고 수준/발전 30형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $2$일마다 오는 일정과 $3$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
+      "id": 15,
+      "question": "$2$일마다 오는 일정과 $2$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
       "choices": [
-        "$5$",
-        "$6$",
+        "$2$",
+        "$4$",
+        "$0$",
+        "$3$",
+        "$5$"
+      ],
+      "answer": 0,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $2$와 $2$의 최소공배수이므로 $2$일이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최소공배수 활용 · 최고 수준/발전",
+        "skills": [
+          "최소공배수",
+          "배수 조건",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$66$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$0$",
         "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "answer": 2,
+      "explanation": "$66$=$2^{1}\\times3^{1}\\times11$이므로 두 지수의 합은 $1+1=2$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
+        "skills": [
+          "소인수분해",
+          "지수",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$2^{5}\\times3^{2}$의 양의 약수의 개수는?",
+      "choices": [
+        "$16$",
+        "$17$",
+        "$19$",
+        "$18$",
+        "$20$"
+      ],
+      "answer": 3,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(5+1)(2+1)=18$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
+        "skills": [
+          "소인수분해",
+          "약수의 개수",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$183020$와 $366034$의 공약수 중 가장 큰 수는?",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$4$",
+        "$549054$",
+        "$2$"
+      ],
+      "answer": 4,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $2$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
+        "skills": [
+          "최대공약수",
+          "공약수",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$90$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
+      "choices": [
+        "$10$",
+        "$20$",
+        "$11$",
+        "$9$",
+        "$30$"
+      ],
+      "answer": 0,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $10$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "완전제곱수 만들기 · 서술형 대비",
+        "skills": [
+          "소인수분해",
+          "제곱수 조건",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$4$일마다 오는 일정과 $3$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
+      "choices": [
         "$7$",
-        "$8$"
+        "$12$",
+        "$1$",
+        "$13$",
+        "$14$"
       ],
       "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $2$와 $3$의 최소공배수이므로 $6$일이다.",
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $4$와 $3$의 최소공배수이므로 $12$일이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최소공배수 활용 · 최고 수준/발전",
+        "skills": [
+          "최소공배수",
+          "배수 조건",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$60$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$3$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "$60$=$2^{2}\\times3^{1}\\times5$이므로 두 지수의 합은 $2+1=3$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
+        "skills": [
+          "소인수분해",
+          "지수",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$2^{3}\\times3^{3}$의 양의 약수의 개수는?",
+      "choices": [
+        "$14$",
+        "$15$",
+        "$17$",
+        "$18$",
+        "$16$"
+      ],
+      "answer": 4,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(3+1)(3+1)=16$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
+        "skills": [
+          "소인수분해",
+          "약수의 개수",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$233898$와 $467790$의 공약수 중 가장 큰 수는?",
+      "choices": [
+        "$6$",
+        "$4$",
+        "$7$",
+        "$8$",
+        "$701688$"
+      ],
+      "answer": 0,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $6$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
+        "skills": [
+          "최대공약수",
+          "공약수",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$1620$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
+      "choices": [
+        "$10$",
+        "$5$",
+        "$6$",
+        "$4$",
+        "$15$"
+      ],
+      "answer": 1,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $5$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "완전제곱수 만들기 · 서술형 대비",
+        "skills": [
+          "소인수분해",
+          "제곱수 조건",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 25,
+      "question": "$2$일마다 오는 일정과 $4$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$4$",
+        "$2$",
+        "$5$"
+      ],
+      "answer": 2,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $2$와 $4$의 최소공배수이므로 $4$일이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최소공배수 활용 · 최고 수준/발전",
+        "skills": [
+          "최소공배수",
+          "배수 조건",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 26,
+      "question": "$264$을 소인수분해했을 때, 소인수 $2$의 지수와 소인수 $3$의 지수의 합은?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$6$",
+        "$4$"
+      ],
+      "answer": 4,
+      "explanation": "$264$=$2^{3}\\times3^{1}\\times11$이므로 두 지수의 합은 $3+1=4$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "소인수분해 지수 확인 · 개념 확인 연산",
+        "skills": [
+          "소인수분해",
+          "지수",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 27,
+      "question": "$2^{5}\\times3^{1}$의 양의 약수의 개수는?",
+      "choices": [
+        "$12$",
+        "$10$",
+        "$11$",
+        "$13$",
+        "$14$"
+      ],
+      "answer": 0,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 약수의 개수는 각 지수에 $1$을 더해 곱하므로 $(5+1)(1+1)=12$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "약수의 개수 판별 · 대표 교과서 유형",
+        "skills": [
+          "소인수분해",
+          "약수의 개수",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 28,
+      "question": "$284776$와 $569546$의 공약수 중 가장 큰 수는?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$854322$"
+      ],
+      "answer": 1,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 두 수의 공통 소인수를 모으면 최대공약수는 $2$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "최대공약수 조건 · 기출 변형 핵심",
+        "skills": [
+          "최대공약수",
+          "공약수",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 29,
+      "question": "$360$에 가장 작은 자연수 $m$을 곱해 완전제곱수를 만들 때 $m$은?",
+      "choices": [
+        "$20$",
+        "$11$",
+        "$10$",
+        "$9$",
+        "$30$"
+      ],
+      "answer": 2,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 $10$이다.",
+      "ebs": {
+        "role": "개념 확인 연산",
+        "steps": 1,
+        "typeTag": "완전제곱수 만들기 · 서술형 대비",
+        "skills": [
+          "소인수분해",
+          "제곱수 조건",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "기본",
+        "family": "factorization"
+      }
+    },
+    {
+      "id": 30,
+      "question": "$4$일마다 오는 일정과 $2$일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 일정이 다시 겹치는 주기는 $4$와 $2$의 최소공배수이므로 $4$일이다.",
       "ebs": {
         "role": "개념 확인 연산",
         "steps": 1,

@@ -53,782 +53,7 @@
   "questions": [
     {
       "id": 1,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축과 함수값 · 개념 확인 연산 01형. 이차함수 $y=1(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
-      "choices": [
-        "$3$",
-        "$5$",
-        "$6$",
-        "$2$",
-        "$4$"
-      ],
-      "answer": 4,
-      "explanation": "$y=1(4-2)^2=4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
-        "skills": [
-          "대칭축",
-          "대입",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 2,
-      "question": "EBS 이차함수 대표 교과서 유형 · 꼭짓점 좌표 · 대표 교과서 유형 02형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $y=4(x-8)^2+5$의 꼭짓점의 $x$좌표는?",
-      "choices": [
-        "$6$",
-        "$8$",
-        "$7$",
-        "$9$",
-        "$5$"
-      ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
-        "skills": [
-          "이차함수",
-          "꼭짓점",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 3,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축 판별 · 기출 변형 핵심 03형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $y=5(x+4)^2-2$의 대칭축은 $x=k$이다. $k$는?",
-      "choices": [
-        "$4$",
-        "$-5$",
-        "$-3$",
-        "$-4$",
-        "$2$"
-      ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축 판별 · 기출 변형 핵심",
-        "skills": [
-          "이차함수",
-          "대칭축",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 4,
-      "question": "EBS 이차함수 대표 교과서 유형 · 함수값 계산 · 서술형 대비 04형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $y=6(x-5)^2+3$에서 $x=6$일 때 $y$는?",
-      "choices": [
-        "$9$",
-        "$3$",
-        "$15$",
-        "$10$",
-        "$11$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $6(6-5)^2+3=9$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "함수값 계산 · 서술형 대비",
-        "skills": [
-          "이차함수",
-          "대입",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 5,
-      "question": "EBS 이차함수 대표 교과서 유형 · 최솟값 찾기 · 최고 수준/발전 05형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $y=7(x-6)^2+4$의 최솟값은?",
-      "choices": [
-        "$7$",
-        "$6$",
-        "$4$",
-        "$3$",
-        "$5$"
-      ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "최솟값 찾기 · 최고 수준/발전",
-        "skills": [
-          "최솟값",
-          "꼭짓점형",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 6,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축과 함수값 · 개념 확인 연산 06형. 이차함수 $y=3(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
-      "choices": [
-        "$9$",
-        "$15$",
-        "$18$",
-        "$6$",
-        "$12$"
-      ],
-      "answer": 4,
-      "explanation": "$y=3(5-3)^2=12$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
-        "skills": [
-          "대칭축",
-          "대입",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 7,
-      "question": "EBS 이차함수 대표 교과서 유형 · 꼭짓점 좌표 · 대표 교과서 유형 07형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $y=3(x-8)^2+2$의 꼭짓점의 $x$좌표는?",
-      "choices": [
-        "$6$",
-        "$8$",
-        "$7$",
-        "$9$",
-        "$2$"
-      ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
-        "skills": [
-          "이차함수",
-          "꼭짓점",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 8,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축 판별 · 기출 변형 핵심 08형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $y=4(x+4)^2-3$의 대칭축은 $x=k$이다. $k$는?",
-      "choices": [
-        "$4$",
-        "$-5$",
-        "$-3$",
-        "$-4$",
-        "$3$"
-      ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축 판별 · 기출 변형 핵심",
-        "skills": [
-          "이차함수",
-          "대칭축",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 9,
-      "question": "EBS 이차함수 대표 교과서 유형 · 함수값 계산 · 서술형 대비 09형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $y=5(x-5)^2+4$에서 $x=6$일 때 $y$는?",
-      "choices": [
-        "$9$",
-        "$4$",
-        "$14$",
-        "$10$",
-        "$11$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $5(6-5)^2+4=9$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "함수값 계산 · 서술형 대비",
-        "skills": [
-          "이차함수",
-          "대입",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 10,
-      "question": "EBS 이차함수 대표 교과서 유형 · 최솟값 찾기 · 최고 수준/발전 10형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $y=6(x-6)^2+5$의 최솟값은?",
-      "choices": [
-        "$6$",
-        "$4$",
-        "$5$",
-        "$7$",
-        "$8$"
-      ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $5$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "최솟값 찾기 · 최고 수준/발전",
-        "skills": [
-          "최솟값",
-          "꼭짓점형",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 11,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축과 함수값 · 개념 확인 연산 11형. 이차함수 $y=2(x-0)^2$에서 $x=2$일 때 $y$의 값은?",
-      "choices": [
-        "$6$",
-        "$10$",
-        "$12$",
-        "$4$",
-        "$8$"
-      ],
-      "answer": 4,
-      "explanation": "$y=2(2-0)^2=8$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
-        "skills": [
-          "대칭축",
-          "대입",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 12,
-      "question": "EBS 이차함수 대표 교과서 유형 · 꼭짓점 좌표 · 대표 교과서 유형 12형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $y=8(x-8)^2+3$의 꼭짓점의 $x$좌표는?",
-      "choices": [
-        "$6$",
-        "$8$",
-        "$7$",
-        "$9$",
-        "$3$"
-      ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
-        "skills": [
-          "이차함수",
-          "꼭짓점",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 13,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축 판별 · 기출 변형 핵심 13형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $y=3(x+4)^2-4$의 대칭축은 $x=k$이다. $k$는?",
-      "choices": [
-        "$4$",
-        "$-5$",
-        "$-3$",
-        "$-4$",
-        "$-2$"
-      ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축 판별 · 기출 변형 핵심",
-        "skills": [
-          "이차함수",
-          "대칭축",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 14,
-      "question": "EBS 이차함수 대표 교과서 유형 · 함수값 계산 · 서술형 대비 14형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $y=4(x-5)^2+5$에서 $x=6$일 때 $y$는?",
-      "choices": [
-        "$9$",
-        "$5$",
-        "$13$",
-        "$10$",
-        "$11$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $4(6-5)^2+5=9$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "함수값 계산 · 서술형 대비",
-        "skills": [
-          "이차함수",
-          "대입",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 15,
-      "question": "EBS 이차함수 대표 교과서 유형 · 최솟값 찾기 · 최고 수준/발전 15형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $y=5(x-6)^2+2$의 최솟값은?",
-      "choices": [
-        "$5$",
-        "$6$",
-        "$2$",
-        "$1$",
-        "$3$"
-      ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $2$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "최솟값 찾기 · 최고 수준/발전",
-        "skills": [
-          "최솟값",
-          "꼭짓점형",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 16,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축과 함수값 · 개념 확인 연산 16형. 이차함수 $y=1(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
-      "choices": [
-        "$3$",
-        "$5$",
-        "$6$",
-        "$2$",
-        "$4$"
-      ],
-      "answer": 4,
-      "explanation": "$y=1(3-1)^2=4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
-        "skills": [
-          "대칭축",
-          "대입",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 17,
-      "question": "EBS 이차함수 대표 교과서 유형 · 꼭짓점 좌표 · 대표 교과서 유형 17형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $y=7(x-8)^2+4$의 꼭짓점의 $x$좌표는?",
-      "choices": [
-        "$6$",
-        "$8$",
-        "$7$",
-        "$9$",
-        "$4$"
-      ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
-        "skills": [
-          "이차함수",
-          "꼭짓점",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 18,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축 판별 · 기출 변형 핵심 18형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $y=8(x+4)^2-5$의 대칭축은 $x=k$이다. $k$는?",
-      "choices": [
-        "$4$",
-        "$-5$",
-        "$-3$",
-        "$-4$",
-        "$5$"
-      ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축 판별 · 기출 변형 핵심",
-        "skills": [
-          "이차함수",
-          "대칭축",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 19,
-      "question": "EBS 이차함수 대표 교과서 유형 · 함수값 계산 · 서술형 대비 19형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $y=3(x-5)^2+2$에서 $x=6$일 때 $y$는?",
-      "choices": [
-        "$5$",
-        "$2$",
-        "$8$",
-        "$6$",
-        "$7$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $3(6-5)^2+2=5$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "함수값 계산 · 서술형 대비",
-        "skills": [
-          "이차함수",
-          "대입",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 20,
-      "question": "EBS 이차함수 대표 교과서 유형 · 최솟값 찾기 · 최고 수준/발전 20형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $y=4(x-6)^2+3$의 최솟값은?",
-      "choices": [
-        "$4$",
-        "$6$",
-        "$3$",
-        "$2$",
-        "$5$"
-      ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $3$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "최솟값 찾기 · 최고 수준/발전",
-        "skills": [
-          "최솟값",
-          "꼭짓점형",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 21,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축과 함수값 · 개념 확인 연산 21형. 이차함수 $y=3(x-2)^2$에서 $x=4$일 때 $y$의 값은?",
-      "choices": [
-        "$9$",
-        "$15$",
-        "$18$",
-        "$6$",
-        "$12$"
-      ],
-      "answer": 4,
-      "explanation": "$y=3(4-2)^2=12$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
-        "skills": [
-          "대칭축",
-          "대입",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 22,
-      "question": "EBS 이차함수 대표 교과서 유형 · 꼭짓점 좌표 · 대표 교과서 유형 22형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $y=6(x-8)^2+5$의 꼭짓점의 $x$좌표는?",
-      "choices": [
-        "$6$",
-        "$8$",
-        "$7$",
-        "$9$",
-        "$5$"
-      ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
-        "skills": [
-          "이차함수",
-          "꼭짓점",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 23,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축 판별 · 기출 변형 핵심 23형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $y=7(x+4)^2-2$의 대칭축은 $x=k$이다. $k$는?",
-      "choices": [
-        "$4$",
-        "$-5$",
-        "$-3$",
-        "$-4$",
-        "$2$"
-      ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "대칭축 판별 · 기출 변형 핵심",
-        "skills": [
-          "이차함수",
-          "대칭축",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 24,
-      "question": "EBS 이차함수 대표 교과서 유형 · 함수값 계산 · 서술형 대비 24형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $y=8(x-5)^2+3$에서 $x=6$일 때 $y$는?",
-      "choices": [
-        "$11$",
-        "$3$",
-        "$19$",
-        "$12$",
-        "$13$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $8(6-5)^2+3=11$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "함수값 계산 · 서술형 대비",
-        "skills": [
-          "이차함수",
-          "대입",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 25,
-      "question": "EBS 이차함수 대표 교과서 유형 · 최솟값 찾기 · 최고 수준/발전 25형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $y=3(x-6)^2+4$의 최솟값은?",
-      "choices": [
-        "$3$",
-        "$6$",
-        "$4$",
-        "$5$",
-        "$7$"
-      ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $4$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "최솟값 찾기 · 최고 수준/발전",
-        "skills": [
-          "최솟값",
-          "꼭짓점형",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "quadraticFunction"
-      }
-    },
-    {
-      "id": 26,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축과 함수값 · 개념 확인 연산 26형. 이차함수 $y=2(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
+      "question": "이차함수 $y=2(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
       "choices": [
         "$6$",
         "$10$",
@@ -858,14 +83,169 @@
       }
     },
     {
-      "id": 27,
-      "question": "EBS 이차함수 대표 교과서 유형 · 꼭짓점 좌표 · 대표 교과서 유형 27형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $y=5(x-8)^2+2$의 꼭짓점의 $x$좌표는?",
+      "id": 2,
+      "question": "$y=5(x-5)^2+2$의 꼭짓점의 $x$좌표는?",
+      "choices": [
+        "$5$",
+        "$3$",
+        "$4$",
+        "$6$",
+        "$2$"
+      ],
+      "answer": 0,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
+        "skills": [
+          "이차함수",
+          "꼭짓점",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 3,
+      "question": "$y=6(x+8)^2-3$의 대칭축은 $x=k$이다. $k$는?",
+      "choices": [
+        "$8$",
+        "$-8$",
+        "$-9$",
+        "$-7$",
+        "$3$"
+      ],
+      "answer": 1,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-8$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축 판별 · 기출 변형 핵심",
+        "skills": [
+          "이차함수",
+          "대칭축",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 4,
+      "question": "$y=7(x-6)^2+4$에서 $x=7$일 때 $y$는?",
+      "choices": [
+        "$4$",
+        "$18$",
+        "$11$",
+        "$12$",
+        "$13$"
+      ],
+      "answer": 2,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $7(7-6)^2+4=11$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "함수값 계산 · 서술형 대비",
+        "skills": [
+          "이차함수",
+          "대입",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 5,
+      "question": "$y=8(x-4)^2+5$의 최솟값은?",
+      "choices": [
+        "$8$",
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$"
+      ],
+      "answer": 3,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $5$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "최솟값 찾기 · 최고 수준/발전",
+        "skills": [
+          "최솟값",
+          "꼭짓점형",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 6,
+      "question": "이차함수 $y=3(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$12$",
+        "$9$",
+        "$15$",
+        "$18$",
+        "$6$"
+      ],
+      "answer": 0,
+      "explanation": "$y=3(3-1)^2=12$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
+        "skills": [
+          "대칭축",
+          "대입",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$y=3(x-8)^2+4$의 꼭짓점의 $x$좌표는?",
       "choices": [
         "$6$",
         "$8$",
         "$7$",
         "$9$",
-        "$2$"
+        "$4$"
       ],
       "answer": 1,
       "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
@@ -889,8 +269,163 @@
       }
     },
     {
-      "id": 28,
-      "question": "EBS 이차함수 대표 교과서 유형 · 대칭축 판별 · 기출 변형 핵심 28형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $y=6(x+4)^2-3$의 대칭축은 $x=k$이다. $k$는?",
+      "id": 8,
+      "question": "$y=4(x+6)^2-5$의 대칭축은 $x=k$이다. $k$는?",
+      "choices": [
+        "$6$",
+        "$-7$",
+        "$-6$",
+        "$-5$",
+        "$5$"
+      ],
+      "answer": 2,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-6$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축 판별 · 기출 변형 핵심",
+        "skills": [
+          "이차함수",
+          "대칭축",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$y=5(x-4)^2+2$에서 $x=5$일 때 $y$는?",
+      "choices": [
+        "$2$",
+        "$12$",
+        "$8$",
+        "$7$",
+        "$9$"
+      ],
+      "answer": 3,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $5(5-4)^2+2=7$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "함수값 계산 · 서술형 대비",
+        "skills": [
+          "이차함수",
+          "대입",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$y=6(x-7)^2+3$의 최솟값은?",
+      "choices": [
+        "$6$",
+        "$7$",
+        "$2$",
+        "$4$",
+        "$3$"
+      ],
+      "answer": 4,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $3$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "최솟값 찾기 · 최고 수준/발전",
+        "skills": [
+          "최솟값",
+          "꼭짓점형",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 11,
+      "question": "이차함수 $y=1(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$2$"
+      ],
+      "answer": 1,
+      "explanation": "$y=1(5-3)^2=4$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
+        "skills": [
+          "대칭축",
+          "대입",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$y=7(x-6)^2+2$의 꼭짓점의 $x$좌표는?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$2$"
+      ],
+      "answer": 2,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
+        "skills": [
+          "이차함수",
+          "꼭짓점",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$y=8(x+4)^2-3$의 대칭축은 $x=k$이다. $k$는?",
       "choices": [
         "$4$",
         "$-5$",
@@ -920,17 +455,482 @@
       }
     },
     {
-      "id": 29,
-      "question": "EBS 이차함수 대표 교과서 유형 · 함수값 계산 · 서술형 대비 29형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $y=7(x-5)^2+4$에서 $x=6$일 때 $y$는?",
+      "id": 14,
+      "question": "$y=3(x-7)^2+4$에서 $x=8$일 때 $y$는?",
       "choices": [
-        "$11$",
         "$4$",
-        "$18$",
-        "$12$",
-        "$13$"
+        "$10$",
+        "$8$",
+        "$9$",
+        "$7$"
+      ],
+      "answer": 4,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $3(8-7)^2+4=7$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "함수값 계산 · 서술형 대비",
+        "skills": [
+          "이차함수",
+          "대입",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$y=4(x-5)^2+5$의 최솟값은?",
+      "choices": [
+        "$5$",
+        "$4$",
+        "$6$",
+        "$7$",
+        "$8$"
       ],
       "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $7(6-5)^2+4=11$이다.",
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $5$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "최솟값 찾기 · 최고 수준/발전",
+        "skills": [
+          "최솟값",
+          "꼭짓점형",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 16,
+      "question": "이차함수 $y=2(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$6$",
+        "$10$",
+        "$8$",
+        "$12$",
+        "$4$"
+      ],
+      "answer": 2,
+      "explanation": "$y=2(3-1)^2=8$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
+        "skills": [
+          "대칭축",
+          "대입",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$y=5(x-4)^2+4$의 꼭짓점의 $x$좌표는?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$4$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
+        "skills": [
+          "이차함수",
+          "꼭짓점",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$y=6(x+7)^2-5$의 대칭축은 $x=k$이다. $k$는?",
+      "choices": [
+        "$7$",
+        "$-8$",
+        "$-6$",
+        "$5$",
+        "$-7$"
+      ],
+      "answer": 4,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-7$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축 판별 · 기출 변형 핵심",
+        "skills": [
+          "이차함수",
+          "대칭축",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$y=7(x-5)^2+2$에서 $x=6$일 때 $y$는?",
+      "choices": [
+        "$9$",
+        "$2$",
+        "$16$",
+        "$10$",
+        "$11$"
+      ],
+      "answer": 0,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $7(6-5)^2+2=9$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "함수값 계산 · 서술형 대비",
+        "skills": [
+          "이차함수",
+          "대입",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$y=8(x-8)^2+3$의 최솟값은?",
+      "choices": [
+        "$8$",
+        "$3$",
+        "$2$",
+        "$4$",
+        "$5$"
+      ],
+      "answer": 1,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $3$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "최솟값 찾기 · 최고 수준/발전",
+        "skills": [
+          "최솟값",
+          "꼭짓점형",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 21,
+      "question": "이차함수 $y=3(x-3)^2$에서 $x=5$일 때 $y$의 값은?",
+      "choices": [
+        "$9$",
+        "$15$",
+        "$18$",
+        "$12$",
+        "$6$"
+      ],
+      "answer": 3,
+      "explanation": "$y=3(5-3)^2=12$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
+        "skills": [
+          "대칭축",
+          "대입",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$y=3(x-7)^2+2$의 꼭짓점의 $x$좌표는?",
+      "choices": [
+        "$5$",
+        "$6$",
+        "$8$",
+        "$2$",
+        "$7$"
+      ],
+      "answer": 4,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
+        "skills": [
+          "이차함수",
+          "꼭짓점",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$y=4(x+5)^2-3$의 대칭축은 $x=k$이다. $k$는?",
+      "choices": [
+        "$-5$",
+        "$5$",
+        "$-6$",
+        "$-4$",
+        "$3$"
+      ],
+      "answer": 0,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-5$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축 판별 · 기출 변형 핵심",
+        "skills": [
+          "이차함수",
+          "대칭축",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$y=5(x-8)^2+4$에서 $x=9$일 때 $y$는?",
+      "choices": [
+        "$4$",
+        "$9$",
+        "$14$",
+        "$10$",
+        "$11$"
+      ],
+      "answer": 1,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $5(9-8)^2+4=9$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "함수값 계산 · 서술형 대비",
+        "skills": [
+          "이차함수",
+          "대입",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 25,
+      "question": "$y=6(x-6)^2+5$의 최솟값은?",
+      "choices": [
+        "$6$",
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 2,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $5$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "최솟값 찾기 · 최고 수준/발전",
+        "skills": [
+          "최솟값",
+          "꼭짓점형",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 26,
+      "question": "이차함수 $y=1(x-1)^2$에서 $x=3$일 때 $y$의 값은?",
+      "choices": [
+        "$3$",
+        "$5$",
+        "$6$",
+        "$2$",
+        "$4$"
+      ],
+      "answer": 4,
+      "explanation": "$y=1(3-1)^2=4$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축과 함수값 · 개념 확인 연산",
+        "skills": [
+          "대칭축",
+          "대입",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 27,
+      "question": "$y=7(x-5)^2+4$의 꼭짓점의 $x$좌표는?",
+      "choices": [
+        "$5$",
+        "$3$",
+        "$4$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 0,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 꼭짓점형 $y=a(x-p)^2+q$의 꼭짓점은 $(p,q)$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "꼭짓점 좌표 · 대표 교과서 유형",
+        "skills": [
+          "이차함수",
+          "꼭짓점",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 28,
+      "question": "$y=8(x+8)^2-5$의 대칭축은 $x=k$이다. $k$는?",
+      "choices": [
+        "$8$",
+        "$-8$",
+        "$-9$",
+        "$-7$",
+        "$5$"
+      ],
+      "answer": 1,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 대칭축은 괄호 안이 $0$이 되는 $x=-8$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "대칭축 판별 · 기출 변형 핵심",
+        "skills": [
+          "이차함수",
+          "대칭축",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "quadraticFunction"
+      }
+    },
+    {
+      "id": 29,
+      "question": "$y=3(x-6)^2+2$에서 $x=7$일 때 $y$는?",
+      "choices": [
+        "$2$",
+        "$8$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "answer": 2,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 대입하면 $3(7-6)^2+2=5$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -952,16 +952,16 @@
     },
     {
       "id": 30,
-      "question": "EBS 이차함수 대표 교과서 유형 · 최솟값 찾기 · 최고 수준/발전 30형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $y=8(x-6)^2+5$의 최솟값은?",
+      "question": "$y=4(x-4)^2+3$의 최솟값은?",
       "choices": [
-        "$8$",
-        "$6$",
-        "$5$",
         "$4$",
-        "$7$"
+        "$2$",
+        "$5$",
+        "$3$",
+        "$6$"
       ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $5$이다.",
+      "answer": 3,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 제곱항은 $0$ 이상이므로 최솟값은 상수항 $3$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,

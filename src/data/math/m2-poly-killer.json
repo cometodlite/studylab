@@ -53,16 +53,16 @@
   "questions": [
     {
       "id": 1,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 식 변형과 대입 · 개념 확인 연산 01형. $x+y=$$7$, $x-y=$$-1$일 때, $x^2+2xy$의 값은?",
+      "question": "$x+y=$$4$, $x-y=$$0$일 때, $x^2+2xy$의 값은?",
       "choices": [
-        "$30$",
-        "$33$",
-        "$37$",
-        "$49$",
-        "$12$"
+        "$10$",
+        "$14$",
+        "$16$",
+        "$12$",
+        "$4$"
       ],
-      "answer": 1,
-      "explanation": "두 식을 더하면 $2x=6$이므로 $x=3$, $y=4$이다. 따라서 $x^2+2xy=9+24=33$이다.",
+      "answer": 3,
+      "explanation": "두 식을 더하면 $2x=4$이므로 $x=2$, $y=2$이다. 따라서 $x^2+2xy=4+8=12$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -84,16 +84,16 @@
     },
     {
       "id": 2,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 동류항 정리 · 대표 교과서 유형 02형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $7x+6x-4x$를 간단히 하면 $kx$이다. $k$는?",
+      "question": "$9x+9x-4x$를 간단히 하면 $kx$이다. $k$는?",
       "choices": [
-        "$7$",
-        "$8$",
-        "$10$",
-        "$9$",
-        "$11$"
+        "$12$",
+        "$13$",
+        "$15$",
+        "$16$",
+        "$14$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $7+6-4=9$이다.",
+      "answer": 4,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $9+9-4=14$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -115,627 +115,7 @@
     },
     {
       "id": 3,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 단항식 나눗셈 · 기출 변형 핵심 03형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $56x^{7}y$를 $8x^2$로 나누었을 때 계수는?",
-      "choices": [
-        "$7$",
-        "$8$",
-        "$15$",
-        "$6$",
-        "$9$"
-      ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $56\\div8=7$이고 문자는 지수법칙으로 정리한다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
-        "skills": [
-          "지수법칙",
-          "단항식",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 4,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 전개식 계수 찾기 · 서술형 대비 04형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $(9x+8)(6x+1)$을 전개했을 때 $x$의 계수는?",
-      "choices": [
-        "$53$",
-        "$68$",
-        "$62$",
-        "$54$",
-        "$48$"
-      ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $9x$와 $48x$에서 나오므로 계수는 $62$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "전개식 계수 찾기 · 서술형 대비",
-        "skills": [
-          "분배법칙",
-          "계수",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 5,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 문자식 대입 · 최고 수준/발전 05형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $A=10x+9$일 때, $x=4$이면 $A$의 값은?",
-      "choices": [
-        "$39$",
-        "$59$",
-        "$19$",
-        "$90$",
-        "$49$"
-      ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $4$를 대입하면 $10\\times4+9=49$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "문자식 대입 · 최고 수준/발전",
-        "skills": [
-          "대입",
-          "식의 값",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 6,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 식 변형과 대입 · 개념 확인 연산 06형. $x+y=$$15$, $x-y=$$1$일 때, $x^2+2xy$의 값은?",
-      "choices": [
-        "$168$",
-        "$176$",
-        "$183$",
-        "$225$",
-        "$56$"
-      ],
-      "answer": 1,
-      "explanation": "두 식을 더하면 $2x=16$이므로 $x=8$, $y=7$이다. 따라서 $x^2+2xy=64+112=176$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "식 변형과 대입 · 개념 확인 연산",
-        "skills": [
-          "완전제곱식",
-          "역추론",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 7,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 동류항 정리 · 대표 교과서 유형 07형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $6x+6x-5x$를 간단히 하면 $kx$이다. $k$는?",
-      "choices": [
-        "$5$",
-        "$6$",
-        "$8$",
-        "$7$",
-        "$9$"
-      ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $6+6-5=7$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "동류항 정리 · 대표 교과서 유형",
-        "skills": [
-          "동류항",
-          "문자식",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 8,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 단항식 나눗셈 · 기출 변형 핵심 08형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $49x^{8}y$를 $7x^2$로 나누었을 때 계수는?",
-      "choices": [
-        "$7$",
-        "$14$",
-        "$8$",
-        "$6$",
-        "$9$"
-      ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $49\\div7=7$이고 문자는 지수법칙으로 정리한다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
-        "skills": [
-          "지수법칙",
-          "단항식",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 9,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 전개식 계수 찾기 · 서술형 대비 09형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $(8x+8)(7x+1)$을 전개했을 때 $x$의 계수는?",
-      "choices": [
-        "$56$",
-        "$71$",
-        "$64$",
-        "$65$",
-        "$66$"
-      ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $8x$와 $56x$에서 나오므로 계수는 $64$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "전개식 계수 찾기 · 서술형 대비",
-        "skills": [
-          "분배법칙",
-          "계수",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 10,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 문자식 대입 · 최고 수준/발전 10형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $A=9x+9$일 때, $x=1$이면 $A$의 값은?",
-      "choices": [
-        "$9$",
-        "$27$",
-        "$81$",
-        "$19$",
-        "$18$"
-      ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $1$를 대입하면 $9\\times1+9=18$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "문자식 대입 · 최고 수준/발전",
-        "skills": [
-          "대입",
-          "식의 값",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 11,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 식 변형과 대입 · 개념 확인 연산 11형. $x+y=$$7$, $x-y=$$1$일 때, $x^2+2xy$의 값은?",
-      "choices": [
-        "$36$",
-        "$40$",
-        "$43$",
-        "$49$",
-        "$12$"
-      ],
-      "answer": 1,
-      "explanation": "두 식을 더하면 $2x=8$이므로 $x=4$, $y=3$이다. 따라서 $x^2+2xy=16+24=40$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "식 변형과 대입 · 개념 확인 연산",
-        "skills": [
-          "완전제곱식",
-          "역추론",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 12,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 동류항 정리 · 대표 교과서 유형 12형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $5x+6x-6x$를 간단히 하면 $kx$이다. $k$는?",
-      "choices": [
-        "$3$",
-        "$4$",
-        "$6$",
-        "$5$",
-        "$7$"
-      ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $5+6-6=5$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "동류항 정리 · 대표 교과서 유형",
-        "skills": [
-          "동류항",
-          "문자식",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 13,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 단항식 나눗셈 · 기출 변형 핵심 13형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $42x^{9}y$를 $6x^2$로 나누었을 때 계수는?",
-      "choices": [
-        "$7$",
-        "$6$",
-        "$13$",
-        "$8$",
-        "$9$"
-      ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $42\\div6=7$이고 문자는 지수법칙으로 정리한다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
-        "skills": [
-          "지수법칙",
-          "단항식",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 14,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 전개식 계수 찾기 · 서술형 대비 14형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $(7x+8)(4x+1)$을 전개했을 때 $x$의 계수는?",
-      "choices": [
-        "$29$",
-        "$40$",
-        "$36$",
-        "$28$",
-        "$32$"
-      ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $7x$와 $32x$에서 나오므로 계수는 $36$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "전개식 계수 찾기 · 서술형 대비",
-        "skills": [
-          "분배법칙",
-          "계수",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 15,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 문자식 대입 · 최고 수준/발전 15형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $A=8x+9$일 때, $x=2$이면 $A$의 값은?",
-      "choices": [
-        "$17$",
-        "$33$",
-        "$72$",
-        "$26$",
-        "$25$"
-      ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $2$를 대입하면 $8\\times2+9=25$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "문자식 대입 · 최고 수준/발전",
-        "skills": [
-          "대입",
-          "식의 값",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 16,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 식 변형과 대입 · 개념 확인 연산 16형. $x+y=$$15$, $x-y=$$3$일 때, $x^2+2xy$의 값은?",
-      "choices": [
-        "$180$",
-        "$189$",
-        "$195$",
-        "$225$",
-        "$54$"
-      ],
-      "answer": 1,
-      "explanation": "두 식을 더하면 $2x=18$이므로 $x=9$, $y=6$이다. 따라서 $x^2+2xy=81+108=189$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "식 변형과 대입 · 개념 확인 연산",
-        "skills": [
-          "완전제곱식",
-          "역추론",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 17,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 동류항 정리 · 대표 교과서 유형 17형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $10x+6x-7x$를 간단히 하면 $kx$이다. $k$는?",
-      "choices": [
-        "$7$",
-        "$8$",
-        "$10$",
-        "$9$",
-        "$11$"
-      ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $10+6-7=9$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "동류항 정리 · 대표 교과서 유형",
-        "skills": [
-          "동류항",
-          "문자식",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 18,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 단항식 나눗셈 · 기출 변형 핵심 18형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $35x^{6}y$를 $5x^2$로 나누었을 때 계수는?",
-      "choices": [
-        "$7$",
-        "$5$",
-        "$12$",
-        "$8$",
-        "$6$"
-      ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $35\\div5=7$이고 문자는 지수법칙으로 정리한다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
-        "skills": [
-          "지수법칙",
-          "단항식",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 19,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 전개식 계수 찾기 · 서술형 대비 19형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $(6x+8)(5x+1)$을 전개했을 때 $x$의 계수는?",
-      "choices": [
-        "$32$",
-        "$43$",
-        "$38$",
-        "$30$",
-        "$40$"
-      ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $6x$와 $40x$에서 나오므로 계수는 $38$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "전개식 계수 찾기 · 서술형 대비",
-        "skills": [
-          "분배법칙",
-          "계수",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 20,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 문자식 대입 · 최고 수준/발전 20형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $A=7x+9$일 때, $x=3$이면 $A$의 값은?",
-      "choices": [
-        "$23$",
-        "$37$",
-        "$16$",
-        "$63$",
-        "$30$"
-      ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $3$를 대입하면 $7\\times3+9=30$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "문자식 대입 · 최고 수준/발전",
-        "skills": [
-          "대입",
-          "식의 값",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 21,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 식 변형과 대입 · 개념 확인 연산 21형. $x+y=$$7$, $x-y=$$3$일 때, $x^2+2xy$의 값은?",
-      "choices": [
-        "$40$",
-        "$45$",
-        "$47$",
-        "$49$",
-        "$10$"
-      ],
-      "answer": 1,
-      "explanation": "두 식을 더하면 $2x=10$이므로 $x=5$, $y=2$이다. 따라서 $x^2+2xy=25+20=45$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "식 변형과 대입 · 개념 확인 연산",
-        "skills": [
-          "완전제곱식",
-          "역추론",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 22,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 동류항 정리 · 대표 교과서 유형 22형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $9x+6x-4x$를 간단히 하면 $kx$이다. $k$는?",
-      "choices": [
-        "$9$",
-        "$10$",
-        "$12$",
-        "$11$",
-        "$13$"
-      ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $9+6-4=11$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "동류항 정리 · 대표 교과서 유형",
-        "skills": [
-          "동류항",
-          "문자식",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 23,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 단항식 나눗셈 · 기출 변형 핵심 23형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $70x^{7}y$를 $10x^2$로 나누었을 때 계수는?",
+      "question": "$70x^{7}y$를 $10x^2$로 나누었을 때 계수는?",
       "choices": [
         "$7$",
         "$10$",
@@ -765,17 +145,637 @@
       }
     },
     {
-      "id": 24,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 전개식 계수 찾기 · 서술형 대비 24형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $(5x+8)(6x+1)$을 전개했을 때 $x$의 계수는?",
+      "id": 4,
+      "question": "$(5x+10)(6x+1)$을 전개했을 때 $x$의 계수는?",
       "choices": [
-        "$33$",
-        "$44$",
-        "$38$",
+        "$35$",
+        "$40$",
+        "$46$",
         "$30$",
+        "$60$"
+      ],
+      "answer": 1,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $5x$와 $60x$에서 나오므로 계수는 $40$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "전개식 계수 찾기 · 서술형 대비",
+        "skills": [
+          "분배법칙",
+          "계수",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 5,
+      "question": "$A=6x+8$일 때, $x=4$이면 $A$의 값은?",
+      "choices": [
+        "$26$",
+        "$38$",
+        "$32$",
+        "$14$",
         "$48$"
       ],
       "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $5x$와 $48x$에서 나오므로 계수는 $38$이다.",
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $4$를 대입하면 $6\\times4+8=32$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "문자식 대입 · 최고 수준/발전",
+        "skills": [
+          "대입",
+          "식의 값",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 6,
+      "question": "$x+y=$$9$, $x-y=$$-3$일 때, $x^2+2xy$의 값은?",
+      "choices": [
+        "$42$",
+        "$51$",
+        "$81$",
+        "$18$",
+        "$45$"
+      ],
+      "answer": 4,
+      "explanation": "두 식을 더하면 $2x=6$이므로 $x=3$, $y=6$이다. 따라서 $x^2+2xy=9+36=45$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "식 변형과 대입 · 개념 확인 연산",
+        "skills": [
+          "완전제곱식",
+          "역추론",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$7x+7x-6x$를 간단히 하면 $kx$이다. $k$는?",
+      "choices": [
+        "$8$",
+        "$6$",
+        "$7$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 0,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $7+7-6=8$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "동류항 정리 · 대표 교과서 유형",
+        "skills": [
+          "동류항",
+          "문자식",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 8,
+      "question": "$80x^{9}y$를 $8x^2$로 나누었을 때 계수는?",
+      "choices": [
+        "$8$",
+        "$10$",
+        "$18$",
+        "$11$",
+        "$9$"
+      ],
+      "answer": 1,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $80\\div8=10$이고 문자는 지수법칙으로 정리한다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
+        "skills": [
+          "지수법칙",
+          "단항식",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$(9x+8)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$35$",
+        "$48$",
+        "$44$",
+        "$36$",
+        "$32$"
+      ],
+      "answer": 2,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $9x$와 $32x$에서 나오므로 계수는 $44$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "전개식 계수 찾기 · 서술형 대비",
+        "skills": [
+          "분배법칙",
+          "계수",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$A=10x+6$일 때, $x=2$이면 $A$의 값은?",
+      "choices": [
+        "$16$",
+        "$36$",
+        "$60$",
+        "$26$",
+        "$27$"
+      ],
+      "answer": 3,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $2$를 대입하면 $10\\times2+6=26$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "문자식 대입 · 최고 수준/발전",
+        "skills": [
+          "대입",
+          "식의 값",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$x+y=$$7$, $x-y=$$1$일 때, $x^2+2xy$의 값은?",
+      "choices": [
+        "$40$",
+        "$36$",
+        "$43$",
+        "$49$",
+        "$12$"
+      ],
+      "answer": 0,
+      "explanation": "두 식을 더하면 $2x=8$이므로 $x=4$, $y=3$이다. 따라서 $x^2+2xy=16+24=40$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "식 변형과 대입 · 개념 확인 연산",
+        "skills": [
+          "완전제곱식",
+          "역추론",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$5x+10x-4x$를 간단히 하면 $kx$이다. $k$는?",
+      "choices": [
+        "$9$",
+        "$11$",
+        "$10$",
+        "$12$",
+        "$13$"
+      ],
+      "answer": 1,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $5+10-4=11$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "동류항 정리 · 대표 교과서 유형",
+        "skills": [
+          "동류항",
+          "문자식",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$48x^{7}y$를 $6x^2$로 나누었을 때 계수는?",
+      "choices": [
+        "$6$",
+        "$14$",
+        "$8$",
+        "$9$",
+        "$7$"
+      ],
+      "answer": 2,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $48\\div6=8$이고 문자는 지수법칙으로 정리한다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
+        "skills": [
+          "지수법칙",
+          "단항식",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$(7x+6)(6x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$41$",
+        "$54$",
+        "$42$",
+        "$48$",
+        "$36$"
+      ],
+      "answer": 3,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $7x$와 $36x$에서 나오므로 계수는 $48$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "전개식 계수 찾기 · 서술형 대비",
+        "skills": [
+          "분배법칙",
+          "계수",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$A=8x+9$일 때, $x=4$이면 $A$의 값은?",
+      "choices": [
+        "$33$",
+        "$49$",
+        "$17$",
+        "$72$",
+        "$41$"
+      ],
+      "answer": 4,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $4$를 대입하면 $8\\times4+9=41$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "문자식 대입 · 최고 수준/발전",
+        "skills": [
+          "대입",
+          "식의 값",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$x+y=$$12$, $x-y=$$-2$일 때, $x^2+2xy$의 값은?",
+      "choices": [
+        "$90$",
+        "$95$",
+        "$102$",
+        "$144$",
+        "$35$"
+      ],
+      "answer": 1,
+      "explanation": "두 식을 더하면 $2x=10$이므로 $x=5$, $y=7$이다. 따라서 $x^2+2xy=25+70=95$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "식 변형과 대입 · 개념 확인 연산",
+        "skills": [
+          "완전제곱식",
+          "역추론",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$9x+8x-6x$를 간단히 하면 $kx$이다. $k$는?",
+      "choices": [
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
+      ],
+      "answer": 2,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $9+8-6=11$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "동류항 정리 · 대표 교과서 유형",
+        "skills": [
+          "동류항",
+          "문자식",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$60x^{9}y$를 $10x^2$로 나누었을 때 계수는?",
+      "choices": [
+        "$10$",
+        "$16$",
+        "$7$",
+        "$6$",
+        "$5$"
+      ],
+      "answer": 3,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $60\\div10=6$이고 문자는 지수법칙으로 정리한다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
+        "skills": [
+          "지수법칙",
+          "단항식",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$(5x+9)(4x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$24$",
+        "$33$",
+        "$20$",
+        "$36$",
+        "$29$"
+      ],
+      "answer": 4,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $5x$와 $36x$에서 나오므로 계수는 $29$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "전개식 계수 찾기 · 서술형 대비",
+        "skills": [
+          "분배법칙",
+          "계수",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$A=6x+7$일 때, $x=2$이면 $A$의 값은?",
+      "choices": [
+        "$19$",
+        "$13$",
+        "$25$",
+        "$42$",
+        "$20$"
+      ],
+      "answer": 0,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $2$를 대입하면 $6\\times2+7=19$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "문자식 대입 · 최고 수준/발전",
+        "skills": [
+          "대입",
+          "식의 값",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$x+y=$$10$, $x-y=$$2$일 때, $x^2+2xy$의 값은?",
+      "choices": [
+        "$78$",
+        "$88$",
+        "$84$",
+        "$100$",
+        "$24$"
+      ],
+      "answer": 2,
+      "explanation": "두 식을 더하면 $2x=12$이므로 $x=6$, $y=4$이다. 따라서 $x^2+2xy=36+48=84$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "식 변형과 대입 · 개념 확인 연산",
+        "skills": [
+          "완전제곱식",
+          "역추론",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 22,
+      "question": "$7x+6x-4x$를 간단히 하면 $kx$이다. $k$는?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$10$",
+        "$9$",
+        "$11$"
+      ],
+      "answer": 3,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $7+6-4=9$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "동류항 정리 · 대표 교과서 유형",
+        "skills": [
+          "동류항",
+          "문자식",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 23,
+      "question": "$72x^{7}y$를 $8x^2$로 나누었을 때 계수는?",
+      "choices": [
+        "$8$",
+        "$17$",
+        "$10$",
+        "$11$",
+        "$9$"
+      ],
+      "answer": 4,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $72\\div8=9$이고 문자는 지수법칙으로 정리한다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "단항식 나눗셈 · 기출 변형 핵심",
+        "skills": [
+          "지수법칙",
+          "단항식",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 24,
+      "question": "$(9x+7)(6x+1)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$61$",
+        "$52$",
+        "$67$",
+        "$54$",
+        "$42$"
+      ],
+      "answer": 0,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $9x$와 $42x$에서 나오므로 계수는 $61$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -797,16 +797,16 @@
     },
     {
       "id": 25,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 문자식 대입 · 최고 수준/발전 25형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $A=6x+9$일 때, $x=4$이면 $A$의 값은?",
+      "question": "$A=10x+10$일 때, $x=4$이면 $A$의 값은?",
       "choices": [
-        "$27$",
-        "$39$",
-        "$15$",
-        "$54$",
-        "$33$"
+        "$40$",
+        "$50$",
+        "$60$",
+        "$20$",
+        "$100$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $4$를 대입하면 $6\\times4+9=33$이다.",
+      "answer": 1,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $4$를 대입하면 $10\\times4+10=50$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -828,16 +828,16 @@
     },
     {
       "id": 26,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 식 변형과 대입 · 개념 확인 연산 26형. $x+y=$$15$, $x-y=$$5$일 때, $x^2+2xy$의 값은?",
+      "question": "$x+y=$$8$, $x-y=$$6$일 때, $x^2+2xy$의 값은?",
       "choices": [
-        "$190$",
-        "$200$",
-        "$205$",
-        "$225$",
-        "$50$"
+        "$56$",
+        "$64$",
+        "$7$",
+        "$63$",
+        "$65$"
       ],
-      "answer": 1,
-      "explanation": "두 식을 더하면 $2x=20$이므로 $x=10$, $y=5$이다. 따라서 $x^2+2xy=100+100=200$이다.",
+      "answer": 3,
+      "explanation": "두 식을 더하면 $2x=14$이므로 $x=7$, $y=1$이다. 따라서 $x^2+2xy=49+14=63$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -859,16 +859,16 @@
     },
     {
       "id": 27,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 동류항 정리 · 대표 교과서 유형 27형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. $8x+6x-5x$를 간단히 하면 $kx$이다. $k$는?",
+      "question": "$5x+9x-6x$를 간단히 하면 $kx$이다. $k$는?",
       "choices": [
+        "$6$",
         "$7$",
-        "$8$",
-        "$10$",
         "$9$",
-        "$11$"
+        "$10$",
+        "$8$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $8+6-5=9$이다.",
+      "answer": 4,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 동류항의 계수만 더하면 $5+9-6=8$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -890,16 +890,16 @@
     },
     {
       "id": 28,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 단항식 나눗셈 · 기출 변형 핵심 28형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. $63x^{8}y$를 $9x^2$로 나누었을 때 계수는?",
+      "question": "$42x^{9}y$를 $6x^2$로 나누었을 때 계수는?",
       "choices": [
         "$7$",
-        "$9$",
-        "$16$",
+        "$6$",
+        "$13$",
         "$8$",
-        "$6$"
+        "$9$"
       ],
       "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $63\\div9=7$이고 문자는 지수법칙으로 정리한다.",
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 계수는 $42\\div6=7$이고 문자는 지수법칙으로 정리한다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -921,16 +921,16 @@
     },
     {
       "id": 29,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 전개식 계수 찾기 · 서술형 대비 29형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $(10x+8)(7x+1)$을 전개했을 때 $x$의 계수는?",
+      "question": "$(7x+10)(4x+1)$을 전개했을 때 $x$의 계수는?",
       "choices": [
-        "$68$",
-        "$85$",
-        "$78$",
-        "$70$",
-        "$56$"
+        "$31$",
+        "$38$",
+        "$42$",
+        "$28$",
+        "$40$"
       ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $10x$와 $56x$에서 나오므로 계수는 $78$이다.",
+      "answer": 1,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $x$항은 $7x$와 $40x$에서 나오므로 계수는 $38$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
@@ -952,16 +952,16 @@
     },
     {
       "id": 30,
-      "question": "EBS 다항식의 계산 최고 수준 발전 · 문자식 대입 · 최고 수준/발전 30형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $A=5x+9$일 때, $x=1$이면 $A$의 값은?",
+      "question": "$A=8x+8$일 때, $x=2$이면 $A$의 값은?",
       "choices": [
-        "$9$",
-        "$19$",
-        "$45$",
-        "$15$",
-        "$14$"
+        "$16$",
+        "$32$",
+        "$24$",
+        "$64$",
+        "$25$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $1$를 대입하면 $5\\times1+9=14$이다.",
+      "answer": 2,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 문자 $x$에 $2$를 대입하면 $8\\times2+8=24$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,

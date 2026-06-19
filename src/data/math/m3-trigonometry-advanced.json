@@ -53,16 +53,16 @@
   "questions": [
     {
       "id": 1,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합 계산 · 개념 확인 연산 01형. $\\sin A=\\frac{48}{102}$, $\\cos A=\\frac{90}{102}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "$\\sin A=\\frac{21608}{45917}$, $\\cos A=\\frac{40515}{45917}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$48$",
-        "$90$",
-        "$138$",
-        "$102$",
-        "$139$"
+        "$21608$",
+        "$40515$",
+        "$62123$",
+        "$45917$",
+        "$62124$"
       ],
       "answer": 2,
-      "explanation": "$c(\\frac{48}{102}+\\frac{90}{102})=48+90=138$이다.",
+      "explanation": "$c(\\frac{21608}{45917}+\\frac{40515}{45917})=21608+40515=62123$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -85,15 +85,15 @@
     },
     {
       "id": 2,
-      "question": "EBS 삼각비 기출 변형 핵심 · 사인값 · 대표 교과서 유형 02형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. 직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
+      "question": "직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
       "choices": [
         "$\\frac{24}{25}$",
         "$\\frac{7}{24}$",
         "$\\frac{25}{7}$",
-        "$\\frac{24}{7}$",
-        "$\\frac{7}{25}$"
+        "$\\frac{7}{25}$",
+        "$\\frac{24}{7}$"
       ],
-      "answer": 4,
+      "answer": 3,
       "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{21}{75}$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -116,15 +116,15 @@
     },
     {
       "id": 3,
-      "question": "EBS 삼각비 기출 변형 핵심 · 코사인값 · 기출 변형 핵심 03형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. 직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
+      "question": "직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
       "choices": [
         "$\\frac{3}{5}$",
-        "$\\frac{4}{5}$",
         "$\\frac{4}{3}$",
         "$\\frac{5}{4}$",
-        "$\\frac{3}{4}$"
+        "$\\frac{3}{4}$",
+        "$\\frac{4}{5}$"
       ],
-      "answer": 1,
+      "answer": 4,
       "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{12}{15}$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -147,15 +147,15 @@
     },
     {
       "id": 4,
-      "question": "EBS 삼각비 기출 변형 핵심 · 탄젠트 길이 · 서술형 대비 04형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
+      "question": "$\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
       "choices": [
+        "$30$",
         "$15$",
         "$36$",
         "$31$",
-        "$30$",
         "$72$"
       ],
-      "answer": 3,
+      "answer": 0,
       "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{72}=\\frac{15}{36}$에서 대변은 $30$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -178,15 +178,15 @@
     },
     {
       "id": 5,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합식 · 최고 수준/발전 05형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
+      "question": "$\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
       "choices": [
-        "$69$",
         "$24$",
+        "$69$",
         "$45$",
         "$51$",
         "$70$"
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{24}{51}+\\frac{45}{51})=69$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -210,16 +210,16 @@
     },
     {
       "id": 6,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합 계산 · 개념 확인 연산 06형. $\\sin A=\\frac{49}{175}$, $\\cos A=\\frac{168}{175}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "$\\sin A=\\frac{46263}{77105}$, $\\cos A=\\frac{61684}{77105}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$49$",
-        "$168$",
-        "$217$",
-        "$175$",
-        "$218$"
+        "$46263$",
+        "$61684$",
+        "$77105$",
+        "$107947$",
+        "$107948$"
       ],
-      "answer": 2,
-      "explanation": "$c(\\frac{49}{175}+\\frac{168}{175})=49+168=217$이다.",
+      "answer": 3,
+      "explanation": "$c(\\frac{46263}{77105}+\\frac{61684}{77105})=46263+61684=107947$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -242,164 +242,7 @@
     },
     {
       "id": 7,
-      "question": "EBS 삼각비 기출 변형 핵심 · 사인값 · 대표 교과서 유형 07형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. 직각삼각형에서 대변이 $9$, 빗변이 $15$일 때 $\\sin A$는?",
-      "choices": [
-        "$\\frac{4}{5}$",
-        "$\\frac{3}{4}$",
-        "$\\frac{5}{3}$",
-        "$\\frac{4}{3}$",
-        "$\\frac{3}{5}$"
-      ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{9}{15}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
-        "skills": [
-          "삼각비",
-          "sin",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 8,
-      "question": "EBS 삼각비 기출 변형 핵심 · 코사인값 · 기출 변형 핵심 08형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. 직각삼각형에서 이웃한 변이 $36$, 빗변이 $39$일 때 $\\cos A$는?",
-      "choices": [
-        "$\\frac{5}{13}$",
-        "$\\frac{12}{13}$",
-        "$\\frac{12}{5}$",
-        "$\\frac{13}{12}$",
-        "$\\frac{5}{12}$"
-      ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{36}{39}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
-        "skills": [
-          "삼각비",
-          "cos",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 9,
-      "question": "EBS 삼각비 기출 변형 핵심 · 탄젠트 길이 · 서술형 대비 09형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $\\tan A=\\frac{24}{45}$이고 이웃한 변이 $90$일 때 대변은?",
-      "choices": [
-        "$24$",
-        "$45$",
-        "$49$",
-        "$48$",
-        "$90$"
-      ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{90}=\\frac{24}{45}$에서 대변은 $48$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
-        "skills": [
-          "tan",
-          "길이",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 10,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합식 · 최고 수준/발전 10형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $\\sin A=\\frac{21}{75}$, $\\cos A=\\frac{72}{75}$일 때 $z(\\sin A+\\cos A)$는?",
-      "choices": [
-        "$93$",
-        "$21$",
-        "$72$",
-        "$75$",
-        "$94$"
-      ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{21}{75}+\\frac{72}{75})=93$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
-        "skills": [
-          "sin",
-          "cos",
-          "복합 계산",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 11,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합 계산 · 개념 확인 연산 11형. $\\sin A=\\frac{27}{45}$, $\\cos A=\\frac{36}{45}$일 때 $c(\\sin A+\\cos A)$의 값은?",
-      "choices": [
-        "$27$",
-        "$36$",
-        "$63$",
-        "$45$",
-        "$64$"
-      ],
-      "answer": 2,
-      "explanation": "$c(\\frac{27}{45}+\\frac{36}{45})=27+36=63$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
-        "skills": [
-          "sin",
-          "cos",
-          "비례식",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 12,
-      "question": "EBS 삼각비 기출 변형 핵심 · 사인값 · 대표 교과서 유형 12형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. 직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
+      "question": "직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
       "choices": [
         "$\\frac{12}{13}$",
         "$\\frac{5}{12}$",
@@ -429,16 +272,16 @@
       }
     },
     {
-      "id": 13,
-      "question": "EBS 삼각비 기출 변형 핵심 · 코사인값 · 기출 변형 핵심 13형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. 직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
+      "id": 8,
+      "question": "직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
       "choices": [
-        "$\\frac{8}{17}$",
         "$\\frac{15}{17}$",
+        "$\\frac{8}{17}$",
         "$\\frac{15}{8}$",
         "$\\frac{17}{15}$",
         "$\\frac{8}{15}$"
       ],
-      "answer": 1,
+      "answer": 0,
       "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{45}{51}$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -460,16 +303,16 @@
       }
     },
     {
-      "id": 14,
-      "question": "EBS 삼각비 기출 변형 핵심 · 탄젠트 길이 · 서술형 대비 14형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
+      "id": 9,
+      "question": "$\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
       "choices": [
         "$21$",
+        "$42$",
         "$72$",
         "$43$",
-        "$42$",
         "$144$"
       ],
-      "answer": 3,
+      "answer": 1,
       "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{144}=\\frac{21}{72}$에서 대변은 $42$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -491,16 +334,16 @@
       }
     },
     {
-      "id": 15,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합식 · 최고 수준/발전 15형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
+      "id": 10,
+      "question": "$\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
       "choices": [
-        "$21$",
         "$9$",
         "$12$",
+        "$21$",
         "$15$",
         "$22$"
       ],
-      "answer": 0,
+      "answer": 2,
       "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{9}{15}+\\frac{12}{15})=21$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -523,17 +366,17 @@
       }
     },
     {
-      "id": 16,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합 계산 · 개념 확인 연산 16형. $\\sin A=\\frac{50}{130}$, $\\cos A=\\frac{120}{130}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "id": 11,
+      "question": "$\\sin A=\\frac{225120}{478380}$, $\\cos A=\\frac{422100}{478380}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$50$",
-        "$120$",
-        "$170$",
-        "$130$",
-        "$171$"
+        "$225120$",
+        "$422100$",
+        "$478380$",
+        "$647221$",
+        "$647220$"
       ],
-      "answer": 2,
-      "explanation": "$c(\\frac{50}{130}+\\frac{120}{130})=50+120=170$이다.",
+      "answer": 4,
+      "explanation": "$c(\\frac{225120}{478380}+\\frac{422100}{478380})=225120+422100=647220$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -555,173 +398,16 @@
       }
     },
     {
-      "id": 17,
-      "question": "EBS 삼각비 기출 변형 핵심 · 사인값 · 대표 교과서 유형 17형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. 직각삼각형에서 대변이 $24$, 빗변이 $51$일 때 $\\sin A$는?",
-      "choices": [
-        "$\\frac{15}{17}$",
-        "$\\frac{8}{15}$",
-        "$\\frac{17}{8}$",
-        "$\\frac{15}{8}$",
-        "$\\frac{8}{17}$"
-      ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{24}{51}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
-        "skills": [
-          "삼각비",
-          "sin",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 18,
-      "question": "EBS 삼각비 기출 변형 핵심 · 코사인값 · 기출 변형 핵심 18형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. 직각삼각형에서 이웃한 변이 $72$, 빗변이 $75$일 때 $\\cos A$는?",
+      "id": 12,
+      "question": "직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
       "choices": [
         "$\\frac{7}{25}$",
         "$\\frac{24}{25}$",
-        "$\\frac{24}{7}$",
-        "$\\frac{25}{24}$",
-        "$\\frac{7}{24}$"
-      ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{72}{75}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
-        "skills": [
-          "삼각비",
-          "cos",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 19,
-      "question": "EBS 삼각비 기출 변형 핵심 · 탄젠트 길이 · 서술형 대비 19형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $\\tan A=\\frac{9}{12}$이고 이웃한 변이 $24$일 때 대변은?",
-      "choices": [
-        "$9$",
-        "$12$",
-        "$19$",
-        "$18$",
-        "$24$"
-      ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{24}=\\frac{9}{12}$에서 대변은 $18$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
-        "skills": [
-          "tan",
-          "길이",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 20,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합식 · 최고 수준/발전 20형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $\\sin A=\\frac{15}{39}$, $\\cos A=\\frac{36}{39}$일 때 $z(\\sin A+\\cos A)$는?",
-      "choices": [
-        "$51$",
-        "$15$",
-        "$36$",
-        "$39$",
-        "$52$"
-      ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{15}{39}+\\frac{36}{39})=51$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
-        "skills": [
-          "sin",
-          "cos",
-          "복합 계산",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 21,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합 계산 · 개념 확인 연산 21형. $\\sin A=\\frac{88}{187}$, $\\cos A=\\frac{165}{187}$일 때 $c(\\sin A+\\cos A)$의 값은?",
-      "choices": [
-        "$88$",
-        "$165$",
-        "$253$",
-        "$187$",
-        "$254$"
-      ],
-      "answer": 2,
-      "explanation": "$c(\\frac{88}{187}+\\frac{165}{187})=88+165=253$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
-        "skills": [
-          "sin",
-          "cos",
-          "비례식",
-          "핵심 공식 적용"
-        ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 22,
-      "question": "EBS 삼각비 기출 변형 핵심 · 사인값 · 대표 교과서 유형 22형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. 직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
-      "choices": [
-        "$\\frac{24}{25}$",
         "$\\frac{7}{24}$",
         "$\\frac{25}{7}$",
-        "$\\frac{24}{7}$",
-        "$\\frac{7}{25}$"
+        "$\\frac{24}{7}$"
       ],
-      "answer": 4,
+      "answer": 0,
       "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{21}{75}$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -743,8 +429,8 @@
       }
     },
     {
-      "id": 23,
-      "question": "EBS 삼각비 기출 변형 핵심 · 코사인값 · 기출 변형 핵심 23형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. 직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
+      "id": 13,
+      "question": "직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
       "choices": [
         "$\\frac{3}{5}$",
         "$\\frac{4}{5}$",
@@ -774,16 +460,330 @@
       }
     },
     {
+      "id": 14,
+      "question": "$\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
+      "choices": [
+        "$15$",
+        "$36$",
+        "$30$",
+        "$31$",
+        "$72$"
+      ],
+      "answer": 2,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{72}=\\frac{15}{36}$에서 대변은 $30$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "탄젠트 길이 · 서술형 대비",
+        "skills": [
+          "tan",
+          "길이",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
+      "choices": [
+        "$24$",
+        "$45$",
+        "$51$",
+        "$69$",
+        "$70$"
+      ],
+      "answer": 3,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{24}{51}+\\frac{45}{51})=69$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$\\sin A=\\frac{122580}{204300}$, $\\cos A=\\frac{163440}{204300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$286020$",
+        "$122580$",
+        "$163440$",
+        "$204300$",
+        "$286021$"
+      ],
+      "answer": 0,
+      "explanation": "$c(\\frac{122580}{204300}+\\frac{163440}{204300})=122580+163440=286020$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "skills": [
+          "sin",
+          "cos",
+          "비례식",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 17,
+      "question": "직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
+      "choices": [
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{12}{5}$"
+      ],
+      "answer": 1,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{15}{39}$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "사인값 · 대표 교과서 유형",
+        "skills": [
+          "삼각비",
+          "sin",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 18,
+      "question": "직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
+      "choices": [
+        "$\\frac{8}{17}$",
+        "$\\frac{15}{8}$",
+        "$\\frac{15}{17}$",
+        "$\\frac{17}{15}$",
+        "$\\frac{8}{15}$"
+      ],
+      "answer": 2,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{45}{51}$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "코사인값 · 기출 변형 핵심",
+        "skills": [
+          "삼각비",
+          "cos",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
+      "choices": [
+        "$21$",
+        "$72$",
+        "$43$",
+        "$42$",
+        "$144$"
+      ],
+      "answer": 3,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{144}=\\frac{21}{72}$에서 대변은 $42$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "탄젠트 길이 · 서술형 대비",
+        "skills": [
+          "tan",
+          "길이",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 대비",
+        "typeVariantId": 4,
+        "buildUpStage": "서술형 대비 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
+      "choices": [
+        "$9$",
+        "$12$",
+        "$15$",
+        "$22$",
+        "$21$"
+      ],
+      "answer": 4,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{9}{15}+\\frac{12}{15})=21$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "복합 추론"
+        ],
+        "typeVariant": "최고 수준/발전",
+        "typeVariantId": 5,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$\\sin A=\\frac{428632}{910843}$, $\\cos A=\\frac{803685}{910843}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$428632$",
+        "$1232317$",
+        "$803685$",
+        "$910843$",
+        "$1232318$"
+      ],
+      "answer": 1,
+      "explanation": "$c(\\frac{428632}{910843}+\\frac{803685}{910843})=428632+803685=1232317$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "skills": [
+          "sin",
+          "cos",
+          "비례식",
+          "핵심 공식 적용"
+        ],
+        "typeVariant": "개념 확인 연산",
+        "typeVariantId": 1,
+        "buildUpStage": "개념 확인 연산 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 22,
+      "question": "직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
+      "choices": [
+        "$\\frac{24}{25}$",
+        "$\\frac{7}{24}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{25}{7}$",
+        "$\\frac{24}{7}$"
+      ],
+      "answer": 2,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{21}{75}$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "사인값 · 대표 교과서 유형",
+        "skills": [
+          "삼각비",
+          "sin",
+          "표준 풀이 적용"
+        ],
+        "typeVariant": "대표 교과서 유형",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 23,
+      "question": "직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
+      "choices": [
+        "$\\frac{3}{5}$",
+        "$\\frac{4}{3}$",
+        "$\\frac{5}{4}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{3}{4}$"
+      ],
+      "answer": 3,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{12}{15}$이다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "코사인값 · 기출 변형 핵심",
+        "skills": [
+          "삼각비",
+          "cos",
+          "조건 해석"
+        ],
+        "typeVariant": "기출 변형 핵심",
+        "typeVariantId": 3,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
       "id": 24,
-      "question": "EBS 삼각비 기출 변형 핵심 · 탄젠트 길이 · 서술형 대비 24형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
+      "question": "$\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
       "choices": [
         "$15$",
         "$36$",
         "$31$",
-        "$30$",
-        "$72$"
+        "$72$",
+        "$30$"
       ],
-      "answer": 3,
+      "answer": 4,
       "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{72}=\\frac{15}{36}$에서 대변은 $30$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
@@ -806,7 +806,7 @@
     },
     {
       "id": 25,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합식 · 최고 수준/발전 25형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
+      "question": "$\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
       "choices": [
         "$69$",
         "$24$",
@@ -838,16 +838,16 @@
     },
     {
       "id": 26,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합 계산 · 개념 확인 연산 26형. $\\sin A=\\frac{84}{300}$, $\\cos A=\\frac{288}{300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "$\\sin A=\\frac{198897}{331495}$, $\\cos A=\\frac{265196}{331495}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$84$",
-        "$288$",
-        "$372$",
-        "$300$",
-        "$373$"
+        "$198897$",
+        "$265196$",
+        "$464093$",
+        "$331495$",
+        "$464094$"
       ],
       "answer": 2,
-      "explanation": "$c(\\frac{84}{300}+\\frac{288}{300})=84+288=372$이다.",
+      "explanation": "$c(\\frac{198897}{331495}+\\frac{265196}{331495})=198897+265196=464093$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -870,16 +870,16 @@
     },
     {
       "id": 27,
-      "question": "EBS 삼각비 기출 변형 핵심 · 사인값 · 대표 교과서 유형 27형. 교과서 대표 풀이 흐름을 떠올리며 해결하시오. 직각삼각형에서 대변이 $9$, 빗변이 $15$일 때 $\\sin A$는?",
+      "question": "직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
       "choices": [
-        "$\\frac{4}{5}$",
-        "$\\frac{3}{4}$",
-        "$\\frac{5}{3}$",
-        "$\\frac{4}{3}$",
-        "$\\frac{3}{5}$"
+        "$\\frac{12}{13}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{13}{5}$",
+        "$\\frac{5}{13}$",
+        "$\\frac{12}{5}$"
       ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{9}{15}$이다.",
+      "answer": 3,
+      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{15}{39}$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -901,16 +901,16 @@
     },
     {
       "id": 28,
-      "question": "EBS 삼각비 기출 변형 핵심 · 코사인값 · 기출 변형 핵심 28형. 학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. 직각삼각형에서 이웃한 변이 $36$, 빗변이 $39$일 때 $\\cos A$는?",
+      "question": "직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
       "choices": [
-        "$\\frac{5}{13}$",
-        "$\\frac{12}{13}$",
-        "$\\frac{12}{5}$",
-        "$\\frac{13}{12}$",
-        "$\\frac{5}{12}$"
+        "$\\frac{8}{17}$",
+        "$\\frac{15}{8}$",
+        "$\\frac{17}{15}$",
+        "$\\frac{8}{15}$",
+        "$\\frac{15}{17}$"
       ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{36}{39}$이다.",
+      "answer": 4,
+      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{45}{51}$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -932,16 +932,16 @@
     },
     {
       "id": 29,
-      "question": "EBS 삼각비 기출 변형 핵심 · 탄젠트 길이 · 서술형 대비 29형. 풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. $\\tan A=\\frac{24}{45}$이고 이웃한 변이 $90$일 때 대변은?",
+      "question": "$\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
       "choices": [
-        "$24$",
-        "$45$",
-        "$49$",
-        "$48$",
-        "$90$"
+        "$42$",
+        "$21$",
+        "$72$",
+        "$43$",
+        "$144$"
       ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{90}=\\frac{24}{45}$에서 대변은 $48$이다.",
+      "answer": 0,
+      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{144}=\\frac{21}{72}$에서 대변은 $42$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
@@ -963,16 +963,16 @@
     },
     {
       "id": 30,
-      "question": "EBS 삼각비 기출 변형 핵심 · 삼각비 복합식 · 최고 수준/발전 30형. 발전 문항처럼 숨은 조건까지 함께 확인하시오. $\\sin A=\\frac{21}{75}$, $\\cos A=\\frac{72}{75}$일 때 $z(\\sin A+\\cos A)$는?",
+      "question": "$\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
       "choices": [
-        "$93$",
+        "$9$",
         "$21$",
-        "$72$",
-        "$75$",
-        "$94$"
+        "$12$",
+        "$15$",
+        "$22$"
       ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{21}{75}+\\frac{72}{75})=93$이다.",
+      "answer": 1,
+      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{9}{15}+\\frac{12}{15})=21$이다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,

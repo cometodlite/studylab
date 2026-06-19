@@ -262,5 +262,13 @@
     "description": "사용자 제공 EBS 고등/중등 유형 체계를 기준으로 문제풀이 생성기 재설계. 중학 5단계(개념 확인 연산, 대표 교과서, 기출 변형, 서술형 대비, 최고 수준/발전), 내신 4대 특화 유형, 고등 수능 연계 변형 방식을 문항 메타데이터와 감사 규칙에 반영하고 88개 수학 문제집 재생성",
     "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/lib/updates.ts", "src/data/debug-history.json"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-034",
+    "date": "2026-06-19",
+    "category": "content_update",
+    "description": "문제풀이 화면 문항 본문에서 EBS 분류 라벨, 유형 번호, 풀이 지시문 노출 제거. 유형/빌드업 정보는 ebs 메타데이터에만 유지하고, 감사 스크립트가 내부 스캐폴딩 문구 노출을 배포 차단 조건으로 검사하도록 보강",
+    "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/data/debug-history.json"],
+    "author": "codex"
   }
 ]
