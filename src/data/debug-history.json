@@ -166,5 +166,13 @@
     "description": "AI 기반 문제 추천 추가. 학교 시험 채점 분석 결과의 취약 영역, 오답 유형, 학년·과목·난이도를 기준으로 유사 연습문제/실전회차와 자동 학습 경로를 결과 화면에 표시",
     "files": ["src/app/api/school-exams/[id]/grade/route.ts", "src/app/(protected)/exam/[id]/page.tsx", "src/app/(protected)/practice/[id]/page.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-022",
+    "date": "2026-06-19",
+    "category": "bug_fix",
+    "description": "관리자 통계의 활성 사용자 계산에서 관리자 권한 사용자(role==='admin') 제외. 최근 24시간 point_logs 기준 활성 사용자 수가 실제 학생/일반 사용자 중심으로 표시되도록 수정",
+    "files": ["src/app/api/admin/stats/route.ts"],
+    "author": "codex"
   }
 ]

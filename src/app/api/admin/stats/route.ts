@@ -61,7 +61,16 @@ export async function GET(req: NextRequest) {
       token,
       10000
     );
-    const activeUserIds = new Set(pointLogs24h.map(log => log.userId));
+    const adminUserIds = new Set(
+      allUsers
+        .filter(user => user.role === 'admin' && typeof user.uid === 'string')
+        .map(user => user.uid as string)
+    );
+    const activeUserIds = new Set(
+      pointLogs24h
+        .map(log => log.userId)
+        .filter((userId): userId is string => typeof userId === 'string' && !adminUserIds.has(userId))
+    );
     const activeUsers24h = activeUserIds.size;
 
     // 3. 오늘 시험 응시 수
