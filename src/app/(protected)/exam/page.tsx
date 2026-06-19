@@ -1,343 +1,176 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { useAuth } from '@/contexts/AuthContext';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-interface SchoolExamMeta {
-  id: string;
-  title: string;
-  category: string;
-  school: string;
-  grade: number;
-  subject: string;
-  sheet: number;
-  difficulty: string;
-  timeLimit: number;
-  totalScore: number;
-  mcCount: number;
-  essayCount: number;
-}
-
-const DIFF_COLOR: Record<string, string> = {
-  '보통': 'bg-blue-100 text-blue-700',
-  '어려움': 'bg-orange-100 text-orange-700',
+const UNITS_BY_GRADE: Record<number, string[]> = {
+  1: ['소인수분해'],
+  2: ['유리수와 순환소수', '식의 계산', '일차부등식', '일차함수'],
+  3: ['제곱근과 실수', '다항식의 전개와 인수분해', '이차방정식', '이차함수', '삼각비', '원의 성질', '통계'],
 };
 
-const SHEET_ICON = ['🌱', '📗', '📘', '📙', '🔥'];
+const DIFFICULTIES = ['기본', '유형별', '심화', '킬러'] as const;
+const COUNTS = [10, 20, 30] as const;
 
-const SUBJECT_META: Record<string, { icon: string; range: string }> = {
-  '수학': { icon: '📐', range: '일차부등식의 활용 ~ 함수 (p60–p131)' },
-  '과학': { icon: '🔬', range: 'Ⅲ. 빛과 파동 (p94–p133) · Ⅳ. 물질의 구성 (p134–p165)' },
-  '역사': { icon: '📜', range: 'p8–15, p22–71, p75–76, p78–81, p86–92, p102–113' },
-};
+export default function ExamBuilderPage() {
+  const router = useRouter();
+  const [grade, setGrade] = useState<number | null>(null);
+  const [units, setUnits] = useState<string[]>([]);
+  const [difficulties, setDifficulties] = useState<string[]>(['기본', '유형별']);
+  const [count, setCount] = useState(20);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-const CATEGORY_ICONS: Record<string, string> = {
-  '학교': '🏫',
-  '자격증': '📜',
-};
-
-const SCHOOL_KEY = 'studylab_selected_school';
-const CATEGORY_KEY = 'studylab_selected_category';
-
-function normalizeSchoolName(name: string): string {
-  if (!name) return '';
-  // "부천일신중" → "부천일신중학교", "서울고" → "서울고등학교" 등으로 매칭
-  const normalized = name.trim();
-  return normalized;
-}
-
-function findMatchingSchool(userInput: string, availableSchools: string[]): string | null {
-  const input = normalizeSchoolName(userInput);
-  if (!input) return null;
-
-  // 정확한 일치
-  if (availableSchools.includes(input)) return input;
-
-  // 접미사 무시 검색 (예: "부천일신중" → "부천일신중학교")
-  const suffixes = ['학교', '고등학교', '중학교', '초등학교'];
-  for (const suffix of suffixes) {
-    if (availableSchools.includes(input + suffix)) return input + suffix;
+  function selectGrade(g: number) {
+    setGrade(g);
+    setUnits([]);
   }
 
-  // 역방향: "부천일신중학교" 입력 시 "부천일신중"으로 제거된 버전 찾기
-  for (const suffix of suffixes) {
-    if (input.endsWith(suffix)) {
-      const base = input.slice(0, -suffix.length);
-      if (availableSchools.includes(base)) return base;
+  function toggleUnit(unit: string) {
+    setUnits(prev => prev.includes(unit) ? prev.filter(u => u !== unit) : [...prev, unit]);
+  }
+
+  function toggleDifficulty(diff: string) {
+    setDifficulties(prev => prev.includes(diff) ? prev.filter(d => d !== diff) : [...prev, diff]);
+  }
+
+  function toggleAllUnits() {
+    if (!grade) return;
+    const all = UNITS_BY_GRADE[grade];
+    setUnits(units.length === all.length ? [] : [...all]);
+  }
+
+  async function handleStart() {
+    if (!grade || units.length === 0 || difficulties.length === 0) return;
+    setLoading(true);
+    setError('');
+    try {
+      const params = new URLSearchParams({
+        grade: String(grade),
+        units: units.join(','),
+        difficulties: difficulties.join(','),
+        count: String(count),
+      });
+      const res = await fetch(`/api/exams/generate?${params}`);
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? '문제를 불러올 수 없습니다.');
+        return;
+      }
+      sessionStorage.setItem('generated-exam', JSON.stringify(data));
+      router.push('/exam/session');
+    } catch {
+      setError('오류가 발생했습니다. 다시 시도해주세요.');
+    } finally {
+      setLoading(false);
     }
   }
 
-  return null;
-}
-
-export default function ExamListPage() {
-  const { profile } = useAuth();
-  const [exams, setExams] = useState<SchoolExamMeta[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [activeCategory, setActiveCategory] = useState<string>('학교');
-  const [activeSchool, setActiveSchool] = useState<string>('');
-  const [activeSubject, setActiveSubject] = useState<string>('');
-
-  useEffect(() => {
-    fetch('/api/school-exams')
-      .then(r => r.json())
-      .then((data: SchoolExamMeta[]) => {
-        setExams(data);
-
-        const savedCategory = localStorage.getItem(CATEGORY_KEY) ?? '학교';
-        setActiveCategory(savedCategory);
-
-        const schoolsInCategory = [...new Set(data.filter(e => e.category === savedCategory).map(e => e.school))];
-        // Prefer profile school (정규화) > localStorage > first available
-        const profileSchool = profile?.school ?? '';
-        const matchedProfileSchool = profileSchool ? findMatchingSchool(profileSchool, schoolsInCategory) : null;
-        const savedSchool = localStorage.getItem(SCHOOL_KEY) ?? '';
-        const preferred = matchedProfileSchool ?? savedSchool;
-        const school = schoolsInCategory.includes(preferred) ? preferred : (schoolsInCategory[0] ?? '');
-        setActiveSchool(school);
-
-        const subjects = [...new Set(data.filter(e => e.category === savedCategory && e.school === school).map(e => e.subject))];
-        setActiveSubject(subjects[0] ?? '');
-
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
-
-  function selectCategory(cat: string) {
-    setActiveCategory(cat);
-    localStorage.setItem(CATEGORY_KEY, cat);
-
-    const schoolsInCat = [...new Set(exams.filter(e => e.category === cat).map(e => e.school))];
-    const school = schoolsInCat[0] ?? '';
-    setActiveSchool(school);
-    localStorage.setItem(SCHOOL_KEY, school);
-
-    const subjects = [...new Set(exams.filter(e => e.category === cat && e.school === school).map(e => e.subject))];
-    setActiveSubject(subjects[0] ?? '');
-  }
-
-  function selectSchool(school: string) {
-    setActiveSchool(school);
-    localStorage.setItem(SCHOOL_KEY, school);
-    const subjects = [...new Set(exams.filter(e => e.category === activeCategory && e.school === school).map(e => e.subject))];
-    setActiveSubject(subjects[0] ?? '');
-  }
-
-  const categories = [...new Set(exams.map(e => e.category))];
-  const schoolsInCategory = [...new Set(exams.filter(e => e.category === activeCategory).map(e => e.school))];
-  // 사용자 설정 학교가 실제로 DB에 있는지 확인 (정규화된 이름으로 매칭)
-  const matchedSchool = profile?.school ? findMatchingSchool(profile.school, schoolsInCategory) : null;
-  const isSchoolValid = activeCategory === '학교' && !!matchedSchool;
-  const subjectsForSchool = [...new Set(exams.filter(e => e.category === activeCategory && e.school === activeSchool).map(e => e.subject))];
-  const filtered = exams.filter(e => e.category === activeCategory && e.school === activeSchool && e.subject === activeSubject);
-  const meta = SUBJECT_META[activeSubject];
-
-  if (loading) return <div className="text-center py-20 text-gray-400">불러오는 중...</div>;
+  const canStart = grade !== null && units.length > 0 && difficulties.length > 0;
 
   return (
-    <div className="space-y-5">
+    <div className="max-w-lg mx-auto space-y-5">
       <div>
-        <h1 className="text-2xl font-bold text-gray-800">📋 시험</h1>
-        <p className="text-gray-500 text-sm mt-1">카테고리를 선택하고 모의고사를 응시하세요</p>
+        <h1 className="text-xl font-bold text-gray-800">시험 만들기</h1>
+        <p className="text-sm text-gray-500 mt-1">범위를 선택하면 해당 문제들로 모의시험을 구성해드립니다.</p>
       </div>
 
-      {/* 학교 카테고리 선택 시 학교 미설정 또는 미등록 경고 */}
-      {activeCategory === '학교' && !isSchoolValid && (
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 text-center space-y-3">
-          <div className="text-5xl">🏫</div>
-          <div>
-            <p className="font-semibold text-amber-900 mb-1">
-              {profile?.school ? '등록된 학교가 아니에요.' : '학교를 설정해주세요'}
-            </p>
-            <p className="text-sm text-amber-700 mb-3">
-              {profile?.school
-                ? '사용 가능한 학교가 아닌 경우 문의해주세요.'
-                : '설정에서 학교를 입력하면 해당 학교의 시험을 볼 수 있습니다.'}
-            </p>
-            <div className="flex gap-3 justify-center">
-              <Link href="/settings" className="inline-block bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition">
-                ⚙️ 설정 페이지로 이동
-              </Link>
-              {profile?.school && (
-                <Link href="/settings?tab=inquiry&type=학교 추가" className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition">
-                  💬 문의하기
-                </Link>
-              )}
-            </div>
+      {/* 학년 */}
+      <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+        <p className="text-sm font-semibold text-gray-700 mb-3">학년</p>
+        <div className="flex gap-2">
+          {[1, 2, 3].map(g => (
+            <button
+              key={g}
+              onClick={() => selectGrade(g)}
+              className={`flex-1 py-2.5 rounded-xl text-sm font-semibold transition border ${
+                grade === g
+                  ? 'bg-indigo-600 text-white border-indigo-600'
+                  : 'border-gray-200 text-gray-600 hover:border-indigo-300'
+              }`}
+            >
+              {g}학년
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* 단원 */}
+      {grade && (
+        <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-sm font-semibold text-gray-700">단원</p>
+            <button onClick={toggleAllUnits} className="text-xs text-indigo-600 font-medium">
+              {units.length === UNITS_BY_GRADE[grade].length ? '전체 해제' : '전체 선택'}
+            </button>
+          </div>
+          <div className="space-y-2.5">
+            {UNITS_BY_GRADE[grade].map(unit => (
+              <label key={unit} className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={units.includes(unit)}
+                  onChange={() => toggleUnit(unit)}
+                  className="w-4 h-4 rounded accent-indigo-600"
+                />
+                <span className="text-sm text-gray-700">{unit}</span>
+              </label>
+            ))}
           </div>
         </div>
       )}
 
-      {/* Category tabs & content (학교는 설정 필수) */}
-      {activeCategory === '학교' && !isSchoolValid ? null : (
-      <>
-      <div className="flex gap-2">
-        {['학교', '자격증', ...categories.filter(c => c !== '학교' && c !== '자격증')].map(cat => (
-          <button
-            key={cat}
-            onClick={() => selectCategory(cat)}
-            className={`px-5 py-2.5 rounded-xl text-sm font-bold transition border ${
-              activeCategory === cat
-                ? 'bg-indigo-600 text-white border-indigo-600'
-                : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
-            }`}
-          >
-            {CATEGORY_ICONS[cat] ?? '📄'} {cat}
-          </button>
-        ))}
+      {/* 난이도 */}
+      <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+        <p className="text-sm font-semibold text-gray-700 mb-3">난이도</p>
+        <div className="grid grid-cols-2 gap-2.5">
+          {DIFFICULTIES.map(diff => (
+            <label key={diff} className="flex items-center gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={difficulties.includes(diff)}
+                onChange={() => toggleDifficulty(diff)}
+                className="w-4 h-4 rounded accent-indigo-600"
+              />
+              <span className="text-sm text-gray-700">{diff}</span>
+            </label>
+          ))}
+        </div>
       </div>
 
-      {/* 학교 카테고리 */}
-      {activeCategory === '학교' && (
-        <>
-          {schoolsInCategory.length > 0 ? (
-            <>
-              {/* School selector */}
-              <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">학교 선택</p>
-                <div className="flex flex-wrap gap-2">
-                  {schoolsInCategory.map(school => (
-                    <button
-                      key={school}
-                      onClick={() => selectSchool(school)}
-                      className={`px-4 py-2 rounded-xl text-sm font-semibold transition border ${
-                        activeSchool === school
-                          ? 'bg-indigo-600 text-white border-indigo-600'
-                          : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      🏫 {school}
-                    </button>
-                  ))}
-                </div>
-              </div>
+      {/* 문제 수 */}
+      <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+        <p className="text-sm font-semibold text-gray-700 mb-3">문제 수</p>
+        <div className="flex gap-2">
+          {COUNTS.map(c => (
+            <button
+              key={c}
+              onClick={() => setCount(c)}
+              className={`flex-1 py-2.5 rounded-xl text-sm font-semibold transition border ${
+                count === c
+                  ? 'bg-indigo-600 text-white border-indigo-600'
+                  : 'border-gray-200 text-gray-600 hover:border-indigo-300'
+              }`}
+            >
+              {c}문제
+            </button>
+          ))}
+        </div>
+      </div>
 
-              {/* Subject tabs */}
-              <div className="flex gap-2 flex-wrap">
-                {subjectsForSchool.map(sub => {
-                  const sm = SUBJECT_META[sub];
-                  return (
-                    <button
-                      key={sub}
-                      onClick={() => setActiveSubject(sub)}
-                      className={`px-4 py-2 rounded-xl text-sm font-semibold transition ${
-                        activeSubject === sub
-                          ? 'bg-indigo-600 text-white'
-                          : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      {sm?.icon ?? '📄'} {sub}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Info banner */}
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
-                <p className="font-semibold mb-1">
-                  ⚠️ 시험 안내 — 🏫 {activeSchool}{meta ? ` · ${meta.icon} ${activeSubject}` : ''}
-                </p>
-                <ul className="space-y-0.5 text-amber-700">
-                  <li>· 시험 시간 <strong>40분</strong> — 시간 조정 불가</li>
-                  <li>· 5지선다 <strong>20문항</strong> (각 4점) + 서술형 <strong>5문항</strong> (각 4점) = 100점</li>
-                  {meta && <li>· 범위: {meta.range}</li>}
-                  <li>· 점수에 따라 포인트 지급 (90점↑ 500p · 80점↑ 350p · 70점↑ 250p · 60점↑ 150p · 50점↑ 100p · 50점 미만 50p)</li>
-                  <li>· 하루 1회 포인트 지급</li>
-                </ul>
-              </div>
-
-              {/* Exam cards */}
-              <div className="grid gap-4">
-                {filtered.map((exam, idx) => (
-                  <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
-                      <div>
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-sm font-bold text-gray-700">{exam.sheet}회</span>
-                          <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFF_COLOR[exam.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
-                            {exam.difficulty}
-                          </span>
-                        </div>
-                        <h2 className="font-bold text-gray-800">{exam.title}</h2>
-                        <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
-                          <span>⏱ {exam.timeLimit}분</span>
-                          <span>📝 객관식 {exam.mcCount}문항 + 서술형 {exam.essayCount}문항</span>
-                          <span>🏆 {exam.totalScore}점 만점</span>
-                        </div>
-                      </div>
-                    </div>
-                    <Link
-                      href={`/exam/${exam.id}`}
-                      className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
-                    >
-                      응시하기
-                    </Link>
-                  </div>
-                ))}
-                {filtered.length === 0 && (
-                  <div className="text-center py-16 text-gray-400">
-                    <div className="text-4xl mb-3">📭</div>
-                    <p>해당 과목의 시험이 없습니다.</p>
-                  </div>
-                )}
-              </div>
-            </>
-          ) : (
-            <div className="text-center py-20 text-gray-400">
-              <div className="text-4xl mb-3">🏫</div>
-              <p>등록된 학교 시험이 없습니다.</p>
-            </div>
-          )}
-        </>
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm text-red-600">
+          {error}
+        </div>
       )}
 
-      {/* 자격증 카테고리 */}
-      {activeCategory === '자격증' && (
-        <>
-          {exams.filter(e => e.category === '자격증').length > 0 ? (
-            <div className="grid gap-4">
-              {exams.filter(e => e.category === '자격증').map((exam, idx) => (
-                <div key={exam.id} className="bg-white rounded-xl border border-gray-200 p-5 flex items-center justify-between shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl mt-0.5">{SHEET_ICON[idx] ?? '📄'}</div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-sm font-bold text-gray-700">{exam.subject}</span>
-                        <span className={`text-xs rounded-full px-2 py-0.5 font-semibold ${DIFF_COLOR[exam.difficulty] ?? 'bg-gray-100 text-gray-600'}`}>
-                          {exam.difficulty}
-                        </span>
-                      </div>
-                      <h2 className="font-bold text-gray-800">{exam.title}</h2>
-                      <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
-                        <span>⏱ {exam.timeLimit}분</span>
-                        <span>📝 {exam.mcCount + exam.essayCount}문항</span>
-                        <span>🏆 {exam.totalScore}점 만점</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Link
-                    href={`/exam/${exam.id}`}
-                    className="shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition"
-                  >
-                    응시하기
-                  </Link>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-20 text-gray-400">
-              <div className="text-5xl mb-4">📜</div>
-              <p className="font-semibold text-gray-500 mb-1">준비 중입니다</p>
-              <p className="text-sm">자격증 모의고사가 곧 추가될 예정입니다.</p>
-            </div>
-          )}
-        </>
-      )}
-      </>
-      )}
+      <button
+        onClick={handleStart}
+        disabled={!canStart || loading}
+        className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 text-white font-semibold py-3.5 rounded-xl transition"
+      >
+        {loading ? '문제 구성 중...' : '시험 시작'}
+      </button>
     </div>
   );
 }
