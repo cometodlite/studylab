@@ -7,6 +7,7 @@ import { getIdToken } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import MathText from '@/components/MathText';
 import { Difficulty } from '@/lib/points';
+import type { UserAchievement } from '@/lib/achievements';
 
 interface Question {
   id: number;
@@ -32,6 +33,13 @@ interface GradeResponse {
   alreadyRewarded: boolean;
   reasons: string[];
   results: GradeResult[];
+  learningStreak?: {
+    streakDays: number;
+    bestStreak: number;
+    alreadyUpdatedToday: boolean;
+    achievementsUnlocked: UserAchievement[];
+    achievementPointsEarned: number;
+  } | null;
 }
 
 const DIFFICULTY_COLOR: Record<Difficulty, string> = {
@@ -133,6 +141,37 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
             </div>
           )}
         </div>
+
+        {gradeResult.learningStreak && (
+          <div className="bg-white rounded-2xl p-6 border border-red-100 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div>
+                <p className="text-xs font-bold text-red-500 uppercase">Learning Streak</p>
+                <h2 className="text-xl font-bold text-gray-800 mt-1">
+                  🔥 {gradeResult.learningStreak.streakDays}일 연속 학습 중
+                </h2>
+                <p className="text-sm text-gray-500 mt-1">최고 기록 {gradeResult.learningStreak.bestStreak}일</p>
+              </div>
+              {gradeResult.learningStreak.achievementPointsEarned > 0 && (
+                <div className="text-sm font-semibold text-green-600">
+                  +{gradeResult.learningStreak.achievementPointsEarned.toLocaleString()}p 보너스
+                </div>
+              )}
+            </div>
+            {gradeResult.learningStreak.achievementsUnlocked.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+                {gradeResult.learningStreak.achievementsUnlocked.map(achievement => (
+                  <div key={achievement.id} className="rounded-xl bg-red-50 border border-red-100 px-4 py-4">
+                    <div className="text-4xl mb-2">{achievement.emoji}</div>
+                    <p className="font-bold text-gray-800">{achievement.title}</p>
+                    <p className="text-xs text-gray-500 mt-1">{achievement.detail ?? achievement.description}</p>
+                    <p className="text-xs font-semibold text-green-600 mt-3">+{achievement.points.toLocaleString()}p</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="space-y-4">
           {gradeResult.results.map((r, i) => (

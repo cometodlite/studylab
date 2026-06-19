@@ -27,6 +27,9 @@ type AchievementDoc = {
 
 type UserDoc = {
   achievements?: unknown;
+  learningStreakDays?: unknown;
+  learningStreakBest?: unknown;
+  learningStreakLastDate?: unknown;
 };
 
 function startOfDayKST(date: Date) {
@@ -185,6 +188,11 @@ export async function GET(req: NextRequest) {
         ...monthly,
         badgeCount: monthlyBadges.length,
         badges: monthlyBadges,
+      },
+      learningStreak: {
+        currentDays: toNumber(userDoc?.learningStreakDays),
+        bestDays: toNumber(userDoc?.learningStreakBest),
+        lastDate: typeof userDoc?.learningStreakLastDate === 'string' ? userDoc.learningStreakLastDate : null,
       },
       message: growthMessage(weekly, weeklyBadges.length),
       generatedAt: now.toISOString(),

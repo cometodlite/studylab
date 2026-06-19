@@ -4,6 +4,7 @@ import path from 'path';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
 import { fsGet, fsSet, fsBatch, fsQuery, WriteOp } from '@/lib/firestore-rest';
 import { AchievementId, UserAchievement, createAchievement } from '@/lib/achievements';
+import { updateLearningStreak, type LearningStreakResult } from '@/lib/learning-streak';
 
 const SCHOOL_EXAM_DIR = path.join(process.cwd(), 'src', 'data', 'school-exams');
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
@@ -643,6 +644,17 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     achievementPointsEarned = 0;
   }
 
+  let learningStreak: LearningStreakResult | null = null;
+  try {
+    learningStreak = await updateLearningStreak(uid, token, now);
+    if (learningStreak.achievementsUnlocked.length > 0) {
+      achievementsUnlocked = [...achievementsUnlocked, ...learningStreak.achievementsUnlocked];
+      achievementPointsEarned += learningStreak.achievementPointsEarned;
+    }
+  } catch (e) {
+    console.error('[school-exams/grade] learning streak update failed:', e);
+  }
+
   // 분석 데이터 계산
   const mcCount = exam.questions.filter((q: RawQuestion) => q.type === 'mc').length;
   const essayCount = exam.questions.length - mcCount;
@@ -760,6 +772,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     achievementPointsEarned,
     achievementsUnlocked,
     alreadyRewarded,
+    learningStreak,
     results,
     analysis: {
       mcCorrectCount: mcCorrect,

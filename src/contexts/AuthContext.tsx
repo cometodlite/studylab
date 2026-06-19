@@ -25,6 +25,9 @@ interface UserProfile {
   school?: string | null;
   gradeLevel?: number | null;
   achievements?: UserAchievement[];
+  learningStreakDays?: number;
+  learningStreakBest?: number;
+  learningStreakLastDate?: string | null;
 }
 
 interface AuthContextType {

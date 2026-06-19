@@ -30,6 +30,11 @@ interface LearningReport {
     badgeCount: number;
     badges: Array<{ id: string; emoji: string; title: string; description: string; points: number }>;
   };
+  learningStreak: {
+    currentDays: number;
+    bestDays: number;
+    lastDate: string | null;
+  };
   message: string;
 }
 
@@ -45,6 +50,8 @@ export default function DashboardPage() {
   const [learningReport, setLearningReport] = useState<LearningReport | null>(null);
   const achievements = profile?.achievements ?? [];
   const achievementIds = new Set(achievements.map(achievement => achievement.id));
+  const learningStreakDays = learningReport?.learningStreak.currentDays ?? profile?.learningStreakDays ?? 0;
+  const learningStreakBest = learningReport?.learningStreak.bestDays ?? profile?.learningStreakBest ?? 0;
 
   const checkDailyLogin = useCallback(async () => {
     if (!user || !profile) return;
@@ -240,7 +247,7 @@ export default function DashboardPage() {
         </div>
 
         {/* 통계 카드 */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
             <div className="text-3xl font-bold text-indigo-600">{profile?.points.toLocaleString()}</div>
             <div className="text-sm text-gray-500 mt-1">총 포인트</div>
@@ -252,6 +259,10 @@ export default function DashboardPage() {
           <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
             <div className="text-3xl font-bold text-orange-500">{profile?.streakDays}일</div>
             <div className="text-sm text-gray-500 mt-1">연속 출석</div>
+          </div>
+          <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <div className="text-3xl font-bold text-red-500">{learningStreakDays}일</div>
+            <div className="text-sm text-gray-500 mt-1">연속 학습</div>
           </div>
         </div>
 
@@ -266,7 +277,7 @@ export default function DashboardPage() {
               <Link href="/exam" className="text-indigo-600 text-sm font-medium hover:underline">이번 주 기록 늘리기 →</Link>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 mb-5">
               <div className="rounded-xl bg-indigo-50 px-4 py-3">
                 <p className="text-xs text-indigo-500 font-semibold">이번 주 응시</p>
                 <p className="text-2xl font-bold text-indigo-700 mt-1">{learningReport.weekly.examCount}회</p>
@@ -282,6 +293,11 @@ export default function DashboardPage() {
               <div className="rounded-xl bg-purple-50 px-4 py-3">
                 <p className="text-xs text-purple-500 font-semibold">이번 달 응시</p>
                 <p className="text-2xl font-bold text-purple-700 mt-1">{learningReport.monthly.examCount}회</p>
+              </div>
+              <div className="rounded-xl bg-red-50 px-4 py-3">
+                <p className="text-xs text-red-500 font-semibold">학습 스트릭</p>
+                <p className="text-2xl font-bold text-red-700 mt-1">{learningReport.learningStreak.currentDays}일</p>
+                <p className="text-xs text-red-400 mt-0.5">최고 {learningStreakBest}일</p>
               </div>
             </div>
 

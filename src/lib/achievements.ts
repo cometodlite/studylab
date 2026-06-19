@@ -1,4 +1,4 @@
-export type AchievementId = 'honor-student' | 'perfectionist' | 'master';
+export type AchievementId = 'honor-student' | 'perfectionist' | 'master' | 'streak-7' | 'streak-15' | 'streak-30';
 
 export interface AchievementMeta {
   id: AchievementId;
@@ -35,9 +35,30 @@ export const ACHIEVEMENTS: Record<AchievementId, AchievementMeta> = {
     description: '한 시험 시리즈 전 회차 90점 이상 달성',
     points: 3000,
   },
+  'streak-7': {
+    id: 'streak-7',
+    emoji: '🔥',
+    title: '7일 연속',
+    description: '7일 연속 시험/문제 풀이 완료',
+    points: 700,
+  },
+  'streak-15': {
+    id: 'streak-15',
+    emoji: '🔥',
+    title: '15일 연속!',
+    description: '15일 연속 시험/문제 풀이 완료',
+    points: 1500,
+  },
+  'streak-30': {
+    id: 'streak-30',
+    emoji: '🔥',
+    title: '30일 연속',
+    description: '30일 연속 시험/문제 풀이 완료',
+    points: 3000,
+  },
 };
 
-export const ACHIEVEMENT_ORDER: AchievementId[] = ['honor-student', 'perfectionist', 'master'];
+export const ACHIEVEMENT_ORDER: AchievementId[] = ['honor-student', 'perfectionist', 'master', 'streak-7', 'streak-15', 'streak-30'];
 
 export function createAchievement(id: AchievementId, unlockedAt: Date, detail?: string): UserAchievement {
   return {

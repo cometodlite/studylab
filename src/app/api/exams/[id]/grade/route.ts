@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
 import { fsGet, fsSet, fsBatch, WriteOp } from '@/lib/firestore-rest';
+import { updateLearningStreak, type LearningStreakResult } from '@/lib/learning-streak';
 import { calcExamPoints, Difficulty } from '@/lib/points';
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
@@ -154,6 +155,13 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
     }
   }
 
+  let learningStreak: LearningStreakResult | null = null;
+  try {
+    learningStreak = await updateLearningStreak(uid, token, now);
+  } catch (e) {
+    console.error('[exams/grade] learning streak update failed:', e);
+  }
+
   return NextResponse.json({
     score: correct,
     total,
@@ -162,5 +170,6 @@ export async function POST(req: NextRequest, ctx: RouteContext<'/api/exams/[id]/
     alreadyRewarded,
     reasons: alreadyRewarded ? ['오늘 이미 포인트를 받은 시험입니다. (내일 다시 도전하세요)'] : pts.reasons,
     results,
+    learningStreak,
   });
 }

@@ -182,5 +182,13 @@
     "description": "주간/월간 학습 리포트 추가. 사용자별 학교시험·연습문제 응시 현황, 평균/최고 점수, 획득 포인트, 배지 획득 현황과 성장 메시지를 대시보드에 표시",
     "files": ["src/app/api/reports/learning/route.ts", "src/app/(protected)/dashboard/page.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-024",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "학습 스트릭 기능 추가. 시험/문제 풀이 완료일을 KST 기준으로 연속 기록하고 7일·15일·30일 학습 스트릭 배지와 보너스 포인트, 대시보드 표시를 제공",
+    "files": ["src/lib/learning-streak.ts", "src/lib/achievements.ts", "src/app/api/exams/[id]/grade/route.ts", "src/app/api/school-exams/[id]/grade/route.ts", "src/app/api/reports/learning/route.ts", "src/app/(protected)/dashboard/page.tsx", "src/app/(protected)/practice/[id]/page.tsx", "src/contexts/AuthContext.tsx", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]
