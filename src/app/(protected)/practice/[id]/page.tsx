@@ -206,6 +206,11 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
                     {ci + 1}. <MathText text={c} />
                   </div>
                 ))}
+                {r.yourAnswer === -1 && (
+                  <div className="text-sm px-3 py-1.5 rounded-lg bg-gray-100 text-gray-500">
+                    ⊘ 잘 모르겠음으로 건너뜀
+                  </div>
+                )}
               </div>
               {r.explanation && (
                 <div className="mt-3 ml-7 text-sm text-gray-500 bg-gray-50 rounded-lg px-3 py-2">
@@ -277,6 +282,16 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
               {ci + 1}. <MathText text={c} />
             </button>
           ))}
+          <button
+            onClick={() => selectAnswer(q.id, -1)}
+            className={`w-full text-left px-4 py-3 rounded-xl text-sm transition border ${
+              answers[q.id] === -1
+                ? 'border-gray-400 bg-gray-100 text-gray-600 font-semibold'
+                : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-500'
+            }`}
+          >
+            6. 잘 모르겠음
+          </button>
         </div>
       </div>
 
@@ -288,6 +303,7 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
             onClick={() => setCurrent(i)}
             className={`w-8 h-8 rounded-lg text-xs font-semibold transition ${
               i === current ? 'bg-indigo-600 text-white'
+                : answers[qq.id] === -1 ? 'bg-gray-200 text-gray-500'
                 : answers[qq.id] !== undefined ? 'bg-indigo-100 text-indigo-700'
                 : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
             }`}
@@ -315,7 +331,8 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
         </button>
         <button
           onClick={handleSubmit}
-          disabled={submitting || answered === 0}
+          disabled={submitting || answered < exam.questions.length}
+          title={answered < exam.questions.length ? `모든 문항에 답하거나 '잘 모르겠음'을 선택해야 제출할 수 있습니다. (${answered}/${exam.questions.length})` : undefined}
           className={`ml-auto text-sm font-semibold px-5 py-2.5 rounded-xl transition disabled:opacity-50 ${
             allAnswered
               ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
