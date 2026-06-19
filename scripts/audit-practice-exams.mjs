@@ -25,18 +25,47 @@ const redFlagPatterns = [
 ];
 
 const ebsRoles = {
-  '기본': { role: '개념 확인', steps: 1 },
-  '유형별': { role: '대표 유형', steps: 2 },
-  '심화': { role: '조건 결합', steps: 4 },
-  '킬러': { role: '고난도 추론', steps: 6 },
+  '기본': { role: '개념 확인 연산', steps: 1, middleStage: '개념 확인 연산 유형' },
+  '유형별': { role: '대표 교과서 유형', steps: 2, middleStage: '대표 교과서 유형' },
+  '심화': { role: '기출 변형 핵심', steps: 4, middleStage: '기출 변형 핵심 유형' },
+  '킬러': { role: '최고 수준 발전', steps: 6, middleStage: '최고 수준/발전 유형' },
 };
 
 const ebsDescriptionPhrases = [
+  'EBS 중학 개념 확인형: 핵심 공식과 정의를 바로 적용합니다.',
+  'EBS 중학 대표 유형형: 교과서 필수 표준 문항을 연습합니다.',
+  'EBS 중학 기출 변형형: 내신 빈출 조건을 해석하고 연결합니다.',
+  'EBS 중학 발전형: 복합 조건과 추론으로 변별력 문항을 대비합니다.',
   'EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다.',
   'EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다.',
   'EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다.',
   'EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다.',
 ];
+
+const middleBuildUpStages = new Set([
+  '개념 확인 연산 유형',
+  '대표 교과서 유형',
+  '기출 변형 핵심 유형',
+  '서술형 대비 유형',
+  '최고 수준/발전 유형',
+]);
+
+const middleSchoolExamTypes = new Set([
+  '개념 정의 직접 확인',
+  '대표 표준 문항',
+  '말장난 방지 보기 고르기',
+  '실생활 문장제 독해',
+  '도형의 성질 및 보조선 추론',
+  '오류 찾기 및 과정 교정',
+]);
+
+const ebsTransformPatterns = new Set([
+  '개념·원리 직접 활용',
+  '문항의 축소·확대·변형',
+  '조건 및 구하는 값 변경',
+  '풀이 과정 단계화',
+  '조건의 강화·완화',
+]);
 
 function scanJsonFiles(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -103,6 +132,12 @@ function auditExam(filePath) {
     if (exam.ebsStyle.expectedSteps !== expectedEbs.steps) {
       ebsProblems.push(`ebsStyle.expectedSteps should be ${expectedEbs.steps}`);
     }
+    if (exam.ebsStyle.middleStage !== expectedEbs.middleStage) {
+      ebsProblems.push(`ebsStyle.middleStage should be "${expectedEbs.middleStage}"`);
+    }
+    if (!exam.ebsStyle.middleTaxonomy || typeof exam.ebsStyle.middleTaxonomy !== 'object') {
+      ebsProblems.push('ebsStyle.middleTaxonomy metadata is missing');
+    }
   }
 
   if (typeof exam.description === 'string') {
@@ -164,6 +199,15 @@ function auditExam(filePath) {
       }
       if (!question.ebs.typeVariant) {
         ebsProblems.push(`Q${qId}: ebs.typeVariant is missing`);
+      }
+      if (!middleBuildUpStages.has(question.ebs.buildUpStage)) {
+        ebsProblems.push(`Q${qId}: ebs.buildUpStage is invalid or missing`);
+      }
+      if (!middleSchoolExamTypes.has(question.ebs.schoolExamType)) {
+        ebsProblems.push(`Q${qId}: ebs.schoolExamType is invalid or missing`);
+      }
+      if (!ebsTransformPatterns.has(question.ebs.transformPattern)) {
+        ebsProblems.push(`Q${qId}: ebs.transformPattern is invalid or missing`);
       }
     }
   }

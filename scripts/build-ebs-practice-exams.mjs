@@ -5,63 +5,127 @@ const mathDir = path.join(process.cwd(), 'src', 'data', 'math');
 
 const DIFFICULTY_PROFILE = {
   '기본': {
-    role: '개념 확인',
+    role: '개념 확인 연산',
     steps: 1,
-    description: 'EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다.',
+    middleStage: '개념 확인 연산 유형',
+    description: 'EBS 중학 개념 확인형: 핵심 공식과 정의를 바로 적용합니다.',
   },
   '유형별': {
-    role: '대표 유형',
+    role: '대표 교과서 유형',
     steps: 2,
-    description: 'EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다.',
+    middleStage: '대표 교과서 유형',
+    description: 'EBS 중학 대표 유형형: 교과서 필수 표준 문항을 연습합니다.',
   },
   '심화': {
-    role: '조건 결합',
+    role: '기출 변형 핵심',
     steps: 4,
-    description: 'EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다.',
+    middleStage: '기출 변형 핵심 유형',
+    description: 'EBS 중학 기출 변형형: 내신 빈출 조건을 해석하고 연결합니다.',
   },
   '킬러': {
-    role: '고난도 추론',
+    role: '최고 수준 발전',
     steps: 6,
-    description: 'EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다.',
+    middleStage: '최고 수준/발전 유형',
+    description: 'EBS 중학 발전형: 복합 조건과 추론으로 변별력 문항을 대비합니다.',
   },
 };
 
 const TYPE_VARIANTS = [
   {
     id: 1,
-    label: '핵심 계산',
-    skill: '핵심 계산',
+    label: '개념 확인 연산',
+    buildUpStage: '개념 확인 연산 유형',
+    schoolExamType: '개념 정의 직접 확인',
+    transformPattern: '개념·원리 직접 활용',
+    skill: '핵심 공식 적용',
     stem: '',
     explanation: '',
   },
   {
     id: 2,
-    label: '조건 해석',
-    skill: '조건 해석',
-    stem: '조건을 식으로 옮기는 과정을 먼저 생각하시오. ',
-    explanation: '조건을 수식으로 정리한 뒤 계산한다. ',
+    label: '대표 교과서 유형',
+    buildUpStage: '대표 교과서 유형',
+    schoolExamType: '대표 표준 문항',
+    transformPattern: '문항의 축소·확대·변형',
+    skill: '표준 풀이 적용',
+    stem: '교과서 대표 풀이 흐름을 떠올리며 해결하시오. ',
+    explanation: '표준 풀이 틀에 맞춰 조건을 정리한다. ',
   },
   {
     id: 3,
-    label: '역추론',
-    skill: '역추론',
-    stem: '구하려는 값을 거꾸로 추적하여 해결하시오. ',
-    explanation: '목표값에서 필요한 중간 조건을 거꾸로 확인한다. ',
+    label: '기출 변형 핵심',
+    buildUpStage: '기출 변형 핵심 유형',
+    schoolExamType: '실생활 문장제 독해',
+    transformPattern: '조건 및 구하는 값 변경',
+    skill: '조건 해석',
+    stem: '학교 시험 변형처럼 조건을 식으로 옮겨 해결하시오. ',
+    explanation: '문장 속 필요한 조건을 골라 수식으로 바꾼다. ',
   },
   {
     id: 4,
-    label: '보기 판별',
-    skill: '보기 판별',
-    stem: '보기 중 조건을 만족하는 값을 고르시오. ',
-    explanation: '각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. ',
+    label: '서술형 대비',
+    buildUpStage: '서술형 대비 유형',
+    schoolExamType: '오류 찾기 및 과정 교정',
+    transformPattern: '풀이 과정 단계화',
+    skill: '과정 점검',
+    stem: '풀이 과정을 단계별로 점검한다고 생각하고 해결하시오. ',
+    explanation: '계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. ',
   },
   {
     id: 5,
-    label: '실전 적용',
-    skill: '실전 적용',
-    stem: '실전 문항처럼 필요한 개념을 연결하여 해결하시오. ',
-    explanation: '핵심 개념을 적용한 뒤 계산 결과를 확인한다. ',
+    label: '최고 수준/발전',
+    buildUpStage: '최고 수준/발전 유형',
+    schoolExamType: '말장난 방지 보기 고르기',
+    transformPattern: '조건의 강화·완화',
+    skill: '복합 추론',
+    stem: '발전 문항처럼 숨은 조건까지 함께 확인하시오. ',
+    explanation: '조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. ',
   },
+];
+
+const MIDDLE_EBS_TAXONOMY = {
+  buildUpStages: [
+    '개념 확인 연산 유형',
+    '대표 교과서 유형',
+    '기출 변형 핵심 유형',
+    '서술형 대비 유형',
+    '최고 수준/발전 유형',
+  ],
+  schoolExamTypes: [
+    '개념 정의 직접 확인',
+    '대표 표준 문항',
+    '말장난 방지 보기 고르기',
+    '실생활 문장제 독해',
+    '도형의 성질 및 보조선 추론',
+    '오류 찾기 및 과정 교정',
+  ],
+  gradeFocus: {
+    1: '문자와 식, 정비례·반비례, 말을 식으로 바꾸는 기초 활용',
+    2: '연립방정식 활용, 일차함수 그래프 해석, 내신용 심화 변형',
+    3: '제곱근, 인수분해, 이차방정식, 이차함수로 이어지는 고등 수학 기초',
+  },
+};
+
+const HIGH_SCHOOL_EBS_REFERENCE = {
+  levels: [
+    '개념 체크 및 예제/유제',
+    'Level 1 기초 연습',
+    'Level 2 기본 연습',
+    'Level 3 실력 완성',
+  ],
+  transformPatterns: [
+    '개념·원리 간접 활용',
+    '문항의 축소·확대·변형',
+    '자료 및 상황 활용',
+    '조건의 강화·완화',
+  ],
+};
+
+const LEGACY_DESCRIPTION_PHRASES = [
+  'EBS 개념 확인형: 핵심 정의와 공식 1개를 바로 적용합니다.',
+  'EBS 대표 유형형: 자주 출제되는 풀이 틀을 숫자와 조건을 바꾸어 적용합니다.',
+  'EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다.',
+  'EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다.',
 ];
 
 const FILE_FAMILIES = [
@@ -207,8 +271,13 @@ function decorateQuestion(question, core, role, typeTag, index) {
 
 function cleanDescription(description = '') {
   let cleaned = description;
-  for (const profile of Object.values(DIFFICULTY_PROFILE)) {
-    cleaned = cleaned.split(profile.description).join('');
+  const phrases = [
+    ...Object.values(DIFFICULTY_PROFILE).map(profile => profile.description),
+    ...LEGACY_DESCRIPTION_PHRASES,
+  ];
+
+  for (const phrase of phrases) {
+    cleaned = cleaned.split(phrase).join('');
   }
 
   return cleaned
@@ -216,7 +285,14 @@ function cleanDescription(description = '') {
     .trim();
 }
 
-function applyTypeVariant(question, variant) {
+function schoolExamTypeFor(variant, family) {
+  if (['circle', 'trigonometry'].includes(family) && variant.id >= 3) {
+    return '도형의 성질 및 보조선 추론';
+  }
+  return variant.schoolExamType;
+}
+
+function applyTypeVariant(question, variant, family) {
   return {
     ...question,
     question: `${variant.stem}${question.question}`,
@@ -226,6 +302,9 @@ function applyTypeVariant(question, variant) {
       typeTag: `${question.ebs.typeTag} · ${variant.label}`,
       typeVariant: variant.label,
       typeVariantId: variant.id,
+      buildUpStage: variant.buildUpStage,
+      schoolExamType: schoolExamTypeFor(variant, family),
+      transformPattern: variant.transformPattern,
       skills: unique([...question.ebs.skills, variant.skill]),
     },
   };
@@ -1047,7 +1126,8 @@ function buildExam(file) {
     const rawQuestion = generator(index + 1 + seedOffset, current.difficulty, current.id);
     const question = applyTypeVariant(
       familyTypeQuestion(family, index + 1 + seedOffset, current.difficulty, variant.id, rawQuestion),
-      variant
+      variant,
+      family
     );
     return {
       ...question,
@@ -1070,10 +1150,13 @@ function buildExam(file) {
     unit: current.unit,
     difficulty: current.difficulty,
     ebsStyle: {
-      version: 2,
+      version: 3,
       role: profile.role,
       expectedSteps: profile.steps,
+      middleStage: profile.middleStage,
       typeVariantCount: TYPE_VARIANTS.length,
+      middleTaxonomy: MIDDLE_EBS_TAXONOMY,
+      highSchoolReference: HIGH_SCHOOL_EBS_REFERENCE,
       family,
       generatedAt: '2026-06-19',
     },

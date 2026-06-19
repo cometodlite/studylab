@@ -254,5 +254,13 @@
     "description": "메인 업데이트 내역에서 문제풀이 품질검수·감사 스크립트·버그 수정 등 내부 운영성 항목 제거. 사용자에게 보이는 업데이트는 학습자가 체감할 기능 설명 중심으로 정리",
     "files": ["src/lib/updates.ts", "src/data/debug-history.json"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-033",
+    "date": "2026-06-19",
+    "category": "content_rebuild",
+    "description": "사용자 제공 EBS 고등/중등 유형 체계를 기준으로 문제풀이 생성기 재설계. 중학 5단계(개념 확인 연산, 대표 교과서, 기출 변형, 서술형 대비, 최고 수준/발전), 내신 4대 특화 유형, 고등 수능 연계 변형 방식을 문항 메타데이터와 감사 규칙에 반영하고 88개 수학 문제집 재생성",
+    "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/lib/updates.ts", "src/data/debug-history.json"],
+    "author": "codex"
   }
 ]
