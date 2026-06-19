@@ -26,6 +26,44 @@ const DIFFICULTY_PROFILE = {
   },
 };
 
+const TYPE_VARIANTS = [
+  {
+    id: 1,
+    label: '핵심 계산',
+    skill: '핵심 계산',
+    stem: '',
+    explanation: '',
+  },
+  {
+    id: 2,
+    label: '조건 해석',
+    skill: '조건 해석',
+    stem: '조건을 식으로 옮기는 과정을 먼저 생각하시오. ',
+    explanation: '조건을 수식으로 정리한 뒤 계산한다. ',
+  },
+  {
+    id: 3,
+    label: '역추론',
+    skill: '역추론',
+    stem: '구하려는 값을 거꾸로 추적하여 해결하시오. ',
+    explanation: '목표값에서 필요한 중간 조건을 거꾸로 확인한다. ',
+  },
+  {
+    id: 4,
+    label: '보기 판별',
+    skill: '보기 판별',
+    stem: '보기 중 조건을 만족하는 값을 고르시오. ',
+    explanation: '각 보기의 의미를 조건과 대조하면 정답을 고를 수 있다. ',
+  },
+  {
+    id: 5,
+    label: '실전 적용',
+    skill: '실전 적용',
+    stem: '실전 문항처럼 필요한 개념을 연결하여 해결하시오. ',
+    explanation: '핵심 개념을 적용한 뒤 계산 결과를 확인한다. ',
+  },
+];
+
 const FILE_FAMILIES = [
   [/factorization/, 'factorization'],
   [/rational/, 'rational'],
@@ -162,9 +200,9 @@ function titleCore(title) {
   return title.split('—')[0].trim();
 }
 
-function decorateQuestion(question, core, role, index) {
+function decorateQuestion(question, core, role, typeTag, index) {
   const variantNo = String(index + 1).padStart(2, '0');
-  return `EBS ${core} ${role} ${variantNo}형. ${question}`;
+  return `EBS ${core} ${role} · ${typeTag} ${variantNo}형. ${question}`;
 }
 
 function cleanDescription(description = '') {
@@ -176,6 +214,21 @@ function cleanDescription(description = '') {
   return cleaned
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function applyTypeVariant(question, variant) {
+  return {
+    ...question,
+    question: `${variant.stem}${question.question}`,
+    explanation: `${variant.explanation}${question.explanation}`,
+    ebs: {
+      ...question.ebs,
+      typeTag: `${question.ebs.typeTag} · ${variant.label}`,
+      typeVariant: variant.label,
+      typeVariantId: variant.id,
+      skills: unique([...question.ebs.skills, variant.skill]),
+    },
+  };
 }
 
 function factorizationQuestion(id, difficulty) {
@@ -619,6 +672,352 @@ function statisticsQuestion(id, difficulty) {
     `범위는 ${math(`${max}-${min}=${max - min}`)}, 사분위범위는 ${math(`${q3}-${q1}=${q3 - q1}`)}이므로 합은 ${math(answer)}이다.`);
 }
 
+function levelOf(difficulty) {
+  return { '기본': 0, '유형별': 1, '심화': 2, '킬러': 3 }[difficulty] ?? 0;
+}
+
+function familyTypeQuestion(family, id, difficulty, variantId, fallback) {
+  if (variantId === 1) return fallback;
+
+  const level = levelOf(difficulty);
+  const a = id % 6 + 2 + level;
+  const b = id % 5 + 3 + level;
+  const c = id % 4 + 1 + level;
+
+  if (family === 'factorization') {
+    if (variantId === 2) {
+      const p = id % 4 + 2;
+      const qv = id % 3 + 1 + level;
+      const answer = (p + 1) * (qv + 1);
+      return q(id, difficulty, '약수의 개수 판별', ['소인수분해', '약수의 개수'],
+        `${math(`2^{${p}}\\times3^{${qv}}`)}의 양의 약수의 개수는?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `약수의 개수는 각 지수에 ${math(1)}을 더해 곱하므로 ${math(`(${p}+1)(${qv}+1)=${answer}`)}이다.`);
+    }
+    if (variantId === 3) {
+      const x = 12 + id + level * 3;
+      const y = 18 + id * 2 + level * 5;
+      const answer = gcd(x, y);
+      return q(id, difficulty, '최대공약수 조건', ['최대공약수', '공약수'],
+        `${math(x)}와 ${math(y)}의 공약수 중 가장 큰 수는?`,
+        answer, [Math.max(1, answer - 2), answer + 1, answer + 2, x + y],
+        `두 수의 공통 소인수를 모으면 최대공약수는 ${math(answer)}이다.`);
+    }
+    if (variantId === 4) {
+      const p = id % 3 + 1 + level;
+      const qv = id % 4 + 1;
+      const n = 2 ** p * 3 ** qv * 5;
+      const answer = (p % 2 ? 2 : 1) * (qv % 2 ? 3 : 1) * 5;
+      return q(id, difficulty, '완전제곱수 만들기', ['소인수분해', '제곱수 조건'],
+        `${math(n)}에 가장 작은 자연수 ${math('m')}을 곱해 완전제곱수를 만들 때 ${math('m')}은?`,
+        answer, [answer * 2, answer + 1, Math.max(1, answer - 1), answer * 3],
+        `완전제곱수는 소인수의 지수가 모두 짝수여야 하므로 부족한 지수를 보충하면 ${math(answer)}이다.`);
+    }
+    const p = id % 4 + 2 + level;
+    const qv = id % 3 + 2;
+    const answer = p * qv;
+    return q(id, difficulty, '최소공배수 활용', ['최소공배수', '배수 조건'],
+      `${math(p)}일마다 오는 일정과 ${math(qv)}일마다 오는 일정이 오늘 겹쳤다. 다시 겹치는 가장 빠른 날은 며칠 뒤인가?`,
+      lcm(p, qv), [answer, p + qv, Math.abs(p - qv), lcm(p, qv) + 1],
+      `두 일정이 다시 겹치는 주기는 ${math(p)}와 ${math(qv)}의 최소공배수이므로 ${math(lcm(p, qv))}일이다.`);
+  }
+
+  if (family === 'rational') {
+    if (variantId === 2) {
+      const den = [6, 8, 12, 20, 28][id % 5] + level * 5;
+      const answer = removeFactors(den, [2, 5]);
+      return q(id, difficulty, '유한소수 약분 조건', ['유한소수', '분모 소인수'],
+        `${math(`\\frac{x}{${den}}`)}가 유한소수가 되게 하는 가장 작은 자연수 ${math('x')}는?`,
+        answer, [answer + 1, answer + 2, Math.max(1, answer - 1), den],
+        `분모에서 ${math(2)}, ${math(5)}가 아닌 소인수를 약분해야 하므로 최소 ${math(answer)}가 필요하다.`);
+    }
+    if (variantId === 3) {
+      const n = id % 9 + 1;
+      const answer = frac(9 * n + a, 90);
+      return q(id, difficulty, '순환소수 분수 변환', ['순환소수', '분수 변환'],
+        `${math(`0.${n}\\dot{${a}}`)}를 분수로 나타낸 꼴과 같은 것은?`,
+        answer, [frac(9 * n + a + 1, 90), frac(n * 10 + a, 99), frac(n + a, 90), frac(9 * n + a, 900)],
+        `${math(`0.${n}\\dot{${a}}=\\frac{${n}${a}-${n}}{90}=\\frac{${9 * n + a}}{90}`)}이다.`);
+    }
+    if (variantId === 4) {
+      const den = [7, 11, 13, 17][id % 4];
+      return q(id, difficulty, '순환마디 길이 판별', ['순환소수', '나눗셈'],
+        `${math(`\\frac{1}{${den}}`)}를 소수로 나타내면 어떤 소수인가?`,
+        '순환소수', ['유한소수', '정수', '자연수', '무리수'],
+        `분모에 ${math(2)}, ${math(5)}가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.`);
+    }
+    const n = id % 7 + 2;
+    const den = [4, 5, 8, 10, 20][id % 5];
+    return q(id, difficulty, '소수와 분수 크기 비교', ['유리수', '크기 비교'],
+      `${math(`\\frac{${n}}{${den}}`)}을 소수로 나타낸 값에 가장 가까운 것은?`,
+      frac(n, den), [frac(n + 1, den), frac(n, den + 1), frac(Math.max(1, n - 1), den), frac(n, den * 2)],
+      `분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.`);
+  }
+
+  if (family === 'algebra') {
+    if (variantId === 2) {
+      const answer = a + b - c;
+      return q(id, difficulty, '동류항 정리', ['동류항', '문자식'],
+        `${math(`${a}x+${b}x-${c}x`)}를 간단히 하면 ${math('kx')}이다. ${math('k')}는?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `동류항의 계수만 더하면 ${math(`${a}+${b}-${c}=${answer}`)}이다.`);
+    }
+    if (variantId === 3) {
+      return q(id, difficulty, '단항식 나눗셈', ['지수법칙', '단항식'],
+        `${math(`${a * b}x^{${c + 2}}y`)}를 ${math(`${a}x^2`)}로 나누었을 때 계수는?`,
+        b, [a, a + b, b + 1, Math.max(1, b - 1)],
+        `계수는 ${math(`${a * b}\\div${a}=${b}`)}이고 문자는 지수법칙으로 정리한다.`);
+    }
+    if (variantId === 4) {
+      const answer = a * c + b;
+      return q(id, difficulty, '전개식 계수 찾기', ['분배법칙', '계수'],
+        `${math(`(${a}x+${b})(${c}x+1)`)}을 전개했을 때 ${math('x')}의 계수는?`,
+        answer, [answer - a, answer + c, a * c, b * c],
+        `${math('x')}항은 ${math(`${a}x`)}와 ${math(`${b * c}x`)}에서 나오므로 계수는 ${math(answer)}이다.`);
+    }
+    const x = id % 4 + 1;
+    const answer = a * x + b;
+    return q(id, difficulty, '문자식 대입', ['대입', '식의 값'],
+      `${math(`A=${a}x+${b}`)}일 때, ${math(`x=${x}`)}이면 ${math('A')}의 값은?`,
+      answer, [answer - a, answer + a, a + b, a * b],
+      `문자 ${math('x')}에 ${math(x)}를 대입하면 ${math(`${a}\\times${x}+${b}=${answer}`)}이다.`);
+  }
+
+  if (family === 'inequality') {
+    if (variantId === 2) {
+      const answer = a + b + 1;
+      return q(id, difficulty, '가장 작은 정수해', ['부등식', '정수해'],
+        `${math(`x-${a}>${b}`)}를 만족하는 가장 작은 정수 ${math('x')}는?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `${math(`x>${a + b}`)}이므로 가장 작은 정수는 ${math(answer)}이다.`);
+    }
+    if (variantId === 3) {
+      const limit = b + level;
+      return q(id, difficulty, '자연수해 개수', ['일차부등식', '해의 개수'],
+        `${math(`${a}x\\le ${a * limit}`)}을 만족하는 자연수 ${math('x')}의 개수는?`,
+        limit, [limit - 1, limit + 1, limit + 2, a],
+        `${math(`x\\le${limit}`)}이므로 자연수 해는 ${math(limit)}개이다.`);
+    }
+    if (variantId === 4) {
+      const low = c;
+      const high = c + b;
+      const answer = high - low + 1;
+      return q(id, difficulty, '범위 안 정수 개수', ['연립부등식', '정수 범위'],
+        `${math(`${low - 1}<x\\le${high}`)}를 만족하는 정수의 개수는?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `가능한 정수는 ${math(`${low}`)}부터 ${math(`${high}`)}까지이므로 ${math(answer)}개이다.`);
+    }
+    const answer = a * b - 1;
+    return q(id, difficulty, '매개변수 최대 정수', ['매개변수', '최대 정수해'],
+      `${math(`\\frac{x+1}{${a}}<${b}`)}를 만족하는 가장 큰 정수 ${math('x')}는?`,
+      answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+      `${math(`x+1<${a * b}`)}이므로 ${math(`x<${a * b - 1}`)}이다.`);
+  }
+
+  if (family === 'linear') {
+    if (variantId === 2) {
+      const x = c;
+      const answer = a * x - b;
+      return q(id, difficulty, '일차함수 값', ['일차함수', '대입'],
+        `${math(`y=${a}x-${b}`)}에서 ${math(`x=${x}`)}일 때 ${math('y')}는?`,
+        answer, [answer - a, answer + a, answer - 1, answer + 1],
+        `대입하면 ${math(`y=${a}\\times${x}-${b}=${answer}`)}이다.`);
+    }
+    if (variantId === 3) {
+      const x1 = 1;
+      const x2 = 3;
+      const y1 = b;
+      const y2 = b + 2 * a;
+      return q(id, difficulty, '기울기 구하기', ['두 점', '기울기'],
+        `두 점 ${math(`(${x1},${y1})`)}, ${math(`(${x2},${y2})`)}를 지나는 직선의 기울기는?`,
+        a, [a - 2, a - 1, a + 1, a + 2],
+        `기울기는 ${math(`\\frac{${y2}-${y1}}{${x2}-${x1}}=${a}`)}이다.`);
+    }
+    if (variantId === 4) {
+      const answer = b - a;
+      return q(id, difficulty, 'y절편 찾기', ['직선의 식', '절편'],
+        `기울기가 ${math(a)}이고 점 ${math(`(1,${b})`)}을 지나는 직선의 ${math('y')}절편은?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `${math(`y=${a}x+n`)}에 ${math(`(1,${b})`)}를 대입하면 ${math(`n=${answer}`)}이다.`);
+    }
+    return q(id, difficulty, '두 직선의 교점', ['연립방정식', '교점'],
+      `두 직선 ${math(`y=${a}x+${b}`)}, ${math(`y=${a + 1}x`)}의 교점의 ${math('x')}좌표는?`,
+      b, [b - 2, b - 1, b + 1, b + 2],
+      `두 식을 같게 두면 ${math(`${a}x+${b}=${a + 1}x`)}이므로 ${math(`x=${b}`)}이다.`);
+  }
+
+  if (family === 'radical') {
+    const sf = [2, 3, 5, 6, 7][id % 5];
+    if (variantId === 2) {
+      return q(id, difficulty, '근호 간단히 하기', ['제곱근', '근호 밖으로 빼기'],
+        `${math(`\\sqrt{${a * a * sf}}`)}을 간단히 하면?`,
+        `${a}\\sqrt{${sf}}`, [`${a + 1}\\sqrt{${sf}}`, `${a}\\sqrt{${sf + 1}}`, `${a * sf}`, `\\sqrt{${a * sf}}`],
+        `${math(`${a * a * sf}=${a}^2\\times${sf}`)}이므로 ${math(`${a}\\sqrt{${sf}}`)}이다.`);
+    }
+    if (variantId === 3) {
+      const answer = a + b;
+      return q(id, difficulty, '동류근호 덧셈', ['동류근호', '계수'],
+        `${math(`${a}\\sqrt{${sf}}+${b}\\sqrt{${sf}}`)}를 ${math(`k\\sqrt{${sf}}`)}로 나타낼 때 ${math('k')}는?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `같은 근호끼리는 계수를 더하므로 ${math(`${a}+${b}=${answer}`)}이다.`);
+    }
+    if (variantId === 4) {
+      const answer = a * b * sf;
+      return q(id, difficulty, '근호의 곱셈', ['제곱근', '곱셈'],
+        `${math(`${a}\\sqrt{${sf}}\\times${b}\\sqrt{${sf}}`)}의 값은?`,
+        answer, [answer - sf, answer + sf, a * b, sf],
+        `${math(`(${a}\\times${b})\\times${sf}=${answer}`)}이다.`);
+    }
+    const answer = squareFreePart(a * b * sf);
+    return q(id, difficulty, '자연수 조건', ['제곱근', '완전제곱수'],
+      `${math(`\\sqrt{${a * b * sf}n}`)}이 자연수가 되도록 하는 가장 작은 자연수 ${math('n')}은?`,
+      answer, [answer + 1, answer * 2, answer * 3, Math.max(1, answer - 1)],
+      `근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 ${math(answer)}를 곱한다.`);
+  }
+
+  if (family === 'quadraticEquation') {
+    if (variantId === 2) {
+      return q(id, difficulty, '두 근의 합', ['이차방정식', '근'],
+        `${math(`(x-${a})(x-${b})=0`)}의 두 근의 합은?`,
+        a + b, [a, b, a * b, Math.abs(a - b)],
+        `두 근은 ${math(a)}, ${math(b)}이므로 합은 ${math(a + b)}이다.`);
+    }
+    if (variantId === 3) {
+      return q(id, difficulty, '두 근의 곱', ['이차방정식', '근과 계수'],
+        `${math(`x^2-${a + b}x+${a * b}=0`)}의 두 근의 곱은?`,
+        a * b, [a + b, a * b - 1, a * b + 1, Math.abs(a - b)],
+        `근과 계수의 관계에서 두 근의 곱은 상수항 ${math(a * b)}이다.`);
+    }
+    if (variantId === 4) {
+      const d = (a + b) ** 2 - 4 * a * b;
+      return q(id, difficulty, '판별식 계산', ['판별식', '실근'],
+        `${math(`x^2-${a + b}x+${a * b}=0`)}의 판별식 ${math('D')}는?`,
+        d, [d - 2, d - 1, d + 1, d + 2],
+        `${math(`D=b^2-4ac=${a + b}^2-4\\times${a * b}=${d}`)}이다.`);
+    }
+    return q(id, difficulty, '중근 조건', ['중근', '매개변수'],
+      `${math(`x^2-${2 * a}x+k=0`)}이 중근을 갖게 하는 ${math('k')}는?`,
+      a * a, [a * a - 1, a * a + 1, 2 * a, a],
+      `중근이면 ${math(`k=(${2 * a}/2)^2=${a * a}`)}이다.`);
+  }
+
+  if (family === 'quadraticFunction') {
+    if (variantId === 2) {
+      return q(id, difficulty, '꼭짓점 좌표', ['이차함수', '꼭짓점'],
+        `${math(`y=${a}(x-${b})^2+${c}`)}의 꼭짓점의 ${math('x')}좌표는?`,
+        b, [b - 2, b - 1, b + 1, c],
+        `꼭짓점형 ${math(`y=a(x-p)^2+q`)}의 꼭짓점은 ${math('(p,q)')}이다.`);
+    }
+    if (variantId === 3) {
+      return q(id, difficulty, '대칭축 판별', ['이차함수', '대칭축'],
+        `${math(`y=${a}(x+${b})^2-${c}`)}의 대칭축은 ${math('x=k')}이다. ${math('k')}는?`,
+        -b, [b, -b - 1, -b + 1, c],
+        `대칭축은 괄호 안이 ${math(0)}이 되는 ${math(`x=${-b}`)}이다.`);
+    }
+    if (variantId === 4) {
+      const x = b + 1;
+      const answer = a * (x - b) ** 2 + c;
+      return q(id, difficulty, '함수값 계산', ['이차함수', '대입'],
+        `${math(`y=${a}(x-${b})^2+${c}`)}에서 ${math(`x=${x}`)}일 때 ${math('y')}는?`,
+        answer, [answer - a, answer + a, c, a + c],
+        `대입하면 ${math(`${a}(${x}-${b})^2+${c}=${answer}`)}이다.`);
+    }
+    return q(id, difficulty, '최솟값 찾기', ['최솟값', '꼭짓점형'],
+      `${math(`y=${a}(x-${b})^2+${c}`)}의 최솟값은?`,
+      c, [a, b, c - 1, c + 1],
+      `제곱항은 ${math(0)} 이상이므로 최솟값은 상수항 ${math(c)}이다.`);
+  }
+
+  if (family === 'trigonometry') {
+    const triples = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25]];
+    const [ta, tb, tc] = triples[id % triples.length];
+    const [x, y, z] = [ta * (level + 1), tb * (level + 1), tc * (level + 1)];
+    if (variantId === 2) {
+      return q(id, difficulty, '사인값', ['삼각비', 'sin'],
+        `직각삼각형에서 대변이 ${math(x)}, 빗변이 ${math(z)}일 때 ${math('\\sin A')}는?`,
+        frac(x, z), [frac(y, z), frac(x, y), frac(z, x), frac(y, x)],
+        `${math(`\\sin A=\\frac{대변}{빗변}=\\frac{${x}}{${z}}`)}이다.`);
+    }
+    if (variantId === 3) {
+      return q(id, difficulty, '코사인값', ['삼각비', 'cos'],
+        `직각삼각형에서 이웃한 변이 ${math(y)}, 빗변이 ${math(z)}일 때 ${math('\\cos A')}는?`,
+        frac(y, z), [frac(x, z), frac(y, x), frac(z, y), frac(x, y)],
+        `${math(`\\cos A=\\frac{이웃한 변}{빗변}=\\frac{${y}}{${z}}`)}이다.`);
+    }
+    if (variantId === 4) {
+      return q(id, difficulty, '탄젠트 길이', ['tan', '길이'],
+        `${math(`\\tan A=\\frac{${x}}{${y}}`)}이고 이웃한 변이 ${math(y * 2)}일 때 대변은?`,
+        x * 2, [x, y, x * 2 + 1, y * 2],
+        `비례식 ${math(`\\frac{대변}{${y * 2}}=\\frac{${x}}{${y}}`)}에서 대변은 ${math(x * 2)}이다.`);
+    }
+    return q(id, difficulty, '삼각비 복합식', ['sin', 'cos', '복합 계산'],
+      `${math(`\\sin A=\\frac{${x}}{${z}}`)}, ${math(`\\cos A=\\frac{${y}}{${z}}`)}일 때 ${math(`z(\\sin A+\\cos A)`)}는?`,
+      x + y, [x, y, z, x + y + 1],
+      `${math(`z(\\frac{${x}}{${z}}+\\frac{${y}}{${z}})=${x + y}`)}이다.`);
+  }
+
+  if (family === 'circle') {
+    if (variantId === 2) {
+      const angle = 40 + id % 20 * 4;
+      return q(id, difficulty, '원주각 계산', ['원주각', '중심각'],
+        `같은 호에 대한 중심각이 ${math(`${angle}^\\circ`)}일 때 원주각은?`,
+        `${angle / 2}^\\circ`, [`${angle}^\\circ`, `${angle / 2 + 10}^\\circ`, `${angle - 10}^\\circ`, `${90 - angle / 2}^\\circ`],
+        `원주각은 같은 호에 대한 중심각의 절반이다.`);
+    }
+    if (variantId === 3) {
+      return q(id, difficulty, '접선 길이', ['접선', '외부점'],
+        `한 외부점에서 원에 그은 두 접선 중 하나의 길이가 ${math(a)}일 때 다른 접선의 길이는?`,
+        a, [a - 2, a - 1, a + 1, a + 2],
+        `한 외부점에서 그은 두 접선의 길이는 같다.`);
+    }
+    if (variantId === 4) {
+      const angle = 70 + id % 10 * 5;
+      return q(id, difficulty, '내접사각형 대각', ['내접사각형', '대각'],
+        `원에 내접하는 사각형에서 한 각이 ${math(`${angle}^\\circ`)}일 때 그 대각은?`,
+        `${180 - angle}^\\circ`, [`${angle}^\\circ`, `${180 - angle + 10}^\\circ`, `${90}^\\circ`, `${angle - 10}^\\circ`],
+        `내접사각형의 대각의 합은 ${math('180^\\circ')}이다.`);
+    }
+    const answer = a * b;
+    return q(id, difficulty, '현의 교차', ['현', '곱의 관계'],
+      `원 안에서 두 현이 만나고 한 현의 두 부분이 ${math(a)}, ${math(b)}이다. 다른 현의 한 부분이 ${math(2)}이면 나머지 부분은?`,
+      frac(answer, 2), [answer, frac(answer + 2, 2), frac(answer - 2, 2), a + b],
+      `현의 교차 정리에 의해 ${math(`${a}\\times${b}=2t`)}이다.`);
+  }
+
+  if (family === 'statistics') {
+    if (variantId === 2) {
+      const answer = a + 2;
+      return q(id, difficulty, '평균 계산', ['평균', '자료'],
+        `자료 ${math(`${a}, ${a + 2}, ${a + 4}`)}의 평균은?`,
+        answer, [answer - 2, answer - 1, answer + 1, answer + 2],
+        `평균은 ${math(`\\frac{${a}+${a + 2}+${a + 4}}{3}=${answer}`)}이다.`);
+    }
+    if (variantId === 3) {
+      const values = [a, a + 1, a + 4, a + 6, a + 9];
+      return q(id, difficulty, '중앙값 찾기', ['중앙값', '자료 해석'],
+        `자료 ${math(values.join(', '))}의 중앙값은?`,
+        values[2], [values[0], values[1], values[3], values[4]],
+        `자료가 이미 크기순이므로 가운데 값은 ${math(values[2])}이다.`);
+    }
+    if (variantId === 4) {
+      const values = [a, a + 3, a + 5, a + b];
+      const answer = values.at(-1) - values[0];
+      return q(id, difficulty, '범위 계산', ['범위', '최댓값', '최솟값'],
+        `자료 ${math(values.join(', '))}의 범위는?`,
+        answer, [answer - 2, answer - 1, answer + 1, values.at(-1)],
+        `범위는 최댓값에서 최솟값을 뺀 ${math(answer)}이다.`);
+    }
+    const q1 = a;
+    const q3 = a + b;
+    return q(id, difficulty, '사분위범위', ['사분위수', '상자그림'],
+      `제1사분위수가 ${math(q1)}, 제3사분위수가 ${math(q3)}일 때 사분위범위는?`,
+      q3 - q1, [q3 + q1, q3 - q1 - 1, q3 - q1 + 1, q3],
+      `사분위범위는 ${math(`Q_3-Q_1=${q3}-${q1}=${q3 - q1}`)}이다.`);
+  }
+
+  return fallback;
+}
+
 const GENERATORS = {
   factorization: factorizationQuestion,
   rational: rationalQuestion,
@@ -644,11 +1043,16 @@ function buildExam(file) {
   const legacyDescription = cleanDescription(current.description);
 
   const questions = Array.from({ length: 30 }, (_, index) => {
-    const question = generator(index + 1 + seedOffset, current.difficulty, current.id);
+    const variant = TYPE_VARIANTS[index % TYPE_VARIANTS.length];
+    const rawQuestion = generator(index + 1 + seedOffset, current.difficulty, current.id);
+    const question = applyTypeVariant(
+      familyTypeQuestion(family, index + 1 + seedOffset, current.difficulty, variant.id, rawQuestion),
+      variant
+    );
     return {
       ...question,
       id: index + 1,
-      question: decorateQuestion(question.question, core, profile.role, index),
+      question: decorateQuestion(question.question, core, profile.role, question.ebs.typeTag, index),
       ebs: {
         ...question.ebs,
         sourceFormat: 'EBS 단계형 5지선다',
@@ -666,9 +1070,10 @@ function buildExam(file) {
     unit: current.unit,
     difficulty: current.difficulty,
     ebsStyle: {
-      version: 1,
+      version: 2,
       role: profile.role,
       expectedSteps: profile.steps,
+      typeVariantCount: TYPE_VARIANTS.length,
       family,
       generatedAt: '2026-06-19',
     },

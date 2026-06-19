@@ -238,5 +238,13 @@
     "description": "문제풀이 목록의 EBS형 설명이 생성 스크립트 재실행마다 누적 반복되는 버그 수정. 88개 수학 문제집 설명을 정리하고, 목록 카드 overflow 방어 및 반복 설명 감사 규칙 추가",
     "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/app/(protected)/practice/page.tsx", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-031",
+    "date": "2026-06-19",
+    "category": "content_quality",
+    "description": "문제풀이 수학 문제집 유형 다양화. 각 단원별 기본/유형별/심화/킬러 묶음이 최소 20개 출제유형을 갖도록 88개 파일을 재생성하고, 단원별 유형 수 감사 규칙 추가",
+    "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

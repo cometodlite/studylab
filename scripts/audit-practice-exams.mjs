@@ -7,6 +7,8 @@ const dataDir = path.join(root, 'src', 'data');
 const qualityFile = path.join(dataDir, 'practice-exam-quality.json');
 const skipDirs = new Set(['archive', 'school-exams', 'roadway', 'workbooks']);
 const failOnUnblockedIssues = process.argv.includes('--fail-on-unblocked-issues');
+const minTypeTagsPerExam = 5;
+const minTypeTagsPerUnit = 20;
 
 const redFlagPatterns = [
   /보기 없음/,
@@ -88,6 +90,7 @@ function auditExam(filePath) {
   const ebsProblems = [];
   const duplicateQuestionTexts = [];
   const answerCounts = new Map();
+  const typeTags = new Set();
   let multipleChoiceCount = 0;
   const expectedEbs = ebsRoles[exam.difficulty];
 
@@ -156,8 +159,17 @@ function auditExam(filePath) {
       }
       if (!question.ebs.typeTag) {
         ebsProblems.push(`Q${qId}: ebs.typeTag is missing`);
+      } else {
+        typeTags.add(question.ebs.typeTag);
+      }
+      if (!question.ebs.typeVariant) {
+        ebsProblems.push(`Q${qId}: ebs.typeVariant is missing`);
       }
     }
+  }
+
+  if (expectedEbs && typeTags.size < minTypeTagsPerExam) {
+    ebsProblems.push(`only ${typeTags.size} unique typeTags; expected at least ${minTypeTagsPerExam} per exam`);
   }
 
   const answerIndex0Rate = multipleChoiceCount > 0
@@ -169,12 +181,14 @@ function auditExam(filePath) {
   return {
     id: exam.id ?? path.basename(filePath, '.json'),
     title: exam.title ?? '',
+    grade: exam.grade ?? null,
     difficulty: exam.difficulty ?? null,
     unit: exam.unit ?? null,
     relativePath,
     questionCount: exam.questions.length,
     issueQuestionIds: issueIds,
     ebsProblems,
+    typeTags: [...typeTags],
     answerIndex0Rate,
     duplicateQuestionTexts,
     highRisk: issueIds.length > 0 || answerIndex0Rate >= 90 || ebsProblems.length > 0,
@@ -231,6 +245,21 @@ const unblockedHighRisk = highRiskReports.filter(report => qualityMap[report.id]
 const blockedCount = Object.values(qualityMap).filter(entry => entry?.status === 'blocked').length;
 const duplicateQuestionTexts = collectDuplicateQuestionTexts(reportsByQuestionText);
 const crossDifficultyDuplicates = collectCrossDifficultyDuplicates(reportsByQuestionText);
+const unitTypeTags = new Map();
+
+for (const report of reports) {
+  if (!report.grade || !report.unit || !Array.isArray(report.typeTags)) continue;
+  const key = `${report.grade}학년 ${report.unit}`;
+  const typeTags = unitTypeTags.get(key) ?? new Set();
+  for (const tag of report.typeTags) {
+    typeTags.add(`${report.difficulty}:${tag}`);
+  }
+  unitTypeTags.set(key, typeTags);
+}
+
+const lowDiversityUnits = [...unitTypeTags.entries()]
+  .map(([unit, typeTags]) => ({ unit, typeTagCount: typeTags.size }))
+  .filter(report => report.typeTagCount < minTypeTagsPerUnit);
 
 console.log(`Practice exam audit`);
 console.log(`- scanned files: ${reports.length}`);
@@ -239,6 +268,7 @@ console.log(`- high-risk files detected: ${highRiskReports.length}`);
 console.log(`- unblocked high-risk files: ${unblockedHighRisk.length}`);
 console.log(`- exact duplicate question texts across all files: ${duplicateQuestionTexts.length}`);
 console.log(`- exact duplicate question texts across difficulties: ${crossDifficultyDuplicates.length}`);
+console.log(`- units below ${minTypeTagsPerUnit} type variants: ${lowDiversityUnits.length}`);
 
 if (highRiskReports.length > 0) {
   console.log('\nHigh-risk files:');
@@ -252,6 +282,14 @@ if (highRiskReports.length > 0) {
 
 if (unblockedHighRisk.length > 0 && failOnUnblockedIssues) {
   console.error('\nUnblocked high-risk files must be fixed or added to src/data/practice-exam-quality.json as blocked.');
+  process.exit(1);
+}
+
+if (lowDiversityUnits.length > 0 && failOnUnblockedIssues) {
+  console.error(`\nEvery unit must expose at least ${minTypeTagsPerUnit} type variants across its difficulty set.`);
+  for (const report of lowDiversityUnits.slice(0, 10)) {
+    console.error(`- ${report.unit}: ${report.typeTagCount} type variants`);
+  }
   process.exit(1);
 }
 
