@@ -174,5 +174,13 @@
     "description": "관리자 통계의 활성 사용자 계산에서 관리자 권한 사용자(role==='admin') 제외. 최근 24시간 point_logs 기준 활성 사용자 수가 실제 학생/일반 사용자 중심으로 표시되도록 수정",
     "files": ["src/app/api/admin/stats/route.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-023",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "주간/월간 학습 리포트 추가. 사용자별 학교시험·연습문제 응시 현황, 평균/최고 점수, 획득 포인트, 배지 획득 현황과 성장 메시지를 대시보드에 표시",
+    "files": ["src/app/api/reports/learning/route.ts", "src/app/(protected)/dashboard/page.tsx", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

@@ -12,6 +12,27 @@ import { POINT_RULES } from '@/lib/points';
 import { UPDATES } from '@/lib/updates';
 import { ACHIEVEMENT_ORDER, ACHIEVEMENTS } from '@/lib/achievements';
 
+interface LearningReport {
+  weekly: {
+    examCount: number;
+    avgScoreRate: number;
+    bestScoreRate: number;
+    pointsEarned: number;
+    badgeCount: number;
+    badges: Array<{ id: string; emoji: string; title: string; description: string; points: number }>;
+    recentExams: Array<{ id: string; title: string; scoreRate: number; pointsEarned: number }>;
+  };
+  monthly: {
+    examCount: number;
+    avgScoreRate: number;
+    bestScoreRate: number;
+    pointsEarned: number;
+    badgeCount: number;
+    badges: Array<{ id: string; emoji: string; title: string; description: string; points: number }>;
+  };
+  message: string;
+}
+
 export default function DashboardPage() {
   const { user, profile, refreshProfile } = useAuth();
   const router = useRouter();
@@ -21,6 +42,7 @@ export default function DashboardPage() {
   const [dailyWrongExamCount, setDailyWrongExamCount] = useState(0);
   const [todayPoints, setTodayPoints] = useState(0);
   const [recentLogs, setRecentLogs] = useState<{ reason: string; amount: number; id: string }[]>([]);
+  const [learningReport, setLearningReport] = useState<LearningReport | null>(null);
   const achievements = profile?.achievements ?? [];
   const achievementIds = new Set(achievements.map(achievement => achievement.id));
 
@@ -115,6 +137,21 @@ export default function DashboardPage() {
     }
   }, [user]);
 
+  const fetchLearningReport = useCallback(async () => {
+    if (!user || !auth.currentUser) return;
+    try {
+      const token = await getIdToken(auth.currentUser);
+      const res = await fetch('/api/reports/learning', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      setLearningReport(data);
+    } catch (e) {
+      console.error('학습 리포트 로딩 실패:', e);
+    }
+  }, [user]);
+
   async function dismissDailyWrongExam() {
     setShowDailyWrongExam(false);
     if (!auth.currentUser) return;
@@ -139,11 +176,12 @@ export default function DashboardPage() {
       checkDailyWrongExam();
       fetchTodayPoints();
       fetchRecentLogs();
+      fetchLearningReport();
     });
     return () => {
       cancelled = true;
     };
-  }, [checkDailyLogin, checkDailyWrongExam, fetchRecentLogs, fetchTodayPoints, profile, user]);
+  }, [checkDailyLogin, checkDailyWrongExam, fetchLearningReport, fetchRecentLogs, fetchTodayPoints, profile, user]);
 
   return (
     <>
@@ -216,6 +254,78 @@ export default function DashboardPage() {
             <div className="text-sm text-gray-500 mt-1">연속 출석</div>
           </div>
         </div>
+
+        {/* 학습 리포트 */}
+        {learningReport && (
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-5">
+              <div>
+                <h2 className="font-semibold text-gray-700">📊 주간/월간 학습 리포트</h2>
+                <p className="text-sm text-gray-500 mt-1">{learningReport.message}</p>
+              </div>
+              <Link href="/exam" className="text-indigo-600 text-sm font-medium hover:underline">이번 주 기록 늘리기 →</Link>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+              <div className="rounded-xl bg-indigo-50 px-4 py-3">
+                <p className="text-xs text-indigo-500 font-semibold">이번 주 응시</p>
+                <p className="text-2xl font-bold text-indigo-700 mt-1">{learningReport.weekly.examCount}회</p>
+              </div>
+              <div className="rounded-xl bg-green-50 px-4 py-3">
+                <p className="text-xs text-green-500 font-semibold">주간 평균</p>
+                <p className="text-2xl font-bold text-green-700 mt-1">{learningReport.weekly.avgScoreRate}%</p>
+              </div>
+              <div className="rounded-xl bg-yellow-50 px-4 py-3">
+                <p className="text-xs text-yellow-600 font-semibold">주간 배지</p>
+                <p className="text-2xl font-bold text-yellow-700 mt-1">{learningReport.weekly.badgeCount}개</p>
+              </div>
+              <div className="rounded-xl bg-purple-50 px-4 py-3">
+                <p className="text-xs text-purple-500 font-semibold">이번 달 응시</p>
+                <p className="text-2xl font-bold text-purple-700 mt-1">{learningReport.monthly.examCount}회</p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="rounded-xl border border-gray-100 px-4 py-4">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-sm font-bold text-gray-700">최근 시험 응시</p>
+                  <p className="text-xs text-gray-400">최고 {learningReport.weekly.bestScoreRate}%</p>
+                </div>
+                {learningReport.weekly.recentExams.length === 0 ? (
+                  <p className="text-sm text-gray-400">이번 주 응시 기록이 없습니다.</p>
+                ) : (
+                  <div className="space-y-2">
+                    {learningReport.weekly.recentExams.map(exam => (
+                      <div key={exam.id} className="flex items-center justify-between gap-3 text-sm">
+                        <span className="text-gray-600 truncate">{exam.title}</span>
+                        <span className="font-semibold text-indigo-600 shrink-0">{exam.scoreRate}%</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="rounded-xl border border-gray-100 px-4 py-4">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-sm font-bold text-gray-700">배지 획득 현황</p>
+                  <p className="text-xs text-gray-400">월간 {learningReport.monthly.badgeCount}개</p>
+                </div>
+                {learningReport.monthly.badges.length === 0 ? (
+                  <p className="text-sm text-gray-400">이번 달 새 배지는 아직 없습니다.</p>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {learningReport.monthly.badges.map(badge => (
+                      <span key={badge.id} className="inline-flex items-center gap-1 rounded-full bg-yellow-50 text-yellow-700 px-3 py-1 text-xs font-semibold">
+                        <span>{badge.emoji}</span>
+                        {badge.title}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* 배지/업적 */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
