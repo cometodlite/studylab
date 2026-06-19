@@ -162,6 +162,11 @@ function titleCore(title) {
   return title.split('—')[0].trim();
 }
 
+function decorateQuestion(question, core, role, index) {
+  const variantNo = String(index + 1).padStart(2, '0');
+  return `EBS ${core} ${role} ${variantNo}형. ${question}`;
+}
+
 function factorizationQuestion(id, difficulty) {
   if (difficulty === '기본') {
     const twos = id % 3 + 1;
@@ -631,6 +636,7 @@ function buildExam(file) {
     return {
       ...question,
       id: index + 1,
+      question: decorateQuestion(question.question, core, profile.role, index),
       ebs: {
         ...question.ebs,
         sourceFormat: 'EBS 단계형 5지선다',

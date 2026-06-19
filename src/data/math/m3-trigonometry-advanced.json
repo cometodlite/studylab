@@ -1,7 +1,7 @@
 {
   "id": "m3-trigonometry-advanced",
   "title": "삼각비 — 심화",
-  "description": "EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. 삼각형 넓이, 높이·거리 계산, 방위각",
+  "description": "EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. EBS 심화형: 두 개 이상의 조건을 연결하고 중간값을 해석합니다. 삼각형 넓이, 높이·거리 계산, 방위각",
   "grade": 3,
   "unit": "삼각비",
   "difficulty": "심화",
@@ -15,7 +15,7 @@
   "questions": [
     {
       "id": 1,
-      "question": "$\\sin A=\\frac{48}{102}$, $\\cos A=\\frac{90}{102}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 01형. $\\sin A=\\frac{48}{102}$, $\\cos A=\\frac{90}{102}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$48$",
         "$90$",
@@ -41,7 +41,7 @@
     },
     {
       "id": 2,
-      "question": "$\\sin A=\\frac{42}{150}$, $\\cos A=\\frac{144}{150}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 02형. $\\sin A=\\frac{42}{150}$, $\\cos A=\\frac{144}{150}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$42$",
         "$144$",
@@ -67,7 +67,7 @@
     },
     {
       "id": 3,
-      "question": "$\\sin A=\\frac{21}{35}$, $\\cos A=\\frac{28}{35}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 03형. $\\sin A=\\frac{21}{35}$, $\\cos A=\\frac{28}{35}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$21$",
         "$49$",
@@ -93,7 +93,7 @@
     },
     {
       "id": 4,
-      "question": "$\\sin A=\\frac{35}{91}$, $\\cos A=\\frac{84}{91}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 04형. $\\sin A=\\frac{35}{91}$, $\\cos A=\\frac{84}{91}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$35$",
         "$84$",
@@ -119,7 +119,7 @@
     },
     {
       "id": 5,
-      "question": "$\\sin A=\\frac{56}{119}$, $\\cos A=\\frac{105}{119}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 05형. $\\sin A=\\frac{56}{119}$, $\\cos A=\\frac{105}{119}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$161$",
         "$56$",
@@ -145,7 +145,7 @@
     },
     {
       "id": 6,
-      "question": "$\\sin A=\\frac{49}{175}$, $\\cos A=\\frac{168}{175}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 06형. $\\sin A=\\frac{49}{175}$, $\\cos A=\\frac{168}{175}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$49$",
         "$168$",
@@ -171,7 +171,7 @@
     },
     {
       "id": 7,
-      "question": "$\\sin A=\\frac{24}{40}$, $\\cos A=\\frac{32}{40}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 07형. $\\sin A=\\frac{24}{40}$, $\\cos A=\\frac{32}{40}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$24$",
         "$32$",
@@ -197,7 +197,7 @@
     },
     {
       "id": 8,
-      "question": "$\\sin A=\\frac{40}{104}$, $\\cos A=\\frac{96}{104}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 08형. $\\sin A=\\frac{40}{104}$, $\\cos A=\\frac{96}{104}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$40$",
         "$136$",
@@ -223,7 +223,7 @@
     },
     {
       "id": 9,
-      "question": "$\\sin A=\\frac{64}{136}$, $\\cos A=\\frac{120}{136}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 09형. $\\sin A=\\frac{64}{136}$, $\\cos A=\\frac{120}{136}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$64$",
         "$120$",
@@ -249,7 +249,7 @@
     },
     {
       "id": 10,
-      "question": "$\\sin A=\\frac{56}{200}$, $\\cos A=\\frac{192}{200}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 10형. $\\sin A=\\frac{56}{200}$, $\\cos A=\\frac{192}{200}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$248$",
         "$56$",
@@ -275,7 +275,7 @@
     },
     {
       "id": 11,
-      "question": "$\\sin A=\\frac{27}{45}$, $\\cos A=\\frac{36}{45}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 11형. $\\sin A=\\frac{27}{45}$, $\\cos A=\\frac{36}{45}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$27$",
         "$36$",
@@ -301,7 +301,7 @@
     },
     {
       "id": 12,
-      "question": "$\\sin A=\\frac{45}{117}$, $\\cos A=\\frac{108}{117}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 12형. $\\sin A=\\frac{45}{117}$, $\\cos A=\\frac{108}{117}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$45$",
         "$108$",
@@ -327,7 +327,7 @@
     },
     {
       "id": 13,
-      "question": "$\\sin A=\\frac{72}{153}$, $\\cos A=\\frac{135}{153}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 13형. $\\sin A=\\frac{72}{153}$, $\\cos A=\\frac{135}{153}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$72$",
         "$207$",
@@ -353,7 +353,7 @@
     },
     {
       "id": 14,
-      "question": "$\\sin A=\\frac{63}{225}$, $\\cos A=\\frac{216}{225}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 14형. $\\sin A=\\frac{63}{225}$, $\\cos A=\\frac{216}{225}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$63$",
         "$216$",
@@ -379,7 +379,7 @@
     },
     {
       "id": 15,
-      "question": "$\\sin A=\\frac{30}{50}$, $\\cos A=\\frac{40}{50}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 15형. $\\sin A=\\frac{30}{50}$, $\\cos A=\\frac{40}{50}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$70$",
         "$30$",
@@ -405,7 +405,7 @@
     },
     {
       "id": 16,
-      "question": "$\\sin A=\\frac{50}{130}$, $\\cos A=\\frac{120}{130}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 16형. $\\sin A=\\frac{50}{130}$, $\\cos A=\\frac{120}{130}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$50$",
         "$120$",
@@ -431,7 +431,7 @@
     },
     {
       "id": 17,
-      "question": "$\\sin A=\\frac{80}{170}$, $\\cos A=\\frac{150}{170}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 17형. $\\sin A=\\frac{80}{170}$, $\\cos A=\\frac{150}{170}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$80$",
         "$150$",
@@ -457,7 +457,7 @@
     },
     {
       "id": 18,
-      "question": "$\\sin A=\\frac{70}{250}$, $\\cos A=\\frac{240}{250}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 18형. $\\sin A=\\frac{70}{250}$, $\\cos A=\\frac{240}{250}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$70$",
         "$310$",
@@ -483,7 +483,7 @@
     },
     {
       "id": 19,
-      "question": "$\\sin A=\\frac{33}{55}$, $\\cos A=\\frac{44}{55}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 19형. $\\sin A=\\frac{33}{55}$, $\\cos A=\\frac{44}{55}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$33$",
         "$44$",
@@ -509,7 +509,7 @@
     },
     {
       "id": 20,
-      "question": "$\\sin A=\\frac{55}{143}$, $\\cos A=\\frac{132}{143}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 20형. $\\sin A=\\frac{55}{143}$, $\\cos A=\\frac{132}{143}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$187$",
         "$55$",
@@ -535,7 +535,7 @@
     },
     {
       "id": 21,
-      "question": "$\\sin A=\\frac{88}{187}$, $\\cos A=\\frac{165}{187}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 21형. $\\sin A=\\frac{88}{187}$, $\\cos A=\\frac{165}{187}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$88$",
         "$165$",
@@ -561,7 +561,7 @@
     },
     {
       "id": 22,
-      "question": "$\\sin A=\\frac{77}{275}$, $\\cos A=\\frac{264}{275}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 22형. $\\sin A=\\frac{77}{275}$, $\\cos A=\\frac{264}{275}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$77$",
         "$264$",
@@ -587,7 +587,7 @@
     },
     {
       "id": 23,
-      "question": "$\\sin A=\\frac{36}{60}$, $\\cos A=\\frac{48}{60}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 23형. $\\sin A=\\frac{36}{60}$, $\\cos A=\\frac{48}{60}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$36$",
         "$84$",
@@ -613,7 +613,7 @@
     },
     {
       "id": 24,
-      "question": "$\\sin A=\\frac{60}{156}$, $\\cos A=\\frac{144}{156}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 24형. $\\sin A=\\frac{60}{156}$, $\\cos A=\\frac{144}{156}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$60$",
         "$144$",
@@ -639,7 +639,7 @@
     },
     {
       "id": 25,
-      "question": "$\\sin A=\\frac{96}{204}$, $\\cos A=\\frac{180}{204}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 25형. $\\sin A=\\frac{96}{204}$, $\\cos A=\\frac{180}{204}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$276$",
         "$96$",
@@ -665,7 +665,7 @@
     },
     {
       "id": 26,
-      "question": "$\\sin A=\\frac{84}{300}$, $\\cos A=\\frac{288}{300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 26형. $\\sin A=\\frac{84}{300}$, $\\cos A=\\frac{288}{300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$84$",
         "$288$",
@@ -691,7 +691,7 @@
     },
     {
       "id": 27,
-      "question": "$\\sin A=\\frac{39}{65}$, $\\cos A=\\frac{52}{65}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 27형. $\\sin A=\\frac{39}{65}$, $\\cos A=\\frac{52}{65}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$39$",
         "$52$",
@@ -717,7 +717,7 @@
     },
     {
       "id": 28,
-      "question": "$\\sin A=\\frac{65}{169}$, $\\cos A=\\frac{156}{169}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 28형. $\\sin A=\\frac{65}{169}$, $\\cos A=\\frac{156}{169}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$65$",
         "$221$",
@@ -743,7 +743,7 @@
     },
     {
       "id": 29,
-      "question": "$\\sin A=\\frac{104}{221}$, $\\cos A=\\frac{195}{221}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 29형. $\\sin A=\\frac{104}{221}$, $\\cos A=\\frac{195}{221}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$104$",
         "$195$",
@@ -769,7 +769,7 @@
     },
     {
       "id": 30,
-      "question": "$\\sin A=\\frac{91}{325}$, $\\cos A=\\frac{312}{325}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "EBS 삼각비 조건 결합 30형. $\\sin A=\\frac{91}{325}$, $\\cos A=\\frac{312}{325}$일 때 $c(\\sin A+\\cos A)$의 값은?",
       "choices": [
         "$403$",
         "$91$",

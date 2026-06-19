@@ -235,3 +235,15 @@ if (unblockedHighRisk.length > 0 && failOnUnblockedIssues) {
   console.error('\nUnblocked high-risk files must be fixed or added to src/data/practice-exam-quality.json as blocked.');
   process.exit(1);
 }
+
+if (duplicateQuestionTexts.length > 0 && failOnUnblockedIssues) {
+  console.error('\nExact duplicate question texts must be removed before publishing practice exams.');
+  for (const duplicate of duplicateQuestionTexts.slice(0, 10)) {
+    const refs = duplicate.reports
+      .slice(0, 5)
+      .map(report => `${report.id}:Q${report.questionId}`)
+      .join(', ');
+    console.error(`- ${refs}: ${duplicate.text}`);
+  }
+  process.exit(1);
+}
