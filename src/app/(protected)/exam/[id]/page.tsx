@@ -70,6 +70,24 @@ interface TrendPoint {
   completedAt: { seconds: number } | null;
 }
 
+interface RecommendedSet {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  source: 'practice' | 'school_exam';
+  difficulty: string | null;
+  unit: string | null;
+  questionCount: number;
+  reason: string;
+}
+
+interface LearningPathStep {
+  title: string;
+  description: string;
+  href?: string;
+}
+
 interface GradeResponse {
   mcScore: number;
   essayScore: number;
@@ -101,6 +119,11 @@ interface GradeResponse {
     weakestCategories: CategoryStat[];
     feedback: string[];
     trend: TrendPoint[];
+    recommendations?: {
+      summary: string;
+      recommendedSets: RecommendedSet[];
+      learningPath: LearningPathStep[];
+    };
   };
 }
 
@@ -361,6 +384,71 @@ export default function SchoolExamPage({ params }: { params: Promise<{ id: strin
                 </div>
               </div>
             )}
+          </div>
+        )}
+
+        {gradeResult.analysis?.recommendations && (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="lg:col-span-2 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm space-y-4">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-xs font-bold text-indigo-500 uppercase">AI Recommendation</p>
+                  <h2 className="font-bold text-gray-800 mt-1">다음에 풀면 좋은 문제</h2>
+                  <p className="text-sm text-gray-500 mt-1">{gradeResult.analysis.recommendations.summary}</p>
+                </div>
+              </div>
+              {gradeResult.analysis.recommendations.recommendedSets.length === 0 ? (
+                <div className="rounded-xl bg-gray-50 px-4 py-5 text-sm text-gray-500">
+                  아직 추천할 유사 문제가 충분하지 않습니다. 오답노트에서 틀린 문항을 먼저 복습해보세요.
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {gradeResult.analysis.recommendations.recommendedSets.map(item => (
+                    <button
+                      key={`${item.source}-${item.id}`}
+                      onClick={() => router.push(item.href)}
+                      className="text-left rounded-xl border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/40 px-4 py-4 transition"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs font-semibold rounded-full bg-indigo-100 text-indigo-600 px-2 py-0.5">
+                          {item.source === 'practice' ? '연습문제' : '실전회차'}
+                        </span>
+                        {item.difficulty && (
+                          <span className="text-xs font-medium rounded-full bg-gray-100 text-gray-500 px-2 py-0.5">
+                            {item.difficulty}
+                          </span>
+                        )}
+                      </div>
+                      <p className="font-bold text-gray-800 text-sm">{item.title}</p>
+                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">{item.reason}</p>
+                      <p className="text-xs text-indigo-500 font-semibold mt-3">{item.questionCount}문항 풀기 →</p>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
+              <h2 className="font-bold text-gray-800 mb-4">자동 학습 경로</h2>
+              <div className="space-y-3">
+                {gradeResult.analysis.recommendations.learningPath.map((step, index) => (
+                  <button
+                    key={`${step.title}-${index}`}
+                    onClick={() => step.href && router.push(step.href)}
+                    disabled={!step.href}
+                    className="w-full text-left flex gap-3 rounded-xl bg-gray-50 hover:bg-gray-100 disabled:hover:bg-gray-50 px-3 py-3 transition"
+                  >
+                    <span className="w-7 h-7 shrink-0 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">
+                      {index + 1}
+                    </span>
+                    <span>
+                      <span className="block text-sm font-bold text-gray-800">{step.title}</span>
+                      <span className="block text-xs text-gray-500 mt-0.5">{step.description}</span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 

@@ -58,7 +58,9 @@ export default function PracticePage({ params }: { params: Promise<{ id: string 
   useEffect(() => {
     const qs = new URLSearchParams();
     const shuffle = searchParams.get('shuffle');
+    const count = searchParams.get('count');
     if (shuffle) qs.set('shuffle', shuffle);
+    if (count) qs.set('count', count);
 
     fetch(`/api/exams/${id}?${qs}`)
       .then(r => r.json())

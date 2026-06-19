@@ -6,6 +6,8 @@ import { fsGet, fsSet, fsBatch, fsQuery, WriteOp } from '@/lib/firestore-rest';
 import { AchievementId, UserAchievement, createAchievement } from '@/lib/achievements';
 
 const SCHOOL_EXAM_DIR = path.join(process.cwd(), 'src', 'data', 'school-exams');
+const DATA_DIR = path.join(process.cwd(), 'src', 'data');
+const PRACTICE_SKIP_DIRS = new Set(['archive', 'concepts', 'roadway', 'school-exams', 'workbooks']);
 
 function genId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2);
@@ -57,10 +59,50 @@ type SchoolExamFileMeta = {
   grade?: number;
   subject?: string;
   sheet?: number;
+  difficulty?: string;
 };
 
 type UserDoc = {
   achievements?: unknown;
+};
+
+type PracticeExamMeta = {
+  id: string;
+  title: string;
+  description: string;
+  grade: number | null;
+  unit: string | null;
+  difficulty: string | null;
+  questionCount: number;
+};
+
+type SchoolExamRecommendationMeta = {
+  id: string;
+  title: string;
+  school?: string;
+  grade?: number;
+  subject?: string;
+  sheet?: number;
+  difficulty?: string;
+  questionCount: number;
+};
+
+type RecommendedSet = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  source: 'practice' | 'school_exam';
+  difficulty: string | null;
+  unit: string | null;
+  questionCount: number;
+  reason: string;
+};
+
+type LearningPathStep = {
+  title: string;
+  description: string;
+  href?: string;
 };
 
 function qLabel(type: RawQuestion['type']) {
@@ -120,6 +162,163 @@ function getAvailableSeriesSheets(seriesKey: string) {
 function seriesLabel(exam: SchoolExamFileMeta) {
   const grade = typeof exam.grade === 'number' ? `${exam.grade}학년 ` : '';
   return [exam.school, `${grade}${exam.subject ?? ''}`.trim()].filter(Boolean).join(' ');
+}
+
+function scanJsonFiles(dir: string, skipDirs = new Set<string>()): string[] {
+  if (!fs.existsSync(dir)) return [];
+  const result: string[] = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (skipDirs.has(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) result.push(...scanJsonFiles(full, skipDirs));
+    else if (entry.name.endsWith('.json')) result.push(full);
+  }
+  return result;
+}
+
+function normalizeDifficulty(value: unknown) {
+  if (typeof value !== 'string') return null;
+  if (value.includes('기초') || value.includes('기본')) return '기본';
+  if (value.includes('유형')) return '유형별';
+  if (value.includes('심화')) return '심화';
+  if (value.includes('킬러')) return '킬러';
+  return value;
+}
+
+function loadPracticeExams(): PracticeExamMeta[] {
+  return scanJsonFiles(DATA_DIR, PRACTICE_SKIP_DIRS)
+    .map(filePath => {
+      try {
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        if (!data?.id || !Array.isArray(data.questions)) return null;
+        return {
+          id: String(data.id),
+          title: String(data.title ?? data.id),
+          description: String(data.description ?? ''),
+          grade: typeof data.grade === 'number' ? data.grade : null,
+          unit: typeof data.unit === 'string' ? data.unit : null,
+          difficulty: normalizeDifficulty(data.difficulty),
+          questionCount: data.questions.length,
+        };
+      } catch {
+        return null;
+      }
+    })
+    .filter((exam): exam is PracticeExamMeta => exam !== null);
+}
+
+function loadSchoolExamMetas(currentId: string): SchoolExamRecommendationMeta[] {
+  return scanJsonFiles(SCHOOL_EXAM_DIR)
+    .map((filePath): SchoolExamRecommendationMeta | null => {
+      try {
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        if (!data?.id || data.id === currentId || !Array.isArray(data.questions)) return null;
+        return {
+          id: String(data.id),
+          title: String(data.title ?? data.id),
+          school: typeof data.school === 'string' ? data.school : undefined,
+          grade: typeof data.grade === 'number' ? data.grade : undefined,
+          subject: typeof data.subject === 'string' ? data.subject : undefined,
+          sheet: typeof data.sheet === 'number' ? data.sheet : undefined,
+          difficulty: typeof data.difficulty === 'string' ? data.difficulty : undefined,
+          questionCount: data.questions.length,
+        };
+      } catch {
+        return null;
+      }
+    })
+    .filter((exam): exam is SchoolExamRecommendationMeta => exam !== null);
+}
+
+function buildStudyRecommendations(params: {
+  exam: SchoolExamFileMeta;
+  examId: string;
+  totalRate: number;
+  weakestCategories: Array<{ category: string; scoreRate: number }>;
+  results: Array<{ id: number; type: string; category: string; correct: boolean; question: string }>;
+}): { summary: string; recommendedSets: RecommendedSet[]; learningPath: LearningPathStep[] } {
+  const weakLabels = params.weakestCategories
+    .filter(category => category.scoreRate < 85)
+    .map(category => category.category);
+  const weakText = weakLabels.length > 0 ? weakLabels.join(', ') : '전체 유형';
+  const targetDifficulty = normalizeDifficulty(params.exam.difficulty) ?? (params.totalRate >= 80 ? '유형별' : '기본');
+  const wrongType = params.results.find(result => !result.correct)?.type ?? 'mc';
+  const wrongTypeLabel = wrongType === 'mc' ? '객관식' : wrongType === 'short' ? '주관식' : '서술형';
+
+  const practiceCandidates = (params.exam.subject === '수학' ? loadPracticeExams() : [])
+    .map(candidate => {
+      let score = 0;
+      if (typeof params.exam.grade === 'number' && candidate.grade === params.exam.grade) score += 35;
+      if (candidate.difficulty === targetDifficulty) score += 25;
+      if (candidate.unit && weakLabels.some(label => candidate.unit?.includes(label) || candidate.title.includes(label))) score += 30;
+      if (candidate.title.includes(String(params.exam.subject ?? ''))) score += 5;
+      return { candidate, score };
+    })
+    .filter(item => item.score >= 25)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map(({ candidate }) => ({
+      id: candidate.id,
+      title: candidate.title,
+      description: candidate.description || `${targetDifficulty} 난이도의 유사 유형 연습입니다.`,
+      href: `/practice/${candidate.id}?shuffle=1&count=10`,
+      source: 'practice' as const,
+      difficulty: candidate.difficulty,
+      unit: candidate.unit,
+      questionCount: Math.min(candidate.questionCount, 10),
+      reason: `${weakText} 보강에 맞춘 ${candidate.difficulty ?? targetDifficulty} 문제입니다.`,
+    }));
+
+  const schoolCandidates = loadSchoolExamMetas(params.examId)
+    .map(candidate => {
+      let score = 0;
+      if (candidate.subject === params.exam.subject) score += 35;
+      if (candidate.grade === params.exam.grade) score += 20;
+      if (candidate.school === params.exam.school) score += 15;
+      if (normalizeDifficulty(candidate.difficulty) === targetDifficulty) score += 10;
+      if (typeof candidate.sheet === 'number' && typeof params.exam.sheet === 'number' && candidate.sheet > params.exam.sheet) score += 5;
+      return { candidate, score };
+    })
+    .filter(item => item.score >= 35)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, Math.max(1, 4 - practiceCandidates.length))
+    .map(({ candidate }) => ({
+      id: candidate.id,
+      title: candidate.title ?? candidate.id,
+      description: '같은 내신 범위의 다른 회차로 실전 감각을 이어갑니다.',
+      href: `/exam/${candidate.id}`,
+      source: 'school_exam' as const,
+      difficulty: normalizeDifficulty(candidate.difficulty),
+      unit: candidate.subject ?? null,
+      questionCount: candidate.questionCount,
+      reason: `같은 ${candidate.subject ?? '과목'} 회차로 ${wrongTypeLabel} 감각을 다시 확인하세요.`,
+    }));
+
+  const recommendedSets = [...practiceCandidates, ...schoolCandidates].slice(0, 4);
+  const firstHref = recommendedSets[0]?.href;
+  const learningPath: LearningPathStep[] = [
+    {
+      title: '오답 재점검',
+      description: `${weakText}에서 놓친 개념과 해설을 먼저 다시 확인하세요.`,
+      href: '/wrong-notes',
+    },
+    {
+      title: '같은 난이도 반복',
+      description: `${targetDifficulty} 난이도의 ${wrongTypeLabel} 중심 문제를 짧게 풀어 감각을 회복하세요.`,
+      href: firstHref,
+    },
+    {
+      title: '실전 회차 확인',
+      description: '유사 회차를 한 번 더 풀어 점수 변화를 확인하세요.',
+      href: schoolCandidates[0]?.href ?? firstHref,
+    },
+  ];
+
+  return {
+    summary: `${weakText} 약점을 기준으로 ${targetDifficulty} 난이도와 ${wrongTypeLabel} 유형에 가까운 문제를 추천했습니다.`,
+    recommendedSets,
+    learningPath,
+  };
 }
 
 function evaluateNewAchievements(params: {
@@ -538,6 +737,19 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   } catch (e) {
     console.error('[school-exams/grade] trend analysis failed:', e);
   }
+  const recommendations = buildStudyRecommendations({
+    exam,
+    examId: id,
+    totalRate,
+    weakestCategories,
+    results: results.map(result => ({
+      id: result.id,
+      type: result.type,
+      category: result.category,
+      correct: result.correct,
+      question: result.question,
+    })),
+  });
 
   return NextResponse.json({
     mcScore,
@@ -562,6 +774,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       weakestCategories,
       feedback,
       trend,
+      recommendations,
     },
   });
 }
