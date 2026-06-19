@@ -37,6 +37,97 @@ const visibleScaffoldingPatterns = [
 
 const numberPattern = /(?<![A-Za-z])[-+]?\d+(?:\.\d+)?/g;
 
+const difficultyPhraseRules = {
+  '기본': {
+    forbidden: [
+      /여러 조건/,
+      /숨은 조건/,
+      /경계값/,
+      /역추론/,
+      /경우를 .*나누/,
+      /복합 조건/,
+      /매개변수/,
+      /최댓값과 최솟값/,
+    ],
+    requiredAny: [
+      /정의/,
+      /공식/,
+      /간단한 계산/,
+      /바로 대입/,
+      /핵심 성질/,
+      /계산 실수/,
+      /기본 관계/,
+      /짧은 풀이/,
+      /표준 기호/,
+      /기초 연산/,
+      /필수 개념/,
+      /한 단계/,
+      /보기의 값/,
+      /공식의 의미/,
+      /기초 예제/,
+    ],
+  },
+  '유형별': {
+    forbidden: [/최종 조건까지 압축/, /복합 조건/, /정밀하게 나누/, /역추론으로 조건을 좁/],
+    requiredAny: [
+      /대표/,
+      /교과서/,
+      /표준/,
+      /패턴/,
+      /유사 문항/,
+      /조건을 식/,
+      /풀이 순서/,
+      /자료를 읽고/,
+      /두 조건/,
+      /보기의 차이/,
+      /중간값/,
+      /계산 결과/,
+      /조건의 의미/,
+      /문장 속 수량/,
+    ],
+  },
+  '심화': {
+    forbidden: [/기초 예제처럼/, /한 단계 계산/, /공식 하나를 적용/, /정의를 확인/],
+    requiredAny: [
+      /조건/,
+      /중간 결과/,
+      /숨은 제한/,
+      /거꾸로/,
+      /가능한 경우/,
+      /자료 사이/,
+      /경계값/,
+      /두 개념/,
+      /풀이 과정/,
+      /결과에서 원인/,
+      /실생활 조건/,
+      /모델링/,
+      /질문한 대상/,
+      /마지막 조건/,
+    ],
+  },
+  '킬러': {
+    forbidden: [/기초/, /간단한 계산/, /바로 대입/, /공식 하나/, /정의를 확인/, /대표 풀이/, /교과서 표준/],
+    requiredAny: [
+      /여러 조건/,
+      /숨은 조건/,
+      /경계값/,
+      /역추론/,
+      /정밀하게 나누/,
+      /겹치는 경우/,
+      /최댓값과 최솟값/,
+      /조건 강화/,
+      /불변 관계/,
+      /복합 조건/,
+      /끝값/,
+      /보기의 함정/,
+      /구조를 재해석/,
+      /여러 풀이 경로/,
+      /매개변수/,
+      /최종 조건/,
+    ],
+  },
+};
+
 const ebsRoles = {
   '기본': { role: '개념 확인 연산', steps: 1, middleStage: '개념 확인 연산 유형' },
   '유형별': { role: '대표 교과서 유형', steps: 2, middleStage: '대표 교과서 유형' },
@@ -223,6 +314,16 @@ function auditExam(filePath) {
     }
 
     const questionText = normalizeText(question?.question);
+    const phraseRule = difficultyPhraseRules[exam.difficulty];
+    if (phraseRule) {
+      if (phraseRule.forbidden.some(pattern => pattern.test(questionText))) {
+        ebsProblems.push(`Q${qId}: question phrase does not fit ${exam.difficulty} difficulty`);
+      }
+      if (!phraseRule.requiredAny.some(pattern => pattern.test(questionText))) {
+        ebsProblems.push(`Q${qId}: question phrase is too generic for ${exam.difficulty} difficulty`);
+      }
+    }
+
     if (questionText) {
       const textRefs = questionTextCounts.get(questionText) ?? [];
       textRefs.push(qId);
