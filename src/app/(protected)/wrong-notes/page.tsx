@@ -50,6 +50,7 @@ export default function WrongNotesPage() {
   const [retry, setRetry] = useState<RetryNote[]>([]);
   const [retryTotal, setRetryTotal] = useState(0);
   const [retryStarted, setRetryStarted] = useState(false);
+  const [retryDailyMode, setRetryDailyMode] = useState(false);
   const [retryCurrent, setRetryCurrent] = useState(0);
   const [retryAnswers, setRetryAnswers] = useState<Record<string, number>>({});
   const [retryResult, setRetryResult] = useState<RetryResult | null>(null);
@@ -68,26 +69,34 @@ export default function WrongNotesPage() {
     setLoading(true);
     const token = await getToken();
 
-    const [notesRes, dailyRes, retryRes] = await Promise.all([
+    const isDailyExamMode = typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('mode') === 'daily-exam';
+    const [notesRes, dailyRes, retryRes, dailyExamRes] = await Promise.all([
       fetch('/api/wrong-notes', { headers: { Authorization: `Bearer ${token}` } }),
       fetch('/api/wrong-notes/daily', { headers: { Authorization: `Bearer ${token}` } }),
       fetch('/api/wrong-notes/retry?limit=20', { headers: { Authorization: `Bearer ${token}` } }),
+      isDailyExamMode
+        ? fetch('/api/wrong-notes/daily-exam', { headers: { Authorization: `Bearer ${token}` } })
+        : Promise.resolve(null),
     ]);
 
     const notesData = await notesRes.json();
     const dailyData = await dailyRes.json();
     const retryData = await retryRes.json();
+    const dailyExamData = dailyExamRes ? await dailyExamRes.json() : null;
+    const shouldStartDailyExam = Boolean(dailyExamData?.eligible && Array.isArray(dailyExamData.retry) && dailyExamData.retry.length > 0);
 
     setNotes(notesData.notes ?? []);
     setArchived(notesData.archived ?? []);
     setDaily(dailyData.daily ?? []);
     setDailyTotal(dailyData.total ?? 0);
-    setRetry(retryData.retry ?? []);
-    setRetryTotal(retryData.total ?? 0);
-    setRetryStarted(false);
+    setRetry(shouldStartDailyExam ? dailyExamData.retry : retryData.retry ?? []);
+    setRetryTotal(shouldStartDailyExam ? dailyExamData.total ?? dailyExamData.retry.length : retryData.total ?? 0);
+    setRetryStarted(shouldStartDailyExam);
+    setRetryDailyMode(shouldStartDailyExam);
     setRetryCurrent(0);
     setRetryAnswers({});
     setRetryResult(null);
+    if (shouldStartDailyExam) setTab('retry');
     setLoading(false);
   }, [getToken, user]);
 
@@ -126,6 +135,7 @@ export default function WrongNotesPage() {
 
   function startRetryExam() {
     setRetryStarted(true);
+    setRetryDailyMode(false);
     setRetryCurrent(0);
     setRetryAnswers({});
     setRetryResult(null);
@@ -140,7 +150,7 @@ export default function WrongNotesPage() {
       const res = await fetch('/api/wrong-notes/retry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-        body: JSON.stringify({ answers: retryAnswers }),
+        body: JSON.stringify({ answers: retryAnswers, mode: retryDailyMode ? 'daily-exam' : 'retry' }),
       });
       const data = await res.json();
       setRetryResult(data);
@@ -266,7 +276,7 @@ export default function WrongNotesPage() {
             <div className="space-y-4">
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
                 <div className="text-5xl mb-3">{retryResult.correct === retryResult.total ? '🎉' : '💪'}</div>
-                <h2 className="text-xl font-bold text-gray-800">오답 재풀이 결과</h2>
+                <h2 className="text-xl font-bold text-gray-800">{retryDailyMode ? '오늘의 오답시험 결과' : '오답 재풀이 결과'}</h2>
                 <div className="text-4xl font-bold text-indigo-600 mt-3">
                   {retryResult.correct}<span className="text-xl text-gray-400">/{retryResult.total}</span>
                 </div>
@@ -355,7 +365,7 @@ export default function WrongNotesPage() {
                   <>
                     <div className="flex items-center justify-between bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm sticky top-16 z-30">
                       <div>
-                        <h2 className="font-bold text-gray-800 text-sm">오답 재풀이 시험</h2>
+                        <h2 className="font-bold text-gray-800 text-sm">{retryDailyMode ? '오늘의 오답시험' : '오답 재풀이 시험'}</h2>
                         <p className="text-xs text-gray-500">{retryCurrent + 1}/{retry.length} · {note.examTitle}</p>
                       </div>
                       <div className="text-sm font-semibold text-indigo-600">{answeredCount}/{retry.length} 답변</div>

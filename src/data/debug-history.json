@@ -150,5 +150,13 @@
     "description": "오답 재풀이 시험 모드 추가. wrong_notes API에 재풀이 GET/POST 엔드포인트를 추가하고, 오답노트 화면에서 객관식 오답을 최대 20문항까지 시험처럼 풀고 맞힌 문항을 자동 아카이브하도록 구현",
     "files": ["src/app/(protected)/wrong-notes/page.tsx", "src/app/api/wrong-notes/retry/route.ts", "src/app/api/wrong-notes/[noteId]/solve/route.ts", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-020",
+    "date": "2026-06-19",
+    "category": "feature_add",
+    "description": "오늘의 오답시험 자동 제안 기능 추가. KST 자정 이후 대시보드 첫 진입 시 객관식 오답 20개 이상이면 20문항을 랜덤 고정하고, 홈 모달에서 /wrong-notes?mode=daily-exam 시험 모드로 연결",
+    "files": ["src/app/(protected)/dashboard/page.tsx", "src/app/(protected)/wrong-notes/page.tsx", "src/app/api/wrong-notes/daily-exam/route.ts", "src/app/api/wrong-notes/retry/route.ts", "src/lib/updates.ts"],
+    "author": "codex"
   }
 ]

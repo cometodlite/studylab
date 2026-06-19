@@ -4,15 +4,21 @@ import { useCallback, useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import MotivationModal from '@/components/MotivationModal';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { getIdToken } from 'firebase/auth';
 import { collection, query, where, orderBy, limit, getDocs, doc, updateDoc, increment, Timestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { auth, db } from '@/lib/firebase';
 import { POINT_RULES } from '@/lib/points';
 import { UPDATES } from '@/lib/updates';
 import { ACHIEVEMENT_ORDER, ACHIEVEMENTS } from '@/lib/achievements';
 
 export default function DashboardPage() {
   const { user, profile, refreshProfile } = useAuth();
+  const router = useRouter();
   const [showMotivation, setShowMotivation] = useState(false);
+  const [showDailyWrongExam, setShowDailyWrongExam] = useState(false);
+  const [dailyWrongExamTotal, setDailyWrongExamTotal] = useState(0);
+  const [dailyWrongExamCount, setDailyWrongExamCount] = useState(0);
   const [todayPoints, setTodayPoints] = useState(0);
   const [recentLogs, setRecentLogs] = useState<{ reason: string; amount: number; id: string }[]>([]);
   const achievements = profile?.achievements ?? [];
@@ -91,19 +97,53 @@ export default function DashboardPage() {
     }
   }, [user]);
 
+  const checkDailyWrongExam = useCallback(async () => {
+    if (!user || !auth.currentUser) return;
+    try {
+      const token = await getIdToken(auth.currentUser);
+      const res = await fetch('/api/wrong-notes/daily-exam', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const data = await res.json();
+      if (data.eligible && !data.promptDismissed && Array.isArray(data.retry) && data.retry.length >= 20) {
+        setDailyWrongExamTotal(data.total ?? data.retry.length);
+        setDailyWrongExamCount(data.retry.length);
+        setShowDailyWrongExam(true);
+      }
+    } catch (e) {
+      console.error('오늘의 오답시험 확인 실패:', e);
+    }
+  }, [user]);
+
+  async function dismissDailyWrongExam() {
+    setShowDailyWrongExam(false);
+    if (!auth.currentUser) return;
+    try {
+      const token = await getIdToken(auth.currentUser);
+      await fetch('/api/wrong-notes/daily-exam', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+        body: JSON.stringify({ action: 'dismiss' }),
+      });
+    } catch (e) {
+      console.error('오늘의 오답시험 닫기 실패:', e);
+    }
+  }
+
   useEffect(() => {
     if (!user || !profile) return;
     let cancelled = false;
     queueMicrotask(() => {
       if (cancelled) return;
       checkDailyLogin();
+      checkDailyWrongExam();
       fetchTodayPoints();
       fetchRecentLogs();
     });
     return () => {
       cancelled = true;
     };
-  }, [checkDailyLogin, fetchRecentLogs, fetchTodayPoints, profile, user]);
+  }, [checkDailyLogin, checkDailyWrongExam, fetchRecentLogs, fetchTodayPoints, profile, user]);
 
   return (
     <>
@@ -114,6 +154,43 @@ export default function DashboardPage() {
           totalPoints={profile.points}
           streakDays={profile.streakDays}
         />
+      )}
+
+      {showDailyWrongExam && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-7 text-center">
+            <div className="text-5xl mb-4">📝</div>
+            <p className="text-xs font-bold text-indigo-500 uppercase">Daily Wrong Exam</p>
+            <h2 className="text-xl font-bold text-gray-800 mt-1">오늘의 오답시험이 준비됐어요</h2>
+            <p className="text-sm text-gray-500 mt-3 leading-relaxed">
+              자정 이후 첫 접속이라, 쌓인 객관식 오답 {dailyWrongExamTotal}개 중 {dailyWrongExamCount}개를 랜덤으로 골랐습니다.
+            </p>
+            <div className="grid grid-cols-2 gap-3 my-6">
+              <div className="bg-indigo-50 rounded-xl px-4 py-3">
+                <div className="text-2xl font-bold text-indigo-600">{dailyWrongExamCount}</div>
+                <div className="text-xs text-gray-500 mt-0.5">오늘 문항</div>
+              </div>
+              <div className="bg-green-50 rounded-xl px-4 py-3">
+                <div className="text-2xl font-bold text-green-600">자동</div>
+                <div className="text-xs text-gray-500 mt-0.5">맞히면 아카이브</div>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={dismissDailyWrongExam}
+                className="flex-1 border border-gray-200 hover:bg-gray-50 text-gray-600 font-semibold py-3 rounded-xl transition"
+              >
+                오늘은 나중에
+              </button>
+              <button
+                onClick={() => router.push('/wrong-notes?mode=daily-exam')}
+                className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-xl transition"
+              >
+                시작하기
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       <div className="space-y-6">

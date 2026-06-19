@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyFirebaseToken } from '@/lib/firebase-jwt';
-import { fsBatch, fsQuery, WriteOp } from '@/lib/firestore-rest';
+import { fsBatch, fsQuery, fsUpdate, WriteOp } from '@/lib/firestore-rest';
 
 type WrongNoteDoc = {
   _id: string;
@@ -21,6 +21,10 @@ function isRetryableNote(note: WrongNoteDoc) {
     Array.isArray(note.choices) &&
     note.choices.length > 0
   );
+}
+
+function todayKST() {
+  return new Date().toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' }).replace(/\. /g, '-').replace('.', '');
 }
 
 async function getUid(req: NextRequest) {
@@ -61,6 +65,7 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json().catch(() => ({}));
   const answers = (body.answers ?? {}) as Record<string, number>;
+  const mode = body.mode;
   const submittedIds = Object.keys(answers);
   if (submittedIds.length === 0) {
     return NextResponse.json({ error: '제출된 답안이 없습니다.' }, { status: 400 });
@@ -101,6 +106,13 @@ export async function POST(req: NextRequest) {
 
     if (writes.length > 0) {
       await fsBatch(writes, auth.token);
+    }
+    if (mode === 'daily-exam') {
+      await fsUpdate(`users/${auth.uid}`, {
+        dailyWrongExamDate: todayKST(),
+        dailyWrongExamCompleted: true,
+        dailyWrongExamCompletedAt: now,
+      }, auth.token);
     }
 
     return NextResponse.json({
