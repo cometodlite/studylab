@@ -12,9 +12,20 @@ function todayKST(): string {
   return new Date().toLocaleDateString('ko-KR', { timeZone: 'Asia/Seoul' }).replace(/\. /g, '-').replace('.', '');
 }
 
-function topDifficulty(difficulties: string[]): Difficulty {
+const STAGE_TO_DIFFICULTY: Record<string, Difficulty> = {
+  '최고 수준/발전 유형': '킬러',
+  '서술형 대비 유형': '심화',
+  '기출 변형 핵심 유형': '심화',
+  '대표 교과서 유형': '유형별',
+  '개념 확인 연산 유형': '기본',
+};
+
+function topDifficulty(stages: string[]): Difficulty {
   const order: Difficulty[] = ['킬러', '심화', '유형별', '기본'];
-  return order.find(d => difficulties.includes(d)) ?? '기본';
+  for (const tier of order) {
+    if (stages.some(s => STAGE_TO_DIFFICULTY[s] === tier)) return tier;
+  }
+  return '기본';
 }
 
 interface SubmittedResult {
@@ -26,6 +37,8 @@ interface SubmittedResult {
   choices: string[];
   explanation?: string;
   unit?: string;
+  stage?: string;
+  typeTag?: string;
 }
 
 export async function POST(req: NextRequest) {
@@ -43,13 +56,13 @@ export async function POST(req: NextRequest) {
   const title: string = body.title ?? '생성 시험';
   const grade: number = body.grade ?? 0;
   const units: string[] = body.units ?? [];
-  const difficulties: string[] = body.difficulties ?? [];
+  const stages: string[] = body.stages ?? body.difficulties ?? [];
   const score: number = body.score ?? 0;
   const total: number = body.total ?? 0;
   const totalTime: number = body.totalTime ?? 0;
   const results: SubmittedResult[] = body.results ?? [];
 
-  const difficulty = topDifficulty(difficulties);
+  const difficulty = topDifficulty(stages);
   const pts = calcExamPoints(score, total, difficulty);
   const now = new Date();
   const today = todayKST();
@@ -98,7 +111,7 @@ export async function POST(req: NextRequest) {
           examTitle: title,
           grade,
           units,
-          difficulties,
+          stages,
           score,
           total,
           totalTime,
@@ -131,7 +144,7 @@ export async function POST(req: NextRequest) {
           },
         },
       ], token);
-      await fsSet(attemptKey, { userId: uid, grade, units, date: today, createdAt: now }, token);
+      await fsSet(attemptKey, { userId: uid, grade, units, stages, date: today, createdAt: now }, token);
     } catch (e) {
       console.error('[exams/session/grade] fsBatch (points) failed:', e);
     }

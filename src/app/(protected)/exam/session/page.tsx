@@ -14,13 +14,16 @@ interface GeneratedQuestion {
   answer: number;
   explanation?: string;
   unit?: string;
+  stage?: string;
+  typeTag?: string;
+  difficulty?: string;
 }
 
 interface GeneratedExam {
   title: string;
   grade: number;
   units: string[];
-  difficulties: string[];
+  stages: string[];
   questions: GeneratedQuestion[];
   totalPoolSize: number;
 }
@@ -34,6 +37,8 @@ interface QuestionResult {
   correct: boolean;
   explanation?: string;
   unit?: string;
+  stage?: string;
+  typeTag?: string;
 }
 
 interface GradeResponse {
@@ -98,6 +103,8 @@ export default function ExamSessionPage() {
         correct: answers[q.id] === q.answer,
         explanation: q.explanation,
         unit: q.unit,
+        stage: q.stage,
+        typeTag: q.typeTag,
       }));
 
       const score = results.filter(r => r.correct).length;
@@ -111,7 +118,7 @@ export default function ExamSessionPage() {
           title: exam.title,
           grade: exam.grade,
           units: exam.units,
-          difficulties: exam.difficulties,
+          stages: exam.stages,
           score,
           total: exam.questions.length,
           totalTime,
@@ -165,7 +172,10 @@ export default function ExamSessionPage() {
               <div className="flex items-start gap-2 mb-3">
                 <span className="text-lg shrink-0">{r.correct ? '✅' : '❌'}</span>
                 <div>
-                  {r.unit && <span className="text-xs text-gray-400 font-medium">{r.unit} · </span>}
+                  <div className="flex flex-wrap gap-1.5 mb-1">
+                    {r.unit && <span className="text-xs text-gray-400 font-medium">{r.unit}</span>}
+                    {r.stage && <span className="text-xs bg-indigo-50 text-indigo-600 px-1.5 py-0.5 rounded font-medium">{r.stage.replace(' 유형', '')}</span>}
+                  </div>
                   <span className="font-medium text-gray-800">{i + 1}. <MathText text={r.question} /></span>
                 </div>
               </div>
@@ -237,6 +247,13 @@ export default function ExamSessionPage() {
 
       {/* 문제 */}
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+        {q.stage && (
+          <div className="flex gap-2 mb-3">
+            <span className="text-xs bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full font-medium">
+              {q.stage.replace(' 유형', '')}
+            </span>
+          </div>
+        )}
         <p className="font-semibold text-gray-800 text-base mb-5">
           {current + 1}. <MathText text={q.question} />
         </p>

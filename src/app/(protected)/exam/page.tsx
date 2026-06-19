@@ -9,14 +9,21 @@ const UNITS_BY_GRADE: Record<number, string[]> = {
   3: ['제곱근과 실수', '다항식의 전개와 인수분해', '이차방정식', '이차함수', '삼각비', '원의 성질', '통계'],
 };
 
-const DIFFICULTIES = ['기본', '유형별', '심화', '킬러'] as const;
+const EBS_STAGES = [
+  { id: '개념 확인 연산 유형', label: '개념 확인 연산', desc: '핵심 공식·개념 직접 적용 (★☆☆☆☆)' },
+  { id: '대표 교과서 유형', label: '대표 교과서 유형', desc: '교과서 대표 유형 풀이 (★★☆☆☆)' },
+  { id: '기출 변형 핵심 유형', label: '기출 변형 핵심', desc: '내신 빈출 변형 문제 (★★★☆☆)' },
+  { id: '서술형 대비 유형', label: '서술형 대비', desc: '풀이 과정·논리력 요구 (★★★★☆)' },
+  { id: '최고 수준/발전 유형', label: '최고 수준 발전', desc: '준킬러·킬러 수준 (★★★★★)' },
+] as const;
+
 const COUNTS = [10, 20, 30] as const;
 
 export default function ExamBuilderPage() {
   const router = useRouter();
   const [grade, setGrade] = useState<number | null>(null);
   const [units, setUnits] = useState<string[]>([]);
-  const [difficulties, setDifficulties] = useState<string[]>(['기본', '유형별']);
+  const [stages, setStages] = useState<string[]>(['개념 확인 연산 유형', '대표 교과서 유형', '기출 변형 핵심 유형']);
   const [count, setCount] = useState(20);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -30,8 +37,8 @@ export default function ExamBuilderPage() {
     setUnits(prev => prev.includes(unit) ? prev.filter(u => u !== unit) : [...prev, unit]);
   }
 
-  function toggleDifficulty(diff: string) {
-    setDifficulties(prev => prev.includes(diff) ? prev.filter(d => d !== diff) : [...prev, diff]);
+  function toggleStage(stage: string) {
+    setStages(prev => prev.includes(stage) ? prev.filter(s => s !== stage) : [...prev, stage]);
   }
 
   function toggleAllUnits() {
@@ -41,14 +48,14 @@ export default function ExamBuilderPage() {
   }
 
   async function handleStart() {
-    if (!grade || units.length === 0 || difficulties.length === 0) return;
+    if (!grade || units.length === 0 || stages.length === 0) return;
     setLoading(true);
     setError('');
     try {
       const params = new URLSearchParams({
         grade: String(grade),
         units: units.join(','),
-        difficulties: difficulties.join(','),
+        stages: stages.join(','),
         count: String(count),
       });
       const res = await fetch(`/api/exams/generate?${params}`);
@@ -66,7 +73,7 @@ export default function ExamBuilderPage() {
     }
   }
 
-  const canStart = grade !== null && units.length > 0 && difficulties.length > 0;
+  const canStart = grade !== null && units.length > 0 && stages.length > 0;
 
   return (
     <div className="max-w-lg mx-auto space-y-5">
@@ -120,19 +127,23 @@ export default function ExamBuilderPage() {
         </div>
       )}
 
-      {/* 난이도 */}
+      {/* EBS 유형 단계 */}
       <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-        <p className="text-sm font-semibold text-gray-700 mb-3">난이도</p>
-        <div className="grid grid-cols-2 gap-2.5">
-          {DIFFICULTIES.map(diff => (
-            <label key={diff} className="flex items-center gap-3 cursor-pointer">
+        <p className="text-sm font-semibold text-gray-700 mb-1">문제 유형 단계 (EBS 5단계)</p>
+        <p className="text-xs text-gray-400 mb-3">여러 단계를 함께 선택할 수 있습니다.</p>
+        <div className="space-y-2.5">
+          {EBS_STAGES.map(stage => (
+            <label key={stage.id} className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
-                checked={difficulties.includes(diff)}
-                onChange={() => toggleDifficulty(diff)}
-                className="w-4 h-4 rounded accent-indigo-600"
+                checked={stages.includes(stage.id)}
+                onChange={() => toggleStage(stage.id)}
+                className="w-4 h-4 rounded accent-indigo-600 mt-0.5 shrink-0"
               />
-              <span className="text-sm text-gray-700">{diff}</span>
+              <div>
+                <span className="text-sm font-medium text-gray-800">{stage.label}</span>
+                <p className="text-xs text-gray-400 mt-0.5">{stage.desc}</p>
+              </div>
             </label>
           ))}
         </div>
