@@ -1,16 +1,17 @@
 {
   "id": "m2-rational-cyclic-advanced",
   "title": "순환소수 — 심화",
-  "description": "EBS 중학 기출 변형형: 내신 빈출 조건을 해석하고 연결합니다. 순환소수 변환 심화, 조건 추론, 역산, 식의 값",
+  "description": "조건을 연결하고 중간 결과를 해석해야 하는 내신 변형 문제입니다.",
   "grade": 2,
   "unit": "유리수와 순환소수",
   "difficulty": "심화",
   "ebsStyle": {
-    "version": 3,
+    "version": 4,
     "role": "기출 변형 핵심",
     "expectedSteps": 4,
     "middleStage": "기출 변형 핵심 유형",
-    "typeVariantCount": 5,
+    "typeVariantCount": 15,
+    "maxSimilarPerExam": 2,
     "middleTaxonomy": {
       "buildUpStages": [
         "개념 확인 연산 유형",
@@ -53,28 +54,28 @@
   "questions": [
     {
       "id": 1,
-      "question": "분수 $\\frac{x}{10228}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 기본 정의를 바로 적용하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$2557$",
-        "$2558$",
-        "$2559$",
-        "$2556$",
-        "$10228$"
+        "$1$",
+        "$2$",
+        "$3$",
+        "$20$",
+        "$-1$"
       ],
       "answer": 0,
-      "explanation": "$10228$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $2557$이다.",
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 조건 · 개념 확인 연산",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 개념 확인",
         "skills": [
+          "약분 조건",
           "분모 소인수",
-          "배수 조건",
-          "핵심 공식 적용"
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -84,28 +85,28 @@
     },
     {
       "id": 2,
-      "question": "$\\frac{x}{38}$가 유한소수가 되게 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 대표 풀이 흐름에 맞추어, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$20$",
-        "$19$",
-        "$21$",
-        "$18$",
-        "$38$"
+        "$12$",
+        "$13$",
+        "$11$",
+        "$10$",
+        "$44$"
       ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 분모에서 $2$, $5$가 아닌 소인수를 약분해야 하므로 최소 $19$가 필요하다.",
+      "answer": 2,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 약분 조건 · 대표 교과서 유형",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 대표 풀이",
         "skills": [
-          "유한소수",
+          "약분 조건",
           "분모 소인수",
-          "표준 풀이 적용"
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -115,26 +116,26 @@
     },
     {
       "id": 3,
-      "question": "$0.8\\dot{5}$를 분수로 나타낸 꼴과 같은 것은?",
+      "question": "순환소수에서 필요한 조건만 골라, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{13}{15}$",
-        "$\\frac{85}{99}$",
-        "$\\frac{77}{90}$",
-        "$\\frac{13}{90}$",
-        "$\\frac{77}{900}$"
+        "$14$",
+        "$15$",
+        "$12$",
+        "$65$",
+        "$13$"
       ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $0.8\\dot{5}=\\frac{85-8}{90}=\\frac{77}{90}$이다.",
+      "answer": 4,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환소수 분수 변환 · 기출 변형 핵심",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 조건 해석",
         "skills": [
-          "순환소수",
-          "분수 변환",
-          "조건 해석"
+          "약분 조건",
+          "분모 소인수",
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
         "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "실생활 문장제 독해",
@@ -146,30 +147,30 @@
     },
     {
       "id": 4,
-      "question": "$\\frac{1}{13}$를 소수로 나타내면 어떤 소수인가?",
+      "question": "순환소수에서 거꾸로 조건을 추적하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "유한소수",
-        "정수",
-        "자연수",
-        "순환소수",
-        "무리수"
+        "$2$",
+        "$1$",
+        "$3$",
+        "$20$",
+        "$-1$"
       ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 분모에 $2$, $5$가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.",
+      "answer": 1,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환마디 길이 판별 · 서술형 대비",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 역추론",
         "skills": [
-          "순환소수",
-          "나눗셈",
-          "과정 점검"
+          "약분 조건",
+          "분모 소인수",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -177,28 +178,28 @@
     },
     {
       "id": 5,
-      "question": "$\\frac{6}{10}$을 소수로 나타낸 값에 가장 가까운 것은?",
+      "question": "순환소수에서 가능한 경우를 나누어, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{7}{10}$",
-        "$\\frac{6}{11}$",
-        "$\\frac{1}{2}$",
-        "$\\frac{3}{10}$",
-        "$\\frac{3}{5}$"
+        "$12$",
+        "$13$",
+        "$10$",
+        "$11$",
+        "$44$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.",
+      "answer": 3,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "소수와 분수 크기 비교 · 최고 수준/발전",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 경우 분류",
         "skills": [
-          "유리수",
-          "크기 비교",
-          "복합 추론"
+          "약분 조건",
+          "분모 소인수",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -208,30 +209,30 @@
     },
     {
       "id": 6,
-      "question": "분수 $\\frac{x}{61129}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 주어진 자료를 해석하여, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$61130$",
-        "$61129$",
-        "$61131$",
-        "$61128$",
-        "$61132$"
+        "$13$",
+        "$14$",
+        "$15$",
+        "$12$",
+        "$65$"
       ],
-      "answer": 1,
-      "explanation": "$61129$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $61129$이다.",
+      "answer": 0,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 조건 · 개념 확인 연산",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 자료 해석",
         "skills": [
+          "약분 조건",
           "분모 소인수",
-          "배수 조건",
-          "핵심 공식 적용"
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -239,30 +240,30 @@
     },
     {
       "id": 7,
-      "question": "$\\frac{x}{22}$가 유한소수가 되게 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 값의 범위를 먼저 판단하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$12$",
-        "$13$",
-        "$11$",
-        "$10$",
-        "$22$"
+        "$2$",
+        "$3$",
+        "$1$",
+        "$20$",
+        "$-1$"
       ],
       "answer": 2,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 분모에서 $2$, $5$가 아닌 소인수를 약분해야 하므로 최소 $11$가 필요하다.",
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 약분 조건 · 대표 교과서 유형",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 범위 판단",
         "skills": [
-          "유한소수",
+          "약분 조건",
           "분모 소인수",
-          "표준 풀이 적용"
+          "범위 해석"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
+        "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -270,30 +271,30 @@
     },
     {
       "id": 8,
-      "question": "$0.9\\dot{9}$를 분수로 나타낸 꼴과 같은 것은?",
+      "question": "순환소수에서 매개변수의 영향을 생각하여, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{91}{90}$",
-        "$\\frac{1}{5}$",
-        "$\\frac{1}{10}$",
-        "$1$",
-        "$2$"
+        "$12$",
+        "$13$",
+        "$10$",
+        "$44$",
+        "$11$"
       ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $0.9\\dot{9}=\\frac{99-9}{90}=\\frac{90}{90}$이다.",
+      "answer": 4,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환소수 분수 변환 · 기출 변형 핵심",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 매개변수",
         "skills": [
-          "순환소수",
-          "분수 변환",
-          "조건 해석"
+          "약분 조건",
+          "분모 소인수",
+          "매개변수 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
         "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -301,28 +302,90 @@
     },
     {
       "id": 9,
-      "question": "$\\frac{1}{7}$를 소수로 나타내면 어떤 소수인가?",
+      "question": "순환소수에서 두 값을 비교하는 관점에서, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "유한소수",
-        "정수",
-        "자연수",
-        "무리수",
-        "순환소수"
+        "$14$",
+        "$13$",
+        "$15$",
+        "$12$",
+        "$65$"
       ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 분모에 $2$, $5$가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.",
+      "answer": 1,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환마디 길이 판별 · 서술형 대비",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 비교 판단",
         "skills": [
-          "순환소수",
-          "나눗셈",
+          "약분 조건",
+          "분모 소인수",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 10,
+      "question": "순환소수에서 계산 결과를 한 번 더 연결하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$20$",
+        "$1$",
+        "$-1$"
+      ],
+      "answer": 3,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 복합 계산",
+        "skills": [
+          "약분 조건",
+          "분모 소인수",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 11,
+      "question": "순환소수에서 풀이 과정의 빠진 단계를 채운다고 생각하고, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$11$",
+        "$12$",
+        "$13$",
+        "$10$",
+        "$44$"
+      ],
+      "answer": 0,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 서술형 흐름",
+        "skills": [
+          "약분 조건",
+          "분모 소인수",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -331,30 +394,30 @@
       }
     },
     {
-      "id": 10,
-      "question": "$\\frac{8}{5}$을 소수로 나타낸 값에 가장 가까운 것은?",
+      "id": 12,
+      "question": "순환소수에서 숨은 조건을 찾아, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{8}{5}$",
-        "$\\frac{9}{5}$",
-        "$\\frac{4}{3}$",
-        "$\\frac{7}{5}$",
-        "$\\frac{4}{5}$"
+        "$14$",
+        "$15$",
+        "$13$",
+        "$12$",
+        "$65$"
       ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.",
+      "answer": 2,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "소수와 분수 크기 비교 · 최고 수준/발전",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 숨은 조건",
         "skills": [
-          "유리수",
-          "크기 비교",
-          "복합 추론"
+          "약분 조건",
+          "분모 소인수",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -362,60 +425,60 @@
       }
     },
     {
-      "id": 11,
-      "question": "분수 $\\frac{x}{111993}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "id": 13,
+      "question": "순환소수에서 상황을 식으로 모델링하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$111994$",
-        "$111995$",
-        "$111993$",
-        "$111992$",
-        "$111996$"
+        "$2$",
+        "$3$",
+        "$20$",
+        "$-1$",
+        "$1$"
       ],
-      "answer": 2,
-      "explanation": "$111993$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $111993$이다.",
+      "answer": 4,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 조건 · 개념 확인 연산",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 상황 모델링",
         "skills": [
+          "약분 조건",
           "분모 소인수",
-          "배수 조건",
-          "핵심 공식 적용"
+          "모델링"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
       }
     },
     {
-      "id": 12,
-      "question": "$\\frac{x}{16}$가 유한소수가 되게 하는 가장 작은 자연수 $x$는?",
+      "id": 14,
+      "question": "순환소수에서 조건을 변형해 적용하여, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$2$",
-        "$3$",
-        "$16$",
-        "$1$",
-        "$4$"
+        "$12$",
+        "$11$",
+        "$13$",
+        "$10$",
+        "$44$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 분모에서 $2$, $5$가 아닌 소인수를 약분해야 하므로 최소 $1$가 필요하다.",
+      "answer": 1,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 약분 조건 · 대표 교과서 유형",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 변형 적용",
         "skills": [
-          "유한소수",
+          "약분 조건",
           "분모 소인수",
-          "표준 풀이 적용"
+          "변형"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -424,91 +487,29 @@
       }
     },
     {
-      "id": 13,
-      "question": "$0.1\\dot{7}$를 분수로 나타낸 꼴과 같은 것은?",
-      "choices": [
-        "$\\frac{17}{90}$",
-        "$\\frac{17}{99}$",
-        "$\\frac{4}{45}$",
-        "$\\frac{4}{225}$",
-        "$\\frac{8}{45}$"
-      ],
-      "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $0.1\\dot{7}=\\frac{17-1}{90}=\\frac{16}{90}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "순환소수 분수 변환 · 기출 변형 핵심",
-        "skills": [
-          "순환소수",
-          "분수 변환",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "rational"
-      }
-    },
-    {
-      "id": 14,
-      "question": "$\\frac{1}{13}$를 소수로 나타내면 어떤 소수인가?",
-      "choices": [
-        "순환소수",
-        "유한소수",
-        "정수",
-        "자연수",
-        "무리수"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 분모에 $2$, $5$가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "순환마디 길이 판별 · 서술형 대비",
-        "skills": [
-          "순환소수",
-          "나눗셈",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "rational"
-      }
-    },
-    {
       "id": 15,
-      "question": "$\\frac{3}{20}$을 소수로 나타낸 값에 가장 가까운 것은?",
+      "question": "순환소수에서 여러 조건을 종합하여, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{1}{5}$",
-        "$\\frac{3}{20}$",
-        "$\\frac{1}{7}$",
-        "$\\frac{1}{10}$",
-        "$\\frac{3}{40}$"
+        "$14$",
+        "$15$",
+        "$12$",
+        "$13$",
+        "$65$"
       ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.",
+      "answer": 3,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "소수와 분수 크기 비교 · 최고 수준/발전",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 종합 추론",
         "skills": [
-          "유리수",
-          "크기 비교",
-          "복합 추론"
+          "약분 조건",
+          "분모 소인수",
+          "종합 추론"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -518,28 +519,28 @@
     },
     {
       "id": 16,
-      "question": "분수 $\\frac{x}{162857}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 같은 개념을 다른 수에 적용하여, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$162858$",
-        "$162859$",
-        "$162856$",
-        "$162857$",
-        "$162860$"
+        "$11$",
+        "$12$",
+        "$13$",
+        "$10$",
+        "$44$"
       ],
-      "answer": 3,
-      "explanation": "$162857$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $162857$이다.",
+      "answer": 0,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 조건 · 개념 확인 연산",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 개념 확인",
         "skills": [
+          "약분 조건",
           "분모 소인수",
-          "배수 조건",
-          "핵심 공식 적용"
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -549,28 +550,28 @@
     },
     {
       "id": 17,
-      "question": "$\\frac{x}{30}$가 유한소수가 되게 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 표준 풀이를 변형하여, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$4$",
-        "$5$",
-        "$2$",
-        "$30$",
-        "$3$"
+        "$14$",
+        "$15$",
+        "$13$",
+        "$12$",
+        "$65$"
       ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 분모에서 $2$, $5$가 아닌 소인수를 약분해야 하므로 최소 $3$가 필요하다.",
+      "answer": 2,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 약분 조건 · 대표 교과서 유형",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 대표 풀이",
         "skills": [
-          "유한소수",
+          "약분 조건",
           "분모 소인수",
-          "표준 풀이 적용"
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -580,26 +581,26 @@
     },
     {
       "id": 18,
-      "question": "$0.2\\dot{5}$를 분수로 나타낸 꼴과 같은 것은?",
+      "question": "순환소수에서 조건의 순서를 바꾸어 생각하며, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{23}{90}$",
-        "$\\frac{4}{15}$",
-        "$\\frac{25}{99}$",
-        "$\\frac{7}{90}$",
-        "$\\frac{23}{900}$"
+        "$2$",
+        "$3$",
+        "$20$",
+        "$-1$",
+        "$1$"
       ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $0.2\\dot{5}=\\frac{25-2}{90}=\\frac{23}{90}$이다.",
+      "answer": 4,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환소수 분수 변환 · 기출 변형 핵심",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 조건 해석",
         "skills": [
-          "순환소수",
-          "분수 변환",
-          "조건 해석"
+          "약분 조건",
+          "분모 소인수",
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
         "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "실생활 문장제 독해",
@@ -611,30 +612,30 @@
     },
     {
       "id": 19,
-      "question": "$\\frac{1}{7}$를 소수로 나타내면 어떤 소수인가?",
+      "question": "순환소수에서 결과에서 원인을 되짚어, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "유한소수",
-        "순환소수",
-        "정수",
-        "자연수",
-        "무리수"
+        "$12$",
+        "$11$",
+        "$13$",
+        "$10$",
+        "$44$"
       ],
       "answer": 1,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 분모에 $2$, $5$가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.",
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환마디 길이 판별 · 서술형 대비",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 역추론",
         "skills": [
-          "순환소수",
-          "나눗셈",
-          "과정 점검"
+          "약분 조건",
+          "분모 소인수",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -642,28 +643,28 @@
     },
     {
       "id": 20,
-      "question": "$\\frac{5}{8}$을 소수로 나타낸 값에 가장 가까운 것은?",
+      "question": "순환소수에서 겹치는 경우를 제외하며, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{3}{4}$",
-        "$\\frac{5}{9}$",
-        "$\\frac{5}{8}$",
-        "$\\frac{1}{2}$",
-        "$\\frac{5}{16}$"
+        "$14$",
+        "$15$",
+        "$12$",
+        "$13$",
+        "$65$"
       ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.",
+      "answer": 3,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "소수와 분수 크기 비교 · 최고 수준/발전",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 경우 분류",
         "skills": [
-          "유리수",
-          "크기 비교",
-          "복합 추론"
+          "약분 조건",
+          "분모 소인수",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -673,30 +674,30 @@
     },
     {
       "id": 21,
-      "question": "분수 $\\frac{x}{213762}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 자료 사이의 차이를 비교하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$106882$",
-        "$106883$",
-        "$106880$",
-        "$213762$",
-        "$106881$"
+        "$1$",
+        "$2$",
+        "$3$",
+        "$20$",
+        "$-1$"
       ],
-      "answer": 4,
-      "explanation": "$213762$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $106881$이다.",
+      "answer": 0,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 조건 · 개념 확인 연산",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 자료 해석",
         "skills": [
+          "약분 조건",
           "분모 소인수",
-          "배수 조건",
-          "핵심 공식 적용"
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -704,30 +705,30 @@
     },
     {
       "id": 22,
-      "question": "$\\frac{x}{18}$가 유한소수가 되게 하는 가장 작은 자연수 $x$는?",
+      "question": "순환소수에서 끝값과 경계값을 확인하여, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$9$",
-        "$10$",
+        "$12$",
+        "$13$",
         "$11$",
-        "$8$",
-        "$18$"
+        "$10$",
+        "$44$"
       ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 분모에서 $2$, $5$가 아닌 소인수를 약분해야 하므로 최소 $9$가 필요하다.",
+      "answer": 2,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 약분 조건 · 대표 교과서 유형",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 범위 판단",
         "skills": [
-          "유한소수",
+          "약분 조건",
           "분모 소인수",
-          "표준 풀이 적용"
+          "범위 해석"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
+        "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -735,30 +736,30 @@
     },
     {
       "id": 23,
-      "question": "$0.3\\dot{9}$를 분수로 나타낸 꼴과 같은 것은?",
+      "question": "순환소수에서 변하지 않는 값을 찾아, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{37}{90}$",
-        "$\\frac{2}{5}$",
-        "$\\frac{13}{33}$",
-        "$\\frac{2}{15}$",
-        "$\\frac{1}{25}$"
+        "$14$",
+        "$15$",
+        "$12$",
+        "$65$",
+        "$13$"
       ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $0.3\\dot{9}=\\frac{39-3}{90}=\\frac{36}{90}$이다.",
+      "answer": 4,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환소수 분수 변환 · 기출 변형 핵심",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 매개변수",
         "skills": [
-          "순환소수",
-          "분수 변환",
-          "조건 해석"
+          "약분 조건",
+          "분모 소인수",
+          "매개변수 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
         "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
@@ -766,28 +767,90 @@
     },
     {
       "id": 24,
-      "question": "$\\frac{1}{13}$를 소수로 나타내면 어떤 소수인가?",
+      "question": "순환소수에서 보기의 차이를 따져, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "유한소수",
-        "정수",
-        "순환소수",
-        "자연수",
-        "무리수"
+        "$2$",
+        "$1$",
+        "$3$",
+        "$20$",
+        "$-1$"
       ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 분모에 $2$, $5$가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.",
+      "answer": 1,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환마디 길이 판별 · 서술형 대비",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 비교 판단",
         "skills": [
-          "순환소수",
-          "나눗셈",
+          "약분 조건",
+          "분모 소인수",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 25,
+      "question": "순환소수에서 중간 계산을 이용하여, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$12$",
+        "$13$",
+        "$10$",
+        "$11$",
+        "$44$"
+      ],
+      "answer": 3,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 복합 계산",
+        "skills": [
+          "약분 조건",
+          "분모 소인수",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "rational"
+      }
+    },
+    {
+      "id": 26,
+      "question": "순환소수에서 계산 실수를 점검하며, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "choices": [
+        "$13$",
+        "$14$",
+        "$15$",
+        "$12$",
+        "$65$"
+      ],
+      "answer": 0,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 서술형 흐름",
+        "skills": [
+          "약분 조건",
+          "분모 소인수",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -796,30 +859,30 @@
       }
     },
     {
-      "id": 25,
-      "question": "$\\frac{7}{4}$을 소수로 나타낸 값에 가장 가까운 것은?",
+      "id": 27,
+      "question": "순환소수에서 문장에 숨은 제한을 반영하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
         "$2$",
-        "$\\frac{7}{5}$",
-        "$\\frac{3}{2}$",
-        "$\\frac{7}{4}$",
-        "$\\frac{7}{8}$"
+        "$3$",
+        "$1$",
+        "$20$",
+        "$-1$"
       ],
-      "answer": 3,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.",
+      "answer": 2,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "소수와 분수 크기 비교 · 최고 수준/발전",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 숨은 조건",
         "skills": [
-          "유리수",
-          "크기 비교",
-          "복합 추론"
+          "약분 조건",
+          "분모 소인수",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -827,60 +890,60 @@
       }
     },
     {
-      "id": 26,
-      "question": "분수 $\\frac{x}{264618}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
+      "id": 28,
+      "question": "순환소수에서 실생활 조건을 식으로 바꾸어, 분수 $\\frac{x}{44}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$132309$",
-        "$132310$",
-        "$132311$",
-        "$132308$",
-        "$264618$"
+        "$12$",
+        "$13$",
+        "$10$",
+        "$44$",
+        "$11$"
       ],
-      "answer": 0,
-      "explanation": "$264618$의 소인수 중 $2$, $5$가 아닌 부분을 약분해야 한다. 그 부분을 포함하는 가장 작은 $x$는 $132309$이다.",
+      "answer": 4,
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 조건 · 개념 확인 연산",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 상황 모델링",
         "skills": [
+          "약분 조건",
           "분모 소인수",
-          "배수 조건",
-          "핵심 공식 적용"
+          "모델링"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "rational"
       }
     },
     {
-      "id": 27,
-      "question": "$\\frac{x}{38}$가 유한소수가 되게 하는 가장 작은 자연수 $x$는?",
+      "id": 29,
+      "question": "순환소수에서 질문한 대상을 바꾸어 생각하며, 분수 $\\frac{x}{65}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$20$",
-        "$19$",
-        "$21$",
-        "$18$",
-        "$38$"
+        "$14$",
+        "$13$",
+        "$15$",
+        "$12$",
+        "$65$"
       ],
       "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 분모에서 $2$, $5$가 아닌 소인수를 약분해야 하므로 최소 $19$가 필요하다.",
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "유한소수 약분 조건 · 대표 교과서 유형",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 변형 적용",
         "skills": [
-          "유한소수",
+          "약분 조건",
           "분모 소인수",
-          "표준 풀이 적용"
+          "변형"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -889,91 +952,29 @@
       }
     },
     {
-      "id": 28,
-      "question": "$0.4\\dot{7}$를 분수로 나타낸 꼴과 같은 것은?",
+      "id": 30,
+      "question": "순환소수에서 마지막 조건까지 함께 고려하여, 분수 $\\frac{x}{20}$가 유한소수가 되도록 하는 가장 작은 자연수 $x$는?",
       "choices": [
-        "$\\frac{22}{45}$",
-        "$\\frac{47}{99}$",
-        "$\\frac{43}{90}$",
-        "$\\frac{11}{90}$",
-        "$\\frac{43}{900}$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $0.4\\dot{7}=\\frac{47-4}{90}=\\frac{43}{90}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "순환소수 분수 변환 · 기출 변형 핵심",
-        "skills": [
-          "순환소수",
-          "분수 변환",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "rational"
-      }
-    },
-    {
-      "id": 29,
-      "question": "$\\frac{1}{7}$를 소수로 나타내면 어떤 소수인가?",
-      "choices": [
-        "유한소수",
-        "정수",
-        "자연수",
-        "순환소수",
-        "무리수"
+        "$2$",
+        "$3$",
+        "$20$",
+        "$1$",
+        "$-1$"
       ],
       "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 분모에 $2$, $5$가 아닌 소인수가 있으므로 유한소수가 아니라 순환소수이다.",
+      "explanation": "분모에서 $2$, $5$가 아닌 소인수가 약분되어야 하므로 그 부분을 $x$가 포함해야 한다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "순환마디 길이 판별 · 서술형 대비",
+        "typeTag": "유리수와 순환소수 · 유한소수 조건 역산 · 종합 추론",
         "skills": [
-          "순환소수",
-          "나눗셈",
-          "과정 점검"
+          "약분 조건",
+          "분모 소인수",
+          "종합 추론"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "rational"
-      }
-    },
-    {
-      "id": 30,
-      "question": "$\\frac{2}{10}$을 소수로 나타낸 값에 가장 가까운 것은?",
-      "choices": [
-        "$\\frac{3}{10}$",
-        "$\\frac{2}{11}$",
-        "$\\frac{1}{10}$",
-        "$\\frac{1}{5}1$",
-        "$\\frac{1}{5}$"
-      ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 분수의 크기를 비교할 때는 같은 분모로 만들거나 소수로 바꾸어 확인한다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "소수와 분수 크기 비교 · 최고 수준/발전",
-        "skills": [
-          "유리수",
-          "크기 비교",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",

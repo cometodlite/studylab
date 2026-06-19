@@ -1,16 +1,17 @@
 {
   "id": "m3-sqrt-pattern",
   "title": "제곱근의 뜻과 성질 — 유형별",
-  "description": "EBS 중학 대표 유형형: 교과서 필수 표준 문항을 연습합니다. 제곱근 계산 응용, 조건 찾기, 범위 문제, 실수 대소 비교",
+  "description": "교과서 대표 풀이 흐름을 숫자와 조건을 바꾸어 연습합니다.",
   "grade": 3,
   "unit": "제곱근과 실수",
   "difficulty": "유형별",
   "ebsStyle": {
-    "version": 3,
+    "version": 4,
     "role": "대표 교과서 유형",
     "expectedSteps": 2,
     "middleStage": "대표 교과서 유형",
-    "typeVariantCount": 5,
+    "typeVariantCount": 15,
+    "maxSimilarPerExam": 2,
     "middleTaxonomy": {
       "buildUpStages": [
         "개념 확인 연산 유형",
@@ -53,28 +54,28 @@
   "questions": [
     {
       "id": 1,
-      "question": "$2\\sqrt{5}+3\\sqrt{5}$를 간단히 하면 $A\\sqrt{5}$이다. $A$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 기본 정의를 바로 적용하여, $7\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$3$",
-        "$4$",
-        "$5$",
-        "$6$",
-        "$7$"
+        "$13$",
+        "$11$",
+        "$12$",
+        "$14$",
+        "$15$"
       ],
-      "answer": 2,
-      "explanation": "같은 근호끼리 계수를 더하면 $(2+3)\\sqrt{5}=5\\sqrt{5}$이다.",
+      "answer": 0,
+      "explanation": "같은 근호끼리 계수를 더하면 $13\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 계산 · 개념 확인 연산",
+        "typeTag": "제곱근 · 동류근호 계산 · 개념 확인",
         "skills": [
-          "근호",
-          "동류항",
-          "핵심 공식 적용"
+          "동류근호",
+          "계수",
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -84,26 +85,26 @@
     },
     {
       "id": 2,
-      "question": "$\\sqrt{72}$을 간단히 하면?",
+      "question": "제곱근의 뜻과 성질에서 대표 풀이 흐름에 맞추어, $4\\sqrt{7}+3\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$7\\sqrt{2}$",
-        "$6\\sqrt{3}$",
-        "$12$",
-        "$6\\sqrt{2}$",
-        "$\\sqrt{12}$"
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $72=6^2\\times2$이므로 $6\\sqrt{2}$이다.",
+      "answer": 2,
+      "explanation": "같은 근호끼리 계수를 더하면 $7\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호 간단히 하기 · 대표 교과서 유형",
+        "typeTag": "제곱근 · 동류근호 계산 · 대표 풀이",
         "skills": [
-          "제곱근",
-          "근호 밖으로 빼기",
-          "표준 풀이 적용"
+          "동류근호",
+          "계수",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
@@ -115,28 +116,28 @@
     },
     {
       "id": 3,
-      "question": "$7\\sqrt{6}+7\\sqrt{6}$를 $k\\sqrt{6}$로 나타낼 때 $k$는?",
+      "question": "제곱근의 뜻과 성질에서 필요한 조건만 골라, $6\\sqrt{2}+4\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
+        "$8$",
+        "$9$",
+        "$11$",
         "$12$",
-        "$13$",
-        "$15$",
-        "$16$",
-        "$14$"
+        "$10$"
       ],
       "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 같은 근호끼리는 계수를 더하므로 $7+7=14$이다.",
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 덧셈 · 기출 변형 핵심",
+        "typeTag": "제곱근 · 동류근호 계산 · 조건 해석",
         "skills": [
           "동류근호",
           "계수",
-          "조건 해석"
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -146,30 +147,30 @@
     },
     {
       "id": 4,
-      "question": "$8\\sqrt{3}\\times5\\sqrt{3}$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 거꾸로 조건을 추적하여, $3\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$120$",
-        "$117$",
-        "$123$",
-        "$40$",
-        "$3$"
+        "$7$",
+        "$9$",
+        "$8$",
+        "$10$",
+        "$11$"
       ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $(8\\times5)\\times3=120$이다.",
+      "answer": 1,
+      "explanation": "같은 근호끼리 계수를 더하면 $9\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호의 곱셈 · 서술형 대비",
+        "typeTag": "제곱근 · 동류근호 계산 · 역추론",
         "skills": [
-          "제곱근",
-          "곱셈",
-          "과정 점검"
+          "동류근호",
+          "계수",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -177,28 +178,28 @@
     },
     {
       "id": 5,
-      "question": "$\\sqrt{168n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$은?",
+      "question": "제곱근의 뜻과 성질에서 가능한 경우를 나누어, $5\\sqrt{7}+3\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$43$",
-        "$42$",
-        "$84$",
-        "$126$",
-        "$41$"
+        "$6$",
+        "$7$",
+        "$9$",
+        "$8$",
+        "$10$"
       ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 $42$를 곱한다.",
+      "answer": 3,
+      "explanation": "같은 근호끼리 계수를 더하면 $8\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "자연수 조건 · 최고 수준/발전",
+        "typeTag": "제곱근 · 동류근호 계산 · 경우 분류",
         "skills": [
-          "제곱근",
-          "완전제곱수",
-          "복합 추론"
+          "동류근호",
+          "계수",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -208,30 +209,30 @@
     },
     {
       "id": 6,
-      "question": "$4\\sqrt{2}+1\\sqrt{2}$를 간단히 하면 $A\\sqrt{2}$이다. $A$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 주어진 자료를 해석하여, $7\\sqrt{2}+5\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
-        "$3$",
-        "$4$",
-        "$6$",
-        "$5$",
-        "$7$"
+        "$12$",
+        "$10$",
+        "$11$",
+        "$13$",
+        "$14$"
       ],
-      "answer": 3,
-      "explanation": "같은 근호끼리 계수를 더하면 $(4+1)\\sqrt{2}=5\\sqrt{2}$이다.",
+      "answer": 0,
+      "explanation": "같은 근호끼리 계수를 더하면 $12\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 계산 · 개념 확인 연산",
+        "typeTag": "제곱근 · 동류근호 계산 · 자료 해석",
         "skills": [
-          "근호",
-          "동류항",
-          "핵심 공식 적용"
+          "동류근호",
+          "계수",
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -239,30 +240,30 @@
     },
     {
       "id": 7,
-      "question": "$\\sqrt{96}$을 간단히 하면?",
+      "question": "제곱근의 뜻과 성질에서 값의 범위를 먼저 판단하여, $4\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$5\\sqrt{6}$",
-        "$4\\sqrt{7}$",
-        "$24$",
-        "$\\sqrt{24}$",
-        "$4\\sqrt{6}$"
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$"
       ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $96=4^2\\times6$이므로 $4\\sqrt{6}$이다.",
+      "answer": 2,
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호 간단히 하기 · 대표 교과서 유형",
+        "typeTag": "제곱근 · 동류근호 계산 · 범위 판단",
         "skills": [
-          "제곱근",
-          "근호 밖으로 빼기",
-          "표준 풀이 적용"
+          "동류근호",
+          "계수",
+          "범위 해석"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
+        "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -270,7 +271,100 @@
     },
     {
       "id": 8,
-      "question": "$5\\sqrt{3}+5\\sqrt{3}$를 $k\\sqrt{3}$로 나타낼 때 $k$는?",
+      "question": "제곱근의 뜻과 성질에서 매개변수의 영향을 생각하여, $6\\sqrt{7}+3\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$10$",
+        "$11$",
+        "$9$"
+      ],
+      "answer": 4,
+      "explanation": "같은 근호끼리 계수를 더하면 $9\\sqrt{7}$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "제곱근 · 동류근호 계산 · 매개변수",
+        "skills": [
+          "동류근호",
+          "계수",
+          "매개변수 추론"
+        ],
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 9,
+      "question": "제곱근의 뜻과 성질에서 두 값을 비교하는 관점에서, $3\\sqrt{2}+5\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
+      "choices": [
+        "$6$",
+        "$8$",
+        "$7$",
+        "$9$",
+        "$10$"
+      ],
+      "answer": 1,
+      "explanation": "같은 근호끼리 계수를 더하면 $8\\sqrt{2}$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "제곱근 · 동류근호 계산 · 비교 판단",
+        "skills": [
+          "동류근호",
+          "계수",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 10,
+      "question": "제곱근의 뜻과 성질에서 계산 결과를 한 번 더 연결하여, $5\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
+      "choices": [
+        "$9$",
+        "$10$",
+        "$12$",
+        "$11$",
+        "$13$"
+      ],
+      "answer": 3,
+      "explanation": "같은 근호끼리 계수를 더하면 $11\\sqrt{5}$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "제곱근 · 동류근호 계산 · 복합 계산",
+        "skills": [
+          "동류근호",
+          "계수",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 11,
+      "question": "제곱근의 뜻과 성질에서 풀이 과정의 빠진 단계를 채운다고 생각하고, $7\\sqrt{7}+3\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
         "$10$",
         "$8$",
@@ -279,50 +373,19 @@
         "$12$"
       ],
       "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 같은 근호끼리는 계수를 더하므로 $5+5=10$이다.",
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 덧셈 · 기출 변형 핵심",
+        "typeTag": "제곱근 · 동류근호 계산 · 서술형 흐름",
         "skills": [
           "동류근호",
           "계수",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "radical"
-      }
-    },
-    {
-      "id": 9,
-      "question": "$6\\sqrt{7}\\times8\\sqrt{7}$의 값은?",
-      "choices": [
-        "$329$",
-        "$336$",
-        "$343$",
-        "$48$",
-        "$7$"
-      ],
-      "answer": 1,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $(6\\times8)\\times7=336$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "근호의 곱셈 · 서술형 대비",
-        "skills": [
-          "제곱근",
-          "곱셈",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -331,30 +394,30 @@
       }
     },
     {
-      "id": 10,
-      "question": "$\\sqrt{210n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$은?",
+      "id": 12,
+      "question": "제곱근의 뜻과 성질에서 숨은 조건을 찾아, $4\\sqrt{2}+5\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
-        "$211$",
-        "$420$",
-        "$210$",
-        "$630$",
-        "$209$"
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
       ],
       "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 $210$를 곱한다.",
+      "explanation": "같은 근호끼리 계수를 더하면 $9\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "자연수 조건 · 최고 수준/발전",
+        "typeTag": "제곱근 · 동류근호 계산 · 숨은 조건",
         "skills": [
-          "제곱근",
-          "완전제곱수",
-          "복합 추론"
+          "동류근호",
+          "계수",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -362,59 +425,59 @@
       }
     },
     {
-      "id": 11,
-      "question": "$2\\sqrt{3}+2\\sqrt{3}$를 간단히 하면 $A\\sqrt{3}$이다. $A$의 값은?",
+      "id": 13,
+      "question": "제곱근의 뜻과 성질에서 상황을 식으로 모델링하여, $6\\sqrt{5}+7\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$2$",
-        "$3$",
-        "$5$",
-        "$6$",
-        "$4$"
+        "$11$",
+        "$12$",
+        "$14$",
+        "$15$",
+        "$13$"
       ],
       "answer": 4,
-      "explanation": "같은 근호끼리 계수를 더하면 $(2+2)\\sqrt{3}=4\\sqrt{3}$이다.",
+      "explanation": "같은 근호끼리 계수를 더하면 $13\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 계산 · 개념 확인 연산",
+        "typeTag": "제곱근 · 동류근호 계산 · 상황 모델링",
         "skills": [
-          "근호",
-          "동류항",
-          "핵심 공식 적용"
+          "동류근호",
+          "계수",
+          "모델링"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
       }
     },
     {
-      "id": 12,
-      "question": "$\\sqrt{192}$을 간단히 하면?",
+      "id": 14,
+      "question": "제곱근의 뜻과 성질에서 조건을 변형해 적용하여, $3\\sqrt{7}+3\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$8\\sqrt{3}$",
-        "$9\\sqrt{3}$",
-        "$8\\sqrt{4}$",
-        "$24$",
-        "$\\sqrt{24}$"
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$",
+        "$8$"
       ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $192=8^2\\times3$이므로 $8\\sqrt{3}$이다.",
+      "answer": 1,
+      "explanation": "같은 근호끼리 계수를 더하면 $6\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호 간단히 하기 · 대표 교과서 유형",
+        "typeTag": "제곱근 · 동류근호 계산 · 변형 적용",
         "skills": [
-          "제곱근",
-          "근호 밖으로 빼기",
-          "표준 풀이 적용"
+          "동류근호",
+          "계수",
+          "변형"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
@@ -424,91 +487,29 @@
       }
     },
     {
-      "id": 13,
-      "question": "$3\\sqrt{7}+8\\sqrt{7}$를 $k\\sqrt{7}$로 나타낼 때 $k$는?",
+      "id": 15,
+      "question": "제곱근의 뜻과 성질에서 여러 조건을 종합하여, $5\\sqrt{2}+5\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
+        "$8$",
         "$9$",
         "$11$",
         "$10$",
-        "$12$",
-        "$13$"
+        "$12$"
       ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 같은 근호끼리는 계수를 더하므로 $3+8=11$이다.",
+      "answer": 3,
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 덧셈 · 기출 변형 핵심",
+        "typeTag": "제곱근 · 동류근호 계산 · 종합 추론",
         "skills": [
           "동류근호",
           "계수",
-          "조건 해석"
+          "종합 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "radical"
-      }
-    },
-    {
-      "id": 14,
-      "question": "$4\\sqrt{5}\\times6\\sqrt{5}$의 값은?",
-      "choices": [
-        "$115$",
-        "$125$",
-        "$120$",
-        "$24$",
-        "$5$"
-      ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $(4\\times6)\\times5=120$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "근호의 곱셈 · 서술형 대비",
-        "skills": [
-          "제곱근",
-          "곱셈",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "radical"
-      }
-    },
-    {
-      "id": 15,
-      "question": "$\\sqrt{40n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$은?",
-      "choices": [
-        "$11$",
-        "$20$",
-        "$30$",
-        "$10$",
-        "$9$"
-      ],
-      "answer": 3,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 $10$를 곱한다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "자연수 조건 · 최고 수준/발전",
-        "skills": [
-          "제곱근",
-          "완전제곱수",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -518,28 +519,28 @@
     },
     {
       "id": 16,
-      "question": "$4\\sqrt{5}+3\\sqrt{5}$를 간단히 하면 $A\\sqrt{5}$이다. $A$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 같은 개념을 다른 수에 적용하여, $3\\sqrt{7}+7\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$7$",
-        "$5$",
-        "$6$",
+        "$10$",
         "$8$",
-        "$9$"
+        "$9$",
+        "$11$",
+        "$12$"
       ],
       "answer": 0,
-      "explanation": "같은 근호끼리 계수를 더하면 $(4+3)\\sqrt{5}=7\\sqrt{5}$이다.",
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 계산 · 개념 확인 연산",
+        "typeTag": "제곱근 · 동류근호 계산 · 개념 확인",
         "skills": [
-          "근호",
-          "동류항",
-          "핵심 공식 적용"
+          "동류근호",
+          "계수",
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -549,26 +550,26 @@
     },
     {
       "id": 17,
-      "question": "$\\sqrt{252}$을 간단히 하면?",
+      "question": "제곱근의 뜻과 성질에서 표준 풀이를 변형하여, $5\\sqrt{2}+4\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
-        "$7\\sqrt{7}$",
-        "$6\\sqrt{7}$",
-        "$6\\sqrt{8}$",
-        "$42$",
-        "$\\sqrt{42}$"
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
       ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $252=6^2\\times7$이므로 $6\\sqrt{7}$이다.",
+      "answer": 2,
+      "explanation": "같은 근호끼리 계수를 더하면 $9\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호 간단히 하기 · 대표 교과서 유형",
+        "typeTag": "제곱근 · 동류근호 계산 · 대표 풀이",
         "skills": [
-          "제곱근",
-          "근호 밖으로 빼기",
-          "표준 풀이 적용"
+          "동류근호",
+          "계수",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
@@ -580,28 +581,28 @@
     },
     {
       "id": 18,
-      "question": "$7\\sqrt{5}+6\\sqrt{5}$를 $k\\sqrt{5}$로 나타낼 때 $k$는?",
+      "question": "제곱근의 뜻과 성질에서 조건의 순서를 바꾸어 생각하며, $7\\sqrt{5}+5\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
+        "$10$",
         "$11$",
-        "$12$",
         "$13$",
         "$14$",
-        "$15$"
+        "$12$"
       ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 같은 근호끼리는 계수를 더하므로 $7+6=13$이다.",
+      "answer": 4,
+      "explanation": "같은 근호끼리 계수를 더하면 $12\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 덧셈 · 기출 변형 핵심",
+        "typeTag": "제곱근 · 동류근호 계산 · 조건 해석",
         "skills": [
           "동류근호",
           "계수",
-          "조건 해석"
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -611,30 +612,30 @@
     },
     {
       "id": 19,
-      "question": "$8\\sqrt{2}\\times4\\sqrt{2}$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 결과에서 원인을 되짚어, $4\\sqrt{7}+7\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$62$",
-        "$66$",
-        "$32$",
-        "$64$",
-        "$2$"
+        "$9$",
+        "$11$",
+        "$10$",
+        "$12$",
+        "$13$"
       ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $(8\\times4)\\times2=64$이다.",
+      "answer": 1,
+      "explanation": "같은 근호끼리 계수를 더하면 $11\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호의 곱셈 · 서술형 대비",
+        "typeTag": "제곱근 · 동류근호 계산 · 역추론",
         "skills": [
-          "제곱근",
-          "곱셈",
-          "과정 점검"
+          "동류근호",
+          "계수",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -642,28 +643,28 @@
     },
     {
       "id": 20,
-      "question": "$\\sqrt{126n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$은?",
+      "question": "제곱근의 뜻과 성질에서 겹치는 경우를 제외하며, $6\\sqrt{2}+4\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
-        "$15$",
-        "$28$",
-        "$42$",
-        "$13$",
-        "$14$"
+        "$8$",
+        "$9$",
+        "$11$",
+        "$10$",
+        "$12$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 $14$를 곱한다.",
+      "answer": 3,
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "자연수 조건 · 최고 수준/발전",
+        "typeTag": "제곱근 · 동류근호 계산 · 경우 분류",
         "skills": [
-          "제곱근",
-          "완전제곱수",
-          "복합 추론"
+          "동류근호",
+          "계수",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -673,30 +674,30 @@
     },
     {
       "id": 21,
-      "question": "$2\\sqrt{2}+1\\sqrt{2}$를 간단히 하면 $A\\sqrt{2}$이다. $A$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 자료 사이의 차이를 비교하여, $3\\sqrt{5}+5\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$1$",
-        "$3$",
-        "$2$",
-        "$4$",
-        "$5$"
+        "$8$",
+        "$6$",
+        "$7$",
+        "$9$",
+        "$10$"
       ],
-      "answer": 1,
-      "explanation": "같은 근호끼리 계수를 더하면 $(2+1)\\sqrt{2}=3\\sqrt{2}$이다.",
+      "answer": 0,
+      "explanation": "같은 근호끼리 계수를 더하면 $8\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 계산 · 개념 확인 연산",
+        "typeTag": "제곱근 · 동류근호 계산 · 자료 해석",
         "skills": [
-          "근호",
-          "동류항",
-          "핵심 공식 적용"
+          "동류근호",
+          "계수",
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -704,30 +705,30 @@
     },
     {
       "id": 22,
-      "question": "$\\sqrt{80}$을 간단히 하면?",
+      "question": "제곱근의 뜻과 성질에서 끝값과 경계값을 확인하여, $5\\sqrt{7}+7\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$5\\sqrt{5}$",
-        "$4\\sqrt{6}$",
-        "$4\\sqrt{5}$",
-        "$20$",
-        "$\\sqrt{20}$"
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$",
+        "$14$"
       ],
       "answer": 2,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $80=4^2\\times5$이므로 $4\\sqrt{5}$이다.",
+      "explanation": "같은 근호끼리 계수를 더하면 $12\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호 간단히 하기 · 대표 교과서 유형",
+        "typeTag": "제곱근 · 동류근호 계산 · 범위 판단",
         "skills": [
-          "제곱근",
-          "근호 밖으로 빼기",
-          "표준 풀이 적용"
+          "동류근호",
+          "계수",
+          "범위 해석"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
+        "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -735,30 +736,30 @@
     },
     {
       "id": 23,
-      "question": "$5\\sqrt{2}+4\\sqrt{2}$를 $k\\sqrt{2}$로 나타낼 때 $k$는?",
+      "question": "제곱근의 뜻과 성질에서 변하지 않는 값을 찾아, $7\\sqrt{2}+4\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
-        "$7$",
-        "$8$",
-        "$10$",
         "$9$",
+        "$10$",
+        "$12$",
+        "$13$",
         "$11$"
       ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 같은 근호끼리는 계수를 더하므로 $5+4=9$이다.",
+      "answer": 4,
+      "explanation": "같은 근호끼리 계수를 더하면 $11\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 덧셈 · 기출 변형 핵심",
+        "typeTag": "제곱근 · 동류근호 계산 · 매개변수",
         "skills": [
           "동류근호",
           "계수",
-          "조건 해석"
+          "매개변수 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
@@ -766,28 +767,90 @@
     },
     {
       "id": 24,
-      "question": "$6\\sqrt{6}\\times7\\sqrt{6}$의 값은?",
+      "question": "제곱근의 뜻과 성질에서 보기의 차이를 따져, $4\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$246$",
-        "$258$",
-        "$42$",
-        "$6$",
-        "$252$"
+        "$8$",
+        "$10$",
+        "$9$",
+        "$11$",
+        "$12$"
       ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $(6\\times7)\\times6=252$이다.",
+      "answer": 1,
+      "explanation": "같은 근호끼리 계수를 더하면 $10\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호의 곱셈 · 서술형 대비",
+        "typeTag": "제곱근 · 동류근호 계산 · 비교 판단",
         "skills": [
-          "제곱근",
-          "곱셈",
+          "동류근호",
+          "계수",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 25,
+      "question": "제곱근의 뜻과 성질에서 중간 계산을 이용하여, $6\\sqrt{7}+7\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
+      "choices": [
+        "$11$",
+        "$12$",
+        "$14$",
+        "$13$",
+        "$15$"
+      ],
+      "answer": 3,
+      "explanation": "같은 근호끼리 계수를 더하면 $13\\sqrt{7}$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "제곱근 · 동류근호 계산 · 복합 계산",
+        "skills": [
+          "동류근호",
+          "계수",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "radical"
+      }
+    },
+    {
+      "id": 26,
+      "question": "제곱근의 뜻과 성질에서 계산 실수를 점검하며, $3\\sqrt{2}+4\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
+      "choices": [
+        "$7$",
+        "$5$",
+        "$6$",
+        "$8$",
+        "$9$"
+      ],
+      "answer": 0,
+      "explanation": "같은 근호끼리 계수를 더하면 $7\\sqrt{2}$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "제곱근 · 동류근호 계산 · 서술형 흐름",
+        "skills": [
+          "동류근호",
+          "계수",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -796,30 +859,30 @@
       }
     },
     {
-      "id": 25,
-      "question": "$\\sqrt{105n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$은?",
+      "id": 27,
+      "question": "제곱근의 뜻과 성질에서 문장에 숨은 제한을 반영하여, $5\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$105$",
-        "$106$",
-        "$210$",
-        "$315$",
-        "$104$"
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
       ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 $105$를 곱한다.",
+      "answer": 2,
+      "explanation": "같은 근호끼리 계수를 더하면 $11\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "자연수 조건 · 최고 수준/발전",
+        "typeTag": "제곱근 · 동류근호 계산 · 숨은 조건",
         "skills": [
-          "제곱근",
-          "완전제곱수",
-          "복합 추론"
+          "동류근호",
+          "계수",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -827,59 +890,59 @@
       }
     },
     {
-      "id": 26,
-      "question": "$4\\sqrt{3}+2\\sqrt{3}$를 간단히 하면 $A\\sqrt{3}$이다. $A$의 값은?",
+      "id": 28,
+      "question": "제곱근의 뜻과 성질에서 실생활 조건을 식으로 바꾸어, $7\\sqrt{7}+7\\sqrt{7}$를 $A\\sqrt{7}$로 나타낼 때 $A$는?",
       "choices": [
-        "$4$",
-        "$5$",
-        "$6$",
-        "$7$",
-        "$8$"
+        "$12$",
+        "$13$",
+        "$15$",
+        "$16$",
+        "$14$"
       ],
-      "answer": 2,
-      "explanation": "같은 근호끼리 계수를 더하면 $(4+2)\\sqrt{3}=6\\sqrt{3}$이다.",
+      "answer": 4,
+      "explanation": "같은 근호끼리 계수를 더하면 $14\\sqrt{7}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 계산 · 개념 확인 연산",
+        "typeTag": "제곱근 · 동류근호 계산 · 상황 모델링",
         "skills": [
-          "근호",
-          "동류항",
-          "핵심 공식 적용"
+          "동류근호",
+          "계수",
+          "모델링"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "radical"
       }
     },
     {
-      "id": 27,
-      "question": "$\\sqrt{128}$을 간단히 하면?",
+      "id": 29,
+      "question": "제곱근의 뜻과 성질에서 질문한 대상을 바꾸어 생각하며, $4\\sqrt{2}+4\\sqrt{2}$를 $A\\sqrt{2}$로 나타낼 때 $A$는?",
       "choices": [
-        "$9\\sqrt{2}$",
-        "$8\\sqrt{3}$",
-        "$16$",
-        "$8\\sqrt{2}$",
-        "$\\sqrt{16}$"
+        "$6$",
+        "$8$",
+        "$7$",
+        "$9$",
+        "$10$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $128=8^2\\times2$이므로 $8\\sqrt{2}$이다.",
+      "answer": 1,
+      "explanation": "같은 근호끼리 계수를 더하면 $8\\sqrt{2}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "근호 간단히 하기 · 대표 교과서 유형",
+        "typeTag": "제곱근 · 동류근호 계산 · 변형 적용",
         "skills": [
-          "제곱근",
-          "근호 밖으로 빼기",
-          "표준 풀이 적용"
+          "동류근호",
+          "계수",
+          "변형"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
@@ -889,91 +952,29 @@
       }
     },
     {
-      "id": 28,
-      "question": "$3\\sqrt{6}+7\\sqrt{6}$를 $k\\sqrt{6}$로 나타낼 때 $k$는?",
+      "id": 30,
+      "question": "제곱근의 뜻과 성질에서 마지막 조건까지 함께 고려하여, $6\\sqrt{5}+6\\sqrt{5}$를 $A\\sqrt{5}$로 나타낼 때 $A$는?",
       "choices": [
-        "$8$",
-        "$9$",
+        "$10$",
         "$11$",
+        "$13$",
         "$12$",
-        "$10$"
+        "$14$"
       ],
-      "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 같은 근호끼리는 계수를 더하므로 $3+7=10$이다.",
+      "answer": 3,
+      "explanation": "같은 근호끼리 계수를 더하면 $12\\sqrt{5}$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "동류근호 덧셈 · 기출 변형 핵심",
+        "typeTag": "제곱근 · 동류근호 계산 · 종합 추론",
         "skills": [
           "동류근호",
           "계수",
-          "조건 해석"
+          "종합 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "radical"
-      }
-    },
-    {
-      "id": 29,
-      "question": "$4\\sqrt{3}\\times5\\sqrt{3}$의 값은?",
-      "choices": [
-        "$60$",
-        "$57$",
-        "$63$",
-        "$20$",
-        "$3$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $(4\\times5)\\times3=60$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "근호의 곱셈 · 서술형 대비",
-        "skills": [
-          "제곱근",
-          "곱셈",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "radical"
-      }
-    },
-    {
-      "id": 30,
-      "question": "$\\sqrt{280n}$이 자연수가 되도록 하는 가장 작은 자연수 $n$은?",
-      "choices": [
-        "$71$",
-        "$70$",
-        "$140$",
-        "$210$",
-        "$69$"
-      ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 근호 안이 완전제곱수가 되도록 남는 제곱인수 없는 부분 $70$를 곱한다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "자연수 조건 · 최고 수준/발전",
-        "skills": [
-          "제곱근",
-          "완전제곱수",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",

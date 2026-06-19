@@ -1,16 +1,17 @@
 {
   "id": "m3-circle-pattern",
   "title": "원의 성질 — 유형별",
-  "description": "EBS 중학 대표 유형형: 교과서 필수 표준 문항을 연습합니다. 원주각 응용, 반원의 원주각, 원에 내접하는 사각형",
+  "description": "교과서 대표 풀이 흐름을 숫자와 조건을 바꾸어 연습합니다.",
   "grade": 3,
   "unit": "원의 성질",
   "difficulty": "유형별",
   "ebsStyle": {
-    "version": 3,
+    "version": 4,
     "role": "대표 교과서 유형",
     "expectedSteps": 2,
     "middleStage": "대표 교과서 유형",
-    "typeVariantCount": 5,
+    "typeVariantCount": 15,
+    "maxSimilarPerExam": 2,
     "middleTaxonomy": {
       "buildUpStages": [
         "개념 확인 연산 유형",
@@ -53,28 +54,28 @@
   "questions": [
     {
       "id": 1,
-      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $10054$일 때 다른 접선의 길이는?",
+      "question": "원의 성질에서 기본 정의를 바로 적용하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $10$일 때 다른 접선의 길이는?",
       "choices": [
-        "$10052$",
-        "$10053$",
-        "$10055$",
-        "$10054$",
-        "$10056$"
+        "$10$",
+        "$8$",
+        "$9$",
+        "$11$",
+        "$12$"
       ],
-      "answer": 3,
-      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $10054$이다.",
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선의 길이 · 개념 확인 연산",
+        "typeTag": "원 · 접선의 길이 · 개념 확인",
         "skills": [
           "접선",
           "외부점",
-          "핵심 공식 적용"
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -84,26 +85,26 @@
     },
     {
       "id": 2,
-      "question": "같은 호에 대한 중심각이 $52^\\circ$일 때 원주각은?",
+      "question": "원의 성질에서 대표 풀이 흐름에 맞추어, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $9$일 때 다른 접선의 길이는?",
       "choices": [
-        "$52^\\circ$",
-        "$36^\\circ$",
-        "$42^\\circ$",
-        "$64^\\circ$",
-        "$26^\\circ$"
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$"
       ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 원주각은 같은 호에 대한 중심각의 절반이다.",
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "원주각 계산 · 대표 교과서 유형",
+        "typeTag": "원 · 접선의 길이 · 대표 풀이",
         "skills": [
-          "원주각",
-          "중심각",
-          "표준 풀이 적용"
+          "접선",
+          "외부점",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
@@ -115,29 +116,29 @@
     },
     {
       "id": 3,
-      "question": "한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $5$일 때 다른 접선의 길이는?",
+      "question": "원의 성질에서 필요한 조건만 골라, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $8$일 때 다른 접선의 길이는?",
       "choices": [
-        "$5$",
-        "$3$",
-        "$4$",
         "$6$",
-        "$7$"
+        "$7$",
+        "$9$",
+        "$10$",
+        "$8$"
       ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 한 외부점에서 그은 두 접선의 길이는 같다.",
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선 길이 · 기출 변형 핵심",
+        "typeTag": "원 · 접선의 길이 · 조건 해석",
         "skills": [
           "접선",
           "외부점",
-          "조건 해석"
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -146,30 +147,30 @@
     },
     {
       "id": 4,
-      "question": "원에 내접하는 사각형에서 한 각이 $115^\\circ$일 때 그 대각은?",
+      "question": "원의 성질에서 거꾸로 조건을 추적하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $12$일 때 다른 접선의 길이는?",
       "choices": [
-        "$115^\\circ$",
-        "$65^\\circ$",
-        "$75^\\circ$",
-        "$90^\\circ$",
-        "$105^\\circ$"
+        "$10$",
+        "$12$",
+        "$11$",
+        "$13$",
+        "$14$"
       ],
       "answer": 1,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 내접사각형의 대각의 합은 $180^\\circ$이다.",
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "내접사각형 대각 · 서술형 대비",
+        "typeTag": "원 · 접선의 길이 · 역추론",
         "skills": [
-          "내접사각형",
-          "대각",
-          "과정 점검"
+          "접선",
+          "외부점",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "circle"
@@ -177,29 +178,29 @@
     },
     {
       "id": 5,
-      "question": "원 안에서 두 현이 만나고 한 현의 두 부분이 $7$, $6$이다. 다른 현의 한 부분이 $2$이면 나머지 부분은?",
+      "question": "원의 성질에서 가능한 경우를 나누어, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $10$일 때 다른 접선의 길이는?",
       "choices": [
-        "$42$",
-        "$22$",
-        "$21$",
-        "$20$",
-        "$13$"
+        "$8$",
+        "$9$",
+        "$11$",
+        "$10$",
+        "$12$"
       ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 현의 교차 정리에 의해 $7\\times6=2t$이다.",
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "현의 교차 · 최고 수준/발전",
+        "typeTag": "원 · 접선의 길이 · 경우 분류",
         "skills": [
-          "현",
-          "곱의 관계",
-          "복합 추론"
+          "접선",
+          "외부점",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -208,30 +209,30 @@
     },
     {
       "id": 6,
-      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $60932$일 때 다른 접선의 길이는?",
+      "question": "원의 성질에서 주어진 자료를 해석하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $9$일 때 다른 접선의 길이는?",
       "choices": [
-        "$60930$",
-        "$60931$",
-        "$60933$",
-        "$60934$",
-        "$60932$"
+        "$9$",
+        "$7$",
+        "$8$",
+        "$10$",
+        "$11$"
       ],
-      "answer": 4,
-      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $60932$이다.",
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선의 길이 · 개념 확인 연산",
+        "typeTag": "원 · 접선의 길이 · 자료 해석",
         "skills": [
           "접선",
           "외부점",
-          "핵심 공식 적용"
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "circle"
@@ -239,59 +240,28 @@
     },
     {
       "id": 7,
-      "question": "같은 호에 대한 중심각이 $44^\\circ$일 때 원주각은?",
+      "question": "원의 성질에서 값의 범위를 먼저 판단하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $8$일 때 다른 접선의 길이는?",
       "choices": [
-        "$22^\\circ$",
-        "$44^\\circ$",
-        "$32^\\circ$",
-        "$34^\\circ$",
-        "$68^\\circ$"
+        "$6$",
+        "$7$",
+        "$8$",
+        "$9$",
+        "$10$"
       ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 원주각은 같은 호에 대한 중심각의 절반이다.",
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "원주각 계산 · 대표 교과서 유형",
-        "skills": [
-          "원주각",
-          "중심각",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "circle"
-      }
-    },
-    {
-      "id": 8,
-      "question": "한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $3$일 때 다른 접선의 길이는?",
-      "choices": [
-        "$1$",
-        "$3$",
-        "$2$",
-        "$4$",
-        "$5$"
-      ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 한 외부점에서 그은 두 접선의 길이는 같다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "접선 길이 · 기출 변형 핵심",
+        "typeTag": "원 · 접선의 길이 · 범위 판단",
         "skills": [
           "접선",
           "외부점",
-          "조건 해석"
+          "범위 해석"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -300,60 +270,29 @@
       }
     },
     {
-      "id": 9,
-      "question": "원에 내접하는 사각형에서 한 각이 $105^\\circ$일 때 그 대각은?",
+      "id": 8,
+      "question": "원의 성질에서 매개변수의 영향을 생각하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $11$일 때 다른 접선의 길이는?",
       "choices": [
-        "$105^\\circ$",
-        "$85^\\circ$",
-        "$75^\\circ$",
-        "$90^\\circ$",
-        "$95^\\circ$"
-      ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 내접사각형의 대각의 합은 $180^\\circ$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "내접사각형 대각 · 서술형 대비",
-        "skills": [
-          "내접사각형",
-          "대각",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "circle"
-      }
-    },
-    {
-      "id": 10,
-      "question": "원 안에서 두 현이 만나고 한 현의 두 부분이 $5$, $4$이다. 다른 현의 한 부분이 $2$이면 나머지 부분은?",
-      "choices": [
-        "$20$",
-        "$11$",
         "$9$",
         "$10$",
-        "$12$"
+        "$12$",
+        "$13$",
+        "$11$"
       ],
-      "answer": 3,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 현의 교차 정리에 의해 $5\\times4=2t$이다.",
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "현의 교차 · 최고 수준/발전",
+        "typeTag": "원 · 접선의 길이 · 매개변수",
         "skills": [
-          "현",
-          "곱의 관계",
-          "복합 추론"
+          "접선",
+          "외부점",
+          "매개변수 추론"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -362,61 +301,30 @@
       }
     },
     {
-      "id": 11,
-      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $111810$일 때 다른 접선의 길이는?",
+      "id": 9,
+      "question": "원의 성질에서 두 값을 비교하는 관점에서, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $10$일 때 다른 접선의 길이는?",
       "choices": [
-        "$111810$",
-        "$111808$",
-        "$111809$",
-        "$111811$",
-        "$111812$"
+        "$8$",
+        "$10$",
+        "$9$",
+        "$11$",
+        "$12$"
       ],
-      "answer": 0,
-      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $111810$이다.",
+      "answer": 1,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선의 길이 · 개념 확인 연산",
+        "typeTag": "원 · 접선의 길이 · 비교 판단",
         "skills": [
           "접선",
           "외부점",
-          "핵심 공식 적용"
+          "비교"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "circle"
-      }
-    },
-    {
-      "id": 12,
-      "question": "같은 호에 대한 중심각이 $116^\\circ$일 때 원주각은?",
-      "choices": [
-        "$116^\\circ$",
-        "$58^\\circ$",
-        "$68^\\circ$",
-        "$106^\\circ$",
-        "$32^\\circ$"
-      ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 원주각은 같은 호에 대한 중심각의 절반이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "원주각 계산 · 대표 교과서 유형",
-        "skills": [
-          "원주각",
-          "중심각",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
         "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -424,60 +332,60 @@
       }
     },
     {
-      "id": 13,
-      "question": "한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $7$일 때 다른 접선의 길이는?",
+      "id": 10,
+      "question": "원의 성질에서 계산 결과를 한 번 더 연결하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $9$일 때 다른 접선의 길이는?",
       "choices": [
-        "$5$",
-        "$6$",
         "$7$",
         "$8$",
-        "$9$"
+        "$10$",
+        "$9$",
+        "$11$"
       ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 한 외부점에서 그은 두 접선의 길이는 같다.",
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선 길이 · 기출 변형 핵심",
+        "typeTag": "원 · 접선의 길이 · 복합 계산",
         "skills": [
           "접선",
           "외부점",
-          "조건 해석"
+          "계산 연결"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "circle"
       }
     },
     {
-      "id": 14,
-      "question": "원에 내접하는 사각형에서 한 각이 $95^\\circ$일 때 그 대각은?",
+      "id": 11,
+      "question": "원의 성질에서 풀이 과정의 빠진 단계를 채운다고 생각하고, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $13$일 때 다른 접선의 길이는?",
       "choices": [
-        "$95^\\circ$",
-        "$90^\\circ$",
-        "$85^\\circ1$",
-        "$85^\\circ$",
-        "$85^\\circ2$"
+        "$13$",
+        "$11$",
+        "$12$",
+        "$14$",
+        "$15$"
       ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 내접사각형의 대각의 합은 $180^\\circ$이다.",
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "내접사각형 대각 · 서술형 대비",
+        "typeTag": "원 · 접선의 길이 · 서술형 흐름",
         "skills": [
-          "내접사각형",
-          "대각",
+          "접선",
+          "외부점",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -486,29 +394,122 @@
       }
     },
     {
-      "id": 15,
-      "question": "원 안에서 두 현이 만나고 한 현의 두 부분이 $3$, $7$이다. 다른 현의 한 부분이 $2$이면 나머지 부분은?",
+      "id": 12,
+      "question": "원의 성질에서 숨은 조건을 찾아, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $6$일 때 다른 접선의 길이는?",
       "choices": [
-        "$21$",
-        "$\\frac{23}{2}$",
-        "$\\frac{19}{2}$",
-        "$10$",
-        "$\\frac{21}{2}$"
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 현의 교차 정리에 의해 $3\\times7=2t$이다.",
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "현의 교차 · 최고 수준/발전",
+        "typeTag": "원 · 접선의 길이 · 숨은 조건",
         "skills": [
-          "현",
-          "곱의 관계",
-          "복합 추론"
+          "접선",
+          "외부점",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
+    },
+    {
+      "id": 13,
+      "question": "원의 성질에서 상황을 식으로 모델링하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $10$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$8$",
+        "$9$",
+        "$11$",
+        "$12$",
+        "$10$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "원 · 접선의 길이 · 상황 모델링",
+        "skills": [
+          "접선",
+          "외부점",
+          "모델링"
+        ],
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
+    },
+    {
+      "id": 14,
+      "question": "원의 성질에서 조건을 변형해 적용하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $14$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$12$",
+        "$14$",
+        "$13$",
+        "$15$",
+        "$16$"
+      ],
+      "answer": 1,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "원 · 접선의 길이 · 변형 적용",
+        "skills": [
+          "접선",
+          "외부점",
+          "변형"
+        ],
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
+    },
+    {
+      "id": 15,
+      "question": "원의 성질에서 여러 조건을 종합하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $7$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$5$",
+        "$6$",
+        "$8$",
+        "$7$",
+        "$9$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "원 · 접선의 길이 · 종합 추론",
+        "skills": [
+          "접선",
+          "외부점",
+          "종합 추론"
+        ],
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -518,28 +519,28 @@
     },
     {
       "id": 16,
-      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $162688$일 때 다른 접선의 길이는?",
+      "question": "원의 성질에서 같은 개념을 다른 수에 적용하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $12$일 때 다른 접선의 길이는?",
       "choices": [
-        "$162686$",
-        "$162688$",
-        "$162687$",
-        "$162689$",
-        "$162690$"
+        "$12$",
+        "$10$",
+        "$11$",
+        "$13$",
+        "$14$"
       ],
-      "answer": 1,
-      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $162688$이다.",
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선의 길이 · 개념 확인 연산",
+        "typeTag": "원 · 접선의 길이 · 개념 확인",
         "skills": [
           "접선",
           "외부점",
-          "핵심 공식 적용"
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -549,26 +550,26 @@
     },
     {
       "id": 17,
-      "question": "같은 호에 대한 중심각이 $108^\\circ$일 때 원주각은?",
+      "question": "원의 성질에서 표준 풀이를 변형하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $11$일 때 다른 접선의 길이는?",
       "choices": [
-        "$108^\\circ$",
-        "$64^\\circ$",
-        "$54^\\circ$",
-        "$98^\\circ$",
-        "$36^\\circ$"
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
       ],
       "answer": 2,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 원주각은 같은 호에 대한 중심각의 절반이다.",
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "원주각 계산 · 대표 교과서 유형",
+        "typeTag": "원 · 접선의 길이 · 대표 풀이",
         "skills": [
-          "원주각",
-          "중심각",
-          "표준 풀이 적용"
+          "접선",
+          "외부점",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
         "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "대표 표준 문항",
@@ -580,29 +581,29 @@
     },
     {
       "id": 18,
-      "question": "한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $5$일 때 다른 접선의 길이는?",
+      "question": "원의 성질에서 조건의 순서를 바꾸어 생각하며, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $10$일 때 다른 접선의 길이는?",
       "choices": [
-        "$3$",
-        "$4$",
-        "$6$",
-        "$5$",
-        "$7$"
+        "$8$",
+        "$9$",
+        "$11$",
+        "$12$",
+        "$10$"
       ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 한 외부점에서 그은 두 접선의 길이는 같다.",
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선 길이 · 기출 변형 핵심",
+        "typeTag": "원 · 접선의 길이 · 조건 해석",
         "skills": [
           "접선",
           "외부점",
-          "조건 해석"
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -611,30 +612,30 @@
     },
     {
       "id": 19,
-      "question": "원에 내접하는 사각형에서 한 각이 $85^\\circ$일 때 그 대각은?",
+      "question": "원의 성질에서 결과에서 원인을 되짚어, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $8$일 때 다른 접선의 길이는?",
       "choices": [
-        "$85^\\circ$",
-        "$105^\\circ$",
-        "$90^\\circ$",
-        "$75^\\circ$",
-        "$95^\\circ$"
+        "$6$",
+        "$8$",
+        "$7$",
+        "$9$",
+        "$10$"
       ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 내접사각형의 대각의 합은 $180^\\circ$이다.",
+      "answer": 1,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "내접사각형 대각 · 서술형 대비",
+        "typeTag": "원 · 접선의 길이 · 역추론",
         "skills": [
-          "내접사각형",
-          "대각",
-          "과정 점검"
+          "접선",
+          "외부점",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "circle"
@@ -642,29 +643,29 @@
     },
     {
       "id": 20,
-      "question": "원 안에서 두 현이 만나고 한 현의 두 부분이 $7$, $5$이다. 다른 현의 한 부분이 $2$이면 나머지 부분은?",
+      "question": "원의 성질에서 겹치는 경우를 제외하며, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $12$일 때 다른 접선의 길이는?",
       "choices": [
-        "$\\frac{35}{2}$",
-        "$35$",
-        "$\\frac{37}{2}$",
-        "$\\frac{33}{2}$",
-        "$12$"
+        "$10$",
+        "$11$",
+        "$13$",
+        "$12$",
+        "$14$"
       ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 현의 교차 정리에 의해 $7\\times5=2t$이다.",
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "현의 교차 · 최고 수준/발전",
+        "typeTag": "원 · 접선의 길이 · 경우 분류",
         "skills": [
-          "현",
-          "곱의 관계",
-          "복합 추론"
+          "접선",
+          "외부점",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -673,30 +674,30 @@
     },
     {
       "id": 21,
-      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $213566$일 때 다른 접선의 길이는?",
+      "question": "원의 성질에서 자료 사이의 차이를 비교하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $11$일 때 다른 접선의 길이는?",
       "choices": [
-        "$213564$",
-        "$213565$",
-        "$213566$",
-        "$213567$",
-        "$213568$"
+        "$11$",
+        "$9$",
+        "$10$",
+        "$12$",
+        "$13$"
       ],
-      "answer": 2,
-      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $213566$이다.",
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선의 길이 · 개념 확인 연산",
+        "typeTag": "원 · 접선의 길이 · 자료 해석",
         "skills": [
           "접선",
           "외부점",
-          "핵심 공식 적용"
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "circle"
@@ -704,59 +705,28 @@
     },
     {
       "id": 22,
-      "question": "같은 호에 대한 중심각이 $100^\\circ$일 때 원주각은?",
+      "question": "원의 성질에서 끝값과 경계값을 확인하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $10$일 때 다른 접선의 길이는?",
       "choices": [
-        "$100^\\circ$",
-        "$60^\\circ$",
-        "$90^\\circ$",
-        "$50^\\circ$",
-        "$40^\\circ$"
+        "$8$",
+        "$9$",
+        "$10$",
+        "$11$",
+        "$12$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 원주각은 같은 호에 대한 중심각의 절반이다.",
+      "answer": 2,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "원주각 계산 · 대표 교과서 유형",
-        "skills": [
-          "원주각",
-          "중심각",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "circle"
-      }
-    },
-    {
-      "id": 23,
-      "question": "한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $3$일 때 다른 접선의 길이는?",
-      "choices": [
-        "$1$",
-        "$2$",
-        "$4$",
-        "$5$",
-        "$3$"
-      ],
-      "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 한 외부점에서 그은 두 접선의 길이는 같다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "접선 길이 · 기출 변형 핵심",
+        "typeTag": "원 · 접선의 길이 · 범위 판단",
         "skills": [
           "접선",
           "외부점",
-          "조건 해석"
+          "범위 해석"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -765,60 +735,29 @@
       }
     },
     {
-      "id": 24,
-      "question": "원에 내접하는 사각형에서 한 각이 $75^\\circ$일 때 그 대각은?",
+      "id": 23,
+      "question": "원의 성질에서 변하지 않는 값을 찾아, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $13$일 때 다른 접선의 길이는?",
       "choices": [
-        "$105^\\circ$",
-        "$75^\\circ$",
-        "$115^\\circ$",
-        "$90^\\circ$",
-        "$65^\\circ$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 내접사각형의 대각의 합은 $180^\\circ$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "내접사각형 대각 · 서술형 대비",
-        "skills": [
-          "내접사각형",
-          "대각",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "circle"
-      }
-    },
-    {
-      "id": 25,
-      "question": "원 안에서 두 현이 만나고 한 현의 두 부분이 $5$, $8$이다. 다른 현의 한 부분이 $2$이면 나머지 부분은?",
-      "choices": [
-        "$40$",
-        "$20$",
-        "$21$",
-        "$19$",
+        "$11$",
+        "$12$",
+        "$14$",
+        "$15$",
         "$13$"
       ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 현의 교차 정리에 의해 $5\\times8=2t$이다.",
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "현의 교차 · 최고 수준/발전",
+        "typeTag": "원 · 접선의 길이 · 매개변수",
         "skills": [
-          "현",
-          "곱의 관계",
-          "복합 추론"
+          "접선",
+          "외부점",
+          "매개변수 추론"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -827,61 +766,30 @@
       }
     },
     {
-      "id": 26,
-      "question": "한 외부점에서 원에 그은 두 접선의 길이 중 하나가 $264444$일 때 다른 접선의 길이는?",
+      "id": 24,
+      "question": "원의 성질에서 보기의 차이를 따져, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $7$일 때 다른 접선의 길이는?",
       "choices": [
-        "$264442$",
-        "$264443$",
-        "$264445$",
-        "$264444$",
-        "$264446$"
+        "$5$",
+        "$7$",
+        "$6$",
+        "$8$",
+        "$9$"
       ],
-      "answer": 3,
-      "explanation": "한 외부점에서 그은 두 접선의 길이는 같으므로 다른 접선도 $264444$이다.",
+      "answer": 1,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선의 길이 · 개념 확인 연산",
+        "typeTag": "원 · 접선의 길이 · 비교 판단",
         "skills": [
           "접선",
           "외부점",
-          "핵심 공식 적용"
+          "비교"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "circle"
-      }
-    },
-    {
-      "id": 27,
-      "question": "같은 호에 대한 중심각이 $92^\\circ$일 때 원주각은?",
-      "choices": [
-        "$92^\\circ$",
-        "$56^\\circ$",
-        "$82^\\circ$",
-        "$44^\\circ$",
-        "$46^\\circ$"
-      ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 원주각은 같은 호에 대한 중심각의 절반이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "원주각 계산 · 대표 교과서 유형",
-        "skills": [
-          "원주각",
-          "중심각",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
         "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
@@ -889,60 +797,60 @@
       }
     },
     {
-      "id": 28,
-      "question": "한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $7$일 때 다른 접선의 길이는?",
+      "id": 25,
+      "question": "원의 성질에서 중간 계산을 이용하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $11$일 때 다른 접선의 길이는?",
       "choices": [
-        "$7$",
-        "$5$",
-        "$6$",
-        "$8$",
-        "$9$"
+        "$9$",
+        "$10$",
+        "$12$",
+        "$11$",
+        "$13$"
       ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 한 외부점에서 그은 두 접선의 길이는 같다.",
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "접선 길이 · 기출 변형 핵심",
+        "typeTag": "원 · 접선의 길이 · 복합 계산",
         "skills": [
           "접선",
           "외부점",
-          "조건 해석"
+          "계산 연결"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "유형별",
         "family": "circle"
       }
     },
     {
-      "id": 29,
-      "question": "원에 내접하는 사각형에서 한 각이 $115^\\circ$일 때 그 대각은?",
+      "id": 26,
+      "question": "원의 성질에서 계산 실수를 점검하며, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $14$일 때 다른 접선의 길이는?",
       "choices": [
-        "$115^\\circ$",
-        "$65^\\circ$",
-        "$75^\\circ$",
-        "$90^\\circ$",
-        "$105^\\circ$"
+        "$14$",
+        "$12$",
+        "$13$",
+        "$15$",
+        "$16$"
       ],
-      "answer": 1,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 내접사각형의 대각의 합은 $180^\\circ$이다.",
+      "answer": 0,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "내접사각형 대각 · 서술형 대비",
+        "typeTag": "원 · 접선의 길이 · 서술형 흐름",
         "skills": [
-          "내접사각형",
-          "대각",
+          "접선",
+          "외부점",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -951,29 +859,122 @@
       }
     },
     {
-      "id": 30,
-      "question": "원 안에서 두 현이 만나고 한 현의 두 부분이 $3$, $6$이다. 다른 현의 한 부분이 $2$이면 나머지 부분은?",
+      "id": 27,
+      "question": "원의 성질에서 문장에 숨은 제한을 반영하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $8$일 때 다른 접선의 길이는?",
       "choices": [
-        "$18$",
-        "$10$",
-        "$9$",
+        "$6$",
+        "$7$",
         "$8$",
-        "$11$"
+        "$9$",
+        "$10$"
       ],
       "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 현의 교차 정리에 의해 $3\\times6=2t$이다.",
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
-        "typeTag": "현의 교차 · 최고 수준/발전",
+        "typeTag": "원 · 접선의 길이 · 숨은 조건",
         "skills": [
-          "현",
-          "곱의 관계",
-          "복합 추론"
+          "접선",
+          "외부점",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
+    },
+    {
+      "id": 28,
+      "question": "원의 성질에서 실생활 조건을 식으로 바꾸어, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $12$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$10$",
+        "$11$",
+        "$13$",
+        "$14$",
+        "$12$"
+      ],
+      "answer": 4,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "원 · 접선의 길이 · 상황 모델링",
+        "skills": [
+          "접선",
+          "외부점",
+          "모델링"
+        ],
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
+    },
+    {
+      "id": 29,
+      "question": "원의 성질에서 질문한 대상을 바꾸어 생각하며, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $6$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$4$",
+        "$6$",
+        "$5$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 1,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "원 · 접선의 길이 · 변형 적용",
+        "skills": [
+          "접선",
+          "외부점",
+          "변형"
+        ],
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "circle"
+      }
+    },
+    {
+      "id": 30,
+      "question": "원의 성질에서 마지막 조건까지 함께 고려하여, 한 외부점에서 원에 그은 두 접선 중 하나의 길이가 $9$일 때 다른 접선의 길이는?",
+      "choices": [
+        "$7$",
+        "$8$",
+        "$10$",
+        "$9$",
+        "$11$"
+      ],
+      "answer": 3,
+      "explanation": "한 외부점에서 그은 두 접선의 길이는 같다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "원 · 접선의 길이 · 종합 추론",
+        "skills": [
+          "접선",
+          "외부점",
+          "종합 추론"
+        ],
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "대표 교과서 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",

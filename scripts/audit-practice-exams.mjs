@@ -9,6 +9,8 @@ const skipDirs = new Set(['archive', 'school-exams', 'roadway', 'workbooks']);
 const failOnUnblockedIssues = process.argv.includes('--fail-on-unblocked-issues');
 const minTypeTagsPerExam = 5;
 const minTypeTagsPerUnit = 20;
+const maxSimilarQuestionsPerExam = 2;
+const maxReasonableNumber = 999;
 
 const redFlagPatterns = [
   /보기 없음/,
@@ -32,6 +34,8 @@ const visibleScaffoldingPatterns = [
   /풀이 과정을 단계별/,
   /발전 문항처럼/,
 ];
+
+const numberPattern = /(?<![A-Za-z])[-+]?\d+(?:\.\d+)?/g;
 
 const ebsRoles = {
   '기본': { role: '개념 확인 연산', steps: 1, middleStage: '개념 확인 연산 유형' },
@@ -74,6 +78,7 @@ const ebsTransformPatterns = new Set([
   '조건 및 구하는 값 변경',
   '풀이 과정 단계화',
   '조건의 강화·완화',
+  '자료 및 상황 활용',
 ]);
 
 function scanJsonFiles(dir) {
@@ -95,6 +100,22 @@ function scanJsonFiles(dir) {
 
 function normalizeText(value) {
   return String(value ?? '').replace(/\s+/g, ' ').trim();
+}
+
+function unique(values) {
+  return [...new Set(values.map(value => String(value)))];
+}
+
+function normalizeQuestionShape(value) {
+  return normalizeText(value)
+    .replace(/\$[^$]*\$/g, '$#')
+    .replace(numberPattern, '#');
+}
+
+function collectLargeNumbers(value) {
+  return [...String(value ?? '').matchAll(numberPattern)]
+    .map(match => Number(match[0]))
+    .filter(number => Number.isFinite(number) && Math.abs(number) > maxReasonableNumber);
 }
 
 function loadQualityMap() {
@@ -127,6 +148,8 @@ function auditExam(filePath) {
   const issueQuestionIds = new Set();
   const ebsProblems = [];
   const duplicateQuestionTexts = [];
+  const questionTextCounts = new Map();
+  const questionShapeCounts = new Map();
   const answerCounts = new Map();
   const typeTags = new Set();
   let multipleChoiceCount = 0;
@@ -190,6 +213,22 @@ function auditExam(filePath) {
     }
 
     const questionText = normalizeText(question?.question);
+    if (questionText) {
+      const textRefs = questionTextCounts.get(questionText) ?? [];
+      textRefs.push(qId);
+      questionTextCounts.set(questionText, textRefs);
+
+      const questionShape = normalizeQuestionShape(questionText);
+      const shapeRefs = questionShapeCounts.get(questionShape) ?? [];
+      shapeRefs.push(qId);
+      questionShapeCounts.set(questionShape, shapeRefs);
+    }
+
+    const largeNumbers = collectLargeNumbers(searchableText);
+    if (largeNumbers.length > 0) {
+      ebsProblems.push(`Q${qId}: contains unreasonable number(s): ${unique(largeNumbers).join(', ')}`);
+    }
+
     if (visibleScaffoldingPatterns.some(pattern => pattern.test(questionText))) {
       ebsProblems.push(`Q${qId}: internal EBS scaffolding is visible in question text`);
     }
@@ -228,6 +267,19 @@ function auditExam(filePath) {
 
   if (expectedEbs && typeTags.size < minTypeTagsPerExam) {
     ebsProblems.push(`only ${typeTags.size} unique typeTags; expected at least ${minTypeTagsPerExam} per exam`);
+  }
+
+  for (const [text, refs] of questionTextCounts.entries()) {
+    if (refs.length > 1) {
+      duplicateQuestionTexts.push({ text, questionIds: refs });
+      ebsProblems.push(`duplicate question text appears in Q${refs.join(', Q')}`);
+    }
+  }
+
+  for (const [shape, refs] of questionShapeCounts.entries()) {
+    if (refs.length > maxSimilarQuestionsPerExam) {
+      ebsProblems.push(`similar question shape appears ${refs.length} times in Q${refs.join(', Q')}: ${shape}`);
+    }
   }
 
   const answerIndex0Rate = multipleChoiceCount > 0
@@ -360,4 +412,14 @@ if (duplicateQuestionTexts.length > 0) {
       .join(', ');
     console.warn(`- ${refs}: ${duplicate.text}`);
   }
+}
+
+if (duplicateQuestionTexts.length > 0 && failOnUnblockedIssues) {
+  console.error('\nExact duplicate question texts are not allowed.');
+  process.exit(1);
+}
+
+if (crossDifficultyDuplicates.length > 0 && failOnUnblockedIssues) {
+  console.error('\nExact duplicate question texts across difficulties are not allowed.');
+  process.exit(1);
 }

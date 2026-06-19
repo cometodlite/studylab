@@ -1,16 +1,17 @@
 {
   "id": "m3-trigonometry-advanced",
   "title": "삼각비 — 심화",
-  "description": "EBS 중학 기출 변형형: 내신 빈출 조건을 해석하고 연결합니다. 삼각형 넓이, 높이·거리 계산, 방위각",
+  "description": "조건을 연결하고 중간 결과를 해석해야 하는 내신 변형 문제입니다.",
   "grade": 3,
   "unit": "삼각비",
   "difficulty": "심화",
   "ebsStyle": {
-    "version": 3,
+    "version": 4,
     "role": "기출 변형 핵심",
     "expectedSteps": 4,
     "middleStage": "기출 변형 핵심 유형",
-    "typeVariantCount": 5,
+    "typeVariantCount": 15,
+    "maxSimilarPerExam": 2,
     "middleTaxonomy": {
       "buildUpStages": [
         "개념 확인 연산 유형",
@@ -53,29 +54,29 @@
   "questions": [
     {
       "id": 1,
-      "question": "$\\sin A=\\frac{21608}{45917}$, $\\cos A=\\frac{40515}{45917}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "삼각비에서 기본 정의를 바로 적용하여, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$21608$",
-        "$40515$",
-        "$62123$",
-        "$45917$",
-        "$62124$"
+        "$7$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$8$"
       ],
-      "answer": 2,
-      "explanation": "$c(\\frac{21608}{45917}+\\frac{40515}{45917})=21608+40515=62123$이다.",
+      "answer": 0,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "typeTag": "삼각비 · 삼각비 복합식 · 개념 확인",
         "skills": [
           "sin",
           "cos",
-          "비례식",
-          "핵심 공식 적용"
+          "복합 계산",
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -85,28 +86,29 @@
     },
     {
       "id": 2,
-      "question": "직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
+      "question": "삼각비에서 대표 풀이 흐름에 맞추어, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{24}{25}$",
-        "$\\frac{7}{24}$",
-        "$\\frac{25}{7}$",
-        "$\\frac{7}{25}$",
-        "$\\frac{24}{7}$"
+        "$8$",
+        "$15$",
+        "$23$",
+        "$17$",
+        "$24$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{21}{75}$이다.",
+      "answer": 2,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
+        "typeTag": "삼각비 · 삼각비 복합식 · 대표 풀이",
         "skills": [
-          "삼각비",
           "sin",
-          "표준 풀이 적용"
+          "cos",
+          "복합 계산",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -116,29 +118,30 @@
     },
     {
       "id": 3,
-      "question": "직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
+      "question": "삼각비에서 필요한 조건만 골라, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{3}{5}$",
-        "$\\frac{4}{3}$",
-        "$\\frac{5}{4}$",
-        "$\\frac{3}{4}$",
-        "$\\frac{4}{5}$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$8$",
+        "$7$"
       ],
       "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{12}{15}$이다.",
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
+        "typeTag": "삼각비 · 삼각비 복합식 · 조건 해석",
         "skills": [
-          "삼각비",
+          "sin",
           "cos",
-          "조건 해석"
+          "복합 계산",
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
         "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -147,30 +150,31 @@
     },
     {
       "id": 4,
-      "question": "$\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
+      "question": "삼각비에서 거꾸로 조건을 추적하여, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$30$",
+        "$8$",
+        "$23$",
         "$15$",
-        "$36$",
-        "$31$",
-        "$72$"
+        "$17$",
+        "$24$"
       ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{72}=\\frac{15}{36}$에서 대변은 $30$이다.",
+      "answer": 1,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
+        "typeTag": "삼각비 · 삼각비 복합식 · 역추론",
         "skills": [
-          "tan",
-          "길이",
-          "과정 점검"
+          "sin",
+          "cos",
+          "복합 계산",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -178,30 +182,30 @@
     },
     {
       "id": 5,
-      "question": "$\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
+      "question": "삼각비에서 가능한 경우를 나누어, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$24$",
-        "$69$",
-        "$45$",
-        "$51$",
-        "$70$"
+        "$3$",
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$"
       ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{24}{51}+\\frac{45}{51})=69$이다.",
+      "answer": 3,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "typeTag": "삼각비 · 삼각비 복합식 · 경우 분류",
         "skills": [
           "sin",
           "cos",
           "복합 계산",
-          "복합 추론"
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -210,31 +214,31 @@
     },
     {
       "id": 6,
-      "question": "$\\sin A=\\frac{46263}{77105}$, $\\cos A=\\frac{61684}{77105}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "삼각비에서 주어진 자료를 해석하여, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$46263$",
-        "$61684$",
-        "$77105$",
-        "$107947$",
-        "$107948$"
+        "$23$",
+        "$8$",
+        "$15$",
+        "$17$",
+        "$24$"
       ],
-      "answer": 3,
-      "explanation": "$c(\\frac{46263}{77105}+\\frac{61684}{77105})=46263+61684=107947$이다.",
+      "answer": 0,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "typeTag": "삼각비 · 삼각비 복합식 · 자료 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식",
-          "핵심 공식 적용"
+          "복합 계산",
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -242,58 +246,28 @@
     },
     {
       "id": 7,
-      "question": "직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
+      "question": "삼각비에서 값의 범위를 먼저 판단하여, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{12}{13}$",
-        "$\\frac{5}{12}$",
-        "$\\frac{13}{5}$",
-        "$\\frac{12}{5}$",
-        "$\\frac{5}{13}$"
+        "$3$",
+        "$4$",
+        "$7$",
+        "$5$",
+        "$8$"
       ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{15}{39}$이다.",
+      "answer": 2,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
+        "typeTag": "삼각비 · 삼각비 복합식 · 범위 판단",
         "skills": [
-          "삼각비",
           "sin",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 8,
-      "question": "직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
-      "choices": [
-        "$\\frac{15}{17}$",
-        "$\\frac{8}{17}$",
-        "$\\frac{15}{8}$",
-        "$\\frac{17}{15}$",
-        "$\\frac{8}{15}$"
-      ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{45}{51}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
-        "skills": [
-          "삼각비",
           "cos",
-          "조건 해석"
+          "복합 계산",
+          "범위 해석"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
         "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건 및 구하는 값 변경",
@@ -303,61 +277,30 @@
       }
     },
     {
-      "id": 9,
-      "question": "$\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
+      "id": 8,
+      "question": "삼각비에서 매개변수의 영향을 생각하여, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$21$",
-        "$42$",
-        "$72$",
-        "$43$",
-        "$144$"
-      ],
-      "answer": 1,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{144}=\\frac{21}{72}$에서 대변은 $42$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
-        "skills": [
-          "tan",
-          "길이",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 10,
-      "question": "$\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
-      "choices": [
-        "$9$",
-        "$12$",
-        "$21$",
+        "$8$",
         "$15$",
-        "$22$"
+        "$17$",
+        "$24$",
+        "$23$"
       ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{9}{15}+\\frac{12}{15})=21$이다.",
+      "answer": 4,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "typeTag": "삼각비 · 삼각비 복합식 · 매개변수",
         "skills": [
           "sin",
           "cos",
           "복합 계산",
-          "복합 추론"
+          "매개변수 추론"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -366,62 +309,31 @@
       }
     },
     {
-      "id": 11,
-      "question": "$\\sin A=\\frac{225120}{478380}$, $\\cos A=\\frac{422100}{478380}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "id": 9,
+      "question": "삼각비에서 두 값을 비교하는 관점에서, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$225120$",
-        "$422100$",
-        "$478380$",
-        "$647221$",
-        "$647220$"
+        "$3$",
+        "$7$",
+        "$4$",
+        "$5$",
+        "$8$"
       ],
-      "answer": 4,
-      "explanation": "$c(\\frac{225120}{478380}+\\frac{422100}{478380})=225120+422100=647220$이다.",
+      "answer": 1,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "typeTag": "삼각비 · 삼각비 복합식 · 비교 판단",
         "skills": [
           "sin",
           "cos",
-          "비례식",
-          "핵심 공식 적용"
+          "복합 계산",
+          "비교"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 12,
-      "question": "직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
-      "choices": [
-        "$\\frac{7}{25}$",
-        "$\\frac{24}{25}$",
-        "$\\frac{7}{24}$",
-        "$\\frac{25}{7}$",
-        "$\\frac{24}{7}$"
-      ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{21}{75}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
-        "skills": [
-          "삼각비",
-          "sin",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -429,60 +341,62 @@
       }
     },
     {
-      "id": 13,
-      "question": "직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
+      "id": 10,
+      "question": "삼각비에서 계산 결과를 한 번 더 연결하여, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{3}{5}$",
-        "$\\frac{4}{5}$",
-        "$\\frac{4}{3}$",
-        "$\\frac{5}{4}$",
-        "$\\frac{3}{4}$"
+        "$8$",
+        "$15$",
+        "$17$",
+        "$23$",
+        "$24$"
       ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{12}{15}$이다.",
+      "answer": 3,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
+        "typeTag": "삼각비 · 삼각비 복합식 · 복합 계산",
         "skills": [
-          "삼각비",
+          "sin",
           "cos",
-          "조건 해석"
+          "복합 계산",
+          "계산 연결"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
         "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
       }
     },
     {
-      "id": 14,
-      "question": "$\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
+      "id": 11,
+      "question": "삼각비에서 풀이 과정의 빠진 단계를 채운다고 생각하고, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$15$",
-        "$36$",
-        "$30$",
-        "$31$",
-        "$72$"
+        "$7$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$8$"
       ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{72}=\\frac{15}{36}$에서 대변은 $30$이다.",
+      "answer": 0,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
+        "typeTag": "삼각비 · 삼각비 복합식 · 서술형 흐름",
         "skills": [
-          "tan",
-          "길이",
+          "sin",
+          "cos",
+          "복합 계산",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -491,30 +405,126 @@
       }
     },
     {
-      "id": 15,
-      "question": "$\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
+      "id": 12,
+      "question": "삼각비에서 숨은 조건을 찾아, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$24$",
-        "$45$",
-        "$51$",
-        "$69$",
-        "$70$"
+        "$8$",
+        "$15$",
+        "$23$",
+        "$17$",
+        "$24$"
       ],
-      "answer": 3,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{24}{51}+\\frac{45}{51})=69$이다.",
+      "answer": 2,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "typeTag": "삼각비 · 삼각비 복합식 · 숨은 조건",
         "skills": [
           "sin",
           "cos",
           "복합 계산",
-          "복합 추론"
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 13,
+      "question": "삼각비에서 상황을 식으로 모델링하여, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$8$",
+        "$7$"
+      ],
+      "answer": 4,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 · 삼각비 복합식 · 상황 모델링",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "모델링"
+        ],
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 14,
+      "question": "삼각비에서 조건을 변형해 적용하여, $\\sin A=\\frac{8}{17}$, $\\cos A=\\frac{15}{17}$일 때 $z(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$8$",
+        "$23$",
+        "$15$",
+        "$17$",
+        "$24$"
+      ],
+      "answer": 1,
+      "explanation": "분모가 모두 $17$이므로 곱하면 $8+15$만 남는다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 · 삼각비 복합식 · 변형 적용",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "변형"
+        ],
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 15,
+      "question": "삼각비에서 여러 조건을 종합하여, $\\sin A=\\frac{3}{5}$, $\\cos A=\\frac{4}{5}$일 때 $z(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$7$",
+        "$8$"
+      ],
+      "answer": 3,
+      "explanation": "분모가 모두 $5$이므로 곱하면 $3+4$만 남는다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 · 삼각비 복합식 · 종합 추론",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "종합 추론"
+        ],
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -524,29 +534,29 @@
     },
     {
       "id": 16,
-      "question": "$\\sin A=\\frac{122580}{204300}$, $\\cos A=\\frac{163440}{204300}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "삼각비에서 같은 개념을 다른 수에 적용하여, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$286020$",
-        "$122580$",
-        "$163440$",
-        "$204300$",
-        "$286021$"
+        "$14$",
+        "$6$",
+        "$8$",
+        "$10$",
+        "$15$"
       ],
       "answer": 0,
-      "explanation": "$c(\\frac{122580}{204300}+\\frac{163440}{204300})=122580+163440=286020$이다.",
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "typeTag": "삼각비 · 삼각비 복합식 · 개념 확인",
         "skills": [
           "sin",
           "cos",
-          "비례식",
-          "핵심 공식 적용"
+          "복합 계산",
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -556,28 +566,29 @@
     },
     {
       "id": 17,
-      "question": "직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
+      "question": "삼각비에서 표준 풀이를 변형하여, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{12}{13}$",
-        "$\\frac{5}{13}$",
-        "$\\frac{5}{12}$",
-        "$\\frac{13}{5}$",
-        "$\\frac{12}{5}$"
+        "$16$",
+        "$30$",
+        "$46$",
+        "$34$",
+        "$47$"
       ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{15}{39}$이다.",
+      "answer": 2,
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
+        "typeTag": "삼각비 · 삼각비 복합식 · 대표 풀이",
         "skills": [
-          "삼각비",
           "sin",
-          "표준 풀이 적용"
+          "cos",
+          "복합 계산",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -587,29 +598,30 @@
     },
     {
       "id": 18,
-      "question": "직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
+      "question": "삼각비에서 조건의 순서를 바꾸어 생각하며, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{8}{17}$",
-        "$\\frac{15}{8}$",
-        "$\\frac{15}{17}$",
-        "$\\frac{17}{15}$",
-        "$\\frac{8}{15}$"
+        "$6$",
+        "$8$",
+        "$10$",
+        "$15$",
+        "$14$"
       ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{45}{51}$이다.",
+      "answer": 4,
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
+        "typeTag": "삼각비 · 삼각비 복합식 · 조건 해석",
         "skills": [
-          "삼각비",
+          "sin",
           "cos",
-          "조건 해석"
+          "복합 계산",
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
         "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -618,30 +630,31 @@
     },
     {
       "id": 19,
-      "question": "$\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
+      "question": "삼각비에서 결과에서 원인을 되짚어, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$21$",
-        "$72$",
-        "$43$",
-        "$42$",
-        "$144$"
+        "$16$",
+        "$46$",
+        "$30$",
+        "$34$",
+        "$47$"
       ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{144}=\\frac{21}{72}$에서 대변은 $42$이다.",
+      "answer": 1,
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
+        "typeTag": "삼각비 · 삼각비 복합식 · 역추론",
         "skills": [
-          "tan",
-          "길이",
-          "과정 점검"
+          "sin",
+          "cos",
+          "복합 계산",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -649,30 +662,30 @@
     },
     {
       "id": 20,
-      "question": "$\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
+      "question": "삼각비에서 겹치는 경우를 제외하며, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$9$",
-        "$12$",
-        "$15$",
-        "$22$",
-        "$21$"
+        "$6$",
+        "$8$",
+        "$10$",
+        "$14$",
+        "$15$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{9}{15}+\\frac{12}{15})=21$이다.",
+      "answer": 3,
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "typeTag": "삼각비 · 삼각비 복합식 · 경우 분류",
         "skills": [
           "sin",
           "cos",
           "복합 계산",
-          "복합 추론"
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -681,31 +694,31 @@
     },
     {
       "id": 21,
-      "question": "$\\sin A=\\frac{428632}{910843}$, $\\cos A=\\frac{803685}{910843}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "question": "삼각비에서 자료 사이의 차이를 비교하여, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$428632$",
-        "$1232317$",
-        "$803685$",
-        "$910843$",
-        "$1232318$"
+        "$46$",
+        "$16$",
+        "$30$",
+        "$34$",
+        "$47$"
       ],
-      "answer": 1,
-      "explanation": "$c(\\frac{428632}{910843}+\\frac{803685}{910843})=428632+803685=1232317$이다.",
+      "answer": 0,
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "typeTag": "삼각비 · 삼각비 복합식 · 자료 해석",
         "skills": [
           "sin",
           "cos",
-          "비례식",
-          "핵심 공식 적용"
+          "복합 계산",
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
@@ -713,58 +726,28 @@
     },
     {
       "id": 22,
-      "question": "직각삼각형에서 대변이 $21$, 빗변이 $75$일 때 $\\sin A$는?",
+      "question": "삼각비에서 끝값과 경계값을 확인하여, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{24}{25}$",
-        "$\\frac{7}{24}$",
-        "$\\frac{7}{25}$",
-        "$\\frac{25}{7}$",
-        "$\\frac{24}{7}$"
+        "$6$",
+        "$8$",
+        "$14$",
+        "$10$",
+        "$15$"
       ],
       "answer": 2,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{21}{75}$이다.",
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
+        "typeTag": "삼각비 · 삼각비 복합식 · 범위 판단",
         "skills": [
-          "삼각비",
           "sin",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 23,
-      "question": "직각삼각형에서 이웃한 변이 $12$, 빗변이 $15$일 때 $\\cos A$는?",
-      "choices": [
-        "$\\frac{3}{5}$",
-        "$\\frac{4}{3}$",
-        "$\\frac{5}{4}$",
-        "$\\frac{4}{5}$",
-        "$\\frac{3}{4}$"
-      ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{12}{15}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
-        "skills": [
-          "삼각비",
           "cos",
-          "조건 해석"
+          "복합 계산",
+          "범위 해석"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
         "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건 및 구하는 값 변경",
@@ -774,61 +757,30 @@
       }
     },
     {
-      "id": 24,
-      "question": "$\\tan A=\\frac{15}{36}$이고 이웃한 변이 $72$일 때 대변은?",
+      "id": 23,
+      "question": "삼각비에서 변하지 않는 값을 찾아, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$15$",
-        "$36$",
-        "$31$",
-        "$72$",
-        "$30$"
+        "$16$",
+        "$30$",
+        "$34$",
+        "$47$",
+        "$46$"
       ],
       "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{72}=\\frac{15}{36}$에서 대변은 $30$이다.",
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
-        "skills": [
-          "tan",
-          "길이",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 25,
-      "question": "$\\sin A=\\frac{24}{51}$, $\\cos A=\\frac{45}{51}$일 때 $z(\\sin A+\\cos A)$는?",
-      "choices": [
-        "$69$",
-        "$24$",
-        "$45$",
-        "$51$",
-        "$70$"
-      ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{24}{51}+\\frac{45}{51})=69$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "typeTag": "삼각비 · 삼각비 복합식 · 매개변수",
         "skills": [
           "sin",
           "cos",
           "복합 계산",
-          "복합 추론"
+          "매개변수 추론"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -837,62 +789,31 @@
       }
     },
     {
-      "id": 26,
-      "question": "$\\sin A=\\frac{198897}{331495}$, $\\cos A=\\frac{265196}{331495}$일 때 $c(\\sin A+\\cos A)$의 값은?",
+      "id": 24,
+      "question": "삼각비에서 보기의 차이를 따져, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$198897$",
-        "$265196$",
-        "$464093$",
-        "$331495$",
-        "$464094$"
+        "$6$",
+        "$14$",
+        "$8$",
+        "$10$",
+        "$15$"
       ],
-      "answer": 2,
-      "explanation": "$c(\\frac{198897}{331495}+\\frac{265196}{331495})=198897+265196=464093$이다.",
+      "answer": 1,
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합 계산 · 개념 확인 연산",
+        "typeTag": "삼각비 · 삼각비 복합식 · 비교 판단",
         "skills": [
           "sin",
           "cos",
-          "비례식",
-          "핵심 공식 적용"
+          "복합 계산",
+          "비교"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "심화",
-        "family": "trigonometry"
-      }
-    },
-    {
-      "id": 27,
-      "question": "직각삼각형에서 대변이 $15$, 빗변이 $39$일 때 $\\sin A$는?",
-      "choices": [
-        "$\\frac{12}{13}$",
-        "$\\frac{5}{12}$",
-        "$\\frac{13}{5}$",
-        "$\\frac{5}{13}$",
-        "$\\frac{12}{5}$"
-      ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. $\\sin A=\\frac{대변}{빗변}=\\frac{15}{39}$이다.",
-      "ebs": {
-        "role": "기출 변형 핵심",
-        "steps": 4,
-        "typeTag": "사인값 · 대표 교과서 유형",
-        "skills": [
-          "삼각비",
-          "sin",
-          "표준 풀이 적용"
-        ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
@@ -900,60 +821,62 @@
       }
     },
     {
-      "id": 28,
-      "question": "직각삼각형에서 이웃한 변이 $45$, 빗변이 $51$일 때 $\\cos A$는?",
+      "id": 25,
+      "question": "삼각비에서 중간 계산을 이용하여, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$\\frac{8}{17}$",
-        "$\\frac{15}{8}$",
-        "$\\frac{17}{15}$",
-        "$\\frac{8}{15}$",
-        "$\\frac{15}{17}$"
+        "$16$",
+        "$30$",
+        "$34$",
+        "$46$",
+        "$47$"
       ],
-      "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. $\\cos A=\\frac{이웃한 변}{빗변}=\\frac{45}{51}$이다.",
+      "answer": 3,
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "코사인값 · 기출 변형 핵심",
+        "typeTag": "삼각비 · 삼각비 복합식 · 복합 계산",
         "skills": [
-          "삼각비",
+          "sin",
           "cos",
-          "조건 해석"
+          "복합 계산",
+          "계산 연결"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
         "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "심화",
         "family": "trigonometry"
       }
     },
     {
-      "id": 29,
-      "question": "$\\tan A=\\frac{21}{72}$이고 이웃한 변이 $144$일 때 대변은?",
+      "id": 26,
+      "question": "삼각비에서 계산 실수를 점검하며, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$42$",
-        "$21$",
-        "$72$",
-        "$43$",
-        "$144$"
+        "$14$",
+        "$6$",
+        "$8$",
+        "$10$",
+        "$15$"
       ],
       "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. 비례식 $\\frac{대변}{144}=\\frac{21}{72}$에서 대변은 $42$이다.",
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "탄젠트 길이 · 서술형 대비",
+        "typeTag": "삼각비 · 삼각비 복합식 · 서술형 흐름",
         "skills": [
-          "tan",
-          "길이",
+          "sin",
+          "cos",
+          "복합 계산",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -962,30 +885,126 @@
       }
     },
     {
-      "id": 30,
-      "question": "$\\sin A=\\frac{9}{15}$, $\\cos A=\\frac{12}{15}$일 때 $z(\\sin A+\\cos A)$는?",
+      "id": 27,
+      "question": "삼각비에서 문장에 숨은 제한을 반영하여, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
       "choices": [
-        "$9$",
-        "$21$",
-        "$12$",
-        "$15$",
-        "$22$"
+        "$16$",
+        "$30$",
+        "$46$",
+        "$34$",
+        "$47$"
       ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. $z(\\frac{9}{15}+\\frac{12}{15})=21$이다.",
+      "answer": 2,
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
       "ebs": {
         "role": "기출 변형 핵심",
         "steps": 4,
-        "typeTag": "삼각비 복합식 · 최고 수준/발전",
+        "typeTag": "삼각비 · 삼각비 복합식 · 숨은 조건",
         "skills": [
           "sin",
           "cos",
           "복합 계산",
-          "복합 추론"
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
-        "buildUpStage": "최고 수준/발전 유형",
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 28,
+      "question": "삼각비에서 실생활 조건을 식으로 바꾸어, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$6$",
+        "$8$",
+        "$10$",
+        "$15$",
+        "$14$"
+      ],
+      "answer": 4,
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 · 삼각비 복합식 · 상황 모델링",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "모델링"
+        ],
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "자료 및 상황 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 29,
+      "question": "삼각비에서 질문한 대상을 바꾸어 생각하며, $\\sin A=\\frac{16}{34}$, $\\cos A=\\frac{30}{34}$일 때 $z(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$16$",
+        "$46$",
+        "$30$",
+        "$34$",
+        "$47$"
+      ],
+      "answer": 1,
+      "explanation": "분모가 모두 $34$이므로 곱하면 $16+30$만 남는다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 · 삼각비 복합식 · 변형 적용",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "변형"
+        ],
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "기출 변형 핵심 유형",
+        "schoolExamType": "도형의 성질 및 보조선 추론",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "심화",
+        "family": "trigonometry"
+      }
+    },
+    {
+      "id": 30,
+      "question": "삼각비에서 마지막 조건까지 함께 고려하여, $\\sin A=\\frac{6}{10}$, $\\cos A=\\frac{8}{10}$일 때 $z(\\sin A+\\cos A)$의 값은?",
+      "choices": [
+        "$6$",
+        "$8$",
+        "$10$",
+        "$14$",
+        "$15$"
+      ],
+      "answer": 3,
+      "explanation": "분모가 모두 $10$이므로 곱하면 $6+8$만 남는다.",
+      "ebs": {
+        "role": "기출 변형 핵심",
+        "steps": 4,
+        "typeTag": "삼각비 · 삼각비 복합식 · 종합 추론",
+        "skills": [
+          "sin",
+          "cos",
+          "복합 계산",
+          "종합 추론"
+        ],
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "기출 변형 핵심 유형",
         "schoolExamType": "도형의 성질 및 보조선 추론",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",

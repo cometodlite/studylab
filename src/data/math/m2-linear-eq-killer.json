@@ -1,16 +1,17 @@
 {
   "id": "m2-linear-eq-killer",
   "title": "일차함수와 일차방정식 — 킬러",
-  "description": "EBS 중학 발전형: 복합 조건과 추론으로 변별력 문항을 대비합니다. 직선 방정식 최고난도, 복합 조건, 넓이·교점 응용",
+  "description": "조건 분류와 역추론이 필요한 고난도 변별력 문제입니다.",
   "grade": 2,
   "unit": "일차함수",
   "difficulty": "킬러",
   "ebsStyle": {
-    "version": 3,
+    "version": 4,
     "role": "최고 수준 발전",
     "expectedSteps": 6,
     "middleStage": "최고 수준/발전 유형",
-    "typeVariantCount": 5,
+    "typeVariantCount": 15,
+    "maxSimilarPerExam": 2,
     "middleTaxonomy": {
       "buildUpStages": [
         "개념 확인 연산 유형",
@@ -53,28 +54,28 @@
   "questions": [
     {
       "id": 1,
-      "question": "직선 $y=k(x+4)+3x+1$은 $k$의 값에 관계없이 항상 한 점을 지난다. 그 점의 $x+y$의 값은?",
+      "question": "일차함수와 일차방정식에서 기본 정의를 바로 적용하여, 직선 $y=k(x+9)+8x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-15$",
-        "$-17$",
-        "$-16$",
-        "$-14$",
-        "$-13$"
+        "$-74$",
+        "$-76$",
+        "$-75$",
+        "$-73$",
+        "$-72$"
       ],
       "answer": 0,
-      "explanation": "$k$의 영향을 없애려면 $x+4=0$, 즉 $x=-4$이다. 이때 $y=3(-4)+1=-11$이므로 $x+y=-15$이다.",
+      "explanation": "$k$의 영향을 없애려면 $x+9=0$이다. 이때 $x=-9$, $y=-65$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "항상 지나는 점 · 개념 확인 연산",
+        "typeTag": "일차함수 · 항상 지나는 점 · 개념 확인",
         "skills": [
           "매개변수",
           "불변 조건",
-          "핵심 공식 적용"
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -84,28 +85,28 @@
     },
     {
       "id": 2,
-      "question": "$y=5x-10$에서 $x=4$일 때 $y$는?",
+      "question": "일차함수와 일차방정식에서 대표 풀이 흐름에 맞추어, 직선 $y=k(x+5)+5x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$5$",
-        "$10$",
-        "$15$",
-        "$9$",
-        "$11$"
+        "$-27$",
+        "$-26$",
+        "$-25$",
+        "$-24$",
+        "$-23$"
       ],
-      "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 대입하면 $y=5\\times4-10=10$이다.",
+      "answer": 2,
+      "explanation": "$k$의 영향을 없애려면 $x+5=0$이다. 이때 $x=-5$, $y=-20$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "일차함수 값 · 대표 교과서 유형",
+        "typeTag": "일차함수 · 항상 지나는 점 · 대표 풀이",
         "skills": [
-          "일차함수",
-          "대입",
-          "표준 풀이 적용"
+          "매개변수",
+          "불변 조건",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -115,28 +116,28 @@
     },
     {
       "id": 3,
-      "question": "두 점 $(1,8)$, $(3,20)$를 지나는 직선의 기울기는?",
+      "question": "일차함수와 일차방정식에서 필요한 조건만 골라, 직선 $y=k(x+7)+7x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$4$",
-        "$5$",
-        "$6$",
-        "$7$",
-        "$8$"
+        "$-51$",
+        "$-50$",
+        "$-48$",
+        "$-47$",
+        "$-49$"
       ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 기울기는 $\\frac{20-8}{3-1}=6$이다.",
+      "answer": 4,
+      "explanation": "$k$의 영향을 없애려면 $x+7=0$이다. 이때 $x=-7$, $y=-42$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "기울기 구하기 · 기출 변형 핵심",
+        "typeTag": "일차함수 · 항상 지나는 점 · 조건 해석",
         "skills": [
-          "두 점",
-          "기울기",
-          "조건 해석"
+          "매개변수",
+          "불변 조건",
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -146,30 +147,30 @@
     },
     {
       "id": 4,
-      "question": "기울기가 $7$이고 점 $(1,6)$을 지나는 직선의 $y$절편은?",
+      "question": "일차함수와 일차방정식에서 거꾸로 조건을 추적하여, 직선 $y=k(x+9)+9x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-3$",
-        "$-2$",
-        "$0$",
-        "$-1$",
-        "$1$"
+        "$-88$",
+        "$-86$",
+        "$-87$",
+        "$-85$",
+        "$-84$"
       ],
-      "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $y=7x+n$에 $(1,6)$를 대입하면 $n=-1$이다.",
+      "answer": 1,
+      "explanation": "$k$의 영향을 없애려면 $x+9=0$이다. 이때 $x=-9$, $y=-77$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "y절편 찾기 · 서술형 대비",
+        "typeTag": "일차함수 · 항상 지나는 점 · 역추론",
         "skills": [
-          "직선의 식",
-          "절편",
-          "과정 점검"
+          "매개변수",
+          "불변 조건",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -177,26 +178,26 @@
     },
     {
       "id": 5,
-      "question": "두 직선 $y=8x+9$, $y=9x$의 교점의 $x$좌표는?",
+      "question": "일차함수와 일차방정식에서 가능한 경우를 나누어, 직선 $y=k(x+5)+6x+6$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$7$",
-        "$8$",
-        "$10$",
-        "$11$",
-        "$9$"
+        "$-31$",
+        "$-30$",
+        "$-28$",
+        "$-29$",
+        "$-27$"
       ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 식을 같게 두면 $8x+9=9x$이므로 $x=9$이다.",
+      "answer": 3,
+      "explanation": "$k$의 영향을 없애려면 $x+5=0$이다. 이때 $x=-5$, $y=-24$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "두 직선의 교점 · 최고 수준/발전",
+        "typeTag": "일차함수 · 항상 지나는 점 · 경우 분류",
         "skills": [
-          "연립방정식",
-          "교점",
-          "복합 추론"
+          "매개변수",
+          "불변 조건",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
         "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
@@ -208,30 +209,30 @@
     },
     {
       "id": 6,
-      "question": "직선 $y=k(x+2)+6x+1$은 $k$의 값에 관계없이 항상 한 점을 지난다. 그 점의 $x+y$의 값은?",
+      "question": "일차함수와 일차방정식에서 주어진 자료를 해석하여, 직선 $y=k(x+7)+8x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-15$",
-        "$-13$",
-        "$-14$",
-        "$-12$",
-        "$-11$"
+        "$-59$",
+        "$-61$",
+        "$-60$",
+        "$-58$",
+        "$-57$"
       ],
-      "answer": 1,
-      "explanation": "$k$의 영향을 없애려면 $x+2=0$, 즉 $x=-2$이다. 이때 $y=6(-2)+1=-11$이므로 $x+y=-13$이다.",
+      "answer": 0,
+      "explanation": "$k$의 영향을 없애려면 $x+7=0$이다. 이때 $x=-7$, $y=-52$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "항상 지나는 점 · 개념 확인 연산",
+        "typeTag": "일차함수 · 항상 지나는 점 · 자료 해석",
         "skills": [
           "매개변수",
           "불변 조건",
-          "핵심 공식 적용"
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -239,30 +240,30 @@
     },
     {
       "id": 7,
-      "question": "$y=9x-8$에서 $x=6$일 때 $y$는?",
+      "question": "일차함수와 일차방정식에서 값의 범위를 먼저 판단하여, 직선 $y=k(x+9)+5x+6$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$37$",
-        "$55$",
-        "$46$",
-        "$45$",
-        "$47$"
+        "$-50$",
+        "$-49$",
+        "$-48$",
+        "$-47$",
+        "$-46$"
       ],
       "answer": 2,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 대입하면 $y=9\\times6-8=46$이다.",
+      "explanation": "$k$의 영향을 없애려면 $x+9=0$이다. 이때 $x=-9$, $y=-39$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "일차함수 값 · 대표 교과서 유형",
+        "typeTag": "일차함수 · 항상 지나는 점 · 범위 판단",
         "skills": [
-          "일차함수",
-          "대입",
-          "표준 풀이 적용"
+          "매개변수",
+          "불변 조건",
+          "범위 해석"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
+        "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -270,30 +271,30 @@
     },
     {
       "id": 8,
-      "question": "두 점 $(1,6)$, $(3,26)$를 지나는 직선의 기울기는?",
+      "question": "일차함수와 일차방정식에서 매개변수의 영향을 생각하여, 직선 $y=k(x+6)+7x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$8$",
-        "$9$",
-        "$11$",
-        "$10$",
-        "$12$"
+        "$-46$",
+        "$-45$",
+        "$-43$",
+        "$-42$",
+        "$-44$"
       ],
-      "answer": 3,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 기울기는 $\\frac{26-6}{3-1}=10$이다.",
+      "answer": 4,
+      "explanation": "$k$의 영향을 없애려면 $x+6=0$이다. 이때 $x=-6$, $y=-38$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "기울기 구하기 · 기출 변형 핵심",
+        "typeTag": "일차함수 · 항상 지나는 점 · 매개변수",
         "skills": [
-          "두 점",
-          "기울기",
-          "조건 해석"
+          "매개변수",
+          "불변 조건",
+          "매개변수 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -301,28 +302,90 @@
     },
     {
       "id": 9,
-      "question": "기울기가 $5$이고 점 $(1,9)$을 지나는 직선의 $y$절편은?",
+      "question": "일차함수와 일차방정식에서 두 값을 비교하는 관점에서, 직선 $y=k(x+7)+9x+6$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$2$",
-        "$3$",
-        "$5$",
-        "$6$",
-        "$4$"
+        "$-66$",
+        "$-64$",
+        "$-65$",
+        "$-63$",
+        "$-62$"
       ],
-      "answer": 4,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $y=5x+n$에 $(1,9)$를 대입하면 $n=4$이다.",
+      "answer": 1,
+      "explanation": "$k$의 영향을 없애려면 $x+7=0$이다. 이때 $x=-7$, $y=-57$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "y절편 찾기 · 서술형 대비",
+        "typeTag": "일차함수 · 항상 지나는 점 · 비교 판단",
         "skills": [
-          "직선의 식",
-          "절편",
+          "매개변수",
+          "불변 조건",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 10,
+      "question": "일차함수와 일차방정식에서 계산 결과를 한 번 더 연결하여, 직선 $y=k(x+9)+6x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
+      "choices": [
+        "$-61$",
+        "$-60$",
+        "$-58$",
+        "$-59$",
+        "$-57$"
+      ],
+      "answer": 3,
+      "explanation": "$k$의 영향을 없애려면 $x+9=0$이다. 이때 $x=-9$, $y=-50$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "일차함수 · 항상 지나는 점 · 복합 계산",
+        "skills": [
+          "매개변수",
+          "불변 조건",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 11,
+      "question": "일차함수와 일차방정식에서 풀이 과정의 빠진 단계를 채운다고 생각하고, 직선 $y=k(x+6)+8x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
+      "choices": [
+        "$-49$",
+        "$-51$",
+        "$-50$",
+        "$-48$",
+        "$-47$"
+      ],
+      "answer": 0,
+      "explanation": "$k$의 영향을 없애려면 $x+6=0$이다. 이때 $x=-6$, $y=-43$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "일차함수 · 항상 지나는 점 · 서술형 흐름",
+        "skills": [
+          "매개변수",
+          "불변 조건",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -331,30 +394,30 @@
       }
     },
     {
-      "id": 10,
-      "question": "두 직선 $y=6x+7$, $y=7x$의 교점의 $x$좌표는?",
+      "id": 12,
+      "question": "일차함수와 일차방정식에서 숨은 조건을 찾아, 직선 $y=k(x+7)+5x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$7$",
-        "$5$",
-        "$6$",
-        "$8$",
-        "$9$"
+        "$-37$",
+        "$-36$",
+        "$-35$",
+        "$-34$",
+        "$-33$"
       ],
-      "answer": 0,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 식을 같게 두면 $6x+7=7x$이므로 $x=7$이다.",
+      "answer": 2,
+      "explanation": "$k$의 영향을 없애려면 $x+7=0$이다. 이때 $x=-7$, $y=-28$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "두 직선의 교점 · 최고 수준/발전",
+        "typeTag": "일차함수 · 항상 지나는 점 · 숨은 조건",
         "skills": [
-          "연립방정식",
-          "교점",
-          "복합 추론"
+          "매개변수",
+          "불변 조건",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
         "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
+        "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
@@ -362,60 +425,60 @@
       }
     },
     {
-      "id": 11,
-      "question": "직선 $y=k(x+4)+4x+1$은 $k$의 값에 관계없이 항상 한 점을 지난다. 그 점의 $x+y$의 값은?",
+      "id": 13,
+      "question": "일차함수와 일차방정식에서 상황을 식으로 모델링하여, 직선 $y=k(x+9)+7x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-21$",
-        "$-20$",
-        "$-19$",
-        "$-18$",
-        "$-17$"
+        "$-69$",
+        "$-68$",
+        "$-66$",
+        "$-65$",
+        "$-67$"
       ],
-      "answer": 2,
-      "explanation": "$k$의 영향을 없애려면 $x+4=0$, 즉 $x=-4$이다. 이때 $y=4(-4)+1=-15$이므로 $x+y=-19$이다.",
+      "answer": 4,
+      "explanation": "$k$의 영향을 없애려면 $x+9=0$이다. 이때 $x=-9$, $y=-58$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "항상 지나는 점 · 개념 확인 연산",
+        "typeTag": "일차함수 · 항상 지나는 점 · 상황 모델링",
         "skills": [
           "매개변수",
           "불변 조건",
-          "핵심 공식 적용"
+          "모델링"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
       }
     },
     {
-      "id": 12,
-      "question": "$y=7x-6$에서 $x=4$일 때 $y$는?",
+      "id": 14,
+      "question": "일차함수와 일차방정식에서 조건을 변형해 적용하여, 직선 $y=k(x+6)+9x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$15$",
-        "$29$",
-        "$21$",
-        "$22$",
-        "$23$"
+        "$-55$",
+        "$-53$",
+        "$-54$",
+        "$-52$",
+        "$-51$"
       ],
-      "answer": 3,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 대입하면 $y=7\\times4-6=22$이다.",
+      "answer": 1,
+      "explanation": "$k$의 영향을 없애려면 $x+6=0$이다. 이때 $x=-6$, $y=-47$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "일차함수 값 · 대표 교과서 유형",
+        "typeTag": "일차함수 · 항상 지나는 점 · 변형 적용",
         "skills": [
-          "일차함수",
-          "대입",
-          "표준 풀이 적용"
+          "매개변수",
+          "불변 조건",
+          "변형"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -424,90 +487,28 @@
       }
     },
     {
-      "id": 13,
-      "question": "두 점 $(1,9)$, $(3,25)$를 지나는 직선의 기울기는?",
-      "choices": [
-        "$6$",
-        "$7$",
-        "$9$",
-        "$10$",
-        "$8$"
-      ],
-      "answer": 4,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 기울기는 $\\frac{25-9}{3-1}=8$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "기울기 구하기 · 기출 변형 핵심",
-        "skills": [
-          "두 점",
-          "기울기",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "linear"
-      }
-    },
-    {
-      "id": 14,
-      "question": "기울기가 $9$이고 점 $(1,7)$을 지나는 직선의 $y$절편은?",
-      "choices": [
-        "$-2$",
-        "$-4$",
-        "$-3$",
-        "$-1$",
-        "$0$"
-      ],
-      "answer": 0,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $y=9x+n$에 $(1,7)$를 대입하면 $n=-2$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "y절편 찾기 · 서술형 대비",
-        "skills": [
-          "직선의 식",
-          "절편",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "linear"
-      }
-    },
-    {
       "id": 15,
-      "question": "두 직선 $y=10x+10$, $y=11x$의 교점의 $x$좌표는?",
+      "question": "일차함수와 일차방정식에서 여러 조건을 종합하여, 직선 $y=k(x+8)+6x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$8$",
-        "$10$",
-        "$9$",
-        "$11$",
-        "$12$"
+        "$-53$",
+        "$-52$",
+        "$-50$",
+        "$-51$",
+        "$-49$"
       ],
-      "answer": 1,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 식을 같게 두면 $10x+10=11x$이므로 $x=10$이다.",
+      "answer": 3,
+      "explanation": "$k$의 영향을 없애려면 $x+8=0$이다. 이때 $x=-8$, $y=-43$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "두 직선의 교점 · 최고 수준/발전",
+        "typeTag": "일차함수 · 항상 지나는 점 · 종합 추론",
         "skills": [
-          "연립방정식",
-          "교점",
-          "복합 추론"
+          "매개변수",
+          "불변 조건",
+          "종합 추론"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
         "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
@@ -518,28 +519,28 @@
     },
     {
       "id": 16,
-      "question": "직선 $y=k(x+2)+2x+1$은 $k$의 값에 관계없이 항상 한 점을 지난다. 그 점의 $x+y$의 값은?",
+      "question": "일차함수와 일차방정식에서 같은 개념을 다른 수에 적용하여, 직선 $y=k(x+9)+9x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-7$",
-        "$-6$",
-        "$-4$",
-        "$-5$",
-        "$-3$"
+        "$-86$",
+        "$-88$",
+        "$-87$",
+        "$-85$",
+        "$-84$"
       ],
-      "answer": 3,
-      "explanation": "$k$의 영향을 없애려면 $x+2=0$, 즉 $x=-2$이다. 이때 $y=2(-2)+1=-3$이므로 $x+y=-5$이다.",
+      "answer": 0,
+      "explanation": "$k$의 영향을 없애려면 $x+9=0$이다. 이때 $x=-9$, $y=-77$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "항상 지나는 점 · 개념 확인 연산",
+        "typeTag": "일차함수 · 항상 지나는 점 · 개념 확인",
         "skills": [
           "매개변수",
           "불변 조건",
-          "핵심 공식 적용"
+          "정의 적용"
         ],
-        "typeVariant": "개념 확인 연산",
+        "typeVariant": "개념 확인",
         "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "개념 정의 직접 확인",
         "transformPattern": "개념·원리 직접 활용",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -549,28 +550,28 @@
     },
     {
       "id": 17,
-      "question": "$y=5x-9$에서 $x=6$일 때 $y$는?",
+      "question": "일차함수와 일차방정식에서 표준 풀이를 변형하여, 직선 $y=k(x+6)+6x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$16$",
-        "$26$",
-        "$20$",
-        "$22$",
-        "$21$"
+        "$-39$",
+        "$-38$",
+        "$-37$",
+        "$-36$",
+        "$-35$"
       ],
-      "answer": 4,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 대입하면 $y=5\\times6-9=21$이다.",
+      "answer": 2,
+      "explanation": "$k$의 영향을 없애려면 $x+6=0$이다. 이때 $x=-6$, $y=-31$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "일차함수 값 · 대표 교과서 유형",
+        "typeTag": "일차함수 · 항상 지나는 점 · 대표 풀이",
         "skills": [
-          "일차함수",
-          "대입",
-          "표준 풀이 적용"
+          "매개변수",
+          "불변 조건",
+          "표준 풀이"
         ],
-        "typeVariant": "대표 교과서 유형",
+        "typeVariant": "대표 풀이",
         "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -580,28 +581,28 @@
     },
     {
       "id": 18,
-      "question": "두 점 $(1,7)$, $(3,19)$를 지나는 직선의 기울기는?",
+      "question": "일차함수와 일차방정식에서 조건의 순서를 바꾸어 생각하며, 직선 $y=k(x+8)+8x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$6$",
-        "$4$",
-        "$5$",
-        "$7$",
-        "$8$"
+        "$-67$",
+        "$-66$",
+        "$-64$",
+        "$-63$",
+        "$-65$"
       ],
-      "answer": 0,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 기울기는 $\\frac{19-7}{3-1}=6$이다.",
+      "answer": 4,
+      "explanation": "$k$의 영향을 없애려면 $x+8=0$이다. 이때 $x=-8$, $y=-57$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "기울기 구하기 · 기출 변형 핵심",
+        "typeTag": "일차함수 · 항상 지나는 점 · 조건 해석",
         "skills": [
-          "두 점",
-          "기울기",
-          "조건 해석"
+          "매개변수",
+          "불변 조건",
+          "조건 선별"
         ],
-        "typeVariant": "기출 변형 핵심",
+        "typeVariant": "조건 해석",
         "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "실생활 문장제 독해",
         "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -611,30 +612,30 @@
     },
     {
       "id": 19,
-      "question": "기울기가 $7$이고 점 $(1,10)$을 지나는 직선의 $y$절편은?",
+      "question": "일차함수와 일차방정식에서 결과에서 원인을 되짚어, 직선 $y=k(x+5)+5x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$1$",
-        "$3$",
-        "$2$",
-        "$4$",
-        "$5$"
+        "$-27$",
+        "$-25$",
+        "$-26$",
+        "$-24$",
+        "$-23$"
       ],
       "answer": 1,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $y=7x+n$에 $(1,10)$를 대입하면 $n=3$이다.",
+      "explanation": "$k$의 영향을 없애려면 $x+5=0$이다. 이때 $x=-5$, $y=-20$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "y절편 찾기 · 서술형 대비",
+        "typeTag": "일차함수 · 항상 지나는 점 · 역추론",
         "skills": [
-          "직선의 식",
-          "절편",
-          "과정 점검"
+          "매개변수",
+          "불변 조건",
+          "역산"
         ],
-        "typeVariant": "서술형 대비",
+        "typeVariant": "역추론",
         "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -642,26 +643,26 @@
     },
     {
       "id": 20,
-      "question": "두 직선 $y=8x+8$, $y=9x$의 교점의 $x$좌표는?",
+      "question": "일차함수와 일차방정식에서 겹치는 경우를 제외하며, 직선 $y=k(x+6)+7x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$6$",
-        "$7$",
-        "$8$",
-        "$9$",
-        "$10$"
+        "$-43$",
+        "$-42$",
+        "$-40$",
+        "$-41$",
+        "$-39$"
       ],
-      "answer": 2,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 식을 같게 두면 $8x+8=9x$이므로 $x=8$이다.",
+      "answer": 3,
+      "explanation": "$k$의 영향을 없애려면 $x+6=0$이다. 이때 $x=-6$, $y=-35$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "두 직선의 교점 · 최고 수준/발전",
+        "typeTag": "일차함수 · 항상 지나는 점 · 경우 분류",
         "skills": [
-          "연립방정식",
-          "교점",
-          "복합 추론"
+          "매개변수",
+          "불변 조건",
+          "경우 나누기"
         ],
-        "typeVariant": "최고 수준/발전",
+        "typeVariant": "경우 분류",
         "typeVariantId": 5,
         "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
@@ -673,30 +674,30 @@
     },
     {
       "id": 21,
-      "question": "직선 $y=k(x+4)+5x+1$은 $k$의 값에 관계없이 항상 한 점을 지난다. 그 점의 $x+y$의 값은?",
+      "question": "일차함수와 일차방정식에서 자료 사이의 차이를 비교하여, 직선 $y=k(x+8)+9x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-25$",
-        "$-24$",
-        "$-22$",
-        "$-21$",
-        "$-23$"
+        "$-75$",
+        "$-77$",
+        "$-76$",
+        "$-74$",
+        "$-73$"
       ],
-      "answer": 4,
-      "explanation": "$k$의 영향을 없애려면 $x+4=0$, 즉 $x=-4$이다. 이때 $y=5(-4)+1=-19$이므로 $x+y=-23$이다.",
+      "answer": 0,
+      "explanation": "$k$의 영향을 없애려면 $x+8=0$이다. 이때 $x=-8$, $y=-67$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "항상 지나는 점 · 개념 확인 연산",
+        "typeTag": "일차함수 · 항상 지나는 점 · 자료 해석",
         "skills": [
           "매개변수",
           "불변 조건",
-          "핵심 공식 적용"
+          "자료 해석"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -704,30 +705,30 @@
     },
     {
       "id": 22,
-      "question": "$y=9x-7$에서 $x=4$일 때 $y$는?",
+      "question": "일차함수와 일차방정식에서 끝값과 경계값을 확인하여, 직선 $y=k(x+5)+6x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$29$",
-        "$20$",
-        "$38$",
-        "$28$",
-        "$30$"
+        "$-30$",
+        "$-29$",
+        "$-28$",
+        "$-27$",
+        "$-26$"
       ],
-      "answer": 0,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 대입하면 $y=9\\times4-7=29$이다.",
+      "answer": 2,
+      "explanation": "$k$의 영향을 없애려면 $x+5=0$이다. 이때 $x=-5$, $y=-23$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "일차함수 값 · 대표 교과서 유형",
+        "typeTag": "일차함수 · 항상 지나는 점 · 범위 판단",
         "skills": [
-          "일차함수",
-          "대입",
-          "표준 풀이 적용"
+          "매개변수",
+          "불변 조건",
+          "범위 해석"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
+        "transformPattern": "조건 및 구하는 값 변경",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -735,30 +736,30 @@
     },
     {
       "id": 23,
-      "question": "두 점 $(1,10)$, $(3,30)$를 지나는 직선의 기울기는?",
+      "question": "일차함수와 일차방정식에서 변하지 않는 값을 찾아, 직선 $y=k(x+6)+8x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$8$",
-        "$10$",
-        "$9$",
-        "$11$",
-        "$12$"
+        "$-52$",
+        "$-51$",
+        "$-49$",
+        "$-48$",
+        "$-50$"
       ],
-      "answer": 1,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 기울기는 $\\frac{30-10}{3-1}=10$이다.",
+      "answer": 4,
+      "explanation": "$k$의 영향을 없애려면 $x+6=0$이다. 이때 $x=-6$, $y=-44$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "기울기 구하기 · 기출 변형 핵심",
+        "typeTag": "일차함수 · 항상 지나는 점 · 매개변수",
         "skills": [
-          "두 점",
-          "기울기",
-          "조건 해석"
+          "매개변수",
+          "불변 조건",
+          "매개변수 추론"
         ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
@@ -766,28 +767,90 @@
     },
     {
       "id": 24,
-      "question": "기울기가 $5$이고 점 $(1,8)$을 지나는 직선의 $y$절편은?",
+      "question": "일차함수와 일차방정식에서 보기의 차이를 따져, 직선 $y=k(x+8)+5x+6$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$1$",
-        "$2$",
-        "$3$",
-        "$4$",
-        "$5$"
+        "$-44$",
+        "$-42$",
+        "$-43$",
+        "$-41$",
+        "$-40$"
       ],
-      "answer": 2,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $y=5x+n$에 $(1,8)$를 대입하면 $n=3$이다.",
+      "answer": 1,
+      "explanation": "$k$의 영향을 없애려면 $x+8=0$이다. 이때 $x=-8$, $y=-34$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "y절편 찾기 · 서술형 대비",
+        "typeTag": "일차함수 · 항상 지나는 점 · 비교 판단",
         "skills": [
-          "직선의 식",
-          "절편",
+          "매개변수",
+          "불변 조건",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 25,
+      "question": "일차함수와 일차방정식에서 중간 계산을 이용하여, 직선 $y=k(x+5)+7x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
+      "choices": [
+        "$-38$",
+        "$-37$",
+        "$-35$",
+        "$-36$",
+        "$-34$"
+      ],
+      "answer": 3,
+      "explanation": "$k$의 영향을 없애려면 $x+5=0$이다. 이때 $x=-5$, $y=-31$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "일차함수 · 항상 지나는 점 · 복합 계산",
+        "skills": [
+          "매개변수",
+          "불변 조건",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "킬러",
+        "family": "linear"
+      }
+    },
+    {
+      "id": 26,
+      "question": "일차함수와 일차방정식에서 계산 실수를 점검하며, 직선 $y=k(x+7)+9x+6$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
+      "choices": [
+        "$-64$",
+        "$-66$",
+        "$-65$",
+        "$-63$",
+        "$-62$"
+      ],
+      "answer": 0,
+      "explanation": "$k$의 영향을 없애려면 $x+7=0$이다. 이때 $x=-7$, $y=-57$이다.",
+      "ebs": {
+        "role": "최고 수준 발전",
+        "steps": 6,
+        "typeTag": "일차함수 · 항상 지나는 점 · 서술형 흐름",
+        "skills": [
+          "매개변수",
+          "불변 조건",
           "과정 점검"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "풀이 과정 단계화",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -796,30 +859,30 @@
       }
     },
     {
-      "id": 25,
-      "question": "두 직선 $y=6x+6$, $y=7x$의 교점의 $x$좌표는?",
+      "id": 27,
+      "question": "일차함수와 일차방정식에서 문장에 숨은 제한을 반영하여, 직선 $y=k(x+8)+6x+4$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$4$",
-        "$5$",
-        "$7$",
-        "$6$",
-        "$8$"
+        "$-54$",
+        "$-53$",
+        "$-52$",
+        "$-51$",
+        "$-50$"
       ],
-      "answer": 3,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 식을 같게 두면 $6x+6=7x$이므로 $x=6$이다.",
+      "answer": 2,
+      "explanation": "$k$의 영향을 없애려면 $x+8=0$이다. 이때 $x=-8$, $y=-44$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "두 직선의 교점 · 최고 수준/발전",
+        "typeTag": "일차함수 · 항상 지나는 점 · 숨은 조건",
         "skills": [
-          "연립방정식",
-          "교점",
-          "복합 추론"
+          "매개변수",
+          "불변 조건",
+          "숨은 조건"
         ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
         "buildUpStage": "최고 수준/발전 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
+        "schoolExamType": "오류 찾기 및 과정 교정",
         "transformPattern": "조건의 강화·완화",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
@@ -827,60 +890,60 @@
       }
     },
     {
-      "id": 26,
-      "question": "직선 $y=k(x+2)+3x+1$은 $k$의 값에 관계없이 항상 한 점을 지난다. 그 점의 $x+y$의 값은?",
+      "id": 28,
+      "question": "일차함수와 일차방정식에서 실생활 조건을 식으로 바꾸어, 직선 $y=k(x+5)+8x+6$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$-7$",
-        "$-9$",
-        "$-8$",
-        "$-6$",
-        "$-5$"
+        "$-41$",
+        "$-40$",
+        "$-38$",
+        "$-37$",
+        "$-39$"
       ],
-      "answer": 0,
-      "explanation": "$k$의 영향을 없애려면 $x+2=0$, 즉 $x=-2$이다. 이때 $y=3(-2)+1=-5$이므로 $x+y=-7$이다.",
+      "answer": 4,
+      "explanation": "$k$의 영향을 없애려면 $x+5=0$이다. 이때 $x=-5$, $y=-34$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "항상 지나는 점 · 개념 확인 연산",
+        "typeTag": "일차함수 · 항상 지나는 점 · 상황 모델링",
         "skills": [
           "매개변수",
           "불변 조건",
-          "핵심 공식 적용"
+          "모델링"
         ],
-        "typeVariant": "개념 확인 연산",
-        "typeVariantId": 1,
-        "buildUpStage": "개념 확인 연산 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "최고 수준/발전 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
         "sourceFormat": "EBS 단계형 5지선다",
         "difficulty": "킬러",
         "family": "linear"
       }
     },
     {
-      "id": 27,
-      "question": "$y=7x-10$에서 $x=6$일 때 $y$는?",
+      "id": 29,
+      "question": "일차함수와 일차방정식에서 질문한 대상을 바꾸어 생각하며, 직선 $y=k(x+7)+5x+7$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$25$",
-        "$32$",
-        "$39$",
-        "$31$",
-        "$33$"
+        "$-37$",
+        "$-35$",
+        "$-36$",
+        "$-34$",
+        "$-33$"
       ],
       "answer": 1,
-      "explanation": "표준 풀이 틀에 맞춰 조건을 정리한다. 대입하면 $y=7\\times6-10=32$이다.",
+      "explanation": "$k$의 영향을 없애려면 $x+7=0$이다. 이때 $x=-7$, $y=-28$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "일차함수 값 · 대표 교과서 유형",
+        "typeTag": "일차함수 · 항상 지나는 점 · 변형 적용",
         "skills": [
-          "일차함수",
-          "대입",
-          "표준 풀이 적용"
+          "매개변수",
+          "불변 조건",
+          "변형"
         ],
-        "typeVariant": "대표 교과서 유형",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "대표 표준 문항",
         "transformPattern": "문항의 축소·확대·변형",
         "sourceFormat": "EBS 단계형 5지선다",
@@ -889,90 +952,28 @@
       }
     },
     {
-      "id": 28,
-      "question": "두 점 $(1,8)$, $(3,24)$를 지나는 직선의 기울기는?",
+      "id": 30,
+      "question": "일차함수와 일차방정식에서 마지막 조건까지 함께 고려하여, 직선 $y=k(x+8)+7x+5$는 $k$의 값과 관계없이 항상 한 점을 지난다. 그 점의 $x+y$는?",
       "choices": [
-        "$6$",
-        "$7$",
-        "$8$",
-        "$9$",
-        "$10$"
-      ],
-      "answer": 2,
-      "explanation": "문장 속 필요한 조건을 골라 수식으로 바꾼다. 기울기는 $\\frac{24-8}{3-1}=8$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "기울기 구하기 · 기출 변형 핵심",
-        "skills": [
-          "두 점",
-          "기울기",
-          "조건 해석"
-        ],
-        "typeVariant": "기출 변형 핵심",
-        "typeVariantId": 3,
-        "buildUpStage": "기출 변형 핵심 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "linear"
-      }
-    },
-    {
-      "id": 29,
-      "question": "기울기가 $9$이고 점 $(1,6)$을 지나는 직선의 $y$절편은?",
-      "choices": [
-        "$-5$",
-        "$-4$",
-        "$-2$",
-        "$-3$",
-        "$-1$"
+        "$-61$",
+        "$-60$",
+        "$-58$",
+        "$-59$",
+        "$-57$"
       ],
       "answer": 3,
-      "explanation": "계산 과정에서 놓치기 쉬운 조건과 부호를 단계별로 확인한다. $y=9x+n$에 $(1,6)$를 대입하면 $n=-3$이다.",
+      "explanation": "$k$의 영향을 없애려면 $x+8=0$이다. 이때 $x=-8$, $y=-51$이다.",
       "ebs": {
         "role": "최고 수준 발전",
         "steps": 6,
-        "typeTag": "y절편 찾기 · 서술형 대비",
+        "typeTag": "일차함수 · 항상 지나는 점 · 종합 추론",
         "skills": [
-          "직선의 식",
-          "절편",
-          "과정 점검"
+          "매개변수",
+          "불변 조건",
+          "종합 추론"
         ],
-        "typeVariant": "서술형 대비",
-        "typeVariantId": 4,
-        "buildUpStage": "서술형 대비 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "킬러",
-        "family": "linear"
-      }
-    },
-    {
-      "id": 30,
-      "question": "두 직선 $y=10x+9$, $y=11x$의 교점의 $x$좌표는?",
-      "choices": [
-        "$7$",
-        "$8$",
-        "$10$",
-        "$11$",
-        "$9$"
-      ],
-      "answer": 4,
-      "explanation": "조건을 강화하거나 완화했을 때도 성립하는 핵심 관계를 찾는다. 두 식을 같게 두면 $10x+9=11x$이므로 $x=9$이다.",
-      "ebs": {
-        "role": "최고 수준 발전",
-        "steps": 6,
-        "typeTag": "두 직선의 교점 · 최고 수준/발전",
-        "skills": [
-          "연립방정식",
-          "교점",
-          "복합 추론"
-        ],
-        "typeVariant": "최고 수준/발전",
-        "typeVariantId": 5,
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
         "buildUpStage": "최고 수준/발전 유형",
         "schoolExamType": "말장난 방지 보기 고르기",
         "transformPattern": "조건의 강화·완화",
