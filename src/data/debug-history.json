@@ -246,5 +246,13 @@
     "description": "문제풀이 수학 문제집 유형 다양화. 각 단원별 기본/유형별/심화/킬러 묶음이 최소 20개 출제유형을 갖도록 88개 파일을 재생성하고, 단원별 유형 수 감사 규칙 추가",
     "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/lib/updates.ts"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-032",
+    "date": "2026-06-19",
+    "category": "content_update",
+    "description": "메인 업데이트 내역에서 문제풀이 품질검수·감사 스크립트·버그 수정 등 내부 운영성 항목 제거. 사용자에게 보이는 업데이트는 학습자가 체감할 기능 설명 중심으로 정리",
+    "files": ["src/lib/updates.ts", "src/data/debug-history.json"],
+    "author": "codex"
   }
 ]
