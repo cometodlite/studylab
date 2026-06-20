@@ -127,7 +127,14 @@ export default function SettingsPage() {
 
       {/* 프로필 설정 탭 */}
       {tab === 'profile' && (
-        <div className="max-w-lg">
+        <div className="max-w-lg space-y-4">
+          <div className="bg-amber-50 border border-amber-100 rounded-xl p-5 text-sm text-amber-900">
+            <h2 className="font-bold text-gray-800 mb-2">StudyLab 설명</h2>
+            <p className="leading-6">
+              StudyLab은 여러분이 어려운 문제도 잘 맞출 수 있도록 만들어진 곳이 아닌, 기초 개념 학습을 도와주는 곳입니다. 문제집 구매와 푸는 것은 필수! StudyLab에 너무 의존하지 말아주세요!
+            </p>
+          </div>
+
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 space-y-6">
             {/* 학교 입력 */}
             <div>

@@ -270,5 +270,13 @@
     "description": "문제풀이 화면 문항 본문에서 EBS 분류 라벨, 유형 번호, 풀이 지시문 노출 제거. 유형/빌드업 정보는 ebs 메타데이터에만 유지하고, 감사 스크립트가 내부 스캐폴딩 문구 노출을 배포 차단 조건으로 검사하도록 보강",
     "files": ["src/data/math/*.json", "scripts/build-ebs-practice-exams.mjs", "scripts/audit-practice-exams.mjs", "src/data/debug-history.json"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-035",
+    "date": "2026-06-20",
+    "category": "settings_content",
+    "description": "설정 페이지 프로필 설정 탭에 StudyLab 설명 안내 추가. StudyLab은 어려운 문제 정답 보장보다 기초 개념 학습 보조에 초점을 둔 플랫폼이며, 문제집 구매와 풀이가 필수라는 안내 문구를 사용자에게 표시",
+    "files": ["src/app/(protected)/settings/page.tsx", "src/data/debug-history.json"],
+    "author": "codex"
   }
 ]
