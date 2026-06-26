@@ -180,7 +180,7 @@ function unique(values) {
   return result;
 }
 
-function makeChoices(correct, distractors, id) {
+function makeChoices(correct, distractors, answerSlot) {
   const clean = unique([correct, ...distractors].map(String)).slice(0, 5);
   const numericCorrect = Number(correct);
   let pad = 1;
@@ -192,7 +192,7 @@ function makeChoices(correct, distractors, id) {
     pad += 1;
   }
 
-  const answer = [0, 2, 4, 1, 3][(id - 1) % 5];
+  const answer = Number.isInteger(answerSlot) ? answerSlot % 5 : hashText(String(correct)) % 5;
   const choices = clean.filter(value => value !== String(correct)).slice(0, 4);
   choices.splice(answer, 0, String(correct));
   return { choices: choices.map(textChoice), answer };
@@ -237,7 +237,7 @@ function q(ctx, typeTag, skills, question, correct, distractors, explanation) {
   distractors = transformed.distractors;
   explanation = transformed.explanation;
 
-  const { choices, answer } = makeChoices(String(correct), distractors, ctx.displayId ?? ctx.id);
+  const { choices, answer } = makeChoices(String(correct), distractors, ctx.answerSlot);
   const profile = DIFFICULTY_PROFILE[ctx.difficulty];
   const familyLabel = FAMILY_LABELS[ctx.family] ?? '수학';
   return {
@@ -280,6 +280,21 @@ function hashText(text) {
     hash = (hash * 33 + char.charCodeAt(0)) % 1000003;
   }
   return hash;
+}
+
+function nextSeed(seed) {
+  return (seed * 48271) % 2147483647;
+}
+
+function answerSlotsForExam(seed, count) {
+  const slots = Array.from({ length: count }, (_, index) => index % 5);
+  let state = seed || 1;
+  for (let index = slots.length - 1; index > 0; index -= 1) {
+    state = nextSeed(state);
+    const swapIndex = state % (index + 1);
+    [slots[index], slots[swapIndex]] = [slots[swapIndex], slots[index]];
+  }
+  return slots;
 }
 
 function titleCore(title) {
@@ -1463,6 +1478,7 @@ function buildExam(file) {
   const generator = GENERATORS[family] ?? algebraQuestion;
   const core = titleCore(current.title);
   const seed = hashText(`${current.id}:${current.grade}:${current.unit}:${current.difficulty}`);
+  const answerSlots = answerSlotsForExam(seed, 30);
 
   const localQuestionTexts = new Set();
   const questions = Array.from({ length: 30 }, (_, index) => {
@@ -1473,6 +1489,7 @@ function buildExam(file) {
       const ctx = {
         id: attemptSeed + index + 1 + variant.variantNo * 37 + Math.floor(index / TYPE_VARIANTS.length) * 101,
         displayId: index + 1,
+        answerSlot: answerSlots[index],
         difficulty: current.difficulty,
         family,
         unit: current.unit,

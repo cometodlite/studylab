@@ -278,5 +278,13 @@
     "description": "설정 페이지 프로필 설정 탭에 StudyLab 설명 안내 추가. StudyLab은 어려운 문제 정답 보장보다 기초 개념 학습 보조에 초점을 둔 플랫폼이며, 문제집 구매와 풀이가 필수라는 안내 문구를 사용자에게 표시",
     "files": ["src/app/(protected)/settings/page.tsx", "src/data/debug-history.json"],
     "author": "codex"
+  },
+  {
+    "id": "dbg-036",
+    "date": "2026-06-26",
+    "category": "content_quality",
+    "description": "수학 문제풀이 88개 문제집의 정답 위치 고정 패턴 제거. 생성 스크립트가 파일별 시드 기반으로 정답 슬롯을 섞도록 변경해 모든 파일이 동일한 1-3-5-2-4 반복 패턴을 공유하지 않게 하고, 파일별 정답 위치 분포는 각 위치 6문항씩 유지",
+    "files": ["scripts/build-ebs-practice-exams.mjs", "src/data/math/*.json", "src/data/debug-history.json"],
+    "author": "codex"
   }
 ]
