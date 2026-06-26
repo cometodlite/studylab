@@ -63,6 +63,23 @@ const ebsDescriptionPhrases = [
   'EBS 킬러형: 매개변수, 숨은 조건, 역추론을 함께 사용합니다.',
 ];
 
+const questionEndings = [
+  '보기에서 알맞은 값을 고르시오.',
+  '계산 결과로 옳은 것은?',
+  '다음 중 정답을 고르시오.',
+  '조건을 만족하는 값을 고르시오.',
+  '풀이 결과와 일치하는 것은?',
+  '가장 알맞은 값을 고르시오.',
+  '보기 중 옳은 값을 고르시오.',
+  '정리한 결과를 고르시오.',
+  '답으로 알맞은 것은?',
+  '마지막 값으로 옳은 것은?',
+  '조건에 맞는 답을 고르시오.',
+  '문제 상황에 맞는 값을 고르시오.',
+  '같은 값을 나타내는 것을 고르시오.',
+  '종합하면 알맞은 답은?',
+];
+
 const middleBuildUpStages = new Set([
   '개념 확인 연산 유형',
   '대표 교과서 유형',
@@ -108,6 +125,17 @@ function scanJsonFiles(dir) {
 
 function normalizeText(value) {
   return String(value ?? '').replace(/\s+/g, ' ').trim();
+}
+
+function stripQuestionEnding(value) {
+  let text = normalizeText(value);
+  for (const ending of questionEndings) {
+    if (text.endsWith(ending)) {
+      text = text.slice(0, -ending.length).trim();
+      break;
+    }
+  }
+  return text;
 }
 
 function unique(values) {
@@ -231,10 +259,11 @@ function auditExam(filePath) {
     }
 
     const questionText = normalizeText(question?.question);
+    const questionBody = stripQuestionEnding(questionText);
     if (questionText) {
-      const textRefs = questionTextCounts.get(questionText) ?? [];
+      const textRefs = questionTextCounts.get(questionBody) ?? [];
       textRefs.push(qId);
-      questionTextCounts.set(questionText, textRefs);
+      questionTextCounts.set(questionBody, textRefs);
 
       const questionShape = normalizeQuestionShape(questionText);
       const shapeRefs = questionShapeCounts.get(questionShape) ?? [];
@@ -354,7 +383,7 @@ for (const filePath of scanJsonFiles(dataDir)) {
   if (!report.parseError) {
     const exam = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     for (const question of exam.questions) {
-      const key = normalizeText(question?.question);
+      const key = stripQuestionEnding(question?.question);
       if (!key) continue;
       const current = reportsByQuestionText.get(key) ?? [];
       current.push({
@@ -404,7 +433,8 @@ if (highRiskReports.length > 0) {
     const status = qualityMap[report.id]?.status ?? 'ok';
     const issueText = report.issueQuestionIds.length > 0 ? `issues Q${report.issueQuestionIds.join(',')}` : 'no issue ids';
     const ebsText = report.ebsProblems.length > 0 ? `, ebs ${report.ebsProblems.length}` : '';
-    console.log(`- [${status}] ${report.id} (${report.relativePath}) - ${issueText}, answer0 ${report.answerIndex0Rate}%${ebsText}`);
+    const firstEbsProblem = report.ebsProblems[0] ? `; first: ${report.ebsProblems[0]}` : '';
+    console.log(`- [${status}] ${report.id} (${report.relativePath}) - ${issueText}, answer0 ${report.answerIndex0Rate}%${ebsText}${firstEbsProblem}`);
   }
 }
 

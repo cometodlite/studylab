@@ -93,6 +93,24 @@ const HIGH_SCHOOL_EBS_REFERENCE = {
   ],
 };
 
+const QUESTION_ENDINGS = [
+  '',
+  '보기에서 알맞은 값을 고르시오.',
+  '계산 결과로 옳은 것은?',
+  '다음 중 정답을 고르시오.',
+  '조건을 만족하는 값을 고르시오.',
+  '풀이 결과와 일치하는 것은?',
+  '가장 알맞은 값을 고르시오.',
+  '보기 중 옳은 값을 고르시오.',
+  '정리한 결과를 고르시오.',
+  '답으로 알맞은 것은?',
+  '마지막 값으로 옳은 것은?',
+  '조건에 맞는 답을 고르시오.',
+  '문제 상황에 맞는 값을 고르시오.',
+  '같은 값을 나타내는 것을 고르시오.',
+  '종합하면 알맞은 답은?',
+];
+
 const FILE_FAMILIES = [
   [/factorization/, 'factorization'],
   [/rational/, 'rational'],
@@ -203,27 +221,10 @@ function naturalPrompt(ctx, question) {
 }
 
 function transformNumericQuestion(ctx, question, correct, distractors, explanation) {
-  const endings = [
-    '',
-    ' 보기에서 알맞은 값을 고르시오.',
-    ' 계산 결과로 옳은 것은?',
-    ' 다음 중 정답을 고르시오.',
-    ' 조건을 만족하는 값을 고르시오.',
-    ' 풀이 결과와 일치하는 것은?',
-    ' 가장 알맞은 값을 고르시오.',
-    ' 보기 중 옳은 값을 고르시오.',
-    ' 정리한 결과를 고르시오.',
-    ' 답으로 알맞은 것은?',
-    ' 마지막 값으로 옳은 것은?',
-    ' 조건에 맞는 답을 고르시오.',
-    ' 문제 상황에 맞는 값을 고르시오.',
-    ' 같은 값을 나타내는 것을 고르시오.',
-    ' 종합하면 알맞은 답은?',
-  ];
-  const ending = endings[(ctx.variant.variantNo - 1) % endings.length];
+  const ending = QUESTION_ENDINGS[(ctx.variant.variantNo - 1) % QUESTION_ENDINGS.length];
 
   return {
-    question: `${question}${ending}`,
+    question: ending ? `${question} ${ending}` : question,
     correct,
     distractors,
     explanation,
@@ -322,8 +323,8 @@ function variantMode(ctx, count = 4) {
 function factorizationQuestion(ctx) {
   const { a, b, d, level } = nums(ctx);
   const mode = variantMode(ctx);
-  const p = 1 + ((ctx.id + level) % 3);
-  const r = 1 + ((ctx.id + ctx.round) % 3);
+  const p = 1 + ((ctx.id + level) % 4);
+  const r = 1 + ((Math.floor(ctx.id / 3) + ctx.round) % (ctx.difficulty === '기본' ? 3 : 2));
   if (ctx.difficulty === '기본') {
     const n = 2 ** p * 3 ** r;
     if (mode === 1) {
@@ -392,7 +393,7 @@ function factorizationQuestion(ctx) {
       const value = 2 ** cubeNeed * 3 ** cubeNeed3 * 5 ** 2;
       return q(ctx, '완전세제곱수 조건', ['소인수분해', '지수 조건'],
         `${math(n)}에 가장 작은 자연수 ${math('m')}을 곱해 완전세제곱수가 되게 하려고 한다. ${math('m')}은?`,
-        value, [Math.max(1, value / 2), value * 2, value + 3, answer],
+        value, [Math.max(1, value / 2), Math.max(1, value - 3), value + 3, answer],
         `완전세제곱수는 모든 소인수의 지수가 ${math(3)}의 배수여야 한다.`);
     }
     if (mode === 2) {
@@ -448,7 +449,7 @@ function factorizationQuestion(ctx) {
 function rationalQuestion(ctx) {
   const { a, b, c, level } = nums(ctx);
   if (ctx.difficulty === '기본') {
-    const den = [8, 12, 20, 24, 25, 28, 40][ctx.id % 7];
+    const den = 8 + ((ctx.id * 37 + ctx.seed + ctx.round * 11) % 240);
     const num = 1 + ((ctx.seed + ctx.id) % (den - 1));
     const reducedDen = den / gcd(num, den);
     const answer = strip25(reducedDen) === 1 ? '유한소수' : '순환소수';
@@ -458,17 +459,18 @@ function rationalQuestion(ctx) {
       `기약분수의 분모에 ${math(2)}, ${math(5)}가 아닌 소인수가 남는지 확인하면 된다.`);
   }
   if (ctx.difficulty === '유형별') {
-    const pre = 1 + (a % 7);
-    const rep = 2 + (b % 7);
-    const numerator = pre * 9 + rep;
-    const answer = frac(numerator, 90);
+    const pre = 1 + ((ctx.id + a + ctx.seed) % 9);
+    const mid = (Math.floor(ctx.id / 7) + ctx.seed + ctx.round) % 10;
+    const rep = 1 + ((Math.floor(ctx.id / 5) + b + ctx.round) % 9);
+    const numerator = (pre * 100 + mid * 10 + rep) - (pre * 10 + mid);
+    const answer = frac(numerator, 900);
     return q(ctx, '순환소수 분수화', ['순환소수', '분수 변환'],
-      `${math(`0.${pre}\\dot{${rep}}`)}를 기약분수로 나타내면?`,
-      answer, [frac(numerator + 1, 90), frac(numerator, 99), frac(numerator - 1, 90), frac(numerator, 900)],
-      `${math(`0.${pre}\\dot{${rep}}=\\frac{${pre}${rep}-${pre}}{90}=\\frac{${numerator}}{90}`)}이다.`);
+      `${math(`0.${pre}${mid}\\dot{${rep}}`)}를 기약분수로 나타내면?`,
+      answer, [frac(numerator + 1, 900), frac(numerator, 990), frac(numerator - 1, 900), frac(numerator, 90)],
+      `${math(`0.${pre}${mid}\\dot{${rep}}=\\frac{${pre}${mid}${rep}-${pre}${mid}}{900}=\\frac{${numerator}}{900}`)}이다.`);
   }
   if (ctx.difficulty === '심화') {
-    const den = [18, 28, 42, 44, 63, 72][ctx.id % 6] + level;
+    const den = 18 + ((ctx.id * 41 + ctx.seed + level + ctx.round * 13) % 300);
     const need = strip25(den);
     return q(ctx, '유한소수 조건 역산', ['약분 조건', '분모 소인수'],
       `분수 ${math(`\\frac{x}{${den}}`)}가 유한소수가 되도록 하는 가장 작은 자연수 ${math('x')}는?`,
@@ -476,7 +478,7 @@ function rationalQuestion(ctx) {
       `분모에서 ${math(2)}, ${math(5)}가 아닌 소인수가 약분되어야 하므로 그 부분을 ${math('x')}가 포함해야 한다.`);
   }
   const n = a + c;
-  const den = [6, 7, 11, 13, 14][ctx.id % 5];
+  const den = 6 + ((ctx.id * 29 + ctx.seed + ctx.round * 17) % 150);
   const count = Math.floor((n + 20) / den) - Math.floor(n / den);
   return q(ctx, '정수 조건 범위 추론', ['유리수', '정수 조건', '범위'],
     `${math(`${n}<\\frac{k}{${den}}\\le ${n + 20}`)}을 만족하는 자연수 ${math('k')} 중 ${math(den)}의 배수인 것은 몇 개인가?`,
@@ -485,7 +487,14 @@ function rationalQuestion(ctx) {
 }
 
 function algebraQuestion(ctx) {
-  const { a, b, c, d } = nums(ctx);
+  let { a, b, c, d } = nums(ctx);
+  const offset = ctx.seed % 17;
+  const level = { '기본': 0, '유형별': 1, '심화': 2, '킬러': 3 }[ctx.difficulty] ?? 0;
+  const boost = Math.min(level, 2);
+  a = 2 + ((ctx.id + offset) % 9) + boost;
+  b = 2 + ((Math.floor(ctx.id / 3) + offset) % 9) + boost;
+  c = 2 + ((Math.floor(ctx.id / 7) + offset) % 9) + boost;
+  d = 2 + ((Math.floor(ctx.id / 11) + offset) % 9) + boost;
   const mode = variantMode(ctx);
   if (ctx.difficulty === '기본') {
     if (mode === 1) {
@@ -572,8 +581,8 @@ function algebraQuestion(ctx) {
       answer, [answer - 2, answer + 2, a + b, a * b],
       `전개하면 ${math(`2(${a}+${b})x+${a * a - b * b}`)}이므로 계수는 ${math(answer)}이다.`);
   }
-  const xVal = 10 + ((ctx.id + ctx.variant.variantNo) % 5);
-  const yVal = 4 + ((ctx.round + ctx.variant.variantNo) % 4);
+  const xVal = 6 + ((ctx.id + ctx.variant.variantNo + ctx.seed) % 13);
+  const yVal = 2 + ((Math.floor(ctx.id / 5) + ctx.round + ctx.variant.variantNo) % 8);
   const sum = xVal + yVal;
   const product = xVal * yVal;
   const diff = xVal - yVal;
@@ -840,15 +849,19 @@ function linearQuestion(ctx) {
 }
 
 function radicalQuestion(ctx) {
-  const { a, b } = nums(ctx);
+  let { a, b } = nums(ctx);
+  const offset = ctx.seed % 29;
+  const plainRoot = 2 + ((ctx.id + offset) % 28);
+  a = 2 + ((ctx.id + offset) % 8);
+  b = 2 + ((Math.floor(ctx.id / 5) + offset) % 10);
   const mode = variantMode(ctx);
   const sf = [2, 3, 5, 6, 7, 10][ctx.id % 6];
   if (ctx.difficulty === '기본') {
     if (mode === 1) {
       return q(ctx, '제곱근 값 확인', ['제곱근', '제곱수'],
-        `${math(`\\sqrt{${a * a}}`)}의 값은?`,
-        a, [a - 2, a - 1, a + 1, a * a],
-        `양의 제곱근을 구하면 ${math(a)}이다.`);
+        `${math(`\\sqrt{${plainRoot * plainRoot}}`)}의 값은?`,
+        plainRoot, [plainRoot - 2, plainRoot - 1, plainRoot + 1, plainRoot * plainRoot],
+        `양의 제곱근을 구하면 ${math(plainRoot)}이다.`);
     }
     if (mode === 2) {
       return q(ctx, '근호 밖 인수', ['제곱근', '근호 정리'],
@@ -858,9 +871,9 @@ function radicalQuestion(ctx) {
     }
     if (mode === 3) {
       return q(ctx, '제곱근 비교', ['제곱근', '대소 비교'],
-        `${math(`\\sqrt{${a * a}}`)}와 ${math(`\\sqrt{${(a + 1) * (a + 1)}}`)}의 차는?`,
-        1, [a, a + 1, 2, Math.max(1, a - 1)],
-        `각각 ${math(a)}, ${math(a + 1)}이므로 차는 ${math(1)}이다.`);
+        `${math(`\\sqrt{${plainRoot * plainRoot}}`)}와 ${math(`\\sqrt{${(plainRoot + 1) * (plainRoot + 1)}}`)}의 차는?`,
+        1, [plainRoot, plainRoot + 1, 2, Math.max(1, plainRoot - 1)],
+        `각각 ${math(plainRoot)}, ${math(plainRoot + 1)}이므로 차는 ${math(1)}이다.`);
     }
     return q(ctx, '제곱근 간단히', ['제곱근', '근호 밖으로 빼기'],
       `${math(`\\sqrt{${a * a * sf}}`)}을 간단히 하면?`,
@@ -922,7 +935,7 @@ function radicalQuestion(ctx) {
       answer, [answer - 2, answer - 1, answer + 1, a * a + b],
       `합차공식으로 ${math(`${a * a}-${b}=${answer}`)}이다.`);
   }
-  const small = 2 + (ctx.id % 4);
+  const small = 2 + ((ctx.id + offset) % 8);
   const radicand = sf * small * small;
   const answer = squareFreePart(radicand);
   if (mode === 1) {
@@ -953,7 +966,10 @@ function radicalQuestion(ctx) {
 }
 
 function quadraticEquationQuestion(ctx) {
-  const { a, c } = nums(ctx);
+  let { a, c } = nums(ctx);
+  const offset = ctx.seed % 23;
+  a = 2 + ((ctx.id + offset) % 16);
+  c = 1 + ((Math.floor(ctx.id / 5) + ctx.round + offset) % 10);
   const mode = variantMode(ctx);
   const r1 = a;
   const r2 = a + c;
@@ -1275,7 +1291,7 @@ function trigonometryQuestion(ctx) {
     const answer = frac(x * y, z);
     return q(ctx, '투영 길이 역추론', ['삼각비', '투영'],
       `길이가 ${math(y)}인 선분이 한 직선과 이루는 각의 사인값이 ${math(`\\frac{${x}}{${z}}`)}일 때, 그 직선에 수직인 방향의 성분 길이는?`,
-      answer, [x, y, z, frac(y * z, x)],
+      answer, [x, y, z, frac(y * z, x * 2)],
       `수직 성분은 전체 길이에 사인값을 곱한다.`);
   }
   if (mode === 3) {
@@ -1294,9 +1310,14 @@ function trigonometryQuestion(ctx) {
 }
 
 function circleQuestion(ctx) {
-  const { a, b, c, d } = nums(ctx);
+  let { a, b, c, d } = nums(ctx);
+  const offset = ctx.seed % 19;
+  a = 3 + ((ctx.id + offset) % 40);
+  b = 2 + ((Math.floor(ctx.id / 3) + offset) % 40);
+  c = 2 + ((Math.floor(ctx.id / 5) + ctx.round + offset) % 12);
+  d = 2 + ((Math.floor(ctx.id / 7) + ctx.variant.variantNo + offset) % 12);
   if (ctx.difficulty === '기본') {
-    const angle = 40 + ((ctx.id + c) % 20) * 4;
+    const angle = 30 + ((ctx.id * 7 + c + ctx.seed) % 70) * 2;
     return q(ctx, '원주각 계산', ['중심각', '원주각'],
       `같은 호에 대한 중심각이 ${math(`${angle}^\\circ`)}일 때 원주각은?`,
       `${angle / 2}^\\circ`, [`${angle}^\\circ`, `${angle / 2 + 10}^\\circ`, `${angle - 10}^\\circ`, `${90 - angle / 2}^\\circ`],
@@ -1309,7 +1330,7 @@ function circleQuestion(ctx) {
       `한 외부점에서 그은 두 접선의 길이는 같다.`);
   }
   if (ctx.difficulty === '심화') {
-    const angle = 70 + ((ctx.id + d) % 10) * 5;
+    const angle = 30 + ((ctx.id * 7 + d + ctx.seed) % 61) * 2;
     const answer = 180 - angle;
     return q(ctx, '내접사각형 대각', ['내접사각형', '대각'],
       `원에 내접하는 사각형에서 한 각이 ${math(`${angle}^\\circ`)}일 때 그 대각은?`,
@@ -1327,7 +1348,12 @@ function circleQuestion(ctx) {
 }
 
 function statisticsQuestion(ctx) {
-  const { a, b, c, d } = nums(ctx);
+  let { a, b, c, d } = nums(ctx);
+  const offset = ctx.seed % 23;
+  a = 3 + ((ctx.id + offset) % 18);
+  b = 2 + ((Math.floor(ctx.id / 3) + offset) % 12);
+  c = 1 + ((Math.floor(ctx.id / 5) + ctx.round + offset) % 8);
+  d = 2 + ((Math.floor(ctx.id / 7) + ctx.variant.variantNo + offset) % 8);
   const mode = variantMode(ctx);
   if (ctx.difficulty === '기본') {
     const data = [a, a + 2, a + 4];
@@ -1466,8 +1492,19 @@ const GENERATORS = {
 
 const generatedQuestionTexts = new Set();
 
+function stripQuestionEnding(question) {
+  let text = String(question ?? '').replace(/\s+/g, ' ').trim();
+  for (const ending of QUESTION_ENDINGS.filter(Boolean)) {
+    if (text.endsWith(ending)) {
+      text = text.slice(0, -ending.length).trim();
+      break;
+    }
+  }
+  return text;
+}
+
 function normalizeGeneratedQuestion(question) {
-  return String(question ?? '').replace(/\s+/g, ' ').trim();
+  return stripQuestionEnding(question);
 }
 
 function buildExam(file) {

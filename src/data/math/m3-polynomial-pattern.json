@@ -54,16 +54,16 @@
   "questions": [
     {
       "id": 1,
-      "question": "$(3x+3)(2x+6)$을 전개했을 때 $x$의 계수는?",
+      "question": "$(6x+7)(9x+11)$을 전개했을 때 $x$의 계수는?",
       "choices": [
-        "$21$",
-        "$26$",
-        "$6$",
-        "$18$",
-        "$24$"
+        "$123$",
+        "$138$",
+        "$54$",
+        "$77$",
+        "$129$"
       ],
       "answer": 4,
-      "explanation": "$x$항은 $18x$와 $6x$에서 나오므로 계수는 $24$이다.",
+      "explanation": "$x$항은 $66x$와 $63x$에서 나오므로 계수는 $129$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -85,16 +85,16 @@
     },
     {
       "id": 2,
-      "question": "$(5x+4)(4x+5)$을 전개했을 때 $x^2$의 계수는? 보기에서 알맞은 값을 고르시오.",
+      "question": "$(8x+11)(5x+5)$을 전개했을 때 $x^2$의 계수는? 보기에서 알맞은 값을 고르시오.",
       "choices": [
-        "$15$",
-        "$24$",
-        "$9$",
-        "$21$",
-        "$20$"
+        "$32$",
+        "$45$",
+        "$19$",
+        "$55$",
+        "$40$"
       ],
       "answer": 4,
-      "explanation": "$x^2$항은 $5x\\cdot4x$에서 나온다.",
+      "explanation": "$x^2$항은 $8x\\cdot5x$에서 나온다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -116,16 +116,16 @@
     },
     {
       "id": 3,
-      "question": "$(7x+6)(5x+4)$을 전개했을 때 상수항은? 계산 결과로 옳은 것은?",
+      "question": "$(10x+5)(10x+9)$을 전개했을 때 상수항은? 계산 결과로 옳은 것은?",
       "choices": [
-        "$18$",
-        "$28$",
-        "$24$",
-        "$35$",
-        "$58$"
+        "$40$",
+        "$54$",
+        "$45$",
+        "$100$",
+        "$140$"
       ],
       "answer": 2,
-      "explanation": "상수항은 $6\\times4=24$이다.",
+      "explanation": "상수항은 $5\\times9=45$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -147,16 +147,16 @@
     },
     {
       "id": 4,
-      "question": "$(4x+3)(3x+3)$에서 $x=1$일 때의 값은? 다음 중 정답을 고르시오.",
+      "question": "$(3x+9)(7x+3)$에서 $x=1$일 때의 값은? 다음 중 정답을 고르시오.",
       "choices": [
-        "$40$",
-        "$44$",
-        "$21$",
-        "$13$",
-        "$42$"
+        "$118$",
+        "$122$",
+        "$48$",
+        "$22$",
+        "$120$"
       ],
       "answer": 4,
-      "explanation": "$x=1$을 대입하면 $(4+3)(3+3)=42$이다.",
+      "explanation": "$x=1$을 대입하면 $(3+9)(7+3)=120$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -178,480 +178,15 @@
     },
     {
       "id": 5,
-      "question": "$(6x+4)(5x+6)$을 전개했을 때 $x$의 계수는? 조건을 만족하는 값을 고르시오.",
+      "question": "$(5x+4)(3x+6)$을 전개했을 때 $x$의 계수는? 조건을 만족하는 값을 고르시오.",
       "choices": [
-        "$56$",
-        "$50$",
-        "$61$",
-        "$30$",
+        "$42$",
+        "$37$",
+        "$45$",
+        "$15$",
         "$24$"
       ],
       "answer": 0,
-      "explanation": "$x$항은 $36x$와 $20x$에서 나오므로 계수는 $56$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 계수 · 경우 분류",
-        "skills": [
-          "분배법칙",
-          "동류항",
-          "경우 나누기"
-        ],
-        "typeVariant": "경우 분류",
-        "typeVariantId": 5,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 6,
-      "question": "$(3x+6)(3x+5)$을 전개했을 때 $x^2$의 계수는? 풀이 결과와 일치하는 것은?",
-      "choices": [
-        "$6$",
-        "$9$",
-        "$12$",
-        "$30$",
-        "$10$"
-      ],
-      "answer": 1,
-      "explanation": "$x^2$항은 $3x\\cdot3x$에서 나온다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 자료 해석",
-        "skills": [
-          "전개",
-          "계수",
-          "자료 해석"
-        ],
-        "typeVariant": "자료 해석",
-        "typeVariantId": 6,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "자료 및 상황 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 7,
-      "question": "$(5x+3)(5x+4)$을 전개했을 때 상수항은? 가장 알맞은 값을 고르시오.",
-      "choices": [
-        "$9$",
-        "$16$",
-        "$12$",
-        "$25$",
-        "$35$"
-      ],
-      "answer": 2,
-      "explanation": "상수항은 $3\\times4=12$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 상수항 · 범위 판단",
-        "skills": [
-          "전개",
-          "상수항",
-          "범위 해석"
-        ],
-        "typeVariant": "범위 판단",
-        "typeVariantId": 7,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 8,
-      "question": "$(7x+5)(3x+3)$에서 $x=1$일 때의 값은? 보기 중 옳은 값을 고르시오.",
-      "choices": [
-        "$70$",
-        "$74$",
-        "$72$",
-        "$36$",
-        "$18$"
-      ],
-      "answer": 2,
-      "explanation": "$x=1$을 대입하면 $(7+5)(3+3)=72$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개 후 대입 · 매개변수",
-        "skills": [
-          "전개",
-          "대입",
-          "매개변수 추론"
-        ],
-        "typeVariant": "매개변수",
-        "typeVariantId": 8,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 9,
-      "question": "$(4x+6)(4x+6)$을 전개했을 때 $x$의 계수는? 정리한 결과를 고르시오.",
-      "choices": [
-        "$44$",
-        "$48$",
-        "$52$",
-        "$16$",
-        "$36$"
-      ],
-      "answer": 1,
-      "explanation": "$x$항은 $24x$와 $24x$에서 나오므로 계수는 $48$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 계수 · 비교 판단",
-        "skills": [
-          "분배법칙",
-          "동류항",
-          "비교"
-        ],
-        "typeVariant": "비교 판단",
-        "typeVariantId": 9,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 10,
-      "question": "$(6x+3)(2x+5)$을 전개했을 때 $x^2$의 계수는? 답으로 알맞은 것은?",
-      "choices": [
-        "$6$",
-        "$14$",
-        "$9$",
-        "$15$",
-        "$12$"
-      ],
-      "answer": 4,
-      "explanation": "$x^2$항은 $6x\\cdot2x$에서 나온다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 복합 계산",
-        "skills": [
-          "전개",
-          "계수",
-          "계산 연결"
-        ],
-        "typeVariant": "복합 계산",
-        "typeVariantId": 10,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 11,
-      "question": "$(3x+5)(4x+4)$을 전개했을 때 상수항은? 마지막 값으로 옳은 것은?",
-      "choices": [
-        "$15$",
-        "$24$",
-        "$12$",
-        "$20$",
-        "$32$"
-      ],
-      "answer": 3,
-      "explanation": "상수항은 $5\\times4=20$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 상수항 · 서술형 흐름",
-        "skills": [
-          "전개",
-          "상수항",
-          "과정 점검"
-        ],
-        "typeVariant": "서술형 흐름",
-        "typeVariantId": 11,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "풀이 과정 단계화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 12,
-      "question": "$(5x+6)(2x+3)$에서 $x=1$일 때의 값은? 조건에 맞는 답을 고르시오.",
-      "choices": [
-        "$55$",
-        "$53$",
-        "$57$",
-        "$28$",
-        "$16$"
-      ],
-      "answer": 0,
-      "explanation": "$x=1$을 대입하면 $(5+6)(2+3)=55$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개 후 대입 · 숨은 조건",
-        "skills": [
-          "전개",
-          "대입",
-          "숨은 조건"
-        ],
-        "typeVariant": "숨은 조건",
-        "typeVariantId": 12,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 13,
-      "question": "$(7x+3)(4x+6)$을 전개했을 때 $x$의 계수는? 문제 상황에 맞는 값을 고르시오.",
-      "choices": [
-        "$47$",
-        "$58$",
-        "$28$",
-        "$18$",
-        "$54$"
-      ],
-      "answer": 4,
-      "explanation": "$x$항은 $42x$와 $12x$에서 나오므로 계수는 $54$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 계수 · 상황 모델링",
-        "skills": [
-          "분배법칙",
-          "동류항",
-          "모델링"
-        ],
-        "typeVariant": "상황 모델링",
-        "typeVariantId": 13,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "자료 및 상황 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 14,
-      "question": "$(4x+5)(2x+5)$을 전개했을 때 $x^2$의 계수는? 같은 값을 나타내는 것을 고르시오.",
-      "choices": [
-        "$4$",
-        "$10$",
-        "$9$",
-        "$8$",
-        "$25$"
-      ],
-      "answer": 3,
-      "explanation": "$x^2$항은 $4x\\cdot2x$에서 나온다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 변형 적용",
-        "skills": [
-          "전개",
-          "계수",
-          "변형"
-        ],
-        "typeVariant": "변형 적용",
-        "typeVariantId": 14,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 15,
-      "question": "$(6x+7)(3x+3)$을 전개했을 때 상수항은? 종합하면 알맞은 답은?",
-      "choices": [
-        "$21$",
-        "$14$",
-        "$24$",
-        "$18$",
-        "$39$"
-      ],
-      "answer": 0,
-      "explanation": "상수항은 $7\\times3=21$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 상수항 · 종합 추론",
-        "skills": [
-          "전개",
-          "상수항",
-          "종합 추론"
-        ],
-        "typeVariant": "종합 추론",
-        "typeVariantId": 15,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "말장난 방지 보기 고르기",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 16,
-      "question": "$(3x+4)(3x+5)$을 전개했을 때 $x$의 계수는?",
-      "choices": [
-        "$24$",
-        "$30$",
-        "$9$",
-        "$27$",
-        "$20$"
-      ],
-      "answer": 3,
-      "explanation": "$x$항은 $15x$와 $12x$에서 나오므로 계수는 $27$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 계수 · 개념 확인",
-        "skills": [
-          "분배법칙",
-          "동류항",
-          "정의 적용"
-        ],
-        "typeVariant": "개념 확인",
-        "typeVariantId": 1,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "개념 정의 직접 확인",
-        "transformPattern": "개념·원리 직접 활용",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 17,
-      "question": "$(5x+6)(5x+4)$을 전개했을 때 $x^2$의 계수는? 보기에서 알맞은 값을 고르시오.",
-      "choices": [
-        "$25$",
-        "$20$",
-        "$30$",
-        "$11$",
-        "$24$"
-      ],
-      "answer": 0,
-      "explanation": "$x^2$항은 $5x\\cdot5x$에서 나온다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 대표 풀이",
-        "skills": [
-          "전개",
-          "계수",
-          "표준 풀이"
-        ],
-        "typeVariant": "대표 풀이",
-        "typeVariantId": 2,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "대표 표준 문항",
-        "transformPattern": "문항의 축소·확대·변형",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 18,
-      "question": "$(7x+7)(3x+3)$을 전개했을 때 상수항은? 계산 결과로 옳은 것은?",
-      "choices": [
-        "$14$",
-        "$24$",
-        "$21$",
-        "$42$",
-        "$22$"
-      ],
-      "answer": 2,
-      "explanation": "상수항은 $7\\times3=21$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개식 상수항 · 조건 해석",
-        "skills": [
-          "전개",
-          "상수항",
-          "조건 선별"
-        ],
-        "typeVariant": "조건 해석",
-        "typeVariantId": 3,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "실생활 문장제 독해",
-        "transformPattern": "조건 및 구하는 값 변경",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 19,
-      "question": "$(4x+4)(5x+6)$에서 $x=1$일 때의 값은? 다음 중 정답을 고르시오.",
-      "choices": [
-        "$86$",
-        "$88$",
-        "$90$",
-        "$44$",
-        "$19$"
-      ],
-      "answer": 1,
-      "explanation": "$x=1$을 대입하면 $(4+4)(5+6)=88$이다.",
-      "ebs": {
-        "role": "대표 교과서 유형",
-        "steps": 2,
-        "typeTag": "문자식과 다항식 · 전개 후 대입 · 역추론",
-        "skills": [
-          "전개",
-          "대입",
-          "역산"
-        ],
-        "typeVariant": "역추론",
-        "typeVariantId": 4,
-        "buildUpStage": "대표 교과서 유형",
-        "schoolExamType": "오류 찾기 및 과정 교정",
-        "transformPattern": "조건의 강화·완화",
-        "sourceFormat": "EBS 단계형 5지선다",
-        "difficulty": "유형별",
-        "family": "algebra"
-      }
-    },
-    {
-      "id": 20,
-      "question": "$(6x+6)(2x+5)$을 전개했을 때 $x$의 계수는? 조건을 만족하는 값을 고르시오.",
-      "choices": [
-        "$36$",
-        "$44$",
-        "$12$",
-        "$42$",
-        "$30$"
-      ],
-      "answer": 3,
       "explanation": "$x$항은 $30x$와 $12x$에서 나오므로 계수는 $42$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
@@ -673,17 +208,482 @@
       }
     },
     {
-      "id": 21,
-      "question": "$(3x+3)(4x+4)$을 전개했을 때 $x^2$의 계수는? 풀이 결과와 일치하는 것은?",
+      "id": 6,
+      "question": "$(7x+7)(9x+10)$을 전개했을 때 $x^2$의 계수는? 풀이 결과와 일치하는 것은?",
       "choices": [
-        "$9$",
-        "$16$",
-        "$6$",
+        "$56$",
+        "$63$",
+        "$72$",
+        "$14$",
+        "$70$"
+      ],
+      "answer": 1,
+      "explanation": "$x^2$항은 $7x\\cdot9x$에서 나온다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 자료 해석",
+        "skills": [
+          "전개",
+          "계수",
+          "자료 해석"
+        ],
+        "typeVariant": "자료 해석",
+        "typeVariantId": 6,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "자료 및 상황 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 7,
+      "question": "$(9x+11)(5x+4)$을 전개했을 때 상수항은? 가장 알맞은 값을 고르시오.",
+      "choices": [
+        "$33$",
+        "$48$",
+        "$44$",
+        "$45$",
+        "$91$"
+      ],
+      "answer": 2,
+      "explanation": "상수항은 $11\\times4=44$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 상수항 · 범위 판단",
+        "skills": [
+          "전개",
+          "상수항",
+          "범위 해석"
+        ],
+        "typeVariant": "범위 판단",
+        "typeVariantId": 7,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 8,
+      "question": "$(11x+6)(11x+8)$에서 $x=1$일 때의 값은? 보기 중 옳은 값을 고르시오.",
+      "choices": [
+        "$321$",
+        "$325$",
+        "$323$",
+        "$169$",
+        "$36$"
+      ],
+      "answer": 2,
+      "explanation": "$x=1$을 대입하면 $(11+6)(11+8)=323$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개 후 대입 · 매개변수",
+        "skills": [
+          "전개",
+          "대입",
+          "매개변수 추론"
+        ],
+        "typeVariant": "매개변수",
+        "typeVariantId": 8,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 9,
+      "question": "$(4x+9)(7x+11)$을 전개했을 때 $x$의 계수는? 정리한 결과를 고르시오.",
+      "choices": [
+        "$103$",
+        "$107$",
+        "$114$",
+        "$28$",
+        "$99$"
+      ],
+      "answer": 1,
+      "explanation": "$x$항은 $44x$와 $63x$에서 나오므로 계수는 $107$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 계수 · 비교 판단",
+        "skills": [
+          "분배법칙",
+          "동류항",
+          "비교"
+        ],
+        "typeVariant": "비교 판단",
+        "typeVariantId": 9,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 10,
+      "question": "$(6x+4)(3x+6)$을 전개했을 때 $x^2$의 계수는? 답으로 알맞은 것은?",
+      "choices": [
         "$12$",
-        "$13$"
+        "$21$",
+        "$10$",
+        "$24$",
+        "$18$"
+      ],
+      "answer": 4,
+      "explanation": "$x^2$항은 $6x\\cdot3x$에서 나온다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 복합 계산",
+        "skills": [
+          "전개",
+          "계수",
+          "계산 연결"
+        ],
+        "typeVariant": "복합 계산",
+        "typeVariantId": 10,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 11,
+      "question": "$(8x+8)(9x+9)$을 전개했을 때 상수항은? 마지막 값으로 옳은 것은?",
+      "choices": [
+        "$64$",
+        "$81$",
+        "$144$",
+        "$72$",
+        "$73$"
       ],
       "answer": 3,
-      "explanation": "$x^2$항은 $3x\\cdot4x$에서 나온다.",
+      "explanation": "상수항은 $8\\times9=72$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 상수항 · 서술형 흐름",
+        "skills": [
+          "전개",
+          "상수항",
+          "과정 점검"
+        ],
+        "typeVariant": "서술형 흐름",
+        "typeVariantId": 11,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "풀이 과정 단계화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 12,
+      "question": "$(10x+11)(5x+4)$에서 $x=1$일 때의 값은? 조건에 맞는 답을 고르시오.",
+      "choices": [
+        "$189$",
+        "$187$",
+        "$191$",
+        "$94$",
+        "$30$"
+      ],
+      "answer": 0,
+      "explanation": "$x=1$을 대입하면 $(10+11)(5+4)=189$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개 후 대입 · 숨은 조건",
+        "skills": [
+          "전개",
+          "대입",
+          "숨은 조건"
+        ],
+        "typeVariant": "숨은 조건",
+        "typeVariantId": 12,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 13,
+      "question": "$(3x+6)(11x+7)$을 전개했을 때 $x$의 계수는? 문제 상황에 맞는 값을 고르시오.",
+      "choices": [
+        "$84$",
+        "$98$",
+        "$33$",
+        "$42$",
+        "$87$"
+      ],
+      "answer": 4,
+      "explanation": "$x$항은 $21x$와 $66x$에서 나오므로 계수는 $87$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 계수 · 상황 모델링",
+        "skills": [
+          "분배법칙",
+          "동류항",
+          "모델링"
+        ],
+        "typeVariant": "상황 모델링",
+        "typeVariantId": 13,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "자료 및 상황 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 14,
+      "question": "$(5x+10)(7x+11)$을 전개했을 때 $x^2$의 계수는? 같은 값을 나타내는 것을 고르시오.",
+      "choices": [
+        "$30$",
+        "$42$",
+        "$15$",
+        "$35$",
+        "$110$"
+      ],
+      "answer": 3,
+      "explanation": "$x^2$항은 $5x\\cdot7x$에서 나온다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 변형 적용",
+        "skills": [
+          "전개",
+          "계수",
+          "변형"
+        ],
+        "typeVariant": "변형 적용",
+        "typeVariantId": 14,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 15,
+      "question": "$(7x+4)(4x+5)$을 전개했을 때 상수항은? 종합하면 알맞은 답은?",
+      "choices": [
+        "$20$",
+        "$16$",
+        "$25$",
+        "$28$",
+        "$51$"
+      ],
+      "answer": 0,
+      "explanation": "상수항은 $4\\times5=20$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 상수항 · 종합 추론",
+        "skills": [
+          "전개",
+          "상수항",
+          "종합 추론"
+        ],
+        "typeVariant": "종합 추론",
+        "typeVariantId": 15,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 16,
+      "question": "$(5x+10)(7x+3)$을 전개했을 때 $x$의 계수는?",
+      "choices": [
+        "$80$",
+        "$92$",
+        "$35$",
+        "$85$",
+        "$30$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $15x$와 $70x$에서 나오므로 계수는 $85$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 계수 · 개념 확인",
+        "skills": [
+          "분배법칙",
+          "동류항",
+          "정의 적용"
+        ],
+        "typeVariant": "개념 확인",
+        "typeVariantId": 1,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "개념 정의 직접 확인",
+        "transformPattern": "개념·원리 직접 활용",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 17,
+      "question": "$(7x+4)(4x+7)$을 전개했을 때 $x^2$의 계수는? 보기에서 알맞은 값을 고르시오.",
+      "choices": [
+        "$28$",
+        "$21$",
+        "$32$",
+        "$11$",
+        "$29$"
+      ],
+      "answer": 0,
+      "explanation": "$x^2$항은 $7x\\cdot4x$에서 나온다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 최고차항 · 대표 풀이",
+        "skills": [
+          "전개",
+          "계수",
+          "표준 풀이"
+        ],
+        "typeVariant": "대표 풀이",
+        "typeVariantId": 2,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "대표 표준 문항",
+        "transformPattern": "문항의 축소·확대·변형",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 18,
+      "question": "$(9x+8)(9x+10)$을 전개했을 때 상수항은? 계산 결과로 옳은 것은?",
+      "choices": [
+        "$72$",
+        "$90$",
+        "$80$",
+        "$81$",
+        "$162$"
+      ],
+      "answer": 2,
+      "explanation": "상수항은 $8\\times10=80$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 상수항 · 조건 해석",
+        "skills": [
+          "전개",
+          "상수항",
+          "조건 선별"
+        ],
+        "typeVariant": "조건 해석",
+        "typeVariantId": 3,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "실생활 문장제 독해",
+        "transformPattern": "조건 및 구하는 값 변경",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 19,
+      "question": "$(11x+3)(5x+5)$에서 $x=1$일 때의 값은? 다음 중 정답을 고르시오.",
+      "choices": [
+        "$138$",
+        "$140$",
+        "$142$",
+        "$70$",
+        "$24$"
+      ],
+      "answer": 1,
+      "explanation": "$x=1$을 대입하면 $(11+3)(5+5)=140$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개 후 대입 · 역추론",
+        "skills": [
+          "전개",
+          "대입",
+          "역산"
+        ],
+        "typeVariant": "역추론",
+        "typeVariantId": 4,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "오류 찾기 및 과정 교정",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 20,
+      "question": "$(4x+6)(11x+8)$을 전개했을 때 $x$의 계수는? 조건을 만족하는 값을 고르시오.",
+      "choices": [
+        "$94$",
+        "$109$",
+        "$44$",
+        "$98$",
+        "$48$"
+      ],
+      "answer": 3,
+      "explanation": "$x$항은 $32x$와 $66x$에서 나오므로 계수는 $98$이다.",
+      "ebs": {
+        "role": "대표 교과서 유형",
+        "steps": 2,
+        "typeTag": "문자식과 다항식 · 전개식 계수 · 경우 분류",
+        "skills": [
+          "분배법칙",
+          "동류항",
+          "경우 나누기"
+        ],
+        "typeVariant": "경우 분류",
+        "typeVariantId": 5,
+        "buildUpStage": "대표 교과서 유형",
+        "schoolExamType": "말장난 방지 보기 고르기",
+        "transformPattern": "조건의 강화·완화",
+        "sourceFormat": "EBS 단계형 5지선다",
+        "difficulty": "유형별",
+        "family": "algebra"
+      }
+    },
+    {
+      "id": 21,
+      "question": "$(6x+10)(7x+11)$을 전개했을 때 $x^2$의 계수는? 풀이 결과와 일치하는 것은?",
+      "choices": [
+        "$36$",
+        "$49$",
+        "$16$",
+        "$42$",
+        "$110$"
+      ],
+      "answer": 3,
+      "explanation": "$x^2$항은 $6x\\cdot7x$에서 나온다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -705,16 +705,16 @@
     },
     {
       "id": 22,
-      "question": "$(5x+4)(2x+3)$을 전개했을 때 상수항은? 가장 알맞은 값을 고르시오.",
+      "question": "$(8x+5)(4x+6)$을 전개했을 때 상수항은? 가장 알맞은 값을 고르시오.",
       "choices": [
-        "$8$",
-        "$12$",
-        "$15$",
-        "$10$",
-        "$23$"
+        "$25$",
+        "$30$",
+        "$36$",
+        "$32$",
+        "$68$"
       ],
       "answer": 1,
-      "explanation": "상수항은 $4\\times3=12$이다.",
+      "explanation": "상수항은 $5\\times6=30$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -736,16 +736,16 @@
     },
     {
       "id": 23,
-      "question": "$(7x+6)(4x+6)$에서 $x=1$일 때의 값은? 보기 중 옳은 값을 고르시오.",
+      "question": "$(10x+8)(9x+9)$에서 $x=1$일 때의 값은? 보기 중 옳은 값을 고르시오.",
       "choices": [
-        "$130$",
-        "$128$",
-        "$132$",
-        "$64$",
-        "$23$"
+        "$324$",
+        "$322$",
+        "$326$",
+        "$162$",
+        "$36$"
       ],
       "answer": 0,
-      "explanation": "$x=1$을 대입하면 $(7+6)(4+6)=130$이다.",
+      "explanation": "$x=1$을 대입하면 $(10+8)(9+9)=324$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -767,16 +767,16 @@
     },
     {
       "id": 24,
-      "question": "$(4x+3)(2x+5)$을 전개했을 때 $x$의 계수는? 정리한 결과를 고르시오.",
+      "question": "$(3x+3)(6x+4)$을 전개했을 때 $x$의 계수는? 정리한 결과를 고르시오.",
       "choices": [
-        "$22$",
-        "$26$",
-        "$28$",
-        "$8$",
-        "$15$"
+        "$27$",
+        "$30$",
+        "$36$",
+        "$18$",
+        "$12$"
       ],
       "answer": 1,
-      "explanation": "$x$항은 $20x$와 $6x$에서 나오므로 계수는 $26$이다.",
+      "explanation": "$x$항은 $12x$와 $18x$에서 나오므로 계수는 $30$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -798,16 +798,16 @@
     },
     {
       "id": 25,
-      "question": "$(6x+4)(4x+4)$을 전개했을 때 $x^2$의 계수는? 답으로 알맞은 것은?",
+      "question": "$(5x+7)(11x+7)$을 전개했을 때 $x^2$의 계수는? 답으로 알맞은 것은?",
       "choices": [
-        "$24$",
-        "$18$",
-        "$28$",
-        "$10$",
-        "$16$"
+        "$55$",
+        "$50$",
+        "$66$",
+        "$12$",
+        "$49$"
       ],
       "answer": 0,
-      "explanation": "$x^2$항은 $6x\\cdot4x$에서 나온다.",
+      "explanation": "$x^2$항은 $5x\\cdot11x$에서 나온다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -829,16 +829,16 @@
     },
     {
       "id": 26,
-      "question": "$(3x+6)(5x+3)$을 전개했을 때 상수항은? 마지막 값으로 옳은 것은?",
+      "question": "$(7x+10)(7x+11)$을 전개했을 때 상수항은? 마지막 값으로 옳은 것은?",
       "choices": [
-        "$12$",
-        "$21$",
-        "$15$",
-        "$18$",
-        "$39$"
+        "$100$",
+        "$121$",
+        "$49$",
+        "$110$",
+        "$147$"
       ],
       "answer": 3,
-      "explanation": "상수항은 $6\\times3=18$이다.",
+      "explanation": "상수항은 $10\\times11=110$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -860,16 +860,16 @@
     },
     {
       "id": 27,
-      "question": "$(5x+3)(3x+6)$에서 $x=1$일 때의 값은? 조건에 맞는 답을 고르시오.",
+      "question": "$(9x+5)(4x+5)$에서 $x=1$일 때의 값은? 조건에 맞는 답을 고르시오.",
       "choices": [
-        "$70$",
-        "$74$",
-        "$72$",
-        "$33$",
-        "$17$"
+        "$124$",
+        "$128$",
+        "$126$",
+        "$61$",
+        "$23$"
       ],
       "answer": 2,
-      "explanation": "$x=1$을 대입하면 $(5+3)(3+6)=72$이다.",
+      "explanation": "$x=1$을 대입하면 $(9+5)(4+5)=126$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -891,16 +891,16 @@
     },
     {
       "id": 28,
-      "question": "$(7x+5)(5x+5)$을 전개했을 때 $x$의 계수는? 문제 상황에 맞는 값을 고르시오.",
+      "question": "$(11x+9)(9x+9)$을 전개했을 때 $x$의 계수는? 문제 상황에 맞는 값을 고르시오.",
       "choices": [
-        "$53$",
-        "$65$",
-        "$60$",
-        "$35$",
-        "$25$"
+        "$169$",
+        "$189$",
+        "$180$",
+        "$99$",
+        "$81$"
       ],
       "answer": 2,
-      "explanation": "$x$항은 $35x$와 $25x$에서 나오므로 계수는 $60$이다.",
+      "explanation": "$x$항은 $99x$와 $81x$에서 나오므로 계수는 $180$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -922,16 +922,16 @@
     },
     {
       "id": 29,
-      "question": "$(4x+6)(3x+4)$을 전개했을 때 $x^2$의 계수는? 같은 값을 나타내는 것을 고르시오.",
+      "question": "$(4x+3)(6x+3)$을 전개했을 때 $x^2$의 계수는? 같은 값을 나타내는 것을 고르시오.",
       "choices": [
-        "$8$",
-        "$12$",
-        "$15$",
-        "$10$",
-        "$24$"
+        "$20$",
+        "$24$",
+        "$30$",
+        "$7$",
+        "$9$"
       ],
       "answer": 1,
-      "explanation": "$x^2$항은 $4x\\cdot3x$에서 나온다.",
+      "explanation": "$x^2$항은 $4x\\cdot6x$에서 나온다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
@@ -953,16 +953,16 @@
     },
     {
       "id": 30,
-      "question": "$(6x+3)(5x+3)$을 전개했을 때 상수항은? 종합하면 알맞은 답은?",
+      "question": "$(6x+7)(11x+7)$을 전개했을 때 상수항은? 종합하면 알맞은 답은?",
       "choices": [
-        "$6$",
-        "$12$",
-        "$30$",
-        "$33$",
-        "$9$"
+        "$42$",
+        "$56$",
+        "$66$",
+        "$119$",
+        "$49$"
       ],
       "answer": 4,
-      "explanation": "상수항은 $3\\times3=9$이다.",
+      "explanation": "상수항은 $7\\times7=49$이다.",
       "ebs": {
         "role": "대표 교과서 유형",
         "steps": 2,
